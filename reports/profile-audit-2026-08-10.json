@@ -3,8 +3,8 @@
   "totals": {
     "canonicalCollections": 12,
     "profileCollections": 12,
-    "mediaTypeMismatches": 980,
-    "missing": 2,
+    "mediaTypeMismatches": 987,
+    "missing": 0,
     "extra": 0,
     "repairCollections": 10
   },
@@ -76,8 +76,8 @@
       "repairRequired": true
     },
     "collections.world": {
-      "mediaTypeMismatches": 147,
-      "missing": 2,
+      "mediaTypeMismatches": 154,
+      "missing": 0,
       "extra": 0,
       "repairRequired": true
     }
@@ -13765,6 +13765,66 @@
     },
     {
       "collectionId": "collections.world",
+      "folderId": "collections.world.latin-american",
+      "identity": "tmdb|LIST|8683041|Νέες σειρές",
+      "title": "Νέες σειρές",
+      "tmdbId": 8683041,
+      "canonical": {
+        "type": "series",
+        "mediaType": "TV"
+      },
+      "profile": {
+        "type": "series",
+        "mediaType": "MOVIE"
+      }
+    },
+    {
+      "collectionId": "collections.world",
+      "folderId": "collections.world.latin-american",
+      "identity": "tmdb|LIST|8683043|Δημοφιλείς σειρές",
+      "title": "Δημοφιλείς σειρές",
+      "tmdbId": 8683043,
+      "canonical": {
+        "type": "series",
+        "mediaType": "TV"
+      },
+      "profile": {
+        "type": "series",
+        "mediaType": "MOVIE"
+      }
+    },
+    {
+      "collectionId": "collections.world",
+      "folderId": "collections.world.latin-american",
+      "identity": "tmdb|LIST|8683045|Κορυφαίες σειρές όλων των εποχών",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "tmdbId": 8683045,
+      "canonical": {
+        "type": "series",
+        "mediaType": "TV"
+      },
+      "profile": {
+        "type": "series",
+        "mediaType": "MOVIE"
+      }
+    },
+    {
+      "collectionId": "collections.world",
+      "folderId": "collections.world.latin-american",
+      "identity": "tmdb|LIST|8683047|Κορυφαίες σειρές της χρονιάς",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "tmdbId": 8683047,
+      "canonical": {
+        "type": "series",
+        "mediaType": "TV"
+      },
+      "profile": {
+        "type": "series",
+        "mediaType": "MOVIE"
+      }
+    },
+    {
+      "collectionId": "collections.world",
       "folderId": "folder-F4SMGZBV",
       "identity": "tmdb|LIST|8682827|Νέες σειρές",
       "title": "Νέες σειρές",
@@ -14189,6 +14249,51 @@
       "identity": "tmdb|LIST|8682865|Κορυφαίες σειρές της χρονιάς",
       "title": "Κορυφαίες σειρές της χρονιάς",
       "tmdbId": 8682865,
+      "canonical": {
+        "type": "series",
+        "mediaType": "TV"
+      },
+      "profile": {
+        "type": "series",
+        "mediaType": "MOVIE"
+      }
+    },
+    {
+      "collectionId": "collections.world",
+      "folderId": "collections.world.portuguese",
+      "identity": "tmdb|LIST|8683050|Νέες σειρές",
+      "title": "Νέες σειρές",
+      "tmdbId": 8683050,
+      "canonical": {
+        "type": "series",
+        "mediaType": "TV"
+      },
+      "profile": {
+        "type": "series",
+        "mediaType": "MOVIE"
+      }
+    },
+    {
+      "collectionId": "collections.world",
+      "folderId": "collections.world.portuguese",
+      "identity": "tmdb|LIST|8683052|Δημοφιλείς σειρές",
+      "title": "Δημοφιλείς σειρές",
+      "tmdbId": 8683052,
+      "canonical": {
+        "type": "series",
+        "mediaType": "TV"
+      },
+      "profile": {
+        "type": "series",
+        "mediaType": "MOVIE"
+      }
+    },
+    {
+      "collectionId": "collections.world",
+      "folderId": "collections.world.portuguese",
+      "identity": "tmdb|LIST|8683054|Κορυφαίες σειρές όλων των εποχών",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "tmdbId": 8683054,
       "canonical": {
         "type": "series",
         "mediaType": "TV"
@@ -14784,17 +14889,6 @@
       }
     }
   ],
-  "missing": [
-    {
-      "collectionId": "collections.world",
-      "folderId": "collections.world.portuguese",
-      "kind": "folder"
-    },
-    {
-      "collectionId": "collections.world",
-      "folderId": "collections.world.latin-american",
-      "kind": "folder"
-    }
-  ],
+  "missing": [],
   "extra": []
 }

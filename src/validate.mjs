@@ -41,5 +41,15 @@ export async function auditRepository({ requireListIds = false } = {}) {
   invariant(native.every((rail) => rail.originalSource.mediaType === rail.mediaType), "Native Nuvio media type drift");
   invariant(Object.keys(state.retiredRails ?? {}).length === EXPECTED.retiredRails, "Retired rail audit failed");
   if (requireListIds) for (const rail of materialized) invariant(state.rails[rail.key]?.listId, `Missing managed list ID: ${rail.key}`);
+  const world = input.find((collection) => collection.id === "collections.world");
+  invariant(world, "collections.world missing");
+  const worldTitles = world.folders.map((folder) => folder.title);
+  const sortedWorldTitles = [...worldTitles].sort((a, b) => a.localeCompare(b, "el"));
+  invariant(JSON.stringify(worldTitles) === JSON.stringify(sortedWorldTitles), "collections.world is not Greek-locale sorted by title");
+  invariant(worldTitles.includes("Λατινοαμερικανικές") && worldTitles.includes("Πορτογαλικές"), "World Portuguese/Latin American folders missing");
+  const latinIndex = worldTitles.indexOf("Λατινοαμερικανικές");
+  const portugalIndex = worldTitles.indexOf("Πορτογαλικές");
+  invariant(latinIndex > worldTitles.indexOf("Κορεάτικες") && latinIndex < worldTitles.indexOf("Μεξικάνικες"), "Λατινοαμερικανικές is not in Greek Λ position");
+  invariant(portugalIndex > worldTitles.indexOf("Πολωνικές") && portugalIndex < worldTitles.indexOf("Ρωσικές"), "Πορτογαλικές is not in Greek Π position");
   return { collections: input.length, folders: folders.length, finalSources: rails.length + recommended.sources.length, managed: rails.length, native: native.length, materialized: materialized.length, recommendedFingerprint: lock.recommendedFingerprint, unresolvedLists: materialized.filter((r) => !state.rails[r.key]?.listId).length };
 }

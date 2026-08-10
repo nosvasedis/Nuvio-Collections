@@ -20,9 +20,39 @@ a test so bootstrap cannot silently reintroduce it.
 - Every emitted TMDB source has explicit Nuvio `type`: `movie` for MOVIE and
   `series` for TV. This prevents Nuvio from labeling TV rails as movies.
 - `type` and `mediaType` are a single enforced pair: `movie/MOVIE` or
-  `series/TV`. The reviewed 2026-08-10 Nuvio export contained 980 corrupted
-  `series/MOVIE` pairs across ten collections. `profile-audit` detects this
-  stored-state drift and generates a collection-ID replacement artifact.
+  `series/TV`. The reviewed 2026-08-10 Nuvio export contained **987** corrupted
+  `series/MOVIE` pairs across ten collections (was 980 before the Portuguese and
+  Latin American World TV rails). All 987 are materialized `tmdbSourceType:LIST`
+  rails. The 121 native TV sources (`DISCOVER` / `NETWORK`) stayed `series/TV`.
+  `profile-audit` detects this stored-state drift and generates a collection-ID
+  replacement artifact covering only the affected collections (10 of 12).
+- Nuvio 0.8.3 root cause (stable tag `0.8.3-beta`):
+  - Import path: `CollectionManagementViewModel` /
+    `AddonConfigServer` → `CollectionsDataStore.importFromJson` →
+    `SerializableSource.toDomainSource`, which **reads** `mediaType` and only
+    defaults absent/invalid values to `MOVIE`. A clean DataStore round-trip keeps
+    `LIST` + `TV` (Gson drops advisory `type` on TMDB re-serialize).
+  - Create / web-editor paths: native `CollectionEditorViewModel`, web
+    `AddonWebPage` (`LIST|COLLECTION` forced to `MOVIE`, including hidden media
+    inputs for non-NETWORK modes), and Mobile `CollectionEditorRepository` all
+    hard-code `LIST|COLLECTION → MOVIE` when adding or rebuilding a TMDB source.
+    Display suffixes use `source.mediaType` (`CatalogRow.rawType` /
+    `toCollectionRawType`), so a stored `MOVIE` yields «Ταινία» even when
+    `type` remains `series` and the TMDB list items are TV.
+  - Reviewed export fingerprint matches Mobile `encodeDefaults` + retained
+    `type:"series"` with only `mediaType` flipped — not a missing-source
+    problem. Native vs materialized split is permanent evidence in
+    `reports/list-tv-mediatype-audit-2026-08-11.json`.
+  - Executable probes live in `src/nuvio-list-compat.mjs` and
+    `dist/nuvio-list-tv-mediaType-probe.json`. The probe is test-profile-only:
+    importing it into the active profile would leave a temporary 13th
+    collection because Nuvio imports merge by ID. Never “fix” this by
+    converting materialized TV lists into inaccurate native Discover sources,
+    and never recreate TMDB lists just to change mediaType. Do not claim the UI
+    label is fixed until a fresh export audits to `mediaTypeMismatches: 0`.
+- Post-import verification is mandatory: export from Nuvio and run
+  `npm run profile:audit -- --profile=<export.json>`. Accept only
+  `mediaTypeMismatches: 0`, `missing: 0`, `extra: 0`, and 12/12 collections.
 - Five Golden Globe movie companions legitimately contain the word “σειρά” in
   their explanatory titles. Validation follows the canonical rail media type,
   never a title substring heuristic.
@@ -33,6 +63,15 @@ a test so bootstrap cannot silently reintroduce it.
   transliterated original title all match. For Greek works, the Greek-script
   record wins. This fixes the reviewed `Από Ήλιο σε Ήλιο` / `Apo ilio se ilio`
   duplicate without merging merely similar works.
+
+## World folder order
+
+- `collections.world` folders are ordered by Greek display title with
+  `localeCompare(..., "el")`, not ASCII/English sorting.
+- `Λατινοαμερικανικές` sits in the Greek **Λ** block (after Κορεάτικες, before
+  Μεξικάνικες). `Πορτογαλικές` sits in the Greek **Π** block (after Πολωνικές,
+  before Ρωσικές). Folder IDs, titles, sources, list IDs and artwork are
+  unchanged; only array order inside the World collection may change.
 
 ## Poster invariant
 
@@ -140,6 +179,8 @@ and dynamic curated merge/order tests.
 - Spain is exactly `ES`. Latin America is the reviewed origin union
   `MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR` and excludes
   Spain. Portugal is exactly `PT`. None uses an original-language restriction.
+- World folder order is Greek-locale title sort; Portuguese and Latin American
+  folders keep their locked IDs and occupy the Π and Λ alphabetic slots.
 - Portugal currently has seven rails: its exact Top TV of the current year is
   omitted because the official predicate is empty even at quorum 3. No filler
   or zero-vote ranking replaces it.
@@ -172,6 +213,7 @@ Record current evidence in `reports/latest.json` and README, never only in chat:
 - full live dry-run considers all 2,092 materialized rails with zero failures;
 - production updates pass exact read-back and leave zero active empty rails;
 - compiled `dist/nuvio-collections-v5.0.json` contains 2,492 sources;
-- the reviewed Nuvio profile repair report records 980 managed media-type mismatches,
+- the reviewed Nuvio profile repair report records 987 managed media-type mismatches
+  (all materialized LIST TV rails; 121 native TV rails stayed correct),
   and the post-import export must record zero;
 - secret scan finds no credentials in tracked files.

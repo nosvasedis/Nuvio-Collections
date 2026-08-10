@@ -234,6 +234,59 @@ test("Nuvio 0.8.3 media contract catches the reviewed series-as-movie profile co
   assert.deepEqual(report.mismatches[0].profile, { type: "series", mediaType: "MOVIE" });
 });
 
+test("Nuvio 0.8.3 LIST editor hardcodes MOVIE while DataStore preserves TV", async () => {
+  const {
+    emulateNuvio083DataStoreMediaType,
+    emulateNuvio083ListEditorMediaType,
+    emulateNuvio083DataStoreRoundTrip,
+    emulateMobileListTvCorruption,
+    analyzeListTvCompat,
+    minimalListTvProbeSource,
+    minimalListTvProbeCollection,
+  } = await import("../src/nuvio-list-compat.mjs");
+  const probe = minimalListTvProbeSource();
+  const probeCollection = minimalListTvProbeCollection(probe)[0];
+  const probeArtifact = await readJson(new URL("../dist/nuvio-list-tv-mediaType-probe.json", import.meta.url));
+  assert.deepEqual(probeArtifact, [probeCollection]);
+  assert.match(probeCollection.title, /^TEST PROFILE ONLY/);
+  assert.equal(probeCollection.folders.length, 1);
+  assert.equal(emulateNuvio083DataStoreMediaType(probe), "TV");
+  assert.equal(emulateNuvio083ListEditorMediaType(probe), "MOVIE");
+  assert.equal(emulateNuvio083ListEditorMediaType({ tmdbSourceType: "DISCOVER", mediaType: "TV" }), "TV");
+  const roundTrip = emulateNuvio083DataStoreRoundTrip(probe);
+  assert.equal(roundTrip.mediaType, "TV");
+  assert.equal(roundTrip.type, null);
+  assert.equal(roundTrip.tmdbId, probe.tmdbId);
+  assert.deepEqual(emulateMobileListTvCorruption(probe), { ...probe, mediaType: "MOVIE" });
+  const artifact = await readJson(OUTPUT_FILE);
+  const sources = artifact.flatMap((c) => c.folders ?? []).flatMap((f) => f.sources ?? []);
+  const listTv = sources.filter((s) => s.provider === "tmdb" && s.tmdbSourceType === "LIST" && s.mediaType === "TV");
+  const nativeTv = sources.filter((s) => s.provider === "tmdb" && s.tmdbSourceType !== "LIST" && s.mediaType === "TV");
+  assert.equal(listTv.length, 987);
+  assert.equal(nativeTv.length, 121);
+  assert.ok(listTv.every((s) => s.type === "series" && s.sortBy === "original"));
+  assert.ok(listTv.every((s) => emulateNuvio083DataStoreRoundTrip(s).mediaType === "TV"));
+  const corrupted = listTv.map(emulateMobileListTvCorruption);
+  const analysis = analyzeListTvCompat(sources, [...corrupted, ...nativeTv]);
+  assert.equal(analysis.canonicalListTv, 987);
+  assert.equal(analysis.profileSeriesMovieList, 987);
+  assert.equal(analysis.profileSeriesTvList, 0);
+  assert.equal(analysis.profileNativeSeriesTv, 121);
+  assert.equal(analysis.editorWouldForceMovie, true);
+  assert.equal(analysis.dataStoreWouldPreserveTv, true);
+});
+
+test("collections.world folders are Greek-locale sorted with Λ and Π in place", async () => {
+  const input = await readJson(INPUT_FILE);
+  const world = input.find((collection) => collection.id === "collections.world");
+  const titles = world.folders.map((folder) => folder.title);
+  assert.deepEqual(titles, [...titles].sort((a, b) => a.localeCompare(b, "el")));
+  assert.equal(titles.indexOf("Λατινοαμερικανικές"), titles.indexOf("Κορεάτικες") + 1);
+  assert.equal(titles.indexOf("Πορτογαλικές"), titles.indexOf("Πολωνικές") + 1);
+  assert.equal(world.folders.length, 40);
+  assert.equal(world.folders.filter((folder) => folder.id === "collections.world.portuguese" || folder.id === "collections.world.latin-american").length, 2);
+});
+
 test("Timothée Chalamet uses the reviewed corrected asset set", async () => {
   const input = await readJson(INPUT_FILE), folder = input.flatMap((collection) => collection.folders).find((item) => item.id === "folder-I2BO9LZU");
   assert.deepEqual([folder.focusGifUrl, folder.titleLogoUrl, folder.coverImageUrl, folder.heroBackdropUrl], [

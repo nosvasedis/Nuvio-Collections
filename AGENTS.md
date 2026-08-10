@@ -41,7 +41,11 @@ Before release run, in order:
 For releases that repair an already imported profile, also run
 `npm run profile:audit -- --profile=<export.json> --write-repair`, import the
 generated repair artifact, export the Nuvio profile again, and require zero
-media-type mismatches.
+media-type mismatches (`mediaTypeMismatches: 0`, `missing: 0`, `extra: 0`,
+12/12 collections). A folder-order-only or import-compatibility change does not
+require production TMDB sync.
 
 Do not claim success unless the live dry-run has zero failures and zero empty
-candidates and every changed production list passes exact v3 read-back.
+candidates and every changed production list passes exact v3 read-back. For
+media-type repairs, also require a fresh Nuvio export with zero
+`series/MOVIE` LIST drifts.

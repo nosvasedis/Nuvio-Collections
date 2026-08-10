@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-11",
+  "profile": "C:/Users/nvase/Downloads/nuvio-collections-profile-1-2026-08-10.json",
+  "canonical": "dist/nuvio-collections-v5.0.json",
+  "totals": {
+    "canonicalCollections": 12,
+    "profileCollections": 12,
+    "folders": 519,
+    "sources": 2492,
+    "mediaTypeMismatches": 987,
+    "missing": 0,
+    "extra": 0,
+    "repairCollections": 10
+  },
+  "nativeVersusMaterializedTv": {
+    "canonicalListTv": 987,
+    "canonicalNativeTv": 121,
+    "profileSeriesMovieList": 987,
+    "profileSeriesTvNative": 121,
+    "profileSeriesTvList": 0,
+    "fieldLevelDiff": "Only mediaType flips TV→MOVIE; type stays series; list IDs unchanged",
+    "conclusion": "Only materialized TMDB LIST TV rails lose mediaType. Native DISCOVER/NETWORK TV rails stay series/TV."
+  },
+  "nuvio083": {
+    "importPath": "CollectionManagementViewModel / AddonConfigServer → CollectionsDataStore.importFromJson → SerializableSource.toDomainSource",
+    "dataStoreBehavior": "Reads mediaType; absent/invalid defaults to MOVIE; LIST+TV is preserved on a clean round-trip; Gson drops advisory type on TMDB serialize",
+    "nativeEditorHardcode": "CollectionEditorViewModel: LIST|COLLECTION → MOVIE on create",
+    "webEditorHardcode": "AddonWebPage: if (type === 'LIST' || type === 'COLLECTION') mediaType = 'MOVIE'; hidden non-NETWORK media inputs default MOVIE",
+    "mobileEditorHardcode": "CollectionEditorRepository.selectedMediaTypes: LIST → [MOVIE]",
+    "displayUses": "source.mediaType → CatalogRow.rawType → localizedContentType (Ταινία/Σειρά)",
+    "minimalProbe": "dist/nuvio-list-tv-mediaType-probe.json",
+    "compatModule": "src/nuvio-list-compat.mjs",
+    "exportFingerprint": "Mobile encodeDefaults nulls + retained type:series with mediaType:MOVIE on all 987 LIST TV rails"
+  },
+  "productionStance": [
+    "Keep stable TMDB list IDs and series/TV in the artifact",
+    "Do not convert LIST TV rails to inaccurate native Discover sources",
+    "Do not recreate TMDB lists solely for mediaType",
+    "Import the probe only in a disposable test profile; never add its temporary 13th collection to the active profile",
+    "After a successful disposable probe, import the full/repair artifact in the active profile; do not editor-save before verification",
+    "Require fresh Nuvio export with mediaTypeMismatches:0 before claiming success",
+    "Folder-order and import-compat changes do not require production TMDB sync"
+  ],
+  "worldOrder": {
+    "locale": "el",
+    "latinAmericanTitle": "Λατινοαμερικανικές",
+    "portugueseTitle": "Πορτογαλικές",
+    "latinAmericanIndex1Based": 22,
+    "portugueseIndex1Based": 31,
+    "neighbors": {
+      "latinAmerican": ["Κορεάτικες", "Λατινοαμερικανικές", "Μεξικάνικες"],
+      "portuguese": ["Πολωνικές", "Πορτογαλικές", "Ρωσικές"]
+    }
+  }
+}

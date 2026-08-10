@@ -1,4 +1,5 @@
 import { invariant } from "./utils.mjs";
+import { emulateNuvio083DataStoreMediaType, emulateNuvio083ListEditorMediaType } from "./nuvio-list-compat.mjs";
 
 export function expectedNuvioType(mediaType) {
   if (mediaType === "MOVIE") return "movie";
@@ -21,9 +22,9 @@ export function assertNuvioMediaTypeContract(collections, { managedOnly = false 
 }
 
 // Mirrors NuvioTV 0.8.3 CollectionsDataStore.SerializableSource.toDomainSource:
-// an absent or invalid mediaType becomes MOVIE. This deliberately exposes the
-// failure mode that produced the reviewed profile export.
+// an absent or invalid mediaType becomes MOVIE. LIST+TV is preserved here.
 export function emulateNuvio083MediaType(source) {
-  const raw = String(source.mediaType ?? "").toUpperCase();
-  return raw === "TV" || raw === "MOVIE" ? raw : "MOVIE";
+  return emulateNuvio083DataStoreMediaType(source);
 }
+
+export { emulateNuvio083DataStoreMediaType, emulateNuvio083ListEditorMediaType };

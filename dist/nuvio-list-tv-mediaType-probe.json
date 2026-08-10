@@ -1,0 +1,44 @@
+[
+  {
+    "id": "nuvio.compat.list-tv-probe",
+    "title": "TEST PROFILE ONLY — Nuvio LIST TV probe",
+    "backdropImageUrl": null,
+    "pinToTop": false,
+    "focusGlowEnabled": true,
+    "viewMode": "TABBED_GRID",
+    "showAllTab": true,
+    "folders": [
+      {
+        "id": "nuvio.compat.list-tv-probe.folder",
+        "title": "TEST PROFILE ONLY — Probe",
+        "coverImageUrl": null,
+        "focusGifUrl": null,
+        "focusGifEnabled": true,
+        "coverEmoji": null,
+        "tileShape": "POSTER",
+        "hideTitle": false,
+        "heroBackdropUrl": null,
+        "heroVideoUrl": null,
+        "titleLogoUrl": null,
+        "sources": [
+          {
+            "type": "series",
+            "genre": null,
+            "title": "Δημοφιλείς σειρές",
+            "sortBy": "original",
+            "tmdbId": 8681816,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "LIST"
+          }
+        ],
+        "catalogSources": []
+      }
+    ]
+  }
+]

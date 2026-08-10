@@ -37241,6 +37241,176 @@
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/korean-cinema/korean-cinema-hover.gif"
       },
       {
+        "id": "collections.world.latin-american",
+        "title": "Λατινοαμερικανικές",
+        "sources": [
+          {
+            "type": null,
+            "genre": null,
+            "title": "Νέες ταινίες",
+            "sortBy": "primary_release_date.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "year": 2026,
+              "voteCountGte": 10,
+              "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          },
+          {
+            "type": null,
+            "genre": null,
+            "title": "Νέες σειρές",
+            "sortBy": "first_air_date.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "year": 2026,
+              "voteCountGte": 8,
+              "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          },
+          {
+            "type": null,
+            "genre": null,
+            "title": "Δημοφιλείς ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "voteCountGte": 25,
+              "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          },
+          {
+            "type": null,
+            "genre": null,
+            "title": "Δημοφιλείς σειρές",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "voteCountGte": 15,
+              "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          },
+          {
+            "type": null,
+            "genre": null,
+            "title": "Κορυφαίες ταινίες όλων των εποχών",
+            "sortBy": "vote_average.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "voteCountGte": 150,
+              "voteAverageGte": 6.5,
+              "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          },
+          {
+            "type": null,
+            "genre": null,
+            "title": "Κορυφαίες σειρές όλων των εποχών",
+            "sortBy": "vote_average.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "voteCountGte": 75,
+              "voteAverageGte": 6.5,
+              "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          },
+          {
+            "type": null,
+            "genre": null,
+            "title": "Κορυφαίες ταινίες της χρονιάς",
+            "sortBy": "vote_average.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "year": 2026,
+              "voteCountGte": 25,
+              "voteAverageGte": 6,
+              "releaseDateGte": "2026-01-01",
+              "releaseDateLte": "2026-12-31",
+              "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          },
+          {
+            "type": null,
+            "genre": null,
+            "title": "Κορυφαίες σειρές της χρονιάς",
+            "sortBy": "vote_average.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "year": 2026,
+              "voteCountGte": 12,
+              "voteAverageGte": 6,
+              "releaseDateGte": "2026-01-01",
+              "releaseDateLte": "2026-12-31",
+              "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          }
+        ],
+        "hideTitle": false,
+        "tileShape": "LANDSCAPE",
+        "coverEmoji": "🌎",
+        "catalogSources": [],
+        "coverImageUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/latin-american-cinema/latin-american-cinema-cover.png",
+        "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/latin-american-cinema/latin-american-cinema-backdrop.jpg",
+        "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/latin-american-cinema/latin-american-cinema-hover.gif",
+        "focusGifEnabled": true
+      },
+      {
         "id": "folder-F4SMGZBV",
         "title": "Μεξικάνικες",
         "sources": [
@@ -38662,6 +38832,154 @@
         "coverImageUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/polish-cinema/polish-cinema-cover.png",
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/polish-cinema/polish-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/polish-cinema/polish-cinema-hover.gif",
+        "focusGifEnabled": true
+      },
+      {
+        "id": "collections.world.portuguese",
+        "title": "Πορτογαλικές",
+        "sources": [
+          {
+            "type": null,
+            "genre": null,
+            "title": "Νέες ταινίες",
+            "sortBy": "primary_release_date.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "year": 2026,
+              "voteCountGte": 5,
+              "withOriginCountry": "PT"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          },
+          {
+            "type": null,
+            "genre": null,
+            "title": "Νέες σειρές",
+            "sortBy": "first_air_date.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "year": 2026,
+              "voteCountGte": 3,
+              "withOriginCountry": "PT"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          },
+          {
+            "type": null,
+            "genre": null,
+            "title": "Δημοφιλείς ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "voteCountGte": 10,
+              "withOriginCountry": "PT"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          },
+          {
+            "type": null,
+            "genre": null,
+            "title": "Δημοφιλείς σειρές",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "voteCountGte": 8,
+              "withOriginCountry": "PT"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          },
+          {
+            "type": null,
+            "genre": null,
+            "title": "Κορυφαίες ταινίες όλων των εποχών",
+            "sortBy": "vote_average.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "voteCountGte": 40,
+              "voteAverageGte": 6.5,
+              "withOriginCountry": "PT"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          },
+          {
+            "type": null,
+            "genre": null,
+            "title": "Κορυφαίες σειρές όλων των εποχών",
+            "sortBy": "vote_average.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "voteCountGte": 25,
+              "voteAverageGte": 6.5,
+              "withOriginCountry": "PT"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          },
+          {
+            "type": null,
+            "genre": null,
+            "title": "Κορυφαίες ταινίες της χρονιάς",
+            "sortBy": "vote_average.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "year": 2026,
+              "voteCountGte": 5,
+              "voteAverageGte": 6,
+              "releaseDateGte": "2026-01-01",
+              "releaseDateLte": "2026-12-31",
+              "withOriginCountry": "PT"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER"
+          }
+        ],
+        "hideTitle": false,
+        "tileShape": "LANDSCAPE",
+        "coverEmoji": "🇵🇹",
+        "catalogSources": [],
+        "coverImageUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/portuguese-cinema/portuguese-cinema-cover.png",
+        "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/portuguese-cinema/portuguese-cinema-backdrop.jpg",
+        "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/portuguese-cinema/portuguese-cinema-hover.gif",
         "focusGifEnabled": true
       },
       {
@@ -40248,49 +40566,6 @@
         "coverImageUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/hong-kong-cinema/hong-kong-cinema-cover.png",
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/hong-kong-cinema/hong-kong-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/hong-kong-cinema/hong-kong-cinema-hover.gif",
-        "focusGifEnabled": true
-      },
-      {
-        "id": "collections.world.portuguese",
-        "title": "Πορτογαλικές",
-        "sources": [
-          { "type": null, "genre": null, "title": "Νέες ταινίες", "sortBy": "primary_release_date.desc", "tmdbId": null, "addonId": null, "filters": { "year": 2026, "voteCountGte": 5, "withOriginCountry": "PT" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "MOVIE", "traktListId": null, "tmdbSourceType": "DISCOVER" },
-          { "type": null, "genre": null, "title": "Νέες σειρές", "sortBy": "first_air_date.desc", "tmdbId": null, "addonId": null, "filters": { "year": 2026, "voteCountGte": 3, "withOriginCountry": "PT" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "TV", "traktListId": null, "tmdbSourceType": "DISCOVER" },
-          { "type": null, "genre": null, "title": "Δημοφιλείς ταινίες", "sortBy": "popularity.desc", "tmdbId": null, "addonId": null, "filters": { "voteCountGte": 10, "withOriginCountry": "PT" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "MOVIE", "traktListId": null, "tmdbSourceType": "DISCOVER" },
-          { "type": null, "genre": null, "title": "Δημοφιλείς σειρές", "sortBy": "popularity.desc", "tmdbId": null, "addonId": null, "filters": { "voteCountGte": 8, "withOriginCountry": "PT" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "TV", "traktListId": null, "tmdbSourceType": "DISCOVER" },
-          { "type": null, "genre": null, "title": "Κορυφαίες ταινίες όλων των εποχών", "sortBy": "vote_average.desc", "tmdbId": null, "addonId": null, "filters": { "voteCountGte": 40, "voteAverageGte": 6.5, "withOriginCountry": "PT" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "MOVIE", "traktListId": null, "tmdbSourceType": "DISCOVER" },
-          { "type": null, "genre": null, "title": "Κορυφαίες σειρές όλων των εποχών", "sortBy": "vote_average.desc", "tmdbId": null, "addonId": null, "filters": { "voteCountGte": 25, "voteAverageGte": 6.5, "withOriginCountry": "PT" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "TV", "traktListId": null, "tmdbSourceType": "DISCOVER" },
-          { "type": null, "genre": null, "title": "Κορυφαίες ταινίες της χρονιάς", "sortBy": "vote_average.desc", "tmdbId": null, "addonId": null, "filters": { "year": 2026, "voteCountGte": 5, "voteAverageGte": 6, "releaseDateGte": "2026-01-01", "releaseDateLte": "2026-12-31", "withOriginCountry": "PT" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "MOVIE", "traktListId": null, "tmdbSourceType": "DISCOVER" }
-        ],
-        "hideTitle": false,
-        "tileShape": "LANDSCAPE",
-        "coverEmoji": "🇵🇹",
-        "catalogSources": [],
-        "coverImageUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/portuguese-cinema/portuguese-cinema-cover.png",
-        "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/portuguese-cinema/portuguese-cinema-backdrop.jpg",
-        "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/portuguese-cinema/portuguese-cinema-hover.gif",
-        "focusGifEnabled": true
-      },
-      {
-        "id": "collections.world.latin-american",
-        "title": "Λατινοαμερικανικές",
-        "sources": [
-          { "type": null, "genre": null, "title": "Νέες ταινίες", "sortBy": "primary_release_date.desc", "tmdbId": null, "addonId": null, "filters": { "year": 2026, "voteCountGte": 10, "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "MOVIE", "traktListId": null, "tmdbSourceType": "DISCOVER" },
-          { "type": null, "genre": null, "title": "Νέες σειρές", "sortBy": "first_air_date.desc", "tmdbId": null, "addonId": null, "filters": { "year": 2026, "voteCountGte": 8, "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "TV", "traktListId": null, "tmdbSourceType": "DISCOVER" },
-          { "type": null, "genre": null, "title": "Δημοφιλείς ταινίες", "sortBy": "popularity.desc", "tmdbId": null, "addonId": null, "filters": { "voteCountGte": 25, "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "MOVIE", "traktListId": null, "tmdbSourceType": "DISCOVER" },
-          { "type": null, "genre": null, "title": "Δημοφιλείς σειρές", "sortBy": "popularity.desc", "tmdbId": null, "addonId": null, "filters": { "voteCountGte": 15, "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "TV", "traktListId": null, "tmdbSourceType": "DISCOVER" },
-          { "type": null, "genre": null, "title": "Κορυφαίες ταινίες όλων των εποχών", "sortBy": "vote_average.desc", "tmdbId": null, "addonId": null, "filters": { "voteCountGte": 150, "voteAverageGte": 6.5, "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "MOVIE", "traktListId": null, "tmdbSourceType": "DISCOVER" },
-          { "type": null, "genre": null, "title": "Κορυφαίες σειρές όλων των εποχών", "sortBy": "vote_average.desc", "tmdbId": null, "addonId": null, "filters": { "voteCountGte": 75, "voteAverageGte": 6.5, "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "TV", "traktListId": null, "tmdbSourceType": "DISCOVER" },
-          { "type": null, "genre": null, "title": "Κορυφαίες ταινίες της χρονιάς", "sortBy": "vote_average.desc", "tmdbId": null, "addonId": null, "filters": { "year": 2026, "voteCountGte": 25, "voteAverageGte": 6, "releaseDateGte": "2026-01-01", "releaseDateLte": "2026-12-31", "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "MOVIE", "traktListId": null, "tmdbSourceType": "DISCOVER" },
-          { "type": null, "genre": null, "title": "Κορυφαίες σειρές της χρονιάς", "sortBy": "vote_average.desc", "tmdbId": null, "addonId": null, "filters": { "year": 2026, "voteCountGte": 12, "voteAverageGte": 6, "releaseDateGte": "2026-01-01", "releaseDateLte": "2026-12-31", "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR" }, "sortHow": null, "provider": "tmdb", "catalogId": null, "mediaType": "TV", "traktListId": null, "tmdbSourceType": "DISCOVER" }
-        ],
-        "hideTitle": false,
-        "tileShape": "LANDSCAPE",
-        "coverEmoji": "🌎",
-        "catalogSources": [],
-        "coverImageUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/latin-american-cinema/latin-american-cinema-cover.png",
-        "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/latin-american-cinema/latin-american-cinema-backdrop.jpg",
-        "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/latin-american-cinema/latin-american-cinema-hover.gif",
         "focusGifEnabled": true
       }
     ],

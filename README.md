@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/folders-519-111827?style=flat-square" alt="519 folders">
   <img src="https://img.shields.io/badge/active_rails-2%2C492-111827?style=flat-square" alt="2,492 active rails">
   <img src="https://img.shields.io/badge/empty_rails-0-16a34a?style=flat-square" alt="0 empty rails">
-  <img src="https://img.shields.io/badge/tests-36%2F36-16a34a?style=flat-square" alt="36/36 tests">
+  <img src="https://img.shields.io/badge/tests-38%2F38-16a34a?style=flat-square" alt="38/38 tests">
 </p>
 
 <p align="center">
@@ -45,7 +45,7 @@ resumable synchronizer και το GitHub Actions workflow που κρατά τ�
 | Κενά folders | **0** |
 | Unresolved list IDs | **0** |
 | Trakt / runtime-addon sources | **0 / 0** |
-| Automated tests | **36 / 36** |
+| Automated tests | **38 / 38** |
 
 Τα 42 sources που επέστρεφαν αποδεδειγμένα μηδενικό αποτέλεσμα με τον ακριβή
 predicate τους έχουν αποσυρθεί. Δεν διαγράφηκε ούτε συγχωνεύτηκε κανένα folder.
@@ -200,6 +200,8 @@ refresh τουλάχιστον κάθε επτά ημέρες ή με `--force`.
 
 - World: inclusion με `with_origin_country`, χωρίς να αποκλείονται πραγματικές
   πολύγλωσσες ή διεθνείς συμπαραγωγές λόγω original language.
+- Οι φάκελοι World ταξινομούνται με ελληνικό locale (`el`) στον εμφανιζόμενο
+  τίτλο· η Λατινική Αμερική και η Πορτογαλία κάθονται στα γράμματα Λ και Π.
 - Decades: ακριβή date bounds. Η τρέχουσα χρονιά και τα 2020s σταματούν σήμερα,
   χωρίς future releases.
 - Runtime: movie-only, ακριβή και μη επικαλυπτόμενα όρια.
@@ -254,12 +256,16 @@ flowchart LR
 | Εργασία | Χρόνος | Αποτέλεσμα |
 |---|---:|---|
 | Production v5.0 reconciliation | 376,9 s | 84 verified updates, 15 creates, 0 failures |
-| Post-production full dry-run, 2.092 rails | 38,3 s | 0 changes, 0 failures, 2.092 skips |
-| Poster validation | ίδιο run | 3.426 exclusions, κανένα κενό candidate |
-| Tests + compile + strict audit | < 3 s τοπικά | 36/36, 2.492 sources, 0 unresolved IDs |
+| Current full dry-run, 2.092 rails (2026-08-11) | 141,4 s | 516 pending, 1.576 skips, 0 failures |
+| Poster validation | ίδιο run | 3.433 exclusions, κανένα κενό candidate |
+| Tests + compile + strict audit | < 3 s τοπικά | 38/38, 2.492 sources, 0 unresolved IDs |
 
 Ο nightly χρόνος εξαρτάται από changed fingerprints και TMDB rate limits. Το
-εβδομαδιαίο πλήρες awards refresh είναι σκόπιμα βαρύτερο.
+εβδομαδιαίο πλήρες awards refresh είναι σκόπιμα βαρύτερο. Από τα 516 pending
+του τελευταίου dry-run, 358 είχαν πραγματική μεταβολή membership και 158 ίδια
+ordered IDs (`changeRatio: 0`) αλλά νέο checkpoint/schema fingerprint. Θα
+συμφιλιωθούν από το κανονικό nightly run· δεν έγινε έκτακτο production sync
+μόνο για την αλλαγή σειράς folders/import diagnostics.
 
 ## Fail-safe συμπεριφορά
 
@@ -291,7 +297,9 @@ flowchart LR
 | `reports/latest.json` | Αναλυτικό αποτέλεσμα τελευταίου sync |
 | `dist/nuvio-collections-v5.0.json` | Τελικό Nuvio import artifact |
 | `dist/nuvio-collections-v5.0-profile-repair.json` | Replacement artifact μόνο για collections με profile drift |
-| `reports/profile-audit-2026-08-10.json` | Evidence του reviewed Nuvio export και των media-type mismatches |
+| `dist/nuvio-list-tv-mediaType-probe.json` | Ελάχιστο TV LIST probe για Nuvio 0.8.3 mediaType |
+| `reports/profile-audit-2026-08-10.json` | Evidence του reviewed Nuvio export και των 987 media-type mismatches |
+| `src/nuvio-list-compat.mjs` | LIST/editor/DataStore compatibility probes |
 | `assets/branding/` | Product mark και horizontal wordmark |
 
 ## Commands
@@ -299,7 +307,7 @@ flowchart LR
 Απαιτείται Node.js 22+· το hosted workflow χρησιμοποιεί Node.js 24.
 
 ```powershell
-npm test                    # 36 automated contract tests
+npm test                    # 38 automated contract tests
 npm run audit               # structure, counts, locks και compatibility
 npm run sync:dry            # live candidates, χωρίς remote writes
 npm run sync                # production reconciliation
@@ -335,22 +343,50 @@ Production writes απαιτούν `--execute` και
 
 ### Repair παλιού `Σειρά → Ταινία` profile
 
-Το reviewed Nuvio export της 10ης Αυγούστου 2026 αποθήκευσε 980 managed TV rails ως
-`type: series` αλλά `mediaType: MOVIE`. Το Nuvio εμφανίζει τον τύπο από το
-`mediaType`, άρα το ορατό suffix έγινε «Ταινία». Το 981ο `series` source ήταν το
-προστατευμένο Recommended addon, όπου το nullable `mediaType` είναι έγκυρο και
-παραμένει ανέγγιχτο. Το τελικό artifact επιβάλλει
-παντού `series/TV` και `movie/MOVIE`.
+Το reviewed Nuvio export της 10ης Αυγούστου 2026 αποθήκευσε **987** managed TV
+LIST rails ως `type: series` αλλά `mediaType: MOVIE` (980 πριν τα World PT/LATAM
+TV rails). Τα 121 native TV sources παρέμειναν `series/TV`. Το Nuvio εμφανίζει
+τον τύπο από το `mediaType`, άρα το ορατό suffix έγινε «Ταινία». Το προστατευμένο
+Recommended addon έχει nullable `mediaType` και παραμένει ανέγγιχτο. Το τελικό
+artifact επιβάλλει παντού `series/TV` και `movie/MOVIE` και κρατά σταθερά τα
+TMDB list IDs.
 
-1. Κάνε import το πλήρες v5.0 ή το
-   [`profile-repair`](dist/nuvio-collections-v5.0-profile-repair.json). Το Nuvio
-   αντικαθιστά τις επηρεασμένες collections βάσει σταθερού collection ID.
-2. Περίμενε να ολοκληρωθεί το profile sync και κάνε νέο export.
-3. Τρέξε `npm run profile:audit -- --profile=<νέο-export.json>`.
-4. Αποδέξου το migration μόνο με `mediaTypeMismatches: 0` και `missing: 0`.
+Στο Nuvio 0.8.3 ο native/web editor hard-codes `LIST → MOVIE` κατά τη
+*δημιουργία* (και τα hidden media fields του web editor για μη-NETWORK modes).
+Το `CollectionsDataStore` διατηρεί `mediaType:TV` στο καθαρό import path.
+Μην υποθέσεις ότι ένα τυφλό re-import αρκεί· μετά από κάθε import κάνε νέο
+export και `profile:audit`. Μην ανοίξεις τον web/native editor και κάνεις
+save στις collections πριν την επαλήθευση — αυτό μπορεί να ξαναγράψει LIST
+sources ως MOVIE.
+
+Evidence: `reports/list-tv-mediatype-audit-2026-08-11.json`,
+`reports/profile-audit-2026-08-10.json`, `src/nuvio-list-compat.mjs`.
+
+1. Προαιρετικά δοκίμασε πρώτα το
+   [`list-tv probe`](dist/nuvio-list-tv-mediaType-probe.json) (ένα LIST TV
+   source), **μόνο σε ξεχωριστό disposable Nuvio test profile**. Μην το
+   εισαγάγεις στο ενεργό profile: είναι σκόπιμα μία προσωρινή 13η collection
+   και το merge import δεν την αφαιρεί όταν ακολουθήσει το πλήρες v5.0. Κάνε
+   export, επιβεβαίωσε `mediaType: "TV"` και μετά διέγραψε ολόκληρο το
+   disposable test profile.
+2. Κάνε import το πλήρες v5.0 ή το
+   [`profile-repair`](dist/nuvio-collections-v5.0-profile-repair.json) (μόνο τις
+   10 επηρεασμένες collections· οι άλλες 2 είναι σκόπιμα εκτός). Το Nuvio
+   αντικαθιστά βάσει σταθερού collection ID.
+3. Περίμενε να ολοκληρωθεί το profile sync και κάνε νέο export.
+4. Τρέξε `npm run profile:audit -- --profile=<νέο-export.json>`.
+5. Αποδέξου το migration μόνο με:
+
+   - `mediaTypeMismatches: 0`
+   - `missing: 0`
+   - `extra: 0`
+   - `canonicalCollections: 12`
+   - `profileCollections: 12`
 
 Δεν απαιτείται καθημερινό re-import: τα public TMDB list IDs είναι σταθερά και
-το nightly workflow ενημερώνει το περιεχόμενό τους στη θέση του.
+το nightly workflow ενημερώνει το περιεχόμενό τους στη θέση του. Η διόρθωση
+σειράς World folders και η import compatibility δεν αλλάζουν remote list
+membership· μην τρέχεις production TMDB sync μόνο γι’ αυτές.
 
 ## Branding
 
