@@ -19,6 +19,11 @@ export function confirmationCompatible(before, after) {
   let changed = 0; for (const value of a) if (!b.has(value)) changed++; for (const value of b) if (!a.has(value)) changed++;
   return changed <= 2 || changed / Math.max(a.size, b.size, 1) <= 0.1;
 }
+export function semanticRefreshDue(prior, now = new Date(), days = Number(process.env.NUVIO_AWARD_REFRESH_DAYS ?? 7)) {
+  const refreshedAt = prior.lastSemanticRefresh ?? prior.lastVerified;
+  const timestamp = Date.parse(refreshedAt);
+  return !refreshedAt || !Number.isFinite(timestamp) || now.getTime() - timestamp >= Math.max(1, days) * 86400000;
+}
 function description(rail, folderTitle, scope, date) {
   const suffix = ` • key ${rail.key}`;
   const prefix = `Συλλογή Nuvio «${folderTitle} — ${rail.title}» • ${rail.mediaType} • ${scope} • επαληθεύτηκε ${date}`;
@@ -111,6 +116,9 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
     const startedAt = performance.now();
     const prior = state.rails[rail.key] ?? {};
     try {
+      if (!force && rail.materializer === "award" && prior.syncStatus === "verified" && !semanticRefreshDue(prior)) {
+        return { key: rail.key, status: "unchanged", count: prior.count, scope: prior.scope, refreshDeferred: "verified-award-snapshot", _durationMs: Math.round(performance.now() - startedAt) };
+      }
       const folderTitle = folderMap.get(rail.folderId)?.title ?? "";
       const provider = providers.providers.find((p) => { const target = normalizeText(folderTitle); return [p.name, p.slug, ...p.aliases].some((name) => target.includes(normalizeText(name)) || normalizeText(name).includes(target)); });
       const context = { today, folderTitle, providerAliases: provider ? [provider.name, ...provider.aliases] : [], award: awardMap.get(rail.key), authorityOverrides: awards.authorityOverrides ?? {}, nonWorkWinners: awards.nonWorkWinners ?? [] };
@@ -130,8 +138,13 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
         candidate = confirm; ids = confirmIds; hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids }); ratio = changeRatio(prior.orderedIds ?? [], ids);
       }
       const _durationMs = Math.round(performance.now() - startedAt);
+      const semanticRefreshedAt = rail.materializer === "award" ? new Date().toISOString() : prior.lastSemanticRefresh;
+      if (execute && rail.materializer === "award" && prior.fingerprint === hash) {
+        state.rails[rail.key] = { ...prior, lastSemanticRefresh: semanticRefreshedAt };
+        await checkpointState();
+      }
       if (!force && prior.syncStatus === "verified" && prior.fingerprint === hash) return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, _durationMs };
-      return { key: rail.key, status: "would-update", listId: prior.listId, count: ids.length, scope: candidate.scope, changeRatio: ratio, _durationMs, _rail: rail, _folderTitle: folderTitle, _candidate: candidate, _media: media, _ids: ids, _hash: hash, _invalidItems: invalidItems };
+      return { key: rail.key, status: "would-update", listId: prior.listId, count: ids.length, scope: candidate.scope, changeRatio: ratio, _durationMs, _rail: rail, _folderTitle: folderTitle, _candidate: candidate, _media: media, _ids: ids, _hash: hash, _invalidItems: invalidItems, _semanticRefreshedAt: semanticRefreshedAt };
     } catch (error) { return { key: rail.key, status: "failed", error: error.message, _durationMs: Math.round(performance.now() - startedAt) }; }
   });
   const preparationFailures = prepared.filter((x) => x.status === "failed");
@@ -194,7 +207,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
           entry._hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids: entry._ids });
           await reconcile(client, entry.listId, entry._candidate.items, oldItems);
         }
-        state.rails[entry.key] = { listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, syncStatus: "verified", lastVerified: new Date().toISOString(), invalidItems: entry._invalidItems ?? [] };
+        state.rails[entry.key] = { listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, syncStatus: "verified", lastVerified: new Date().toISOString(), invalidItems: entry._invalidItems ?? [], ...(entry._semanticRefreshedAt ? { lastSemanticRefresh: entry._semanticRefreshedAt } : {}) };
         await checkpointState();
         verifiedProgress++;
         if (verifiedProgress === 1 || verifiedProgress % 25 === 0 || verifiedProgress === updateTotal) console.error(`[sync] verified ${verifiedProgress}/${updateTotal} rails; latest=${entry.key}; items=${entry.count}`);

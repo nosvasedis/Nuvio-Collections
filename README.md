@@ -56,6 +56,11 @@ year/title/contributor rules. Ambiguous matches fail closed and require an
 explicit, reviewed `authorityOverrides` entry; an override still reads and
 verifies the target TMDB endpoint.
 
+Verified award candidates are reused by the nightly run and fully rebuilt at
+least every seven days (or immediately with `--force`). This avoids resolving
+the same immutable historical winners through hundreds of live TMDB searches
+every night while retaining a bounded, explicit freshness window.
+
 The first production run requires `npm run capability-probe` to verify TMDB v4
 create/add/read/clear/delete and the same v3 list read path used by Nuvio. The
 temporary probe list is deleted even when an intermediate assertion fails.
@@ -101,9 +106,10 @@ Worldwide materialization queries the provider-filtered Discover endpoint for
 every official region advertised by that canonical provider, unions the
 results, deduplicates by typed TMDB ID, and ranks only after the union. It never
 uses a capped global-title sample. The production concurrency remains bounded
-by the TMDB client and honors `Retry-After`; the measured cold calculation of
-all 2,125 rails is approximately 2.5 minutes on the current GitHub/local Node 24
-configuration. Actual list-write time additionally depends on how many ordered
+by the TMDB client and honors `Retry-After`. With a fresh verified award
+snapshot, the measured daily calculation of all 2,125 rails is under one minute
+locally; the mandatory weekly full award refresh is slower and is reported
+separately. Actual list-write time additionally depends on how many ordered
 fingerprints changed because TMDB v4 does not support item reordering.
 
 Watch-provider data is supplied by JustWatch through TMDB. JustWatch and TMDB

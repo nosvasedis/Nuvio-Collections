@@ -5,7 +5,7 @@ import { auditRepository } from "../src/validate.mjs";
 import { compile } from "../src/compiler.mjs";
 import { runtimeBucket, chooseAvailability, materializeRail, applySemanticPredicates, discoverParams } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
-import { confirmationCompatible, normalizeCandidateItems } from "../src/sync.mjs";
+import { confirmationCompatible, normalizeCandidateItems, semanticRefreshDue } from "../src/sync.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, EXPECTED } from "../src/constants.mjs";
 import { readJson, fingerprint } from "../src/utils.mjs";
 
@@ -38,6 +38,13 @@ test("large-change confirmation tolerates tiny live churn but rejects semantic d
   assert.equal(confirmationCompatible(["tv:1", "tv:2", "tv:3", "tv:4"], ["tv:1", "tv:2", "tv:3"]), true);
   assert.equal(confirmationCompatible(Array.from({ length: 100 }, (_, i) => `tv:${i}`), Array.from({ length: 95 }, (_, i) => `tv:${i}`)), true);
   assert.equal(confirmationCompatible(["tv:1", "tv:2", "tv:3", "tv:4"], ["tv:7"]), false);
+});
+
+test("verified award snapshots refresh weekly, while force remains available", () => {
+  const now = new Date("2026-08-10T04:07:00Z");
+  assert.equal(semanticRefreshDue({ lastVerified: "2026-08-09T04:07:00Z" }, now, 7), false);
+  assert.equal(semanticRefreshDue({ lastSemanticRefresh: "2026-08-03T04:06:59Z" }, now, 7), true);
+  assert.equal(semanticRefreshDue({}, now, 7), true);
 });
 
 test("streaming requests only allowed monetization and prefers successful GR", async () => {
