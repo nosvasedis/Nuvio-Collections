@@ -24,7 +24,7 @@ export const PERSON_ID_BY_FOLDER = Object.freeze({
   "folder-JNAONKLX": 510,     // Tim Burton
   "folder-P3TT53P3": 1,       // George Lucas
 });
-export const RETIRED_EMPTY_RAIL_KEYS = Object.freeze(new Set([
+const EMPTY_EXACT_TMDB_PREDICATE_RAIL_KEYS = [
   "collections.directors:folder-1VPO8OYE:1", "collections.directors:folder-1VPO8OYE:3",
   "collections.directors:folder-C34MCJNY:1", "collections.directors:folder-C34MCJNY:3",
   "collections.genres:folder-8B3PEI1Y:1", "collections.genres:folder-8B3PEI1Y:7",
@@ -47,17 +47,25 @@ export const RETIRED_EMPTY_RAIL_KEYS = Object.freeze(new Set([
   "collections.world:folder-10NNKWPU:6", "collections.world:folder-10NNKWPU:7",
   "collections.world:folder-U58KOK24:6", "collections.world:folder-U58KOK24:7",
   "collections.world:folder-Z4R165P4:7", "collections.world:folder-Z55EA73B:7",
+];
+const NO_SUBSTANTIVE_TV_CAST_CREDIT_RAIL_KEYS = [
+  "collections.actors:folder-D8PPUHIE:1", "collections.actors:folder-D8PPUHIE:3", "collections.actors:folder-D8PPUHIE:5",
+  "collections.actors:folder-ZISLC5VJ:1", "collections.actors:folder-ZISLC5VJ:3", "collections.actors:folder-ZISLC5VJ:5",
+];
+export const RETIRED_RAIL_REASONS = Object.freeze(new Map([
+  ...EMPTY_EXACT_TMDB_PREDICATE_RAIL_KEYS.map((key) => [key, "EMPTY_EXACT_TMDB_PREDICATE"]),
+  ...NO_SUBSTANTIVE_TV_CAST_CREDIT_RAIL_KEYS.map((key) => [key, "NO_SUBSTANTIVE_TV_CAST_CREDITS"]),
 ]));
 export const EXPECTED = Object.freeze({
   collections: 12, folders: 517, inputSources: 2516, managedInputSources: 2514,
-  finalSources: 2483, managedFinalSources: 2481, recommendedSources: 2,
-  native: 398, materialized: 2083, retiredEmptyRails: 42,
+  finalSources: 2477, managedFinalSources: 2475, recommendedSources: 2,
+  native: 398, materialized: 2077, retiredRails: 48,
 });
 export const EXPECTED_MAPPING = Object.freeze({
   "collections.discover": [2, 10], "collections.streaming": [0, 455],
   "collections.genres": [0, 180], "collections.film-series": [186, 0],
   "collections.studios": [0, 107], "collections.networks": [30, 29],
-  "collections.actors": [0, 750], "collections.directors": [0, 186],
+  "collections.actors": [0, 744], "collections.directors": [0, 186],
   "collections.awards": [0, 60], "collections.world": [0, 296],
   "collections.decades": [180, 6], "collections.runtime": [0, 4],
 });

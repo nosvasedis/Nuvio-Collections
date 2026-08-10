@@ -46,6 +46,40 @@ export function uniqueItems(items, mediaType) {
     seen.add(key); return true;
   });
 }
+const GREEK_TRANSLITERATION = Object.freeze({
+  α: "a", β: "v", γ: "g", δ: "d", ε: "e", ζ: "z", η: "i", θ: "th", ι: "i", κ: "k", λ: "l", μ: "m",
+  ν: "n", ξ: "x", ο: "o", π: "p", ρ: "r", σ: "s", ς: "s", τ: "t", υ: "i", φ: "f", χ: "ch", ψ: "ps", ω: "o",
+});
+export function transliterateGreek(value) {
+  return [...normalizeText(value ?? "")].map((character) => GREEK_TRANSLITERATION[character] ?? character).join("");
+}
+export function canonicalWorkTitle(item) {
+  const value = item.original_title ?? item.original_name ?? item.title ?? item.name ?? "";
+  return transliterateGreek(value).replace(/[^a-z0-9]+/g, "");
+}
+function greekScriptScore(item) {
+  if (item.original_language !== "el" && !(item.origin_country ?? []).includes("GR")) return 0;
+  return ([item.title, item.name, item.original_title, item.original_name].join(" ").match(/[\u0370-\u03ff]/g) ?? []).length;
+}
+function duplicatePreference(item) {
+  return greekScriptScore(item) * 1_000_000_000
+    + Number(Boolean(item.backdrop_path)) * 10_000_000
+    + Number(Boolean(item.overview)) * 1_000_000
+    + Math.min(Number(item.vote_count ?? 0), 100_000) * 10
+    + Number(item.popularity ?? 0);
+}
+export function dedupeLikelyDuplicateWorks(items, mediaType) {
+  const exact = uniqueItems(items, mediaType), kept = [], bySignature = new Map();
+  for (const item of exact) {
+    const type = item.media_type === "tv" ? "tv" : item.media_type === "movie" ? "movie" : mediaType;
+    const title = canonicalWorkTitle(item), poster = item.poster_path, date = dateFor(item, type), year = String(date ?? "").slice(0, 4);
+    if (!title || !poster || !/^\d{4}$/.test(year)) { kept.push(item); continue; }
+    const signature = `${type}:${year}:${poster}:${title}`, previousIndex = bySignature.get(signature);
+    if (previousIndex == null) { bySignature.set(signature, kept.length); kept.push(item); continue; }
+    if (duplicatePreference(item) > duplicatePreference(kept[previousIndex])) kept[previousIndex] = item;
+  }
+  return kept;
+}
 export function chunk(items, size) {
   const chunks = [];
   for (let index = 0; index < items.length; index += size) chunks.push(items.slice(index, index + size));

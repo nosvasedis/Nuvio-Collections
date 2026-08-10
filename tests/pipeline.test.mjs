@@ -3,23 +3,73 @@ import assert from "node:assert/strict";
 import { bootstrap } from "../src/bootstrap.mjs";
 import { auditRepository } from "../src/validate.mjs";
 import { compile } from "../src/compiler.mjs";
-import { runtimeBucket, chooseAvailability, materializeRail, applySemanticPredicates, discoverParams } from "../src/materialize.mjs";
+import { runtimeBucket, chooseAvailability, materializeRail, applySemanticPredicates, discoverParams, isSubstantiveCastCredit, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
 import { confirmationCompatible, normalizeCandidateItems, semanticRefreshDue } from "../src/sync.mjs";
-import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED } from "../src/constants.mjs";
-import { readJson, fingerprint } from "../src/utils.mjs";
+import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS } from "../src/constants.mjs";
+import { readJson, fingerprint, dedupeLikelyDuplicateWorks } from "../src/utils.mjs";
 
 test("bootstrap creates the final immutable mapping", async () => {
   const result = await bootstrap();
-  assert.deepEqual(result, { collections: 12, folders: 517, inputSources: 2516, managedRails: 2481, native: 398, materialized: 2083 });
+  assert.deepEqual(result, { collections: 12, folders: 517, inputSources: 2516, managedRails: 2475, native: 398, materialized: 2077 });
   const audit = await auditRepository(); assert.equal(audit.finalSources, EXPECTED.finalSources);
   const manifest = await readJson(new URL("../config/rails.yml", import.meta.url));
   const companions = manifest.rails.filter((rail) => rail.key.endsWith(":movie-companion"));
   assert.equal(companions.length, 5); assert.ok(companions.every((rail) => rail.mediaType === "MOVIE" && /(?:1970|1971|1981)/.test(rail.title)));
+  assert.ok(manifest.rails.filter((rail) => ["collections.actors", "collections.directors"].includes(rail.collectionId)).every((rail) => !rail.title.startsWith("Νέες ")));
+  const retired = await readJson(new URL("../state/sync-state.json", import.meta.url));
+  const approved = ["collections.actors:folder-D8PPUHIE:1", "collections.actors:folder-D8PPUHIE:3", "collections.actors:folder-D8PPUHIE:5", "collections.actors:folder-ZISLC5VJ:1", "collections.actors:folder-ZISLC5VJ:3", "collections.actors:folder-ZISLC5VJ:5"];
+  assert.ok(approved.every((key) => !manifest.rails.some((rail) => rail.key === key)));
+  assert.ok(approved.every((key) => RETIRED_RAIL_REASONS.get(key) === "NO_SUBSTANTIVE_TV_CAST_CREDITS" && retired.retiredRails[key]?.reason === "NO_SUBSTANTIVE_TV_CAST_CREDITS"));
+});
+
+test("poster gate excludes blank cards and automatically restores a title once TMDB adds a poster", async () => {
+  let posterAvailable = false; let detailCalls = 0;
+  const client = { details: async (_media, id) => { detailCalls++; return { id, poster_path: posterAvailable ? "/later.jpg" : null }; } };
+  const input = [{ id: 1, media_type: "tv", poster_path: "/ready.jpg" }, { id: 2, media_type: "tv", poster_path: null }];
+  assert.deepEqual((await requireUsablePosters(client, input, "tv")).map((item) => item.id), [1]);
+  posterAvailable = true;
+  assert.deepEqual((await requireUsablePosters(client, input, "tv")).map((item) => item.id), [1, 2]);
+  assert.equal(detailCalls, 2);
 });
 
 test("runtime boundaries are exact and non-overlapping", () => {
   assert.deepEqual([89, 90, 149, 150, 179, 180].map(runtimeBucket), ["short", "standard", "standard", "long", "long", "epic"]);
+});
+
+test("all four materialized runtime folders send distinct exact TMDB bounds", async () => {
+  const calls = [];
+  const client = { discover: async (_media, params) => { calls.push(params); return [{ id: calls.length, release_date: "2020-01-01" }]; }, details: async (_media, id) => ({ id, runtime: [null, 80, 100, 160, 200][id], release_date: "2020-01-01" }) };
+  const folders = ["short", "standard", "long", "epic"];
+  for (const name of folders) await materializeRail(client, { folderId: `collections.runtime.${name}`, collectionId: "collections.runtime", title: name, mediaType: "MOVIE", materializer: "runtime", params: { legacy: { filters: {} } } }, { today: "2026-08-10", folderTitle: name });
+  assert.deepEqual(calls.map(({ "with_runtime.gte": gte, "with_runtime.lte": lte }) => [gte, lte]), [[undefined, 89], [90, 149], [150, 179], [180, undefined]]);
+});
+
+test("person rails reject self, archive, and uncredited noise and use vote-aware Top ranking", async () => {
+  assert.equal(isSubstantiveCastCredit({ character: "Self (uncredited)" }), false);
+  assert.equal(isSubstantiveCastCredit({ character: "Self (archive footage)" }), false);
+  assert.equal(isSubstantiveCastCredit({ character: "Michael Corleone" }), true);
+  const movieClient = { credits: async () => ({ cast: [
+    { id: 516853, character: "Self (uncredited)", vote_average: 10, vote_count: 2, popularity: 1, release_date: "1998-07-03" },
+    { id: 1213643, character: "Robert Maheu", vote_average: 10, vote_count: 1, popularity: 1, release_date: "2026-06-09" },
+    { id: 238, character: "Michael Corleone", vote_average: 8.686, vote_count: 23307, popularity: 48, release_date: "1972-03-14" },
+  ] }) };
+  const top = await materializeRail(movieClient, { title: "Κορυφαίες ταινίες", mediaType: "MOVIE", materializer: "person_cast", params: { legacy: { tmdbId: 1158 } } }, { today: "2026-08-10" });
+  assert.deepEqual(top.items.map((item) => item.id), [238, 1213643]);
+  const tvClient = { credits: async () => ({ cast: [
+    { id: 59941, character: "Self", episode_count: 1, popularity: 168, first_air_date: "2014-02-17" },
+    { id: 79622, character: "Meyer Offerman", episode_count: 18, popularity: 24, first_air_date: "2020-02-20" },
+  ] }) };
+  const popular = await materializeRail(tvClient, { title: "Δημοφιλείς σειρές", mediaType: "TV", materializer: "person_cast", params: { legacy: { tmdbId: 1158 } } }, { today: "2026-08-10" });
+  assert.deepEqual(popular.items.map((item) => item.id), [79622]);
+});
+
+test("same-poster transliterated TMDB duplicates collapse to the Greek canonical record", () => {
+  const items = dedupeLikelyDuplicateWorks([
+    { id: 324334, name: "From Sunrise to Sunset", original_name: "Apo ilio se ilio", original_language: "el", origin_country: ["GR"], first_air_date: "2026-03-03", poster_path: "/same.jpg", backdrop_path: "/backdrop.jpg" },
+    { id: 315644, name: "Από Ήλιο σε Ήλιο", original_name: "Από Ήλιο σε Ήλιο", original_language: "el", origin_country: ["GR"], first_air_date: "2026-03-02", poster_path: "/same.jpg" },
+  ], "tv");
+  assert.deepEqual(items.map((item) => item.id), [315644]);
 });
 
 test("streaming fallback never mixes GR and Worldwide", async () => {
@@ -55,6 +105,18 @@ test("streaming requests only allowed monetization and prefers successful GR", a
   assert.equal(result.scope, "GR"); assert.deepEqual(result.items.map((x) => x.id), [1]); assert.equal(calls.length, 1); assert.equal(calls[0].with_watch_monetization_types, "flatrate|free|ads");
 });
 
+test("provider trending widens from official day to week only when day is empty everywhere", async () => {
+  const windows = [];
+  const client = {
+    providers: async () => [{ provider_id: 350, provider_name: "Apple TV", display_priorities: { GR: 1 } }],
+    trending: async (_media, window) => { windows.push(window); return window === "day" ? [{ id: 1 }] : [{ id: 2, poster_path: "/week.jpg" }]; },
+    watchProviders: async (_media, id) => id === 2 ? { GR: { flatrate: [{ provider_id: 350 }] } } : {},
+  };
+  const rail = { title: "Τάσεις ταινιών", mediaType: "MOVIE", materializer: "streaming", params: { legacy: { filters: {} } } };
+  const result = await materializeRail(client, rail, { folderTitle: "Apple TV", providerAliases: [], today: "2026-08-10" });
+  assert.deepEqual(windows, ["day", "week"]); assert.equal(result.scope, "GR"); assert.deepEqual(result.items.map((item) => item.id), [2]);
+});
+
 test("TV-only semantic genres use keywords without invalid movie genre IDs", async () => {
   const client = { keywordIds: async (names) => names.map((_, index) => index + 1) };
   for (const title of ["Σειρές τρόμου", "Ρομαντικές σειρές", "Σειρές θρίλερ", "Μουσικές σειρές", "Ιστορικές σειρές"]) {
@@ -66,6 +128,15 @@ test("TV-only semantic genres use keywords without invalid movie genre IDs", asy
   const war = {};
   await applySemanticPredicates(client, { title: "Πολεμικές σειρές" }, "tv", war, "");
   assert.equal(war.with_genres, "10768"); assert.ok(war.with_keywords);
+});
+
+test("nature documentaries tolerate TMDB keyword sparsity while remaining documentaries", async () => {
+  const names = []; const params = {};
+  const client = { keywordIds: async (values) => { names.push(...values); return values.map((_, index) => index + 1); } };
+  await applySemanticPredicates(client, { title: "Ντοκιμαντέρ φύσης" }, "movie", params, "Paramount+");
+  assert.equal(params.with_genres, "99");
+  assert.deepEqual(names, ["nature", "wildlife", "natural history", "environment", "ecology"]);
+  assert.equal(params.with_keywords, "1|2|3|4|5");
 });
 
 test("Greek semantic labels do not confuse family with new or martial arts with war", async () => {
@@ -148,10 +219,10 @@ test("concurrent TMDB cache coalesces identical reads", async () => {
 });
 
 test("TMDB list invalid-media responses expose typed quarantine identities", async () => {
-  const body = { results: [{ media_id: 1, media_type: "movie", success: true }, { media_id: 2, media_type: "movie", success: false, error: ["Media is invalid"] }] };
+  const body = { results: [{ media_id: 1, media_type: "movie", success: true }, { media_id: 2, media_type: "movie", success: false, error: ["Media is invalid"] }, { media_id: 3, media_type: "movie", success: false, error: ["Media is required"] }] };
   const client = new TmdbClient({ readToken: "test", userToken: "user", fetchImpl: async () => new Response(JSON.stringify(body), { status: 200 }) });
-  await assert.rejects(client.addItems(99, [{ id: 1, media_type: "movie" }, { id: 2, media_type: "movie" }]), (error) => {
-    assert.deepEqual(error.invalidItems, [{ id: 2, media_type: "movie", reason: "TMDB_LIST_MEDIA_INVALID" }]); return true;
+  await assert.rejects(client.addItems(99, [{ id: 1, media_type: "movie" }, { id: 2, media_type: "movie" }, { id: 3, media_type: "movie" }]), (error) => {
+    assert.deepEqual(error.invalidItems, [{ id: 2, media_type: "movie", reason: "TMDB_LIST_MEDIA_INVALID" }, { id: 3, media_type: "movie", reason: "TMDB_LIST_MEDIA_REQUIRED" }]); return true;
   });
 });
 
@@ -219,9 +290,10 @@ test("placeholder compilation preserves all folders and recommended byte semanti
   assert.deepEqual(getRecommended(after).sources.map(({ type, genre, addonId, catalogId }) => ({ type, genre, addonId, catalogId })), RECOMMENDED_CATALOGS);
   assert.deepEqual(getRecommended(after).catalogSources, RECOMMENDED_CATALOGS);
   assert.equal(after.flatMap((c) => c.folders).length, 517);
-  assert.equal(after.flatMap((c) => c.folders).flatMap((f) => f.sources).length, 2483);
+  assert.equal(after.flatMap((c) => c.folders).flatMap((f) => f.sources).length, 2477);
   assert.ok(after.flatMap((c) => c.folders).filter((folder) => folder.id !== RECOMMENDED_FOLDER_ID).every((folder) => folder.sources.length > 0));
   const managed = after.flatMap((c) => c.folders).filter((f) => f.id !== RECOMMENDED_FOLDER_ID).flatMap((f) => f.sources);
   assert.equal(managed.filter((s) => s.provider === "trakt" || s.traktListId).length, 0);
   assert.ok(managed.filter((s) => s.tmdbSourceType === "LIST").every((s) => s.sortBy === "original"));
+  assert.ok(managed.filter((s) => s.provider === "tmdb").every((s) => s.type === (s.mediaType === "TV" ? "series" : "movie")));
 });

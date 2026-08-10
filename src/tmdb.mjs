@@ -1,5 +1,5 @@
 import { ACADEMY_AWARDS_HONORARY_FILE, ACADEMY_AWARDS_SNAPSHOT_FILE, CANNES_AWARDS_SNAPSHOT_FILE } from "./constants.mjs";
-import { normalizeText, mapLimit, readJson } from "./utils.mjs";
+import { normalizeText, mapLimit, readJson, invariant } from "./utils.mjs";
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const cleanHtml = (value) => value.replace(/<[^>]+>/g, " ")
@@ -25,9 +25,9 @@ const titleVariants = (value) => {
 };
 
 export class TmdbClient {
-  constructor({ readToken = process.env.TMDB_API_READ_TOKEN, userToken = process.env.TMDB_USER_ACCESS_TOKEN, fetchImpl = fetch } = {}) {
+  constructor({ readToken = process.env.TMDB_API_READ_TOKEN, userToken = process.env.TMDB_USER_ACCESS_TOKEN, language = process.env.TMDB_LANGUAGE ?? "el", fetchImpl = fetch } = {}) {
     if (!readToken) throw new Error("TMDB_API_READ_TOKEN is required");
-    this.readToken = readToken; this.userToken = userToken; this.fetchImpl = fetchImpl; this.memo = new Map();
+    this.readToken = readToken; this.userToken = userToken; this.language = language; this.fetchImpl = fetchImpl; this.memo = new Map();
     this.httpLimit = Math.max(1, Math.min(Number(process.env.TMDB_HTTP_CONCURRENCY ?? 8), 16));
     this.httpActive = 0; this.httpQueue = []; this.blockedUntil = 0;
     this.createChain = Promise.resolve(); this.nextCreateAt = 0;
@@ -85,12 +85,16 @@ export class TmdbClient {
       return items.slice(0, limit);
     });
   }
-  discover(media, params, limit = 200) { return this.pages(`/discover/${media}`, params, limit); }
-  trending(media) { return this.pages(`/trending/${media}/day`, {}, 200); }
+  discover(media, params, limit = 200) { return this.pages(`/discover/${media}`, { language: this.language, ...params }, limit); }
+  trending(media, window = "day") {
+    invariant(["day", "week"].includes(window), `Unsupported TMDB trending window: ${window}`);
+    return this.pages(`/trending/${media}/${window}`, { language: this.language }, 200);
+  }
   async watchRegions() { return this.cached("watch-regions", async () => (await this.v3("/watch/providers/regions")).results ?? []); }
   async providers(media) { return this.cached(`providers:${media}`, async () => (await this.v3(`/watch/providers/${media}`)).results ?? []); }
   async watchProviders(media, id) { return this.cached(`watch:${media}:${id}`, async () => (await this.v3(`/${media}/${id}/watch/providers`)).results ?? {}); }
-  async credits(personId, media) { return this.cached(`credits:${personId}:${media}`, () => this.v3(`/person/${personId}/${media}_credits`)); }
+  async details(media, id) { return this.cached(`details:${media}:${id}:${this.language}`, () => this.v3(`/${media}/${id}`, { language: this.language })); }
+  async credits(personId, media) { return this.cached(`credits:${personId}:${media}:${this.language}`, () => this.v3(`/person/${personId}/${media}_credits`, { language: this.language })); }
   async changedIds(media, startDate, endDate) { const values = await this.pages(`/${media}/changes`, { start_date: startDate, end_date: endDate }, 10000); return values.map((x) => x.id); }
   async keywordIds(names) {
     const normalized = [...names].map((name) => name.toLowerCase()).sort();
@@ -462,9 +466,9 @@ export class TmdbClient {
     return operation;
   }
   async deleteList(id) { return this.v4(`/list/${id}`, { method: "DELETE" }); }
-  listV3(id) { return this.v3(`/list/${id}`); }
+  listV3(id) { return this.v3(`/list/${id}`, { language: this.language }); }
   listV4(id) { return this.v4(`/list/${id}`); }
-  async listV3All(id) { const items = []; let first; for (let page = 1; ; page++) { const result = await this.v3(`/list/${id}`, { page }); first ??= result; items.push(...(result.items ?? [])); if (page >= (result.total_pages ?? 1)) break; } return { ...first, items }; }
+  async listV3All(id) { const items = []; let first; for (let page = 1; ; page++) { const result = await this.v3(`/list/${id}`, { language: this.language, page }); first ??= result; items.push(...(result.items ?? [])); if (page >= (result.total_pages ?? 1)) break; } return { ...first, items }; }
   async listV4All(id) { const items = []; let first; for (let page = 1; ; page++) { const result = await this.v4(`/list/${id}`, { params: { page } }); first ??= result; items.push(...(result.results ?? [])); if (page >= (result.total_pages ?? 1)) break; } return { ...first, results: items }; }
   async clearList(id) { return this.v4(`/list/${id}/clear`, { method: "GET" }); }
   async addItems(id, items) {
@@ -476,8 +480,8 @@ export class TmdbClient {
     const unexpected = errors.filter((item) => !(item.error ?? []).every((message) => /Media has already been taken/i.test(message)));
     if ((result.results ?? []).length !== items.length || unexpected.length) {
       const error = new Error(`TMDB list ${id} accepted ${(result.results ?? []).filter((item) => item.success === true).length}/${items.length} items: ${JSON.stringify(errors.slice(0, 3))}`);
-      error.invalidItems = unexpected.filter((item) => (item.error ?? []).some((message) => /Media is invalid/i.test(message))).map((item) => ({
-        media_type: item.media_type, id: Number(item.media_id), reason: "TMDB_LIST_MEDIA_INVALID",
+      error.invalidItems = unexpected.filter((item) => (item.error ?? []).some((message) => /Media is (?:invalid|required)/i.test(message))).map((item) => ({
+        media_type: item.media_type, id: Number(item.media_id), reason: (item.error ?? []).some((message) => /Media is required/i.test(message)) ? "TMDB_LIST_MEDIA_REQUIRED" : "TMDB_LIST_MEDIA_INVALID",
       })).filter((item) => item.media_type && Number.isInteger(item.id));
       throw error;
     }

@@ -1,0 +1,33 @@
+# Nuvio Collections contributor contract
+
+Read `docs/SEMANTIC-CONTRACT.md` before changing rail generation, sync logic,
+counts, or the generated JSON.
+
+Non-negotiable rules:
+
+- Never delete, merge, or rename any of the 517 folders.
+- Never edit the two sources in `collections.discover.recommended`; they are
+  user-curated and protected by a fingerprint test.
+- Do not retire a source without an evidence report and explicit user approval.
+  Preserve its list ID and metadata in `state.retiredRails` as a tombstone.
+- Materialized lists must be homogeneous, non-empty, released-only where the
+  rail says so, ordered as advertised, and contain only titles with a TMDB
+  poster.
+- Actor rails use substantive cast credits only. Director rails use only
+  case-insensitive `job=Director` credits.
+- Preserve stable list IDs. Creation and updates must remain resumable and
+  duplicate-safe; never retry an ambiguous create blindly.
+- Never commit `.env`, access tokens, API keys, or secret-bearing output.
+
+Before release run, in order:
+
+1. `npm run bootstrap`
+2. `npm test`
+3. `npm run audit`
+4. `npm run sync:dry`
+5. production `npm run sync` only with the explicit write guard
+6. `npm run compile`
+7. `npm run audit`
+
+Do not claim success unless the live dry-run has zero failures and zero empty
+candidates and every changed production list passes exact v3 read-back.

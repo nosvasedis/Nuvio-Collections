@@ -3,7 +3,7 @@ import { readJson, writeJson, clone, invariant } from "./utils.mjs";
 import { auditRepository } from "./validate.mjs";
 
 export function listSource(rail, listId) {
-  return { type: null, genre: null, title: rail.title, sortBy: "original", tmdbId: Number(listId), addonId: null, filters: {}, sortHow: null, provider: "tmdb", catalogId: null, mediaType: rail.mediaType, traktListId: null, tmdbSourceType: "LIST" };
+  return { type: rail.mediaType === "TV" ? "series" : "movie", genre: null, title: rail.title, sortBy: "original", tmdbId: Number(listId), addonId: null, filters: {}, sortHow: null, provider: "tmdb", catalogId: null, mediaType: rail.mediaType, traktListId: null, tmdbSourceType: "LIST" };
 }
 
 export async function compile({ allowPlaceholders = false } = {}) {
@@ -16,7 +16,11 @@ export async function compile({ allowPlaceholders = false } = {}) {
     const rails = grouped.get(folder.id).toSorted((a, b) => a.position - b.position);
     invariant(rails, `No manifest rails for ${folder.id}`);
     folder.sources = rails.map((rail) => {
-      if (rail.strategy === "native") return clone(rail.originalSource);
+      if (rail.strategy === "native") {
+        const source = clone(rail.originalSource);
+        if (source.provider === "tmdb") source.type = rail.mediaType === "TV" ? "series" : "movie";
+        return source;
+      }
       // Production output must only use an authenticated, successfully synced
       // list from state; manifest list IDs can be third-party legacy inputs.
       const id = state.rails[rail.key]?.listId;

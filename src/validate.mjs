@@ -31,7 +31,7 @@ export async function auditRepository({ requireListIds = false } = {}) {
   const nuvio083Filters = new Set(["withGenres", "withoutGenres", "releaseDateGte", "releaseDateLte", "voteAverageGte", "voteCountGte", "withOriginalLanguage", "withOriginCountry", "withKeywords", "withoutKeywords", "withCompanies", "withoutCompanies", "withNetworks", "year", "watchRegion", "withWatchProviders", "withoutWatchProviders"]);
   invariant(native.every((rail) => Object.keys(rail.originalSource.filters ?? {}).every((key) => nuvio083Filters.has(key))), "Unsupported Nuvio 0.8.3 native filter");
   invariant(native.every((rail) => !Object.keys(rail.originalSource.filters ?? {}).length || ["DISCOVER", "COMPANY", "NETWORK"].includes(rail.originalSource.tmdbSourceType)), "Nuvio filters attached to a source type that ignores them");
-  invariant(Object.keys(state.retiredRails ?? {}).length === EXPECTED.retiredEmptyRails, "Retired empty rail audit failed");
+  invariant(Object.keys(state.retiredRails ?? {}).length === EXPECTED.retiredRails, "Retired rail audit failed");
   if (requireListIds) for (const rail of materialized) invariant(state.rails[rail.key]?.listId, `Missing managed list ID: ${rail.key}`);
   return { collections: input.length, folders: folders.length, finalSources: rails.length + recommended.sources.length, managed: rails.length, native: native.length, materialized: materialized.length, recommendedFingerprint: lock.recommendedFingerprint, unresolvedLists: materialized.filter((r) => !state.rails[r.key]?.listId).length };
 }

@@ -1,4 +1,4 @@
-import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, EXPECTED, COUNTRY_BY_FOLDER, PERSON_ID_BY_FOLDER, RETIRED_EMPTY_RAIL_KEYS, PROVIDER_SEEDS, AWARD_SEEDS, AWARD_CATEGORY_SEEDS, CANNES_CATEGORY_SEEDS, OSCAR_CATEGORY_SEEDS, NON_WORK_AWARD_WINNERS } from "./constants.mjs";
+import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, EXPECTED, COUNTRY_BY_FOLDER, PERSON_ID_BY_FOLDER, RETIRED_RAIL_REASONS, PROVIDER_SEEDS, AWARD_SEEDS, AWARD_CATEGORY_SEEDS, CANNES_CATEGORY_SEEDS, OSCAR_CATEGORY_SEEDS, NON_WORK_AWARD_WINNERS } from "./constants.mjs";
 import { readJson, writeJson, fingerprint, invariant, railKey, normalizeText } from "./utils.mjs";
 
 const MATERIALIZED_COLLECTIONS = new Set(["collections.streaming", "collections.genres", "collections.studios", "collections.actors", "collections.directors", "collections.awards", "collections.world", "collections.runtime"]);
@@ -116,7 +116,7 @@ export async function bootstrap() {
       const mode = strategy(collection, folder, source, index);
       rails.push({
         key: railKey(collection.id, folder.id, index), collectionId: collection.id, folderId: folder.id,
-        position: index + offset, title: source.title ?? folder.title, mediaType: source.mediaType ?? (source.type === "movie" ? "MOVIE" : source.type === "series" ? "TV" : null),
+        position: index + offset, title: ["collections.actors", "collections.directors"].includes(collection.id) && source.title?.startsWith("Νέες ") ? source.title.replace(/^Νέες /, "Νεότερες ") : source.title ?? folder.title, mediaType: source.mediaType ?? (source.type === "movie" ? "MOVIE" : source.type === "series" ? "TV" : null),
         strategy: mode, materializer: mode === "materialized" ? materializer(collection.id) : null,
         listId: mode === "materialized" && source.tmdbSourceType === "LIST" ? source.tmdbId : null,
         params: paramsFor(collection, folder, source), originalSource: mode === "native" ? nativeOverride(collection.id, source, index) : source,
@@ -133,9 +133,9 @@ export async function bootstrap() {
   }
   rails.push(...summaryRails());
   addGoldenMixedCategoryCompanions(rails);
-  const retiredRails = rails.filter((rail) => RETIRED_EMPTY_RAIL_KEYS.has(rail.key));
-  invariant(retiredRails.length === EXPECTED.retiredEmptyRails, "Retired empty rail mapping mismatch");
-  for (let index = rails.length - 1; index >= 0; index--) if (RETIRED_EMPTY_RAIL_KEYS.has(rails[index].key)) rails.splice(index, 1);
+  const retiredRails = rails.filter((rail) => RETIRED_RAIL_REASONS.has(rail.key));
+  invariant(retiredRails.length === EXPECTED.retiredRails, "Retired rail mapping mismatch");
+  for (let index = rails.length - 1; index >= 0; index--) if (RETIRED_RAIL_REASONS.has(rails[index].key)) rails.splice(index, 1);
   rails.sort((a, b) => a.collectionId.localeCompare(b.collectionId) || a.folderId.localeCompare(b.folderId) || a.position - b.position);
   invariant(rails.length === EXPECTED.managedFinalSources, "Managed rail count mismatch");
   invariant(rails.filter((x) => x.strategy === "native").length === EXPECTED.native, "Native rail count mismatch");
@@ -163,7 +163,7 @@ export async function bootstrap() {
   state.retiredRails ??= {};
   for (const rail of retiredRails) {
     const prior = state.rails?.[rail.key] ?? state.retiredRails[rail.key] ?? {};
-    state.retiredRails[rail.key] = { ...prior, key: rail.key, collectionId: rail.collectionId, folderId: rail.folderId, title: rail.title, reason: "EMPTY_EXACT_TMDB_PREDICATE", retiredForNuvio: "0.8.3", retiredAt: state.retiredRails[rail.key]?.retiredAt ?? new Date().toISOString() };
+    state.retiredRails[rail.key] = { ...prior, key: rail.key, collectionId: rail.collectionId, folderId: rail.folderId, title: rail.title, reason: RETIRED_RAIL_REASONS.get(rail.key), retiredForNuvio: "0.8.3", retiredAt: state.retiredRails[rail.key]?.retiredAt ?? new Date().toISOString() };
     delete state.rails?.[rail.key];
   }
   await writeJson(STATE_FILE, state);

@@ -1,5 +1,5 @@
 import { ALLOWED_MONETIZATION, MATERIALIZED_LIMIT } from "./constants.mjs";
-import { dateFor, normalizeText, uniqueItems, shiftYears, mapLimit } from "./utils.mjs";
+import { dateFor, normalizeText, uniqueItems, dedupeLikelyDuplicateWorks, shiftYears, mapLimit } from "./utils.mjs";
 
 export function runtimeBucket(minutes) { if (minutes < 90) return "short"; if (minutes < 150) return "standard"; if (minutes < 180) return "long"; return "epic"; }
 
@@ -37,9 +37,35 @@ export function discoverParams(rail, media, today) {
   return p;
 }
 
-function rank(items, rail, media, today, full = false) {
-  const title = normalizeText(rail.title ?? ""), filtered = uniqueItems(items, media).filter((x) => { const d = dateFor(x, media); return !d || d <= today; });
-  const comparator = title.includes("κορυφ") || title.includes("top") ? (a, b) => (b.vote_average ?? 0) - (a.vote_average ?? 0) || (b.vote_count ?? 0) - (a.vote_count ?? 0) || a.id - b.id : isNewRail(title) || title.includes("προσφα") ? (a, b) => String(dateFor(b, media) ?? "").localeCompare(String(dateFor(a, media) ?? "")) || a.id - b.id : (a, b) => (b.popularity ?? 0) - (a.popularity ?? 0) || a.id - b.id;
+function weightedRating(item, media) {
+  const votes = Math.max(0, Number(item.vote_count ?? 0)), average = Math.max(0, Number(item.vote_average ?? 0)), priorWeight = media === "movie" ? 250 : 100;
+  return (votes * average + priorWeight * 6) / (votes + priorWeight);
+}
+export function isSubstantiveCastCredit(item) {
+  const character = normalizeText(item.character ?? "");
+  if (!character) return false;
+  return !/(?:^|\s)(?:self|himself|herself|themselves|archive footage|uncredited|host|presenter|honoree|interviewee|guest judge|ο ιδιος|η ιδια|αρχειακο υλικο|χωρις αναφορα)(?:\s|$)/u.test(character);
+}
+
+// TMDB lists store identities, not artwork. Nuvio resolves artwork again when
+// it reads the list, so a missing TMDB poster becomes a blank/play card. Check
+// every candidate on every refresh: an item automatically returns as soon as
+// TMDB publishes a poster for it.
+export async function requireUsablePosters(client, items, media) {
+  const checked = await mapLimit(items, 16, async (item) => {
+    if (typeof item.poster_path === "string" && item.poster_path.trim()) return item;
+    const details = await client.details(media, item.id);
+    if (typeof details.poster_path !== "string" || !details.poster_path.trim()) return null;
+    return { ...item, ...details, media_type: item.media_type ?? media };
+  });
+  return checked.filter(Boolean);
+}
+function rank(items, rail, media, today, full = false, person = false) {
+  const title = normalizeText(rail.title ?? ""), filtered = dedupeLikelyDuplicateWorks(items, media).filter((x) => { const d = dateFor(x, media); return !d || d <= today; });
+  const comparator = title.includes("κορυφ") || title.includes("top") ? person
+    ? (a, b) => weightedRating(b, media) - weightedRating(a, media) || (b.vote_count ?? 0) - (a.vote_count ?? 0) || a.id - b.id
+    : (a, b) => (b.vote_average ?? 0) - (a.vote_average ?? 0) || (b.vote_count ?? 0) - (a.vote_count ?? 0) || a.id - b.id
+    : isNewRail(title) || title.includes("προσφα") ? (a, b) => String(dateFor(b, media) ?? "").localeCompare(String(dateFor(a, media) ?? "")) || a.id - b.id : (a, b) => (b.popularity ?? 0) - (a.popularity ?? 0) || a.id - b.id;
   return filtered.sort(comparator).slice(0, full ? filtered.length : MATERIALIZED_LIMIT).map((x) => ({ ...x, media_type: media }));
 }
 
@@ -59,7 +85,11 @@ export async function applySemanticPredicates(client, rail, media, params, folde
   const keywordNames = [];
   if (/ανιμε/.test(text)) keywordNames.push("anime");
   if (/πολεμικες τεχνες/.test(text)) keywordNames.push("martial arts");
-  if (/φυσης/.test(text)) keywordNames.push("nature");
+  // TMDB tagging is sparse: nature documentaries may use wildlife, natural
+  // history, environment, or ecology without the generic `nature` keyword.
+  // Discover interprets the pipe-separated IDs as OR while genre 99 remains
+  // mandatory, so this broadens metadata coverage without admitting fiction.
+  if (/φυσης/.test(text)) keywordNames.push("nature", "wildlife", "natural history", "environment", "ecology");
   if (/αθλητ/.test(text)) keywordNames.push("sport");
   if (/κωμικες παραστασεις/.test(text)) keywordNames.push("stand-up comedy");
   if (/υπερηρω/.test(text)) keywordNames.push("superhero");
@@ -86,11 +116,19 @@ async function streaming(client, rail, context) {
   if (!ids.length) return { scope: "UNAVAILABLE", items: [] };
   const base = await applySemanticPredicates(client, rail, media, discoverParams(rail, media, context.today), context.folderTitle), providerIds = ids.join("|");
   if (isTrendingRail(normalizeText(rail.title ?? ""))) {
-    const candidates = await client.trending(media);
-    const checked = await mapLimit(candidates, 8, async (item) => ({ item, regions: await client.watchProviders(media, item.id) }));
     const qualifies = (offer) => ALLOWED_MONETIZATION.some((type) => (offer?.[type] ?? []).some((p) => ids.includes(p.provider_id)));
-    const gr = checked.filter((x) => qualifies(x.regions.GR)).map((x) => ({ ...x.item, media_type: media }));
-    return chooseAvailability(gr, async () => checked.filter((x) => Object.values(x.regions).some(qualifies)).map((x) => ({ ...x.item, media_type: media })));
+    // Provider titles do not necessarily enter TMDB's global daily top 20.
+    // Prefer official day trending; only if it is empty for this provider in
+    // both GR and Worldwide, widen to the official weekly trending window.
+    for (const window of ["day", "week"]) {
+      const candidates = await client.trending(media, window);
+      const checked = await mapLimit(candidates, 8, async (item) => ({ item, regions: await client.watchProviders(media, item.id) }));
+      const gr = checked.filter((x) => qualifies(x.regions.GR)).map((x) => ({ ...x.item, media_type: media }));
+      if (gr.length) return { scope: "GR", items: gr };
+      const worldwide = checked.filter((x) => Object.values(x.regions).some(qualifies)).map((x) => ({ ...x.item, media_type: media }));
+      if (worldwide.length) return { scope: "WORLDWIDE", items: worldwide };
+    }
+    return { scope: "WORLDWIDE", items: [] };
   }
   const queryRegion = async (region) => rank(await client.discover(media, { ...base, watch_region: region, with_watch_providers: providerIds, with_watch_monetization_types: ALLOWED_MONETIZATION.join("|") }), rail, media, context.today);
   const gr = await queryRegion("GR");
@@ -128,8 +166,9 @@ export async function materializeRail(client, rail, context) {
   }
   if (rail.materializer === "person_cast" || rail.materializer === "person_director") {
     const personId = rail.params.legacy.tmdbId; const credits = await client.credits(personId, media); let items = credits.cast ?? [];
-    if (rail.materializer === "person_director") items = (credits.crew ?? []).filter((x) => x.job === "Director");
-    return { scope: "GLOBAL", items: rank(items, rail, media, context.today, true) };
+    if (rail.materializer === "person_director") items = (credits.crew ?? []).filter((x) => x.job?.toLowerCase() === "director");
+    else items = items.filter(isSubstantiveCastCredit);
+    return { scope: "GLOBAL:SUBSTANTIVE_CREDITS", items: rank(items, rail, media, context.today, true, true) };
   }
   const params = discoverParams(rail, media, context.today);
   if (rail.collectionId === "collections.genres") await applySemanticPredicates(client, rail, media, params, context.folderTitle);
@@ -141,7 +180,17 @@ export async function materializeRail(client, rail, context) {
   }
   if (rail.materializer === "network_recent") { params.with_networks = id; params.sort_by = media === "tv" ? "first_air_date.desc" : "primary_release_date.desc"; params[`${media === "tv" ? "first_air_date" : "primary_release_date"}.gte`] = shiftYears(context.today, -2); }
   if (rail.materializer === "runtime") {
-    const name = normalizeText(context.folderTitle); if (name.includes("short")) params["with_runtime.lte"] = 89; else if (name.includes("standard")) { params["with_runtime.gte"] = 90; params["with_runtime.lte"] = 149; } else if (name.includes("long")) { params["with_runtime.gte"] = 150; params["with_runtime.lte"] = 179; } else params["with_runtime.gte"] = 180;
+    if (rail.folderId === "collections.runtime.short") params["with_runtime.lte"] = 89;
+    else if (rail.folderId === "collections.runtime.standard") { params["with_runtime.gte"] = 90; params["with_runtime.lte"] = 149; }
+    else if (rail.folderId === "collections.runtime.long") { params["with_runtime.gte"] = 150; params["with_runtime.lte"] = 179; }
+    else if (rail.folderId === "collections.runtime.epic") params["with_runtime.gte"] = 180;
+    else throw new Error(`Unknown runtime folder: ${rail.folderId}`);
+    const expected = rail.folderId.split(".").at(-1), discovered = await client.discover(media, params);
+    const verified = await mapLimit(discovered, 16, async (item) => {
+      const details = await client.details(media, item.id), minutes = Number(details.runtime);
+      return Number.isFinite(minutes) && minutes > 0 && runtimeBucket(minutes) === expected ? { ...item, ...details } : null;
+    });
+    return { scope: `GLOBAL:RUNTIME_VERIFIED=${expected}`, items: rank(verified.filter(Boolean), rail, media, context.today) };
   }
   if (legacyType === "COMPANY") params.with_companies = id;
   if (legacyType === "NETWORK") params.with_networks = id;

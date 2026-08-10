@@ -8,9 +8,9 @@
   <img src="https://img.shields.io/badge/Nuvio-0.8.3%2B-00b8d9?style=flat-square" alt="Nuvio 0.8.3+">
   <img src="https://img.shields.io/badge/collections-12-111827?style=flat-square" alt="12 collections">
   <img src="https://img.shields.io/badge/folders-517-111827?style=flat-square" alt="517 folders">
-  <img src="https://img.shields.io/badge/active_rails-2%2C483-111827?style=flat-square" alt="2,483 active rails">
+  <img src="https://img.shields.io/badge/active_rails-2%2C477-111827?style=flat-square" alt="2,477 active rails">
   <img src="https://img.shields.io/badge/empty_rails-0-16a34a?style=flat-square" alt="0 empty rails">
-  <img src="https://img.shields.io/badge/tests-24%2F24-16a34a?style=flat-square" alt="24/24 tests">
+  <img src="https://img.shields.io/badge/tests-30%2F30-16a34a?style=flat-square" alt="30/30 tests">
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@
 ## Τι είναι
 
 Το **Nuvio Collections v5.0** είναι το production σύστημα που μετατρέπει 517
-folders και 2.483 ενεργά rails σε ένα έτοιμο προς εισαγωγή JSON για το Nuvio
+folders και 2.477 ενεργά rails σε ένα έτοιμο προς εισαγωγή JSON για το Nuvio
 0.8.3+. Δεν είναι ένα στατικό export: το repository περιέχει το canonical rail
 registry, τους ακριβείς predicates, τα σταθερά public TMDB list IDs, τον
 resumable synchronizer και το GitHub Actions workflow που κρατά τις λίστες
@@ -36,20 +36,23 @@ resumable synchronizer και το GitHub Actions workflow που κρατά τ�
 |---|---:|
 | Collections | 12 |
 | Folders που διατηρούνται | 517 / 517 |
-| Ενεργά sources | 2.483 |
-| Managed sources | 2.481 |
-| Materialized TMDB lists | 2.083 |
+| Ενεργά sources | 2.477 |
+| Managed sources | 2.475 |
+| Materialized TMDB lists | 2.077 |
 | Native Nuvio/TMDB sources | 398 |
 | Χειροκίνητα ορισμένα `recommended` sources | 2 |
 | Κενά ενεργά rails | **0** |
 | Κενά folders | **0** |
 | Unresolved list IDs | **0** |
 | Trakt / runtime-addon sources | **0 / 0** |
-| Automated tests | **24 / 24** |
+| Automated tests | **30 / 30** |
 
 Τα 42 sources που επέστρεφαν αποδεδειγμένα μηδενικό αποτέλεσμα με τον ακριβή
 predicate τους έχουν αποσυρθεί. Δεν διαγράφηκε ούτε συγχωνεύτηκε κανένα folder.
-Τα παλιά list IDs φυλάσσονται στο `state.retiredRails` ως audit/rollback
+Επιπλέον, αποσύρθηκαν μετά από ρητή έγκριση τα 6 TV rails των Jason Statham και
+Tom Cruise: τα επίσημα TMDB credits τους δεν περιέχουν κανέναν ουσιαστικό
+τηλεοπτικό ρόλο, μόνο self/guest/archive/uncredited εμφανίσεις. Τα παλιά list IDs
+φυλάσσονται στο `state.retiredRails` ως audit/rollback
 tombstones, αλλά δεν εμφανίζονται στο Nuvio και δεν ενημερώνονται nightly.
 
 Ο folder `Προτεινόμενα` είναι σκόπιμα χειροκίνητος και εξαιρείται από τον TMDB
@@ -69,13 +72,13 @@ fingerprint κλειδώνεται ώστε bootstrap/compile/nightly sync να 
 | Film Series | 186 | 0 | 186 |
 | Studios | 0 | 107 | 107 |
 | Networks | 30 | 29 | 59 |
-| Actors | 0 | 750 | 750 |
+| Actors | 0 | 744 | 744 |
 | Directors | 0 | 186 | 186 |
 | Awards | 0 | 60 | 60 |
 | World | 0 | 296 | 296 |
 | Decades | 180 | 6 | 186 |
 | Runtime | 0 | 4 | 4 |
-| **Managed σύνολο** | **398** | **2.083** | **2.481** |
+| **Managed σύνολο** | **398** | **2.077** | **2.475** |
 
 ## Τι σημαίνει «ακριβές»
 
@@ -93,7 +96,9 @@ fingerprint κλειδώνεται ώστε bootstrap/compile/nightly sync να 
    ταξινομήσει διαφορετικά μόνο την τρέχουσα σελίδα.
 7. Δεν προστίθεται filler και candidate μηδενικού μεγέθους δεν δημοσιεύεται ως
    ενεργό rail.
-8. Μετά από write διαβάζεται ξανά ολόκληρη η TMDB list μέσω του ίδιου v3
+8. Κάθε materialized candidate απαιτεί πραγματικό TMDB `poster_path`. Αν λείπει,
+   γίνεται details verification και αποκλείεται μέχρι να αποκτήσει poster.
+9. Μετά από write διαβάζεται ξανά ολόκληρη η TMDB list μέσω του ίδιου v3
    pagination path που χρησιμοποιεί το Nuvio και απαιτείται exact typed-order
    match.
 
@@ -102,11 +107,21 @@ fingerprint κλειδώνεται ώστε bootstrap/compile/nightly sync να 
 project δεν μπορεί να εφεύρει την πραγματική πληροφορία· αποτρέπει όμως τη
 δημοσίευση τεχνικά λανθασμένων, mixed, incomplete ή ανεπιβεβαίωτων lists.
 
+Στο τελευταίο πλήρες scan αποκλείστηκαν 3.634 posterless rail-occurrences σε 750
+rails. Το `Somebody Knows Something` (TMDB TV 330654) επαληθεύτηκε με
+`poster_path: null` και δεν δημοσιεύεται. Θα επιστρέψει αυτόματα αν προστεθεί
+poster στο TMDB. Ο κανόνας επιβάλλεται στα 2.077 materialized rails. Τα 398
+native sources εκτελούνται απευθείας από το Nuvio 0.8.3, το οποίο δεν παρέχει
+υποστηριζόμενο `has poster` filter· η εξαίρεση καταγράφεται ρητά αντί να
+προσποιείται το repository ότι μπορεί να την επιβάλει.
+
 ## Semantics ανά collection
 
 ### Discover
 
-- `Trending`: επίσημο `/trending/{movie|tv}/day`.
+- `Trending`: επίσημο `/trending/{movie|tv}/day`. Σε provider rail μόνο όταν το
+  day window είναι κενό σε GR και Worldwide, χρησιμοποιείται το επίσημο `week`
+  window· δεν υποκαθίσταται με ψευδές popularity rail.
 - `Popular`: `popularity.desc`.
 - `Top`: rating ordering με προσαρμοσμένο vote quorum.
 - `New` και `Top of the year`: 1 Ιανουαρίου του τρέχοντος έτους έως σήμερα.
@@ -134,6 +149,8 @@ channel subscriptions δεν προστίθενται σε folder άλλης υ�
 
 - Χρησιμοποιείται η σωστή movie/TV taxonomy. TV Thriller, Fantasy και War
   εφαρμόζουν ειδικά keywords/tags και όχι άσχετες προσεγγίσεις.
+- Τα ντοκιμαντέρ φύσης απαιτούν Documentary και δέχονται τα ισοδύναμα sparse
+  TMDB tags nature/wildlife/natural history/environment/ecology.
 - Τα 186 Film Series παραμένουν επίσημα TMDB `COLLECTION` sources και δεν
   λαμβάνουν filters που το Nuvio αγνοεί.
 - Studios χρησιμοποιούν canonical TMDB company identity. Popular, Top και
@@ -149,6 +166,9 @@ channel subscriptions δεν προστίθενται σε folder άλλης υ�
   όχι στη σειρά ενός γενικού credits endpoint.
 - Credits rails μπορούν να διατηρούν όλο το επιλέξιμο ιστορικό και δεν κόβονται
   τεχνητά στα 200 items.
+- Self/archive/uncredited/host και άλλες μη ουσιαστικές εμφανίσεις αποκλείονται
+  καθολικά. Τα Top rails χρησιμοποιούν vote-aware score ώστε ένα 10/10 από μία
+  ψήφο να μην εκτοπίζει καθιερωμένα έργα.
 
 ### Awards
 
@@ -201,7 +221,7 @@ flowchart LR
     A["04:07 Europe/Athens"] --> B["Tests + manifest/folder locks"]
     B --> C["TMDB, providers και awards caches"]
     C --> D["Παραγωγή πλήρων candidates"]
-    D --> E["Semantic validation + deduplication"]
+    D --> E["Semantic + poster validation + deduplication"]
     E --> F["Ordered-ID fingerprint"]
     F -->|"ίδιο"| G["Skip χωρίς TMDB write"]
     F -->|"άλλαξε"| H["Update μόνο της συγκεκριμένης list"]
@@ -215,16 +235,17 @@ flowchart LR
 - Reuse person credits/provider availability μεταξύ sibling rails.
 - Verified snapshots για immutable historical awards.
 - Ordered fingerprints: μηδενικά writes για αμετάβλητες lists.
-- Ownership recovery και των 2.083 stable list IDs πριν από create/update.
+- Ownership recovery και των 2.077 stable list IDs πριν από create/update.
 - Resumable sync ανά rail με durable checkpoints.
 
-Τελευταία live μέτρηση στις 10 Αυγούστου 2026:
+Τελευταία live μέτρηση μετά το production release στις 10 Αυγούστου 2026:
 
 | Εργασία | Χρόνος | Αποτέλεσμα |
 |---|---:|---|
-| Full live dry-run, 2.083 rails | 40,43 s | 0 failures, 0 empty |
-| Production sync, 84 changed rails | 125,60 s | 84/84 exact read-back verified |
-| GitHub-hosted tests + audit + dry-run | 45 s | success |
+| Post-production full dry-run, 2.077 rails | 33,71 s | 0 changes, 0 failures, 2.077 skips |
+| Poster validation | ίδιο run | 3.634 exclusions, κανένα κενό candidate |
+| Final resumable production pass | 97,7 s | 13/13 changes exact read-back, 0 failures |
+| Tests + compile + audit | < 3 s τοπικά | 30/30, 2.477 sources, 0 unresolved IDs |
 
 Ο nightly χρόνος εξαρτάται από changed fingerprints και TMDB rate limits. Το
 εβδομαδιαίο πλήρες awards refresh είναι σκόπιμα βαρύτερο.
@@ -254,6 +275,8 @@ flowchart LR
 | `data/` | Versioned authoritative award snapshots |
 | `src/` | Compiler, materializers, validators και synchronizer |
 | `tests/` | Unit και semantic contract tests |
+| `docs/SEMANTIC-CONTRACT.md` | Durable κανόνες, regressions και hand-off evidence |
+| `AGENTS.md` | Υποχρεωτική διαδικασία για επόμενους agents/contributors |
 | `reports/latest.json` | Αναλυτικό αποτέλεσμα τελευταίου sync |
 | `dist/nuvio-collections-v5.0.json` | Τελικό Nuvio import artifact |
 | `assets/branding/` | Product mark και horizontal wordmark |
@@ -263,7 +286,7 @@ flowchart LR
 Απαιτείται Node.js 22+· το hosted workflow χρησιμοποιεί Node.js 24.
 
 ```powershell
-npm test                    # 24 automated contract tests
+npm test                    # 30 automated contract tests
 npm run audit               # structure, counts, locks και compatibility
 npm run sync:dry            # live candidates, χωρίς remote writes
 npm run sync                # production reconciliation
@@ -287,9 +310,13 @@ Production writes απαιτούν `--execute` και
 1. Κατέβασε το
    [`nuvio-collections-v5.0.json`](dist/nuvio-collections-v5.0.json).
 2. Χρησιμοποίησε Nuvio 0.8.3 ή νεότερο.
-3. Κάνε import από το Collections configuration του Nuvio.
-4. Άφησε `sortBy: original` στα materialized `LIST` sources.
-5. Κάνε smoke test σε pagination, Streaming GR/Worldwide, Awards, Runtime και
+3. Πριν από το import, άνοιξε τις ξεχωριστές ρυθμίσεις **Nuvio → TMDB**:
+   ενεργοποίησε το TMDB, όρισε **Γλώσσα: Ελληνικά (`el`)** και άφησε το
+   **Artwork** ενεργό. Το Nuvio έχει default TMDB language `en` και το
+   collections JSON δεν διαθέτει supported field που να το παρακάμπτει.
+4. Κάνε import από το Collections configuration του Nuvio.
+5. Άφησε `sortBy: original` στα materialized `LIST` sources.
+6. Κάνε smoke test σε pagination, Streaming GR/Worldwide, Awards, Runtime και
    ένα rail από καθεμία από τις 12 collections.
 
 Δεν απαιτείται καθημερινό re-import: τα public TMDB list IDs είναι σταθερά και

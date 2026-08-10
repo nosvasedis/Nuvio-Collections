@@ -1,10 +1,10 @@
 import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, STATE_FILE, REPORT_FILE, EXPECTED } from "./constants.mjs";
 import { readJson, writeJson, fingerprint, athensDate, invariant, normalizeText, mapLimit } from "./utils.mjs";
 import { TmdbClient } from "./tmdb.mjs";
-import { materializeRail } from "./materialize.mjs";
+import { materializeRail, requireUsablePosters } from "./materialize.mjs";
 
 function itemIds(items, media) { return items.map((x) => `${x.media_type ?? media}:${x.id}`); }
-const WRITE_SCHEMA_VERSION = 2;
+const WRITE_SCHEMA_VERSION = 3;
 export function normalizeCandidateItems(items, media) {
   const seen = new Set();
   return items.map((item) => ({ ...item, media_type: item.media_type ?? media })).filter((item) => {
@@ -112,27 +112,48 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
   const report = { version: 1, date: today, mode: execute ? "execute" : "dry-run", totals: { considered: 0, changed: 0, skipped: 0, failed: 0, created: 0 }, rails: [] };
   const managedRails = manifest.rails.filter((x) => x.strategy === "materialized");
   const concurrency = Math.max(1, Math.min(Number(process.env.NUVIO_SYNC_CONCURRENCY ?? 6), 12));
+  // A distinct client preserves independent-fetch confirmation while sharing
+  // that second snapshot across sibling rails (for example six rails/person).
+  // Creating one client per rail defeats coalescing and turns a global semantic
+  // migration into thousands of duplicate TMDB requests.
+  const confirmationClient = new TmdbClient({ readToken: client.readToken, userToken: client.userToken, language: client.language, fetchImpl: client.fetchImpl });
   let prepared = await mapLimit(managedRails, concurrency, async (rail) => {
     const startedAt = performance.now();
     const prior = state.rails[rail.key] ?? {};
     try {
-      if (!force && rail.materializer === "award" && prior.syncStatus === "verified" && !semanticRefreshDue(prior)) {
+      const deferredAward = !force && rail.materializer === "award" && prior.syncStatus === "verified" && !semanticRefreshDue(prior);
+      if (deferredAward && prior.writeSchema === WRITE_SCHEMA_VERSION) {
         return { key: rail.key, status: "unchanged", count: prior.count, scope: prior.scope, refreshDeferred: "verified-award-snapshot", _durationMs: Math.round(performance.now() - startedAt) };
       }
       const folderTitle = folderMap.get(rail.folderId)?.title ?? "";
       const provider = providers.providers.find((p) => { const target = normalizeText(folderTitle); return [p.name, p.slug, ...p.aliases].some((name) => target.includes(normalizeText(name)) || normalizeText(name).includes(target)); });
       const context = { today, folderTitle, providerAliases: provider ? [provider.name, ...provider.aliases] : [], award: awardMap.get(rail.key), authorityOverrides: awards.authorityOverrides ?? {}, nonWorkWinners: awards.nonWorkWinners ?? [] };
-      let candidate = await materializeRail(client, rail, context); const media = rail.mediaType === "MOVIE" ? "movie" : "tv";
+      const media = rail.mediaType === "MOVIE" ? "movie" : "tv";
+      // A write-schema migration must not force a fresh fuzzy title resolution
+      // of immutable award history. Reuse the already verified typed IDs, run
+      // the new item-level invariants, and keep the authoritative weekly refresh.
+      let candidate = deferredAward
+        ? { scope: prior.scope, items: (prior.orderedIds ?? []).map((identity) => { const [type, id] = identity.split(":"); return { id: Number(id), media_type: type }; }) }
+        : await materializeRail(client, rail, context);
+      invariant(!deferredAward || candidate.items.length === prior.count, `Verified award state is incomplete: ${rail.key}`);
       candidate = { ...candidate, items: normalizeCandidateItems(candidate.items, media) };
+      const candidateBeforePosterGate = candidate.items.length;
+      candidate.items = await requireUsablePosters(client, candidate.items, media);
+      let posterlessExcluded = candidateBeforePosterGate - candidate.items.length;
       const invalidItems = (prior.invalidItems ?? []).filter((item) => Date.now() - Date.parse(item.excludedAt) < 30 * 86400000);
       const invalidIdentities = new Set(invalidItems.map((item) => `${item.media_type}:${item.id}`));
       candidate.items = candidate.items.filter((item) => !invalidIdentities.has(`${item.media_type}:${item.id}`));
       invariant(candidate.items.every((item) => item.media_type === media), `Mixed media candidate: ${rail.key}`);
+      invariant(candidate.items.length > 0, `Empty candidate after semantic and poster validation: ${rail.key}`);
       let ids = itemIds(candidate.items, media), hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids }), ratio = changeRatio(prior.orderedIds ?? [], ids);
       if (ratio > 0.4 && prior.orderedIds?.length) {
-        const independent = new TmdbClient({ readToken: client.readToken, userToken: client.userToken, fetchImpl: client.fetchImpl });
-        let confirm = await materializeRail(independent, rail, context);
+        let confirm = await materializeRail(confirmationClient, rail, context);
         confirm = { ...confirm, items: normalizeCandidateItems(confirm.items, media) };
+        const confirmBeforePosterGate = confirm.items.length;
+        confirm.items = await requireUsablePosters(confirmationClient, confirm.items, media);
+        posterlessExcluded = confirmBeforePosterGate - confirm.items.length;
+        confirm.items = confirm.items.filter((item) => !invalidIdentities.has(`${item.media_type}:${item.id}`));
+        invariant(confirm.items.length > 0, `Empty confirmation after semantic and poster validation: ${rail.key}`);
         const confirmIds = itemIds(confirm.items, media), confirmationRatio = changeRatio(ids, confirmIds);
         invariant(confirm.scope === candidate.scope && confirmationCompatible(ids, confirmIds), `Large-change confirmation differed semantically: ${rail.key} (${candidate.scope}/${confirm.scope}, ratio ${confirmationRatio})`);
         candidate = confirm; ids = confirmIds; hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids }); ratio = changeRatio(prior.orderedIds ?? [], ids);
@@ -143,8 +164,14 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
         state.rails[rail.key] = { ...prior, lastSemanticRefresh: semanticRefreshedAt };
         await checkpointState();
       }
-      if (!force && prior.syncStatus === "verified" && prior.fingerprint === hash) return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, _durationMs };
-      return { key: rail.key, status: "would-update", listId: prior.listId, count: ids.length, scope: candidate.scope, changeRatio: ratio, _durationMs, _rail: rail, _folderTitle: folderTitle, _candidate: candidate, _media: media, _ids: ids, _hash: hash, _invalidItems: invalidItems, _semanticRefreshedAt: semanticRefreshedAt };
+      const sameOrderedIds = Array.isArray(prior.orderedIds) && prior.orderedIds.length === ids.length && prior.orderedIds.every((identity, index) => identity === ids[index]);
+      if (execute && prior.syncStatus === "verified" && prior.writeSchema !== WRITE_SCHEMA_VERSION && sameOrderedIds) {
+        state.rails[rail.key] = { ...prior, fingerprint: hash, count: ids.length, scope: candidate.scope, writeSchema: WRITE_SCHEMA_VERSION, posterlessExcluded, lastVerified: new Date().toISOString(), ...(semanticRefreshedAt ? { lastSemanticRefresh: semanticRefreshedAt } : {}) };
+        await checkpointState();
+        return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, posterlessExcluded, schemaUpgraded: true, _durationMs };
+      }
+      if (!force && prior.syncStatus === "verified" && prior.fingerprint === hash) return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, posterlessExcluded, _durationMs };
+      return { key: rail.key, status: "would-update", listId: prior.listId, count: ids.length, scope: candidate.scope, posterlessExcluded, changeRatio: ratio, _durationMs, _rail: rail, _folderTitle: folderTitle, _candidate: candidate, _media: media, _ids: ids, _hash: hash, _invalidItems: invalidItems, _semanticRefreshedAt: semanticRefreshedAt };
     } catch (error) { return { key: rail.key, status: "failed", error: error.message, _durationMs: Math.round(performance.now() - startedAt) }; }
   });
   const preparationFailures = prepared.filter((x) => x.status === "failed");
@@ -207,7 +234,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
           entry._hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids: entry._ids });
           await reconcile(client, entry.listId, entry._candidate.items, oldItems);
         }
-        state.rails[entry.key] = { listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, syncStatus: "verified", lastVerified: new Date().toISOString(), invalidItems: entry._invalidItems ?? [], ...(entry._semanticRefreshedAt ? { lastSemanticRefresh: entry._semanticRefreshedAt } : {}) };
+        state.rails[entry.key] = { listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, writeSchema: WRITE_SCHEMA_VERSION, posterlessExcluded: entry.posterlessExcluded, syncStatus: "verified", lastVerified: new Date().toISOString(), invalidItems: entry._invalidItems ?? [], ...(entry._semanticRefreshedAt ? { lastSemanticRefresh: entry._semanticRefreshedAt } : {}) };
         await checkpointState();
         verifiedProgress++;
         if (verifiedProgress === 1 || verifiedProgress % 25 === 0 || verifiedProgress === updateTotal) console.error(`[sync] verified ${verifiedProgress}/${updateTotal} rails; latest=${entry.key}; items=${entry.count}`);
@@ -232,6 +259,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
   report.totals.skipped = report.rails.filter((x) => x.status === "unchanged").length;
   report.totals.changed = report.rails.filter((x) => execute ? x.status === "updated" : x.status === "would-update").length;
   report.totals.created = report.rails.filter((x) => x.createdList).length;
+  report.totals.posterlessExcluded = report.rails.reduce((sum, rail) => sum + Number(rail.posterlessExcluded ?? 0), 0);
   invariant(report.totals.considered === EXPECTED.materialized, "Sync did not consider every materialized rail");
   if (execute) {
     // The worldwide watch memo can exceed V8's maximum JSON string size. Keep
