@@ -1,0 +1,23 @@
+{
+  "name": "nuvio-collections-sync",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "bootstrap": "node src/cli.mjs bootstrap",
+    "audit": "node src/cli.mjs audit",
+    "compile": "node src/cli.mjs compile",
+    "capability-probe": "node --env-file-if-exists=.env src/cli.mjs capability-probe",
+    "validate:awards": "node --env-file-if-exists=.env src/cli.mjs validate-awards",
+    "validate:awards:globes": "node --env-file-if-exists=.env src/cli.mjs validate-awards --group=globes",
+    "validate:awards:cannes": "node --env-file-if-exists=.env src/cli.mjs validate-awards --group=cannes",
+    "validate:awards:oscars": "node --env-file-if-exists=.env src/cli.mjs validate-awards --group=oscars",
+    "sync:dry": "node --env-file-if-exists=.env src/cli.mjs sync --dry-run",
+    "sync": "node --env-file-if-exists=.env src/cli.mjs sync --execute",
+    "test": "node --test",
+    "check": "node --test && node src/cli.mjs audit"
+  }
+}

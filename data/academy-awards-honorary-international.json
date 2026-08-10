@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "authority": "https://awardsdatabase.oscars.org/",
+  "purpose": "Official special and honorary foreign-language-film predecessors of the competitive category",
+  "records": [
+    { "ceremonyNumber": 20, "awardYearLabel": "1947", "categoryExactId": 96, "category": "SPECIAL AWARD (FOREIGN LANGUAGE FILM PREDECESSOR)", "filmId": "honorary-2122", "workTitle": "Shoe-Shine", "contributor": "Italy", "authorityUrl": "https://awardsdatabase.oscars.org/Search/Nominations?nominationId=2122&view=1-Nominee-Alpha" },
+    { "ceremonyNumber": 21, "awardYearLabel": "1948", "categoryExactId": 97, "category": "SPECIAL FOREIGN LANGUAGE FILM AWARD", "filmId": "honorary-2226", "workTitle": "Monsieur Vincent", "contributor": "France", "authorityUrl": "https://awardsdatabase.oscars.org/Search/Nominations?nominationId=2226&view=1-Nominee-Alpha" },
+    { "ceremonyNumber": 22, "awardYearLabel": "1949", "categoryExactId": 97, "category": "SPECIAL FOREIGN LANGUAGE FILM AWARD", "filmId": "honorary-2341", "workTitle": "The Bicycle Thief", "contributor": "Italy", "authorityUrl": "https://awardsdatabase.oscars.org/Search/Nominations?nominationId=2341&view=1-Nominee-Alpha" },
+    { "ceremonyNumber": 23, "awardYearLabel": "1950", "categoryExactId": 98, "category": "HONORARY FOREIGN LANGUAGE FILM AWARD", "filmId": "honorary-2455", "workTitle": "The Walls of Malapaga", "contributor": "France/Italy", "authorityUrl": "https://awardsdatabase.oscars.org/Search/Nominations?nominationId=2455&view=1-Nominee-Alpha" },
+    { "ceremonyNumber": 24, "awardYearLabel": "1951", "categoryExactId": 98, "category": "HONORARY FOREIGN LANGUAGE FILM AWARD", "filmId": "honorary-2576", "workTitle": "Rashomon", "contributor": "Japan", "authorityUrl": "https://awardsdatabase.oscars.org/Search/Nominations?nominationId=2576&view=1-Nominee-Alpha" },
+    { "ceremonyNumber": 25, "awardYearLabel": "1952", "categoryExactId": 98, "category": "HONORARY FOREIGN LANGUAGE FILM AWARD", "filmId": "honorary-2708", "workTitle": "Forbidden Games", "contributor": "France", "authorityUrl": "https://awardsdatabase.oscars.org/Search/Nominations?nominationId=2708&view=1-Nominee-Alpha" },
+    { "ceremonyNumber": 27, "awardYearLabel": "1954", "categoryExactId": 98, "category": "HONORARY FOREIGN LANGUAGE FILM AWARD", "filmId": "honorary-2968", "workTitle": "Gate of Hell", "contributor": "Japan", "authorityUrl": "https://awardsdatabase.oscars.org/Search/Nominations?nominationId=2968&view=1-Nominee-Alpha" },
+    { "ceremonyNumber": 28, "awardYearLabel": "1955", "categoryExactId": 98, "category": "HONORARY FOREIGN LANGUAGE FILM AWARD", "filmId": "honorary-3094", "workTitle": "Samurai, The Legend of Musashi", "contributor": "Japan", "authorityUrl": "https://awardsdatabase.oscars.org/Search/Nominations?nominationId=3094&view=1-Nominee-Alpha" }
+  ]
+}

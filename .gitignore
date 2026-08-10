@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+node_modules/
+reports/archive/
+state/cache/
+dist/*.tmp
+dist/*.preview.json

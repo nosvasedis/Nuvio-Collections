@@ -1,0 +1,71 @@
+name: Sync Nuvio TMDB lists
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Do not write TMDB lists
+        type: boolean
+        default: true
+  schedule:
+    - cron: "7 1 * * *"
+    - cron: "7 2 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nuvio-tmdb-list-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      TZ: Europe/Athens
+      TMDB_API_READ_TOKEN: ${{ secrets.TMDB_API_READ_TOKEN }}
+      TMDB_USER_ACCESS_TOKEN: ${{ secrets.TMDB_USER_ACCESS_TOKEN }}
+      TMDB_ACCOUNT_OBJECT_ID: ${{ secrets.TMDB_ACCOUNT_OBJECT_ID }}
+      CONFIRM_TMDB_LIST_WRITES: NUVIO-TMDB-LISTS
+      ALLOW_TMDB_LIST_BOOTSTRAP: "2125"
+      TMDB_HTTP_CONCURRENCY: "8"
+      NUVIO_SYNC_WRITE_CONCURRENCY: "16"
+      TMDB_CREATE_INTERVAL_MS: "2500"
+      TMDB_SPAM_COOLDOWN_MS: "60000"
+      TMDB_CLEAR_SETTLE_MS: "10000"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Enforce 04:07 Europe/Athens schedule
+        id: guard
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" || "$(TZ=Europe/Athens date +%H:%M)" == "04:07" ]]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Test and audit
+        if: steps.guard.outputs.run == 'true'
+        run: npm test && npm run audit
+      - name: Dry run
+        if: steps.guard.outputs.run == 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run)
+        run: npm run sync:dry
+      - name: Execute sync
+        if: steps.guard.outputs.run == 'true' && (github.event_name == 'schedule' || !inputs.dry_run)
+        run: npm run sync
+      - name: Compile and production audit
+        if: steps.guard.outputs.run == 'true' && (github.event_name == 'schedule' || !inputs.dry_run)
+        run: npm run compile && npm run audit -- --production
+      - name: Commit generated state
+        if: steps.guard.outputs.run == 'true' && (github.event_name == 'schedule' || !inputs.dry_run)
+        shell: bash
+        run: |
+          git config user.name "nuvio-collections-bot"
+          git config user.email "nuvio-collections-bot@users.noreply.github.com"
+          git add config state dist reports
+          git diff --cached --quiet || git commit -m "chore: sync Nuvio TMDB lists"
+          git push

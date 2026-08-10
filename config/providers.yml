@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "regionPriority": "GR",
+  "worldwideFallback": "only-after-successful-empty-GR",
+  "allowedMonetization": [
+    "flatrate",
+    "free",
+    "ads"
+  ],
+  "providers": [
+    {
+      "slug": "netflix",
+      "name": "Netflix",
+      "aliases": [
+        "Netflix"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "disney-plus",
+      "name": "Disney+",
+      "aliases": [
+        "Disney Plus"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "prime-video",
+      "name": "Prime Video",
+      "aliases": [
+        "Amazon Prime Video"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "apple-tv",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV Plus"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "hbo-max",
+      "name": "HBO Max",
+      "aliases": [
+        "Max",
+        "HBO Max"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "hulu",
+      "name": "Hulu",
+      "aliases": [
+        "Hulu"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "paramount-plus",
+      "name": "Paramount+",
+      "aliases": [
+        "Paramount Plus"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "peacock",
+      "name": "Peacock",
+      "aliases": [
+        "Peacock Premium",
+        "Peacock Premium Plus"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "crunchyroll",
+      "name": "Crunchyroll",
+      "aliases": [
+        "Crunchyroll"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "discovery-plus",
+      "name": "Discovery+",
+      "aliases": [
+        "Discovery+"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "mgm-plus",
+      "name": "MGM+",
+      "aliases": [
+        "MGM Plus"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "shudder",
+      "name": "Shudder",
+      "aliases": [
+        "Shudder"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "starz",
+      "name": "Starz",
+      "aliases": [
+        "Starz"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    }
+  ]
+}
