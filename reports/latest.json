@@ -4,8 +4,8 @@
   "mode": "dry-run",
   "totals": {
     "considered": 2077,
-    "changed": 0,
-    "skipped": 2077,
+    "changed": 1,
+    "skipped": 2076,
     "failed": 0,
     "created": 0,
     "posterlessExcluded": 3602
@@ -6986,7 +6986,7 @@
     {
       "key": "collections.discover:collections.discover.popular-2:0",
       "status": "unchanged",
-      "count": 200,
+      "count": 196,
       "scope": "GLOBAL",
       "posterlessExcluded": 0
     },
@@ -8967,7 +8967,7 @@
     {
       "key": "collections.streaming:collections.streaming.disney-plus:0",
       "status": "unchanged",
-      "count": 12,
+      "count": 13,
       "scope": "GR",
       "posterlessExcluded": 0
     },
@@ -9268,7 +9268,7 @@
     {
       "key": "collections.streaming:collections.streaming.hbo-max:0",
       "status": "unchanged",
-      "count": 7,
+      "count": 8,
       "scope": "GR",
       "posterlessExcluded": 0
     },
@@ -9905,7 +9905,7 @@
     {
       "key": "collections.streaming:collections.streaming.netflix:0",
       "status": "unchanged",
-      "count": 22,
+      "count": 25,
       "scope": "GR",
       "posterlessExcluded": 0
     },
@@ -10843,7 +10843,7 @@
     {
       "key": "collections.streaming:collections.streaming.prime-video:1",
       "status": "unchanged",
-      "count": 17,
+      "count": 18,
       "scope": "GR",
       "posterlessExcluded": 0
     },
@@ -11396,7 +11396,7 @@
     {
       "key": "collections.streaming:folder-9B3VK7AU:0",
       "status": "unchanged",
-      "count": 4,
+      "count": 3,
       "scope": "WORLDWIDE",
       "posterlessExcluded": 0
     },
@@ -12123,10 +12123,12 @@
     },
     {
       "key": "collections.studios:folder-A59XSVAT:4",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682579,
       "count": 197,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-A59XSVAT:5",
@@ -14552,87 +14554,87 @@
     }
   ],
   "performance": {
-    "totalMs": 41641,
+    "totalMs": 48912,
     "slowestRails": [
       {
+        "key": "collections.streaming:collections.streaming.discovery-plus:5",
+        "durationMs": 5511
+      },
+      {
         "key": "collections.streaming:collections.streaming.discovery-plus:2",
-        "durationMs": 2909
+        "durationMs": 4871
       },
       {
         "key": "collections.streaming:collections.streaming.discovery-plus:4",
-        "durationMs": 2895
+        "durationMs": 3973
       },
       {
-        "key": "collections.streaming:collections.streaming.discovery-plus:5",
-        "durationMs": 2776
+        "key": "collections.streaming:collections.streaming.discovery-plus:1",
+        "durationMs": 3646
       },
       {
-        "key": "collections.streaming:collections.streaming.apple-tv:0",
-        "durationMs": 2625
+        "key": "collections.streaming:collections.streaming.discovery-plus:3",
+        "durationMs": 3578
       },
       {
-        "key": "collections.streaming:collections.streaming.apple-tv:1",
-        "durationMs": 2560
+        "key": "collections.streaming:collections.streaming.discovery-plus:0",
+        "durationMs": 3503
       },
       {
-        "key": "collections.runtime:collections.runtime.epic:0",
-        "durationMs": 2509
-      },
-      {
-        "key": "collections.runtime:collections.runtime.short:0",
-        "durationMs": 2464
-      },
-      {
-        "key": "collections.runtime:collections.runtime.standard:0",
-        "durationMs": 2343
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:35",
-        "durationMs": 2337
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:2",
-        "durationMs": 2212
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:3",
-        "durationMs": 2173
-      },
-      {
-        "key": "collections.runtime:collections.runtime.long:0",
-        "durationMs": 2160
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:4",
-        "durationMs": 2109
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:37",
-        "durationMs": 2086
-      },
-      {
-        "key": "collections.streaming:folder-OKRSGYYC:10",
-        "durationMs": 2078
-      },
-      {
-        "key": "collections.streaming:collections.streaming.discovery-plus:6",
-        "durationMs": 2003
+        "key": "collections.streaming:collections.streaming.discovery-plus:8",
+        "durationMs": 3419
       },
       {
         "key": "collections.streaming:collections.streaming.paramount-plus:39",
-        "durationMs": 2003
+        "durationMs": 3378
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:41",
-        "durationMs": 1810
+        "key": "collections.streaming:collections.streaming.paramount-plus:37",
+        "durationMs": 2943
       },
       {
         "key": "collections.streaming:collections.streaming.discovery-plus:7",
-        "durationMs": 1752
+        "durationMs": 2500
       },
       {
-        "key": "collections.streaming:collections.streaming.peacock:23",
-        "durationMs": 1731
+        "key": "collections.streaming:collections.streaming.paramount-plus:42",
+        "durationMs": 2464
+      },
+      {
+        "key": "collections.streaming:collections.streaming.discovery-plus:9",
+        "durationMs": 2376
+      },
+      {
+        "key": "collections.streaming:collections.streaming.paramount-plus:4",
+        "durationMs": 2199
+      },
+      {
+        "key": "collections.streaming:collections.streaming.paramount-plus:2",
+        "durationMs": 2184
+      },
+      {
+        "key": "collections.streaming:collections.streaming.paramount-plus:3",
+        "durationMs": 2143
+      },
+      {
+        "key": "collections.streaming:collections.streaming.apple-tv:1",
+        "durationMs": 2094
+      },
+      {
+        "key": "collections.streaming:collections.streaming.paramount-plus:41",
+        "durationMs": 2048
+      },
+      {
+        "key": "collections.streaming:collections.streaming.apple-tv:0",
+        "durationMs": 2002
+      },
+      {
+        "key": "collections.streaming:collections.streaming.paramount-plus:40",
+        "durationMs": 1983
+      },
+      {
+        "key": "collections.streaming:collections.streaming.discovery-plus:6",
+        "durationMs": 1962
       }
     ]
   }

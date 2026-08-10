@@ -17722,7 +17722,7 @@
     },
     "collections.actors:folder-ICAWUP7G:2": {
       "listId": 8681107,
-      "fingerprint": "3991665d4898f9f6dc4fde774b8565522c3e7adb19664bde9c04d24458d40150",
+      "fingerprint": "38857af19ca516a77b1c38b32c1756ac4c1c5f0720c6595b87f4fecf55f70baa",
       "orderedIds": [
         "movie:680",
         "movie:745",
@@ -17815,8 +17815,8 @@
         "movie:8944",
         "movie:253414",
         "movie:23742",
-        "movie:84305",
         "movie:552865",
+        "movie:84305",
         "movie:9356",
         "movie:916821",
         "movie:531593",
@@ -17843,7 +17843,7 @@
       "writeSchema": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T14:09:09.147Z",
+      "lastVerified": "2026-08-10T14:28:13.790Z",
       "invalidItems": []
     },
     "collections.actors:folder-ICAWUP7G:3": {
@@ -47943,7 +47943,7 @@
     },
     "collections.discover:collections.discover.popular-2:0": {
       "listId": 8681815,
-      "fingerprint": "dcd726bb0f2d1fe65117cdb3b48a89777aade654b9c9fe2d62e3c78252483756",
+      "fingerprint": "4aabe1cd7e6bb78a924498fc5495e467df74c048699614bd2c8ad0c4a4d9e018",
       "orderedIds": [
         "movie:969681",
         "movie:1368337",
@@ -47962,7 +47962,6 @@
         "movie:1108427",
         "movie:1083381",
         "movie:1698863",
-        "movie:980431",
         "movie:454639",
         "movie:1564614",
         "movie:1307118",
@@ -47985,7 +47984,6 @@
         "movie:299536",
         "movie:1314481",
         "movie:1228710",
-        "movie:47612",
         "movie:83533",
         "movie:936075",
         "movie:1084242",
@@ -47995,8 +47993,6 @@
         "movie:1525963",
         "movie:1280738",
         "movie:98894",
-        "movie:1127384",
-        "movie:1668364",
         "movie:822119",
         "movie:949838",
         "movie:82023",
@@ -48146,12 +48142,12 @@
         "movie:10681",
         "movie:44980"
       ],
-      "count": 200,
+      "count": 196,
       "scope": "GLOBAL",
       "writeSchema": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T14:11:08.640Z",
+      "lastVerified": "2026-08-10T14:28:18.877Z",
       "invalidItems": []
     },
     "collections.discover:collections.discover.popular-2:1": {
@@ -49101,7 +49097,7 @@
     },
     "collections.discover:collections.discover.trending-2:0": {
       "listId": 8681821,
-      "fingerprint": "0729999d02ec19031dedb3219c61f3899c2d49eba6eb731c6d19aa5fdf6a9897",
+      "fingerprint": "2b07425d9c4bf96c0b415f17ceb74b15d56689c4f8e4197e7d916874e9d9a30d",
       "orderedIds": [
         "movie:969681",
         "movie:1368337",
@@ -49132,12 +49128,13 @@
         "movie:931285",
         "movie:1314481",
         "movie:1228710",
+        "movie:83533",
         "movie:936075",
         "movie:1084242",
         "movie:1263532",
         "movie:1523145",
         "movie:1280738",
-        "movie:1127384",
+        "movie:1668364",
         "movie:822119",
         "movie:949838",
         "movie:1290821",
@@ -49147,6 +49144,7 @@
         "movie:1327819",
         "movie:1007757",
         "movie:1477712",
+        "movie:1304313",
         "movie:617126",
         "movie:1487861",
         "movie:840464",
@@ -49161,19 +49159,17 @@
         "movie:803796",
         "movie:1061474",
         "movie:1171145",
-        "movie:1479832",
         "movie:1301421",
         "movie:1168190",
         "movie:1297842",
-        "movie:1159559",
         "movie:1241982",
         "movie:1198994",
         "movie:1242898",
         "movie:1272837",
         "movie:1408170",
         "movie:911430",
+        "movie:1233413",
         "movie:1380291",
-        "movie:1430077",
         "movie:950387",
         "movie:1368314",
         "movie:1185806",
@@ -49181,7 +49177,6 @@
         "movie:1433367",
         "movie:1491920",
         "movie:1266127",
-        "movie:1292415",
         "movie:533533",
         "movie:1363974",
         "movie:1078605",
@@ -49197,10 +49192,10 @@
         "movie:1541560",
         "movie:425274",
         "movie:426063",
+        "movie:1391021",
         "movie:1228246",
         "movie:1193501",
         "movie:1340206",
-        "movie:1381027",
         "movie:858024",
         "movie:1318413",
         "movie:1633056",
@@ -49208,7 +49203,6 @@
         "movie:1316092",
         "movie:1679730",
         "movie:1361774",
-        "movie:1058424",
         "movie:1671548",
         "movie:1159831",
         "movie:1197137",
@@ -49228,18 +49222,20 @@
         "movie:1431068",
         "movie:675871",
         "movie:1245859",
+        "movie:1500890",
         "movie:964849",
         "movie:1437939",
         "movie:1327688",
+        "movie:1102883",
         "movie:1380316",
         "movie:1422096",
         "movie:1458215",
         "movie:1421594",
         "movie:1290432",
-        "movie:1140521",
         "movie:1728056",
         "movie:1612018",
         "movie:1266800",
+        "movie:1628071",
         "movie:1341137",
         "movie:1327690",
         "movie:1700944",
@@ -49257,11 +49253,11 @@
         "movie:1404180",
         "movie:1058588",
         "movie:1279865",
+        "movie:1706919",
         "movie:1503844",
         "movie:730558",
         "movie:1379289",
         "movie:1698040",
-        "movie:1746151",
         "movie:1746656"
       ],
       "count": 160,
@@ -49269,7 +49265,7 @@
       "writeSchema": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T14:11:05.345Z",
+      "lastVerified": "2026-08-10T14:28:16.104Z",
       "invalidItems": []
     },
     "collections.discover:collections.discover.trending-2:1": {
@@ -81800,27 +81796,28 @@
     },
     "collections.streaming:collections.streaming.disney-plus:0": {
       "listId": 8682104,
-      "fingerprint": "0194f87b49f661522f9beba38180086a25cc9618d4acd80f6e8bdd83ac5b171f",
+      "fingerprint": "68246423eae9e383a74edc8b462a339ac931291537fae440fbb79a6cebb18efa",
       "orderedIds": [
         "movie:1314481",
         "movie:1439930",
-        "movie:1327819",
+        "movie:83533",
         "movie:986056",
-        "movie:1266127",
         "movie:617126",
-        "movie:1318621",
+        "movie:1327819",
+        "movie:1266127",
         "movie:1198994",
+        "movie:1318621",
         "movie:1242898",
         "movie:533533",
         "movie:822119",
         "movie:1241982"
       ],
-      "count": 12,
+      "count": 13,
       "scope": "GR",
       "writeSchema": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T14:11:00.485Z",
+      "lastVerified": "2026-08-10T14:28:10.458Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.disney-plus:1": {
@@ -86963,9 +86960,10 @@
     },
     "collections.streaming:collections.streaming.hbo-max:0": {
       "listId": 8682147,
-      "fingerprint": "63ad6539f08d85eb8f1c885b75f4c0b2dc4190e77f50a4e3b1a71e2391e79edd",
+      "fingerprint": "cdd5e02b0b035435ba01dd27bc7216f40ce8e8a9e0845ce8df5a97ce9e9cab36",
       "orderedIds": [
         "movie:931285",
+        "movie:1304313",
         "movie:1061474",
         "movie:1078605",
         "movie:1058588",
@@ -86973,12 +86971,12 @@
         "movie:1159831",
         "movie:1292695"
       ],
-      "count": 7,
+      "count": 8,
       "scope": "GR",
       "writeSchema": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T14:11:01.958Z",
+      "lastVerified": "2026-08-10T14:28:10.380Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.hbo-max:1": {
@@ -97735,17 +97733,20 @@
     },
     "collections.streaming:collections.streaming.netflix:0": {
       "listId": 8682239,
-      "fingerprint": "4d67ca2b9aa67fcccfc4604fa6dcd98a275632aff976429a0f9934005f11a320",
+      "fingerprint": "4b03a72c83fe1f582e8e473e8f10d32e3f594cdde2f735d9e6adbb11ef9875b9",
       "orderedIds": [
         "movie:1284041",
         "movie:1487861",
         "movie:949838",
-        "movie:1396749",
+        "movie:1668364",
+        "movie:1432631",
         "movie:1202033",
+        "movie:1233413",
         "movie:1659155",
         "movie:1728056",
         "movie:1318447",
         "movie:1509599",
+        "movie:1396749",
         "movie:1630409",
         "movie:1007757",
         "movie:1234731",
@@ -97760,12 +97761,12 @@
         "movie:950387",
         "movie:1480387"
       ],
-      "count": 22,
+      "count": 25,
       "scope": "GR",
       "writeSchema": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T14:11:13.201Z",
+      "lastVerified": "2026-08-10T14:28:11.866Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.netflix:1": {
@@ -115391,8 +115392,9 @@
     },
     "collections.streaming:collections.streaming.prime-video:1": {
       "listId": 8682375,
-      "fingerprint": "20eaa675339593502107d54418c48e064880688c9d98643e3534d90841524930",
+      "fingerprint": "0f619f91ca5237eaccf73e77ad14b3724fe3f2091bd2f36c8b70737621d39d1c",
       "orderedIds": [
+        "tv:283297",
         "tv:108978",
         "tv:76479",
         "tv:259666",
@@ -115411,12 +115413,12 @@
         "tv:240576",
         "tv:62650"
       ],
-      "count": 17,
+      "count": 18,
       "scope": "GR",
       "writeSchema": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T14:11:13.573Z",
+      "lastVerified": "2026-08-10T14:28:10.589Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.prime-video:2": {
@@ -122182,19 +122184,18 @@
     },
     "collections.streaming:folder-9B3VK7AU:0": {
       "listId": 8682490,
-      "fingerprint": "bc7b2a103e88c2910df5e4833274b594c189d489cd6eac0809fb135a93b8c0ba",
+      "fingerprint": "2dc353aee8df6270a4c6a2a6938a93aa883ae9f4103a3c79c164522f6ba60e97",
       "orderedIds": [
-        "movie:1292415",
         "movie:1290821",
         "movie:1368166",
         "movie:425274"
       ],
-      "count": 4,
+      "count": 3,
       "scope": "WORLDWIDE",
       "writeSchema": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T14:11:13.709Z",
+      "lastVerified": "2026-08-10T14:28:10.300Z",
       "invalidItems": []
     },
     "collections.streaming:folder-9B3VK7AU:1": {
@@ -128982,7 +128983,7 @@
     },
     "collections.studios:folder-HIU1YFQA:4": {
       "listId": 8682597,
-      "fingerprint": "432e38340bfb2a4690682e926b007d3812bdc13dbc118783efd3ea2558651f0f",
+      "fingerprint": "ba40b083f39a2ebffa5b7ce4619c0fb77800a476fbe90c75351f483c2f44423f",
       "orderedIds": [
         "movie:936075",
         "movie:324786",
@@ -129002,9 +129003,9 @@
         "movie:1360",
         "movie:7445",
         "movie:338766",
-        "movie:1368166",
         "movie:399366",
         "movie:541671",
+        "movie:1368166",
         "movie:5176",
         "movie:70160",
         "movie:50348",
@@ -129160,7 +129161,7 @@
       "writeSchema": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T14:11:43.940Z",
+      "lastVerified": "2026-08-10T14:28:18.129Z",
       "invalidItems": []
     },
     "collections.studios:folder-HIU1YFQA:5": {
@@ -129445,7 +129446,7 @@
     },
     "collections.studios:folder-IAL16XW3:4": {
       "listId": 8682603,
-      "fingerprint": "b16048c2ee8cc780ae2779e77b8778457b26a9800f45cfc05c72806ddad604ba",
+      "fingerprint": "4ab64e7e38dc5fe92c9d4d401df89060331411ce58126676aaf9a3cd956f44c3",
       "orderedIds": [
         "movie:105",
         "movie:1226863",
@@ -129457,8 +129458,8 @@
         "movie:9277",
         "movie:524",
         "movie:595",
-        "movie:1368337",
         "movie:329",
+        "movie:1368337",
         "movie:11778",
         "movie:122906",
         "movie:453",
@@ -129652,7 +129653,7 @@
       "writeSchema": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T14:11:46.350Z",
+      "lastVerified": "2026-08-10T14:28:17.125Z",
       "invalidItems": []
     },
     "collections.studios:folder-IAL16XW3:5": {
@@ -130626,7 +130627,7 @@
     },
     "collections.studios:folder-ZDYYVMWR:4": {
       "listId": 8682628,
-      "fingerprint": "bfb17a7c8eec0f1939acf3b494f89609f7ba0dc73f24576e013fdd36b3c4227d",
+      "fingerprint": "f5bb06f88fdc88bbd761ae1ba240650901fcf1f1249a5304d5d2399f59881536",
       "orderedIds": [
         "movie:1242898",
         "movie:1376434",
@@ -130649,8 +130650,8 @@
         "movie:759175",
         "movie:476669",
         "movie:820609",
-        "movie:881164",
         "movie:945729",
+        "movie:881164",
         "movie:505026",
         "movie:532408",
         "movie:340102",
@@ -130662,7 +130663,7 @@
       "writeSchema": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T14:11:51.277Z",
+      "lastVerified": "2026-08-10T14:28:11.987Z",
       "invalidItems": []
     },
     "collections.studios:folder-ZDYYVMWR:5": {
@@ -162398,10 +162399,10 @@
   },
   "providerIndex": {
     "availability": {},
-    "observedWatchEntries": 376,
+    "observedWatchEntries": 378,
     "lastFullReconciliation": "2026-08-10T05:44:45.337Z"
   },
-  "lastSuccessfulSync": "2026-08-10T14:11:55.417Z",
+  "lastSuccessfulSync": "2026-08-10T14:28:18.928Z",
   "retiredRails": {
     "collections.streaming:collections.streaming.apple-tv:29": {
       "listId": 8682072,
