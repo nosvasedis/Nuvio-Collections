@@ -5,7 +5,9 @@ counts, or the generated JSON.
 
 Non-negotiable rules:
 
-- Never delete, merge, or rename any of the 517 folders.
+- Never delete, merge, or rename any of the 519 folders. The original 517 plus
+  `collections.world.portuguese` and `collections.world.latin-american` are
+  fingerprint-locked.
 - Never edit the two sources in `collections.discover.recommended`; they are
   user-curated and protected by a fingerprint test.
 - Do not retire a source without an evidence report and explicit user approval.
@@ -35,6 +37,11 @@ Before release run, in order:
 5. production `npm run sync` only with the explicit write guard
 6. `npm run compile`
 7. `npm run audit`
+
+For releases that repair an already imported profile, also run
+`npm run profile:audit -- --profile=<export.json> --write-repair`, import the
+generated repair artifact, export the Nuvio profile again, and require zero
+media-type mismatches.
 
 Do not claim success unless the live dry-run has zero failures and zero empty
 candidates and every changed production list passes exact v3 read-back.

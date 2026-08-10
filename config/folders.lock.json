@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "inputFingerprint": "638c8fb2df60a57498b3dd516bed9e2cd32255cc79c52d7ca394be02fd4b45a8",
+  "inputFingerprint": "1097db1d468314d6746f125f1a9329821e0e8217d0aa7655dfaec486f9bcba64",
   "recommendedFingerprint": "d1b5999c70679e79f9f574ad26d8e998725954d20ff63296f8e7a67dcd14f96a",
   "folders": [
     {
@@ -2341,7 +2341,7 @@
       "collectionId": "collections.actors",
       "id": "folder-I2BO9LZU",
       "title": "Τιμοτέ Σαλαμέ",
-      "metadataFingerprint": "884680670fbedb073861a4e23b480b5ae0888986ca0066ce4267011141f9bb22"
+      "metadataFingerprint": "56b5c1cefa417db53f8f491caa5994ad6cb6bd0b511ca4f88aad4cc554a63a74"
     },
     {
       "collectionId": "collections.actors",
@@ -3032,6 +3032,18 @@
       "id": "folder-369A49J9",
       "title": "Χονγκ Κονγκ",
       "metadataFingerprint": "ce41c7b753f78409e5eb10573e336e8a6042223828532188325fa90f79220f46"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "collections.world.portuguese",
+      "title": "Πορτογαλικές",
+      "metadataFingerprint": "104e5c6fd172fd9b32e346aff786c44012535ee019904708b18b60b11351b12f"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "collections.world.latin-american",
+      "title": "Λατινοαμερικανικές",
+      "metadataFingerprint": "92b29b8c077344a8497525d157c5501b38ddec1436c650e0b671dcfc06905da9"
     },
     {
       "collectionId": "collections.decades",

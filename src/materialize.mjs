@@ -74,7 +74,12 @@ export function discoverParams(rail, media, today) {
   if (rail.params.summary) { p[`${datePrefix}.gte`] = rail.params.startDate; p[`${datePrefix}.lte`] = today; if (p.sort_by === "vote_average.desc") p["vote_count.gte"] = media === "movie" ? 500 : 200; }
   if (title.includes("κορυφ")) { p.sort_by = "vote_average.desc"; p["vote_count.gte"] ??= media === "movie" ? 500 : 200; }
   else if (title.includes("προσφα")) { delete p["vote_count.gte"]; delete p["vote_average.gte"]; p.sort_by = `${datePrefix}.desc`; p[`${datePrefix}.gte`] = shiftYears(today, -2); }
-  else if (isNewRail(title) || title.includes("της χρονιας")) { delete p["vote_count.gte"]; delete p["vote_average.gte"]; p.sort_by = `${datePrefix}.desc`; p[`${datePrefix}.gte`] = `${today.slice(0, 4)}-01-01`; }
+  else if (isNewRail(title) || title.includes("της χρονιας")) {
+    const preserveGenreNewQuorum = rail.collectionId === "collections.genres" && isNewRail(title);
+    if (!preserveGenreNewQuorum) delete p["vote_count.gte"];
+    delete p["vote_average.gte"];
+    p.sort_by = `${datePrefix}.desc`; p[`${datePrefix}.gte`] = `${today.slice(0, 4)}-01-01`;
+  }
   else if (title.includes("δημοφιλ")) { delete p["vote_count.gte"]; delete p["vote_average.gte"]; p.sort_by = "popularity.desc"; }
   if (!p[`${datePrefix}.lte`]) p[`${datePrefix}.lte`] = today;
   return p;

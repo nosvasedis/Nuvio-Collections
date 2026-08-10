@@ -7,10 +7,10 @@
   <img src="https://img.shields.io/badge/release-v5.0-7c3aed?style=flat-square" alt="Release v5.0">
   <img src="https://img.shields.io/badge/Nuvio-0.8.3%2B-00b8d9?style=flat-square" alt="Nuvio 0.8.3+">
   <img src="https://img.shields.io/badge/collections-12-111827?style=flat-square" alt="12 collections">
-  <img src="https://img.shields.io/badge/folders-517-111827?style=flat-square" alt="517 folders">
-  <img src="https://img.shields.io/badge/active_rails-2%2C477-111827?style=flat-square" alt="2,477 active rails">
+  <img src="https://img.shields.io/badge/folders-519-111827?style=flat-square" alt="519 folders">
+  <img src="https://img.shields.io/badge/active_rails-2%2C492-111827?style=flat-square" alt="2,492 active rails">
   <img src="https://img.shields.io/badge/empty_rails-0-16a34a?style=flat-square" alt="0 empty rails">
-  <img src="https://img.shields.io/badge/tests-33%2F33-16a34a?style=flat-square" alt="33/33 tests">
+  <img src="https://img.shields.io/badge/tests-36%2F36-16a34a?style=flat-square" alt="36/36 tests">
 </p>
 
 <p align="center">
@@ -20,8 +20,8 @@
 
 ## Τι είναι
 
-Το **Nuvio Collections v5.0** είναι το production σύστημα που μετατρέπει 517
-folders και 2.477 ενεργά rails σε ένα έτοιμο προς εισαγωγή JSON για το Nuvio
+Το **Nuvio Collections v5.0** είναι το production σύστημα που μετατρέπει 519
+folders και 2.492 ενεργά rails σε ένα έτοιμο προς εισαγωγή JSON για το Nuvio
 0.8.3+. Δεν είναι ένα στατικό export: το repository περιέχει το canonical rail
 registry, τους ακριβείς predicates, τα σταθερά public TMDB list IDs, τον
 resumable synchronizer και το GitHub Actions workflow που κρατά τις λίστες
@@ -35,17 +35,17 @@ resumable synchronizer και το GitHub Actions workflow που κρατά τ�
 | Έλεγχος | Αποτέλεσμα |
 |---|---:|
 | Collections | 12 |
-| Folders που διατηρούνται | 517 / 517 |
-| Ενεργά sources | 2.477 |
-| Managed sources | 2.475 |
-| Materialized TMDB lists | 2.077 |
+| Folders | 519 — τα αρχικά 517 διατηρούνται και προστέθηκαν 2 |
+| Ενεργά sources | 2.492 |
+| Managed sources | 2.490 |
+| Materialized TMDB lists | 2.092 |
 | Native Nuvio/TMDB sources | 398 |
 | Χειροκίνητα ορισμένα `recommended` sources | 2 |
 | Κενά ενεργά rails | **0** |
 | Κενά folders | **0** |
 | Unresolved list IDs | **0** |
 | Trakt / runtime-addon sources | **0 / 0** |
-| Automated tests | **33 / 33** |
+| Automated tests | **36 / 36** |
 
 Τα 42 sources που επέστρεφαν αποδεδειγμένα μηδενικό αποτέλεσμα με τον ακριβή
 predicate τους έχουν αποσυρθεί. Δεν διαγράφηκε ούτε συγχωνεύτηκε κανένα folder.
@@ -75,10 +75,10 @@ fingerprint κλειδώνεται ώστε bootstrap/compile/nightly sync να 
 | Actors | 0 | 744 | 744 |
 | Directors | 0 | 186 | 186 |
 | Awards | 0 | 60 | 60 |
-| World | 0 | 296 | 296 |
+| World | 0 | 311 | 311 |
 | Decades | 180 | 6 | 186 |
 | Runtime | 0 | 4 | 4 |
-| **Managed σύνολο** | **398** | **2.077** | **2.475** |
+| **Managed σύνολο** | **398** | **2.092** | **2.490** |
 
 ## Τι σημαίνει «ακριβές»
 
@@ -110,7 +110,7 @@ project δεν μπορεί να εφεύρει την πραγματική πλ
 Στο τελευταίο πλήρες scan αποκλείστηκαν 3.602 posterless rail-occurrences. Το
 `Somebody Knows Something` (TMDB TV 330654) επαληθεύτηκε με
 `poster_path: null` και δεν δημοσιεύεται. Θα επιστρέψει αυτόματα αν προστεθεί
-poster στο TMDB. Ο κανόνας επιβάλλεται στα 2.077 materialized rails. Τα 398
+poster στο TMDB. Ο κανόνας επιβάλλεται στα 2.092 materialized rails. Τα 398
 native sources εκτελούνται απευθείας από το Nuvio 0.8.3, το οποίο δεν παρέχει
 υποστηριζόμενο `has poster` filter· η εξαίρεση καταγράφεται ρητά αντί να
 προσποιείται το repository ότι μπορεί να την επιβάλει.
@@ -246,17 +246,17 @@ flowchart LR
 - Reuse person credits/provider availability μεταξύ sibling rails.
 - Verified snapshots για immutable historical awards.
 - Ordered fingerprints: μηδενικά writes για αμετάβλητες lists.
-- Ownership recovery και των 2.077 stable list IDs πριν από create/update.
+- Ownership recovery και των 2.092 stable list IDs πριν από create/update.
 - Resumable sync ανά rail με durable checkpoints.
 
 Τελευταία live μέτρηση μετά το production release στις 10 Αυγούστου 2026:
 
 | Εργασία | Χρόνος | Αποτέλεσμα |
 |---|---:|---|
-| Post-production full dry-run, 2.077 rails | 42,5 s | 0 changes, 0 failures, 2.077 skips |
-| Poster validation | ίδιο run | 3.602 exclusions, κανένα κενό candidate |
-| Feature-film schema production pass | 200,3 s | 71/71 changes exact typed read-back, 0 failures |
-| Tests + compile + audit | < 3 s τοπικά | 33/33, 2.477 sources, 0 unresolved IDs |
+| Production v5.0 reconciliation | 376,9 s | 84 verified updates, 15 creates, 0 failures |
+| Post-production full dry-run, 2.092 rails | 38,3 s | 0 changes, 0 failures, 2.092 skips |
+| Poster validation | ίδιο run | 3.426 exclusions, κανένα κενό candidate |
+| Tests + compile + strict audit | < 3 s τοπικά | 36/36, 2.492 sources, 0 unresolved IDs |
 
 Ο nightly χρόνος εξαρτάται από changed fingerprints και TMDB rate limits. Το
 εβδομαδιαίο πλήρες awards refresh είναι σκόπιμα βαρύτερο.
@@ -281,7 +281,7 @@ flowchart LR
 | `config/rails.yml` | Canonical rail registry και predicates |
 | `config/providers.yml` | Providers, aliases και GR/Worldwide policy |
 | `config/awards.yml` | Award mappings και reviewed overrides |
-| `config/folders.lock.json` | Προστασία και των 517 folders |
+| `config/folders.lock.json` | Προστασία και των 519 folders |
 | `state/sync-state.json` | List IDs, fingerprints, checkpoints και tombstones |
 | `data/` | Versioned award snapshots και curated studio feature baselines |
 | `src/` | Compiler, materializers, validators και synchronizer |
@@ -290,6 +290,8 @@ flowchart LR
 | `AGENTS.md` | Υποχρεωτική διαδικασία για επόμενους agents/contributors |
 | `reports/latest.json` | Αναλυτικό αποτέλεσμα τελευταίου sync |
 | `dist/nuvio-collections-v5.0.json` | Τελικό Nuvio import artifact |
+| `dist/nuvio-collections-v5.0-profile-repair.json` | Replacement artifact μόνο για collections με profile drift |
+| `reports/profile-audit-2026-08-10.json` | Evidence του reviewed Nuvio export και των media-type mismatches |
 | `assets/branding/` | Product mark και horizontal wordmark |
 
 ## Commands
@@ -297,13 +299,14 @@ flowchart LR
 Απαιτείται Node.js 22+· το hosted workflow χρησιμοποιεί Node.js 24.
 
 ```powershell
-npm test                    # 33 automated contract tests
+npm test                    # 36 automated contract tests
 npm run audit               # structure, counts, locks και compatibility
 npm run sync:dry            # live candidates, χωρίς remote writes
 npm run sync                # production reconciliation
 npm run compile             # τελικό Nuvio v5.0 JSON
 npm run validate:awards     # live validation όλων των award rails
 npm run capability-probe    # προσωρινό TMDB list capability test
+npm run profile:audit -- --profile=<export.json> --write-repair
 ```
 
 Production writes απαιτούν `--execute` και
@@ -329,6 +332,22 @@ Production writes απαιτούν `--execute` και
 5. Άφησε `sortBy: original` στα materialized `LIST` sources.
 6. Κάνε smoke test σε pagination, Streaming GR/Worldwide, Awards, Runtime και
    ένα rail από καθεμία από τις 12 collections.
+
+### Repair παλιού `Σειρά → Ταινία` profile
+
+Το reviewed Nuvio export της 10ης Αυγούστου 2026 αποθήκευσε 980 managed TV rails ως
+`type: series` αλλά `mediaType: MOVIE`. Το Nuvio εμφανίζει τον τύπο από το
+`mediaType`, άρα το ορατό suffix έγινε «Ταινία». Το 981ο `series` source ήταν το
+προστατευμένο Recommended addon, όπου το nullable `mediaType` είναι έγκυρο και
+παραμένει ανέγγιχτο. Το τελικό artifact επιβάλλει
+παντού `series/TV` και `movie/MOVIE`.
+
+1. Κάνε import το πλήρες v5.0 ή το
+   [`profile-repair`](dist/nuvio-collections-v5.0-profile-repair.json). Το Nuvio
+   αντικαθιστά τις επηρεασμένες collections βάσει σταθερού collection ID.
+2. Περίμενε να ολοκληρωθεί το profile sync και κάνε νέο export.
+3. Τρέξε `npm run profile:audit -- --profile=<νέο-export.json>`.
+4. Αποδέξου το migration μόνο με `mediaTypeMismatches: 0` και `missing: 0`.
 
 Δεν απαιτείται καθημερινό re-import: τα public TMDB list IDs είναι σταθερά και
 το nightly workflow ενημερώνει το περιεχόμενό τους στη θέση του.

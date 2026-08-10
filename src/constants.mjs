@@ -13,6 +13,8 @@ export const LOCK_FILE = path.join(ROOT, "config", "folders.lock.json");
 export const STATE_FILE = path.join(ROOT, "state", "sync-state.json");
 export const OUTPUT_FILE = path.join(ROOT, "dist", "nuvio-collections-v5.0.json");
 export const REPORT_FILE = path.join(ROOT, "reports", "latest.json");
+export const PROFILE_AUDIT_REPORT_FILE = path.join(ROOT, "reports", "profile-audit-2026-08-10.json");
+export const PROFILE_REPAIR_FILE = path.join(ROOT, "dist", "nuvio-collections-v5.0-profile-repair.json");
 export const RECOMMENDED_FOLDER_ID = "collections.discover.recommended";
 export const RECOMMENDED_CATALOGS = Object.freeze([
   Object.freeze({ type: "movie", genre: "None", addonId: "aio-metadata", catalogId: "movielens.explore.toppicks.msly9zlu" }),
@@ -58,16 +60,16 @@ export const RETIRED_RAIL_REASONS = Object.freeze(new Map([
   ...NO_SUBSTANTIVE_TV_CAST_CREDIT_RAIL_KEYS.map((key) => [key, "NO_SUBSTANTIVE_TV_CAST_CREDITS"]),
 ]));
 export const EXPECTED = Object.freeze({
-  collections: 12, folders: 517, inputSources: 2516, managedInputSources: 2514,
-  finalSources: 2477, managedFinalSources: 2475, recommendedSources: 2,
-  native: 398, materialized: 2077, retiredRails: 48,
+  collections: 12, folders: 519, inputSources: 2531, managedInputSources: 2529,
+  finalSources: 2492, managedFinalSources: 2490, recommendedSources: 2,
+  native: 398, materialized: 2092, retiredRails: 48,
 });
 export const EXPECTED_MAPPING = Object.freeze({
   "collections.discover": [2, 10], "collections.streaming": [0, 455],
   "collections.genres": [0, 180], "collections.film-series": [186, 0],
   "collections.studios": [0, 107], "collections.networks": [30, 29],
   "collections.actors": [0, 744], "collections.directors": [0, 186],
-  "collections.awards": [0, 60], "collections.world": [0, 296],
+  "collections.awards": [0, 60], "collections.world": [0, 311],
   "collections.decades": [180, 6], "collections.runtime": [0, 4],
 });
 
@@ -88,6 +90,8 @@ export const COUNTRY_BY_FOLDER = Object.freeze({
   "folder-MV0AT0KN": "SE", "folder-CNVEC5EE": "TW", "folder-Y0KO0JXK": "TH",
   "collections.world.turkish": "TR", "folder-FVCF354Y": "PH",
   "folder-5U334FWO": "FI", "folder-FI6BJN1Z": "CL", "folder-369A49J9": "HK",
+  "collections.world.portuguese": "PT",
+  "collections.world.latin-american": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR",
 });
 
 export const PROVIDER_SEEDS = Object.freeze([

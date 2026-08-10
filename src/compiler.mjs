@@ -1,6 +1,7 @@
 import { INPUT_FILE, RAILS_FILE, STATE_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, EXPECTED } from "./constants.mjs";
 import { readJson, writeJson, clone, invariant } from "./utils.mjs";
 import { auditRepository } from "./validate.mjs";
+import { assertNuvioMediaTypeContract } from "./media-contract.mjs";
 
 export function listSource(rail, listId) {
   return { type: rail.mediaType === "TV" ? "series" : "movie", genre: null, title: rail.title, sortBy: "original", tmdbId: Number(listId), addonId: null, filters: {}, sortHow: null, provider: "tmdb", catalogId: null, mediaType: rail.mediaType, traktListId: null, tmdbSourceType: "LIST" };
@@ -32,6 +33,7 @@ export async function compile({ allowPlaceholders = false } = {}) {
   }
   invariant(output.flatMap((c) => c.folders).length === EXPECTED.folders, "Compiler changed folder count");
   invariant(output.flatMap((c) => c.folders).flatMap((f) => f.sources).length === EXPECTED.finalSources, "Compiler source count failed");
+  assertNuvioMediaTypeContract(output, { managedOnly: true });
   const target = allowPlaceholders ? OUTPUT_FILE.replace(/\.json$/, ".preview.json") : OUTPUT_FILE;
   await writeJson(target, output);
   return { output: target, sources: EXPECTED.finalSources };

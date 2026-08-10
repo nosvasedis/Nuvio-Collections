@@ -6,12 +6,14 @@ import { compile } from "../src/compiler.mjs";
 import { runtimeBucket, chooseAvailability, materializeRail, applySemanticPredicates, discoverParams, isSubstantiveCastCredit, isFeatureFilm, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
 import { confirmationCompatible, normalizeCandidateItems, semanticRefreshDue } from "../src/sync.mjs";
-import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS } from "../src/constants.mjs";
+import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS, COUNTRY_BY_FOLDER } from "../src/constants.mjs";
 import { readJson, fingerprint, dedupeLikelyDuplicateWorks } from "../src/utils.mjs";
+import { assertNuvioMediaTypeContract, emulateNuvio083MediaType } from "../src/media-contract.mjs";
+import { compareProfile } from "../src/profile-audit.mjs";
 
 test("bootstrap creates the final immutable mapping", async () => {
   const result = await bootstrap();
-  assert.deepEqual(result, { collections: 12, folders: 517, inputSources: 2516, managedRails: 2475, native: 398, materialized: 2077 });
+  assert.deepEqual(result, { collections: 12, folders: 519, inputSources: 2531, managedRails: 2490, native: 398, materialized: 2092 });
   const audit = await auditRepository(); assert.equal(audit.finalSources, EXPECTED.finalSources);
   const manifest = await readJson(new URL("../config/rails.yml", import.meta.url));
   const companions = manifest.rails.filter((rail) => rail.key.endsWith(":movie-companion"));
@@ -26,6 +28,13 @@ test("bootstrap creates the final immutable mapping", async () => {
     ["folder-2XGVUWET", 801240, "MOVIE"], ["folder-4OZG50Y4", 28495261, "MOVIE"],
     ["folder-79DVGTP9", 23223808, "MOVIE"], ["folder-KIRXHA4A", 801239, "MOVIE"],
   ]);
+  const portugal = manifest.rails.filter((rail) => rail.folderId === "collections.world.portuguese");
+  const latin = manifest.rails.filter((rail) => rail.folderId === "collections.world.latin-american");
+  const spanish = manifest.rails.filter((rail) => rail.folderId === "collections.world.spanish");
+  assert.equal(portugal.length, 7); assert.ok(portugal.every((rail) => rail.params.originCountry === "PT"));
+  assert.equal(latin.length, 8); assert.ok(latin.every((rail) => rail.params.originCountry === COUNTRY_BY_FOLDER["collections.world.latin-american"] && !rail.params.originCountry.split("|").includes("ES")));
+  assert.equal(spanish.length, 8); assert.ok(spanish.every((rail) => rail.params.originCountry === "ES"));
+  assert.ok([...portugal, ...latin].every((rail) => rail.params.legacy.filters.withOriginalLanguage == null));
 });
 
 test("studio feature policy rejects shorts, documentaries, TV movies, and future releases", () => {
@@ -191,14 +200,48 @@ test("Greek semantic labels do not confuse family with new or martial arts with 
   assert.equal(params.with_genres, "28"); assert.equal(params.with_keywords, String(martialArtsKeywordId));
 });
 
-test("vote quorum is exclusive to Top rails and never leaks into Popular, New, or Recent", () => {
+test("genre New preserves its configured vote floor while other New, Popular, and Recent rails do not", () => {
   const legacy = { filters: { voteCountGte: 10, voteAverageGte: 6 }, sortBy: "vote_average.desc" };
   for (const title of ["Δημοφιλείς σειρές", "Νέες σειρές", "Πρόσφατες σειρές"]) {
     const params = discoverParams({ title, params: { legacy } }, "tv", "2026-08-10");
     assert.equal(params["vote_count.gte"], undefined, title); assert.equal(params["vote_average.gte"], undefined, title);
   }
+  const genreNew = discoverParams({ collectionId: "collections.genres", title: "Νέες σειρές", params: { legacy } }, "tv", "2026-08-10");
+  assert.equal(genreNew["vote_count.gte"], 10); assert.equal(genreNew["vote_average.gte"], undefined);
   const top = discoverParams({ title: "Κορυφαίες σειρές", params: { legacy } }, "tv", "2026-08-10");
   assert.equal(top["vote_count.gte"], 10); assert.equal(top["vote_average.gte"], 6);
+});
+
+test("all genre New rails carry their manifest vote floor into TMDB Discover", async () => {
+  const manifest = await readJson(new URL("../config/rails.yml", import.meta.url));
+  const fresh = manifest.rails.filter((rail) => rail.collectionId === "collections.genres" && /^Νέ/.test(rail.title));
+  assert.equal(fresh.length, 44);
+  for (const rail of fresh) {
+    const media = rail.mediaType === "TV" ? "tv" : "movie";
+    assert.equal(discoverParams(rail, media, "2026-08-10")["vote_count.gte"], rail.params.legacy.filters.voteCountGte, rail.key);
+  }
+});
+
+test("Nuvio 0.8.3 media contract catches the reviewed series-as-movie profile corruption", () => {
+  const canonical = [{ id: "collections.actors", folders: [{ id: "actor", sources: [{ provider: "tmdb", tmdbSourceType: "LIST", tmdbId: 1, title: "Δημοφιλείς σειρές", type: "series", mediaType: "TV" }] }] }];
+  const profile = structuredClone(canonical); profile[0].folders[0].sources[0].mediaType = "MOVIE";
+  assert.equal(emulateNuvio083MediaType({ mediaType: null }), "MOVIE");
+  assert.throws(() => assertNuvioMediaTypeContract(profile, { managedOnly: true }), /media type contract failed/);
+  const report = compareProfile(profile, canonical);
+  assert.equal(report.totals.mediaTypeMismatches, 1); assert.deepEqual(report.affectedCollectionIds, ["collections.actors"]);
+  assert.deepEqual(report.byCollection["collections.actors"], { mediaTypeMismatches: 1, missing: 0, extra: 0, repairRequired: true });
+  assert.deepEqual(report.mismatches[0].canonical, { type: "series", mediaType: "TV" });
+  assert.deepEqual(report.mismatches[0].profile, { type: "series", mediaType: "MOVIE" });
+});
+
+test("Timothée Chalamet uses the reviewed corrected asset set", async () => {
+  const input = await readJson(INPUT_FILE), folder = input.flatMap((collection) => collection.folders).find((item) => item.id === "folder-I2BO9LZU");
+  assert.deepEqual([folder.focusGifUrl, folder.titleLogoUrl, folder.coverImageUrl, folder.heroBackdropUrl], [
+    "https://raw.githubusercontent.com/ImKaptain/nuvio-assets/main/Actors/Timoth_e_Chalamet/Timoth_e_Chalamet_Hover.gif",
+    "https://raw.githubusercontent.com/ImKaptain/nuvio-assets/main/TitleLogos/Timoth_e_Chalamet_TitleLogo.png",
+    "https://raw.githubusercontent.com/ImKaptain/nuvio-assets/main/Actors/Timoth_e_Chalamet/Timoth_e_Chalamet_Base.png",
+    "https://raw.githubusercontent.com/ImKaptain/nuvio-assets/main/Actors/Timoth_e_Chalamet/Timoth_e_Chalamet_Background.jpg",
+  ]);
 });
 
 test("Nuvio 0.8.3 exclusions map to the exact TMDB Discover parameters", () => {
@@ -331,11 +374,12 @@ test("placeholder compilation preserves all folders and recommended byte semanti
   assert.equal(fingerprint(getRecommended(before)), fingerprint(getRecommended(after)));
   assert.deepEqual(getRecommended(after).sources.map(({ type, genre, addonId, catalogId }) => ({ type, genre, addonId, catalogId })), RECOMMENDED_CATALOGS);
   assert.deepEqual(getRecommended(after).catalogSources, RECOMMENDED_CATALOGS);
-  assert.equal(after.flatMap((c) => c.folders).length, 517);
-  assert.equal(after.flatMap((c) => c.folders).flatMap((f) => f.sources).length, 2477);
+  assert.equal(after.flatMap((c) => c.folders).length, 519);
+  assert.equal(after.flatMap((c) => c.folders).flatMap((f) => f.sources).length, 2492);
   assert.ok(after.flatMap((c) => c.folders).filter((folder) => folder.id !== RECOMMENDED_FOLDER_ID).every((folder) => folder.sources.length > 0));
   const managed = after.flatMap((c) => c.folders).filter((f) => f.id !== RECOMMENDED_FOLDER_ID).flatMap((f) => f.sources);
   assert.equal(managed.filter((s) => s.provider === "trakt" || s.traktListId).length, 0);
   assert.ok(managed.filter((s) => s.tmdbSourceType === "LIST").every((s) => s.sortBy === "original"));
   assert.ok(managed.filter((s) => s.provider === "tmdb").every((s) => s.type === (s.mediaType === "TV" ? "series" : "movie")));
+  assert.equal(assertNuvioMediaTypeContract(after, { managedOnly: true }), true);
 });

@@ -78121,6 +78121,676 @@
       }
     },
     {
+      "key": "collections.world:collections.world.latin-american:0",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.latin-american",
+      "position": 0,
+      "title": "Νέες ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "year": 2026,
+            "voteCountGte": 10,
+            "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+          },
+          "sortBy": "primary_release_date.desc"
+        },
+        "originCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Νέες ταινίες",
+        "sortBy": "primary_release_date.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "year": 2026,
+          "voteCountGte": 10,
+          "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.latin-american:1",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.latin-american",
+      "position": 1,
+      "title": "Νέες σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "year": 2026,
+            "voteCountGte": 8,
+            "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+          },
+          "sortBy": "first_air_date.desc"
+        },
+        "originCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Νέες σειρές",
+        "sortBy": "first_air_date.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "year": 2026,
+          "voteCountGte": 8,
+          "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.latin-american:2",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.latin-american",
+      "position": 2,
+      "title": "Δημοφιλείς ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "voteCountGte": 25,
+            "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+          },
+          "sortBy": "popularity.desc"
+        },
+        "originCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Δημοφιλείς ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "voteCountGte": 25,
+          "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.latin-american:3",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.latin-american",
+      "position": 3,
+      "title": "Δημοφιλείς σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "voteCountGte": 15,
+            "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+          },
+          "sortBy": "popularity.desc"
+        },
+        "originCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Δημοφιλείς σειρές",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "voteCountGte": 15,
+          "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.latin-american:4",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.latin-american",
+      "position": 4,
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "voteCountGte": 150,
+            "voteAverageGte": 6.5,
+            "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+          },
+          "sortBy": "vote_average.desc"
+        },
+        "originCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Κορυφαίες ταινίες όλων των εποχών",
+        "sortBy": "vote_average.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "voteCountGte": 150,
+          "voteAverageGte": 6.5,
+          "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.latin-american:5",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.latin-american",
+      "position": 5,
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "voteCountGte": 75,
+            "voteAverageGte": 6.5,
+            "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+          },
+          "sortBy": "vote_average.desc"
+        },
+        "originCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Κορυφαίες σειρές όλων των εποχών",
+        "sortBy": "vote_average.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "voteCountGte": 75,
+          "voteAverageGte": 6.5,
+          "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.latin-american:6",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.latin-american",
+      "position": 6,
+      "title": "Κορυφαίες ταινίες της χρονιάς",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "year": 2026,
+            "voteCountGte": 25,
+            "voteAverageGte": 6,
+            "releaseDateGte": "2026-01-01",
+            "releaseDateLte": "2026-12-31",
+            "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+          },
+          "sortBy": "vote_average.desc"
+        },
+        "originCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Κορυφαίες ταινίες της χρονιάς",
+        "sortBy": "vote_average.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "year": 2026,
+          "voteCountGte": 25,
+          "voteAverageGte": 6,
+          "releaseDateGte": "2026-01-01",
+          "releaseDateLte": "2026-12-31",
+          "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.latin-american:7",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.latin-american",
+      "position": 7,
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "year": 2026,
+            "voteCountGte": 12,
+            "voteAverageGte": 6,
+            "releaseDateGte": "2026-01-01",
+            "releaseDateLte": "2026-12-31",
+            "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+          },
+          "sortBy": "vote_average.desc"
+        },
+        "originCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Κορυφαίες σειρές της χρονιάς",
+        "sortBy": "vote_average.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "year": 2026,
+          "voteCountGte": 12,
+          "voteAverageGte": 6,
+          "releaseDateGte": "2026-01-01",
+          "releaseDateLte": "2026-12-31",
+          "withOriginCountry": "MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.portuguese:0",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.portuguese",
+      "position": 0,
+      "title": "Νέες ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "year": 2026,
+            "voteCountGte": 5,
+            "withOriginCountry": "PT"
+          },
+          "sortBy": "primary_release_date.desc"
+        },
+        "originCountry": "PT"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Νέες ταινίες",
+        "sortBy": "primary_release_date.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "year": 2026,
+          "voteCountGte": 5,
+          "withOriginCountry": "PT"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.portuguese:1",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.portuguese",
+      "position": 1,
+      "title": "Νέες σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "year": 2026,
+            "voteCountGte": 3,
+            "withOriginCountry": "PT"
+          },
+          "sortBy": "first_air_date.desc"
+        },
+        "originCountry": "PT"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Νέες σειρές",
+        "sortBy": "first_air_date.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "year": 2026,
+          "voteCountGte": 3,
+          "withOriginCountry": "PT"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.portuguese:2",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.portuguese",
+      "position": 2,
+      "title": "Δημοφιλείς ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "voteCountGte": 10,
+            "withOriginCountry": "PT"
+          },
+          "sortBy": "popularity.desc"
+        },
+        "originCountry": "PT"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Δημοφιλείς ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "voteCountGte": 10,
+          "withOriginCountry": "PT"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.portuguese:3",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.portuguese",
+      "position": 3,
+      "title": "Δημοφιλείς σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "voteCountGte": 8,
+            "withOriginCountry": "PT"
+          },
+          "sortBy": "popularity.desc"
+        },
+        "originCountry": "PT"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Δημοφιλείς σειρές",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "voteCountGte": 8,
+          "withOriginCountry": "PT"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.portuguese:4",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.portuguese",
+      "position": 4,
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "voteCountGte": 40,
+            "voteAverageGte": 6.5,
+            "withOriginCountry": "PT"
+          },
+          "sortBy": "vote_average.desc"
+        },
+        "originCountry": "PT"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Κορυφαίες ταινίες όλων των εποχών",
+        "sortBy": "vote_average.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "voteCountGte": 40,
+          "voteAverageGte": 6.5,
+          "withOriginCountry": "PT"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.portuguese:5",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.portuguese",
+      "position": 5,
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "voteCountGte": 25,
+            "voteAverageGte": 6.5,
+            "withOriginCountry": "PT"
+          },
+          "sortBy": "vote_average.desc"
+        },
+        "originCountry": "PT"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Κορυφαίες σειρές όλων των εποχών",
+        "sortBy": "vote_average.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "voteCountGte": 25,
+          "voteAverageGte": 6.5,
+          "withOriginCountry": "PT"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
+      "key": "collections.world:collections.world.portuguese:6",
+      "collectionId": "collections.world",
+      "folderId": "collections.world.portuguese",
+      "position": 6,
+      "title": "Κορυφαίες ταινίες της χρονιάς",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "origin_country",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "year": 2026,
+            "voteCountGte": 5,
+            "voteAverageGte": 6,
+            "releaseDateGte": "2026-01-01",
+            "releaseDateLte": "2026-12-31",
+            "withOriginCountry": "PT"
+          },
+          "sortBy": "vote_average.desc"
+        },
+        "originCountry": "PT"
+      },
+      "originalSource": {
+        "type": null,
+        "genre": null,
+        "title": "Κορυφαίες ταινίες της χρονιάς",
+        "sortBy": "vote_average.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "year": 2026,
+          "voteCountGte": 5,
+          "voteAverageGte": 6,
+          "releaseDateGte": "2026-01-01",
+          "releaseDateLte": "2026-12-31",
+          "withOriginCountry": "PT"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER"
+      }
+    },
+    {
       "key": "collections.world:collections.world.russian:0",
       "collectionId": "collections.world",
       "folderId": "collections.world.russian",

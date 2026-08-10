@@ -22,6 +22,7 @@ export async function auditRepository({ requireListIds = false } = {}) {
   const materialized = rails.filter((r) => r.strategy === "materialized");
   invariant(rails.length === EXPECTED.managedFinalSources && native.length === EXPECTED.native && materialized.length === EXPECTED.materialized, "Rail totals failed");
   invariant(new Set(rails.map((r) => r.key)).size === rails.length, "Duplicate rail key");
+  invariant(rails.every((r) => ["MOVIE", "TV"].includes(r.mediaType)), "Every managed rail must declare an explicit media type");
   invariant(materialized.every((r) => ["MOVIE", "TV"].includes(r.mediaType)), "Materialized list must be homogeneous");
   const curatedRails = materialized.filter((r) => r.materializer === "curated_studio_features");
   invariant(curatedRails.length === 4 && curatedRails.every((rail) => rail.mediaType === "MOVIE"), "Curated studio rail mapping failed");
@@ -37,6 +38,7 @@ export async function auditRepository({ requireListIds = false } = {}) {
   const nuvio083Filters = new Set(["withGenres", "withoutGenres", "releaseDateGte", "releaseDateLte", "voteAverageGte", "voteCountGte", "withOriginalLanguage", "withOriginCountry", "withKeywords", "withoutKeywords", "withCompanies", "withoutCompanies", "withNetworks", "year", "watchRegion", "withWatchProviders", "withoutWatchProviders"]);
   invariant(native.every((rail) => Object.keys(rail.originalSource.filters ?? {}).every((key) => nuvio083Filters.has(key))), "Unsupported Nuvio 0.8.3 native filter");
   invariant(native.every((rail) => !Object.keys(rail.originalSource.filters ?? {}).length || ["DISCOVER", "COMPANY", "NETWORK"].includes(rail.originalSource.tmdbSourceType)), "Nuvio filters attached to a source type that ignores them");
+  invariant(native.every((rail) => rail.originalSource.mediaType === rail.mediaType), "Native Nuvio media type drift");
   invariant(Object.keys(state.retiredRails ?? {}).length === EXPECTED.retiredRails, "Retired rail audit failed");
   if (requireListIds) for (const rail of materialized) invariant(state.rails[rail.key]?.listId, `Missing managed list ID: ${rail.key}`);
   return { collections: input.length, folders: folders.length, finalSources: rails.length + recommended.sources.length, managed: rails.length, native: native.length, materialized: materialized.length, recommendedFingerprint: lock.recommendedFingerprint, unresolvedLists: materialized.filter((r) => !state.rails[r.key]?.listId).length };
