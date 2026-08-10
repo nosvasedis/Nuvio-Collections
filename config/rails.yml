@@ -38697,7 +38697,7 @@
       "params": {
         "legacy": {
           "tmdbSourceType": "DIRECTOR",
-          "tmdbId": 6099105,
+          "tmdbId": 1056121,
           "traktListId": null,
           "filters": {},
           "sortBy": "popularity.desc"
@@ -38732,7 +38732,7 @@
       "params": {
         "legacy": {
           "tmdbSourceType": "DIRECTOR",
-          "tmdbId": 6099105,
+          "tmdbId": 1056121,
           "traktListId": null,
           "filters": {},
           "sortBy": "vote_average.desc"
@@ -40447,7 +40447,7 @@
       "params": {
         "legacy": {
           "tmdbSourceType": "DIRECTOR",
-          "tmdbId": 2172748,
+          "tmdbId": 510,
           "traktListId": null,
           "filters": {},
           "sortBy": "popularity.desc"
@@ -40482,7 +40482,7 @@
       "params": {
         "legacy": {
           "tmdbSourceType": "DIRECTOR",
-          "tmdbId": 2172748,
+          "tmdbId": 510,
           "traktListId": null,
           "filters": {},
           "sortBy": "popularity.desc"
@@ -40517,7 +40517,7 @@
       "params": {
         "legacy": {
           "tmdbSourceType": "DIRECTOR",
-          "tmdbId": 2172748,
+          "tmdbId": 510,
           "traktListId": null,
           "filters": {},
           "sortBy": "vote_average.desc"
@@ -40552,7 +40552,7 @@
       "params": {
         "legacy": {
           "tmdbSourceType": "DIRECTOR",
-          "tmdbId": 2172748,
+          "tmdbId": 510,
           "traktListId": null,
           "filters": {},
           "sortBy": "vote_average.desc"
@@ -41637,7 +41637,7 @@
       "params": {
         "legacy": {
           "tmdbSourceType": "DIRECTOR",
-          "tmdbId": 5805497,
+          "tmdbId": 1,
           "traktListId": null,
           "filters": {},
           "sortBy": "popularity.desc"
@@ -41672,7 +41672,7 @@
       "params": {
         "legacy": {
           "tmdbSourceType": "DIRECTOR",
-          "tmdbId": 5805497,
+          "tmdbId": 1,
           "traktListId": null,
           "filters": {},
           "sortBy": "vote_average.desc"

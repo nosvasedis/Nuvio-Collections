@@ -1,5 +1,5 @@
 import fs from "node:fs/promises";
-import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, EXPECTED, COUNTRY_BY_FOLDER, PROVIDER_SEEDS, AWARD_SEEDS, AWARD_CATEGORY_SEEDS, CANNES_CATEGORY_SEEDS, OSCAR_CATEGORY_SEEDS, NON_WORK_AWARD_WINNERS } from "./constants.mjs";
+import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, EXPECTED, COUNTRY_BY_FOLDER, PERSON_ID_BY_FOLDER, PROVIDER_SEEDS, AWARD_SEEDS, AWARD_CATEGORY_SEEDS, CANNES_CATEGORY_SEEDS, OSCAR_CATEGORY_SEEDS, NON_WORK_AWARD_WINNERS } from "./constants.mjs";
 import { readJson, writeJson, fingerprint, invariant, railKey, normalizeText } from "./utils.mjs";
 
 const MATERIALIZED_COLLECTIONS = new Set(["collections.streaming", "collections.genres", "collections.studios", "collections.actors", "collections.directors", "collections.awards", "collections.world", "collections.runtime"]);
@@ -31,7 +31,8 @@ function nativeOverride(collectionId, source, index) {
 }
 
 function paramsFor(collection, folder, source) {
-  const params = { legacy: { tmdbSourceType: source.tmdbSourceType, tmdbId: source.tmdbId, traktListId: source.traktListId, filters: source.filters, sortBy: source.sortBy } };
+  const canonicalPersonId = ["collections.actors", "collections.directors"].includes(collection.id) ? PERSON_ID_BY_FOLDER[folder.id] : null;
+  const params = { legacy: { tmdbSourceType: source.tmdbSourceType, tmdbId: canonicalPersonId ?? source.tmdbId, traktListId: source.traktListId, filters: source.filters, sortBy: source.sortBy } };
   if (collection.id === "collections.streaming") params.providerFolder = folder.id;
   if (collection.id === "collections.world") params.originCountry = COUNTRY_BY_FOLDER[folder.id];
   if (collection.id === "collections.awards") {

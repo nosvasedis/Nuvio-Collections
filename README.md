@@ -79,6 +79,12 @@ exact typed order match. A failed status is always retried even when a previous
 last-known-good fingerprint exists. Atomic state checkpoints retry transient
 Windows file locks.
 
+TMDB occasionally returns an item from Discover that its own v4 List API then
+rejects as `Media is invalid`. Only that typed error is quarantined; all other
+write errors still fail closed. The exact media identity and timestamp are
+stored per rail and retried after 30 days, preventing a permanently bad TMDB
+record from breaking every nightly run without suppressing future recovery.
+
 `npm run compile` refuses unresolved list IDs. Structural review can use
 `node src/cli.mjs compile --allow-placeholders`, which writes an ignored
 `*.preview.json` artifact and never overwrites the production JSON.
@@ -90,6 +96,15 @@ successful GR candidate is empty, the same predicate is evaluated against the
 union of all official TMDB watch regions. Only `flatrate`, `free`, and `ads`
 qualify; `rent`/`buy`-only availability never qualifies. GR and Worldwide items
 are never mixed in one candidate.
+
+Worldwide materialization queries the provider-filtered Discover endpoint for
+every official region advertised by that canonical provider, unions the
+results, deduplicates by typed TMDB ID, and ranks only after the union. It never
+uses a capped global-title sample. The production concurrency remains bounded
+by the TMDB client and honors `Retry-After`; the measured cold calculation of
+all 2,125 rails is approximately 2.5 minutes on the current GitHub/local Node 24
+configuration. Actual list-write time additionally depends on how many ordered
+fingerprints changed because TMDB v4 does not support item reordering.
 
 Watch-provider data is supplied by JustWatch through TMDB. JustWatch and TMDB
 attribution is required in the consuming product; repository-only attribution

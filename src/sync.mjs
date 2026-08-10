@@ -54,6 +54,7 @@ async function reconcile(client, listId, items, oldItems, { knownEmpty = false }
 }
 
 export async function sync({ execute = false, force = false, client = new TmdbClient() } = {}) {
+  const syncStartedAt = performance.now();
   if (execute) invariant(process.env.CONFIRM_TMDB_LIST_WRITES === "NUVIO-TMDB-LISTS", "Explicit TMDB write confirmation missing");
   const [input, manifest, providers, awards, state] = await Promise.all([readJson(INPUT_FILE), readJson(RAILS_FILE), readJson(PROVIDERS_FILE), readJson(AWARDS_FILE), readJson(STATE_FILE)]);
   const today = athensDate(), folderMap = new Map(input.flatMap((c) => c.folders).map((f) => [f.id, f]));
@@ -107,6 +108,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
   const managedRails = manifest.rails.filter((x) => x.strategy === "materialized");
   const concurrency = Math.max(1, Math.min(Number(process.env.NUVIO_SYNC_CONCURRENCY ?? 6), 12));
   let prepared = await mapLimit(managedRails, concurrency, async (rail) => {
+    const startedAt = performance.now();
     const prior = state.rails[rail.key] ?? {};
     try {
       const folderTitle = folderMap.get(rail.folderId)?.title ?? "";
@@ -114,6 +116,9 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
       const context = { today, folderTitle, providerAliases: provider ? [provider.name, ...provider.aliases] : [], award: awardMap.get(rail.key), authorityOverrides: awards.authorityOverrides ?? {}, nonWorkWinners: awards.nonWorkWinners ?? [] };
       let candidate = await materializeRail(client, rail, context); const media = rail.mediaType === "MOVIE" ? "movie" : "tv";
       candidate = { ...candidate, items: normalizeCandidateItems(candidate.items, media) };
+      const invalidItems = (prior.invalidItems ?? []).filter((item) => Date.now() - Date.parse(item.excludedAt) < 30 * 86400000);
+      const invalidIdentities = new Set(invalidItems.map((item) => `${item.media_type}:${item.id}`));
+      candidate.items = candidate.items.filter((item) => !invalidIdentities.has(`${item.media_type}:${item.id}`));
       invariant(candidate.items.every((item) => item.media_type === media), `Mixed media candidate: ${rail.key}`);
       let ids = itemIds(candidate.items, media), hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids }), ratio = changeRatio(prior.orderedIds ?? [], ids);
       if (ratio > 0.4 && prior.orderedIds?.length) {
@@ -124,9 +129,10 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
         invariant(confirm.scope === candidate.scope && confirmationCompatible(ids, confirmIds), `Large-change confirmation differed semantically: ${rail.key} (${candidate.scope}/${confirm.scope}, ratio ${confirmationRatio})`);
         candidate = confirm; ids = confirmIds; hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids }); ratio = changeRatio(prior.orderedIds ?? [], ids);
       }
-      if (!force && prior.syncStatus === "verified" && prior.fingerprint === hash) return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope };
-      return { key: rail.key, status: "would-update", listId: prior.listId, count: ids.length, scope: candidate.scope, changeRatio: ratio, _rail: rail, _folderTitle: folderTitle, _candidate: candidate, _media: media, _ids: ids, _hash: hash };
-    } catch (error) { return { key: rail.key, status: "failed", error: error.message }; }
+      const _durationMs = Math.round(performance.now() - startedAt);
+      if (!force && prior.syncStatus === "verified" && prior.fingerprint === hash) return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, _durationMs };
+      return { key: rail.key, status: "would-update", listId: prior.listId, count: ids.length, scope: candidate.scope, changeRatio: ratio, _durationMs, _rail: rail, _folderTitle: folderTitle, _candidate: candidate, _media: media, _ids: ids, _hash: hash, _invalidItems: invalidItems };
+    } catch (error) { return { key: rail.key, status: "failed", error: error.message, _durationMs: Math.round(performance.now() - startedAt) }; }
   });
   const preparationFailures = prepared.filter((x) => x.status === "failed");
   for (const failure of preparationFailures) console.error(`[sync] PREPARATION FAILED ${failure.key}: ${failure.error}`);
@@ -176,8 +182,19 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
           try { const old = await client.listV4All(entry.listId); oldItems = (old.results ?? []).map((x) => ({ id: x.id, media_type: x.media_type ?? entry._media })); }
           catch { const old = await client.listV3All(entry.listId); oldItems = (old.items ?? []).map((x) => ({ id: x.id, media_type: x.media_type ?? entry._media })); }
         }
-        await reconcile(client, entry.listId, entry._candidate.items, oldItems, { knownEmpty: Boolean(entry.createdList) });
-        state.rails[entry.key] = { listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, syncStatus: "verified", lastVerified: new Date().toISOString() };
+        try { await reconcile(client, entry.listId, entry._candidate.items, oldItems, { knownEmpty: Boolean(entry.createdList) }); }
+        catch (error) {
+          if (!error.invalidItems?.length) throw error;
+          const invalidAt = new Date().toISOString();
+          const rejected = new Set(error.invalidItems.map((item) => `${item.media_type}:${item.id}`));
+          entry._invalidItems = [...(entry._invalidItems ?? []), ...error.invalidItems.map((item) => ({ ...item, excludedAt: invalidAt }))]
+            .filter((item, index, values) => values.findIndex((candidate) => candidate.media_type === item.media_type && candidate.id === item.id) === index);
+          entry._candidate.items = entry._candidate.items.filter((item) => !rejected.has(`${item.media_type}:${item.id}`));
+          entry._ids = itemIds(entry._candidate.items, entry._media); entry.count = entry._ids.length;
+          entry._hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids: entry._ids });
+          await reconcile(client, entry.listId, entry._candidate.items, oldItems);
+        }
+        state.rails[entry.key] = { listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, syncStatus: "verified", lastVerified: new Date().toISOString(), invalidItems: entry._invalidItems ?? [] };
         await checkpointState();
         verifiedProgress++;
         if (verifiedProgress === 1 || verifiedProgress % 25 === 0 || verifiedProgress === updateTotal) console.error(`[sync] verified ${verifiedProgress}/${updateTotal} rails; latest=${entry.key}; items=${entry.count}`);
@@ -191,6 +208,10 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
     });
   }
   if (execute && preparationFailures.length) prepared = prepared.map((entry) => entry.status === "would-update" ? { ...entry, status: "validated-no-write" } : entry);
+  report.performance = {
+    totalMs: Math.round(performance.now() - syncStartedAt),
+    slowestRails: [...prepared].sort((a, b) => b._durationMs - a._durationMs).slice(0, 20).map((entry) => ({ key: entry.key, durationMs: entry._durationMs })),
+  };
   report.rails = prepared.map((entry) => Object.fromEntries(Object.entries(entry).filter(([key]) => !key.startsWith("_"))));
   report.rails.sort((a, b) => a.key.localeCompare(b.key));
   report.totals.considered = report.rails.length;

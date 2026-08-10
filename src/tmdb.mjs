@@ -474,6 +474,12 @@ export class TmdbClient {
     const result = await this.v4(`/list/${id}/items`, { method: "POST", body: { items: items.map((x) => ({ media_type: x.media_type, media_id: x.id })) } });
     const errors = [...(result.error_results ?? []), ...(result.results ?? []).filter((item) => item.success !== true)];
     const unexpected = errors.filter((item) => !(item.error ?? []).every((message) => /Media has already been taken/i.test(message)));
-    if ((result.results ?? []).length !== items.length || unexpected.length) throw new Error(`TMDB list ${id} accepted ${(result.results ?? []).filter((item) => item.success === true).length}/${items.length} items: ${JSON.stringify(errors.slice(0, 3))}`);
+    if ((result.results ?? []).length !== items.length || unexpected.length) {
+      const error = new Error(`TMDB list ${id} accepted ${(result.results ?? []).filter((item) => item.success === true).length}/${items.length} items: ${JSON.stringify(errors.slice(0, 3))}`);
+      error.invalidItems = unexpected.filter((item) => (item.error ?? []).some((message) => /Media is invalid/i.test(message))).map((item) => ({
+        media_type: item.media_type, id: Number(item.media_id), reason: "TMDB_LIST_MEDIA_INVALID",
+      })).filter((item) => item.media_type && Number.isInteger(item.id));
+      throw error;
+    }
   }
 }

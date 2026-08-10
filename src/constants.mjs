@@ -15,6 +15,11 @@ export const REPORT_FILE = path.join(ROOT, "reports", "latest.json");
 export const RECOMMENDED_FOLDER_ID = "collections.discover.recommended";
 export const ALLOWED_MONETIZATION = ["flatrate", "free", "ads"];
 export const MATERIALIZED_LIMIT = 200;
+export const PERSON_ID_BY_FOLDER = Object.freeze({
+  "folder-6VLQPAQY": 1056121, // Ryan Coogler
+  "folder-JNAONKLX": 510,     // Tim Burton
+  "folder-P3TT53P3": 1,       // George Lucas
+});
 export const EXPECTED = Object.freeze({
   collections: 12, folders: 517, inputSources: 2516, managedInputSources: 2514,
   finalSources: 2525, managedFinalSources: 2523, recommendedSources: 2,

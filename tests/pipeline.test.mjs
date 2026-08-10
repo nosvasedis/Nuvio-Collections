@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { bootstrap } from "../src/bootstrap.mjs";
 import { auditRepository } from "../src/validate.mjs";
 import { compile } from "../src/compiler.mjs";
-import { runtimeBucket, chooseAvailability, materializeRail } from "../src/materialize.mjs";
+import { runtimeBucket, chooseAvailability, materializeRail, applySemanticPredicates, discoverParams } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
 import { confirmationCompatible, normalizeCandidateItems } from "../src/sync.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, EXPECTED } from "../src/constants.mjs";
@@ -48,6 +48,53 @@ test("streaming requests only allowed monetization and prefers successful GR", a
   assert.equal(result.scope, "GR"); assert.deepEqual(result.items.map((x) => x.id), [1]); assert.equal(calls.length, 1); assert.equal(calls[0].with_watch_monetization_types, "flatrate|free|ads");
 });
 
+test("TV-only semantic genres use keywords without invalid movie genre IDs", async () => {
+  const client = { keywordIds: async (names) => names.map((_, index) => index + 1) };
+  for (const title of ["Σειρές τρόμου", "Ρομαντικές σειρές", "Σειρές θρίλερ", "Μουσικές σειρές", "Ιστορικές σειρές"]) {
+    const params = { with_genres: "999" };
+    await applySemanticPredicates(client, { title }, "tv", params, "");
+    assert.equal(params.with_genres, undefined, title);
+    assert.ok(params.with_keywords, title);
+  }
+  const war = {};
+  await applySemanticPredicates(client, { title: "Πολεμικές σειρές" }, "tv", war, "");
+  assert.equal(war.with_genres, "10768"); assert.ok(war.with_keywords);
+});
+
+test("Greek semantic labels do not confuse family with new or martial arts with war", async () => {
+  const family = discoverParams({ title: "Οικογενειακές ταινίες", params: { legacy: { filters: {}, sortBy: "popularity.desc" } } }, "movie", "2026-08-10");
+  assert.equal(family["primary_release_date.gte"], undefined); assert.equal(family.sort_by, "popularity.desc");
+  const fresh = discoverParams({ title: "Νέες ταινίες", params: { legacy: { filters: {}, sortBy: "popularity.desc" } } }, "movie", "2026-08-10");
+  assert.equal(fresh["primary_release_date.gte"], "2026-01-01");
+  const params = {}; const client = { keywordIds: async () => [ martialArtsKeywordId ] }; const martialArtsKeywordId = 779;
+  await applySemanticPredicates(client, { title: "Ταινίες πολεμικών τεχνών" }, "movie", params, "Πολεμικές τέχνες");
+  assert.equal(params.with_genres, "28"); assert.equal(params.with_keywords, String(martialArtsKeywordId));
+});
+
+test("vote quorum is exclusive to Top rails and never leaks into Popular, New, or Recent", () => {
+  const legacy = { filters: { voteCountGte: 10, voteAverageGte: 6 }, sortBy: "vote_average.desc" };
+  for (const title of ["Δημοφιλείς σειρές", "Νέες σειρές", "Πρόσφατες σειρές"]) {
+    const params = discoverParams({ title, params: { legacy } }, "tv", "2026-08-10");
+    assert.equal(params["vote_count.gte"], undefined, title); assert.equal(params["vote_average.gte"], undefined, title);
+  }
+  const top = discoverParams({ title: "Κορυφαίες σειρές", params: { legacy } }, "tv", "2026-08-10");
+  assert.equal(top["vote_count.gte"], 10); assert.equal(top["vote_average.gte"], 6);
+});
+
+test("Worldwide streaming unions every advertised official provider region", async () => {
+  const calls = [];
+  const client = {
+    providers: async () => [{ provider_id: 15, provider_name: "Hulu", display_priorities: { GR: 1, US: 2, JP: 3, ZZ: 4 } }],
+    watchRegions: async () => [{ iso_3166_1: "GR" }, { iso_3166_1: "US" }, { iso_3166_1: "JP" }],
+    discover: async (_media, params) => { calls.push(params); if (params.watch_region === "US") return [{ id: 2, popularity: 20, release_date: "2026-02-01" }]; if (params.watch_region === "JP") return [{ id: 3, popularity: 10, release_date: "2026-01-01" }]; return []; },
+  };
+  const rail = { key: "x", collectionId: "collections.streaming", title: "Δημοφιλείς ταινίες", mediaType: "MOVIE", materializer: "streaming", params: { legacy: { filters: {}, sortBy: "popularity.desc" } } };
+  const result = await materializeRail(client, rail, { folderTitle: "Hulu", providerAliases: ["Hulu"], today: "2026-08-10" });
+  assert.equal(result.scope, "WORLDWIDE"); assert.deepEqual(result.items.map((item) => item.id), [2, 3]);
+  assert.deepEqual(calls.map((call) => call.watch_region), ["GR", "JP", "US"]);
+  assert.ok(calls.every((call) => call.with_watch_monetization_types === "flatrate|free|ads"));
+});
+
 test("TMDB award extractor returns winner works, including acting work", async () => {
   const html = `<h4>97th Awards (2025)</h4><div><p class="status"><bdi>Winner</bdi></p><a data-media-type="person" href="/person/1-a">A</a><p><a href="/movie/99-work">Work</a></p></div>`;
   const client = new TmdbClient({ readToken: "test", fetchImpl: async () => new Response(html, { status: 200, headers: { "content-type": "text/html" } }) });
@@ -85,6 +132,14 @@ test("concurrent TMDB cache coalesces identical reads", async () => {
   let calls = 0; const client = new TmdbClient({ readToken: "test", fetchImpl: async () => { calls++; return new Response(JSON.stringify({ results: [{ id: 8, provider_name: "Netflix" }] }), { status: 200 }); } });
   const [a, b, c] = await Promise.all([client.providers("movie"), client.providers("movie"), client.providers("movie")]);
   assert.equal(calls, 1); assert.deepEqual(a, b); assert.deepEqual(b, c);
+});
+
+test("TMDB list invalid-media responses expose typed quarantine identities", async () => {
+  const body = { results: [{ media_id: 1, media_type: "movie", success: true }, { media_id: 2, media_type: "movie", success: false, error: ["Media is invalid"] }] };
+  const client = new TmdbClient({ readToken: "test", userToken: "user", fetchImpl: async () => new Response(JSON.stringify(body), { status: 200 }) });
+  await assert.rejects(client.addItems(99, [{ id: 1, media_type: "movie" }, { id: 2, media_type: "movie" }]), (error) => {
+    assert.deepEqual(error.invalidItems, [{ id: 2, media_type: "movie", reason: "TMDB_LIST_MEDIA_INVALID" }]); return true;
+  });
 });
 
 test("person credits are coalesced across sibling rails", async () => {
