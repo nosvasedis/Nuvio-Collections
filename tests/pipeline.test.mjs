@@ -116,6 +116,14 @@ test("versioned Academy snapshot covers all 98 ceremonies and historical categor
   assert.equal(client.oscarCategoryMatches("score", "MUSIC (Scoring of Music--adaptation or treatment)"), false);
 });
 
+test("versioned Cannes snapshot is official and complete through 2026", async () => {
+  const snapshot = await readJson(new URL("../data/cannes-awards-winners-2026.json", import.meta.url));
+  assert.equal(snapshot.authority, "https://www.festival-cannes.com/en/retrospective/");
+  assert.equal(snapshot.completeThroughYear, 2026); assert.equal(snapshot.records.length, 1324);
+  assert.equal(Math.min(...snapshot.records.map((record) => record.year)), 1946);
+  assert.equal(Math.max(...snapshot.records.map((record) => record.year)), 2026);
+});
+
 test("Academy resolver uses the official title and bounded year search", async () => {
   const calls = [];
   const client = new TmdbClient({ readToken: "test", fetchImpl: async (url) => {

@@ -47,8 +47,11 @@ until the official snapshot is reviewed and refreshed; an Academy/WAF failure
 can never silently truncate the history.
 
 Golden Globes rails use the official Golden Globes archive plus the mapped
-TMDB Awards category histories. Cannes rails use the official Festival de
-Cannes archive. All three authorities resolve to TMDB work IDs under strict
+TMDB Awards category histories. Cannes rails use the versioned official
+Festival de Cannes retrospective snapshot in
+`data/cannes-awards-winners-2026.json`; this avoids hosted-run failures when the
+Festival site blocks GitHub runner IPs. The snapshot is complete through 2026
+and must be explicitly refreshed and reviewed for later award years. All three authorities resolve to TMDB work IDs under strict
 year/title/contributor rules. Ambiguous matches fail closed and require an
 explicit, reviewed `authorityOverrides` entry; an override still reads and
 verifies the target TMDB endpoint.

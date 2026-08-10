@@ -1,4 +1,4 @@
-import { ACADEMY_AWARDS_HONORARY_FILE, ACADEMY_AWARDS_SNAPSHOT_FILE } from "./constants.mjs";
+import { ACADEMY_AWARDS_HONORARY_FILE, ACADEMY_AWARDS_SNAPSHOT_FILE, CANNES_AWARDS_SNAPSHOT_FILE } from "./constants.mjs";
 import { normalizeText, mapLimit, readJson } from "./utils.mjs";
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -385,8 +385,15 @@ export class TmdbClient {
     return { id: best.item.id, media_type: media, award_year: record.year, authority_url: record.authorityUrl, _release_year: Number(String(best.item[dateKey] ?? "").slice(0, 4)), _vote_count: best.item.vote_count ?? 0, _person_match: best.personMatch };
   }
   async cannesWinners({ category, startYear, endYear, overrides = {} }) {
-    const records = [];
-    for (let year = startYear; year <= endYear; year++) records.push(...(await this.cannesYear(year)).filter((record) => this.cannesCategoryMatches(category, record)));
+    const snapshot = await this.cached("cannes-awards-snapshot", async () => {
+      const value = await readJson(CANNES_AWARDS_SNAPSHOT_FILE);
+      if (value.version !== 1 || value.authority !== "https://www.festival-cannes.com/en/retrospective/") throw new Error("Cannes snapshot authority contract failed");
+      if (value.completeThroughYear !== 2026 || !Array.isArray(value.records) || value.records.length !== 1324) throw new Error("Cannes snapshot completeness contract failed");
+      if (Math.min(...value.records.map((record) => record.year)) !== 1946 || Math.max(...value.records.map((record) => record.year)) !== 2026) throw new Error("Cannes snapshot year coverage failed");
+      return value;
+    });
+    if (endYear > snapshot.completeThroughYear) throw new Error(`Cannes snapshot is stale: requested through ${endYear}, complete through ${snapshot.completeThroughYear}`);
+    const records = snapshot.records.filter((record) => record.year >= startYear && record.year <= endYear && this.cannesCategoryMatches(category, record));
     const resolved = await mapLimit(records, 5, (record) => this.resolveCannesWork(record, category, overrides));
     const unresolved = records.filter((_, index) => !resolved[index]);
     if (unresolved.length) throw new Error(`Cannes TMDB resolution failed for ${unresolved.length} official winners: ${unresolved.slice(0, 5).map((x) => `${x.year} ${x.workTitle}`).join("; ")}`);

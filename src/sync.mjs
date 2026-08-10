@@ -110,8 +110,15 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
       let candidate = await materializeRail(client, rail, context); const media = rail.mediaType === "MOVIE" ? "movie" : "tv";
       candidate = { ...candidate, items: normalizeCandidateItems(candidate.items, media) };
       invariant(candidate.items.every((item) => item.media_type === media), `Mixed media candidate: ${rail.key}`);
-      const ids = itemIds(candidate.items, media), hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids }), ratio = changeRatio(prior.orderedIds ?? [], ids);
-      if (ratio > 0.4 && prior.orderedIds?.length) { const independent = new TmdbClient({ readToken: client.readToken, userToken: client.userToken, fetchImpl: client.fetchImpl }); let confirm = await materializeRail(independent, rail, context); confirm = { ...confirm, items: normalizeCandidateItems(confirm.items, media) }; invariant(fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids: itemIds(confirm.items, media) }) === hash, `Large-change confirmation differed: ${rail.key}`); candidate = confirm; }
+      let ids = itemIds(candidate.items, media), hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids }), ratio = changeRatio(prior.orderedIds ?? [], ids);
+      if (ratio > 0.4 && prior.orderedIds?.length) {
+        const independent = new TmdbClient({ readToken: client.readToken, userToken: client.userToken, fetchImpl: client.fetchImpl });
+        let confirm = await materializeRail(independent, rail, context);
+        confirm = { ...confirm, items: normalizeCandidateItems(confirm.items, media) };
+        const confirmIds = itemIds(confirm.items, media), confirmationRatio = changeRatio(ids, confirmIds);
+        invariant(confirm.scope === candidate.scope && confirmationRatio <= 0.1, `Large-change confirmation differed semantically: ${rail.key} (${candidate.scope}/${confirm.scope}, ratio ${confirmationRatio})`);
+        candidate = confirm; ids = confirmIds; hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids }); ratio = changeRatio(prior.orderedIds ?? [], ids);
+      }
       if (!force && prior.syncStatus === "verified" && prior.fingerprint === hash) return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope };
       return { key: rail.key, status: "would-update", listId: prior.listId, count: ids.length, scope: candidate.scope, changeRatio: ratio, _rail: rail, _folderTitle: folderTitle, _candidate: candidate, _media: media, _ids: ids, _hash: hash };
     } catch (error) { return { key: rail.key, status: "failed", error: error.message }; }
