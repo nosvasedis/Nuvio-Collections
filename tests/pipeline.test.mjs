@@ -5,7 +5,7 @@ import { auditRepository } from "../src/validate.mjs";
 import { compile } from "../src/compiler.mjs";
 import { runtimeBucket, chooseAvailability, materializeRail } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
-import { normalizeCandidateItems } from "../src/sync.mjs";
+import { confirmationCompatible, normalizeCandidateItems } from "../src/sync.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, EXPECTED } from "../src/constants.mjs";
 import { readJson, fingerprint } from "../src/utils.mjs";
 
@@ -32,6 +32,12 @@ test("streaming fallback never mixes GR and Worldwide", async () => {
 test("candidate normalization assigns media type and preserves first ordered identity", () => {
   const items = normalizeCandidateItems([{ id: 7 }, { id: 7 }, { id: 7, media_type: "movie" }, { id: 8 }], "tv");
   assert.deepEqual(items.map((item) => `${item.media_type}:${item.id}`), ["tv:7", "movie:7", "tv:8"]);
+});
+
+test("large-change confirmation tolerates tiny live churn but rejects semantic drift", () => {
+  assert.equal(confirmationCompatible(["tv:1", "tv:2", "tv:3", "tv:4"], ["tv:1", "tv:2", "tv:3"]), true);
+  assert.equal(confirmationCompatible(Array.from({ length: 100 }, (_, i) => `tv:${i}`), Array.from({ length: 95 }, (_, i) => `tv:${i}`)), true);
+  assert.equal(confirmationCompatible(["tv:1", "tv:2", "tv:3", "tv:4"], ["tv:7"]), false);
 });
 
 test("streaming requests only allowed monetization and prefers successful GR", async () => {

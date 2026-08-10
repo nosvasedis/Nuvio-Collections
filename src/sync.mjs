@@ -14,6 +14,11 @@ export function normalizeCandidateItems(items, media) {
   });
 }
 function changeRatio(before, after) { const a = new Set(before), b = new Set(after); if (!a.size) return b.size ? 1 : 0; let changed = 0; for (const x of a) if (!b.has(x)) changed++; for (const x of b) if (!a.has(x)) changed++; return changed / Math.max(a.size, b.size, 1); }
+export function confirmationCompatible(before, after) {
+  const a = new Set(before), b = new Set(after);
+  let changed = 0; for (const value of a) if (!b.has(value)) changed++; for (const value of b) if (!a.has(value)) changed++;
+  return changed <= 2 || changed / Math.max(a.size, b.size, 1) <= 0.1;
+}
 function description(rail, folderTitle, scope, date) {
   const suffix = ` • key ${rail.key}`;
   const prefix = `Συλλογή Nuvio «${folderTitle} — ${rail.title}» • ${rail.mediaType} • ${scope} • επαληθεύτηκε ${date}`;
@@ -116,7 +121,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
         let confirm = await materializeRail(independent, rail, context);
         confirm = { ...confirm, items: normalizeCandidateItems(confirm.items, media) };
         const confirmIds = itemIds(confirm.items, media), confirmationRatio = changeRatio(ids, confirmIds);
-        invariant(confirm.scope === candidate.scope && confirmationRatio <= 0.1, `Large-change confirmation differed semantically: ${rail.key} (${candidate.scope}/${confirm.scope}, ratio ${confirmationRatio})`);
+        invariant(confirm.scope === candidate.scope && confirmationCompatible(ids, confirmIds), `Large-change confirmation differed semantically: ${rail.key} (${candidate.scope}/${confirm.scope}, ratio ${confirmationRatio})`);
         candidate = confirm; ids = confirmIds; hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids }); ratio = changeRatio(prior.orderedIds ?? [], ids);
       }
       if (!force && prior.syncStatus === "verified" && prior.fingerprint === hash) return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope };
