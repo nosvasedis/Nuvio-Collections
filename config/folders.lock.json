@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "inputFingerprint": "94a56b7f50f7fd414138a46af0f21a8e7a440bff41ef10779cd6c90aaa420b34",
-  "recommendedFingerprint": "2094300116c6b90f4557e37e7501a7886f7dddb9f2051f59f4db22d87dfd829b",
+  "inputFingerprint": "638c8fb2df60a57498b3dd516bed9e2cd32255cc79c52d7ca394be02fd4b45a8",
+  "recommendedFingerprint": "d1b5999c70679e79f9f574ad26d8e998725954d20ff63296f8e7a67dcd14f96a",
   "folders": [
     {
       "collectionId": "collections.discover",
       "id": "collections.discover.recommended",
       "title": "Προτεινόμενα",
-      "metadataFingerprint": "658642ca963965158025ec04465f0068cb7cc44cb0255f133a8ca8e03bc490db"
+      "metadataFingerprint": "c05a79b6f6a721f36fa280ced047caa3c8817dd4bd669d47e6825bb59a8fc4ed"
     },
     {
       "collectionId": "collections.discover",

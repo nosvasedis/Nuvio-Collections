@@ -24,7 +24,7 @@
           },
           {
             "type": "series",
-            "genre": "all",
+            "genre": "None",
             "title": null,
             "sortBy": null,
             "tmdbId": null,
@@ -54,7 +54,7 @@
           },
           {
             "type": "series",
-            "genre": "all",
+            "genre": "None",
             "addonId": "aio-metadata",
             "catalogId": "simkl.recipe.marathon.shows"
           }

@@ -16,7 +16,7 @@ export const REPORT_FILE = path.join(ROOT, "reports", "latest.json");
 export const RECOMMENDED_FOLDER_ID = "collections.discover.recommended";
 export const RECOMMENDED_CATALOGS = Object.freeze([
   Object.freeze({ type: "movie", genre: "None", addonId: "aio-metadata", catalogId: "movielens.explore.toppicks.msly9zlu" }),
-  Object.freeze({ type: "series", genre: "all", addonId: "aio-metadata", catalogId: "simkl.recipe.marathon.shows" }),
+  Object.freeze({ type: "series", genre: "None", addonId: "aio-metadata", catalogId: "simkl.recipe.marathon.shows" }),
 ]);
 export const ALLOWED_MONETIZATION = ["flatrate", "free", "ads"];
 export const MATERIALIZED_LIMIT = 200;
