@@ -17,14 +17,14 @@
             "filters": null,
             "sortHow": null,
             "provider": "addon",
-            "catalogId": "trakt.recommendations.movies",
+            "catalogId": "movielens.explore.toppicks.msly9zlu",
             "mediaType": null,
             "traktListId": null,
             "tmdbSourceType": null
           },
           {
             "type": "series",
-            "genre": "None",
+            "genre": "all",
             "title": null,
             "sortBy": null,
             "tmdbId": null,
@@ -32,7 +32,7 @@
             "filters": null,
             "sortHow": null,
             "provider": "addon",
-            "catalogId": "trakt.recommendations.shows",
+            "catalogId": "simkl.recipe.marathon.shows",
             "mediaType": null,
             "traktListId": null,
             "tmdbSourceType": null
@@ -41,6 +41,8 @@
         "hideTitle": true,
         "tileShape": "LANDSCAPE",
         "coverEmoji": "🎯",
+        "focusGifUrl": "",
+        "heroVideoUrl": "",
         "titleLogoUrl": "https://cdn.jsdelivr.net/gh/luckynumb3rs/stremio-perfect-setup/collections/discover/title/recommended.webp",
         "coverImageUrl": "https://i.postimg.cc/mgy1xTWG/file-0000000088fc7207b34c045eadce3f2c.png",
         "catalogSources": [
@@ -48,13 +50,13 @@
             "type": "movie",
             "genre": "None",
             "addonId": "aio-metadata",
-            "catalogId": "trakt.recommendations.movies"
+            "catalogId": "movielens.explore.toppicks.msly9zlu"
           },
           {
             "type": "series",
-            "genre": "None",
+            "genre": "all",
             "addonId": "aio-metadata",
-            "catalogId": "trakt.recommendations.shows"
+            "catalogId": "simkl.recipe.marathon.shows"
           }
         ],
         "focusGifEnabled": false,

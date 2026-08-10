@@ -6,7 +6,7 @@ import { compile } from "../src/compiler.mjs";
 import { runtimeBucket, chooseAvailability, materializeRail, applySemanticPredicates, discoverParams } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
 import { confirmationCompatible, normalizeCandidateItems, semanticRefreshDue } from "../src/sync.mjs";
-import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, EXPECTED } from "../src/constants.mjs";
+import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED } from "../src/constants.mjs";
 import { readJson, fingerprint } from "../src/utils.mjs";
 
 test("bootstrap creates the final immutable mapping", async () => {
@@ -216,6 +216,8 @@ test("placeholder compilation preserves all folders and recommended byte semanti
   const [before, after] = await Promise.all([readJson(INPUT_FILE), readJson(compiled.output)]);
   const getRecommended = (data) => data.flatMap((c) => c.folders).find((f) => f.id === RECOMMENDED_FOLDER_ID);
   assert.equal(fingerprint(getRecommended(before)), fingerprint(getRecommended(after)));
+  assert.deepEqual(getRecommended(after).sources.map(({ type, genre, addonId, catalogId }) => ({ type, genre, addonId, catalogId })), RECOMMENDED_CATALOGS);
+  assert.deepEqual(getRecommended(after).catalogSources, RECOMMENDED_CATALOGS);
   assert.equal(after.flatMap((c) => c.folders).length, 517);
   assert.equal(after.flatMap((c) => c.folders).flatMap((f) => f.sources).length, 2483);
   assert.ok(after.flatMap((c) => c.folders).filter((folder) => folder.id !== RECOMMENDED_FOLDER_ID).every((folder) => folder.sources.length > 0));

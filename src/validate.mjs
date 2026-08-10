@@ -1,4 +1,4 @@
-import { INPUT_FILE, RAILS_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, EXPECTED, EXPECTED_MAPPING } from "./constants.mjs";
+import { INPUT_FILE, RAILS_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, EXPECTED_MAPPING } from "./constants.mjs";
 import { readJson, fingerprint, invariant } from "./utils.mjs";
 
 export async function auditRepository({ requireListIds = false } = {}) {
@@ -10,6 +10,9 @@ export async function auditRepository({ requireListIds = false } = {}) {
   invariant(folders.length === EXPECTED.folders && folderIds.size === EXPECTED.folders, "Folder lock failed");
   invariant(lock.folders.length === EXPECTED.folders, "Folder lock manifest count failed");
   invariant(fingerprint(recommended) === lock.recommendedFingerprint, "recommended changed");
+  const recommendedCatalogs = recommended.sources.map(({ type, genre, addonId, catalogId }) => ({ type, genre, addonId, catalogId }));
+  invariant(JSON.stringify(recommendedCatalogs) === JSON.stringify(RECOMMENDED_CATALOGS), "Recommended catalog links changed");
+  invariant(JSON.stringify(recommended.catalogSources) === JSON.stringify(RECOMMENDED_CATALOGS), "Recommended catalogSources changed");
   for (const item of lock.folders) {
     const folder = folders.find((f) => f.id === item.id);
     invariant(folder && fingerprint(Object.fromEntries(Object.entries(folder).filter(([k]) => k !== "sources"))) === item.metadataFingerprint, `Folder metadata changed: ${item.id}`);

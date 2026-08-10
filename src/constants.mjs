@@ -13,6 +13,10 @@ export const STATE_FILE = path.join(ROOT, "state", "sync-state.json");
 export const OUTPUT_FILE = path.join(ROOT, "dist", "nuvio-collections-v5.0.json");
 export const REPORT_FILE = path.join(ROOT, "reports", "latest.json");
 export const RECOMMENDED_FOLDER_ID = "collections.discover.recommended";
+export const RECOMMENDED_CATALOGS = Object.freeze([
+  Object.freeze({ type: "movie", genre: "None", addonId: "aio-metadata", catalogId: "movielens.explore.toppicks.msly9zlu" }),
+  Object.freeze({ type: "series", genre: "all", addonId: "aio-metadata", catalogId: "simkl.recipe.marathon.shows" }),
+]);
 export const ALLOWED_MONETIZATION = ["flatrate", "free", "ads"];
 export const MATERIALIZED_LIMIT = 200;
 export const PERSON_ID_BY_FOLDER = Object.freeze({
