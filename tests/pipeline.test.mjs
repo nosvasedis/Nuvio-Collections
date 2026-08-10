@@ -11,7 +11,7 @@ import { readJson, fingerprint } from "../src/utils.mjs";
 
 test("bootstrap creates the final immutable mapping", async () => {
   const result = await bootstrap();
-  assert.deepEqual(result, { collections: 12, folders: 517, inputSources: 2516, managedRails: 2523, native: 398, materialized: 2125 });
+  assert.deepEqual(result, { collections: 12, folders: 517, inputSources: 2516, managedRails: 2481, native: 398, materialized: 2083 });
   const audit = await auditRepository(); assert.equal(audit.finalSources, EXPECTED.finalSources);
   const manifest = await readJson(new URL("../config/rails.yml", import.meta.url));
   const companions = manifest.rails.filter((rail) => rail.key.endsWith(":movie-companion"));
@@ -86,6 +86,12 @@ test("vote quorum is exclusive to Top rails and never leaks into Popular, New, o
   }
   const top = discoverParams({ title: "Κορυφαίες σειρές", params: { legacy } }, "tv", "2026-08-10");
   assert.equal(top["vote_count.gte"], 10); assert.equal(top["vote_average.gte"], 6);
+});
+
+test("Nuvio 0.8.3 exclusions map to the exact TMDB Discover parameters", () => {
+  const params = discoverParams({ title: "Δημοφιλείς ταινίες", params: { legacy: { filters: { withoutGenres: "16", withoutKeywords: "818|9715", withoutCompanies: "2", withoutWatchProviders: "8|337" }, sortBy: "popularity.desc" } } }, "movie", "2026-08-10");
+  assert.equal(params.without_genres, "16"); assert.equal(params.without_keywords, "818|9715");
+  assert.equal(params.without_companies, "2"); assert.equal(params.without_watch_providers, "8|337");
 });
 
 test("Worldwide streaming unions every advertised official provider region", async () => {
@@ -211,7 +217,8 @@ test("placeholder compilation preserves all folders and recommended byte semanti
   const getRecommended = (data) => data.flatMap((c) => c.folders).find((f) => f.id === RECOMMENDED_FOLDER_ID);
   assert.equal(fingerprint(getRecommended(before)), fingerprint(getRecommended(after)));
   assert.equal(after.flatMap((c) => c.folders).length, 517);
-  assert.equal(after.flatMap((c) => c.folders).flatMap((f) => f.sources).length, 2525);
+  assert.equal(after.flatMap((c) => c.folders).flatMap((f) => f.sources).length, 2483);
+  assert.ok(after.flatMap((c) => c.folders).filter((folder) => folder.id !== RECOMMENDED_FOLDER_ID).every((folder) => folder.sources.length > 0));
   const managed = after.flatMap((c) => c.folders).filter((f) => f.id !== RECOMMENDED_FOLDER_ID).flatMap((f) => f.sources);
   assert.equal(managed.filter((s) => s.provider === "trakt" || s.traktListId).length, 0);
   assert.ok(managed.filter((s) => s.tmdbSourceType === "LIST").every((s) => s.sortBy === "original"));

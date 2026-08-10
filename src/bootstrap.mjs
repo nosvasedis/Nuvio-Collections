@@ -1,5 +1,4 @@
-import fs from "node:fs/promises";
-import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, EXPECTED, COUNTRY_BY_FOLDER, PERSON_ID_BY_FOLDER, PROVIDER_SEEDS, AWARD_SEEDS, AWARD_CATEGORY_SEEDS, CANNES_CATEGORY_SEEDS, OSCAR_CATEGORY_SEEDS, NON_WORK_AWARD_WINNERS } from "./constants.mjs";
+import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, EXPECTED, COUNTRY_BY_FOLDER, PERSON_ID_BY_FOLDER, RETIRED_EMPTY_RAIL_KEYS, PROVIDER_SEEDS, AWARD_SEEDS, AWARD_CATEGORY_SEEDS, CANNES_CATEGORY_SEEDS, OSCAR_CATEGORY_SEEDS, NON_WORK_AWARD_WINNERS } from "./constants.mjs";
 import { readJson, writeJson, fingerprint, invariant, railKey, normalizeText } from "./utils.mjs";
 
 const MATERIALIZED_COLLECTIONS = new Set(["collections.streaming", "collections.genres", "collections.studios", "collections.actors", "collections.directors", "collections.awards", "collections.world", "collections.runtime"]);
@@ -134,11 +133,15 @@ export async function bootstrap() {
   }
   rails.push(...summaryRails());
   addGoldenMixedCategoryCompanions(rails);
+  const retiredRails = rails.filter((rail) => RETIRED_EMPTY_RAIL_KEYS.has(rail.key));
+  invariant(retiredRails.length === EXPECTED.retiredEmptyRails, "Retired empty rail mapping mismatch");
+  for (let index = rails.length - 1; index >= 0; index--) if (RETIRED_EMPTY_RAIL_KEYS.has(rails[index].key)) rails.splice(index, 1);
   rails.sort((a, b) => a.collectionId.localeCompare(b.collectionId) || a.folderId.localeCompare(b.folderId) || a.position - b.position);
   invariant(rails.length === EXPECTED.managedFinalSources, "Managed rail count mismatch");
   invariant(rails.filter((x) => x.strategy === "native").length === EXPECTED.native, "Native rail count mismatch");
   invariant(rails.filter((x) => x.strategy === "materialized").length === EXPECTED.materialized, "Materialized rail count mismatch");
   invariant(rails.every((x) => x.collectionId !== "collections.world" || x.params.originCountry), "Missing origin country mapping");
+  invariant(folders.filter((folder) => folder.id !== RECOMMENDED_FOLDER_ID).every((folder) => rails.some((rail) => rail.folderId === folder.id)), "Retirement left an empty folder");
 
   const lock = { version: 1, inputFingerprint: fingerprint(input), recommendedFingerprint: fingerprint(recommended), folders: input.flatMap((c) => c.folders.map((f) => ({ collectionId: c.id, id: f.id, title: f.title, metadataFingerprint: fingerprint(Object.fromEntries(Object.entries(f).filter(([k]) => k !== "sources"))) }))) };
   const providers = { version: 1, regionPriority: "GR", worldwideFallback: "only-after-successful-empty-GR", allowedMonetization: ["flatrate", "free", "ads"], providers: PROVIDER_SEEDS.map(([slug, name, aliases]) => ({ slug, name, aliases, movieProviderIds: [], tvProviderIds: [] })) };
@@ -155,6 +158,14 @@ export async function bootstrap() {
   }) };
   await writeJson(RAILS_FILE, { version: 1, generatedFrom: INPUT_FILE.split(/[\\/]/).at(-1), rails });
   await writeJson(PROVIDERS_FILE, providers); await writeJson(AWARDS_FILE, awards); await writeJson(LOCK_FILE, lock);
-  try { await fs.access(STATE_FILE); } catch { await writeJson(STATE_FILE, { version: 1, rails: {}, providerIndex: {}, lastSuccessfulSync: null }); }
+  let state;
+  try { state = await readJson(STATE_FILE); } catch { state = { version: 1, rails: {}, providerIndex: {}, lastSuccessfulSync: null }; }
+  state.retiredRails ??= {};
+  for (const rail of retiredRails) {
+    const prior = state.rails?.[rail.key] ?? state.retiredRails[rail.key] ?? {};
+    state.retiredRails[rail.key] = { ...prior, key: rail.key, collectionId: rail.collectionId, folderId: rail.folderId, title: rail.title, reason: "EMPTY_EXACT_TMDB_PREDICATE", retiredForNuvio: "0.8.3", retiredAt: state.retiredRails[rail.key]?.retiredAt ?? new Date().toISOString() };
+    delete state.rails?.[rail.key];
+  }
+  await writeJson(STATE_FILE, state);
   return { collections: input.length, folders: folders.length, inputSources: sources.length, managedRails: rails.length, native: rails.filter((x) => x.strategy === "native").length, materialized: rails.filter((x) => x.strategy === "materialized").length };
 }

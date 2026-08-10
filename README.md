@@ -1,6 +1,6 @@
 # Nuvio Collections Sync
 
-Deterministic compiler and TMDB-list synchronizer for the Nuvio 0.8.2+
+Deterministic compiler and TMDB-list synchronizer for the Nuvio 0.8.3+
 collections JSON. The repository treats Nuvio as the runtime consumer: fields
 that Nuvio does not actually forward to TMDB are never emitted as native
 filters. Those rails are materialized as public, homogeneous TMDB lists with
@@ -10,8 +10,10 @@ filters. Those rails are materialized as public, homogeneous TMDB lists with
 
 - All 12 collections and all 517 folders are preserved.
 - `collections.discover.recommended` is deep-equal to the input snapshot.
-- No existing rail is deleted; four 2020s summary rails and five homogeneous
-  Golden Globes Movie companions are added.
+- Four 2020s summary rails and five homogeneous Golden Globes Movie companions
+  are added. Forty-two proven-empty sources are retired without deleting or
+  merging any folder; their list IDs remain in `state.retiredRails` for audit
+  and rollback, but they are absent from the generated Nuvio JSON.
 - Remote writes require both `--execute` and
   `CONFIRM_TMDB_LIST_WRITES=NUVIO-TMDB-LISTS`.
 - A failed TMDB request never means “zero results” and never triggers the
@@ -64,7 +66,7 @@ every night while retaining a bounded, explicit freshness window.
 The first production run requires `npm run capability-probe` to verify TMDB v4
 create/add/read/clear/delete and the same v3 list read path used by Nuvio. The
 temporary probe list is deleted even when an intermediate assertion fails.
-It also requires a successful live validation of all 2,125 materialized rails.
+It also requires a successful live validation of all 2,083 active materialized rails.
 `ALLOW_TMDB_LIST_BOOTSTRAP` is the explicitly approved maximum number of managed
 lists; the ownership preflight refuses a run when recovered plus missing lists
 would exceed that cap. Candidate generation completes before any remote write.
@@ -107,7 +109,7 @@ every official region advertised by that canonical provider, unions the
 results, deduplicates by typed TMDB ID, and ranks only after the union. It never
 uses a capped global-title sample. The production concurrency remains bounded
 by the TMDB client and honors `Retry-After`. With a fresh verified award
-snapshot, the measured daily calculation of all 2,125 rails is under one minute
+snapshot, the measured daily calculation of all 2,083 active rails is under one minute
 locally; the mandatory weekly full award refresh is slower and is reported
 separately. Actual list-write time additionally depends on how many ordered
 fingerprints changed because TMDB v4 does not support item reordering.
@@ -115,3 +117,8 @@ fingerprints changed because TMDB v4 does not support item reordering.
 Watch-provider data is supplied by JustWatch through TMDB. JustWatch and TMDB
 attribution is required in the consuming product; repository-only attribution
 does not remove that product-level obligation.
+
+Nuvio 0.8.3 forwards the native Discover exclusions `withoutGenres`,
+`withoutKeywords`, `withoutCompanies`, and `withoutWatchProviders`. The compiler
+accepts and validates those exact fields; unsupported or source-type-inapplicable
+filters fail the repository audit.

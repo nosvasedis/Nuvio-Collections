@@ -20,17 +20,41 @@ export const PERSON_ID_BY_FOLDER = Object.freeze({
   "folder-JNAONKLX": 510,     // Tim Burton
   "folder-P3TT53P3": 1,       // George Lucas
 });
+export const RETIRED_EMPTY_RAIL_KEYS = Object.freeze(new Set([
+  "collections.directors:folder-1VPO8OYE:1", "collections.directors:folder-1VPO8OYE:3",
+  "collections.directors:folder-C34MCJNY:1", "collections.directors:folder-C34MCJNY:3",
+  "collections.genres:folder-8B3PEI1Y:1", "collections.genres:folder-8B3PEI1Y:7",
+  "collections.networks:folder-869XK12L:1",
+  "collections.streaming:collections.streaming.apple-tv:29", "collections.streaming:collections.streaming.apple-tv:36",
+  "collections.streaming:collections.streaming.paramount-plus:31", "collections.streaming:collections.streaming.peacock:41",
+  "collections.streaming:folder-6S0KR2JH:30", "collections.streaming:folder-6S0KR2JH:34",
+  "collections.streaming:folder-9B3VK7AU:12", "collections.streaming:folder-9B3VK7AU:35",
+  "collections.streaming:folder-OKRSGYYC:1", "collections.streaming:folder-OKRSGYYC:13",
+  "collections.studios:folder-10146STUDIO:1", "collections.studios:folder-127929STUDIO:1",
+  "collections.studios:folder-127929STUDIO:3", "collections.studios:folder-127929STUDIO:5",
+  "collections.studios:folder-2KA1KP6V:5", "collections.studios:folder-34STUDIO:1",
+  "collections.studios:folder-4OZG50Y4:2", "collections.studios:folder-5VIHLY7Y:1",
+  "collections.studios:folder-79DVGTP9:2", "collections.studios:folder-9ZZK6A6C:1",
+  "collections.studios:folder-A59XSVAT:1", "collections.studios:folder-BNC84SJ4:1",
+  "collections.studios:folder-IAL16XW3:1", "collections.studios:folder-KIRXHA4A:2",
+  "collections.studios:folder-KIRXHA4A:6", "collections.studios:folder-V0MRWXHJ:0",
+  "collections.studios:folder-V0MRWXHJ:1",
+  "collections.world:folder-0J1SF1P8:6", "collections.world:folder-0J1SF1P8:7",
+  "collections.world:folder-10NNKWPU:6", "collections.world:folder-10NNKWPU:7",
+  "collections.world:folder-U58KOK24:6", "collections.world:folder-U58KOK24:7",
+  "collections.world:folder-Z4R165P4:7", "collections.world:folder-Z55EA73B:7",
+]));
 export const EXPECTED = Object.freeze({
   collections: 12, folders: 517, inputSources: 2516, managedInputSources: 2514,
-  finalSources: 2525, managedFinalSources: 2523, recommendedSources: 2,
-  native: 398, materialized: 2125,
+  finalSources: 2483, managedFinalSources: 2481, recommendedSources: 2,
+  native: 398, materialized: 2083, retiredEmptyRails: 42,
 });
 export const EXPECTED_MAPPING = Object.freeze({
-  "collections.discover": [2, 10], "collections.streaming": [0, 465],
-  "collections.genres": [0, 182], "collections.film-series": [186, 0],
-  "collections.studios": [0, 124], "collections.networks": [30, 30],
-  "collections.actors": [0, 750], "collections.directors": [0, 190],
-  "collections.awards": [0, 60], "collections.world": [0, 304],
+  "collections.discover": [2, 10], "collections.streaming": [0, 455],
+  "collections.genres": [0, 180], "collections.film-series": [186, 0],
+  "collections.studios": [0, 107], "collections.networks": [30, 29],
+  "collections.actors": [0, 750], "collections.directors": [0, 186],
+  "collections.awards": [0, 60], "collections.world": [0, 296],
   "collections.decades": [180, 6], "collections.runtime": [0, 4],
 });
 

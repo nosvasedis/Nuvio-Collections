@@ -18,7 +18,11 @@ export function discoverParams(rail, media, today) {
   if (f.voteCountGte != null) p["vote_count.gte"] = f.voteCountGte;
   if (f.voteAverageGte != null) p["vote_average.gte"] = f.voteAverageGte;
   if (f.withGenres) p.with_genres = Array.isArray(f.withGenres) ? f.withGenres.join(",") : f.withGenres;
+  if (f.withoutGenres) p.without_genres = Array.isArray(f.withoutGenres) ? f.withoutGenres.join(",") : f.withoutGenres;
   if (f.withKeywords) p.with_keywords = Array.isArray(f.withKeywords) ? f.withKeywords.join("|") : f.withKeywords;
+  if (f.withoutKeywords) p.without_keywords = Array.isArray(f.withoutKeywords) ? f.withoutKeywords.join("|") : f.withoutKeywords;
+  if (f.withoutCompanies) p.without_companies = Array.isArray(f.withoutCompanies) ? f.withoutCompanies.join(",") : f.withoutCompanies;
+  if (f.withoutWatchProviders) p.without_watch_providers = Array.isArray(f.withoutWatchProviders) ? f.withoutWatchProviders.join("|") : f.withoutWatchProviders;
   if (f.withOriginCountry) p.with_origin_country = f.withOriginCountry;
   if (rail.params.originCountry) p.with_origin_country = rail.params.originCountry;
   if (f.releaseDateGte) p[`${datePrefix}.gte`] = f.releaseDateGte;

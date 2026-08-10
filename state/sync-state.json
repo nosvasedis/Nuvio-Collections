@@ -20186,7 +20186,7 @@
     },
     "collections.actors:folder-D018AV8U:2": {
       "listId": 8680985,
-      "fingerprint": "2dd6d2853d99926e7c2d8e1c87e0499542355d450a74143324e3ebdf8119ce6b",
+      "fingerprint": "155b45b7e69ba1c7458d818eb61d2e5ecbd5d584c688e47ad72cd837e950a6a7",
       "orderedIds": [
         "movie:1531825",
         "movie:299536",
@@ -20201,8 +20201,8 @@
         "movie:411510",
         "movie:1010819",
         "movie:51497",
-        "movie:168259",
         "movie:1010823",
+        "movie:168259",
         "movie:404368",
         "movie:1010821",
         "movie:1010820",
@@ -20228,13 +20228,13 @@
         "movie:8409",
         "movie:253835",
         "movie:47971",
-        "movie:77959",
         "movie:15803",
+        "movie:77959",
         "movie:7501",
         "movie:10022",
         "movie:2791",
-        "movie:274854",
         "movie:293767",
+        "movie:274854",
         "movie:808159",
         "movie:7451",
         "movie:244839",
@@ -20254,7 +20254,8 @@
       "count": 62,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:07:33.734Z"
+      "lastVerified": "2026-08-10T10:21:03.882Z",
+      "invalidItems": []
     },
     "collections.actors:folder-D018AV8U:3": {
       "listId": 8680986,
@@ -32023,7 +32024,7 @@
     },
     "collections.actors:folder-LI1PDADR:2": {
       "listId": 8681144,
-      "fingerprint": "0ef0d1fb141d3a09de8ccd9ce7bfd4481808187abe9956e6b12728a9d1d2e4fe",
+      "fingerprint": "7d867aecf844667f6429edd49cfc4434169ace1af71081e63a566242817ec310",
       "orderedIds": [
         "movie:740422",
         "movie:1026725",
@@ -32044,16 +32045,16 @@
         "movie:515001",
         "movie:698687",
         "movie:399174",
-        "movie:152601",
         "movie:438695",
+        "movie:152601",
         "movie:492188",
         "movie:325384",
         "movie:100402",
         "movie:94026",
         "movie:280409",
         "movie:10778",
-        "movie:931633",
         "movie:126314",
+        "movie:931633",
         "movie:271110",
         "movie:407588",
         "movie:153",
@@ -32127,7 +32128,8 @@
       "count": 98,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T09:24:54.482Z"
+      "lastVerified": "2026-08-10T10:21:05.500Z",
+      "invalidItems": []
     },
     "collections.actors:folder-LI1PDADR:3": {
       "listId": 8681145,
@@ -37666,7 +37668,7 @@
     },
     "collections.actors:folder-NCVWCX3E:2": {
       "listId": 8681211,
-      "fingerprint": "4de2ac788aa88576085ea7e1957fc04eb5b6d262d2f1084c0f41c2557fc1825d",
+      "fingerprint": "539775e58dafe6d1bf953d72afb95f2dff74965b8d48f7543cc910185208e91a",
       "orderedIds": [
         "movie:1364106",
         "movie:820783",
@@ -37677,8 +37679,8 @@
         "movie:693134",
         "movie:1368337",
         "movie:634649",
-        "movie:969681",
         "movie:316029",
+        "movie:969681",
         "movie:438631",
         "movie:626329",
         "movie:429617",
@@ -37690,8 +37692,8 @@
         "movie:1325734",
         "movie:446894",
         "movie:379686",
-        "movie:1731494",
         "movie:375107",
+        "movie:1731494",
         "movie:1022900",
         "movie:278774",
         "movie:1013572",
@@ -37706,7 +37708,8 @@
       "count": 34,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:09:11.378Z"
+      "lastVerified": "2026-08-10T10:21:04.443Z",
+      "invalidItems": []
     },
     "collections.actors:folder-NCVWCX3E:3": {
       "listId": 8681212,
@@ -46467,11 +46470,11 @@
     },
     "collections.actors:folder-TDL8CIHS:2": {
       "listId": 8681339,
-      "fingerprint": "f4e98caff4edc4c29336401720cf083303102797e124c713f917a038ee178349",
+      "fingerprint": "2c7ffc91ddb3a590b39d8b66e88b041cc4b41448704394e8c0687d0aba22c0c9",
       "orderedIds": [
         "movie:753785",
-        "movie:691179",
         "movie:438695",
+        "movie:691179",
         "movie:486327",
         "movie:69",
         "movie:250538",
@@ -46491,8 +46494,8 @@
         "movie:55787",
         "movie:9451",
         "movie:9026",
-        "movie:796",
         "movie:8835",
+        "movie:796",
         "movie:7985",
         "movie:1072873",
         "movie:10543",
@@ -46504,9 +46507,9 @@
         "movie:38749",
         "movie:15512",
         "movie:703451",
+        "movie:59962",
         "movie:24736",
         "movie:152792",
-        "movie:59962",
         "movie:541577",
         "movie:26269",
         "movie:21546",
@@ -46537,7 +46540,8 @@
       "count": 64,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:09:08.938Z"
+      "lastVerified": "2026-08-10T10:21:04.307Z",
+      "invalidItems": []
     },
     "collections.actors:folder-TDL8CIHS:3": {
       "listId": 8681340,
@@ -53902,12 +53906,12 @@
     },
     "collections.actors:folder-Z09ZKDSZ:1": {
       "listId": 8681467,
-      "fingerprint": "a5f38c3192c271ef09d79ad80fedb7c0e2a82c0f29c826a76f74976f924f37df",
+      "fingerprint": "53842f9ee9936977dc99708d303f32c82e6d17f58ff67ada62eac6b21784b749",
       "orderedIds": [
         "tv:456",
         "tv:1434",
-        "tv:22980",
         "tv:59941",
+        "tv:22980",
         "tv:63770",
         "tv:2224",
         "tv:1668",
@@ -53917,91 +53921,92 @@
         "tv:3452",
         "tv:1667",
         "tv:1220",
-        "tv:4238",
         "tv:1877",
+        "tv:4238",
+        "tv:4546",
         "tv:2221",
         "tv:10536",
-        "tv:4546",
         "tv:4589",
         "tv:1489",
         "tv:95396",
         "tv:72649",
         "tv:1908",
+        "tv:10282",
         "tv:2518",
         "tv:3626",
         "tv:1900",
         "tv:1514",
         "tv:4573",
-        "tv:10282",
-        "tv:1915",
         "tv:67824",
+        "tv:1915",
+        "tv:84970",
         "tv:562",
         "tv:46732",
-        "tv:84970",
         "tv:4467",
         "tv:13667",
         "tv:36994",
-        "tv:131033",
         "tv:1260",
         "tv:27023",
         "tv:40302",
+        "tv:917",
+        "tv:131033",
         "tv:3968",
         "tv:63498",
-        "tv:917",
         "tv:1229",
-        "tv:2382",
         "tv:2798",
-        "tv:2693",
+        "tv:2382",
         "tv:2513",
+        "tv:2693",
         "tv:106162",
         "tv:1709",
-        "tv:283387",
         "tv:23521",
-        "tv:272608",
+        "tv:283387",
+        "tv:4461",
         "tv:61120",
+        "tv:272608",
         "tv:62819",
         "tv:10493",
         "tv:610",
-        "tv:4461",
-        "tv:3948",
-        "tv:64711",
-        "tv:254916",
         "tv:59397",
+        "tv:3948",
+        "tv:254916",
+        "tv:64711",
         "tv:53438",
         "tv:34406",
-        "tv:39754",
+        "tv:17046",
         "tv:34440",
         "tv:1387",
-        "tv:17046",
-        "tv:308112",
-        "tv:737",
+        "tv:39754",
         "tv:32752",
+        "tv:737",
+        "tv:308112",
         "tv:6167",
-        "tv:57753",
-        "tv:218982",
         "tv:67148",
-        "tv:6421",
+        "tv:218982",
+        "tv:57753",
         "tv:28464",
-        "tv:27855",
-        "tv:3167",
-        "tv:62445",
-        "tv:3739",
-        "tv:227205",
+        "tv:6421",
         "tv:22023",
-        "tv:10805",
+        "tv:27855",
+        "tv:62445",
+        "tv:3167",
         "tv:9326",
+        "tv:227205",
+        "tv:10805",
+        "tv:3739",
         "tv:281659",
         "tv:101539",
         "tv:300935",
         "tv:217",
-        "tv:14614",
         "tv:329446",
+        "tv:14614",
         "tv:43117"
       ],
       "count": 93,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:10:55.632Z"
+      "lastVerified": "2026-08-10T10:21:04.489Z",
+      "invalidItems": []
     },
     "collections.actors:folder-Z09ZKDSZ:2": {
       "listId": 8681468,
@@ -57033,7 +57038,7 @@
     },
     "collections.actors:folder-ZASSCSIC:2": {
       "listId": 8681509,
-      "fingerprint": "55024af78e423cabfa5ef1543a4411fd61447eabbb906e21fbddace33643329e",
+      "fingerprint": "de3b1c94057d12aca68c2281dbab58399e9d26436a5d629596cf27bf6ec4977f",
       "orderedIds": [
         "movie:525738",
         "movie:625473",
@@ -57066,8 +57071,8 @@
         "movie:131634",
         "movie:543647",
         "movie:445571",
-        "movie:11092",
         "movie:131631",
+        "movie:11092",
         "movie:483301",
         "movie:444190",
         "movie:105864",
@@ -57106,9 +57111,9 @@
         "movie:506558",
         "movie:10688",
         "movie:222064",
-        "movie:647375",
         "movie:28816",
         "movie:46119",
+        "movie:647375",
         "movie:159932",
         "movie:46267",
         "movie:9697",
@@ -57134,7 +57139,8 @@
       "count": 95,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:09:14.606Z"
+      "lastVerified": "2026-08-10T10:21:06.434Z",
+      "invalidItems": []
     },
     "collections.actors:folder-ZASSCSIC:3": {
       "listId": 8681511,
@@ -63876,7 +63882,7 @@
     },
     "collections.decades:collections.decades.2020s:12": {
       "listId": 8681611,
-      "fingerprint": "3f62757f3e5b66f1239a11cee13c94f4306f0bd2f1b9ebe0e67d0998c92e6798",
+      "fingerprint": "40cb9a969fb615b71af847bd393a1a876c9bdcfa20f85e5080b7b13735ab25d9",
       "orderedIds": [
         "movie:969681",
         "movie:1368337",
@@ -64000,6 +64006,7 @@
         "movie:1232569",
         "movie:1361774",
         "movie:1650558",
+        "movie:1058424",
         "movie:1641319",
         "movie:949536",
         "movie:1630423",
@@ -64077,10 +64084,11 @@
         "movie:1458215",
         "movie:1308553"
       ],
-      "count": 198,
+      "count": 199,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T09:25:40.556Z"
+      "lastVerified": "2026-08-10T10:21:10.347Z",
+      "invalidItems": []
     },
     "collections.decades:collections.decades.2020s:13": {
       "listId": 8681612,
@@ -64929,15 +64937,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T03:11:51.309Z"
     },
-    "collections.directors:folder-1VPO8OYE:1": {
-      "listId": 8681641,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:11:50.643Z"
-    },
     "collections.directors:folder-1VPO8OYE:2": {
       "listId": 8681642,
       "fingerprint": "2f41df937594b4122413ad607ebb72819efb9c77bf9bd2176a93aeebca8107d7",
@@ -64958,15 +64957,6 @@
       "scope": "GLOBAL",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T03:11:51.158Z"
-    },
-    "collections.directors:folder-1VPO8OYE:3": {
-      "listId": 8681643,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:11:50.796Z"
     },
     "collections.directors:folder-2FUNKZ46:0": {
       "listId": 8681644,
@@ -66645,15 +66635,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T03:12:05.659Z"
     },
-    "collections.directors:folder-C34MCJNY:1": {
-      "listId": 8681700,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:12:06.217Z"
-    },
     "collections.directors:folder-C34MCJNY:2": {
       "listId": 8681702,
       "fingerprint": "8050107b1e97cc13f214d2e1f5857cce92cd72293c30ca76e015f9312ae3f162",
@@ -66667,15 +66648,6 @@
       "scope": "GLOBAL",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T03:12:06.243Z"
-    },
-    "collections.directors:folder-C34MCJNY:3": {
-      "listId": 8681703,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:12:05.222Z"
     },
     "collections.directors:folder-DYBV6L81:0": {
       "listId": 8681704,
@@ -66871,7 +66843,7 @@
     },
     "collections.directors:folder-F2FRH147:1": {
       "listId": 8681711,
-      "fingerprint": "b4b54d573540eef2b21a2848c3126bcc4ac1a1fbba564696edab52b9944fcc2e",
+      "fingerprint": "17fb03f6eabb1f414eaa0e9c1f9ac9b13951ae81fab0674633456f0cc8c6138d",
       "orderedIds": [
         "movie:792307",
         "movie:375262",
@@ -66885,15 +66857,16 @@
         "movie:220709",
         "movie:91410",
         "movie:173385",
-        "movie:806005",
         "movie:747225",
+        "movie:806005",
         "movie:794982",
         "movie:1430906"
       ],
       "count": 16,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:12:08.755Z"
+      "lastVerified": "2026-08-10T10:21:02.542Z",
+      "invalidItems": []
     },
     "collections.directors:folder-F8WMWLBP:0": {
       "listId": 8681712,
@@ -67070,7 +67043,7 @@
     },
     "collections.directors:folder-HT9FI8PA:1": {
       "listId": 8681721,
-      "fingerprint": "26e6404a72832fd6f616f77897614f83cc8091e97a08b4030b7a6c1d21fa5210",
+      "fingerprint": "1e52c58f50534836b5acfab184f33b3d8f635c3f294ac540cfcbfac19b9710d4",
       "orderedIds": [
         "movie:43949",
         "movie:235",
@@ -67089,8 +67062,8 @@
         "movie:353575",
         "movie:476335",
         "movie:358895",
-        "movie:12220",
         "movie:975225",
+        "movie:12220",
         "movie:253235",
         "movie:401459",
         "movie:2800",
@@ -67103,7 +67076,8 @@
       "count": 27,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:12:12.712Z"
+      "lastVerified": "2026-08-10T10:21:02.437Z",
+      "invalidItems": []
     },
     "collections.directors:folder-I4NYCWWV:0": {
       "listId": 8681722,
@@ -70564,7 +70538,7 @@
     },
     "collections.discover:collections.discover.trending-2:0": {
       "listId": 8681821,
-      "fingerprint": "1d4cfa78eab1b843b0ffa2f7a9a913d71a996bcba5841329072502b79d15432b",
+      "fingerprint": "dee207a0aedffb818562865dcad47728a5bb3fcf093e5a8e6a3eb28ce43f852d",
       "orderedIds": [
         "movie:969681",
         "movie:1368337",
@@ -70597,7 +70571,6 @@
         "movie:936075",
         "movie:1084242",
         "movie:1263532",
-        "movie:1280738",
         "movie:1127384",
         "movie:1668364",
         "movie:822119",
@@ -70607,41 +70580,42 @@
         "movie:1226863",
         "movie:1728704",
         "movie:1327819",
-        "movie:1007757",
         "movie:1419406",
-        "movie:1382832",
         "movie:1477712",
         "movie:1304313",
         "movie:617126",
         "movie:1487861",
         "movie:840464",
+        "movie:986056",
         "movie:1318621",
         "movie:1368166",
         "movie:1325734",
         "movie:1740877",
         "movie:1432631",
-        "movie:1234821",
         "movie:1122573",
         "movie:803796",
         "movie:1061474",
         "movie:1171145",
         "movie:1479832",
+        "movie:933260",
         "movie:1301421",
         "movie:1159559",
+        "movie:1241982",
         "movie:1198994",
         "movie:1242898",
         "movie:1272837",
         "movie:1408170",
         "movie:911430",
         "movie:1233413",
+        "movie:1087192",
         "movie:1430077",
+        "movie:950387",
         "movie:1368314",
         "movie:1185806",
         "movie:1698575",
         "movie:1062722",
         "movie:1279493",
         "movie:1433367",
-        "movie:1491920",
         "movie:1240889",
         "movie:1266127",
         "movie:1292415",
@@ -70652,15 +70626,16 @@
         "movie:402431",
         "movie:1202033",
         "movie:1317288",
+        "movie:1477317",
         "movie:1571101",
         "movie:1541560",
+        "movie:426063",
         "movie:1391021",
         "movie:1228246",
         "movie:1236153",
         "movie:1381027",
         "movie:1064213",
         "movie:858024",
-        "movie:1318413",
         "movie:967941",
         "movie:1509599",
         "movie:1309083",
@@ -70676,6 +70651,8 @@
         "movie:1363387",
         "movie:1119449",
         "movie:1408208",
+        "movie:1292695",
+        "movie:1288059",
         "movie:999136",
         "movie:1291335",
         "movie:1431068",
@@ -70689,6 +70666,7 @@
         "movie:1102883",
         "movie:1458215",
         "movie:1421594",
+        "movie:1290432",
         "movie:1140521",
         "movie:1612018",
         "movie:1266800",
@@ -70699,6 +70677,7 @@
         "movie:880067",
         "movie:1669841",
         "movie:1610840",
+        "movie:1432474",
         "movie:1308972",
         "movie:1475803",
         "movie:1658653",
@@ -70706,26 +70685,26 @@
         "movie:1244517",
         "movie:785157",
         "movie:1275051",
-        "movie:1177767",
         "movie:1439808",
         "movie:1404180",
+        "movie:1657464",
+        "movie:1058588",
         "movie:1706919",
         "movie:1048586",
         "movie:730558",
         "movie:1549120",
         "movie:1379289",
-        "movie:1746151",
-        "movie:1745149"
+        "movie:1746151"
       ],
-      "count": 150,
+      "count": 155,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T10:01:09.264Z",
+      "lastVerified": "2026-08-10T10:21:08.585Z",
       "invalidItems": []
     },
     "collections.discover:collections.discover.trending-2:1": {
       "listId": 8681822,
-      "fingerprint": "a4b7384dda94bd17a11cf0f2fda8cabc046ed6ce0f17fc4c916376682592e6f5",
+      "fingerprint": "983e1718fca63a668257de519fff719658fda1420548b77268c185b684734c64",
       "orderedIds": [
         "tv:94997",
         "tv:113962",
@@ -70773,7 +70752,6 @@
         "tv:215072",
         "tv:194583",
         "tv:276161",
-        "tv:44953",
         "tv:211288",
         "tv:284753",
         "tv:296206",
@@ -70781,10 +70759,11 @@
         "tv:287620",
         "tv:136315",
         "tv:120089",
+        "tv:90",
         "tv:103516",
-        "tv:119051",
         "tv:212989",
         "tv:289324",
+        "tv:95480",
         "tv:287238",
         "tv:45790",
         "tv:236534",
@@ -70804,11 +70783,10 @@
         "tv:124003",
         "tv:136311",
         "tv:220150",
-        "tv:322430",
-        "tv:95396",
         "tv:301412",
         "tv:223564",
         "tv:280564",
+        "tv:225171",
         "tv:220102",
         "tv:125909",
         "tv:68073",
@@ -70817,7 +70795,6 @@
         "tv:296140",
         "tv:278043",
         "tv:125928",
-        "tv:100757",
         "tv:219971",
         "tv:224372",
         "tv:32608",
@@ -70827,16 +70804,16 @@
         "tv:228429",
         "tv:47663",
         "tv:281281",
+        "tv:295434",
         "tv:285993",
         "tv:260463",
         "tv:220074",
         "tv:241882",
         "tv:124394",
         "tv:286345",
-        "tv:301507",
         "tv:286709",
         "tv:111110",
-        "tv:201834",
+        "tv:69346",
         "tv:312849",
         "tv:294095",
         "tv:287496",
@@ -70844,7 +70821,7 @@
         "tv:153217",
         "tv:260458",
         "tv:114478",
-        "tv:62",
+        "tv:255358",
         "tv:91768",
         "tv:243206",
         "tv:327916",
@@ -70852,9 +70829,9 @@
         "tv:279323",
         "tv:237964",
         "tv:79166",
+        "tv:289763",
         "tv:316294",
         "tv:240993",
-        "tv:107371",
         "tv:291350",
         "tv:218038",
         "tv:280049",
@@ -70862,6 +70839,7 @@
         "tv:236450",
         "tv:312266",
         "tv:286791",
+        "tv:198178",
         "tv:254528",
         "tv:285479",
         "tv:8840",
@@ -70871,6 +70849,7 @@
         "tv:261391",
         "tv:200881",
         "tv:222623",
+        "tv:292533",
         "tv:65930",
         "tv:301418",
         "tv:295071",
@@ -70878,44 +70857,39 @@
         "tv:300259",
         "tv:310326",
         "tv:273119",
-        "tv:246473",
         "tv:305567",
         "tv:300267",
         "tv:276051",
         "tv:284029",
         "tv:311858",
         "tv:279089",
-        "tv:322571",
         "tv:254953",
         "tv:283780",
+        "tv:327817",
         "tv:302658",
         "tv:292108",
         "tv:271413",
         "tv:235769",
+        "tv:325022",
         "tv:311731",
-        "tv:294635",
         "tv:329635",
         "tv:233291",
         "tv:289832",
         "tv:330440",
-        "tv:273114",
-        "tv:330131",
         "tv:326991",
         "tv:294141",
         "tv:329132",
         "tv:291856",
         "tv:321564",
         "tv:330127",
-        "tv:330425",
-        "tv:326761",
+        "tv:329653",
         "tv:331124",
-        "tv:331159",
-        "tv:331216"
+        "tv:331159"
       ],
-      "count": 184,
+      "count": 179,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T10:01:09.668Z",
+      "lastVerified": "2026-08-10T10:21:08.126Z",
       "invalidItems": []
     },
     "collections.discover:collections.discover.trending-2:2": {
@@ -74045,15 +74019,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:26:23.432Z"
     },
-    "collections.genres:folder-8B3PEI1Y:1": {
-      "listId": 8681844,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:12:45.813Z"
-    },
     "collections.genres:folder-8B3PEI1Y:2": {
       "listId": 8681845,
       "fingerprint": "fe0b73b1f1119af0631960aa7783b2f734837a9cea7592ee1513171927906372",
@@ -74489,15 +74454,6 @@
       "scope": "GLOBAL",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T03:12:48.855Z"
-    },
-    "collections.genres:folder-8B3PEI1Y:7": {
-      "listId": 8681850,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:12:48.704Z"
     },
     "collections.genres:folder-8Z2DZVUO:0": {
       "listId": 8681851,
@@ -85142,7 +85098,7 @@
     },
     "collections.genres:folder-JRWZVYWG:3": {
       "listId": 8681914,
-      "fingerprint": "535dbef665f67ef204d3123f26971b37430691dea633cb29c7bfe66a7d20c4df",
+      "fingerprint": "99479341c4f20cd6e0942b4169805ddfdee0c2b15955b1ea6f7b306d3b8c4b77",
       "orderedIds": [
         "tv:94997",
         "tv:65334",
@@ -85272,7 +85228,6 @@
         "tv:91363",
         "tv:125909",
         "tv:2290",
-        "tv:290856",
         "tv:79481",
         "tv:280110",
         "tv:1414",
@@ -85345,10 +85300,11 @@
         "tv:1338",
         "tv:2309"
       ],
-      "count": 200,
+      "count": 199,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T05:54:05.197Z"
+      "lastVerified": "2026-08-10T10:21:10.677Z",
+      "invalidItems": []
     },
     "collections.genres:folder-JRWZVYWG:4": {
       "listId": 8681915,
@@ -97412,15 +97368,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:28:08.661Z"
     },
-    "collections.networks:folder-869XK12L:1": {
-      "listId": 8682016,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:14:23.542Z"
-    },
     "collections.networks:folder-8R10TM2Q:1": {
       "listId": 8682017,
       "fingerprint": "bde5373dabc8659a8b8fdd62dc8c6ce1b0526eb14099d3a75c67a9de51adf530",
@@ -99024,7 +98971,7 @@
     },
     "collections.streaming:collections.streaming.apple-tv:1": {
       "listId": 8682044,
-      "fingerprint": "3cea755d2f693fe26173f2447f42c25abae0d402be9b60c4a1fb718db75e773b",
+      "fingerprint": "9a1609ca9e75c0f22321966bf5b371ee9b236e102fa58d9127f9d39d4292d724",
       "orderedIds": [
         "tv:125988",
         "tv:97546",
@@ -99034,12 +98981,14 @@
         "tv:270476",
         "tv:136311",
         "tv:87917",
-        "tv:95396"
+        "tv:95480",
+        "tv:225171"
       ],
-      "count": 9,
+      "count": 10,
       "scope": "GR",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T09:28:28.173Z"
+      "lastVerified": "2026-08-10T10:21:02.031Z",
+      "invalidItems": []
     },
     "collections.streaming:collections.streaming.apple-tv:2": {
       "listId": 8682045,
@@ -100231,15 +100180,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:28:42.261Z"
     },
-    "collections.streaming:collections.streaming.apple-tv:29": {
-      "listId": 8682072,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "WORLDWIDE",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:14:42.164Z"
-    },
     "collections.streaming:collections.streaming.apple-tv:30": {
       "listId": 8682073,
       "fingerprint": "1ee1821cd99907e1fd980713af5ee82b9b43f1facbceeba202c372749a2897a7",
@@ -100333,15 +100273,6 @@
       "scope": "GR",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T03:14:44.752Z"
-    },
-    "collections.streaming:collections.streaming.apple-tv:36": {
-      "listId": 8682079,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "WORLDWIDE",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:14:45.684Z"
     },
     "collections.streaming:collections.streaming.crunchyroll:0": {
       "listId": 8682080,
@@ -103263,28 +103194,30 @@
     },
     "collections.streaming:collections.streaming.disney-plus:0": {
       "listId": 8682104,
-      "fingerprint": "87371ed6729472fd276a673c2c1f5b9365e33d74e673a38f2b129e9f66433176",
+      "fingerprint": "d861f900d0b63652a0585dbce15c5898dffe20a789b4249d8d4a06a13350febb",
       "orderedIds": [
         "movie:1314481",
         "movie:1439930",
         "movie:83533",
         "movie:617126",
+        "movie:986056",
         "movie:1327819",
         "movie:1266127",
         "movie:1318621",
         "movie:1198994",
         "movie:822119",
-        "movie:1242898"
+        "movie:1242898",
+        "movie:1241982"
       ],
-      "count": 10,
+      "count": 12,
       "scope": "GR",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T10:01:02.940Z",
+      "lastVerified": "2026-08-10T10:21:03.109Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.disney-plus:1": {
       "listId": 8682105,
-      "fingerprint": "392fe69102fbcebe7277b7fae7ae29b8ee854a175615cc72deb543c2a9490839",
+      "fingerprint": "e00d8fff6f9710d1edb542fb55d291d9b631bd729cb696ab462a5186cc954dc4",
       "orderedIds": [
         "tv:30984",
         "tv:615",
@@ -103309,12 +103242,13 @@
         "tv:114478",
         "tv:211288",
         "tv:260458",
-        "tv:246473"
+        "tv:198178",
+        "tv:90"
       ],
-      "count": 24,
+      "count": 25,
       "scope": "GR",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T10:01:05.382Z",
+      "lastVerified": "2026-08-10T10:21:03.751Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.disney-plus:2": {
@@ -108323,23 +108257,25 @@
     },
     "collections.streaming:collections.streaming.hbo-max:0": {
       "listId": 8682147,
-      "fingerprint": "99176535d288502dd270577f194cc4522e03469e76af221a1cb39c28c5980c86",
+      "fingerprint": "1c91e99bd782f713f455008299909962b883ab889035d3eee93da19a7c622cda",
       "orderedIds": [
         "movie:931285",
         "movie:1304313",
         "movie:1061474",
         "movie:1078605",
+        "movie:1292695",
+        "movie:1058588",
         "movie:1159831"
       ],
-      "count": 5,
+      "count": 7,
       "scope": "GR",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T09:39:53.418Z",
+      "lastVerified": "2026-08-10T10:21:03.073Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.hbo-max:1": {
       "listId": 8682148,
-      "fingerprint": "a57de2ac2942b25b97ab757ada3cedb66f7b6079a23527729ee90ae714dbeaa9",
+      "fingerprint": "dab4839ea169ccd345635dd1e9a03f53f4740b91a0924c9e1008896905db9c3e",
       "orderedIds": [
         "tv:94997",
         "tv:60625",
@@ -108352,13 +108288,12 @@
         "tv:224372",
         "tv:254953",
         "tv:311731",
-        "tv:218038",
-        "tv:301507"
+        "tv:218038"
       ],
-      "count": 13,
+      "count": 12,
       "scope": "GR",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T10:01:04.141Z",
+      "lastVerified": "2026-08-10T10:21:02.338Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.hbo-max:2": {
@@ -111365,7 +111300,7 @@
     },
     "collections.streaming:collections.streaming.hulu:1": {
       "listId": 8682195,
-      "fingerprint": "fc964987bf91b1ce5fe01c5ecefa6e799dccc10280b1b3a85795dfbc97c0bd6a",
+      "fingerprint": "74c48f9d381be048e8227022f6e3f72ad972c412c4a9d3eb82d12383d12a1650",
       "orderedIds": [
         "tv:37854",
         "tv:30984",
@@ -111424,14 +111359,14 @@
         "tv:245842",
         "tv:211288",
         "tv:260458",
-        "tv:62",
-        "tv:246473",
-        "tv:44953"
+        "tv:69346",
+        "tv:255358",
+        "tv:198178"
       ],
       "count": 60,
       "scope": "WORLDWIDE",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T10:01:04.288Z",
+      "lastVerified": "2026-08-10T10:21:03.267Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.hulu:2": {
@@ -118909,7 +118844,7 @@
     },
     "collections.streaming:collections.streaming.netflix:0": {
       "listId": 8682239,
-      "fingerprint": "fe084142e449ea9fddeca2e8d80877fd0af844968f304f6df7b284c0dd66fa35",
+      "fingerprint": "54a08f4ce2b6fd52b8414c9494c2dd2ea08490cb1c1e40addcbe21353234c20b",
       "orderedIds": [
         "movie:949838",
         "movie:1487861",
@@ -118921,8 +118856,8 @@
         "movie:1272837",
         "movie:1659155",
         "movie:1740877",
+        "movie:950387",
         "movie:1421594",
-        "movie:1007757",
         "movie:1062722",
         "movie:1064213",
         "movie:1234731",
@@ -118931,12 +118866,12 @@
       "count": 16,
       "scope": "GR",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T10:01:03.874Z",
+      "lastVerified": "2026-08-10T10:21:03.233Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.netflix:1": {
       "listId": 8682240,
-      "fingerprint": "77cddb3a3678c01dc43b7312c79b0b747cdf826e975cff7d483b131bb5448d7d",
+      "fingerprint": "1855d05f7ad67c4345183823affe79620548c1d16fab8f63cf41f52f6a984c3c",
       "orderedIds": [
         "tv:199001",
         "tv:66732",
@@ -118966,15 +118901,13 @@
         "tv:220150",
         "tv:240993",
         "tv:254528",
-        "tv:119051",
-        "tv:322430",
-        "tv:201834",
-        "tv:100757"
+        "tv:327817",
+        "tv:292533"
       ],
-      "count": 32,
+      "count": 30,
       "scope": "GR",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T10:01:03.320Z",
+      "lastVerified": "2026-08-10T10:21:02.887Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.netflix:2": {
@@ -130668,15 +130601,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:31:24.129Z"
     },
-    "collections.streaming:collections.streaming.paramount-plus:31": {
-      "listId": 8682315,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "WORLDWIDE",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:27:52.134Z"
-    },
     "collections.streaming:collections.streaming.paramount-plus:32": {
       "listId": 8682316,
       "fingerprint": "9bdbc10a0be3532e0aa6bd7e31b32b48831406aa87d7a6117a8e746f0f455076",
@@ -131857,34 +131781,33 @@
     },
     "collections.streaming:collections.streaming.peacock:0": {
       "listId": 8682330,
-      "fingerprint": "89f811245fa7081c89a9644f150bc24828b368744b3395ff8f714616f541482c",
+      "fingerprint": "ab80afe11d99224816521069bb981777b7637bbfe6fc4d93db790272809271bf",
       "orderedIds": [
         "movie:1339713",
         "movie:1226863",
-        "movie:1318413",
         "movie:402431",
+        "movie:426063",
         "movie:880067"
       ],
       "count": 5,
       "scope": "WORLDWIDE",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T10:01:02.691Z",
+      "lastVerified": "2026-08-10T10:21:12.905Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.peacock:1": {
       "listId": 8682331,
-      "fingerprint": "ea9504f313cec5bc42953a0f429bf92e6404951ef2feacbdedd799d781f97ffd",
+      "fingerprint": "998c5d82ded15c7e0c0f5135b0f4ff90bc3c4b34a862f55e242e0188f5861f20",
       "orderedIds": [
         "tv:212989",
         "tv:2734",
         "tv:73586",
-        "tv:201834",
-        "tv:44953"
+        "tv:90"
       ],
-      "count": 5,
+      "count": 4,
       "scope": "WORLDWIDE",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T10:01:02.809Z",
+      "lastVerified": "2026-08-10T10:21:13.168Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.peacock:2": {
@@ -136201,15 +136124,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:32:00.130Z"
     },
-    "collections.streaming:collections.streaming.peacock:41": {
-      "listId": 8682371,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "WORLDWIDE",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:34:37.244Z"
-    },
     "collections.streaming:collections.streaming.peacock:42": {
       "listId": 8682372,
       "fingerprint": "6b2e7c52518b2ee095ac1721c47fab3e893ad5a43cadaf7a0e50ee0669bd5c26",
@@ -136267,23 +136181,24 @@
     },
     "collections.streaming:collections.streaming.prime-video:0": {
       "listId": 8682374,
-      "fingerprint": "544230382d5b71aa5765c1f8801915da389f61a9cab5b56d932e4e9f71abebf9",
+      "fingerprint": "6898469b160d058eb451ff302d2fb11bf3900ea7516c408fbfeb8acb515200a3",
       "orderedIds": [
         "movie:1263532",
         "movie:454639",
         "movie:1481343",
         "movie:1301421",
+        "movie:1477317",
         "movie:1171145"
       ],
-      "count": 5,
+      "count": 6,
       "scope": "GR",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T10:01:02.908Z",
+      "lastVerified": "2026-08-10T10:21:13.908Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.prime-video:1": {
       "listId": 8682375,
-      "fingerprint": "d3f9f7357b01e3a658afd07f4d30843ff2252cc93edf92f3b8bcedfb80621d1d",
+      "fingerprint": "49f59c06c4d8e9bd1b6389e09f106e6272ec76e4c94d1dbcd25375c51f293833",
       "orderedIds": [
         "tv:95479",
         "tv:76479",
@@ -136296,12 +136211,14 @@
         "tv:200881",
         "tv:241882",
         "tv:2734",
-        "tv:84773"
+        "tv:84773",
+        "tv:289763",
+        "tv:255358"
       ],
-      "count": 12,
+      "count": 14,
       "scope": "GR",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T10:01:02.714Z",
+      "lastVerified": "2026-08-10T10:21:13.531Z",
       "invalidItems": []
     },
     "collections.streaming:collections.streaming.prime-video:2": {
@@ -142324,15 +142241,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:32:46.491Z"
     },
-    "collections.streaming:folder-6S0KR2JH:30": {
-      "listId": 8682437,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "WORLDWIDE",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:47:08.292Z"
-    },
     "collections.streaming:folder-6S0KR2JH:31": {
       "listId": 8682438,
       "fingerprint": "67b0b65c4876c537cc9a37bda7dc61c2ad3a24c579f6a9f0bf90d61c35915051",
@@ -142704,15 +142612,6 @@
       "scope": "WORLDWIDE",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:32:47.574Z"
-    },
-    "collections.streaming:folder-6S0KR2JH:34": {
-      "listId": 8682441,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "WORLDWIDE",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:48:00.168Z"
     },
     "collections.streaming:folder-6S0KR2JH:35": {
       "listId": 8682488,
@@ -143668,15 +143567,6 @@
       "scope": "WORLDWIDE",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:32:51.409Z"
-    },
-    "collections.streaming:folder-9B3VK7AU:12": {
-      "listId": 8682499,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "WORLDWIDE",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:15:19.966Z"
     },
     "collections.streaming:folder-9B3VK7AU:13": {
       "listId": 8682445,
@@ -144815,15 +144705,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:33:04.230Z"
     },
-    "collections.streaming:folder-9B3VK7AU:35": {
-      "listId": 8682464,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "WORLDWIDE",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:55:50.203Z"
-    },
     "collections.streaming:folder-9B3VK7AU:36": {
       "listId": 8682503,
       "fingerprint": "5ed6ff94573053ad4d2966196a7f263a3861fd0591b7cbd0f565ffad3cc3b951",
@@ -144975,15 +144856,6 @@
       "scope": "WORLDWIDE",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:33:05.366Z"
-    },
-    "collections.streaming:folder-OKRSGYYC:1": {
-      "listId": 8682465,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "WORLDWIDE",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T03:56:46.546Z"
     },
     "collections.streaming:folder-OKRSGYYC:3": {
       "listId": 8682466,
@@ -146248,15 +146120,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:33:17.261Z"
     },
-    "collections.streaming:folder-OKRSGYYC:13": {
-      "listId": 8682511,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "WORLDWIDE",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:16:38.914Z"
-    },
     "collections.studios:folder-10146STUDIO:0": {
       "listId": 8682512,
       "fingerprint": "eadc70b0f037919a38c43851eddf120e64e8b5631fe1b0f39022708cecff83a2",
@@ -146273,15 +146136,6 @@
       "scope": "GLOBAL",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:16:46.114Z"
-    },
-    "collections.studios:folder-10146STUDIO:1": {
-      "listId": 8682513,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:16:52.200Z"
     },
     "collections.studios:folder-10146STUDIO:2": {
       "listId": 8682514,
@@ -146546,15 +146400,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:17:26.623Z"
     },
-    "collections.studios:folder-127929STUDIO:1": {
-      "listId": 8682519,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:17:32.652Z"
-    },
     "collections.studios:folder-127929STUDIO:2": {
       "listId": 8682520,
       "fingerprint": "357ceb92ca9e35e062bb61c6c64c44769ee12b485eccda13508ec53b15324051",
@@ -146595,15 +146440,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:33:14.246Z"
     },
-    "collections.studios:folder-127929STUDIO:3": {
-      "listId": 8682521,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:17:46.240Z"
-    },
     "collections.studios:folder-127929STUDIO:4": {
       "listId": 8682522,
       "fingerprint": "bd0cf8fc56989958244394487149415cf22559b9e2ddf5564437b3777794239a",
@@ -146629,15 +146465,6 @@
       "scope": "GLOBAL",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:17:53.609Z"
-    },
-    "collections.studios:folder-127929STUDIO:5": {
-      "listId": 8682523,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:17:59.687Z"
     },
     "collections.studios:folder-2KA1KP6V:0": {
       "listId": 8682524,
@@ -146749,15 +146576,6 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:33:13.401Z"
-    },
-    "collections.studios:folder-2KA1KP6V:5": {
-      "listId": 8682529,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:18:47.354Z"
     },
     "collections.studios:folder-2XGVUWET:0": {
       "listId": 8682530,
@@ -147177,15 +146995,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:19:43.065Z"
     },
-    "collections.studios:folder-34STUDIO:1": {
-      "listId": 8682538,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:19:48.684Z"
-    },
     "collections.studios:folder-34STUDIO:2": {
       "listId": 8682539,
       "fingerprint": "36caba7f38bd319451ffb14acb75a39cd1f0cfb54d0825832687bb5c1804598e",
@@ -147328,15 +147137,6 @@
       "scope": "GLOBAL",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:20:34.813Z"
-    },
-    "collections.studios:folder-4OZG50Y4:2": {
-      "listId": 8682545,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:20:42.867Z"
     },
     "collections.studios:folder-4OZG50Y4:3": {
       "listId": 8682546,
@@ -147793,15 +147593,6 @@
       "scope": "GLOBAL",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:22:06.876Z"
-    },
-    "collections.studios:folder-5VIHLY7Y:1": {
-      "listId": 8682557,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:22:12.598Z"
     },
     "collections.studios:folder-5VIHLY7Y:2": {
       "listId": 8682558,
@@ -148333,15 +148124,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:22:53.926Z"
     },
-    "collections.studios:folder-79DVGTP9:2": {
-      "listId": 8682564,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:22:59.378Z"
-    },
     "collections.studios:folder-79DVGTP9:3": {
       "listId": 8682565,
       "fingerprint": "5267893a4a59f5d87e589f887297d6581d5829e0c8d2aec82a833e22a18166ad",
@@ -148470,15 +148252,6 @@
       "scope": "GLOBAL",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:23:33.081Z"
-    },
-    "collections.studios:folder-9ZZK6A6C:1": {
-      "listId": 8682570,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:23:38.909Z"
     },
     "collections.studios:folder-9ZZK6A6C:2": {
       "listId": 8682571,
@@ -148792,15 +148565,6 @@
       "scope": "GLOBAL",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:24:07.747Z"
-    },
-    "collections.studios:folder-A59XSVAT:1": {
-      "listId": 8682576,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:24:14.126Z"
     },
     "collections.studios:folder-A59XSVAT:2": {
       "listId": 8682577,
@@ -149268,15 +149032,6 @@
       "scope": "GLOBAL",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:24:46.189Z"
-    },
-    "collections.studios:folder-BNC84SJ4:1": {
-      "listId": 8682582,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:24:52.189Z"
     },
     "collections.studios:folder-BNC84SJ4:2": {
       "listId": 8682583,
@@ -150326,15 +150081,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:26:46.051Z"
     },
-    "collections.studios:folder-IAL16XW3:1": {
-      "listId": 8682600,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:26:51.449Z"
-    },
     "collections.studios:folder-IAL16XW3:2": {
       "listId": 8682601,
       "fingerprint": "3ade9a23679d6e4575e709f4c7befdd10c0193d6207cf7e1d126b76428265cc1",
@@ -151168,15 +150914,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:28:18.074Z"
     },
-    "collections.studios:folder-KIRXHA4A:2": {
-      "listId": 8682613,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:28:24.986Z"
-    },
     "collections.studios:folder-KIRXHA4A:3": {
       "listId": 8682614,
       "fingerprint": "974fa9e7f4a7082ce4a117c4ab671859ec4951d017f033a1853b09ec0f9b9db4",
@@ -151313,33 +151050,6 @@
       "scope": "GLOBAL:VOTE_QUORUM=500",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:33:37.042Z"
-    },
-    "collections.studios:folder-KIRXHA4A:6": {
-      "listId": 8682617,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:28:50.582Z"
-    },
-    "collections.studios:folder-V0MRWXHJ:0": {
-      "listId": 8682618,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:28:56.313Z"
-    },
-    "collections.studios:folder-V0MRWXHJ:1": {
-      "listId": 8682619,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:29:04.187Z"
     },
     "collections.studios:folder-V0MRWXHJ:2": {
       "listId": 8682620,
@@ -156677,7 +156387,7 @@
     },
     "collections.world:collections.world.indian:2": {
       "listId": 8682672,
-      "fingerprint": "99ce68500819b00567c1dbbf9a04e589e8d0be4d943f7fa8177346bbad4235f1",
+      "fingerprint": "690ae0ef96a597af5fae5f9043e38cd29e4c799d319afec0a1237d18cca6d7e4",
       "orderedIds": [
         "movie:1432631",
         "movie:1479832",
@@ -156747,6 +156457,7 @@
         "movie:1088914",
         "movie:1389149",
         "movie:1371023",
+        "movie:998276",
         "movie:1087392",
         "movie:389629",
         "movie:781732",
@@ -156879,10 +156590,11 @@
         "movie:70818",
         "movie:78886"
       ],
-      "count": 199,
+      "count": 200,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T09:34:10.778Z"
+      "lastVerified": "2026-08-10T10:21:20.037Z",
+      "invalidItems": []
     },
     "collections.world:collections.world.indian:3": {
       "listId": 8682673,
@@ -164482,24 +164194,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:46:44.829Z"
     },
-    "collections.world:folder-0J1SF1P8:6": {
-      "listId": 8682733,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:46:56.255Z"
-    },
-    "collections.world:folder-0J1SF1P8:7": {
-      "listId": 8682734,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:47:07.663Z"
-    },
     "collections.world:folder-0ZI700NE:0": {
       "listId": 8682735,
       "fingerprint": "275d394a29b9a423982421aedffb84042b40a21b1a9ba7cb00f50bbd0893a618",
@@ -165758,24 +165452,6 @@
       "scope": "GLOBAL",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T04:49:11.034Z"
-    },
-    "collections.world:folder-10NNKWPU:6": {
-      "listId": 8682749,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:49:18.894Z"
-    },
-    "collections.world:folder-10NNKWPU:7": {
-      "listId": 8682750,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T04:49:27.625Z"
     },
     "collections.world:folder-2YV5HI8I:0": {
       "listId": 8682751,
@@ -179141,24 +178817,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T05:12:09.980Z"
     },
-    "collections.world:folder-U58KOK24:6": {
-      "listId": 8682888,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T05:12:21.329Z"
-    },
-    "collections.world:folder-U58KOK24:7": {
-      "listId": 8682889,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T05:12:29.352Z"
-    },
     "collections.world:folder-UJU5PHHC:0": {
       "listId": 8682890,
       "fingerprint": "bdd504c8f74c383060ec375a152099c93dd631955156592951ce5a9299232835",
@@ -184332,15 +183990,6 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T09:36:10.375Z"
     },
-    "collections.world:folder-Z4R165P4:7": {
-      "listId": 8682941,
-      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
-      "orderedIds": [],
-      "count": 0,
-      "scope": "GLOBAL",
-      "syncStatus": "verified",
-      "lastVerified": "2026-08-10T05:19:01.022Z"
-    },
     "collections.world:folder-Z55EA73B:0": {
       "listId": 8682942,
       "fingerprint": "d4cdb028e8d99d44c0f28d301d7e329f20e0306f4e04fe4e61c6e69885105c4c",
@@ -184897,6 +184546,622 @@
       "scope": "GLOBAL",
       "syncStatus": "verified",
       "lastVerified": "2026-08-10T05:19:56.689Z"
+    }
+  },
+  "providerIndex": {
+    "availability": {},
+    "observedWatchEntries": 357,
+    "lastFullReconciliation": "2026-08-10T05:44:45.337Z"
+  },
+  "lastSuccessfulSync": "2026-08-10T10:21:20.085Z",
+  "retiredRails": {
+    "collections.streaming:collections.streaming.apple-tv:29": {
+      "listId": 8682072,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "WORLDWIDE",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:14:42.164Z",
+      "key": "collections.streaming:collections.streaming.apple-tv:29",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.apple-tv",
+      "title": "Ντοκιμαντέρ φύσης",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.118Z"
+    },
+    "collections.streaming:collections.streaming.apple-tv:36": {
+      "listId": 8682079,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "WORLDWIDE",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:14:45.684Z",
+      "key": "collections.streaming:collections.streaming.apple-tv:36",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.apple-tv",
+      "title": "Πολεμικές σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.streaming:collections.streaming.paramount-plus:31": {
+      "listId": 8682315,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "WORLDWIDE",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:27:52.134Z",
+      "key": "collections.streaming:collections.streaming.paramount-plus:31",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.paramount-plus",
+      "title": "Σειρές ντοκιμαντέρ φύσης",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.streaming:collections.streaming.peacock:41": {
+      "listId": 8682371,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "WORLDWIDE",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:34:37.244Z",
+      "key": "collections.streaming:collections.streaming.peacock:41",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.peacock",
+      "title": "Πολεμικές σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.streaming:folder-6S0KR2JH:30": {
+      "listId": 8682437,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "WORLDWIDE",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:47:08.292Z",
+      "key": "collections.streaming:folder-6S0KR2JH:30",
+      "collectionId": "collections.streaming",
+      "folderId": "folder-6S0KR2JH",
+      "title": "Ρομαντικές σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.streaming:folder-6S0KR2JH:34": {
+      "listId": 8682441,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "WORLDWIDE",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:48:00.168Z",
+      "key": "collections.streaming:folder-6S0KR2JH:34",
+      "collectionId": "collections.streaming",
+      "folderId": "folder-6S0KR2JH",
+      "title": "Πολεμικές σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.streaming:folder-OKRSGYYC:1": {
+      "listId": 8682465,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "WORLDWIDE",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:56:46.546Z",
+      "key": "collections.streaming:folder-OKRSGYYC:1",
+      "collectionId": "collections.streaming",
+      "folderId": "folder-OKRSGYYC",
+      "title": "Νέες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.streaming:folder-OKRSGYYC:13": {
+      "listId": 8682511,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "WORLDWIDE",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:16:38.914Z",
+      "key": "collections.streaming:folder-OKRSGYYC:13",
+      "collectionId": "collections.streaming",
+      "folderId": "folder-OKRSGYYC",
+      "title": "Σειρές θρίλερ",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.streaming:folder-9B3VK7AU:12": {
+      "listId": 8682499,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "WORLDWIDE",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:15:19.966Z",
+      "key": "collections.streaming:folder-9B3VK7AU:12",
+      "collectionId": "collections.streaming",
+      "folderId": "folder-9B3VK7AU",
+      "title": "Ταινίες άνιμε",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.streaming:folder-9B3VK7AU:35": {
+      "listId": 8682464,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "WORLDWIDE",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:55:50.203Z",
+      "key": "collections.streaming:folder-9B3VK7AU:35",
+      "collectionId": "collections.streaming",
+      "folderId": "folder-9B3VK7AU",
+      "title": "Πολεμικές σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.genres:folder-8B3PEI1Y:1": {
+      "listId": 8681844,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:12:45.813Z",
+      "key": "collections.genres:folder-8B3PEI1Y:1",
+      "collectionId": "collections.genres",
+      "folderId": "folder-8B3PEI1Y",
+      "title": "Νέες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.genres:folder-8B3PEI1Y:7": {
+      "listId": 8681850,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:12:48.704Z",
+      "key": "collections.genres:folder-8B3PEI1Y:7",
+      "collectionId": "collections.genres",
+      "folderId": "folder-8B3PEI1Y",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-BNC84SJ4:1": {
+      "listId": 8682582,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:24:52.189Z",
+      "key": "collections.studios:folder-BNC84SJ4:1",
+      "collectionId": "collections.studios",
+      "folderId": "folder-BNC84SJ4",
+      "title": "Πρόσφατες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-9ZZK6A6C:1": {
+      "listId": 8682570,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:23:38.909Z",
+      "key": "collections.studios:folder-9ZZK6A6C:1",
+      "collectionId": "collections.studios",
+      "folderId": "folder-9ZZK6A6C",
+      "title": "Πρόσφατες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-10146STUDIO:1": {
+      "listId": 8682513,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:16:52.200Z",
+      "key": "collections.studios:folder-10146STUDIO:1",
+      "collectionId": "collections.studios",
+      "folderId": "folder-10146STUDIO",
+      "title": "Πρόσφατες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-79DVGTP9:2": {
+      "listId": 8682564,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:22:59.378Z",
+      "key": "collections.studios:folder-79DVGTP9:2",
+      "collectionId": "collections.studios",
+      "folderId": "folder-79DVGTP9",
+      "title": "Πρόσφατες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-V0MRWXHJ:0": {
+      "listId": 8682618,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:28:56.313Z",
+      "key": "collections.studios:folder-V0MRWXHJ:0",
+      "collectionId": "collections.studios",
+      "folderId": "folder-V0MRWXHJ",
+      "title": "Πρόσφατες ταινίες",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-V0MRWXHJ:1": {
+      "listId": 8682619,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:29:04.187Z",
+      "key": "collections.studios:folder-V0MRWXHJ:1",
+      "collectionId": "collections.studios",
+      "folderId": "folder-V0MRWXHJ",
+      "title": "Πρόσφατες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-5VIHLY7Y:1": {
+      "listId": 8682557,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:22:12.598Z",
+      "key": "collections.studios:folder-5VIHLY7Y:1",
+      "collectionId": "collections.studios",
+      "folderId": "folder-5VIHLY7Y",
+      "title": "Πρόσφατες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-A59XSVAT:1": {
+      "listId": 8682576,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:24:14.126Z",
+      "key": "collections.studios:folder-A59XSVAT:1",
+      "collectionId": "collections.studios",
+      "folderId": "folder-A59XSVAT",
+      "title": "Πρόσφατες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-127929STUDIO:1": {
+      "listId": 8682519,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:17:32.652Z",
+      "key": "collections.studios:folder-127929STUDIO:1",
+      "collectionId": "collections.studios",
+      "folderId": "folder-127929STUDIO",
+      "title": "Πρόσφατες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-127929STUDIO:3": {
+      "listId": 8682521,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:17:46.240Z",
+      "key": "collections.studios:folder-127929STUDIO:3",
+      "collectionId": "collections.studios",
+      "folderId": "folder-127929STUDIO",
+      "title": "Δημοφιλείς σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-127929STUDIO:5": {
+      "listId": 8682523,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:17:59.687Z",
+      "key": "collections.studios:folder-127929STUDIO:5",
+      "collectionId": "collections.studios",
+      "folderId": "folder-127929STUDIO",
+      "title": "Κορυφαίες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-34STUDIO:1": {
+      "listId": 8682538,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:19:48.684Z",
+      "key": "collections.studios:folder-34STUDIO:1",
+      "collectionId": "collections.studios",
+      "folderId": "folder-34STUDIO",
+      "title": "Πρόσφατες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-KIRXHA4A:2": {
+      "listId": 8682613,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:28:24.986Z",
+      "key": "collections.studios:folder-KIRXHA4A:2",
+      "collectionId": "collections.studios",
+      "folderId": "folder-KIRXHA4A",
+      "title": "Πρόσφατες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-KIRXHA4A:6": {
+      "listId": 8682617,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:28:50.582Z",
+      "key": "collections.studios:folder-KIRXHA4A:6",
+      "collectionId": "collections.studios",
+      "folderId": "folder-KIRXHA4A",
+      "title": "Κορυφαίες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-IAL16XW3:1": {
+      "listId": 8682600,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:26:51.449Z",
+      "key": "collections.studios:folder-IAL16XW3:1",
+      "collectionId": "collections.studios",
+      "folderId": "folder-IAL16XW3",
+      "title": "Πρόσφατες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-4OZG50Y4:2": {
+      "listId": 8682545,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:20:42.867Z",
+      "key": "collections.studios:folder-4OZG50Y4:2",
+      "collectionId": "collections.studios",
+      "folderId": "folder-4OZG50Y4",
+      "title": "Πρόσφατες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.studios:folder-2KA1KP6V:5": {
+      "listId": 8682529,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:18:47.354Z",
+      "key": "collections.studios:folder-2KA1KP6V:5",
+      "collectionId": "collections.studios",
+      "folderId": "folder-2KA1KP6V",
+      "title": "Κορυφαίες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.networks:folder-869XK12L:1": {
+      "listId": 8682016,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:14:23.542Z",
+      "key": "collections.networks:folder-869XK12L:1",
+      "collectionId": "collections.networks",
+      "folderId": "folder-869XK12L",
+      "title": "Πρόσφατες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.directors:folder-C34MCJNY:1": {
+      "listId": 8681700,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:12:06.217Z",
+      "key": "collections.directors:folder-C34MCJNY:1",
+      "collectionId": "collections.directors",
+      "folderId": "folder-C34MCJNY",
+      "title": "Δημοφιλείς σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.directors:folder-C34MCJNY:3": {
+      "listId": 8681703,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:12:05.222Z",
+      "key": "collections.directors:folder-C34MCJNY:3",
+      "collectionId": "collections.directors",
+      "folderId": "folder-C34MCJNY",
+      "title": "Κορυφαίες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.directors:folder-1VPO8OYE:1": {
+      "listId": 8681641,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:11:50.643Z",
+      "key": "collections.directors:folder-1VPO8OYE:1",
+      "collectionId": "collections.directors",
+      "folderId": "folder-1VPO8OYE",
+      "title": "Δημοφιλείς σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.directors:folder-1VPO8OYE:3": {
+      "listId": 8681643,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T03:11:50.796Z",
+      "key": "collections.directors:folder-1VPO8OYE:3",
+      "collectionId": "collections.directors",
+      "folderId": "folder-1VPO8OYE",
+      "title": "Κορυφαίες σειρές",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.world:folder-10NNKWPU:6": {
+      "listId": 8682749,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:49:18.894Z",
+      "key": "collections.world:folder-10NNKWPU:6",
+      "collectionId": "collections.world",
+      "folderId": "folder-10NNKWPU",
+      "title": "Κορυφαίες ταινίες της χρονιάς",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.world:folder-10NNKWPU:7": {
+      "listId": 8682750,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:49:27.625Z",
+      "key": "collections.world:folder-10NNKWPU:7",
+      "collectionId": "collections.world",
+      "folderId": "folder-10NNKWPU",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.world:folder-U58KOK24:6": {
+      "listId": 8682888,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T05:12:21.329Z",
+      "key": "collections.world:folder-U58KOK24:6",
+      "collectionId": "collections.world",
+      "folderId": "folder-U58KOK24",
+      "title": "Κορυφαίες ταινίες της χρονιάς",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.world:folder-U58KOK24:7": {
+      "listId": 8682889,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T05:12:29.352Z",
+      "key": "collections.world:folder-U58KOK24:7",
+      "collectionId": "collections.world",
+      "folderId": "folder-U58KOK24",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
     },
     "collections.world:folder-Z55EA73B:7": {
       "listId": 8682949,
@@ -184905,13 +185170,62 @@
       "count": 0,
       "scope": "GLOBAL",
       "syncStatus": "verified",
-      "lastVerified": "2026-08-10T05:20:03.846Z"
+      "lastVerified": "2026-08-10T05:20:03.846Z",
+      "key": "collections.world:folder-Z55EA73B:7",
+      "collectionId": "collections.world",
+      "folderId": "folder-Z55EA73B",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.world:folder-0J1SF1P8:6": {
+      "listId": 8682733,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:46:56.255Z",
+      "key": "collections.world:folder-0J1SF1P8:6",
+      "collectionId": "collections.world",
+      "folderId": "folder-0J1SF1P8",
+      "title": "Κορυφαίες ταινίες της χρονιάς",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.world:folder-0J1SF1P8:7": {
+      "listId": 8682734,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T04:47:07.663Z",
+      "key": "collections.world:folder-0J1SF1P8:7",
+      "collectionId": "collections.world",
+      "folderId": "folder-0J1SF1P8",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
+    },
+    "collections.world:folder-Z4R165P4:7": {
+      "listId": 8682941,
+      "fingerprint": "ec723e4624e83f3452b5cbb30470bb723164eeefc64529f2dd79d1de5dcf5631",
+      "orderedIds": [],
+      "count": 0,
+      "scope": "GLOBAL",
+      "syncStatus": "verified",
+      "lastVerified": "2026-08-10T05:19:01.022Z",
+      "key": "collections.world:folder-Z4R165P4:7",
+      "collectionId": "collections.world",
+      "folderId": "folder-Z4R165P4",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "reason": "EMPTY_EXACT_TMDB_PREDICATE",
+      "retiredForNuvio": "0.8.3",
+      "retiredAt": "2026-08-10T10:18:40.119Z"
     }
-  },
-  "providerIndex": {
-    "availability": {},
-    "observedWatchEntries": 357,
-    "lastFullReconciliation": "2026-08-10T05:44:45.337Z"
-  },
-  "lastSuccessfulSync": "2026-08-10T10:01:10.284Z"
+  }
 }

@@ -37600,41 +37600,6 @@
       }
     },
     {
-      "key": "collections.directors:folder-1VPO8OYE:1",
-      "collectionId": "collections.directors",
-      "folderId": "folder-1VPO8OYE",
-      "position": 1,
-      "title": "Δημοφιλείς σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "person_director",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DIRECTOR",
-          "tmdbId": 14639,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "popularity.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
-        "tmdbId": 14639,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "DIRECTOR"
-      }
-    },
-    {
       "key": "collections.directors:folder-1VPO8OYE:2",
       "collectionId": "collections.directors",
       "folderId": "folder-1VPO8OYE",
@@ -37665,41 +37630,6 @@
         "provider": "tmdb",
         "catalogId": null,
         "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "DIRECTOR"
-      }
-    },
-    {
-      "key": "collections.directors:folder-1VPO8OYE:3",
-      "collectionId": "collections.directors",
-      "folderId": "folder-1VPO8OYE",
-      "position": 3,
-      "title": "Κορυφαίες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "person_director",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DIRECTOR",
-          "tmdbId": 14639,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "vote_average.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες σειρές",
-        "sortBy": "vote_average.desc",
-        "tmdbId": 14639,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
         "traktListId": null,
         "tmdbSourceType": "DIRECTOR"
       }
@@ -39630,41 +39560,6 @@
       }
     },
     {
-      "key": "collections.directors:folder-C34MCJNY:1",
-      "collectionId": "collections.directors",
-      "folderId": "folder-C34MCJNY",
-      "position": 1,
-      "title": "Δημοφιλείς σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "person_director",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DIRECTOR",
-          "tmdbId": 1252934,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "popularity.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
-        "tmdbId": 1252934,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "DIRECTOR"
-      }
-    },
-    {
       "key": "collections.directors:folder-C34MCJNY:2",
       "collectionId": "collections.directors",
       "folderId": "folder-C34MCJNY",
@@ -39695,41 +39590,6 @@
         "provider": "tmdb",
         "catalogId": null,
         "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "DIRECTOR"
-      }
-    },
-    {
-      "key": "collections.directors:folder-C34MCJNY:3",
-      "collectionId": "collections.directors",
-      "folderId": "folder-C34MCJNY",
-      "position": 3,
-      "title": "Κορυφαίες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "person_director",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DIRECTOR",
-          "tmdbId": 1252934,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "vote_average.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες σειρές",
-        "sortBy": "vote_average.desc",
-        "tmdbId": 1252934,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
         "traktListId": null,
         "tmdbSourceType": "DIRECTOR"
       }
@@ -50030,49 +49890,6 @@
       }
     },
     {
-      "key": "collections.genres:folder-8B3PEI1Y:1",
-      "collectionId": "collections.genres",
-      "folderId": "folder-8B3PEI1Y",
-      "position": 1,
-      "title": "Νέες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "discover",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DISCOVER",
-          "tmdbId": null,
-          "traktListId": null,
-          "filters": {
-            "year": 2026,
-            "voteCountGte": 25,
-            "withKeywords": "9716"
-          },
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Νέες σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": null,
-        "addonId": null,
-        "filters": {
-          "year": 2026,
-          "voteCountGte": 25,
-          "withKeywords": "9716"
-        },
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "DISCOVER"
-      }
-    },
-    {
       "key": "collections.genres:folder-8B3PEI1Y:2",
       "collectionId": "collections.genres",
       "folderId": "folder-8B3PEI1Y",
@@ -50275,53 +50092,6 @@
         "provider": "tmdb",
         "catalogId": null,
         "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "DISCOVER"
-      }
-    },
-    {
-      "key": "collections.genres:folder-8B3PEI1Y:7",
-      "collectionId": "collections.genres",
-      "folderId": "folder-8B3PEI1Y",
-      "position": 7,
-      "title": "Κορυφαίες σειρές της χρονιάς",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "discover",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DISCOVER",
-          "tmdbId": null,
-          "traktListId": null,
-          "filters": {
-            "year": 2026,
-            "voteCountGte": 10,
-            "withKeywords": "9716",
-            "releaseDateGte": "2026-01-01",
-            "releaseDateLte": "2026-12-31"
-          },
-          "sortBy": "vote_average.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες σειρές της χρονιάς",
-        "sortBy": "vote_average.desc",
-        "tmdbId": null,
-        "addonId": null,
-        "filters": {
-          "year": 2026,
-          "voteCountGte": 10,
-          "withKeywords": "9716",
-          "releaseDateGte": "2026-01-01",
-          "releaseDateLte": "2026-12-31"
-        },
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
         "traktListId": null,
         "tmdbSourceType": "DISCOVER"
       }
@@ -57572,47 +57342,6 @@
       }
     },
     {
-      "key": "collections.networks:folder-869XK12L:1",
-      "collectionId": "collections.networks",
-      "folderId": "folder-869XK12L",
-      "position": 1,
-      "title": "Πρόσφατες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "network_recent",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "NETWORK",
-          "tmdbId": 67,
-          "traktListId": null,
-          "filters": {
-            "voteCountGte": 10,
-            "releaseDateGte": "2024-01-01"
-          },
-          "sortBy": "vote_average.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες σειρές",
-        "sortBy": "vote_average.desc",
-        "tmdbId": 67,
-        "addonId": null,
-        "filters": {
-          "voteCountGte": 10,
-          "releaseDateGte": "2024-01-01"
-        },
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "NETWORK"
-      }
-    },
-    {
       "key": "collections.networks:folder-8R10TM2Q:0",
       "collectionId": "collections.networks",
       "folderId": "folder-8R10TM2Q",
@@ -60309,35 +60038,6 @@
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.apple-tv:29",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.apple-tv",
-      "position": 29,
-      "title": "Ντοκιμαντέρ φύσης",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658794,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658794,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.apple-tv"
-      },
-      "originalSource": {
-        "title": "Ντοκιμαντέρ φύσης",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658794,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
       "key": "collections.streaming:collections.streaming.apple-tv:30",
       "collectionId": "collections.streaming",
       "folderId": "collections.streaming.apple-tv",
@@ -60500,32 +60200,6 @@
         "tmdbId": 8658803,
         "tmdbSourceType": "LIST",
         "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.apple-tv:36",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.apple-tv",
-      "position": 36,
-      "title": "Πολεμικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34808931,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.apple-tv"
-      },
-      "originalSource": {
-        "title": "Πολεμικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808931
       }
     },
     {
@@ -66992,32 +66666,6 @@
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.paramount-plus:31",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.paramount-plus",
-      "position": 31,
-      "title": "Σειρές ντοκιμαντέρ φύσης",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809947,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.paramount-plus"
-      },
-      "originalSource": {
-        "title": "Σειρές ντοκιμαντέρ φύσης",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809947
-      }
-    },
-    {
       "key": "collections.streaming:collections.streaming.paramount-plus:32",
       "collectionId": "collections.streaming",
       "folderId": "collections.streaming.paramount-plus",
@@ -68491,32 +68139,6 @@
         "tmdbId": 8658876,
         "tmdbSourceType": "LIST",
         "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.peacock:41",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.peacock",
-      "position": 41,
-      "title": "Πολεμικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809099,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.peacock"
-      },
-      "originalSource": {
-        "title": "Πολεμικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809099
       }
     },
     {
@@ -70639,32 +70261,6 @@
       }
     },
     {
-      "key": "collections.streaming:folder-6S0KR2JH:30",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-6S0KR2JH",
-      "position": 30,
-      "title": "Ρομαντικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809161,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-6S0KR2JH"
-      },
-      "originalSource": {
-        "title": "Ρομαντικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809161
-      }
-    },
-    {
       "key": "collections.streaming:folder-6S0KR2JH:31",
       "collectionId": "collections.streaming",
       "folderId": "folder-6S0KR2JH",
@@ -70746,32 +70342,6 @@
         "tmdbId": 8658909,
         "tmdbSourceType": "LIST",
         "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-6S0KR2JH:34",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-6S0KR2JH",
-      "position": 34,
-      "title": "Πολεμικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809170,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-6S0KR2JH"
-      },
-      "originalSource": {
-        "title": "Πολεμικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809170
       }
     },
     {
@@ -71155,35 +70725,6 @@
         "provider": "tmdb",
         "mediaType": "MOVIE",
         "tmdbId": 8658914,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:12",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 12,
-      "title": "Ταινίες άνιμε",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658916,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658916,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Ταινίες άνιμε",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658916,
         "tmdbSourceType": "LIST",
         "filters": {}
       }
@@ -71797,32 +71338,6 @@
       }
     },
     {
-      "key": "collections.streaming:folder-9B3VK7AU:35",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 35,
-      "title": "Πολεμικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809223,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Πολεμικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809223
-      }
-    },
-    {
       "key": "collections.streaming:folder-9B3VK7AU:36",
       "collectionId": "collections.streaming",
       "folderId": "folder-9B3VK7AU",
@@ -71904,32 +71419,6 @@
         "tmdbId": 8658877,
         "tmdbSourceType": "LIST",
         "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-OKRSGYYC:1",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-OKRSGYYC",
-      "position": 1,
-      "title": "Νέες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809102,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-OKRSGYYC"
-      },
-      "originalSource": {
-        "title": "Νέες σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809102
       }
     },
     {
@@ -72237,32 +71726,6 @@
       }
     },
     {
-      "key": "collections.streaming:folder-OKRSGYYC:13",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-OKRSGYYC",
-      "position": 13,
-      "title": "Σειρές θρίλερ",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809116,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-OKRSGYYC"
-      },
-      "originalSource": {
-        "title": "Σειρές θρίλερ",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809116
-      }
-    },
-    {
       "key": "collections.studios:folder-10146STUDIO:0",
       "collectionId": "collections.studios",
       "folderId": "folder-10146STUDIO",
@@ -72293,41 +71756,6 @@
         "provider": "tmdb",
         "catalogId": null,
         "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
-      "key": "collections.studios:folder-10146STUDIO:1",
-      "collectionId": "collections.studios",
-      "folderId": "folder-10146STUDIO",
-      "position": 1,
-      "title": "Πρόσφατες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 10146,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": 10146,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
         "traktListId": null,
         "tmdbSourceType": "COMPANY"
       }
@@ -72508,41 +71936,6 @@
       }
     },
     {
-      "key": "collections.studios:folder-127929STUDIO:1",
-      "collectionId": "collections.studios",
-      "folderId": "folder-127929STUDIO",
-      "position": 1,
-      "title": "Πρόσφατες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 127929,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": 127929,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
       "key": "collections.studios:folder-127929STUDIO:2",
       "collectionId": "collections.studios",
       "folderId": "folder-127929STUDIO",
@@ -72578,41 +71971,6 @@
       }
     },
     {
-      "key": "collections.studios:folder-127929STUDIO:3",
-      "collectionId": "collections.studios",
-      "folderId": "folder-127929STUDIO",
-      "position": 3,
-      "title": "Δημοφιλείς σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 127929,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Δημοφιλείς σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": 127929,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
       "key": "collections.studios:folder-127929STUDIO:4",
       "collectionId": "collections.studios",
       "folderId": "folder-127929STUDIO",
@@ -72643,41 +72001,6 @@
         "provider": "tmdb",
         "catalogId": null,
         "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
-      "key": "collections.studios:folder-127929STUDIO:5",
-      "collectionId": "collections.studios",
-      "folderId": "folder-127929STUDIO",
-      "position": 5,
-      "title": "Κορυφαίες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 127929,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "vote_average.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες σειρές",
-        "sortBy": "vote_average.desc",
-        "tmdbId": 127929,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
         "traktListId": null,
         "tmdbSourceType": "COMPANY"
       }
@@ -72853,41 +72176,6 @@
         "provider": "tmdb",
         "catalogId": null,
         "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
-      "key": "collections.studios:folder-2KA1KP6V:5",
-      "collectionId": "collections.studios",
-      "folderId": "folder-2KA1KP6V",
-      "position": 5,
-      "title": "Κορυφαίες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 17,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "vote_average.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες σειρές",
-        "sortBy": "vote_average.desc",
-        "tmdbId": 17,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
         "traktListId": null,
         "tmdbSourceType": "COMPANY"
       }
@@ -73163,41 +72451,6 @@
       }
     },
     {
-      "key": "collections.studios:folder-34STUDIO:1",
-      "collectionId": "collections.studios",
-      "folderId": "folder-34STUDIO",
-      "position": 1,
-      "title": "Πρόσφατες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 34,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": 34,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
       "key": "collections.studios:folder-34STUDIO:2",
       "collectionId": "collections.studios",
       "folderId": "folder-34STUDIO",
@@ -73393,41 +72646,6 @@
         "provider": "tmdb",
         "catalogId": null,
         "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
-      "key": "collections.studios:folder-4OZG50Y4:2",
-      "collectionId": "collections.studios",
-      "folderId": "folder-4OZG50Y4",
-      "position": 2,
-      "title": "Πρόσφατες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 6125,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": 6125,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
         "traktListId": null,
         "tmdbSourceType": "COMPANY"
       }
@@ -73818,41 +73036,6 @@
       }
     },
     {
-      "key": "collections.studios:folder-5VIHLY7Y:1",
-      "collectionId": "collections.studios",
-      "folderId": "folder-5VIHLY7Y",
-      "position": 1,
-      "title": "Πρόσφατες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 12,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": 12,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
       "key": "collections.studios:folder-5VIHLY7Y:2",
       "collectionId": "collections.studios",
       "folderId": "folder-5VIHLY7Y",
@@ -74053,41 +73236,6 @@
       }
     },
     {
-      "key": "collections.studios:folder-79DVGTP9:2",
-      "collectionId": "collections.studios",
-      "folderId": "folder-79DVGTP9",
-      "position": 2,
-      "title": "Πρόσφατες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 6704,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": 6704,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
       "key": "collections.studios:folder-79DVGTP9:3",
       "collectionId": "collections.studios",
       "folderId": "folder-79DVGTP9",
@@ -74258,41 +73406,6 @@
         "provider": "tmdb",
         "catalogId": null,
         "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
-      "key": "collections.studios:folder-9ZZK6A6C:1",
-      "collectionId": "collections.studios",
-      "folderId": "folder-9ZZK6A6C",
-      "position": 1,
-      "title": "Πρόσφατες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 7,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": 7,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
         "traktListId": null,
         "tmdbSourceType": "COMPANY"
       }
@@ -74473,41 +73586,6 @@
       }
     },
     {
-      "key": "collections.studios:folder-A59XSVAT:1",
-      "collectionId": "collections.studios",
-      "folderId": "folder-A59XSVAT",
-      "position": 1,
-      "title": "Πρόσφατες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 4,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": 4,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
       "key": "collections.studios:folder-A59XSVAT:2",
       "collectionId": "collections.studios",
       "folderId": "folder-A59XSVAT",
@@ -74678,41 +73756,6 @@
         "provider": "tmdb",
         "catalogId": null,
         "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
-      "key": "collections.studios:folder-BNC84SJ4:1",
-      "collectionId": "collections.studios",
-      "folderId": "folder-BNC84SJ4",
-      "position": 1,
-      "title": "Πρόσφατες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 3172,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": 3172,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
         "traktListId": null,
         "tmdbSourceType": "COMPANY"
       }
@@ -75313,41 +74356,6 @@
       }
     },
     {
-      "key": "collections.studios:folder-IAL16XW3:1",
-      "collectionId": "collections.studios",
-      "folderId": "folder-IAL16XW3",
-      "position": 1,
-      "title": "Πρόσφατες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 33,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": 33,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
       "key": "collections.studios:folder-IAL16XW3:2",
       "collectionId": "collections.studios",
       "folderId": "folder-IAL16XW3",
@@ -75758,41 +74766,6 @@
       }
     },
     {
-      "key": "collections.studios:folder-KIRXHA4A:2",
-      "collectionId": "collections.studios",
-      "folderId": "folder-KIRXHA4A",
-      "position": 2,
-      "title": "Πρόσφατες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 10342,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": 10342,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
       "key": "collections.studios:folder-KIRXHA4A:3",
       "collectionId": "collections.studios",
       "folderId": "folder-KIRXHA4A",
@@ -75893,111 +74866,6 @@
         "provider": "tmdb",
         "catalogId": null,
         "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
-      "key": "collections.studios:folder-KIRXHA4A:6",
-      "collectionId": "collections.studios",
-      "folderId": "folder-KIRXHA4A",
-      "position": 6,
-      "title": "Κορυφαίες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 10342,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "vote_average.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες σειρές",
-        "sortBy": "vote_average.desc",
-        "tmdbId": 10342,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
-      "key": "collections.studios:folder-V0MRWXHJ:0",
-      "collectionId": "collections.studios",
-      "folderId": "folder-V0MRWXHJ",
-      "position": 0,
-      "title": "Πρόσφατες ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 21,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "primary_release_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες ταινίες",
-        "sortBy": "primary_release_date.desc",
-        "tmdbId": 21,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "COMPANY"
-      }
-    },
-    {
-      "key": "collections.studios:folder-V0MRWXHJ:1",
-      "collectionId": "collections.studios",
-      "folderId": "folder-V0MRWXHJ",
-      "position": 1,
-      "title": "Πρόσφατες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "company",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "COMPANY",
-          "tmdbId": 21,
-          "traktListId": null,
-          "filters": {},
-          "sortBy": "first_air_date.desc"
-        }
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Πρόσφατες σειρές",
-        "sortBy": "first_air_date.desc",
-        "tmdbId": 21,
-        "addonId": null,
-        "filters": {},
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
         "traktListId": null,
         "tmdbSourceType": "COMPANY"
       }
@@ -80811,110 +79679,6 @@
       }
     },
     {
-      "key": "collections.world:folder-0J1SF1P8:6",
-      "collectionId": "collections.world",
-      "folderId": "folder-0J1SF1P8",
-      "position": 6,
-      "title": "Κορυφαίες ταινίες της χρονιάς",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "origin_country",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DISCOVER",
-          "tmdbId": null,
-          "traktListId": null,
-          "filters": {
-            "withOriginalLanguage": "en",
-            "year": 2026,
-            "voteCountGte": 8,
-            "voteAverageGte": 6,
-            "releaseDateGte": "2026-01-01",
-            "releaseDateLte": "2026-12-31",
-            "withOriginCountry": "NG"
-          },
-          "sortBy": "vote_average.desc"
-        },
-        "originCountry": "NG"
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες ταινίες της χρονιάς",
-        "sortBy": "vote_average.desc",
-        "tmdbId": null,
-        "addonId": null,
-        "filters": {
-          "withOriginalLanguage": "en",
-          "year": 2026,
-          "voteCountGte": 8,
-          "voteAverageGte": 6,
-          "releaseDateGte": "2026-01-01",
-          "releaseDateLte": "2026-12-31",
-          "withOriginCountry": "NG"
-        },
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "DISCOVER"
-      }
-    },
-    {
-      "key": "collections.world:folder-0J1SF1P8:7",
-      "collectionId": "collections.world",
-      "folderId": "folder-0J1SF1P8",
-      "position": 7,
-      "title": "Κορυφαίες σειρές της χρονιάς",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "origin_country",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DISCOVER",
-          "tmdbId": null,
-          "traktListId": null,
-          "filters": {
-            "withOriginalLanguage": "en",
-            "year": 2026,
-            "voteCountGte": 5,
-            "voteAverageGte": 6,
-            "releaseDateGte": "2026-01-01",
-            "releaseDateLte": "2026-12-31",
-            "withOriginCountry": "NG"
-          },
-          "sortBy": "vote_average.desc"
-        },
-        "originCountry": "NG"
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες σειρές της χρονιάς",
-        "sortBy": "vote_average.desc",
-        "tmdbId": null,
-        "addonId": null,
-        "filters": {
-          "withOriginalLanguage": "en",
-          "year": 2026,
-          "voteCountGte": 5,
-          "voteAverageGte": 6,
-          "releaseDateGte": "2026-01-01",
-          "releaseDateLte": "2026-12-31",
-          "withOriginCountry": "NG"
-        },
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "DISCOVER"
-      }
-    },
-    {
       "key": "collections.world:folder-0ZI700NE:0",
       "collectionId": "collections.world",
       "folderId": "folder-0ZI700NE",
@@ -81552,110 +80316,6 @@
           "withOriginalLanguage": "vi",
           "voteCountGte": 25,
           "voteAverageGte": 6.5,
-          "withOriginCountry": "VN"
-        },
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "DISCOVER"
-      }
-    },
-    {
-      "key": "collections.world:folder-10NNKWPU:6",
-      "collectionId": "collections.world",
-      "folderId": "folder-10NNKWPU",
-      "position": 6,
-      "title": "Κορυφαίες ταινίες της χρονιάς",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "origin_country",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DISCOVER",
-          "tmdbId": null,
-          "traktListId": null,
-          "filters": {
-            "withOriginalLanguage": "vi",
-            "year": 2026,
-            "voteCountGte": 8,
-            "voteAverageGte": 6,
-            "releaseDateGte": "2026-01-01",
-            "releaseDateLte": "2026-12-31",
-            "withOriginCountry": "VN"
-          },
-          "sortBy": "vote_average.desc"
-        },
-        "originCountry": "VN"
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες ταινίες της χρονιάς",
-        "sortBy": "vote_average.desc",
-        "tmdbId": null,
-        "addonId": null,
-        "filters": {
-          "withOriginalLanguage": "vi",
-          "year": 2026,
-          "voteCountGte": 8,
-          "voteAverageGte": 6,
-          "releaseDateGte": "2026-01-01",
-          "releaseDateLte": "2026-12-31",
-          "withOriginCountry": "VN"
-        },
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "DISCOVER"
-      }
-    },
-    {
-      "key": "collections.world:folder-10NNKWPU:7",
-      "collectionId": "collections.world",
-      "folderId": "folder-10NNKWPU",
-      "position": 7,
-      "title": "Κορυφαίες σειρές της χρονιάς",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "origin_country",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DISCOVER",
-          "tmdbId": null,
-          "traktListId": null,
-          "filters": {
-            "withOriginalLanguage": "vi",
-            "year": 2026,
-            "voteCountGte": 5,
-            "voteAverageGte": 6,
-            "releaseDateGte": "2026-01-01",
-            "releaseDateLte": "2026-12-31",
-            "withOriginCountry": "VN"
-          },
-          "sortBy": "vote_average.desc"
-        },
-        "originCountry": "VN"
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες σειρές της χρονιάς",
-        "sortBy": "vote_average.desc",
-        "tmdbId": null,
-        "addonId": null,
-        "filters": {
-          "withOriginalLanguage": "vi",
-          "year": 2026,
-          "voteCountGte": 5,
-          "voteAverageGte": 6,
-          "releaseDateGte": "2026-01-01",
-          "releaseDateLte": "2026-12-31",
           "withOriginCountry": "VN"
         },
         "sortHow": null,
@@ -87955,110 +86615,6 @@
       }
     },
     {
-      "key": "collections.world:folder-U58KOK24:6",
-      "collectionId": "collections.world",
-      "folderId": "folder-U58KOK24",
-      "position": 6,
-      "title": "Κορυφαίες ταινίες της χρονιάς",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "origin_country",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DISCOVER",
-          "tmdbId": null,
-          "traktListId": null,
-          "filters": {
-            "withOriginalLanguage": "is",
-            "year": 2026,
-            "voteCountGte": 8,
-            "voteAverageGte": 6,
-            "releaseDateGte": "2026-01-01",
-            "releaseDateLte": "2026-12-31",
-            "withOriginCountry": "IS"
-          },
-          "sortBy": "vote_average.desc"
-        },
-        "originCountry": "IS"
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες ταινίες της χρονιάς",
-        "sortBy": "vote_average.desc",
-        "tmdbId": null,
-        "addonId": null,
-        "filters": {
-          "withOriginalLanguage": "is",
-          "year": 2026,
-          "voteCountGte": 8,
-          "voteAverageGte": 6,
-          "releaseDateGte": "2026-01-01",
-          "releaseDateLte": "2026-12-31",
-          "withOriginCountry": "IS"
-        },
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "DISCOVER"
-      }
-    },
-    {
-      "key": "collections.world:folder-U58KOK24:7",
-      "collectionId": "collections.world",
-      "folderId": "folder-U58KOK24",
-      "position": 7,
-      "title": "Κορυφαίες σειρές της χρονιάς",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "origin_country",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DISCOVER",
-          "tmdbId": null,
-          "traktListId": null,
-          "filters": {
-            "withOriginalLanguage": "is",
-            "year": 2026,
-            "voteCountGte": 5,
-            "voteAverageGte": 6,
-            "releaseDateGte": "2026-01-01",
-            "releaseDateLte": "2026-12-31",
-            "withOriginCountry": "IS"
-          },
-          "sortBy": "vote_average.desc"
-        },
-        "originCountry": "IS"
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες σειρές της χρονιάς",
-        "sortBy": "vote_average.desc",
-        "tmdbId": null,
-        "addonId": null,
-        "filters": {
-          "withOriginalLanguage": "is",
-          "year": 2026,
-          "voteCountGte": 5,
-          "voteAverageGte": 6,
-          "releaseDateGte": "2026-01-01",
-          "releaseDateLte": "2026-12-31",
-          "withOriginCountry": "IS"
-        },
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "DISCOVER"
-      }
-    },
-    {
       "key": "collections.world:folder-UJU5PHHC:0",
       "collectionId": "collections.world",
       "folderId": "folder-UJU5PHHC",
@@ -90263,58 +88819,6 @@
       }
     },
     {
-      "key": "collections.world:folder-Z4R165P4:7",
-      "collectionId": "collections.world",
-      "folderId": "folder-Z4R165P4",
-      "position": 7,
-      "title": "Κορυφαίες σειρές της χρονιάς",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "origin_country",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DISCOVER",
-          "tmdbId": null,
-          "traktListId": null,
-          "filters": {
-            "withOriginalLanguage": "fa",
-            "year": 2026,
-            "voteCountGte": 5,
-            "voteAverageGte": 6,
-            "releaseDateGte": "2026-01-01",
-            "releaseDateLte": "2026-12-31",
-            "withOriginCountry": "IR"
-          },
-          "sortBy": "vote_average.desc"
-        },
-        "originCountry": "IR"
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες σειρές της χρονιάς",
-        "sortBy": "vote_average.desc",
-        "tmdbId": null,
-        "addonId": null,
-        "filters": {
-          "withOriginalLanguage": "fa",
-          "year": 2026,
-          "voteCountGte": 5,
-          "voteAverageGte": 6,
-          "releaseDateGte": "2026-01-01",
-          "releaseDateLte": "2026-12-31",
-          "withOriginCountry": "IR"
-        },
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
-        "traktListId": null,
-        "tmdbSourceType": "DISCOVER"
-      }
-    },
-    {
       "key": "collections.world:folder-Z55EA73B:0",
       "collectionId": "collections.world",
       "folderId": "folder-Z55EA73B",
@@ -90634,58 +89138,6 @@
         "provider": "tmdb",
         "catalogId": null,
         "mediaType": "MOVIE",
-        "traktListId": null,
-        "tmdbSourceType": "DISCOVER"
-      }
-    },
-    {
-      "key": "collections.world:folder-Z55EA73B:7",
-      "collectionId": "collections.world",
-      "folderId": "folder-Z55EA73B",
-      "position": 7,
-      "title": "Κορυφαίες σειρές της χρονιάς",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "origin_country",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "DISCOVER",
-          "tmdbId": null,
-          "traktListId": null,
-          "filters": {
-            "withOriginalLanguage": "bn",
-            "year": 2026,
-            "voteCountGte": 5,
-            "voteAverageGte": 6,
-            "releaseDateGte": "2026-01-01",
-            "releaseDateLte": "2026-12-31",
-            "withOriginCountry": "BD"
-          },
-          "sortBy": "vote_average.desc"
-        },
-        "originCountry": "BD"
-      },
-      "originalSource": {
-        "type": null,
-        "genre": null,
-        "title": "Κορυφαίες σειρές της χρονιάς",
-        "sortBy": "vote_average.desc",
-        "tmdbId": null,
-        "addonId": null,
-        "filters": {
-          "withOriginalLanguage": "bn",
-          "year": 2026,
-          "voteCountGte": 5,
-          "voteAverageGte": 6,
-          "releaseDateGte": "2026-01-01",
-          "releaseDateLte": "2026-12-31",
-          "withOriginCountry": "BD"
-        },
-        "sortHow": null,
-        "provider": "tmdb",
-        "catalogId": null,
-        "mediaType": "TV",
         "traktListId": null,
         "tmdbSourceType": "DISCOVER"
       }
