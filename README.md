@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/folders-517-111827?style=flat-square" alt="517 folders">
   <img src="https://img.shields.io/badge/active_rails-2%2C477-111827?style=flat-square" alt="2,477 active rails">
   <img src="https://img.shields.io/badge/empty_rails-0-16a34a?style=flat-square" alt="0 empty rails">
-  <img src="https://img.shields.io/badge/tests-30%2F30-16a34a?style=flat-square" alt="30/30 tests">
+  <img src="https://img.shields.io/badge/tests-33%2F33-16a34a?style=flat-square" alt="33/33 tests">
 </p>
 
 <p align="center">
@@ -45,7 +45,7 @@ resumable synchronizer και το GitHub Actions workflow που κρατά τ�
 | Κενά folders | **0** |
 | Unresolved list IDs | **0** |
 | Trakt / runtime-addon sources | **0 / 0** |
-| Automated tests | **30 / 30** |
+| Automated tests | **33 / 33** |
 
 Τα 42 sources που επέστρεφαν αποδεδειγμένα μηδενικό αποτέλεσμα με τον ακριβή
 predicate τους έχουν αποσυρθεί. Δεν διαγράφηκε ούτε συγχωνεύτηκε κανένα folder.
@@ -107,8 +107,8 @@ fingerprint κλειδώνεται ώστε bootstrap/compile/nightly sync να 
 project δεν μπορεί να εφεύρει την πραγματική πληροφορία· αποτρέπει όμως τη
 δημοσίευση τεχνικά λανθασμένων, mixed, incomplete ή ανεπιβεβαίωτων lists.
 
-Στο τελευταίο πλήρες scan αποκλείστηκαν 3.634 posterless rail-occurrences σε 750
-rails. Το `Somebody Knows Something` (TMDB TV 330654) επαληθεύτηκε με
+Στο τελευταίο πλήρες scan αποκλείστηκαν 3.602 posterless rail-occurrences. Το
+`Somebody Knows Something` (TMDB TV 330654) επαληθεύτηκε με
 `poster_path: null` και δεν δημοσιεύεται. Θα επιστρέψει αυτόματα αν προστεθεί
 poster στο TMDB. Ο κανόνας επιβάλλεται στα 2.077 materialized rails. Τα 398
 native sources εκτελούνται απευθείας από το Nuvio 0.8.3, το οποίο δεν παρέχει
@@ -153,8 +153,19 @@ channel subscriptions δεν προστίθενται σε folder άλλης υ�
   TMDB tags nature/wildlife/natural history/environment/ecology.
 - Τα 186 Film Series παραμένουν επίσημα TMDB `COLLECTION` sources και δεν
   λαμβάνουν filters που το Nuvio αγνοεί.
-- Studios χρησιμοποιούν canonical TMDB company identity. Popular, Top και
-  Recent έχουν διαφορετικά predicates.
+- Όλα τα movie studio rails κάνουν details verification: runtime τουλάχιστον
+  40′, released έως σήμερα, όχι Documentary/TV Movie, adult ή video. Άρα shorts,
+  specials, making-of και τηλεταινίες δεν βαφτίζονται studio feature films.
+- Walt Disney Animation Studios, Pixar, Illumination και Studio Ghibli έχουν
+  reviewed baselines **64 / 31 / 17 / 25** ταινιών από τις curated Trakt lists
+  **28495261 / 801240 / 23223808 / 801239**. Παραμένουν TMDB lists για το Nuvio,
+  ταξινομούνται νεότερη→παλαιότερη και επεκτείνονται μόνο με νέα TMDB company
+  results που περνούν όλο το feature/animation/poster contract.
+- Το Ghibli επιτρέπει ειδικά feature-length TMDB TV Movie classification επειδή
+  ανήκει στο reviewed canon του· τα άλλα τρία canons την αποκλείουν.
+- Studio `Recent` εφαρμόζει πρώτα rolling 24 μήνες. Αν εκεί υπάρχουν μόνο noise
+  ή κανένα feature, εμφανίζει τα πιο πρόσφατα έγκυρα feature films του studio,
+  ποτέ filler και ποτέ κενό rail.
 - Network Popular rails είναι native και τα Recent materialized όπου απαιτείται
   πλήρης ordering/ημερομηνιακή ακρίβεια.
 
@@ -242,10 +253,10 @@ flowchart LR
 
 | Εργασία | Χρόνος | Αποτέλεσμα |
 |---|---:|---|
-| Post-production full dry-run, 2.077 rails | 33,71 s | 0 changes, 0 failures, 2.077 skips |
-| Poster validation | ίδιο run | 3.634 exclusions, κανένα κενό candidate |
-| Final resumable production pass | 97,7 s | 13/13 changes exact read-back, 0 failures |
-| Tests + compile + audit | < 3 s τοπικά | 30/30, 2.477 sources, 0 unresolved IDs |
+| Post-production full dry-run, 2.077 rails | 42,5 s | 0 changes, 0 failures, 2.077 skips |
+| Poster validation | ίδιο run | 3.602 exclusions, κανένα κενό candidate |
+| Feature-film schema production pass | 200,3 s | 71/71 changes exact typed read-back, 0 failures |
+| Tests + compile + audit | < 3 s τοπικά | 33/33, 2.477 sources, 0 unresolved IDs |
 
 Ο nightly χρόνος εξαρτάται από changed fingerprints και TMDB rate limits. Το
 εβδομαδιαίο πλήρες awards refresh είναι σκόπιμα βαρύτερο.
@@ -272,7 +283,7 @@ flowchart LR
 | `config/awards.yml` | Award mappings και reviewed overrides |
 | `config/folders.lock.json` | Προστασία και των 517 folders |
 | `state/sync-state.json` | List IDs, fingerprints, checkpoints και tombstones |
-| `data/` | Versioned authoritative award snapshots |
+| `data/` | Versioned award snapshots και curated studio feature baselines |
 | `src/` | Compiler, materializers, validators και synchronizer |
 | `tests/` | Unit και semantic contract tests |
 | `docs/SEMANTIC-CONTRACT.md` | Durable κανόνες, regressions και hand-off evidence |
@@ -286,7 +297,7 @@ flowchart LR
 Απαιτείται Node.js 22+· το hosted workflow χρησιμοποιεί Node.js 24.
 
 ```powershell
-npm test                    # 30 automated contract tests
+npm test                    # 33 automated contract tests
 npm run audit               # structure, counts, locks και compatibility
 npm run sync:dry            # live candidates, χωρίς remote writes
 npm run sync                # production reconciliation

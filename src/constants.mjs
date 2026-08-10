@@ -8,6 +8,7 @@ export const AWARDS_FILE = path.join(ROOT, "config", "awards.yml");
 export const ACADEMY_AWARDS_SNAPSHOT_FILE = path.join(ROOT, "data", "academy-awards-winners-2026.json");
 export const ACADEMY_AWARDS_HONORARY_FILE = path.join(ROOT, "data", "academy-awards-honorary-international.json");
 export const CANNES_AWARDS_SNAPSHOT_FILE = path.join(ROOT, "data", "cannes-awards-winners-2026.json");
+export const CURATED_STUDIO_FEATURES_FILE = path.join(ROOT, "data", "curated-studio-features.json");
 export const LOCK_FILE = path.join(ROOT, "config", "folders.lock.json");
 export const STATE_FILE = path.join(ROOT, "state", "sync-state.json");
 export const OUTPUT_FILE = path.join(ROOT, "dist", "nuvio-collections-v5.0.json");

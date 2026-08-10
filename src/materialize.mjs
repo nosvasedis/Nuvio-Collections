@@ -3,6 +3,49 @@ import { dateFor, normalizeText, uniqueItems, dedupeLikelyDuplicateWorks, shiftY
 
 export function runtimeBucket(minutes) { if (minutes < 90) return "short"; if (minutes < 150) return "standard"; if (minutes < 180) return "long"; return "epic"; }
 
+function genreIds(item) {
+  return new Set([...(item.genre_ids ?? []), ...(item.genres ?? []).map((genre) => genre.id)].map(Number));
+}
+
+export function isFeatureFilm(item, policy = {}, today) {
+  const runtime = Number(item.runtime), releaseDate = item.release_date;
+  if (!Number.isFinite(runtime) || runtime < Number(policy.minRuntime ?? 40)) return false;
+  if (releaseDate && today && releaseDate > today) return false;
+  if (item.adult === true || item.video === true) return false;
+  const genres = genreIds(item);
+  if ((policy.requiredGenreIds ?? []).some((id) => !genres.has(Number(id)))) return false;
+  if ((policy.excludedGenreIds ?? [99, 10770]).some((id) => genres.has(Number(id)))) return false;
+  return true;
+}
+
+async function verifiedFeatureFilms(client, items, policy, today) {
+  const checked = await mapLimit(uniqueItems(items, "movie"), 16, async (item) => {
+    const details = await client.details("movie", item.id);
+    return isFeatureFilm(details, policy, today) ? { ...item, ...details, media_type: "movie" } : null;
+  });
+  return checked.filter(Boolean);
+}
+
+async function curatedStudioFeatures(client, rail, context) {
+  const policy = context.curatedStudio;
+  if (!policy || rail.mediaType !== "MOVIE") throw new Error(`Curated studio policy missing or non-movie: ${rail.key}`);
+  if (policy.pinnedIds.length !== policy.expectedBaselineCount) throw new Error(`Curated studio baseline is incomplete: ${rail.key}`);
+  const params = {
+    include_adult: false, include_video: false, sort_by: "primary_release_date.desc",
+    with_companies: policy.companyIds.join("|"), with_genres: policy.requiredGenreIds.join("|"),
+    without_genres: policy.excludedGenreIds.join("|"), "with_runtime.gte": policy.minRuntime,
+    "primary_release_date.lte": context.today,
+  };
+  const discovered = await client.discover("movie", params);
+  const pinned = policy.pinnedIds.map((id) => ({ id, media_type: "movie", _curatedBaseline: true }));
+  const verified = await verifiedFeatureFilms(client, [...pinned, ...discovered], policy, context.today);
+  const verifiedIds = new Set(verified.map((item) => item.id));
+  const missing = policy.pinnedIds.filter((id) => !verifiedIds.has(id));
+  if (missing.length) throw new Error(`Curated studio baseline failed feature validation: ${rail.key}: ${missing.join(",")}`);
+  verified.sort((a, b) => String(b.release_date ?? "").localeCompare(String(a.release_date ?? "")) || a.id - b.id);
+  return { scope: `CURATED_FEATURES:TRAKT=${policy.traktListId}:DYNAMIC_TMDB`, items: verified };
+}
+
 export function chooseAvailability(gr, worldwideFactory) {
   if (!Array.isArray(gr)) throw new Error("GR availability was not a successful result");
   if (gr.length) return { scope: "GR", items: gr };
@@ -144,6 +187,7 @@ async function streaming(client, rail, context) {
 export async function materializeRail(client, rail, context) {
   const media = rail.mediaType === "MOVIE" ? "movie" : "tv";
   if (rail.materializer === "streaming") return streaming(client, rail, context);
+  if (rail.materializer === "curated_studio_features") return curatedStudioFeatures(client, rail, context);
   if (rail.materializer === "award") {
     const route = context.award; if (!route?.categoryId && !route?.cannesCategory && !route?.oscarCategory) throw new Error(`Award mapping unresolved/fail-closed: ${rail.key}`);
     const startYear = route.startYear ?? [...String(rail.title).matchAll(/(19|20)\d{2}/g)].map((x) => Number(x[0]))[0];
@@ -204,5 +248,16 @@ export async function materializeRail(client, rail, context) {
       if (items.length) break;
     }
   }
-  return { scope: quorum == null ? "GLOBAL" : `GLOBAL:VOTE_QUORUM=${quorum}`, items: rank(items, rail, media, context.today) };
+  if (rail.materializer === "company" && media === "movie") {
+    items = await verifiedFeatureFilms(client, items, { minRuntime: 40, excludedGenreIds: [99, 10770] }, context.today);
+    if (!items.length && normalizeText(rail.title ?? "").includes("προσφα")) {
+      const widened = { ...params };
+      delete widened["primary_release_date.gte"];
+      widened.sort_by = "primary_release_date.desc";
+      items = await verifiedFeatureFilms(client, await client.discover(media, widened), { minRuntime: 40, excludedGenreIds: [99, 10770] }, context.today);
+      return { scope: "GLOBAL:LATEST_AVAILABLE_FEATURE_FILMS_VERIFIED", items: rank(items, rail, media, context.today) };
+    }
+  }
+  const scope = rail.materializer === "company" && media === "movie" ? "GLOBAL:FEATURE_FILMS_VERIFIED" : quorum == null ? "GLOBAL" : `GLOBAL:VOTE_QUORUM=${quorum}`;
+  return { scope, items: rank(items, rail, media, context.today) };
 }

@@ -1,8 +1,8 @@
-import { INPUT_FILE, RAILS_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, EXPECTED_MAPPING } from "./constants.mjs";
+import { INPUT_FILE, RAILS_FILE, CURATED_STUDIO_FEATURES_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, EXPECTED_MAPPING } from "./constants.mjs";
 import { readJson, fingerprint, invariant } from "./utils.mjs";
 
 export async function auditRepository({ requireListIds = false } = {}) {
-  const [input, manifest, lock, state] = await Promise.all([readJson(INPUT_FILE), readJson(RAILS_FILE), readJson(LOCK_FILE), readJson(STATE_FILE)]);
+  const [input, manifest, curatedStudios, lock, state] = await Promise.all([readJson(INPUT_FILE), readJson(RAILS_FILE), readJson(CURATED_STUDIO_FEATURES_FILE), readJson(LOCK_FILE), readJson(STATE_FILE)]);
   const folders = input.flatMap((c) => c.folders);
   const recommended = folders.find((f) => f.id === RECOMMENDED_FOLDER_ID);
   const folderIds = new Set(folders.map((f) => f.id));
@@ -23,6 +23,12 @@ export async function auditRepository({ requireListIds = false } = {}) {
   invariant(rails.length === EXPECTED.managedFinalSources && native.length === EXPECTED.native && materialized.length === EXPECTED.materialized, "Rail totals failed");
   invariant(new Set(rails.map((r) => r.key)).size === rails.length, "Duplicate rail key");
   invariant(materialized.every((r) => ["MOVIE", "TV"].includes(r.mediaType)), "Materialized list must be homogeneous");
+  const curatedRails = materialized.filter((r) => r.materializer === "curated_studio_features");
+  invariant(curatedRails.length === 4 && curatedRails.every((rail) => rail.mediaType === "MOVIE"), "Curated studio rail mapping failed");
+  invariant(curatedRails.every((rail) => {
+    const entry = curatedStudios.entries[rail.folderId];
+    return entry && entry.pinnedIds.length === entry.expectedBaselineCount && new Set(entry.pinnedIds).size === entry.pinnedIds.length && entry.traktListId === rail.params.legacy.traktListId;
+  }), "Curated studio provenance/baseline failed");
   for (const [collectionId, [nativeCount, materializedCount]] of Object.entries(EXPECTED_MAPPING)) {
     invariant(native.filter((r) => r.collectionId === collectionId).length === nativeCount, `Native mapping mismatch: ${collectionId}`);
     invariant(materialized.filter((r) => r.collectionId === collectionId).length === materializedCount, `Materialized mapping mismatch: ${collectionId}`);

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "policy": "reviewed-baseline-plus-verified-tmdb-discovery",
+  "entries": {
+    "folder-4OZG50Y4": {
+      "name": "Walt Disney Animation Studios",
+      "traktListId": 28495261,
+      "expectedBaselineCount": 64,
+      "companyIds": [6125],
+      "pinnedIds": [1084242, 1241982, 1022796, 877269, 568124, 527774, 330457, 404368, 277834, 269149, 177572, 109445, 82690, 51162, 38757, 10198, 13053, 1267, 9982, 13700, 10009, 9016, 11544, 10865, 11688, 10567, 49948, 37135, 10674, 11970, 10545, 10530, 8587, 812, 10020, 11135, 10144, 12233, 9994, 10957, 10948, 11319, 250480, 11886, 10112, 9325, 9078, 12230, 10882, 10340, 10693, 12092, 11224, 13465, 13757, 46929, 20343, 15947, 14906, 3170, 11360, 756, 10895, 408],
+      "requiredGenreIds": [16],
+      "excludedGenreIds": [99, 10770],
+      "minRuntime": 40,
+      "sources": ["https://www.disneyanimation.com/films/", "https://trakt.tv/lists/28495261"]
+    },
+    "folder-2XGVUWET": {
+      "name": "Pixar",
+      "traktListId": 801240,
+      "expectedBaselineCount": 31,
+      "companyIds": [3],
+      "pinnedIds": [1084244, 1327819, 1022787, 1022789, 976573, 718789, 508947, 508943, 508442, 508439, 301528, 260513, 354912, 260514, 127380, 105864, 150540, 62211, 62177, 49013, 10193, 14160, 10681, 2062, 920, 9806, 12, 585, 863, 9487, 862],
+      "requiredGenreIds": [16],
+      "excludedGenreIds": [99, 10770],
+      "minRuntime": 40,
+      "sources": ["https://trakt.tv/lists/801240"]
+    },
+    "folder-79DVGTP9": {
+      "name": "Illumination",
+      "traktListId": 23223808,
+      "expectedBaselineCount": 17,
+      "companyIds": [6704],
+      "pinnedIds": [1315772, 1226863, 519182, 940551, 502356, 438148, 438695, 412117, 360920, 324852, 335797, 328111, 211672, 93456, 73723, 50359, 20352],
+      "requiredGenreIds": [16],
+      "excludedGenreIds": [99, 10770],
+      "minRuntime": 40,
+      "sources": ["https://trakt.tv/lists/23223808"]
+    },
+    "folder-KIRXHA4A": {
+      "name": "Studio Ghibli",
+      "traktListId": 801239,
+      "expectedBaselineCount": 25,
+      "companyIds": [10342],
+      "pinnedIds": [508883, 683127, 337703, 242828, 149871, 149870, 83389, 51739, 12429, 37933, 4935, 12140, 15370, 129, 16198, 128, 37797, 15283, 21057, 11621, 15080, 16859, 12477, 8392, 10515],
+      "requiredGenreIds": [16],
+      "excludedGenreIds": [99],
+      "minRuntime": 40,
+      "sources": ["https://trakt.tv/lists/801239"]
+    }
+  }
+}

@@ -88,6 +88,36 @@ live sample produced 127/182/113/121 valid titles and zero cross-rail overlap.
 
 Regression: exact boundary and four-folder parameter tests.
 
+## Studio feature films and curated animation canons
+
+- Every movie rail in `collections.studios` is details-verified as a genuine
+  feature film: runtime at least 40 minutes, already released, not adult/video,
+  not Documentary, and not a TMDB TV Movie. TV studio rails remain typed TV and
+  are never folded into the movie list.
+- `Πρόσφατες ταινίες` first applies the normal rolling 24-month window. If that
+  window contains no eligible feature (only shorts/documentaries, or genuinely
+  no studio release), it widens to the studio's latest eligible released feature
+  films. Thus “recent” means the studio's most recent valid works rather than an
+  empty rail or unrelated filler.
+- The first rail in Walt Disney Animation Studios, Pixar, Illumination and
+  Studio Ghibli preserves the reviewed Trakt memberships as immutable provenance
+  and reviewed baselines: 64 / 31 / 17 / 25 films respectively. The runtime
+  source is still TMDB so Nuvio receives homogeneous, typed TMDB lists.
+- These four rails additionally search their canonical TMDB company IDs each
+  night. A newly discovered title is admitted only after the same details
+  verification plus Animation genre validation. The result is sorted by release
+  date newest to oldest.
+- Studio Ghibli deliberately permits TMDB genre `TV Movie` because the reviewed
+  25-film canon contains feature-length works whose TMDB distribution type is
+  television. Disney/Pixar/Illumination exclude that genre.
+- The reviewed IDs and policy live in `data/curated-studio-features.json`; the
+  bootstrap and audit both fail if their count, uniqueness or Trakt provenance
+  drifts. A pinned film failing semantic validation fails the rail closed instead
+  of silently deleting it from the canon.
+
+Regressions: exact four-rail bootstrap mapping, feature rejection boundaries,
+and dynamic curated merge/order tests.
+
 ## Streaming and other semantics
 
 - Streaming evaluates GR first with only `flatrate|free|ads`. A successful empty
@@ -103,7 +133,9 @@ Regression: exact boundary and four-folder parameter tests.
   applies the generic `nature` keyword consistently.
 - Materialized lists are homogeneous and compiled with `sortBy: original`.
 - Ordered typed IDs are fingerprinted. Identical runs perform no writes; changes
-  reconcile only that list and require exact v3 ordered read-back.
+  reconcile only that list and require exact v3 ordered read-back. Missing
+  `media_type` in that read-back is now a hard failure, preventing Nuvio from
+  silently interpreting a TV item as a movie.
 - A write-schema migration whose verified ordered IDs are unchanged upgrades the
   checkpoint without clearing/re-adding the same remote list.
 - TMDB v4 item-level `Media is invalid` and `Media is required` rejections are

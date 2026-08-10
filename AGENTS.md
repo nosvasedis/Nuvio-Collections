@@ -13,6 +13,13 @@ Non-negotiable rules:
 - Materialized lists must be homogeneous, non-empty, released-only where the
   rail says so, ordered as advertised, and contain only titles with a TMDB
   poster.
+- Movie studio rails must pass the feature-film details predicate. Preserve the
+  four reviewed Disney/Pixar/Illumination/Ghibli baselines and Trakt provenance
+  in `data/curated-studio-features.json`; never replace them with a generic
+  COMPANY result or admit shorts, documentaries, specials, future releases, or
+  unreviewed TV movies.
+- Exact v3 read-back must contain an explicit `media_type` for every item. Never
+  default a missing type to movie or TV during verification.
 - Actor rails use substantive cast credits only. Director rails use only
   case-insensitive `job=Director` credits.
 - Preserve stable list IDs. Creation and updates must remain resumable and

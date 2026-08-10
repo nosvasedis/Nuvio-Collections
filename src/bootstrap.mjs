@@ -1,4 +1,4 @@
-import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, EXPECTED, COUNTRY_BY_FOLDER, PERSON_ID_BY_FOLDER, RETIRED_RAIL_REASONS, PROVIDER_SEEDS, AWARD_SEEDS, AWARD_CATEGORY_SEEDS, CANNES_CATEGORY_SEEDS, OSCAR_CATEGORY_SEEDS, NON_WORK_AWARD_WINNERS } from "./constants.mjs";
+import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, CURATED_STUDIO_FEATURES_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, EXPECTED, COUNTRY_BY_FOLDER, PERSON_ID_BY_FOLDER, RETIRED_RAIL_REASONS, PROVIDER_SEEDS, AWARD_SEEDS, AWARD_CATEGORY_SEEDS, CANNES_CATEGORY_SEEDS, OSCAR_CATEGORY_SEEDS, NON_WORK_AWARD_WINNERS } from "./constants.mjs";
 import { readJson, writeJson, fingerprint, invariant, railKey, normalizeText } from "./utils.mjs";
 
 const MATERIALIZED_COLLECTIONS = new Set(["collections.streaming", "collections.genres", "collections.studios", "collections.actors", "collections.directors", "collections.awards", "collections.world", "collections.runtime"]);
@@ -98,7 +98,7 @@ function addGoldenMixedCategoryCompanions(rails) {
 }
 
 export async function bootstrap() {
-  const input = await readJson(INPUT_FILE);
+  const [input, curatedStudioFeatures] = await Promise.all([readJson(INPUT_FILE), readJson(CURATED_STUDIO_FEATURES_FILE)]);
   let existingAwards = null; try { existingAwards = await readJson(AWARDS_FILE); } catch {}
   invariant(Array.isArray(input) && input.length === EXPECTED.collections, "Unexpected collection count");
   const folders = input.flatMap((collection) => collection.folders);
@@ -117,10 +117,14 @@ export async function bootstrap() {
       rails.push({
         key: railKey(collection.id, folder.id, index), collectionId: collection.id, folderId: folder.id,
         position: index + offset, title: ["collections.actors", "collections.directors"].includes(collection.id) && source.title?.startsWith("Νέες ") ? source.title.replace(/^Νέες /, "Νεότερες ") : source.title ?? folder.title, mediaType: source.mediaType ?? (source.type === "movie" ? "MOVIE" : source.type === "series" ? "TV" : null),
-        strategy: mode, materializer: mode === "materialized" ? materializer(collection.id) : null,
+        strategy: mode, materializer: mode === "materialized" ? (collection.id === "collections.studios" && curatedStudioFeatures.entries[folder.id]?.traktListId === source.traktListId ? "curated_studio_features" : materializer(collection.id)) : null,
         listId: mode === "materialized" && source.tmdbSourceType === "LIST" ? source.tmdbId : null,
         params: paramsFor(collection, folder, source), originalSource: mode === "native" ? nativeOverride(collection.id, source, index) : source,
       });
+      if (rails.at(-1).materializer === "curated_studio_features") {
+        rails.at(-1).title = `Ταινίες ${curatedStudioFeatures.entries[folder.id].name}`;
+        rails.at(-1).params.curatedStudioFolderId = folder.id;
+      }
       if (collection.id === "collections.awards" && folder.id === "folder-47ec917f" && GOLDEN_EVOLUTION_TITLES[index]) {
         rails.at(-1).title = GOLDEN_EVOLUTION_TITLES[index];
         if (GOLDEN_EVOLUTION_START_YEARS[index]) rails.at(-1).params.awardStartYear = GOLDEN_EVOLUTION_START_YEARS[index];
@@ -141,6 +145,9 @@ export async function bootstrap() {
   invariant(rails.filter((x) => x.strategy === "native").length === EXPECTED.native, "Native rail count mismatch");
   invariant(rails.filter((x) => x.strategy === "materialized").length === EXPECTED.materialized, "Materialized rail count mismatch");
   invariant(rails.every((x) => x.collectionId !== "collections.world" || x.params.originCountry), "Missing origin country mapping");
+  const curatedRails = rails.filter((x) => x.materializer === "curated_studio_features");
+  invariant(curatedRails.length === 4, "Curated studio feature mapping mismatch");
+  invariant(curatedRails.every((rail) => curatedStudioFeatures.entries[rail.folderId]?.pinnedIds.length === curatedStudioFeatures.entries[rail.folderId]?.expectedBaselineCount), "Curated studio baseline count mismatch");
   invariant(folders.filter((folder) => folder.id !== RECOMMENDED_FOLDER_ID).every((folder) => rails.some((rail) => rail.folderId === folder.id)), "Retirement left an empty folder");
 
   const lock = { version: 1, inputFingerprint: fingerprint(input), recommendedFingerprint: fingerprint(recommended), folders: input.flatMap((c) => c.folders.map((f) => ({ collectionId: c.id, id: f.id, title: f.title, metadataFingerprint: fingerprint(Object.fromEntries(Object.entries(f).filter(([k]) => k !== "sources"))) }))) };

@@ -1,10 +1,10 @@
-import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, STATE_FILE, REPORT_FILE, EXPECTED } from "./constants.mjs";
+import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, CURATED_STUDIO_FEATURES_FILE, STATE_FILE, REPORT_FILE, EXPECTED } from "./constants.mjs";
 import { readJson, writeJson, fingerprint, athensDate, invariant, normalizeText, mapLimit } from "./utils.mjs";
 import { TmdbClient } from "./tmdb.mjs";
 import { materializeRail, requireUsablePosters } from "./materialize.mjs";
 
 function itemIds(items, media) { return items.map((x) => `${x.media_type ?? media}:${x.id}`); }
-const WRITE_SCHEMA_VERSION = 3;
+const WRITE_SCHEMA_VERSION = 4;
 export function normalizeCandidateItems(items, media) {
   const seen = new Set();
   return items.map((item) => ({ ...item, media_type: item.media_type ?? media })).filter((item) => {
@@ -51,7 +51,10 @@ async function reconcile(client, listId, items, oldItems, { knownEmpty = false }
   catch (error) { try { await clearAndConfirm(); await client.addItems(listId, oldItems); } catch (rollback) { error.message += `; ROLLBACK FAILED: ${rollback.message}`; } throw error; }
   const expected = itemIds(items);
   for (let attempt = 0; attempt < 8; attempt++) {
-    const readback = await client.listV3All(listId), actual = itemIds(readback.items ?? []);
+    const readback = await client.listV3All(listId);
+    const readbackItems = readback.items ?? [];
+    if (readbackItems.some((item) => !["movie", "tv"].includes(item.media_type))) throw new Error(`Typed v3 read-back missing media_type for list ${listId}`);
+    const actual = readbackItems.map((item) => `${item.media_type}:${item.id}`);
     if (expected.length === actual.length && expected.every((identity, i) => identity === actual[i])) return;
     if (attempt < 7) await wait(Math.min(30000, 1000 * 2 ** attempt));
   }
@@ -61,7 +64,7 @@ async function reconcile(client, listId, items, oldItems, { knownEmpty = false }
 export async function sync({ execute = false, force = false, client = new TmdbClient() } = {}) {
   const syncStartedAt = performance.now();
   if (execute) invariant(process.env.CONFIRM_TMDB_LIST_WRITES === "NUVIO-TMDB-LISTS", "Explicit TMDB write confirmation missing");
-  const [input, manifest, providers, awards, state] = await Promise.all([readJson(INPUT_FILE), readJson(RAILS_FILE), readJson(PROVIDERS_FILE), readJson(AWARDS_FILE), readJson(STATE_FILE)]);
+  const [input, manifest, providers, awards, curatedStudios, state] = await Promise.all([readJson(INPUT_FILE), readJson(RAILS_FILE), readJson(PROVIDERS_FILE), readJson(AWARDS_FILE), readJson(CURATED_STUDIO_FEATURES_FILE), readJson(STATE_FILE)]);
   const today = athensDate(), folderMap = new Map(input.flatMap((c) => c.folders).map((f) => [f.id, f]));
   const awardMap = new Map(awards.rails.map((x) => [x.key, x]));
   state.rails ??= {};
@@ -127,7 +130,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
       }
       const folderTitle = folderMap.get(rail.folderId)?.title ?? "";
       const provider = providers.providers.find((p) => { const target = normalizeText(folderTitle); return [p.name, p.slug, ...p.aliases].some((name) => target.includes(normalizeText(name)) || normalizeText(name).includes(target)); });
-      const context = { today, folderTitle, providerAliases: provider ? [provider.name, ...provider.aliases] : [], award: awardMap.get(rail.key), authorityOverrides: awards.authorityOverrides ?? {}, nonWorkWinners: awards.nonWorkWinners ?? [] };
+      const context = { today, folderTitle, providerAliases: provider ? [provider.name, ...provider.aliases] : [], award: awardMap.get(rail.key), curatedStudio: curatedStudios.entries[rail.params.curatedStudioFolderId], authorityOverrides: awards.authorityOverrides ?? {}, nonWorkWinners: awards.nonWorkWinners ?? [] };
       const media = rail.mediaType === "MOVIE" ? "movie" : "tv";
       // A write-schema migration must not force a fresh fuzzy title resolution
       // of immutable award history. Reuse the already verified typed IDs, run

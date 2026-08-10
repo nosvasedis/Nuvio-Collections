@@ -71978,13 +71978,14 @@
       "title": "Ταινίες Pixar",
       "mediaType": "MOVIE",
       "strategy": "materialized",
-      "materializer": "company",
+      "materializer": "curated_studio_features",
       "listId": null,
       "params": {
         "legacy": {
           "traktListId": 801240,
           "sortBy": "released"
-        }
+        },
+        "curatedStudioFolderId": "folder-2XGVUWET"
       },
       "originalSource": {
         "title": "Ταινίες Pixar",
@@ -72385,16 +72386,17 @@
       "collectionId": "collections.studios",
       "folderId": "folder-4OZG50Y4",
       "position": 0,
-      "title": "Κλασικές ταινίες",
+      "title": "Ταινίες Walt Disney Animation Studios",
       "mediaType": "MOVIE",
       "strategy": "materialized",
-      "materializer": "company",
+      "materializer": "curated_studio_features",
       "listId": null,
       "params": {
         "legacy": {
           "traktListId": 28495261,
           "sortBy": "released"
-        }
+        },
+        "curatedStudioFolderId": "folder-4OZG50Y4"
       },
       "originalSource": {
         "title": "Κλασικές ταινίες",
@@ -72973,13 +72975,14 @@
       "title": "Ταινίες Illumination",
       "mediaType": "MOVIE",
       "strategy": "materialized",
-      "materializer": "company",
+      "materializer": "curated_studio_features",
       "listId": null,
       "params": {
         "legacy": {
           "traktListId": 23223808,
           "sortBy": "released"
-        }
+        },
+        "curatedStudioFolderId": "folder-79DVGTP9"
       },
       "originalSource": {
         "title": "Ταινίες Illumination",
@@ -74503,13 +74506,14 @@
       "title": "Ταινίες Studio Ghibli",
       "mediaType": "MOVIE",
       "strategy": "materialized",
-      "materializer": "company",
+      "materializer": "curated_studio_features",
       "listId": null,
       "params": {
         "legacy": {
           "traktListId": 801239,
           "sortBy": "released"
-        }
+        },
+        "curatedStudioFolderId": "folder-KIRXHA4A"
       },
       "originalSource": {
         "title": "Ταινίες Studio Ghibli",

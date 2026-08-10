@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { bootstrap } from "../src/bootstrap.mjs";
 import { auditRepository } from "../src/validate.mjs";
 import { compile } from "../src/compiler.mjs";
-import { runtimeBucket, chooseAvailability, materializeRail, applySemanticPredicates, discoverParams, isSubstantiveCastCredit, requireUsablePosters } from "../src/materialize.mjs";
+import { runtimeBucket, chooseAvailability, materializeRail, applySemanticPredicates, discoverParams, isSubstantiveCastCredit, isFeatureFilm, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
 import { confirmationCompatible, normalizeCandidateItems, semanticRefreshDue } from "../src/sync.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS } from "../src/constants.mjs";
@@ -21,6 +21,48 @@ test("bootstrap creates the final immutable mapping", async () => {
   const approved = ["collections.actors:folder-D8PPUHIE:1", "collections.actors:folder-D8PPUHIE:3", "collections.actors:folder-D8PPUHIE:5", "collections.actors:folder-ZISLC5VJ:1", "collections.actors:folder-ZISLC5VJ:3", "collections.actors:folder-ZISLC5VJ:5"];
   assert.ok(approved.every((key) => !manifest.rails.some((rail) => rail.key === key)));
   assert.ok(approved.every((key) => RETIRED_RAIL_REASONS.get(key) === "NO_SUBSTANTIVE_TV_CAST_CREDITS" && retired.retiredRails[key]?.reason === "NO_SUBSTANTIVE_TV_CAST_CREDITS"));
+  const curated = manifest.rails.filter((rail) => rail.materializer === "curated_studio_features");
+  assert.deepEqual(curated.map((rail) => [rail.folderId, rail.params.legacy.traktListId, rail.mediaType]), [
+    ["folder-2XGVUWET", 801240, "MOVIE"], ["folder-4OZG50Y4", 28495261, "MOVIE"],
+    ["folder-79DVGTP9", 23223808, "MOVIE"], ["folder-KIRXHA4A", 801239, "MOVIE"],
+  ]);
+});
+
+test("studio feature policy rejects shorts, documentaries, TV movies, and future releases", () => {
+  const policy = { minRuntime: 40, requiredGenreIds: [16], excludedGenreIds: [99, 10770] };
+  assert.equal(isFeatureFilm({ runtime: 90, genres: [{ id: 16 }], release_date: "2026-01-01" }, policy, "2026-08-10"), true);
+  assert.equal(isFeatureFilm({ runtime: 39, genres: [{ id: 16 }], release_date: "2026-01-01" }, policy, "2026-08-10"), false);
+  assert.equal(isFeatureFilm({ runtime: 90, genres: [{ id: 16 }, { id: 99 }], release_date: "2026-01-01" }, policy, "2026-08-10"), false);
+  assert.equal(isFeatureFilm({ runtime: 90, genres: [{ id: 16 }, { id: 10770 }], release_date: "2026-01-01" }, policy, "2026-08-10"), false);
+  assert.equal(isFeatureFilm({ runtime: 90, genres: [{ id: 16 }], release_date: "2027-01-01" }, policy, "2026-08-10"), false);
+});
+
+test("curated studio baseline is preserved, dynamically extended, verified, and newest-first", async () => {
+  const policy = { traktListId: 801240, expectedBaselineCount: 2, companyIds: [3], pinnedIds: [10, 11], requiredGenreIds: [16], excludedGenreIds: [99, 10770], minRuntime: 40 };
+  const details = new Map([
+    [10, { id: 10, runtime: 90, genres: [{ id: 16 }], release_date: "2020-01-01" }],
+    [11, { id: 11, runtime: 95, genres: [{ id: 16 }], release_date: "2022-01-01" }],
+    [12, { id: 12, runtime: 100, genres: [{ id: 16 }], release_date: "2026-01-01" }],
+    [13, { id: 13, runtime: 10, genres: [{ id: 16 }], release_date: "2026-02-01" }],
+  ]);
+  const client = { discover: async () => [{ id: 12 }, { id: 13 }], details: async (_media, id) => details.get(id) };
+  const result = await materializeRail(client, { key: "pixar", mediaType: "MOVIE", materializer: "curated_studio_features" }, { today: "2026-08-10", curatedStudio: policy });
+  assert.equal(result.scope, "CURATED_FEATURES:TRAKT=801240:DYNAMIC_TMDB");
+  assert.deepEqual(result.items.map((item) => item.id), [12, 11, 10]);
+});
+
+test("empty studio 24-month Recent widens to latest verified features without accepting noise", async () => {
+  const calls = [];
+  const client = {
+    discover: async (_media, params) => { calls.push(params); return calls.length === 1 ? [{ id: 1 }] : [{ id: 2 }, { id: 3 }]; },
+    details: async (_media, id) => id === 1
+      ? { id, runtime: 53, genres: [{ id: 99 }], release_date: "2026-06-02" }
+      : id === 2 ? { id, runtime: 120, genres: [{ id: 18 }], release_date: "2023-01-01" }
+        : { id, runtime: 14, genres: [{ id: 16 }], release_date: "2026-07-08" },
+  };
+  const result = await materializeRail(client, { key: "studio", collectionId: "collections.studios", title: "Πρόσφατες ταινίες", mediaType: "MOVIE", materializer: "company", params: { legacy: { filters: {}, tmdbId: 17 } } }, { today: "2026-08-10", folderTitle: "Studio" });
+  assert.equal(calls.length, 2); assert.equal(calls[0]["primary_release_date.gte"], "2024-08-10"); assert.equal(calls[1]["primary_release_date.gte"], undefined);
+  assert.equal(result.scope, "GLOBAL:LATEST_AVAILABLE_FEATURE_FILMS_VERIFIED"); assert.deepEqual(result.items.map((item) => item.id), [2]);
 });
 
 test("poster gate excludes blank cards and automatically restores a title once TMDB adds a poster", async () => {
