@@ -117,6 +117,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
     } catch (error) { return { key: rail.key, status: "failed", error: error.message }; }
   });
   const preparationFailures = prepared.filter((x) => x.status === "failed");
+  for (const failure of preparationFailures) console.error(`[sync] PREPARATION FAILED ${failure.key}: ${failure.error}`);
   if (execute && !preparationFailures.length) {
     // Each rail is a durable mini-transaction: recover/create, checkpoint,
     // populate, exact read-back, checkpoint. Interrupted runs resume in place.
