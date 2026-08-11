@@ -181,6 +181,9 @@ Regression: same-day stability, next-day rotation, vote floor and exact bounds.
   super-folders. Thirty-one exact predicates with no TMDB result were retired
   from the active artifact after the live evidence scan; the 18 country folders
   remain and contain only their non-empty truthful rails.
+- Every World tile has an explicit country/region emoji, a visible Greek title
+  (`hideTitle: false`) and a canonical English-only sort key. This prevents new
+  Kaptain artwork metadata from hiding the translated title.
 - `reports/v5.0.1-additions.json` must show 189 active additions, zero empty and
   zero failed before release.
 

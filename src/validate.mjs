@@ -54,5 +54,8 @@ export async function auditRepository({ requireListIds = false } = {}) {
   invariant(world, "collections.world missing");
   const worldTitles = world.folders.map((folder) => folder.title);
   invariant(worldTitles.includes("Λατινοαμερικανικές") && worldTitles.includes("Πορτογαλικές"), "World Portuguese/Latin American folders missing");
+  invariant(world.folders.every((folder) => /[\u0370-\u03ff]/iu.test(folder.title)), "World folder title is not Greek");
+  invariant(world.folders.every((folder) => typeof folder.coverEmoji === "string" && folder.coverEmoji.trim()), "World folder country/region emoji missing");
+  invariant(world.folders.every((folder) => folder.hideTitle === false), "World folder Greek title is hidden");
   return { collections: input.length, folders: folders.length, finalSources: rails.length + recommended.sources.length, managed: rails.length, native: native.length, materialized: materialized.length, recommendedFingerprint: lock.recommendedFingerprint, unresolvedLists: materialized.filter((r) => !state.rails[r.key]?.listId).length };
 }

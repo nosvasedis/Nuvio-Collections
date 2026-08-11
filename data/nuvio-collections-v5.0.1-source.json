@@ -35434,7 +35434,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/algerian-cinema/algerian-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/algerian-cinema/algerian-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -35617,6 +35617,7 @@
             }
           }
         ],
+        "coverEmoji": "🇩🇿",
         "catalogSources": []
       },
       {
@@ -36695,7 +36696,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/canadian-cinema/canadian-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/canadian-cinema/canadian-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -36878,6 +36879,7 @@
             }
           }
         ],
+        "coverEmoji": "🇨🇦",
         "catalogSources": []
       },
       {
@@ -37948,7 +37950,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/emirati-cinema/emirati-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/emirati-cinema/emirati-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -38131,6 +38133,7 @@
             }
           }
         ],
+        "coverEmoji": "🇦🇪",
         "catalogSources": []
       },
       {
@@ -38141,7 +38144,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/ethiopian-cinema/ethiopian-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/ethiopian-cinema/ethiopian-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -38324,6 +38327,7 @@
             }
           }
         ],
+        "coverEmoji": "🇪🇹",
         "catalogSources": []
       },
       {
@@ -39030,7 +39034,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/ghanaian-cinema/ghanaian-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/ghanaian-cinema/ghanaian-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -39213,6 +39217,7 @@
             }
           }
         ],
+        "coverEmoji": "🇬🇭",
         "catalogSources": []
       },
       {
@@ -40105,7 +40110,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/iraqi-cinema/iraqi-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/iraqi-cinema/iraqi-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -40288,6 +40293,7 @@
             }
           }
         ],
+        "coverEmoji": "🇮🇶",
         "catalogSources": []
       },
       {
@@ -40476,7 +40482,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/israeli-cinema/israeli-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/israeli-cinema/israeli-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -40659,6 +40665,7 @@
             }
           }
         ],
+        "coverEmoji": "🇮🇱",
         "catalogSources": []
       },
       {
@@ -41009,7 +41016,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/jordanian-cinema/jordanian-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/jordanian-cinema/jordanian-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -41192,6 +41199,7 @@
             }
           }
         ],
+        "coverEmoji": "🇯🇴",
         "catalogSources": []
       },
       {
@@ -41202,7 +41210,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/kenyan-cinema/kenyan-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/kenyan-cinema/kenyan-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -41385,6 +41393,7 @@
             }
           }
         ],
+        "coverEmoji": "🇰🇪",
         "catalogSources": []
       },
       {
@@ -41735,7 +41744,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/lebanese-cinema/lebanese-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/lebanese-cinema/lebanese-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -41918,6 +41927,7 @@
             }
           }
         ],
+        "coverEmoji": "🇱🇧",
         "catalogSources": []
       },
       {
@@ -42106,7 +42116,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/moroccan-cinema/moroccan-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/moroccan-cinema/moroccan-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -42289,6 +42299,7 @@
             }
           }
         ],
+        "coverEmoji": "🇲🇦",
         "catalogSources": []
       },
       {
@@ -42299,7 +42310,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/nepali-cinema/nepali-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/nepali-cinema/nepali-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -42482,6 +42493,7 @@
             }
           }
         ],
+        "coverEmoji": "🇳🇵",
         "catalogSources": []
       },
       {
@@ -42848,7 +42860,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/pakistani-cinema/pakistani-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/pakistani-cinema/pakistani-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -43031,6 +43043,7 @@
             }
           }
         ],
+        "coverEmoji": "🇵🇰",
         "catalogSources": []
       },
       {
@@ -43715,7 +43728,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/saudi-cinema/saudi-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/saudi-cinema/saudi-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -43898,6 +43911,7 @@
             }
           }
         ],
+        "coverEmoji": "🇸🇦",
         "catalogSources": []
       },
       {
@@ -43908,7 +43922,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/senegalese-cinema/senegalese-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/senegalese-cinema/senegalese-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -44091,6 +44105,7 @@
             }
           }
         ],
+        "coverEmoji": "🇸🇳",
         "catalogSources": []
       },
       {
@@ -44449,7 +44464,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/sri-lankan-cinema/sri-lankan-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/sri-lankan-cinema/sri-lankan-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -44632,6 +44647,7 @@
             }
           }
         ],
+        "coverEmoji": "🇱🇰",
         "catalogSources": []
       },
       {
@@ -45176,7 +45192,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/tunisian-cinema/tunisian-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/tunisian-cinema/tunisian-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -45359,6 +45375,7 @@
             }
           }
         ],
+        "coverEmoji": "🇹🇳",
         "catalogSources": []
       },
       {
@@ -45539,7 +45556,7 @@
         "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/us-cinema/us-cinema-backdrop.jpg",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/international/us-cinema/us-cinema-hover.gif",
         "focusGifEnabled": true,
-        "hideTitle": true,
+        "hideTitle": false,
         "sources": [
           {
             "type": "movie",
@@ -45722,6 +45739,7 @@
             }
           }
         ],
+        "coverEmoji": "🇺🇸",
         "catalogSources": []
       },
       {

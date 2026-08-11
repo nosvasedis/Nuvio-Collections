@@ -110,23 +110,23 @@ if (filmSeriesIndex < 0 || base.some((collection) => collection.id === moodColle
 base.splice(filmSeriesIndex + 1, 0, moodCollection);
 
 const countryAdditions = {
-  "folder-1DLH4Q3B": ["Αλγερινές", "DZ"], "folder-WCOQJ028": ["Καναδικές", "CA"],
-  "folder-D1NICV2Z": ["Εμιρατινές", "AE"], "folder-W2F9SBO8": ["Αιθιοπικές", "ET"],
-  "folder-AK9ECCMJ": ["Γκανέζικες", "GH"], "folder-VBBN438M": ["Ιρακινές", "IQ"],
-  "folder-2DT7DVAT": ["Ισραηλινές", "IL"], "folder-BPH7ACF1": ["Ιορδανικές", "JO"],
-  "folder-U4QLYE75": ["Κενυάτικες", "KE"], "folder-DWVPX66N": ["Λιβανέζικες", "LB"],
-  "folder-F5XQ4UP6": ["Μαροκινές", "MA"], "folder-MH8C4JIK": ["Νεπαλέζικες", "NP"],
-  "folder-OBIM1CC7": ["Πακιστανικές", "PK"], "folder-ZP0ZUNHA": ["Σαουδαραβικές", "SA"],
-  "folder-34G8YHUB": ["Σενεγαλέζικες", "SN"], "folder-KFJI7SS7": ["Σριλανκέζικες", "LK"],
-  "folder-ZFQ2TA63": ["Τυνησιακές", "TN"], "folder-CHLCSAJ1": ["Αμερικανικές (ΗΠΑ)", "US"],
+  "folder-1DLH4Q3B": ["Αλγερινές", "DZ", "🇩🇿"], "folder-WCOQJ028": ["Καναδικές", "CA", "🇨🇦"],
+  "folder-D1NICV2Z": ["Εμιρατινές", "AE", "🇦🇪"], "folder-W2F9SBO8": ["Αιθιοπικές", "ET", "🇪🇹"],
+  "folder-AK9ECCMJ": ["Γκανέζικες", "GH", "🇬🇭"], "folder-VBBN438M": ["Ιρακινές", "IQ", "🇮🇶"],
+  "folder-2DT7DVAT": ["Ισραηλινές", "IL", "🇮🇱"], "folder-BPH7ACF1": ["Ιορδανικές", "JO", "🇯🇴"],
+  "folder-U4QLYE75": ["Κενυάτικες", "KE", "🇰🇪"], "folder-DWVPX66N": ["Λιβανέζικες", "LB", "🇱🇧"],
+  "folder-F5XQ4UP6": ["Μαροκινές", "MA", "🇲🇦"], "folder-MH8C4JIK": ["Νεπαλέζικες", "NP", "🇳🇵"],
+  "folder-OBIM1CC7": ["Πακιστανικές", "PK", "🇵🇰"], "folder-ZP0ZUNHA": ["Σαουδαραβικές", "SA", "🇸🇦"],
+  "folder-34G8YHUB": ["Σενεγαλέζικες", "SN", "🇸🇳"], "folder-KFJI7SS7": ["Σριλανκέζικες", "LK", "🇱🇰"],
+  "folder-ZFQ2TA63": ["Τυνησιακές", "TN", "🇹🇳"], "folder-CHLCSAJ1": ["Αμερικανικές (ΗΠΑ)", "US", "🇺🇸"],
 };
 const liveWorld = byTitle.get("International Cinema");
 const world = base.find((collection) => collection.id === "collections.world");
 if (!world) throw new Error("Canonical World collection missing");
-for (const [id, [title, country]] of Object.entries(countryAdditions)) {
+for (const [id, [title, country, coverEmoji]] of Object.entries(countryAdditions)) {
   const liveFolder = liveWorld.folders.find((folder) => folder.id === id);
   if (!liveFolder) throw new Error(`Kaptain country missing: ${id}`);
-  world.folders.push({ ...structuredClone(liveFolder), title, sources: standardEight({ originCountry: country, moviePopularVotes: 25, tvPopularVotes: 10, allowQuorumFallback: true }), catalogSources: [] });
+  world.folders.push({ ...structuredClone(liveFolder), title, coverEmoji, hideTitle: false, sources: standardEight({ originCountry: country, moviePopularVotes: 25, tvPopularVotes: 10, allowQuorumFallback: true }), catalogSources: [] });
 }
 world.folders.sort((a, b) => a.title.localeCompare(b.title, "el"));
 

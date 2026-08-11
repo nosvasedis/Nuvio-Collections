@@ -335,6 +335,9 @@ test("six user-facing collections use canonical English folder sort keys", async
   assert.ok(titles.indexOf("Λατινοαμερικανικές") > titles.indexOf("Κορεάτικες") && titles.indexOf("Λατινοαμερικανικές") < titles.indexOf("Λιβανέζικες"));
   assert.ok(titles.indexOf("Πορτογαλικές") > titles.indexOf("Πολωνικές") && titles.indexOf("Πορτογαλικές") < titles.indexOf("Ρωσικές"));
   assert.equal(world.folders.length, 58);
+  assert.ok(world.folders.every((folder) => /[\u0370-\u03ff]/iu.test(folder.title)));
+  assert.ok(world.folders.every((folder) => typeof folder.coverEmoji === "string" && folder.coverEmoji.trim()));
+  assert.ok(world.folders.every((folder) => folder.hideTitle === false));
   assert.equal(world.folders.filter((folder) => folder.id === "collections.world.portuguese" || folder.id === "collections.world.latin-american").length, 2);
 });
 

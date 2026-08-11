@@ -95,6 +95,8 @@ fingerprint κλειδώνεται ώστε bootstrap/compile/nightly sync να 
 παραμένουν αμετάβλητα. Τα σταθερά English keys βρίσκονται στο
 `data/folder-sort-keys.json` και ελέγχονται από bootstrap, tests και strict
 audit, ώστε μελλοντικό build να μην επιστρέψει κατά λάθος σε ελληνική σειρά.
+Στον Κόσμο, και τα 58 folders έχουν ορατό ελληνικό τίτλο και ρητό emoji
+χώρας/περιοχής· το artwork δεν επιτρέπεται να κρύβει τη μετάφραση.
 
 ## Τι σημαίνει «ακριβές»
 
