@@ -48,6 +48,9 @@ test("bootstrap creates the final immutable mapping", async () => {
   const discoverTop = manifest.rails.filter((rail) => rail.folderId === "collections.discover.top-rated-2");
   assert.deepEqual(discoverTop.map((rail) => rail.title), ["Κορυφαίες πρόσφατες ταινίες", "Κορυφαίες πρόσφατες σειρές", "Κορυφαίες ταινίες όλων των εποχών", "Κορυφαίες σειρές όλων των εποχών"]);
   assert.ok(discoverTop.every((rail) => rail.strategy === "materialized"));
+  const filmSeries = manifest.rails.filter((rail) => rail.collectionId === "collections.film-series");
+  assert.equal(filmSeries.length, 186);
+  assert.ok(filmSeries.every((rail) => rail.strategy === "native" && rail.originalSource.tmdbSourceType === "COLLECTION" && rail.originalSource.sortBy === "primary_release_date.desc"));
 });
 
 test("studio feature policy rejects shorts, documentaries, TV movies, and future releases", () => {
@@ -480,6 +483,9 @@ test("placeholder compilation preserves all folders and recommended byte semanti
   const managed = after.flatMap((c) => c.folders).filter((f) => f.id !== RECOMMENDED_FOLDER_ID).flatMap((f) => f.sources);
   assert.equal(managed.filter((s) => s.provider === "trakt" || s.traktListId).length, 0);
   assert.ok(managed.filter((s) => s.tmdbSourceType === "LIST").every((s) => s.sortBy === "original"));
+  const filmSeries = after.find((collection) => collection.id === "collections.film-series").folders.flatMap((folder) => folder.sources);
+  assert.equal(filmSeries.length, 186);
+  assert.ok(filmSeries.every((source) => source.tmdbSourceType === "COLLECTION" && source.sortBy === "primary_release_date.desc"));
   assert.ok(managed.filter((s) => s.provider === "tmdb").every((s) => s.type === (s.mediaType === "TV" ? "series" : "movie")));
   assert.equal(assertNuvioMediaTypeContract(after, { managedOnly: true }), true);
 });

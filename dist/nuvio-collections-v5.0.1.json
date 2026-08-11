@@ -10638,7 +10638,7 @@
         "sources": [
           {
             "title": "28 Days/Weeks/Years Later",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 1565,
             "filters": {},
             "provider": "tmdb",
@@ -10656,7 +10656,7 @@
         "sources": [
           {
             "title": "Αγώνες πείνας",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 131635,
             "filters": {},
             "provider": "tmdb",
@@ -10679,7 +10679,7 @@
         "sources": [
           {
             "title": "Ο Άλβιν και η Παρέα του",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 167613,
             "filters": {},
             "provider": "tmdb",
@@ -10702,7 +10702,7 @@
         "sources": [
           {
             "title": "Αλεξίσφαιροι Ντετέκτιβ",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 90863,
             "filters": {},
             "provider": "tmdb",
@@ -10725,7 +10725,7 @@
         "sources": [
           {
             "title": "Άλιεν",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 8091,
             "filters": {},
             "provider": "tmdb",
@@ -10748,7 +10748,7 @@
         "sources": [
           {
             "title": "Άνθρωπος από ατσάλι",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 209131,
             "filters": {},
             "provider": "tmdb",
@@ -10771,7 +10771,7 @@
         "sources": [
           {
             "title": "Οι Άντρες με τα Μαύρα",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 86055,
             "filters": {},
             "provider": "tmdb",
@@ -10794,7 +10794,7 @@
         "sources": [
           {
             "title": "Οι Απίθανοι",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 468222,
             "filters": {},
             "provider": "tmdb",
@@ -10817,7 +10817,7 @@
         "sources": [
           {
             "title": "Ο απίθανος κόσμος του Γουέιν",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 8979,
             "filters": {},
             "provider": "tmdb",
@@ -10840,7 +10840,7 @@
         "sources": [
           {
             "title": "Αρχηγός από Κούνια",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 519457,
             "filters": {},
             "provider": "tmdb",
@@ -10863,7 +10863,7 @@
         "sources": [
           {
             "title": "Ο Άρχοντας των Δαχτυλιδιών",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 119,
             "filters": {},
             "provider": "tmdb",
@@ -10886,7 +10886,7 @@
         "sources": [
           {
             "title": "Το Αυτό",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 477962,
             "filters": {},
             "provider": "tmdb",
@@ -10909,7 +10909,7 @@
         "sources": [
           {
             "title": "Αυτοκίνητα",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 87118,
             "filters": {},
             "provider": "tmdb",
@@ -10932,7 +10932,7 @@
         "sources": [
           {
             "title": "Ο Βετεράνος",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 46512,
             "filters": {},
             "provider": "tmdb",
@@ -10955,7 +10955,7 @@
         "sources": [
           {
             "title": "Βλέπω το Θάνατό σου",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 8864,
             "filters": {},
             "provider": "tmdb",
@@ -10983,7 +10983,7 @@
         "sources": [
           {
             "title": "Βρέχει κεφτέδες",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 177467,
             "filters": {},
             "provider": "tmdb",
@@ -11001,7 +11001,7 @@
         "sources": [
           {
             "title": "Βρώμικος Χάρι",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 10456,
             "filters": {},
             "provider": "tmdb",
@@ -11024,7 +11024,7 @@
         "sources": [
           {
             "title": "Γαμπρός της Συμφοράς",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 51509,
             "filters": {},
             "provider": "tmdb",
@@ -11047,7 +11047,7 @@
         "sources": [
           {
             "title": "Γκόστμπαστερς",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 2980,
             "filters": {},
             "provider": "tmdb",
@@ -11070,7 +11070,7 @@
         "sources": [
           {
             "title": "Γύρισε ο μπαμπάς",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 473971,
             "filters": {},
             "provider": "tmdb",
@@ -11093,7 +11093,7 @@
         "sources": [
           {
             "title": "Η Δική μου Ακαδημία Ηρώων",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 1189668,
             "filters": {},
             "provider": "tmdb",
@@ -11116,7 +11116,7 @@
         "sources": [
           {
             "title": "Εγώ, ο Απαισιότατος",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 86066,
             "filters": {},
             "provider": "tmdb",
@@ -11139,7 +11139,7 @@
         "sources": [
           {
             "title": "Η εκδίκηση της ξανθιάς",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 86024,
             "filters": {},
             "provider": "tmdb",
@@ -11167,7 +11167,7 @@
         "sources": [
           {
             "title": "Οι Εκδικητές",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 86311,
             "filters": {},
             "provider": "tmdb",
@@ -11185,7 +11185,7 @@
         "sources": [
           {
             "title": "Ενόλα Χολμς",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 829314,
             "filters": {},
             "provider": "tmdb",
@@ -11208,7 +11208,7 @@
         "sources": [
           {
             "title": "Ο Εξολοθρευτής",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 528,
             "filters": {},
             "provider": "tmdb",
@@ -11231,7 +11231,7 @@
         "sources": [
           {
             "title": "Ο Εξορκιστής",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 12263,
             "filters": {},
             "provider": "tmdb",
@@ -11254,7 +11254,7 @@
         "sources": [
           {
             "title": "Επικίνδυνη αποστολή",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 87359,
             "filters": {},
             "provider": "tmdb",
@@ -11277,7 +11277,7 @@
         "sources": [
           {
             "title": "Επιστροφή στο μέλλον",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 264,
             "filters": {},
             "provider": "tmdb",
@@ -11300,7 +11300,7 @@
         "sources": [
           {
             "title": "Η Εποχή των Παγετώνων",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 8354,
             "filters": {},
             "provider": "tmdb",
@@ -11323,7 +11323,7 @@
         "sources": [
           {
             "title": "Εφιάλτης στο δρόμο με τις λεύκες",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 8581,
             "filters": {},
             "provider": "tmdb",
@@ -11346,7 +11346,7 @@
         "sources": [
           {
             "title": "Το Ημερολόγιο ενός Σπασίκλα",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 86110,
             "filters": {},
             "provider": "tmdb",
@@ -11369,7 +11369,7 @@
         "sources": [
           {
             "title": "Ιντιάνα Τζόουνς",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 84,
             "filters": {},
             "provider": "tmdb",
@@ -11392,7 +11392,7 @@
         "sources": [
           {
             "title": "Η Ιστορία των Παιχνιδιών",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 10194,
             "filters": {},
             "provider": "tmdb",
@@ -11415,7 +11415,7 @@
         "sources": [
           {
             "title": "Η Κάθαρση",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 256322,
             "filters": {},
             "provider": "tmdb",
@@ -11438,7 +11438,7 @@
         "sources": [
           {
             "title": "Τα Κακά Παιδιά",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 14890,
             "filters": {},
             "provider": "tmdb",
@@ -11461,7 +11461,7 @@
         "sources": [
           {
             "title": "Το Κάλεσμα",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 313086,
             "filters": {},
             "provider": "tmdb",
@@ -11489,7 +11489,7 @@
         "sources": [
           {
             "title": "Η Καλόγρια",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 968052,
             "filters": {},
             "provider": "tmdb",
@@ -11507,7 +11507,7 @@
         "sources": [
           {
             "title": "Η Κατάρα",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 1974,
             "filters": {},
             "provider": "tmdb",
@@ -11530,7 +11530,7 @@
         "sources": [
           {
             "title": "Καταστροφέας Ραλφ",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 404825,
             "filters": {},
             "provider": "tmdb",
@@ -11553,7 +11553,7 @@
         "sources": [
           {
             "title": "Κουνγκ Φου Πάντα",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 77816,
             "filters": {},
             "provider": "tmdb",
@@ -11576,7 +11576,7 @@
         "sources": [
           {
             "title": "Κραυγή αγωνίας",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 2602,
             "filters": {},
             "provider": "tmdb",
@@ -11599,7 +11599,7 @@
         "sources": [
           {
             "title": "Ο Κυνηγός",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 399,
             "filters": {},
             "provider": "tmdb",
@@ -11622,7 +11622,7 @@
         "sources": [
           {
             "title": "Ο Λαβύρινθος",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 295130,
             "filters": {},
             "provider": "tmdb",
@@ -11645,7 +11645,7 @@
         "sources": [
           {
             "title": "Το Λυκόφως",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 33514,
             "filters": {},
             "provider": "tmdb",
@@ -11668,7 +11668,7 @@
         "sources": [
           {
             "title": "Μαδαγασκάρη",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 14740,
             "filters": {},
             "provider": "tmdb",
@@ -11696,7 +11696,7 @@
         "sources": [
           {
             "title": "Μαθητευόμενος Μπάτσος",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 376650,
             "filters": {},
             "provider": "tmdb",
@@ -11714,7 +11714,7 @@
         "sources": [
           {
             "title": "Μαντ Μαξ",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 8945,
             "filters": {},
             "provider": "tmdb",
@@ -11737,7 +11737,7 @@
         "sources": [
           {
             "title": "Οι Μαχητές των Δρόμων",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 9485,
             "filters": {},
             "provider": "tmdb",
@@ -11765,7 +11765,7 @@
         "sources": [
           {
             "title": "Οι Μεγάλοι",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 180546,
             "filters": {},
             "provider": "tmdb",
@@ -11783,7 +11783,7 @@
         "sources": [
           {
             "title": "Ο Μεταφορέας",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 9518,
             "filters": {},
             "provider": "tmdb",
@@ -11806,7 +11806,7 @@
         "sources": [
           {
             "title": "Μην Ανασαίνεις",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 748919,
             "filters": {},
             "provider": "tmdb",
@@ -11829,7 +11829,7 @@
         "sources": [
           {
             "title": "Μην πυροβολείτε τη γιαγιά",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 44979,
             "filters": {},
             "provider": "tmdb",
@@ -11852,7 +11852,7 @@
         "sources": [
           {
             "title": "Μια Νύχτα στο Μουσείο",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 85943,
             "filters": {},
             "provider": "tmdb",
@@ -11875,7 +11875,7 @@
         "sources": [
           {
             "title": "Οι Μικροί Πρωταθλητές",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 10709,
             "filters": {},
             "provider": "tmdb",
@@ -11903,7 +11903,7 @@
         "sources": [
           {
             "title": "Μίνιονς",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 544669,
             "filters": {},
             "provider": "tmdb",
@@ -11921,7 +11921,7 @@
         "sources": [
           {
             "title": "Μόνος στο Σπίτι",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 9888,
             "filters": {},
             "provider": "tmdb",
@@ -11944,7 +11944,7 @@
         "sources": [
           {
             "title": "Η Μούμια",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 1733,
             "filters": {},
             "provider": "tmdb",
@@ -11967,7 +11967,7 @@
         "sources": [
           {
             "title": "Μπαμπούλες",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 137696,
             "filters": {},
             "provider": "tmdb",
@@ -11990,7 +11990,7 @@
         "sources": [
           {
             "title": "Μπάτε σκύλοι αλέστε",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 427084,
             "filters": {},
             "provider": "tmdb",
@@ -12013,7 +12013,7 @@
         "sources": [
           {
             "title": "Μπορν",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 31562,
             "filters": {},
             "provider": "tmdb",
@@ -12041,7 +12041,7 @@
         "sources": [
           {
             "title": "Τα Μυαλά που Κουβαλάς",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 1022790,
             "filters": {},
             "provider": "tmdb",
@@ -12059,7 +12059,7 @@
         "sources": [
           {
             "title": "Ο Νονός",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 230,
             "filters": {},
             "provider": "tmdb",
@@ -12082,7 +12082,7 @@
         "sources": [
           {
             "title": "Η Νύχτα με τις Μάσκες",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 91361,
             "filters": {},
             "provider": "tmdb",
@@ -12105,7 +12105,7 @@
         "sources": [
           {
             "title": "Ξενοδοχείο για Τέρατα",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 185103,
             "filters": {},
             "provider": "tmdb",
@@ -12128,7 +12128,7 @@
         "sources": [
           {
             "title": "Η Οικογένεια Άνταμς",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 750822,
             "filters": {},
             "provider": "tmdb",
@@ -12151,7 +12151,7 @@
         "sources": [
           {
             "title": "Παγιδευμένη Ψυχή",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 228446,
             "filters": {},
             "provider": "tmdb",
@@ -12174,7 +12174,7 @@
         "sources": [
           {
             "title": "Πάντινγκτον",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 488924,
             "filters": {},
             "provider": "tmdb",
@@ -12197,7 +12197,7 @@
         "sources": [
           {
             "title": "Παρασκευή και 13",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 9735,
             "filters": {},
             "provider": "tmdb",
@@ -12220,7 +12220,7 @@
         "sources": [
           {
             "title": "Οι Πειρατές της Καραϊβικής",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 295,
             "filters": {},
             "provider": "tmdb",
@@ -12243,7 +12243,7 @@
         "sources": [
           {
             "title": "Πενήντα αποχρώσεις του γκρι",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 344830,
             "filters": {},
             "provider": "tmdb",
@@ -12266,7 +12266,7 @@
         "sources": [
           {
             "title": "Ο Πλανήτης των Πιθήκων",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 1709,
             "filters": {},
             "provider": "tmdb",
@@ -12294,7 +12294,7 @@
         "sources": [
           {
             "title": "Ο Πλανήτης των Πιθήκων (Reboot)",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 173710,
             "filters": {},
             "provider": "tmdb",
@@ -12312,7 +12312,7 @@
         "sources": [
           {
             "title": "Πόκεμον: Οι ταινίες",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 34055,
             "filters": {},
             "provider": "tmdb",
@@ -12335,7 +12335,7 @@
         "sources": [
           {
             "title": "Η προφητεία",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 10919,
             "filters": {},
             "provider": "tmdb",
@@ -12358,7 +12358,7 @@
         "sources": [
           {
             "title": "Πώς να Εκπαιδεύσετε το Δράκο σας",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 89137,
             "filters": {},
             "provider": "tmdb",
@@ -12381,7 +12381,7 @@
         "sources": [
           {
             "title": "Ρόκυ",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 1575,
             "filters": {},
             "provider": "tmdb",
@@ -12404,7 +12404,7 @@
         "sources": [
           {
             "title": "Ρόμπερτ Λάνγκντον",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 115776,
             "filters": {},
             "provider": "tmdb",
@@ -12427,7 +12427,7 @@
         "sources": [
           {
             "title": "Ρόμποκοπ",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 5547,
             "filters": {},
             "provider": "tmdb",
@@ -12450,7 +12450,7 @@
         "sources": [
           {
             "title": "Σε βλέπω",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 656,
             "filters": {},
             "provider": "tmdb",
@@ -12473,7 +12473,7 @@
         "sources": [
           {
             "title": "Σέρλοκ Χολμς",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 102322,
             "filters": {},
             "provider": "tmdb",
@@ -12496,7 +12496,7 @@
         "sources": [
           {
             "title": "Σήμα κινδύνου",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 14563,
             "filters": {},
             "provider": "tmdb",
@@ -12519,7 +12519,7 @@
         "sources": [
           {
             "title": "Σκοτεινή Δύναμη",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 735,
             "filters": {},
             "provider": "tmdb",
@@ -12542,7 +12542,7 @@
         "sources": [
           {
             "title": "Ο Σκοτεινός Ιππότης",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 263,
             "filters": {},
             "provider": "tmdb",
@@ -12565,7 +12565,7 @@
         "sources": [
           {
             "title": "Σρεκ",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 2150,
             "filters": {},
             "provider": "tmdb",
@@ -12588,7 +12588,7 @@
         "sources": [
           {
             "title": "Η Ταινία Lego",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 325470,
             "filters": {},
             "provider": "tmdb",
@@ -12611,7 +12611,7 @@
         "sources": [
           {
             "title": "Τζέιμς Μποντ, Πράκτωρ 007",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 645,
             "filters": {},
             "provider": "tmdb",
@@ -12634,7 +12634,7 @@
         "sources": [
           {
             "title": "Τζουράσικ Παρκ",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 328,
             "filters": {},
             "provider": "tmdb",
@@ -12657,7 +12657,7 @@
         "sources": [
           {
             "title": "Τραγούδα!",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 544670,
             "filters": {},
             "provider": "tmdb",
@@ -12680,7 +12680,7 @@
         "sources": [
           {
             "title": "Το τρελό θηριοτροφείο",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 108693,
             "filters": {},
             "provider": "tmdb",
@@ -12703,7 +12703,7 @@
         "sources": [
           {
             "title": "Η Τριλογία της Απόκλισης",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 283579,
             "filters": {},
             "provider": "tmdb",
@@ -12726,7 +12726,7 @@
         "sources": [
           {
             "title": "Υπάλληλοι",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 182813,
             "filters": {},
             "provider": "tmdb",
@@ -12749,7 +12749,7 @@
         "sources": [
           {
             "title": "Φανταστικά Ζώα",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 435259,
             "filters": {},
             "provider": "tmdb",
@@ -12772,7 +12772,7 @@
         "sources": [
           {
             "title": "Φύλακες του Γαλαξία",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 284433,
             "filters": {},
             "provider": "tmdb",
@@ -12800,7 +12800,7 @@
         "sources": [
           {
             "title": "Χαϊλάντερ",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 8050,
             "filters": {},
             "provider": "tmdb",
@@ -12818,7 +12818,7 @@
         "sources": [
           {
             "title": "Χάρι Πότερ",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 1241,
             "filters": {},
             "provider": "tmdb",
@@ -12841,7 +12841,7 @@
         "sources": [
           {
             "title": "Χόμπιτ",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 121938,
             "filters": {},
             "provider": "tmdb",
@@ -12864,7 +12864,7 @@
         "sources": [
           {
             "title": "Το Χρονικό της Νάρνια",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 420,
             "filters": {},
             "provider": "tmdb",
@@ -12887,7 +12887,7 @@
         "sources": [
           {
             "title": "Ψάχνοντας τον Νέμο",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 137697,
             "filters": {},
             "provider": "tmdb",
@@ -12910,7 +12910,7 @@
         "sources": [
           {
             "title": "A Quiet Place",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 521226,
             "filters": {},
             "provider": "tmdb",
@@ -12933,7 +12933,7 @@
         "sources": [
           {
             "title": "Ace Ventura",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 3167,
             "filters": {},
             "provider": "tmdb",
@@ -12956,7 +12956,7 @@
         "sources": [
           {
             "title": "American Pie",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 2806,
             "filters": {},
             "provider": "tmdb",
@@ -12979,7 +12979,7 @@
         "sources": [
           {
             "title": "Anchorman",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 93791,
             "filters": {},
             "provider": "tmdb",
@@ -13007,7 +13007,7 @@
         "sources": [
           {
             "title": "Annabelle",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 402074,
             "filters": {},
             "provider": "tmdb",
@@ -13025,7 +13025,7 @@
         "sources": [
           {
             "title": "Austin Powers",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 1006,
             "filters": {},
             "provider": "tmdb",
@@ -13053,7 +13053,7 @@
         "sources": [
           {
             "title": "Avatar",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 87096,
             "filters": {},
             "provider": "tmdb",
@@ -13071,7 +13071,7 @@
         "sources": [
           {
             "title": "Behind Enemy Lines",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 98513,
             "filters": {},
             "provider": "tmdb",
@@ -13094,7 +13094,7 @@
         "sources": [
           {
             "title": "Beverly Hills Cop",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 85861,
             "filters": {},
             "provider": "tmdb",
@@ -13117,7 +13117,7 @@
         "sources": [
           {
             "title": "Blade Runner",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 422837,
             "filters": {},
             "provider": "tmdb",
@@ -13140,7 +13140,7 @@
         "sources": [
           {
             "title": "Boondock Saints",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 87186,
             "filters": {},
             "provider": "tmdb",
@@ -13163,7 +13163,7 @@
         "sources": [
           {
             "title": "Bridget Jones",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 8936,
             "filters": {},
             "provider": "tmdb",
@@ -13186,7 +13186,7 @@
         "sources": [
           {
             "title": "Bring It On",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 430186,
             "filters": {},
             "provider": "tmdb",
@@ -13209,7 +13209,7 @@
         "sources": [
           {
             "title": "Child's Play",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 10455,
             "filters": {},
             "provider": "tmdb",
@@ -13237,7 +13237,7 @@
         "sources": [
           {
             "title": "Clash of the Titans",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 86780,
             "filters": {},
             "provider": "tmdb",
@@ -13255,7 +13255,7 @@
         "sources": [
           {
             "title": "Creed",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 553717,
             "filters": {},
             "provider": "tmdb",
@@ -13278,7 +13278,7 @@
         "sources": [
           {
             "title": "Demon Slayer: Kimetsu no Yaiba",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 925155,
             "filters": {},
             "provider": "tmdb",
@@ -13301,7 +13301,7 @@
         "sources": [
           {
             "title": "Detective Conan",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 39199,
             "filters": {},
             "provider": "tmdb",
@@ -13324,7 +13324,7 @@
         "sources": [
           {
             "title": "Die Hard",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 1570,
             "filters": {},
             "provider": "tmdb",
@@ -13347,7 +13347,7 @@
         "sources": [
           {
             "title": "Dirty Dozen",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 124492,
             "filters": {},
             "provider": "tmdb",
@@ -13370,7 +13370,7 @@
         "sources": [
           {
             "title": "Dragon Ball",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 386410,
             "filters": {},
             "provider": "tmdb",
@@ -13393,7 +13393,7 @@
         "sources": [
           {
             "title": "Dune",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 726871,
             "filters": {},
             "provider": "tmdb",
@@ -13416,7 +13416,7 @@
         "sources": [
           {
             "title": "Equalizer",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 523855,
             "filters": {},
             "provider": "tmdb",
@@ -13439,7 +13439,7 @@
         "sources": [
           {
             "title": "Escape Room",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 769423,
             "filters": {},
             "provider": "tmdb",
@@ -13462,7 +13462,7 @@
         "sources": [
           {
             "title": "Evil Dead",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 1960,
             "filters": {},
             "provider": "tmdb",
@@ -13485,7 +13485,7 @@
         "sources": [
           {
             "title": "Expendables",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 126125,
             "filters": {},
             "provider": "tmdb",
@@ -13513,7 +13513,7 @@
         "sources": [
           {
             "title": "G.I. Joe (Live-Action)",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 135468,
             "filters": {},
             "provider": "tmdb",
@@ -13531,7 +13531,7 @@
         "sources": [
           {
             "title": "Goal!",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 110177,
             "filters": {},
             "provider": "tmdb",
@@ -13554,7 +13554,7 @@
         "sources": [
           {
             "title": "Godzilla",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 535313,
             "filters": {},
             "provider": "tmdb",
@@ -13577,7 +13577,7 @@
         "sources": [
           {
             "title": "Hangover",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 86119,
             "filters": {},
             "provider": "tmdb",
@@ -13600,7 +13600,7 @@
         "sources": [
           {
             "title": "Hannibal Lecter",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 9743,
             "filters": {},
             "provider": "tmdb",
@@ -13623,7 +13623,7 @@
         "sources": [
           {
             "title": "Hellraiser",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 8917,
             "filters": {},
             "provider": "tmdb",
@@ -13651,7 +13651,7 @@
         "sources": [
           {
             "title": "Hitman's Bodyguard",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 608101,
             "filters": {},
             "provider": "tmdb",
@@ -13674,7 +13674,7 @@
         "sources": [
           {
             "title": "Horrible Bosses",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 280588,
             "filters": {},
             "provider": "tmdb",
@@ -13697,7 +13697,7 @@
         "sources": [
           {
             "title": "Jack Reacher",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 403374,
             "filters": {},
             "provider": "tmdb",
@@ -13715,7 +13715,7 @@
         "sources": [
           {
             "title": "Jarhead",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 285564,
             "filters": {},
             "provider": "tmdb",
@@ -13738,7 +13738,7 @@
         "sources": [
           {
             "title": "Jaws",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 2366,
             "filters": {},
             "provider": "tmdb",
@@ -13766,7 +13766,7 @@
         "sources": [
           {
             "title": "Jeepers Creepers",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 94899,
             "filters": {},
             "provider": "tmdb",
@@ -13784,7 +13784,7 @@
         "sources": [
           {
             "title": "John Wick",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 404609,
             "filters": {},
             "provider": "tmdb",
@@ -13807,7 +13807,7 @@
         "sources": [
           {
             "title": "Jumanji",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 495527,
             "filters": {},
             "provider": "tmdb",
@@ -13830,7 +13830,7 @@
         "sources": [
           {
             "title": "Jump Street",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 212562,
             "filters": {},
             "provider": "tmdb",
@@ -13853,7 +13853,7 @@
         "sources": [
           {
             "title": "Karate Kid",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 8580,
             "filters": {},
             "provider": "tmdb",
@@ -13876,7 +13876,7 @@
         "sources": [
           {
             "title": "King Kong (1976)",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 135498,
             "filters": {},
             "provider": "tmdb",
@@ -13899,7 +13899,7 @@
         "sources": [
           {
             "title": "Kingsman",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 391860,
             "filters": {},
             "provider": "tmdb",
@@ -13922,7 +13922,7 @@
         "sources": [
           {
             "title": "Knives Out",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 722971,
             "filters": {},
             "provider": "tmdb",
@@ -13945,7 +13945,7 @@
         "sources": [
           {
             "title": "Lethal Weapon",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 945,
             "filters": {},
             "provider": "tmdb",
@@ -13968,7 +13968,7 @@
         "sources": [
           {
             "title": "Magic Mike",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 328247,
             "filters": {},
             "provider": "tmdb",
@@ -13991,7 +13991,7 @@
         "sources": [
           {
             "title": "Major League",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 97771,
             "filters": {},
             "provider": "tmdb",
@@ -14014,7 +14014,7 @@
         "sources": [
           {
             "title": "Matrix",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 2344,
             "filters": {},
             "provider": "tmdb",
@@ -14037,7 +14037,7 @@
         "sources": [
           {
             "title": "Naruto",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 23616,
             "filters": {},
             "provider": "tmdb",
@@ -14060,7 +14060,7 @@
         "sources": [
           {
             "title": "National Treasure",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 52984,
             "filters": {},
             "provider": "tmdb",
@@ -14083,7 +14083,7 @@
         "sources": [
           {
             "title": "Now You See Me",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 382685,
             "filters": {},
             "provider": "tmdb",
@@ -14106,7 +14106,7 @@
         "sources": [
           {
             "title": "Ocean's",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 304,
             "filters": {},
             "provider": "tmdb",
@@ -14129,7 +14129,7 @@
         "sources": [
           {
             "title": "One Piece",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 23456,
             "filters": {},
             "provider": "tmdb",
@@ -14152,7 +14152,7 @@
         "sources": [
           {
             "title": "Pacific Rim",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 363369,
             "filters": {},
             "provider": "tmdb",
@@ -14175,7 +14175,7 @@
         "sources": [
           {
             "title": "Paranormal Activity",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 41437,
             "filters": {},
             "provider": "tmdb",
@@ -14198,7 +14198,7 @@
         "sources": [
           {
             "title": "Percy Jackson",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 179919,
             "filters": {},
             "provider": "tmdb",
@@ -14221,7 +14221,7 @@
         "sources": [
           {
             "title": "Pitch Perfect",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 306031,
             "filters": {},
             "provider": "tmdb",
@@ -14244,7 +14244,7 @@
         "sources": [
           {
             "title": "Poltergeist",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 10453,
             "filters": {},
             "provider": "tmdb",
@@ -14272,7 +14272,7 @@
         "sources": [
           {
             "title": "Raid",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 257960,
             "filters": {},
             "provider": "tmdb",
@@ -14290,7 +14290,7 @@
         "sources": [
           {
             "title": "Rambo",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 5039,
             "filters": {},
             "provider": "tmdb",
@@ -14313,7 +14313,7 @@
         "sources": [
           {
             "title": "Rebuild of Evangelion",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 210303,
             "filters": {},
             "provider": "tmdb",
@@ -14336,7 +14336,7 @@
         "sources": [
           {
             "title": "Resident Evil",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 17255,
             "filters": {},
             "provider": "tmdb",
@@ -14359,7 +14359,7 @@
         "sources": [
           {
             "title": "Scary Movie",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 4246,
             "filters": {},
             "provider": "tmdb",
@@ -14382,7 +14382,7 @@
         "sources": [
           {
             "title": "Scooby-Doo",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 86860,
             "filters": {},
             "provider": "tmdb",
@@ -14405,7 +14405,7 @@
         "sources": [
           {
             "title": "Sicario",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 496796,
             "filters": {},
             "provider": "tmdb",
@@ -14428,7 +14428,7 @@
         "sources": [
           {
             "title": "Sniper",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 14246,
             "filters": {},
             "provider": "tmdb",
@@ -14451,7 +14451,7 @@
         "sources": [
           {
             "title": "Spider-Man",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 556,
             "filters": {},
             "provider": "tmdb",
@@ -14474,7 +14474,7 @@
         "sources": [
           {
             "title": "Spider-Man: Μέσα στο αραχνο-σύμπαν",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 573436,
             "filters": {},
             "provider": "tmdb",
@@ -14497,7 +14497,7 @@
         "sources": [
           {
             "title": "Star Trek: Alternate Reality",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 115575,
             "filters": {},
             "provider": "tmdb",
@@ -14520,7 +14520,7 @@
         "sources": [
           {
             "title": "Star Wars: Το Έπος των Skywalker",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 10,
             "filters": {},
             "provider": "tmdb",
@@ -14543,7 +14543,7 @@
         "sources": [
           {
             "title": "Starship Troopers",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 10522,
             "filters": {},
             "provider": "tmdb",
@@ -14566,7 +14566,7 @@
         "sources": [
           {
             "title": "Step Up",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 86092,
             "filters": {},
             "provider": "tmdb",
@@ -14594,7 +14594,7 @@
         "sources": [
           {
             "title": "Taken",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 135483,
             "filters": {},
             "provider": "tmdb",
@@ -14617,7 +14617,7 @@
         "sources": [
           {
             "title": "Ted",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 266672,
             "filters": {},
             "provider": "tmdb",
@@ -14640,7 +14640,7 @@
         "sources": [
           {
             "title": "Texas Chainsaw Massacre",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 111751,
             "filters": {},
             "provider": "tmdb",
@@ -14658,7 +14658,7 @@
         "sources": [
           {
             "title": "Top Gun",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 531330,
             "filters": {},
             "provider": "tmdb",
@@ -14681,7 +14681,7 @@
         "sources": [
           {
             "title": "Transformers",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 8650,
             "filters": {},
             "provider": "tmdb",
@@ -14704,7 +14704,7 @@
         "sources": [
           {
             "title": "Tremors",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 91799,
             "filters": {},
             "provider": "tmdb",
@@ -14727,7 +14727,7 @@
         "sources": [
           {
             "title": "Trolls Holiday",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 1184152,
             "filters": {},
             "provider": "tmdb",
@@ -14750,7 +14750,7 @@
         "sources": [
           {
             "title": "TRON",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 63043,
             "filters": {},
             "provider": "tmdb",
@@ -14773,7 +14773,7 @@
         "sources": [
           {
             "title": "Underworld",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 2326,
             "filters": {},
             "provider": "tmdb",
@@ -14796,7 +14796,7 @@
         "sources": [
           {
             "title": "V/H/S",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 207621,
             "filters": {},
             "provider": "tmdb",
@@ -14819,7 +14819,7 @@
         "sources": [
           {
             "title": "X-Men",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 748,
             "filters": {},
             "provider": "tmdb",
@@ -14842,7 +14842,7 @@
         "sources": [
           {
             "title": "xXx",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 52785,
             "filters": {},
             "provider": "tmdb",
@@ -14870,7 +14870,7 @@
         "sources": [
           {
             "title": "Zombieland",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 537982,
             "filters": {},
             "provider": "tmdb",
@@ -14888,7 +14888,7 @@
         "sources": [
           {
             "title": "Zoolander",
-            "sortBy": "original",
+            "sortBy": "primary_release_date.desc",
             "tmdbId": 352789,
             "filters": {},
             "provider": "tmdb",

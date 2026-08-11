@@ -183,6 +183,18 @@ Regression: same-day stability, next-day rotation, vote floor and exact bounds.
 - `reports/v5.0.1-additions.json` must show 189 active additions, zero empty and
   zero failed before release.
 
+## Film Series ordering
+
+- All 186 Film Series rails remain native official TMDB `COLLECTION` sources.
+- Every source is compiled with `sortBy: primary_release_date.desc`, which
+  Nuvio 0.8.3 implements locally for collection parts. Newest films therefore
+  appear on the left and oldest films on the right.
+- A sequel newly added to the official TMDB collection is picked up directly by
+  Nuvio and moves to the left automatically. These rails need no duplicate
+  public list IDs and no nightly TMDB writes.
+- Bootstrap and compiled-artifact regressions require the same sort on all 186
+  sources; `original` or popularity sorting is forbidden for Film Series.
+
 ## Studio feature films and curated animation canons
 
 - Every movie rail in `collections.studios` is details-verified as a genuine

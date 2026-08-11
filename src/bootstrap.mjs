@@ -32,6 +32,11 @@ function materializer(collectionId) {
 
 function nativeOverride(collectionId, source, index) {
   const value = structuredClone(source);
+  // Nuvio 0.8.3 resolves COLLECTION parts locally and supports an explicit
+  // descending release-date sort. Use it for every film-series rail so newly
+  // added sequels automatically appear on the left without materializing 186
+  // duplicate TMDB lists.
+  if (collectionId === "collections.film-series") value.sortBy = "primary_release_date.desc";
   if (collectionId === "collections.networks" && index === 0) value.sortBy = "popularity.desc";
   return value;
 }

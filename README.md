@@ -164,7 +164,10 @@ channel subscriptions δεν προστίθενται σε folder άλλης υ�
 - Τα ντοκιμαντέρ φύσης απαιτούν Documentary και δέχονται τα ισοδύναμα sparse
   TMDB tags nature/wildlife/natural history/environment/ecology.
 - Τα 186 Film Series παραμένουν επίσημα TMDB `COLLECTION` sources και δεν
-  λαμβάνουν filters που το Nuvio αγνοεί.
+  λαμβάνουν filters που το Nuvio αγνοεί. Όλα χρησιμοποιούν το native Nuvio
+  `primary_release_date.desc`: η νεότερη ταινία εμφανίζεται αριστερά και η
+  παλαιότερη δεξιά. Όταν το TMDB προσθέσει νέο μέρος στην επίσημη collection,
+  το Nuvio το τοποθετεί αυτόματα πρώτο χωρίς νέο list ID ή nightly write.
 - Όλα τα movie studio rails κάνουν details verification: runtime τουλάχιστον
   40′, released έως σήμερα, όχι Documentary/TV Movie, adult ή video. Άρα shorts,
   specials, making-of και τηλεταινίες δεν βαφτίζονται studio feature films.
