@@ -94,7 +94,7 @@ export function analyzeListTvCompat(canonicalSources, profileSources) {
   };
 }
 
-export function minimalListTvProbeSource({ tmdbId = 8681816, title = "Δημοφιλείς σειρές" } = {}) {
+export function minimalListTvSource({ tmdbId = 8681816, title = "Δημοφιλείς σειρές" } = {}) {
   return {
     type: "series",
     genre: null,
@@ -110,31 +110,4 @@ export function minimalListTvProbeSource({ tmdbId = 8681816, title = "Δημοφ
     traktListId: null,
     tmdbSourceType: "LIST",
   };
-}
-
-export function minimalListTvProbeCollection(source = minimalListTvProbeSource()) {
-  return [{
-    id: "nuvio.compat.list-tv-probe",
-    title: "TEST PROFILE ONLY — Nuvio LIST TV probe",
-    backdropImageUrl: null,
-    pinToTop: false,
-    focusGlowEnabled: true,
-    viewMode: "TABBED_GRID",
-    showAllTab: true,
-    folders: [{
-      id: "nuvio.compat.list-tv-probe.folder",
-      title: "TEST PROFILE ONLY — Probe",
-      coverImageUrl: null,
-      focusGifUrl: null,
-      focusGifEnabled: true,
-      coverEmoji: null,
-      tileShape: "POSTER",
-      hideTitle: false,
-      heroBackdropUrl: null,
-      heroVideoUrl: null,
-      titleLogoUrl: null,
-      sources: [source],
-      catalogSources: [],
-    }],
-  }];
 }

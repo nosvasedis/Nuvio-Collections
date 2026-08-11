@@ -45,10 +45,9 @@ a test so bootstrap cannot silently reintroduce it.
     `type:"series"` with only `mediaType` flipped — not a missing-source
     problem. Native vs materialized split is permanent evidence in
     `reports/list-tv-mediatype-audit-2026-08-11.json`.
-  - Executable probes live in `src/nuvio-list-compat.mjs` and
-    `dist/nuvio-list-tv-mediaType-probe.json`. The probe is test-profile-only:
-    importing it into the active profile would leave a temporary 13th
-    collection because Nuvio imports merge by ID. Never “fix” this by
+  - Executable source-level compatibility checks live in
+    `src/nuvio-list-compat.mjs`. The old standalone test-profile probe artifact
+    was deliberately retired to prevent accidental import. Never “fix” this by
     converting materialized TV lists into inaccurate native Discover sources,
     and never recreate TMDB lists just to change mediaType. Do not claim the UI
     label is fixed until a fresh export audits to `mediaTypeMismatches: 0`.

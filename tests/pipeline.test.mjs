@@ -289,15 +289,9 @@ test("Nuvio 0.8.3 LIST editor hardcodes MOVIE while DataStore preserves TV", asy
     emulateNuvio083DataStoreRoundTrip,
     emulateMobileListTvCorruption,
     analyzeListTvCompat,
-    minimalListTvProbeSource,
-    minimalListTvProbeCollection,
+    minimalListTvSource,
   } = await import("../src/nuvio-list-compat.mjs");
-  const probe = minimalListTvProbeSource();
-  const probeCollection = minimalListTvProbeCollection(probe)[0];
-  const probeArtifact = await readJson(new URL("../dist/nuvio-list-tv-mediaType-probe.json", import.meta.url));
-  assert.deepEqual(probeArtifact, [probeCollection]);
-  assert.match(probeCollection.title, /^TEST PROFILE ONLY/);
-  assert.equal(probeCollection.folders.length, 1);
+  const probe = minimalListTvSource();
   assert.equal(emulateNuvio083DataStoreMediaType(probe), "TV");
   assert.equal(emulateNuvio083ListEditorMediaType(probe), "MOVIE");
   assert.equal(emulateNuvio083ListEditorMediaType({ tmdbSourceType: "DISCOVER", mediaType: "TV" }), "TV");

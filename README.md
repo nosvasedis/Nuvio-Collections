@@ -327,10 +327,8 @@ writes: όλα τα 2.279 ordered fingerprints ήταν ήδη ίδια.
 | `AGENTS.md` | Υποχρεωτική διαδικασία για επόμενους agents/contributors |
 | `reports/latest.json` | Αναλυτικό αποτέλεσμα τελευταίου sync |
 | `dist/nuvio-collections-v5.0.1.json` | Τελικό Nuvio import artifact |
-| `dist/nuvio-collections-v5.0-profile-repair.json` | Ιστορικό v5.0 replacement artifact· για v5.0.1 προτίμησε πλήρες import |
-| `dist/nuvio-list-tv-mediaType-probe.json` | Ελάχιστο TV LIST probe για Nuvio 0.8.3 mediaType |
 | `reports/profile-audit-2026-08-10.json` | Evidence του reviewed Nuvio export και των 987 media-type mismatches |
-| `src/nuvio-list-compat.mjs` | LIST/editor/DataStore compatibility probes |
+| `src/nuvio-list-compat.mjs` | Source-level LIST/editor/DataStore compatibility emulation |
 | `assets/branding/` | Product mark και horizontal wordmark |
 
 ## Commands
@@ -393,19 +391,12 @@ sources ως MOVIE.
 Evidence: `reports/list-tv-mediatype-audit-2026-08-11.json`,
 `reports/profile-audit-2026-08-10.json`, `src/nuvio-list-compat.mjs`.
 
-1. Προαιρετικά δοκίμασε πρώτα το
-   [`list-tv probe`](dist/nuvio-list-tv-mediaType-probe.json) (ένα LIST TV
-   source), **μόνο σε ξεχωριστό disposable Nuvio test profile**. Μην το
-   εισαγάγεις στο ενεργό profile: είναι σκόπιμα μία προσωρινή 13η collection
-   και το merge import δεν την αφαιρεί όταν ακολουθήσει το πλήρες v5.0.1. Κάνε
-   export, επιβεβαίωσε `mediaType: "TV"` και μετά διέγραψε ολόκληρο το
-   disposable test profile.
-2. Κάνε import το πλήρες v5.0.1. Το Nuvio αντικαθιστά βάσει σταθερού collection
-   ID. Το παλιό v5.0 profile-repair παραμένει μόνο ως ιστορικό evidence και δεν
-   περιέχει τις νέες Discover semantics.
-3. Περίμενε να ολοκληρωθεί το profile sync και κάνε νέο export.
-4. Τρέξε `npm run profile:audit -- --profile=<νέο-export.json>`.
-5. Αποδέξου το migration μόνο με:
+1. Κάνε import αποκλειστικά το πλήρες v5.0.1. Το Nuvio αντικαθιστά βάσει
+   σταθερού collection ID. Τα παλιά v5.0 και test-only probe artifacts έχουν
+   καταργηθεί ώστε να μην εισαχθούν κατά λάθος.
+2. Περίμενε να ολοκληρωθεί το profile sync και κάνε νέο export.
+3. Τρέξε `npm run profile:audit -- --profile=<νέο-export.json>`.
+4. Αποδέξου το migration μόνο με:
 
    - `mediaTypeMismatches: 0`
    - `missing: 0`
