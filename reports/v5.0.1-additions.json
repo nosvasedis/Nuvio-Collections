@@ -1,0 +1,1903 @@
+{
+  "date": "2026-08-11",
+  "folders": 30,
+  "rails": 189,
+  "totals": {
+    "ok": 189,
+    "empty": 0,
+    "failed": 0
+  },
+  "problems": [],
+  "results": [
+    {
+      "key": "collections.genres:folder-d1d8a13d:0",
+      "folder": "Ρομαντική κομεντί",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 48,
+      "status": "ok",
+      "durationMs": 127
+    },
+    {
+      "key": "collections.genres:folder-d1d8a13d:1",
+      "folder": "Ρομαντική κομεντί",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 21,
+      "status": "ok",
+      "durationMs": 77
+    },
+    {
+      "key": "collections.genres:folder-d1d8a13d:2",
+      "folder": "Ρομαντική κομεντί",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 198
+    },
+    {
+      "key": "collections.genres:folder-d1d8a13d:3",
+      "folder": "Ρομαντική κομεντί",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 55,
+      "status": "ok",
+      "durationMs": 92
+    },
+    {
+      "key": "collections.genres:folder-d1d8a13d:4",
+      "folder": "Ρομαντική κομεντί",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 106
+    },
+    {
+      "key": "collections.genres:folder-d1d8a13d:5",
+      "folder": "Ρομαντική κομεντί",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 55,
+      "status": "ok",
+      "durationMs": 37
+    },
+    {
+      "key": "collections.genres:folder-d1d8a13d:6",
+      "folder": "Ρομαντική κομεντί",
+      "title": "Κορυφαίες ταινίες της χρονιάς",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 48,
+      "status": "ok",
+      "durationMs": 34
+    },
+    {
+      "key": "collections.genres:folder-d1d8a13d:7",
+      "folder": "Ρομαντική κομεντί",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 21,
+      "status": "ok",
+      "durationMs": 18
+    },
+    {
+      "key": "collections.genres:folder-KDRAMA01:0",
+      "folder": "Κορεατικά δράματα (K-Drama)",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 5,
+      "status": "ok",
+      "durationMs": 10
+    },
+    {
+      "key": "collections.genres:folder-KDRAMA01:1",
+      "folder": "Κορεατικά δράματα (K-Drama)",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 43,
+      "status": "ok",
+      "durationMs": 28
+    },
+    {
+      "key": "collections.genres:folder-KDRAMA01:2",
+      "folder": "Κορεατικά δράματα (K-Drama)",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 96,
+      "status": "ok",
+      "durationMs": 56
+    },
+    {
+      "key": "collections.genres:folder-KDRAMA01:3",
+      "folder": "Κορεατικά δράματα (K-Drama)",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 114,
+      "status": "ok",
+      "durationMs": 61
+    },
+    {
+      "key": "collections.genres:folder-KDRAMA01:4",
+      "folder": "Κορεατικά δράματα (K-Drama)",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 96,
+      "status": "ok",
+      "durationMs": 51
+    },
+    {
+      "key": "collections.genres:folder-KDRAMA01:5",
+      "folder": "Κορεατικά δράματα (K-Drama)",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 114,
+      "status": "ok",
+      "durationMs": 59
+    },
+    {
+      "key": "collections.genres:folder-KDRAMA01:6",
+      "folder": "Κορεατικά δράματα (K-Drama)",
+      "title": "Κορυφαίες ταινίες της χρονιάς",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 5,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.genres:folder-KDRAMA01:7",
+      "folder": "Κορεατικά δράματα (K-Drama)",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 43,
+      "status": "ok",
+      "durationMs": 24
+    },
+    {
+      "key": "collections.moods:folder-070BQVHR:0",
+      "folder": "Επικά & μεγαλειώδη",
+      "title": "Ιστορικά & πολεμικά έπη",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 100
+    },
+    {
+      "key": "collections.moods:folder-070BQVHR:1",
+      "folder": "Επικά & μεγαλειώδη",
+      "title": "Μεγαλειώδη έπη φαντασίας",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 98
+    },
+    {
+      "key": "collections.moods:folder-070BQVHR:2",
+      "folder": "Επικά & μεγαλειώδη",
+      "title": "Τηλεοπτικά έπη μεγάλης κλίμακας",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 104
+    },
+    {
+      "key": "collections.moods:folder-070BQVHR:3",
+      "folder": "Επικά & μεγαλειώδη",
+      "title": "Διαστημικές όπερες & κοσμικά ταξίδια",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 56,
+      "status": "ok",
+      "durationMs": 28
+    },
+    {
+      "key": "collections.moods:folder-070BQVHR:4",
+      "folder": "Επικά & μεγαλειώδη",
+      "title": "Κορυφαία επικά αριστουργήματα",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 98
+    },
+    {
+      "key": "collections.moods:folder-070BQVHR:5",
+      "folder": "Επικά & μεγαλειώδη",
+      "title": "Πρόσφατες επικές ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 101
+    },
+    {
+      "key": "collections.moods:folder-79A8YOOM:0",
+      "folder": "Ανατριχιαστικά & απόκοσμα",
+      "title": "Στοιχειωμένα σπίτια & φαντάσματα",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 94
+    },
+    {
+      "key": "collections.moods:folder-79A8YOOM:1",
+      "folder": "Ανατριχιαστικά & απόκοσμα",
+      "title": "Απόκοσμες παραφυσικές σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 95
+    },
+    {
+      "key": "collections.moods:folder-79A8YOOM:2",
+      "folder": "Ανατριχιαστικά & απόκοσμα",
+      "title": "Ψυχολογικός τρόμος & αγωνία",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 51,
+      "status": "ok",
+      "durationMs": 27
+    },
+    {
+      "key": "collections.moods:folder-79A8YOOM:3",
+      "folder": "Ανατριχιαστικά & απόκοσμα",
+      "title": "Τέρατα & πλάσματα",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 173,
+      "status": "ok",
+      "durationMs": 83
+    },
+    {
+      "key": "collections.moods:folder-79A8YOOM:4",
+      "folder": "Ανατριχιαστικά & απόκοσμα",
+      "title": "Κορυφαία αριστουργήματα τρόμου",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 92
+    },
+    {
+      "key": "collections.moods:folder-79A8YOOM:5",
+      "folder": "Ανατριχιαστικά & απόκοσμα",
+      "title": "Πρόσφατες ανατριχιαστικές ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 85
+    },
+    {
+      "key": "collections.moods:folder-7AXTM9QX:0",
+      "folder": "Ανεβαστικά & αισιόδοξα",
+      "title": "Ανεβαστικές & εμπνευσμένες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 102
+    },
+    {
+      "key": "collections.moods:folder-7AXTM9QX:1",
+      "folder": "Ανεβαστικά & αισιόδοξα",
+      "title": "Χαρούμενες κωμικές σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 89
+    },
+    {
+      "key": "collections.moods:folder-7AXTM9QX:2",
+      "folder": "Ανεβαστικά & αισιόδοξα",
+      "title": "Εμπνευσμένες αληθινές ιστορίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 101
+    },
+    {
+      "key": "collections.moods:folder-7AXTM9QX:3",
+      "folder": "Ανεβαστικά & αισιόδοξα",
+      "title": "Road trips & κωμωδίες φίλων",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 128,
+      "status": "ok",
+      "durationMs": 66
+    },
+    {
+      "key": "collections.moods:folder-7AXTM9QX:4",
+      "folder": "Ανεβαστικά & αισιόδοξα",
+      "title": "Κορυφαία feel-good κλασικά",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 101
+    },
+    {
+      "key": "collections.moods:folder-7AXTM9QX:5",
+      "folder": "Ανεβαστικά & αισιόδοξα",
+      "title": "Πρόσφατες feel-good ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 123,
+      "status": "ok",
+      "durationMs": 63
+    },
+    {
+      "key": "collections.moods:folder-7TSDBZYI:0",
+      "folder": "Παιχνίδια του μυαλού",
+      "title": "Ανατρεπτικά θρίλερ επιστημονικής φαντασίας",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 99
+    },
+    {
+      "key": "collections.moods:folder-7TSDBZYI:1",
+      "folder": "Παιχνίδια του μυαλού",
+      "title": "Ψυχολογικές σειρές μυστηρίου",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 103
+    },
+    {
+      "key": "collections.moods:folder-7TSDBZYI:2",
+      "folder": "Παιχνίδια του μυαλού",
+      "title": "Απρόβλεπτες ταινίες με ανατροπές",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 99
+    },
+    {
+      "key": "collections.moods:folder-7TSDBZYI:3",
+      "folder": "Παιχνίδια του μυαλού",
+      "title": "Χρονικοί βρόχοι & εναλλακτικές πραγματικότητες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 111
+    },
+    {
+      "key": "collections.moods:folder-7TSDBZYI:4",
+      "folder": "Παιχνίδια του μυαλού",
+      "title": "Κορυφαία ψυχολογικά θρίλερ",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 102
+    },
+    {
+      "key": "collections.moods:folder-7TSDBZYI:5",
+      "folder": "Παιχνίδια του μυαλού",
+      "title": "Πρόσφατες ανατρεπτικές ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 87
+    },
+    {
+      "key": "collections.moods:folder-M50463BF:0",
+      "folder": "Σκοτεινά & σκληρά",
+      "title": "Σκληρό έγκλημα & υπόκοσμος",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 97
+    },
+    {
+      "key": "collections.moods:folder-M50463BF:1",
+      "folder": "Σκοτεινά & σκληρά",
+      "title": "Έντονες σκοτεινές σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 92
+    },
+    {
+      "key": "collections.moods:folder-M50463BF:2",
+      "folder": "Σκοτεινά & σκληρά",
+      "title": "Αντιήρωες & ιστορίες εκδίκησης",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 105
+    },
+    {
+      "key": "collections.moods:folder-M50463BF:3",
+      "folder": "Σκοτεινά & σκληρά",
+      "title": "Δυστοπικά & μεταποκαλυπτικά",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 95
+    },
+    {
+      "key": "collections.moods:folder-M50463BF:4",
+      "folder": "Σκοτεινά & σκληρά",
+      "title": "Κορυφαίο σκληρό έγκλημα",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 92
+    },
+    {
+      "key": "collections.moods:folder-M50463BF:5",
+      "folder": "Σκοτεινά & σκληρά",
+      "title": "Πρόσφατες σκοτεινές & σκληρές ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 100
+    },
+    {
+      "key": "collections.moods:folder-RSVZ5OM5:0",
+      "folder": "Αργής καύσης",
+      "title": "Ατμοσφαιρικά μυστήρια αργής καύσης",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 98
+    },
+    {
+      "key": "collections.moods:folder-RSVZ5OM5:1",
+      "folder": "Αργής καύσης",
+      "title": "Στοιχειωτικές σειρές αργής καύσης",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 94
+    },
+    {
+      "key": "collections.moods:folder-RSVZ5OM5:2",
+      "folder": "Αργής καύσης",
+      "title": "Neo-noir & σκοτεινό έγκλημα",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 95
+    },
+    {
+      "key": "collections.moods:folder-RSVZ5OM5:3",
+      "folder": "Αργής καύσης",
+      "title": "Βαθιά δράματα χαρακτήρων",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 92
+    },
+    {
+      "key": "collections.moods:folder-RSVZ5OM5:4",
+      "folder": "Αργής καύσης",
+      "title": "Κορυφαία ατμοσφαιρικά αριστουργήματα",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 111
+    },
+    {
+      "key": "collections.moods:folder-RSVZ5OM5:5",
+      "folder": "Αργής καύσης",
+      "title": "Πρόσφατες ταινίες αργής καύσης",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 63,
+      "status": "ok",
+      "durationMs": 36
+    },
+    {
+      "key": "collections.moods:folder-S21P049B:0",
+      "folder": "Έκρηξη αδρεναλίνης",
+      "title": "Καταιγιστικά action blockbusters",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 106
+    },
+    {
+      "key": "collections.moods:folder-S21P049B:1",
+      "folder": "Έκρηξη αδρεναλίνης",
+      "title": "Ταινίες επιβίωσης & ληστειών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 114
+    },
+    {
+      "key": "collections.moods:folder-S21P049B:2",
+      "folder": "Έκρηξη αδρεναλίνης",
+      "title": "Σειρές δράσης & θρίλερ",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 107
+    },
+    {
+      "key": "collections.moods:folder-S21P049B:3",
+      "folder": "Έκρηξη αδρεναλίνης",
+      "title": "Πολεμικές τέχνες & μάχες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 103
+    },
+    {
+      "key": "collections.moods:folder-S21P049B:4",
+      "folder": "Έκρηξη αδρεναλίνης",
+      "title": "Κορυφαίες επιτυχίες δράσης",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 106
+    },
+    {
+      "key": "collections.moods:folder-S21P049B:5",
+      "folder": "Έκρηξη αδρεναλίνης",
+      "title": "Πρόσφατες καταιγιστικές ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 91
+    },
+    {
+      "key": "collections.moods:folder-SJGV86EH:0",
+      "folder": "Δακρύβρεχτα",
+      "title": "Καταξιωμένες συγκινητικές ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 97
+    },
+    {
+      "key": "collections.moods:folder-SJGV86EH:1",
+      "folder": "Δακρύβρεχτα",
+      "title": "Συναισθηματικές σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 79,
+      "status": "ok",
+      "durationMs": 36
+    },
+    {
+      "key": "collections.moods:folder-SJGV86EH:2",
+      "folder": "Δακρύβρεχτα",
+      "title": "Ρομαντικές ιστορίες ραγισμένης καρδιάς",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 97
+    },
+    {
+      "key": "collections.moods:folder-SJGV86EH:3",
+      "folder": "Δακρύβρεχτα",
+      "title": "Ιστορίες οικογένειας & απώλειας",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 101,
+      "status": "ok",
+      "durationMs": 59
+    },
+    {
+      "key": "collections.moods:folder-SJGV86EH:4",
+      "folder": "Δακρύβρεχτα",
+      "title": "Κορυφαία συναισθηματικά αριστουργήματα",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 98
+    },
+    {
+      "key": "collections.moods:folder-SJGV86EH:5",
+      "folder": "Δακρύβρεχτα",
+      "title": "Πρόσφατες συγκινητικές ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 96
+    },
+    {
+      "key": "collections.moods:folder-VRAANHHD:0",
+      "folder": "Ατμόσφαιρα '80s & '90s",
+      "title": "Εμβληματικά blockbusters των '80s",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=300",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 96
+    },
+    {
+      "key": "collections.moods:folder-VRAANHHD:1",
+      "folder": "Ατμόσφαιρα '80s & '90s",
+      "title": "Εμβληματικά blockbusters των '90s",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=300",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 96
+    },
+    {
+      "key": "collections.moods:folder-VRAANHHD:2",
+      "folder": "Ατμόσφαιρα '80s & '90s",
+      "title": "Popcorn δράση των '80s & '90s",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=300",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 84
+    },
+    {
+      "key": "collections.moods:folder-VRAANHHD:3",
+      "folder": "Ατμόσφαιρα '80s & '90s",
+      "title": "Κλασικές κωμωδίες των '80s & '90s",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=300",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 94
+    },
+    {
+      "key": "collections.moods:folder-VRAANHHD:4",
+      "folder": "Ατμόσφαιρα '80s & '90s",
+      "title": "Ρετρό σειρές επιστημονικής φαντασίας & μυστηρίου",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=300",
+      "count": 10,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.moods:folder-VRAANHHD:5",
+      "folder": "Ατμόσφαιρα '80s & '90s",
+      "title": "Cult & indie επιτυχίες των '90s",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 15,
+      "status": "ok",
+      "durationMs": 9
+    },
+    {
+      "key": "collections.moods:folder-W52X6SMF:0",
+      "folder": "Ζεστά & παρηγορητικά",
+      "title": "Ρομαντικές κομεντί ζωντανής δράσης",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 83
+    },
+    {
+      "key": "collections.moods:folder-W52X6SMF:1",
+      "folder": "Ζεστά & παρηγορητικά",
+      "title": "Ζεστές κωμικές και δραματικές σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 81
+    },
+    {
+      "key": "collections.moods:folder-W52X6SMF:2",
+      "folder": "Ζεστά & παρηγορητικά",
+      "title": "Τρυφερές ρομαντικές ιστορίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 81
+    },
+    {
+      "key": "collections.moods:folder-W52X6SMF:3",
+      "folder": "Ζεστά & παρηγορητικά",
+      "title": "Κορυφαία feel-good κλασικά",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 87
+    },
+    {
+      "key": "collections.moods:folder-W52X6SMF:4",
+      "folder": "Ζεστά & παρηγορητικά",
+      "title": "Αγαπημένα ζεστά κινούμενα σχέδια",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 90
+    },
+    {
+      "key": "collections.moods:folder-W52X6SMF:5",
+      "folder": "Ζεστά & παρηγορητικά",
+      "title": "Πρόσφατες ζεστές ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 85
+    },
+    {
+      "key": "collections.world:folder-1DLH4Q3B:0",
+      "folder": "Αλγερινές",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 22,
+      "status": "ok",
+      "durationMs": 34
+    },
+    {
+      "key": "collections.world:folder-1DLH4Q3B:1",
+      "folder": "Αλγερινές",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 2,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-1DLH4Q3B:2",
+      "folder": "Αλγερινές",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 10,
+      "status": "ok",
+      "durationMs": 10
+    },
+    {
+      "key": "collections.world:folder-1DLH4Q3B:3",
+      "folder": "Αλγερινές",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=3",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 174
+    },
+    {
+      "key": "collections.world:folder-1DLH4Q3B:4",
+      "folder": "Αλγερινές",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 4,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-1DLH4Q3B:5",
+      "folder": "Αλγερινές",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=3",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 323
+    },
+    {
+      "key": "collections.world:folder-2DT7DVAT:0",
+      "folder": "Ισραηλινές",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 115,
+      "status": "ok",
+      "durationMs": 145
+    },
+    {
+      "key": "collections.world:folder-2DT7DVAT:1",
+      "folder": "Ισραηλινές",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 26,
+      "status": "ok",
+      "durationMs": 25
+    },
+    {
+      "key": "collections.world:folder-2DT7DVAT:2",
+      "folder": "Ισραηλινές",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 87,
+      "status": "ok",
+      "durationMs": 82
+    },
+    {
+      "key": "collections.world:folder-2DT7DVAT:3",
+      "folder": "Ισραηλινές",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 29,
+      "status": "ok",
+      "durationMs": 32
+    },
+    {
+      "key": "collections.world:folder-2DT7DVAT:4",
+      "folder": "Ισραηλινές",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 21,
+      "status": "ok",
+      "durationMs": 22
+    },
+    {
+      "key": "collections.world:folder-2DT7DVAT:5",
+      "folder": "Ισραηλινές",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 5,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-2DT7DVAT:7",
+      "folder": "Ισραηλινές",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-34G8YHUB:0",
+      "folder": "Σενεγαλέζικες",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 7,
+      "status": "ok",
+      "durationMs": 15
+    },
+    {
+      "key": "collections.world:folder-34G8YHUB:1",
+      "folder": "Σενεγαλέζικες",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 9,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-34G8YHUB:2",
+      "folder": "Σενεγαλέζικες",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 11,
+      "status": "ok",
+      "durationMs": 9
+    },
+    {
+      "key": "collections.world:folder-34G8YHUB:3",
+      "folder": "Σενεγαλέζικες",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=3",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 220
+    },
+    {
+      "key": "collections.world:folder-34G8YHUB:4",
+      "folder": "Σενεγαλέζικες",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-34G8YHUB:5",
+      "folder": "Σενεγαλέζικες",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=3",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 439
+    },
+    {
+      "key": "collections.world:folder-AK9ECCMJ:0",
+      "folder": "Γκανέζικες",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 6,
+      "status": "ok",
+      "durationMs": 14
+    },
+    {
+      "key": "collections.world:folder-AK9ECCMJ:1",
+      "folder": "Γκανέζικες",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 9
+    },
+    {
+      "key": "collections.world:folder-AK9ECCMJ:2",
+      "folder": "Γκανέζικες",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-AK9ECCMJ:4",
+      "folder": "Γκανέζικες",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 278
+    },
+    {
+      "key": "collections.world:folder-BPH7ACF1:0",
+      "folder": "Ιορδανικές",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 4,
+      "status": "ok",
+      "durationMs": 17
+    },
+    {
+      "key": "collections.world:folder-BPH7ACF1:1",
+      "folder": "Ιορδανικές",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 4,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-BPH7ACF1:2",
+      "folder": "Ιορδανικές",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 6,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-BPH7ACF1:3",
+      "folder": "Ιορδανικές",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-BPH7ACF1:4",
+      "folder": "Ιορδανικές",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 2,
+      "status": "ok",
+      "durationMs": 9
+    },
+    {
+      "key": "collections.world:folder-BPH7ACF1:5",
+      "folder": "Ιορδανικές",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 2,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-CHLCSAJ1:0",
+      "folder": "Αμερικανικές (ΗΠΑ)",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 165,
+      "status": "ok",
+      "durationMs": 227
+    },
+    {
+      "key": "collections.world:folder-CHLCSAJ1:1",
+      "folder": "Αμερικανικές (ΗΠΑ)",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 162,
+      "status": "ok",
+      "durationMs": 249
+    },
+    {
+      "key": "collections.world:folder-CHLCSAJ1:2",
+      "folder": "Αμερικανικές (ΗΠΑ)",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 116
+    },
+    {
+      "key": "collections.world:folder-CHLCSAJ1:3",
+      "folder": "Αμερικανικές (ΗΠΑ)",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 85
+    },
+    {
+      "key": "collections.world:folder-CHLCSAJ1:4",
+      "folder": "Αμερικανικές (ΗΠΑ)",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 91
+    },
+    {
+      "key": "collections.world:folder-CHLCSAJ1:5",
+      "folder": "Αμερικανικές (ΗΠΑ)",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 89
+    },
+    {
+      "key": "collections.world:folder-CHLCSAJ1:6",
+      "folder": "Αμερικανικές (ΗΠΑ)",
+      "title": "Κορυφαίες ταινίες της χρονιάς",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 89
+    },
+    {
+      "key": "collections.world:folder-CHLCSAJ1:7",
+      "folder": "Αμερικανικές (ΗΠΑ)",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 106,
+      "status": "ok",
+      "durationMs": 49
+    },
+    {
+      "key": "collections.world:folder-D1NICV2Z:0",
+      "folder": "Εμιρατινές",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 8,
+      "status": "ok",
+      "durationMs": 16
+    },
+    {
+      "key": "collections.world:folder-D1NICV2Z:1",
+      "folder": "Εμιρατινές",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 5,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-D1NICV2Z:2",
+      "folder": "Εμιρατινές",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 22,
+      "status": "ok",
+      "durationMs": 16
+    },
+    {
+      "key": "collections.world:folder-D1NICV2Z:3",
+      "folder": "Εμιρατινές",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 5,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-D1NICV2Z:4",
+      "folder": "Εμιρατινές",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 9,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-D1NICV2Z:5",
+      "folder": "Εμιρατινές",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 5,
+      "status": "ok",
+      "durationMs": 160
+    },
+    {
+      "key": "collections.world:folder-DWVPX66N:0",
+      "folder": "Λιβανέζικες",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 25,
+      "status": "ok",
+      "durationMs": 27
+    },
+    {
+      "key": "collections.world:folder-DWVPX66N:1",
+      "folder": "Λιβανέζικες",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 8,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-DWVPX66N:2",
+      "folder": "Λιβανέζικες",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 17,
+      "status": "ok",
+      "durationMs": 9
+    },
+    {
+      "key": "collections.world:folder-DWVPX66N:3",
+      "folder": "Λιβανέζικες",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 10
+    },
+    {
+      "key": "collections.world:folder-DWVPX66N:4",
+      "folder": "Λιβανέζικες",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 6,
+      "status": "ok",
+      "durationMs": 9
+    },
+    {
+      "key": "collections.world:folder-DWVPX66N:5",
+      "folder": "Λιβανέζικες",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 165
+    },
+    {
+      "key": "collections.world:folder-DWVPX66N:7",
+      "folder": "Λιβανέζικες",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=3",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 166
+    },
+    {
+      "key": "collections.world:folder-F5XQ4UP6:0",
+      "folder": "Μαροκινές",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 28,
+      "status": "ok",
+      "durationMs": 24
+    },
+    {
+      "key": "collections.world:folder-F5XQ4UP6:1",
+      "folder": "Μαροκινές",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 10,
+      "status": "ok",
+      "durationMs": 10
+    },
+    {
+      "key": "collections.world:folder-F5XQ4UP6:2",
+      "folder": "Μαροκινές",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 25,
+      "status": "ok",
+      "durationMs": 14
+    },
+    {
+      "key": "collections.world:folder-F5XQ4UP6:3",
+      "folder": "Μαροκινές",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 6
+    },
+    {
+      "key": "collections.world:folder-F5XQ4UP6:4",
+      "folder": "Μαροκινές",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 11,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-F5XQ4UP6:5",
+      "folder": "Μαροκινές",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-F5XQ4UP6:6",
+      "folder": "Μαροκινές",
+      "title": "Κορυφαίες ταινίες της χρονιάς",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=5",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 160
+    },
+    {
+      "key": "collections.world:folder-KFJI7SS7:0",
+      "folder": "Σριλανκέζικες",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 19,
+      "status": "ok",
+      "durationMs": 23
+    },
+    {
+      "key": "collections.world:folder-KFJI7SS7:1",
+      "folder": "Σριλανκέζικες",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 21,
+      "status": "ok",
+      "durationMs": 17
+    },
+    {
+      "key": "collections.world:folder-KFJI7SS7:2",
+      "folder": "Σριλανκέζικες",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-KFJI7SS7:3",
+      "folder": "Σριλανκέζικες",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=3",
+      "count": 2,
+      "status": "ok",
+      "durationMs": 163
+    },
+    {
+      "key": "collections.world:folder-KFJI7SS7:4",
+      "folder": "Σριλανκέζικες",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 164
+    },
+    {
+      "key": "collections.world:folder-KFJI7SS7:5",
+      "folder": "Σριλανκέζικες",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=3",
+      "count": 2,
+      "status": "ok",
+      "durationMs": 320
+    },
+    {
+      "key": "collections.world:folder-MH8C4JIK:0",
+      "folder": "Νεπαλέζικες",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 89,
+      "status": "ok",
+      "durationMs": 45
+    },
+    {
+      "key": "collections.world:folder-MH8C4JIK:1",
+      "folder": "Νεπαλέζικες",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-MH8C4JIK:2",
+      "folder": "Νεπαλέζικες",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-MH8C4JIK:4",
+      "folder": "Νεπαλέζικες",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-OBIM1CC7:0",
+      "folder": "Πακιστανικές",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 36,
+      "status": "ok",
+      "durationMs": 29
+    },
+    {
+      "key": "collections.world:folder-OBIM1CC7:1",
+      "folder": "Πακιστανικές",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 66,
+      "status": "ok",
+      "durationMs": 30
+    },
+    {
+      "key": "collections.world:folder-OBIM1CC7:2",
+      "folder": "Πακιστανικές",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 9,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-OBIM1CC7:3",
+      "folder": "Πακιστανικές",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-OBIM1CC7:4",
+      "folder": "Πακιστανικές",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-OBIM1CC7:5",
+      "folder": "Πακιστανικές",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 168
+    },
+    {
+      "key": "collections.world:folder-U4QLYE75:0",
+      "folder": "Κενυάτικες",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 8,
+      "status": "ok",
+      "durationMs": 16
+    },
+    {
+      "key": "collections.world:folder-U4QLYE75:1",
+      "folder": "Κενυάτικες",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-U4QLYE75:2",
+      "folder": "Κενυάτικες",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 4,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-U4QLYE75:3",
+      "folder": "Κενυάτικες",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 9
+    },
+    {
+      "key": "collections.world:folder-U4QLYE75:4",
+      "folder": "Κενυάτικες",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-U4QLYE75:5",
+      "folder": "Κενυάτικες",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 162
+    },
+    {
+      "key": "collections.world:folder-VBBN438M:0",
+      "folder": "Ιρακινές",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 16,
+      "status": "ok",
+      "durationMs": 15
+    },
+    {
+      "key": "collections.world:folder-VBBN438M:1",
+      "folder": "Ιρακινές",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 31,
+      "status": "ok",
+      "durationMs": 14
+    },
+    {
+      "key": "collections.world:folder-VBBN438M:2",
+      "folder": "Ιρακινές",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 4,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-VBBN438M:3",
+      "folder": "Ιρακινές",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=3",
+      "count": 11,
+      "status": "ok",
+      "durationMs": 165
+    },
+    {
+      "key": "collections.world:folder-VBBN438M:4",
+      "folder": "Ιρακινές",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 2,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-VBBN438M:5",
+      "folder": "Ιρακινές",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=3",
+      "count": 11,
+      "status": "ok",
+      "durationMs": 324
+    },
+    {
+      "key": "collections.world:folder-VBBN438M:6",
+      "folder": "Ιρακινές",
+      "title": "Κορυφαίες ταινίες της χρονιάς",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-VBBN438M:7",
+      "folder": "Ιρακινές",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=3",
+      "count": 2,
+      "status": "ok",
+      "durationMs": 179
+    },
+    {
+      "key": "collections.world:folder-W2F9SBO8:0",
+      "folder": "Αιθιοπικές",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 22,
+      "status": "ok",
+      "durationMs": 22
+    },
+    {
+      "key": "collections.world:folder-W2F9SBO8:2",
+      "folder": "Αιθιοπικές",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 9
+    },
+    {
+      "key": "collections.world:folder-W2F9SBO8:4",
+      "folder": "Αιθιοπικές",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 171
+    },
+    {
+      "key": "collections.world:folder-WCOQJ028:0",
+      "folder": "Καναδικές",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 182,
+      "status": "ok",
+      "durationMs": 226
+    },
+    {
+      "key": "collections.world:folder-WCOQJ028:1",
+      "folder": "Καναδικές",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 126,
+      "status": "ok",
+      "durationMs": 76
+    },
+    {
+      "key": "collections.world:folder-WCOQJ028:2",
+      "folder": "Καναδικές",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 100
+    },
+    {
+      "key": "collections.world:folder-WCOQJ028:3",
+      "folder": "Καναδικές",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 91
+    },
+    {
+      "key": "collections.world:folder-WCOQJ028:4",
+      "folder": "Καναδικές",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 89
+    },
+    {
+      "key": "collections.world:folder-WCOQJ028:5",
+      "folder": "Καναδικές",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=50",
+      "count": 198,
+      "status": "ok",
+      "durationMs": 109
+    },
+    {
+      "key": "collections.world:folder-WCOQJ028:6",
+      "folder": "Καναδικές",
+      "title": "Κορυφαίες ταινίες της χρονιάς",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 18,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-WCOQJ028:7",
+      "folder": "Καναδικές",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 4,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-ZFQ2TA63:0",
+      "folder": "Τυνησιακές",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 16,
+      "status": "ok",
+      "durationMs": 18
+    },
+    {
+      "key": "collections.world:folder-ZFQ2TA63:1",
+      "folder": "Τυνησιακές",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 11,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-ZFQ2TA63:2",
+      "folder": "Τυνησιακές",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 14,
+      "status": "ok",
+      "durationMs": 8
+    },
+    {
+      "key": "collections.world:folder-ZFQ2TA63:3",
+      "folder": "Τυνησιακές",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=3",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 171
+    },
+    {
+      "key": "collections.world:folder-ZFQ2TA63:4",
+      "folder": "Τυνησιακές",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 4,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-ZFQ2TA63:5",
+      "folder": "Τυνησιακές",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=3",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 323
+    },
+    {
+      "key": "collections.world:folder-ZFQ2TA63:6",
+      "folder": "Τυνησιακές",
+      "title": "Κορυφαίες ταινίες της χρονιάς",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 9
+    },
+    {
+      "key": "collections.world:folder-ZP0ZUNHA:0",
+      "folder": "Σαουδαραβικές",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL",
+      "count": 46,
+      "status": "ok",
+      "durationMs": 56
+    },
+    {
+      "key": "collections.world:folder-ZP0ZUNHA:1",
+      "folder": "Σαουδαραβικές",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "GLOBAL",
+      "count": 90,
+      "status": "ok",
+      "durationMs": 87
+    },
+    {
+      "key": "collections.world:folder-ZP0ZUNHA:2",
+      "folder": "Σαουδαραβικές",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=25",
+      "count": 26,
+      "status": "ok",
+      "durationMs": 19
+    },
+    {
+      "key": "collections.world:folder-ZP0ZUNHA:3",
+      "folder": "Σαουδαραβικές",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 9,
+      "status": "ok",
+      "durationMs": 9
+    },
+    {
+      "key": "collections.world:folder-ZP0ZUNHA:4",
+      "folder": "Σαουδαραβικές",
+      "title": "Κορυφαίες ταινίες όλων των εποχών",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 2,
+      "status": "ok",
+      "durationMs": 9
+    },
+    {
+      "key": "collections.world:folder-ZP0ZUNHA:5",
+      "folder": "Σαουδαραβικές",
+      "title": "Κορυφαίες σειρές όλων των εποχών",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 9,
+      "status": "ok",
+      "durationMs": 174
+    },
+    {
+      "key": "collections.world:folder-ZP0ZUNHA:6",
+      "folder": "Σαουδαραβικές",
+      "title": "Κορυφαίες ταινίες της χρονιάς",
+      "media": "MOVIE",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 2,
+      "status": "ok",
+      "durationMs": 7
+    },
+    {
+      "key": "collections.world:folder-ZP0ZUNHA:7",
+      "folder": "Σαουδαραβικές",
+      "title": "Κορυφαίες σειρές της χρονιάς",
+      "media": "TV",
+      "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 7
+    }
+  ]
+}

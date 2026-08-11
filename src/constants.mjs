@@ -1,7 +1,8 @@
 import path from "node:path";
 
 export const ROOT = path.resolve(import.meta.dirname, "..");
-export const INPUT_FILE = path.join(ROOT, "nuvio collections v4.5.13 - static-studio-lists-released.json");
+export const BASE_INPUT_FILE = path.join(ROOT, "nuvio collections v4.5.13 - static-studio-lists-released.json");
+export const INPUT_FILE = path.join(ROOT, "data", "nuvio-collections-v5.0.1-source.json");
 export const RAILS_FILE = path.join(ROOT, "config", "rails.yml");
 export const PROVIDERS_FILE = path.join(ROOT, "config", "providers.yml");
 export const AWARDS_FILE = path.join(ROOT, "config", "awards.yml");
@@ -11,10 +12,10 @@ export const CANNES_AWARDS_SNAPSHOT_FILE = path.join(ROOT, "data", "cannes-award
 export const CURATED_STUDIO_FEATURES_FILE = path.join(ROOT, "data", "curated-studio-features.json");
 export const LOCK_FILE = path.join(ROOT, "config", "folders.lock.json");
 export const STATE_FILE = path.join(ROOT, "state", "sync-state.json");
-export const OUTPUT_FILE = path.join(ROOT, "dist", "nuvio-collections-v5.0.json");
+export const OUTPUT_FILE = path.join(ROOT, "dist", "nuvio-collections-v5.0.1.json");
 export const REPORT_FILE = path.join(ROOT, "reports", "latest.json");
 export const PROFILE_AUDIT_REPORT_FILE = path.join(ROOT, "reports", "profile-audit-2026-08-10.json");
-export const PROFILE_REPAIR_FILE = path.join(ROOT, "dist", "nuvio-collections-v5.0-profile-repair.json");
+export const PROFILE_REPAIR_FILE = path.join(ROOT, "dist", "nuvio-collections-v5.0.1-profile-repair.json");
 export const RECOMMENDED_FOLDER_ID = "collections.discover.recommended";
 export const RECOMMENDED_CATALOGS = Object.freeze([
   Object.freeze({ type: "movie", genre: "None", addonId: "aio-metadata", catalogId: "movielens.explore.toppicks.msly9zlu" }),
@@ -28,6 +29,22 @@ export const PERSON_ID_BY_FOLDER = Object.freeze({
   "folder-P3TT53P3": 1,       // George Lucas
 });
 const EMPTY_EXACT_TMDB_PREDICATE_RAIL_KEYS = [
+  "collections.world:folder-1DLH4Q3B:6", "collections.world:folder-1DLH4Q3B:7",
+  "collections.world:folder-2DT7DVAT:6", "collections.world:folder-34G8YHUB:6",
+  "collections.world:folder-34G8YHUB:7", "collections.world:folder-AK9ECCMJ:3",
+  "collections.world:folder-AK9ECCMJ:5", "collections.world:folder-AK9ECCMJ:6",
+  "collections.world:folder-AK9ECCMJ:7", "collections.world:folder-BPH7ACF1:6",
+  "collections.world:folder-BPH7ACF1:7", "collections.world:folder-D1NICV2Z:6",
+  "collections.world:folder-D1NICV2Z:7", "collections.world:folder-DWVPX66N:6",
+  "collections.world:folder-F5XQ4UP6:7", "collections.world:folder-KFJI7SS7:6",
+  "collections.world:folder-KFJI7SS7:7", "collections.world:folder-MH8C4JIK:3",
+  "collections.world:folder-MH8C4JIK:5", "collections.world:folder-MH8C4JIK:6",
+  "collections.world:folder-MH8C4JIK:7", "collections.world:folder-OBIM1CC7:6",
+  "collections.world:folder-OBIM1CC7:7", "collections.world:folder-U4QLYE75:6",
+  "collections.world:folder-U4QLYE75:7", "collections.world:folder-W2F9SBO8:1",
+  "collections.world:folder-W2F9SBO8:3", "collections.world:folder-W2F9SBO8:5",
+  "collections.world:folder-W2F9SBO8:6", "collections.world:folder-W2F9SBO8:7",
+  "collections.world:folder-ZFQ2TA63:7",
   "collections.directors:folder-1VPO8OYE:1", "collections.directors:folder-1VPO8OYE:3",
   "collections.directors:folder-C34MCJNY:1", "collections.directors:folder-C34MCJNY:3",
   "collections.genres:folder-8B3PEI1Y:1", "collections.genres:folder-8B3PEI1Y:7",
@@ -59,21 +76,34 @@ export const RETIRED_RAIL_REASONS = Object.freeze(new Map([
   ...EMPTY_EXACT_TMDB_PREDICATE_RAIL_KEYS.map((key) => [key, "EMPTY_EXACT_TMDB_PREDICATE"]),
   ...NO_SUBSTANTIVE_TV_CAST_CREDIT_RAIL_KEYS.map((key) => [key, "NO_SUBSTANTIVE_TV_CAST_CREDITS"]),
 ]));
+export const CATALOG_REMOVED_RAIL_REASONS = Object.freeze(new Map([
+  ["collections.genres:folder-KQEZGAMF:0", "USER_APPROVED_REALITY_REMOVAL"],
+  ["collections.genres:folder-KQEZGAMF:1", "USER_APPROVED_REALITY_REMOVAL"],
+  ["collections.genres:folder-KQEZGAMF:2", "USER_APPROVED_REALITY_REMOVAL"],
+  ["collections.genres:folder-KQEZGAMF:3", "USER_APPROVED_REALITY_REMOVAL"],
+]));
 export const EXPECTED = Object.freeze({
-  collections: 12, folders: 519, inputSources: 2531, managedInputSources: 2529,
-  finalSources: 2492, managedFinalSources: 2490, recommendedSources: 2,
-  native: 398, materialized: 2092, retiredRails: 48,
+  collections: 13, folders: 548, inputSources: 2747, managedInputSources: 2745,
+  finalSources: 2677, managedFinalSources: 2675, recommendedSources: 2,
+  native: 396, materialized: 2279, retiredRails: 79, catalogRemovedRails: 4,
 });
 export const EXPECTED_MAPPING = Object.freeze({
-  "collections.discover": [2, 10], "collections.streaming": [0, 455],
-  "collections.genres": [0, 180], "collections.film-series": [186, 0],
+  "collections.discover": [0, 12], "collections.streaming": [0, 455],
+  "collections.genres": [0, 192], "collections.film-series": [186, 0],
+  "collections.moods": [0, 60],
   "collections.studios": [0, 107], "collections.networks": [30, 29],
   "collections.actors": [0, 744], "collections.directors": [0, 186],
-  "collections.awards": [0, 60], "collections.world": [0, 311],
+  "collections.awards": [0, 60], "collections.world": [0, 424],
   "collections.decades": [180, 6], "collections.runtime": [0, 4],
 });
 
 export const COUNTRY_BY_FOLDER = Object.freeze({
+  "folder-1DLH4Q3B": "DZ", "folder-WCOQJ028": "CA", "folder-D1NICV2Z": "AE",
+  "folder-W2F9SBO8": "ET", "folder-AK9ECCMJ": "GH", "folder-VBBN438M": "IQ",
+  "folder-2DT7DVAT": "IL", "folder-BPH7ACF1": "JO", "folder-U4QLYE75": "KE",
+  "folder-DWVPX66N": "LB", "folder-F5XQ4UP6": "MA", "folder-MH8C4JIK": "NP",
+  "folder-OBIM1CC7": "PK", "folder-ZP0ZUNHA": "SA", "folder-34G8YHUB": "SN",
+  "folder-KFJI7SS7": "LK", "folder-ZFQ2TA63": "TN", "folder-CHLCSAJ1": "US",
   "folder-0ZI700NE": "EG", "folder-5IS5EIVV": "AR", "folder-TRWE0E34": "AU",
   "folder-2YV5HI8I": "BE", "folder-10NNKWPU": "VN", "folder-VLTMKACY": "BR",
   "folder-BICUTNJY": "GB", "collections.world.french": "FR",

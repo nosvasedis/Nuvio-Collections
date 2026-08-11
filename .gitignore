@@ -2,6 +2,7 @@
 .env.*
 !.env.example
 node_modules/
+.reasonix/
 reports/archive/
 state/cache/
 dist/*.tmp

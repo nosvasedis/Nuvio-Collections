@@ -1,20 +1,27 @@
-import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, CURATED_STUDIO_FEATURES_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, EXPECTED, COUNTRY_BY_FOLDER, PERSON_ID_BY_FOLDER, RETIRED_RAIL_REASONS, PROVIDER_SEEDS, AWARD_SEEDS, AWARD_CATEGORY_SEEDS, CANNES_CATEGORY_SEEDS, OSCAR_CATEGORY_SEEDS, NON_WORK_AWARD_WINNERS } from "./constants.mjs";
+import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, CURATED_STUDIO_FEATURES_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, EXPECTED, COUNTRY_BY_FOLDER, PERSON_ID_BY_FOLDER, RETIRED_RAIL_REASONS, CATALOG_REMOVED_RAIL_REASONS, PROVIDER_SEEDS, AWARD_SEEDS, AWARD_CATEGORY_SEEDS, CANNES_CATEGORY_SEEDS, OSCAR_CATEGORY_SEEDS, NON_WORK_AWARD_WINNERS } from "./constants.mjs";
 import { readJson, writeJson, fingerprint, invariant, railKey, normalizeText } from "./utils.mjs";
 
-const MATERIALIZED_COLLECTIONS = new Set(["collections.streaming", "collections.genres", "collections.studios", "collections.actors", "collections.directors", "collections.awards", "collections.world", "collections.runtime"]);
+const MATERIALIZED_COLLECTIONS = new Set(["collections.streaming", "collections.genres", "collections.moods", "collections.studios", "collections.actors", "collections.directors", "collections.awards", "collections.world", "collections.runtime"]);
 
 function strategy(collection, folder, source, index) {
   if (MATERIALIZED_COLLECTIONS.has(collection.id)) return "materialized";
   if (collection.id === "collections.film-series") return "native";
   if (collection.id === "collections.networks") return index === 0 ? "native" : "materialized";
-  if (collection.id === "collections.discover") return normalizeText(source.title ?? "").includes("κλασικ") ? "native" : "materialized";
+  if (collection.id === "collections.discover") return "materialized";
   if (collection.id === "collections.decades") return folder.id === "collections.decades.2020s" && /2026/.test(source.title ?? "") ? "materialized" : "native";
   throw new Error(`Unclassified source: ${collection.id}/${folder.id}/${index}`);
 }
 
+const DISCOVER_TOP_POLICIES = Object.freeze({
+  0: Object.freeze({ title: "Κορυφαίες πρόσφατες ταινίες", kind: "top_recent", voteCountGte: 500 }),
+  1: Object.freeze({ title: "Κορυφαίες πρόσφατες σειρές", kind: "top_recent", voteCountGte: 300 }),
+  2: Object.freeze({ title: "Κορυφαίες ταινίες όλων των εποχών", kind: "top_all_time", voteCountGte: 5000 }),
+  3: Object.freeze({ title: "Κορυφαίες σειρές όλων των εποχών", kind: "top_all_time", voteCountGte: 3000 }),
+});
+
 function materializer(collectionId) {
   return ({
-    "collections.streaming": "streaming", "collections.genres": "discover",
+    "collections.streaming": "streaming", "collections.genres": "discover", "collections.moods": "discover",
     "collections.studios": "company", "collections.networks": "network_recent",
     "collections.actors": "person_cast", "collections.directors": "person_director",
     "collections.awards": "award", "collections.world": "origin_country",
@@ -33,6 +40,8 @@ function paramsFor(collection, folder, source) {
   const canonicalPersonId = ["collections.actors", "collections.directors"].includes(collection.id) ? PERSON_ID_BY_FOLDER[folder.id] : null;
   const params = { legacy: { tmdbSourceType: source.tmdbSourceType, tmdbId: canonicalPersonId ?? source.tmdbId, traktListId: source.traktListId, filters: source.filters, sortBy: source.sortBy } };
   if (collection.id === "collections.streaming") params.providerFolder = folder.id;
+  if (source.discoverPolicy) params.discoverPolicy = structuredClone(source.discoverPolicy);
+  if (source.explicitSemantic) params.explicitSemantic = true;
   if (collection.id === "collections.world") params.originCountry = COUNTRY_BY_FOLDER[folder.id];
   if (collection.id === "collections.awards") {
     params.award = AWARD_SEEDS[folder.id] ?? null;
@@ -121,6 +130,15 @@ export async function bootstrap() {
         listId: mode === "materialized" && source.tmdbSourceType === "LIST" ? source.tmdbId : null,
         params: paramsFor(collection, folder, source), originalSource: mode === "native" ? nativeOverride(collection.id, source, index) : source,
       });
+      if (collection.id === "collections.discover" && folder.id === "collections.discover.popular-2") {
+        rails.at(-1).params.discoverPolicy = { kind: index >= 2 ? "popular_year" : "popular", dedupeCanonicalTitle: true };
+      }
+      if (collection.id === "collections.discover" && folder.id === "collections.discover.top-rated-2") {
+        const policy = DISCOVER_TOP_POLICIES[index];
+        invariant(policy, `Unknown Discover Top rail: ${index}`);
+        rails.at(-1).title = policy.title;
+        rails.at(-1).params.discoverPolicy = { kind: policy.kind, voteCountGte: policy.voteCountGte };
+      }
       if (rails.at(-1).materializer === "curated_studio_features") {
         rails.at(-1).title = `Ταινίες ${curatedStudioFeatures.entries[folder.id].name}`;
         rails.at(-1).params.curatedStudioFolderId = folder.id;
@@ -172,6 +190,13 @@ export async function bootstrap() {
     const prior = state.rails?.[rail.key] ?? state.retiredRails[rail.key] ?? {};
     state.retiredRails[rail.key] = { ...prior, key: rail.key, collectionId: rail.collectionId, folderId: rail.folderId, title: rail.title, reason: RETIRED_RAIL_REASONS.get(rail.key), retiredForNuvio: "0.8.3", retiredAt: state.retiredRails[rail.key]?.retiredAt ?? new Date().toISOString() };
     delete state.rails?.[rail.key];
+  }
+  invariant(CATALOG_REMOVED_RAIL_REASONS.size === EXPECTED.catalogRemovedRails, "Catalog-removed rail mapping mismatch");
+  for (const [key, reason] of CATALOG_REMOVED_RAIL_REASONS) {
+    const prior = state.rails?.[key] ?? state.retiredRails[key] ?? {};
+    invariant(prior.listId, `Catalog-removed rail lost its list tombstone: ${key}`);
+    state.retiredRails[key] = { ...prior, key, reason, retiredForNuvio: "0.8.3", retiredAt: state.retiredRails[key]?.retiredAt ?? new Date().toISOString() };
+    delete state.rails?.[key];
   }
   await writeJson(STATE_FILE, state);
   return { collections: input.length, folders: folders.length, inputSources: sources.length, managedRails: rails.length, native: rails.filter((x) => x.strategy === "native").length, materialized: rails.filter((x) => x.strategy === "materialized").length };

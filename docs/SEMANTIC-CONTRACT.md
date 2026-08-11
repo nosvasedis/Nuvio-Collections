@@ -6,14 +6,16 @@ a test so bootstrap cannot silently reintroduce it.
 
 ## Protected structure
 
-- 12 collections and all 519 folders are immutable in count and identity. The
-  two additions are the approved Portuguese and Latin American World folders;
-  none of the original 517 was deleted, merged or renamed.
+- 13 collections and all 548 active folders are immutable in count and identity.
+  The sole approved historical deletion is Genres/Reality
+  (`folder-KQEZGAMF`) with four preserved list tombstones. The remaining 516
+  original folders, Portuguese/Latin-American additions and 30 v5.0.1
+  additions are fingerprint-locked.
 - `collections.discover.recommended` is manually curated and fingerprint-locked.
 - Rails may be retired only after evidence and explicit approval. Retired list
   IDs remain in `state.retiredRails`; nightly sync never deletes remote lists.
-- Active release: 2,492 sources = 2,490 managed + 2 recommended. Managed sources
-  are 398 native and 2,092 materialized lists.
+- Active release: 2,677 sources = 2,675 managed + 2 recommended. Managed sources
+  are 396 native and 2,279 materialized lists.
 
 ## Media identity and Greek presentation
 
@@ -52,7 +54,7 @@ a test so bootstrap cannot silently reintroduce it.
     label is fixed until a fresh export audits to `mediaTypeMismatches: 0`.
 - Post-import verification is mandatory: export from Nuvio and run
   `npm run profile:audit -- --profile=<export.json>`. Accept only
-  `mediaTypeMismatches: 0`, `missing: 0`, `extra: 0`, and 12/12 collections.
+  `mediaTypeMismatches: 0`, `missing: 0`, `extra: 0`, and 13/13 collections.
 - Five Golden Globe movie companions legitimately contain the word “σειρά” in
   their explanatory titles. Validation follows the canonical rail media type,
   never a title substring heuristic.
@@ -86,7 +88,7 @@ a test so bootstrap cannot silently reintroduce it.
   directly to those IDs instead of rerunning fuzzy historical title resolution.
 - If poster/semantic filtering empties a rail, preparation fails closed: no TMDB
   clear/write occurs and the last-known-good remote list remains intact.
-- The 398 native sources are resolved directly by Nuvio 0.8.3 and Nuvio exposes
+- The 396 native sources are resolved directly by Nuvio 0.8.3 and Nuvio exposes
   no supported `has poster` filter for them. The repository cannot enforce this
   gate on native sources without converting them to additional materialized
   lists. This limitation must not be hidden.
@@ -135,6 +137,51 @@ Folder IDs select the boundary, never translated display text. The reviewed
 live sample produced 127/182/113/121 valid titles and zero cross-rail overlap.
 
 Regression: exact boundary and four-folder parameter tests.
+
+Each runtime rail is a deterministic daily rotation, not a static popularity
+page. The materializer fetches up to 500 candidates, details-verifies the exact
+bucket, requires at least 100 TMDB votes, keeps the 240 strongest recognition
+candidates and deterministically selects up to 100 using Athens date plus the
+stable rail key. Same-day retries are identical; the next date rotates both
+membership and order when the eligible pool is larger than the list.
+
+Regression: same-day stability, next-day rotation, vote floor and exact bounds.
+
+## Discover popularity and Top
+
+- Discover Popular preserves its configured quorum: 1,000 movie votes, 500 TV
+  votes, and 200 for current-year rails. The generator must never delete these
+  filters. Same-title regional clones are reduced to the most recognized work.
+- `Κορυφαίες πρόσφατες` is a rolling 24-month materialized rail with quorum
+  500 movies / 300 TV.
+- `Κορυφαίες ... όλων των εποχών` covers all released dates with quorum 5,000
+  movies / 3,000 TV. The previous pre-2000 native classic cutoff is removed.
+- Top ordering is Bayesian and vote-aware. TMDB supplies community ratings,
+  not a trustworthy critics-only score, so the repository does not claim an
+  unsupported critics data source.
+
+## v5.0.1 catalog additions
+
+- Genres/Reality and its four lists were removed with explicit user approval.
+  The exact list IDs remain tombstoned with reason
+  `USER_APPROVED_REALITY_REMOVAL`; no unrelated folder or rail was removed.
+- Genres adds Greek-locale-sorted `Κορεατικά δράματα (K-Drama)` and
+  `Ρομαντική κομεντί`, eight homogeneous rails each. K-Drama requires Korean
+  origin plus Drama. Romantic-comedy movies require both Comedy and Romance;
+  TV uses the reviewed romantic-comedy keyword because TMDB TV has no Romance
+  genre.
+- `✨ Διάθεση & Ατμόσφαιρα` is a new collection after Film Series and before
+  Studios. All ten folders, sixty translated rails and Kaptain artworks come
+  from the pinned live database v47 SHA-256 recorded in
+  `scripts/build-v5.0.1-catalog.mjs`. English-language restrictions are removed;
+  thematic genres/keywords, quorums, rolling dates, poster gate and released
+  cap remain enforced by our materializer.
+- World adds 18 individual origin countries, never overlapping regional
+  super-folders. Thirty-one exact predicates with no TMDB result were retired
+  from the active artifact after the live evidence scan; the 18 country folders
+  remain and contain only their non-empty truthful rails.
+- `reports/v5.0.1-additions.json` must show 189 active additions, zero empty and
+  zero failed before release.
 
 ## Studio feature films and curated animation canons
 
@@ -210,9 +257,9 @@ Record current evidence in `reports/latest.json` and README, never only in chat:
 - bootstrap counts match constants and every non-recommended folder is non-empty;
 - all tests pass;
 - audit passes folder/recommended locks, source counts and compatibility rules;
-- full live dry-run considers all 2,092 materialized rails with zero failures;
+- full live dry-run considers all 2,279 materialized rails with zero failures;
 - production updates pass exact read-back and leave zero active empty rails;
-- compiled `dist/nuvio-collections-v5.0.json` contains 2,492 sources;
+- compiled `dist/nuvio-collections-v5.0.1.json` contains 2,677 sources;
 - the reviewed Nuvio profile repair report records 987 managed media-type mismatches
   (all materialized LIST TV rails; 121 native TV rails stayed correct),
   and the post-import export must record zero;

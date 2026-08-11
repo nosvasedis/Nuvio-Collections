@@ -5,8 +5,10 @@ counts, or the generated JSON.
 
 Non-negotiable rules:
 
-- Never delete, merge, or rename any of the 519 folders. The original 517 plus
-  `collections.world.portuguese` and `collections.world.latin-american` are
+- Never delete, merge, or rename any of the 548 active folders. The sole
+  approved historical deletion is Genres/Reality (`folder-KQEZGAMF`), removed
+  for v5.0.1 with four list tombstones. The remaining original 516, the earlier
+  Portuguese/Latin-American additions, and the 30 v5.0.1 additions are
   fingerprint-locked.
 - Never edit the two sources in `collections.discover.recommended`; they are
   user-curated and protected by a fingerprint test.
@@ -42,7 +44,7 @@ For releases that repair an already imported profile, also run
 `npm run profile:audit -- --profile=<export.json> --write-repair`, import the
 generated repair artifact, export the Nuvio profile again, and require zero
 media-type mismatches (`mediaTypeMismatches: 0`, `missing: 0`, `extra: 0`,
-12/12 collections). A folder-order-only or import-compatibility change does not
+  13/13 collections). A folder-order-only or import-compatibility change does not
 require production TMDB sync.
 
 Do not claim success unless the live dry-run has zero failures and zero empty

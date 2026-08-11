@@ -1,4 +1,4 @@
-import { INPUT_FILE, RAILS_FILE, CURATED_STUDIO_FEATURES_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, EXPECTED_MAPPING } from "./constants.mjs";
+import { INPUT_FILE, RAILS_FILE, CURATED_STUDIO_FEATURES_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, EXPECTED_MAPPING, CATALOG_REMOVED_RAIL_REASONS } from "./constants.mjs";
 import { readJson, fingerprint, invariant } from "./utils.mjs";
 
 export async function auditRepository({ requireListIds = false } = {}) {
@@ -39,7 +39,8 @@ export async function auditRepository({ requireListIds = false } = {}) {
   invariant(native.every((rail) => Object.keys(rail.originalSource.filters ?? {}).every((key) => nuvio083Filters.has(key))), "Unsupported Nuvio 0.8.3 native filter");
   invariant(native.every((rail) => !Object.keys(rail.originalSource.filters ?? {}).length || ["DISCOVER", "COMPANY", "NETWORK"].includes(rail.originalSource.tmdbSourceType)), "Nuvio filters attached to a source type that ignores them");
   invariant(native.every((rail) => rail.originalSource.mediaType === rail.mediaType), "Native Nuvio media type drift");
-  invariant(Object.keys(state.retiredRails ?? {}).length === EXPECTED.retiredRails, "Retired rail audit failed");
+  invariant(Object.keys(state.retiredRails ?? {}).length === EXPECTED.retiredRails + EXPECTED.catalogRemovedRails, "Retired rail audit failed");
+  invariant([...CATALOG_REMOVED_RAIL_REASONS].every(([key, reason]) => state.retiredRails[key]?.reason === reason && !state.rails[key]), "Catalog-removed tombstone audit failed");
   if (requireListIds) for (const rail of materialized) invariant(state.rails[rail.key]?.listId, `Missing managed list ID: ${rail.key}`);
   const world = input.find((collection) => collection.id === "collections.world");
   invariant(world, "collections.world missing");

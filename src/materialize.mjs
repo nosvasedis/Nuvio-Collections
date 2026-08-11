@@ -1,5 +1,5 @@
 import { ALLOWED_MONETIZATION, MATERIALIZED_LIMIT } from "./constants.mjs";
-import { dateFor, normalizeText, uniqueItems, dedupeLikelyDuplicateWorks, shiftYears, mapLimit } from "./utils.mjs";
+import { dateFor, normalizeText, uniqueItems, dedupeLikelyDuplicateWorks, canonicalWorkTitle, fingerprint, shiftYears, mapLimit } from "./utils.mjs";
 
 export function runtimeBucket(minutes) { if (minutes < 90) return "short"; if (minutes < 150) return "standard"; if (minutes < 180) return "long"; return "epic"; }
 
@@ -56,7 +56,7 @@ function apiSort(value = "popularity.desc") { return (value ?? "popularity.desc"
 function isNewRail(title) { return /(?:^|\s)νε(?:ες|α|οι)?(?:\s|$)/u.test(title); }
 function isTrendingRail(title) { return /(?:^|\s)τασεις?(?:\s|$)/u.test(title); }
 export function discoverParams(rail, media, today) {
-  const f = rail.params.legacy?.filters ?? {}, title = normalizeText(rail.title ?? ""), p = { include_adult: false, include_video: false, sort_by: apiSort(rail.params.sortBy ?? rail.params.legacy?.sortBy) };
+  const f = rail.params.legacy?.filters ?? {}, title = normalizeText(rail.title ?? ""), policy = rail.params.discoverPolicy, p = { include_adult: false, include_video: false, sort_by: apiSort(rail.params.sortBy ?? rail.params.legacy?.sortBy) };
   const datePrefix = media === "movie" ? "primary_release_date" : "first_air_date";
   if (f.voteCountGte != null) p["vote_count.gte"] = f.voteCountGte;
   if (f.voteAverageGte != null) p["vote_average.gte"] = f.voteAverageGte;
@@ -72,7 +72,25 @@ export function discoverParams(rail, media, today) {
   if (f.releaseDateLte) p[`${datePrefix}.lte`] = f.releaseDateLte > today ? today : f.releaseDateLte;
   if (f.year) { p[`${datePrefix}.gte`] = `${f.year}-01-01`; p[`${datePrefix}.lte`] = String(f.year) === today.slice(0, 4) ? today : `${f.year}-12-31`; }
   if (rail.params.summary) { p[`${datePrefix}.gte`] = rail.params.startDate; p[`${datePrefix}.lte`] = today; if (p.sort_by === "vote_average.desc") p["vote_count.gte"] = media === "movie" ? 500 : 200; }
-  if (title.includes("κορυφ")) { p.sort_by = "vote_average.desc"; p["vote_count.gte"] ??= media === "movie" ? 500 : 200; }
+  if (policy?.kind === "popular" || policy?.kind === "popular_year") {
+    delete p["vote_average.gte"];
+    p.sort_by = "popularity.desc";
+    if (policy.kind === "popular_year") { p[`${datePrefix}.gte`] = `${today.slice(0, 4)}-01-01`; p[`${datePrefix}.lte`] = today; }
+  }
+  else if (policy?.kind === "top_recent" || policy?.kind === "top_all_time" || policy?.kind === "top_year") {
+    delete p[`${datePrefix}.gte`]; delete p[`${datePrefix}.lte`]; delete p["vote_average.gte"];
+    p.sort_by = "vote_average.desc"; p["vote_count.gte"] = policy.voteCountGte;
+    if (policy.kind === "top_recent") p[`${datePrefix}.gte`] = shiftYears(today, -2);
+    if (policy.kind === "top_year") p[`${datePrefix}.gte`] = `${today.slice(0, 4)}-01-01`;
+  }
+  else if (policy?.kind === "recent") {
+    if (!policy.preserveVoteQuorum) delete p["vote_count.gte"];
+    delete p["vote_average.gte"]; p.sort_by = `${datePrefix}.desc`; p[`${datePrefix}.gte`] = shiftYears(today, -2);
+  }
+  else if (["thematic", "fixed_period"].includes(policy?.kind)) {
+    if (!policy.preserveVoteQuorum) delete p["vote_count.gte"];
+  }
+  else if (title.includes("κορυφ")) { p.sort_by = "vote_average.desc"; p["vote_count.gte"] ??= media === "movie" ? 500 : 200; }
   else if (title.includes("προσφα")) { delete p["vote_count.gte"]; delete p["vote_average.gte"]; p.sort_by = `${datePrefix}.desc`; p[`${datePrefix}.gte`] = shiftYears(today, -2); }
   else if (isNewRail(title) || title.includes("της χρονιας")) {
     const preserveGenreNewQuorum = rail.collectionId === "collections.genres" && isNewRail(title);
@@ -88,6 +106,36 @@ export function discoverParams(rail, media, today) {
 function weightedRating(item, media) {
   const votes = Math.max(0, Number(item.vote_count ?? 0)), average = Math.max(0, Number(item.vote_average ?? 0)), priorWeight = media === "movie" ? 250 : 100;
   return (votes * average + priorWeight * 6) / (votes + priorWeight);
+}
+
+function recognitionScore(item) {
+  return Math.log10(Math.max(0, Number(item.vote_count ?? 0)) + 1) * 100 + Math.max(0, Number(item.popularity ?? 0));
+}
+
+function dedupeCanonicalTitles(items, media) {
+  const selected = new Map(), untitled = [];
+  for (const item of items) {
+    const title = canonicalWorkTitle(item);
+    if (!title) { untitled.push(item); continue; }
+    const key = `${media}:${title}`, prior = selected.get(key);
+    if (!prior || recognitionScore(item) > recognitionScore(prior) || (recognitionScore(item) === recognitionScore(prior) && item.id < prior.id)) selected.set(key, item);
+  }
+  return [...selected.values(), ...untitled];
+}
+
+function deterministicShuffle(items, seedText) {
+  const output = [...items];
+  let state = Number.parseInt(fingerprint(seedText).slice(0, 8), 16) || 0x9e3779b9;
+  const random = () => { state ^= state << 13; state ^= state >>> 17; state ^= state << 5; return (state >>> 0) / 0x100000000; };
+  for (let index = output.length - 1; index > 0; index--) { const next = Math.floor(random() * (index + 1)); [output[index], output[next]] = [output[next], output[index]]; }
+  return output;
+}
+
+export function dailyRuntimeSelection(items, railKey, today, { poolSize = 240, limit = 100, voteFloor = 100 } = {}) {
+  const familiar = items.filter((item) => Number(item.vote_count ?? 0) >= voteFloor)
+    .sort((a, b) => recognitionScore(b) - recognitionScore(a) || a.id - b.id)
+    .slice(0, poolSize);
+  return deterministicShuffle(familiar, `${today}:${railKey}`).slice(0, limit);
 }
 export function isSubstantiveCastCredit(item) {
   const character = normalizeText(item.character ?? "");
@@ -109,8 +157,10 @@ export async function requireUsablePosters(client, items, media) {
   return checked.filter(Boolean);
 }
 function rank(items, rail, media, today, full = false, person = false) {
-  const title = normalizeText(rail.title ?? ""), filtered = dedupeLikelyDuplicateWorks(items, media).filter((x) => { const d = dateFor(x, media); return !d || d <= today; });
-  const comparator = title.includes("κορυφ") || title.includes("top") ? person
+  const title = normalizeText(rail.title ?? ""), policy = rail.params?.discoverPolicy;
+  let filtered = dedupeLikelyDuplicateWorks(items, media).filter((x) => { const d = dateFor(x, media); return !d || d <= today; });
+  if (policy?.dedupeCanonicalTitle) filtered = dedupeCanonicalTitles(filtered, media);
+  const comparator = title.includes("κορυφ") || title.includes("top") ? person || policy?.kind?.startsWith("top_")
     ? (a, b) => weightedRating(b, media) - weightedRating(a, media) || (b.vote_count ?? 0) - (a.vote_count ?? 0) || a.id - b.id
     : (a, b) => (b.vote_average ?? 0) - (a.vote_average ?? 0) || (b.vote_count ?? 0) - (a.vote_count ?? 0) || a.id - b.id
     : isNewRail(title) || title.includes("προσφα") ? (a, b) => String(dateFor(b, media) ?? "").localeCompare(String(dateFor(a, media) ?? "")) || a.id - b.id : (a, b) => (b.popularity ?? 0) - (a.popularity ?? 0) || a.id - b.id;
@@ -220,7 +270,7 @@ export async function materializeRail(client, rail, context) {
     return { scope: "GLOBAL:SUBSTANTIVE_CREDITS", items: rank(items, rail, media, context.today, true, true) };
   }
   const params = discoverParams(rail, media, context.today);
-  if (rail.collectionId === "collections.genres") await applySemanticPredicates(client, rail, media, params, context.folderTitle);
+  if (rail.collectionId === "collections.genres" && !rail.params.explicitSemantic) await applySemanticPredicates(client, rail, media, params, context.folderTitle);
   const legacyType = rail.params.legacy?.tmdbSourceType, id = rail.params.legacy?.tmdbId;
   if (rail.materializer === "company") {
     params.with_companies = id ?? await client.companyId(context.folderTitle);
@@ -229,23 +279,25 @@ export async function materializeRail(client, rail, context) {
   }
   if (rail.materializer === "network_recent") { params.with_networks = id; params.sort_by = media === "tv" ? "first_air_date.desc" : "primary_release_date.desc"; params[`${media === "tv" ? "first_air_date" : "primary_release_date"}.gte`] = shiftYears(context.today, -2); }
   if (rail.materializer === "runtime") {
+    params.sort_by = "popularity.desc"; params["vote_count.gte"] = 100;
     if (rail.folderId === "collections.runtime.short") params["with_runtime.lte"] = 89;
     else if (rail.folderId === "collections.runtime.standard") { params["with_runtime.gte"] = 90; params["with_runtime.lte"] = 149; }
     else if (rail.folderId === "collections.runtime.long") { params["with_runtime.gte"] = 150; params["with_runtime.lte"] = 179; }
     else if (rail.folderId === "collections.runtime.epic") params["with_runtime.gte"] = 180;
     else throw new Error(`Unknown runtime folder: ${rail.folderId}`);
-    const expected = rail.folderId.split(".").at(-1), discovered = await client.discover(media, params);
+    const expected = rail.folderId.split(".").at(-1), discovered = await client.discover(media, params, 500);
     const verified = await mapLimit(discovered, 16, async (item) => {
       const details = await client.details(media, item.id), minutes = Number(details.runtime);
       return Number.isFinite(minutes) && minutes > 0 && runtimeBucket(minutes) === expected ? { ...item, ...details } : null;
     });
-    return { scope: `GLOBAL:RUNTIME_VERIFIED=${expected}`, items: rank(verified.filter(Boolean), rail, media, context.today) };
+    const eligible = rank(verified.filter(Boolean), rail, media, context.today, true);
+    return { scope: `GLOBAL:RUNTIME_VERIFIED=${expected}:DAILY_ROTATION:VOTES>=100`, items: dailyRuntimeSelection(eligible, rail.key, context.today) };
   }
   if (legacyType === "COMPANY") params.with_companies = id;
   if (legacyType === "NETWORK") params.with_networks = id;
   if (isTrendingRail(normalizeText(rail.title ?? "")) && rail.collectionId === "collections.discover") return { scope: "GLOBAL", items: rank(await client.trending(media), rail, media, context.today) };
   let items = await client.discover(media, params), quorum = params["vote_count.gte"];
-  if (!items.length && quorum != null) {
+  if (!items.length && quorum != null && (!rail.params.discoverPolicy || rail.params.discoverPolicy.allowQuorumFallback)) {
     const tiers = media === "movie" ? [100, 25, 5] : [50, 10, 3];
     for (const tier of tiers.filter((value) => value < quorum)) {
       items = await client.discover(media, { ...params, "vote_count.gte": tier });

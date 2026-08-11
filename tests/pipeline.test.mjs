@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { bootstrap } from "../src/bootstrap.mjs";
 import { auditRepository } from "../src/validate.mjs";
 import { compile } from "../src/compiler.mjs";
-import { runtimeBucket, chooseAvailability, materializeRail, applySemanticPredicates, discoverParams, isSubstantiveCastCredit, isFeatureFilm, requireUsablePosters } from "../src/materialize.mjs";
+import { runtimeBucket, dailyRuntimeSelection, chooseAvailability, materializeRail, applySemanticPredicates, discoverParams, isSubstantiveCastCredit, isFeatureFilm, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
 import { confirmationCompatible, normalizeCandidateItems, semanticRefreshDue } from "../src/sync.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS, COUNTRY_BY_FOLDER } from "../src/constants.mjs";
@@ -13,7 +13,7 @@ import { compareProfile } from "../src/profile-audit.mjs";
 
 test("bootstrap creates the final immutable mapping", async () => {
   const result = await bootstrap();
-  assert.deepEqual(result, { collections: 12, folders: 519, inputSources: 2531, managedRails: 2490, native: 398, materialized: 2092 });
+  assert.deepEqual(result, { collections: 13, folders: 548, inputSources: 2747, managedRails: 2675, native: 396, materialized: 2279 });
   const audit = await auditRepository(); assert.equal(audit.finalSources, EXPECTED.finalSources);
   const manifest = await readJson(new URL("../config/rails.yml", import.meta.url));
   const companions = manifest.rails.filter((rail) => rail.key.endsWith(":movie-companion"));
@@ -35,6 +35,19 @@ test("bootstrap creates the final immutable mapping", async () => {
   assert.equal(latin.length, 8); assert.ok(latin.every((rail) => rail.params.originCountry === COUNTRY_BY_FOLDER["collections.world.latin-american"] && !rail.params.originCountry.split("|").includes("ES")));
   assert.equal(spanish.length, 8); assert.ok(spanish.every((rail) => rail.params.originCountry === "ES"));
   assert.ok([...portugal, ...latin].every((rail) => rail.params.legacy.filters.withOriginalLanguage == null));
+  const input = await readJson(INPUT_FILE);
+  assert.equal(input[4].id, "collections.moods"); assert.equal(input[4].title, "✨ Διάθεση & Ατμόσφαιρα");
+  assert.equal(input[4].folders.length, 10); assert.ok(input[4].folders.every((folder) => folder.sources.length === 6));
+  const genres = input.find((collection) => collection.id === "collections.genres");
+  assert.ok(!genres.folders.some((folder) => folder.id === "folder-KQEZGAMF"));
+  assert.ok(genres.folders.some((folder) => folder.title === "Κορεατικά δράματα (K-Drama)"));
+  assert.ok(genres.folders.some((folder) => folder.title === "Ρομαντική κομεντί"));
+  assert.deepEqual(genres.folders.map((folder) => folder.title), genres.folders.map((folder) => folder.title).toSorted((a, b) => a.localeCompare(b, "el")));
+  const removedReality = ["collections.genres:folder-KQEZGAMF:0", "collections.genres:folder-KQEZGAMF:1", "collections.genres:folder-KQEZGAMF:2", "collections.genres:folder-KQEZGAMF:3"];
+  assert.ok(removedReality.every((key) => retired.retiredRails[key]?.reason === "USER_APPROVED_REALITY_REMOVAL" && !retired.rails[key]));
+  const discoverTop = manifest.rails.filter((rail) => rail.folderId === "collections.discover.top-rated-2");
+  assert.deepEqual(discoverTop.map((rail) => rail.title), ["Κορυφαίες πρόσφατες ταινίες", "Κορυφαίες πρόσφατες σειρές", "Κορυφαίες ταινίες όλων των εποχών", "Κορυφαίες σειρές όλων των εποχών"]);
+  assert.ok(discoverTop.every((rail) => rail.strategy === "materialized"));
 });
 
 test("studio feature policy rejects shorts, documentaries, TV movies, and future releases", () => {
@@ -90,10 +103,20 @@ test("runtime boundaries are exact and non-overlapping", () => {
 
 test("all four materialized runtime folders send distinct exact TMDB bounds", async () => {
   const calls = [];
-  const client = { discover: async (_media, params) => { calls.push(params); return [{ id: calls.length, release_date: "2020-01-01" }]; }, details: async (_media, id) => ({ id, runtime: [null, 80, 100, 160, 200][id], release_date: "2020-01-01" }) };
+  const client = { discover: async (_media, params, limit) => { calls.push({ ...params, limit }); return [{ id: calls.length, vote_count: 500, popularity: 50, release_date: "2020-01-01" }]; }, details: async (_media, id) => ({ id, runtime: [null, 80, 100, 160, 200][id], release_date: "2020-01-01" }) };
   const folders = ["short", "standard", "long", "epic"];
   for (const name of folders) await materializeRail(client, { folderId: `collections.runtime.${name}`, collectionId: "collections.runtime", title: name, mediaType: "MOVIE", materializer: "runtime", params: { legacy: { filters: {} } } }, { today: "2026-08-10", folderTitle: name });
   assert.deepEqual(calls.map(({ "with_runtime.gte": gte, "with_runtime.lte": lte }) => [gte, lte]), [[undefined, 89], [90, 149], [150, 179], [180, undefined]]);
+  assert.ok(calls.every((call) => call["vote_count.gte"] === 100 && call.sort_by === "popularity.desc" && call.limit === 500));
+});
+
+test("runtime daily rotation is deterministic, changes by Athens date, and admits only familiar titles", () => {
+  const items = Array.from({ length: 180 }, (_, index) => ({ id: index + 1, vote_count: index < 5 ? 10 : 500 + index, popularity: 200 - index }));
+  const first = dailyRuntimeSelection(items, "runtime:long", "2026-08-10");
+  const repeat = dailyRuntimeSelection(items, "runtime:long", "2026-08-10");
+  const next = dailyRuntimeSelection(items, "runtime:long", "2026-08-11");
+  assert.deepEqual(first, repeat); assert.notDeepEqual(first.map((item) => item.id), next.map((item) => item.id));
+  assert.equal(first.length, 100); assert.ok(first.every((item) => item.vote_count >= 100));
 });
 
 test("person rails reject self, archive, and uncredited noise and use vote-aware Top ranking", async () => {
@@ -200,22 +223,45 @@ test("Greek semantic labels do not confuse family with new or martial arts with 
   assert.equal(params.with_genres, "28"); assert.equal(params.with_keywords, String(martialArtsKeywordId));
 });
 
-test("genre New preserves its configured vote floor while other New, Popular, and Recent rails do not", () => {
+test("Discover Popular keeps its vote quorum while generic New and Recent retain their established semantics", () => {
   const legacy = { filters: { voteCountGte: 10, voteAverageGte: 6 }, sortBy: "vote_average.desc" };
-  for (const title of ["Δημοφιλείς σειρές", "Νέες σειρές", "Πρόσφατες σειρές"]) {
+  for (const title of ["Νέες σειρές", "Πρόσφατες σειρές"]) {
     const params = discoverParams({ title, params: { legacy } }, "tv", "2026-08-10");
     assert.equal(params["vote_count.gte"], undefined, title); assert.equal(params["vote_average.gte"], undefined, title);
   }
+  const popular = discoverParams({ title: "Δημοφιλείς σειρές", params: { legacy, discoverPolicy: { kind: "popular" } } }, "tv", "2026-08-10");
+  assert.equal(popular["vote_count.gte"], 10); assert.equal(popular["vote_average.gte"], undefined); assert.equal(popular.sort_by, "popularity.desc");
+  const year = discoverParams({ title: "Δημοφιλείς σειρές της χρονιάς", params: { legacy, discoverPolicy: { kind: "popular_year" } } }, "tv", "2026-08-10");
+  assert.equal(year["vote_count.gte"], 10); assert.equal(year["first_air_date.gte"], "2026-01-01"); assert.equal(year["first_air_date.lte"], "2026-08-10");
   const genreNew = discoverParams({ collectionId: "collections.genres", title: "Νέες σειρές", params: { legacy } }, "tv", "2026-08-10");
   assert.equal(genreNew["vote_count.gte"], 10); assert.equal(genreNew["vote_average.gte"], undefined);
   const top = discoverParams({ title: "Κορυφαίες σειρές", params: { legacy } }, "tv", "2026-08-10");
   assert.equal(top["vote_count.gte"], 10); assert.equal(top["vote_average.gte"], 6);
 });
 
+test("Discover Popular collapses same-title regional clones and keeps the recognized work", async () => {
+  const client = { discover: async () => [
+    { id: 1, name: "Paradise Hotel", original_name: "Paradise Hotel", vote_count: 10, popularity: 90, first_air_date: "2024-01-01" },
+    { id: 2, name: "Paradise Hotel", original_name: "Paradise Hotel", vote_count: 900, popularity: 50, first_air_date: "2025-01-01" },
+    { id: 3, name: "Recognized Series", original_name: "Recognized Series", vote_count: 700, popularity: 80, first_air_date: "2025-01-01" },
+  ] };
+  const rail = { collectionId: "collections.discover", title: "Δημοφιλείς σειρές", mediaType: "TV", materializer: "discover", params: { legacy: { filters: { voteCountGte: 500 } }, discoverPolicy: { kind: "popular", dedupeCanonicalTitle: true } } };
+  const result = await materializeRail(client, rail, { today: "2026-08-10" });
+  assert.deepEqual(result.items.map((item) => item.id), [3, 2]);
+});
+
+test("recent Top is rolling 24 months while all-time Top removes the old classic cutoff", () => {
+  const legacy = { filters: { releaseDateLte: "1999-12-31", voteCountGte: 1000 }, sortBy: "vote_average.desc" };
+  const recent = discoverParams({ title: "Κορυφαίες πρόσφατες ταινίες", params: { legacy, discoverPolicy: { kind: "top_recent", voteCountGte: 500 } } }, "movie", "2026-08-10");
+  assert.equal(recent["primary_release_date.gte"], "2024-08-10"); assert.equal(recent["primary_release_date.lte"], "2026-08-10"); assert.equal(recent["vote_count.gte"], 500);
+  const allTime = discoverParams({ title: "Κορυφαίες ταινίες όλων των εποχών", params: { legacy, discoverPolicy: { kind: "top_all_time", voteCountGte: 5000 } } }, "movie", "2026-08-10");
+  assert.equal(allTime["primary_release_date.gte"], undefined); assert.equal(allTime["primary_release_date.lte"], "2026-08-10"); assert.equal(allTime["vote_count.gte"], 5000);
+});
+
 test("all genre New rails carry their manifest vote floor into TMDB Discover", async () => {
   const manifest = await readJson(new URL("../config/rails.yml", import.meta.url));
   const fresh = manifest.rails.filter((rail) => rail.collectionId === "collections.genres" && /^Νέ/.test(rail.title));
-  assert.equal(fresh.length, 44);
+  assert.equal(fresh.length, 47);
   for (const rail of fresh) {
     const media = rail.mediaType === "TV" ? "tv" : "movie";
     assert.equal(discoverParams(rail, media, "2026-08-10")["vote_count.gte"], rail.params.legacy.filters.voteCountGte, rail.key);
@@ -258,20 +304,21 @@ test("Nuvio 0.8.3 LIST editor hardcodes MOVIE while DataStore preserves TV", asy
   assert.equal(roundTrip.type, null);
   assert.equal(roundTrip.tmdbId, probe.tmdbId);
   assert.deepEqual(emulateMobileListTvCorruption(probe), { ...probe, mediaType: "MOVIE" });
-  const artifact = await readJson(OUTPUT_FILE);
+  const compiled = await compile({ allowPlaceholders: true });
+  const artifact = await readJson(compiled.output);
   const sources = artifact.flatMap((c) => c.folders ?? []).flatMap((f) => f.sources ?? []);
   const listTv = sources.filter((s) => s.provider === "tmdb" && s.tmdbSourceType === "LIST" && s.mediaType === "TV");
   const nativeTv = sources.filter((s) => s.provider === "tmdb" && s.tmdbSourceType !== "LIST" && s.mediaType === "TV");
-  assert.equal(listTv.length, 987);
-  assert.equal(nativeTv.length, 121);
+  assert.equal(listTv.length, 1055);
+  assert.equal(nativeTv.length, 120);
   assert.ok(listTv.every((s) => s.type === "series" && s.sortBy === "original"));
   assert.ok(listTv.every((s) => emulateNuvio083DataStoreRoundTrip(s).mediaType === "TV"));
   const corrupted = listTv.map(emulateMobileListTvCorruption);
   const analysis = analyzeListTvCompat(sources, [...corrupted, ...nativeTv]);
-  assert.equal(analysis.canonicalListTv, 987);
-  assert.equal(analysis.profileSeriesMovieList, 987);
+  assert.equal(analysis.canonicalListTv, 1055);
+  assert.equal(analysis.profileSeriesMovieList, 1055);
   assert.equal(analysis.profileSeriesTvList, 0);
-  assert.equal(analysis.profileNativeSeriesTv, 121);
+  assert.equal(analysis.profileNativeSeriesTv, 120);
   assert.equal(analysis.editorWouldForceMovie, true);
   assert.equal(analysis.dataStoreWouldPreserveTv, true);
 });
@@ -281,9 +328,9 @@ test("collections.world folders are Greek-locale sorted with Λ and Π in place"
   const world = input.find((collection) => collection.id === "collections.world");
   const titles = world.folders.map((folder) => folder.title);
   assert.deepEqual(titles, [...titles].sort((a, b) => a.localeCompare(b, "el")));
-  assert.equal(titles.indexOf("Λατινοαμερικανικές"), titles.indexOf("Κορεάτικες") + 1);
-  assert.equal(titles.indexOf("Πορτογαλικές"), titles.indexOf("Πολωνικές") + 1);
-  assert.equal(world.folders.length, 40);
+  assert.ok(titles.indexOf("Λατινοαμερικανικές") > titles.indexOf("Κορεάτικες") && titles.indexOf("Λατινοαμερικανικές") < titles.indexOf("Μεξικάνικες"));
+  assert.ok(titles.indexOf("Πορτογαλικές") > titles.indexOf("Πολωνικές") && titles.indexOf("Πορτογαλικές") < titles.indexOf("Ρωσικές"));
+  assert.equal(world.folders.length, 58);
   assert.equal(world.folders.filter((folder) => folder.id === "collections.world.portuguese" || folder.id === "collections.world.latin-american").length, 2);
 });
 
@@ -427,8 +474,8 @@ test("placeholder compilation preserves all folders and recommended byte semanti
   assert.equal(fingerprint(getRecommended(before)), fingerprint(getRecommended(after)));
   assert.deepEqual(getRecommended(after).sources.map(({ type, genre, addonId, catalogId }) => ({ type, genre, addonId, catalogId })), RECOMMENDED_CATALOGS);
   assert.deepEqual(getRecommended(after).catalogSources, RECOMMENDED_CATALOGS);
-  assert.equal(after.flatMap((c) => c.folders).length, 519);
-  assert.equal(after.flatMap((c) => c.folders).flatMap((f) => f.sources).length, 2492);
+  assert.equal(after.flatMap((c) => c.folders).length, 548);
+  assert.equal(after.flatMap((c) => c.folders).flatMap((f) => f.sources).length, 2677);
   assert.ok(after.flatMap((c) => c.folders).filter((folder) => folder.id !== RECOMMENDED_FOLDER_ID).every((folder) => folder.sources.length > 0));
   const managed = after.flatMap((c) => c.folders).filter((f) => f.id !== RECOMMENDED_FOLDER_ID).flatMap((f) => f.sources);
   assert.equal(managed.filter((s) => s.provider === "trakt" || s.traktListId).length, 0);
