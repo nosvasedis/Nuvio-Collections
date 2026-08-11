@@ -87,6 +87,15 @@ fingerprint κλειδώνεται ώστε bootstrap/compile/nightly sync να 
 | Runtime | 0 | 4 | 4 |
 | **Managed σύνολο** | **396** | **2.279** | **2.675** |
 
+### Σειρά folders
+
+Οι συλλογές **Είδος**, **Σειρές ταινιών**, **Διάθεση & Ατμόσφαιρα**,
+**Ηθοποιός**, **Σκηνοθέτης** και **Κόσμος** ταξινομούνται με βάση το canonical
+αγγλικό όνομα κάθε folder. Οι ελληνικοί τίτλοι και όλα τα IDs/artworks/sources
+παραμένουν αμετάβλητα. Τα σταθερά English keys βρίσκονται στο
+`data/folder-sort-keys.json` και ελέγχονται από bootstrap, tests και strict
+audit, ώστε μελλοντικό build να μην επιστρέψει κατά λάθος σε ελληνική σειρά.
+
 ## Τι σημαίνει «ακριβές»
 
 Η ακρίβεια είναι εκτελέσιμο contract, όχι χειροκίνητη υπόσχεση:
@@ -401,12 +410,12 @@ Evidence: `reports/list-tv-mediatype-audit-2026-08-11.json`,
    - `mediaTypeMismatches: 0`
    - `missing: 0`
    - `extra: 0`
-   - `canonicalCollections: 12`
-   - `profileCollections: 12`
+   - `canonicalCollections: 13`
+   - `profileCollections: 13`
 
 Δεν απαιτείται καθημερινό re-import: τα public TMDB list IDs είναι σταθερά και
 το nightly workflow ενημερώνει το περιεχόμενό τους στη θέση του. Η διόρθωση
-σειράς World folders και η import compatibility δεν αλλάζουν remote list
+σειράς folders και η import compatibility δεν αλλάζουν remote list
 membership· μην τρέχεις production TMDB sync μόνο γι’ αυτές.
 
 ## Branding

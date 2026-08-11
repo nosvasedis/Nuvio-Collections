@@ -8,6 +8,7 @@
   },
   "scripts": {
     "bootstrap": "node src/cli.mjs bootstrap",
+    "build:catalog:v501": "node scripts/build-v5.0.1-catalog.mjs",
     "audit": "node src/cli.mjs audit",
     "compile": "node src/cli.mjs compile",
     "capability-probe": "node --env-file-if-exists=.env src/cli.mjs capability-probe",

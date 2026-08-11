@@ -66,14 +66,16 @@ a test so bootstrap cannot silently reintroduce it.
   record wins. This fixes the reviewed `Από Ήλιο σε Ήλιο` / `Apo ilio se ilio`
   duplicate without merging merely similar works.
 
-## World folder order
+## Folder order
 
-- `collections.world` folders are ordered by Greek display title with
-  `localeCompare(..., "el")`, not ASCII/English sorting.
-- `Λατινοαμερικανικές` sits in the Greek **Λ** block (after Κορεάτικες, before
-  Μεξικάνικες). `Πορτογαλικές` sits in the Greek **Π** block (after Πολωνικές,
-  before Ρωσικές). Folder IDs, titles, sources, list IDs and artwork are
-  unchanged; only array order inside the World collection may change.
+- Genres, Film Series, Moods & Vibes, Actors, Directors and World are ordered
+  by canonical English folder title with `localeCompare(..., "en")`.
+- Greek display titles remain unchanged. Stable folder IDs map to their pinned
+  Kaptain English titles in `data/folder-sort-keys.json`; the 13 older custom
+  World IDs have explicit reviewed English keys.
+- Folder IDs, sources, list IDs and artwork never change during reordering.
+- Bootstrap tests and strict audit reject a missing key, an extra target
+  collection or any order that differs from the English-key manifest.
 
 ## Poster invariant
 
@@ -165,7 +167,7 @@ Regression: same-day stability, next-day rotation, vote floor and exact bounds.
 - Genres/Reality and its four lists were removed with explicit user approval.
   The exact list IDs remain tombstoned with reason
   `USER_APPROVED_REALITY_REMOVAL`; no unrelated folder or rail was removed.
-- Genres adds Greek-locale-sorted `Κορεατικά δράματα (K-Drama)` and
+- Genres adds English-key-sorted `Κορεατικά δράματα (K-Drama)` and
   `Ρομαντική κομεντί`, eight homogeneous rails each. K-Drama requires Korean
   origin plus Drama. Romantic-comedy movies require both Comedy and Romance;
   TV uses the reviewed romantic-comedy keyword because TMDB TV has no Romance
@@ -238,8 +240,9 @@ and dynamic curated merge/order tests.
 - Spain is exactly `ES`. Latin America is the reviewed origin union
   `MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR` and excludes
   Spain. Portugal is exactly `PT`. None uses an original-language restriction.
-- World folder order is Greek-locale title sort; Portuguese and Latin American
-  folders keep their locked IDs and occupy the Π and Λ alphabetic slots.
+- World folder order uses the canonical English cinema names. Portuguese and
+  Latin American folders keep their locked IDs and sort as `Portuguese Cinema`
+  and `Latin American Cinema` while retaining their Greek display titles.
 - Portugal currently has seven rails: its exact Top TV of the current year is
   omitted because the official predicate is empty even at quorum 3. No filler
   or zero-vote ranking replaces it.

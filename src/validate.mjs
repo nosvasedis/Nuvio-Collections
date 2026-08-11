@@ -1,8 +1,8 @@
-import { INPUT_FILE, RAILS_FILE, CURATED_STUDIO_FEATURES_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, EXPECTED_MAPPING, CATALOG_REMOVED_RAIL_REASONS } from "./constants.mjs";
+import { INPUT_FILE, RAILS_FILE, CURATED_STUDIO_FEATURES_FILE, FOLDER_SORT_KEYS_FILE, LOCK_FILE, STATE_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, EXPECTED_MAPPING, CATALOG_REMOVED_RAIL_REASONS } from "./constants.mjs";
 import { readJson, fingerprint, invariant } from "./utils.mjs";
 
 export async function auditRepository({ requireListIds = false } = {}) {
-  const [input, manifest, curatedStudios, lock, state] = await Promise.all([readJson(INPUT_FILE), readJson(RAILS_FILE), readJson(CURATED_STUDIO_FEATURES_FILE), readJson(LOCK_FILE), readJson(STATE_FILE)]);
+  const [input, manifest, curatedStudios, folderSortKeys, lock, state] = await Promise.all([readJson(INPUT_FILE), readJson(RAILS_FILE), readJson(CURATED_STUDIO_FEATURES_FILE), readJson(FOLDER_SORT_KEYS_FILE), readJson(LOCK_FILE), readJson(STATE_FILE)]);
   const folders = input.flatMap((c) => c.folders);
   const recommended = folders.find((f) => f.id === RECOMMENDED_FOLDER_ID);
   const folderIds = new Set(folders.map((f) => f.id));
@@ -42,15 +42,17 @@ export async function auditRepository({ requireListIds = false } = {}) {
   invariant(Object.keys(state.retiredRails ?? {}).length === EXPECTED.retiredRails + EXPECTED.catalogRemovedRails, "Retired rail audit failed");
   invariant([...CATALOG_REMOVED_RAIL_REASONS].every(([key, reason]) => state.retiredRails[key]?.reason === reason && !state.rails[key]), "Catalog-removed tombstone audit failed");
   if (requireListIds) for (const rail of materialized) invariant(state.rails[rail.key]?.listId, `Missing managed list ID: ${rail.key}`);
+  invariant(folderSortKeys.version === 1 && folderSortKeys.locale === "en", "English folder sort-key manifest version failed");
+  const englishSortedCollections = new Set(["collections.genres", "collections.film-series", "collections.moods", "collections.actors", "collections.directors", "collections.world"]);
+  invariant(JSON.stringify([...englishSortedCollections]) === JSON.stringify(folderSortKeys.collections), "English folder sort collection mapping failed");
+  for (const collection of input.filter((item) => englishSortedCollections.has(item.id))) {
+    invariant(collection.folders.every((folder) => folderSortKeys.keys[folder.id]), `English folder sort key missing: ${collection.id}`);
+    const expectedOrder = [...collection.folders].sort((a, b) => folderSortKeys.keys[a.id].localeCompare(folderSortKeys.keys[b.id], "en", { sensitivity: "base", numeric: true }) || a.id.localeCompare(b.id));
+    invariant(JSON.stringify(collection.folders.map((folder) => folder.id)) === JSON.stringify(expectedOrder.map((folder) => folder.id)), `${collection.id} is not English-key sorted`);
+  }
   const world = input.find((collection) => collection.id === "collections.world");
   invariant(world, "collections.world missing");
   const worldTitles = world.folders.map((folder) => folder.title);
-  const sortedWorldTitles = [...worldTitles].sort((a, b) => a.localeCompare(b, "el"));
-  invariant(JSON.stringify(worldTitles) === JSON.stringify(sortedWorldTitles), "collections.world is not Greek-locale sorted by title");
   invariant(worldTitles.includes("Λατινοαμερικανικές") && worldTitles.includes("Πορτογαλικές"), "World Portuguese/Latin American folders missing");
-  const latinIndex = worldTitles.indexOf("Λατινοαμερικανικές");
-  const portugalIndex = worldTitles.indexOf("Πορτογαλικές");
-  invariant(latinIndex > worldTitles.indexOf("Κορεάτικες") && latinIndex < worldTitles.indexOf("Μεξικάνικες"), "Λατινοαμερικανικές is not in Greek Λ position");
-  invariant(portugalIndex > worldTitles.indexOf("Πολωνικές") && portugalIndex < worldTitles.indexOf("Ρωσικές"), "Πορτογαλικές is not in Greek Π position");
   return { collections: input.length, folders: folders.length, finalSources: rails.length + recommended.sources.length, managed: rails.length, native: native.length, materialized: materialized.length, recommendedFingerprint: lock.recommendedFingerprint, unresolvedLists: materialized.filter((r) => !state.rails[r.key]?.listId).length };
 }

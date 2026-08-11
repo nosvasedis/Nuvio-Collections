@@ -42,7 +42,6 @@ test("bootstrap creates the final immutable mapping", async () => {
   assert.ok(!genres.folders.some((folder) => folder.id === "folder-KQEZGAMF"));
   assert.ok(genres.folders.some((folder) => folder.title === "Κορεατικά δράματα (K-Drama)"));
   assert.ok(genres.folders.some((folder) => folder.title === "Ρομαντική κομεντί"));
-  assert.deepEqual(genres.folders.map((folder) => folder.title), genres.folders.map((folder) => folder.title).toSorted((a, b) => a.localeCompare(b, "el")));
   const removedReality = ["collections.genres:folder-KQEZGAMF:0", "collections.genres:folder-KQEZGAMF:1", "collections.genres:folder-KQEZGAMF:2", "collections.genres:folder-KQEZGAMF:3"];
   assert.ok(removedReality.every((key) => retired.retiredRails[key]?.reason === "USER_APPROVED_REALITY_REMOVAL" && !retired.rails[key]));
   const discoverTop = manifest.rails.filter((rail) => rail.folderId === "collections.discover.top-rated-2");
@@ -326,12 +325,20 @@ test("Nuvio 0.8.3 LIST editor hardcodes MOVIE while DataStore preserves TV", asy
   assert.equal(analysis.dataStoreWouldPreserveTv, true);
 });
 
-test("collections.world folders are Greek-locale sorted with Λ and Π in place", async () => {
+test("six user-facing collections use canonical English folder sort keys", async () => {
   const input = await readJson(INPUT_FILE);
+  const sortKeys = await readJson(new URL("../data/folder-sort-keys.json", import.meta.url));
+  const collectionIds = ["collections.genres", "collections.film-series", "collections.moods", "collections.actors", "collections.directors", "collections.world"];
+  assert.deepEqual(sortKeys.collections, collectionIds);
+  assert.equal(Object.keys(sortKeys.keys).length, 466);
+  for (const collectionId of collectionIds) {
+    const collection = input.find((item) => item.id === collectionId);
+    const expected = [...collection.folders].sort((a, b) => sortKeys.keys[a.id].localeCompare(sortKeys.keys[b.id], "en", { sensitivity: "base", numeric: true }) || a.id.localeCompare(b.id));
+    assert.deepEqual(collection.folders.map((folder) => folder.id), expected.map((folder) => folder.id));
+  }
   const world = input.find((collection) => collection.id === "collections.world");
   const titles = world.folders.map((folder) => folder.title);
-  assert.deepEqual(titles, [...titles].sort((a, b) => a.localeCompare(b, "el")));
-  assert.ok(titles.indexOf("Λατινοαμερικανικές") > titles.indexOf("Κορεάτικες") && titles.indexOf("Λατινοαμερικανικές") < titles.indexOf("Μεξικάνικες"));
+  assert.ok(titles.indexOf("Λατινοαμερικανικές") > titles.indexOf("Κορεάτικες") && titles.indexOf("Λατινοαμερικανικές") < titles.indexOf("Λιβανέζικες"));
   assert.ok(titles.indexOf("Πορτογαλικές") > titles.indexOf("Πολωνικές") && titles.indexOf("Πορτογαλικές") < titles.indexOf("Ρωσικές"));
   assert.equal(world.folders.length, 58);
   assert.equal(world.folders.filter((folder) => folder.id === "collections.world.portuguese" || folder.id === "collections.world.latin-american").length, 2);

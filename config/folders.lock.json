@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "inputFingerprint": "118de6e5385f24dd07d311f5c4fe26093ec4cfa25b1370f3cc747efd1fbaf9be",
+  "inputFingerprint": "f1c51338b9d14ff2e6814c153a1db91a7018ef3610111162a0985c026e38b9b1",
   "recommendedFingerprint": "d1b5999c70679e79f9f574ad26d8e998725954d20ff63296f8e7a67dcd14f96a",
   "folders": [
     {
@@ -107,57 +107,15 @@
     },
     {
       "collectionId": "collections.genres",
-      "id": "folder-VLDG4GZP",
-      "title": "Αθλητικά",
-      "metadataFingerprint": "c08449410ee4a03cece8bfbf621af1f8626b51c493e12e959716e9755d219ae0"
-    },
-    {
-      "collectionId": "collections.genres",
-      "id": "folder-AP4ISXTE",
-      "title": "Άνιμε",
-      "metadataFingerprint": "5247ec8754b07283f04f9bd79518eaf4429cb69dc442fc852c619d25272850ac"
-    },
-    {
-      "collectionId": "collections.genres",
-      "id": "folder-DTEQHREL",
-      "title": "Αστυνομικό",
-      "metadataFingerprint": "b50efb7b2ea7871c957560a7128cdacaf6b6cd32f6036c1099c6642fbb749ef8"
-    },
-    {
-      "collectionId": "collections.genres",
-      "id": "folder-VHE2JOX2",
-      "title": "Γουέστερν",
-      "metadataFingerprint": "0ddf127a9d5f36eb39c4be7fc738220d76042e1ed86c263a980a538a7560caac"
-    },
-    {
-      "collectionId": "collections.genres",
-      "id": "folder-8Z2DZVUO",
-      "title": "Δράμα",
-      "metadataFingerprint": "e635154c0b3c5330b6e215a4d5b5b2269e348985319272b23501473a17c335d8"
-    },
-    {
-      "collectionId": "collections.genres",
       "id": "folder-JRWZVYWG",
       "title": "Δράση",
       "metadataFingerprint": "44dd010ca7a20fe65f7c5f59ccee2df706194fc1a6740de849e1931ba9d3a884"
     },
     {
       "collectionId": "collections.genres",
-      "id": "folder-edbb0941",
-      "title": "Επιστημονική φαντασία",
-      "metadataFingerprint": "dbc6e071b8f1f400da7b87d767ce89b65bd043977014bec780146cc3b1946d33"
-    },
-    {
-      "collectionId": "collections.genres",
-      "id": "folder-X9YZCXBH",
-      "title": "Θρίλερ",
-      "metadataFingerprint": "547c14f44625a7850d6b0af3e155f1d4de46f3a04036be3e46b774ded75eabf4"
-    },
-    {
-      "collectionId": "collections.genres",
-      "id": "folder-LCRKWAHO",
-      "title": "Ιστορικό",
-      "metadataFingerprint": "3b45058e2910a9cc4ced9f943c761846fec8090fab2476b8dfedd916262c4f65"
+      "id": "folder-CSJVDVSC",
+      "title": "Περιπέτεια",
+      "metadataFingerprint": "5d62117e122058fa4623719033ae192f004c6518062660feb35928d86cbd9e05"
     },
     {
       "collectionId": "collections.genres",
@@ -167,21 +125,69 @@
     },
     {
       "collectionId": "collections.genres",
-      "id": "folder-KDRAMA01",
-      "title": "Κορεατικά δράματα (K-Drama)",
-      "metadataFingerprint": "14d179a5e2024cb372af47791d199e15b35abfd1b358df11a309acc3c95e7ab8"
-    },
-    {
-      "collectionId": "collections.genres",
-      "id": "folder-8B3PEI1Y",
-      "title": "Κωμικές παραστάσεις",
-      "metadataFingerprint": "3883607a5ff0f23fababbe9cce66803dd58b2a6d96c276ec2f7ae2f6a205b7e2"
+      "id": "folder-AP4ISXTE",
+      "title": "Άνιμε",
+      "metadataFingerprint": "5247ec8754b07283f04f9bd79518eaf4429cb69dc442fc852c619d25272850ac"
     },
     {
       "collectionId": "collections.genres",
       "id": "folder-IWC8T1WM",
       "title": "Κωμωδία",
       "metadataFingerprint": "fa5f063bbb316d14b2723a6f71df081c7dfdae71fe76e313094db545a5579d32"
+    },
+    {
+      "collectionId": "collections.genres",
+      "id": "folder-DTEQHREL",
+      "title": "Αστυνομικό",
+      "metadataFingerprint": "b50efb7b2ea7871c957560a7128cdacaf6b6cd32f6036c1099c6642fbb749ef8"
+    },
+    {
+      "collectionId": "collections.genres",
+      "id": "folder-6DUG1MQF",
+      "title": "Ντοκιμαντέρ",
+      "metadataFingerprint": "4d64e4a1a756f2d0b91eba747d694387ae66bd11d9ac2c6c64d8b72e9c9d7851"
+    },
+    {
+      "collectionId": "collections.genres",
+      "id": "folder-8Z2DZVUO",
+      "title": "Δράμα",
+      "metadataFingerprint": "e635154c0b3c5330b6e215a4d5b5b2269e348985319272b23501473a17c335d8"
+    },
+    {
+      "collectionId": "collections.genres",
+      "id": "folder-FWKG65UR",
+      "title": "Οικογενειακά",
+      "metadataFingerprint": "3ac9073239cad29e767a2c7dfe42c3ff686872c54b9df66e33b5492c6f295cf7"
+    },
+    {
+      "collectionId": "collections.genres",
+      "id": "folder-ZYDJZBEV",
+      "title": "Φαντασία",
+      "metadataFingerprint": "dbfffbd4500d358bb5b4db2bd817503f903b53a9b1558e4d886b0e2fdc40be4c"
+    },
+    {
+      "collectionId": "collections.genres",
+      "id": "folder-LCRKWAHO",
+      "title": "Ιστορικό",
+      "metadataFingerprint": "3b45058e2910a9cc4ced9f943c761846fec8090fab2476b8dfedd916262c4f65"
+    },
+    {
+      "collectionId": "collections.genres",
+      "id": "folder-W7VQ4ZGQ",
+      "title": "Τρόμος",
+      "metadataFingerprint": "ac9c6ea8d7d5127737b7b924aaa567b204cd6bd7ff114bd624367776ee3311f5"
+    },
+    {
+      "collectionId": "collections.genres",
+      "id": "folder-KDRAMA01",
+      "title": "Κορεατικά δράματα (K-Drama)",
+      "metadataFingerprint": "14d179a5e2024cb372af47791d199e15b35abfd1b358df11a309acc3c95e7ab8"
+    },
+    {
+      "collectionId": "collections.genres",
+      "id": "folder-P3VIAWP0",
+      "title": "Πολεμικές τέχνες",
+      "metadataFingerprint": "47515b35c9a4fa9e7b47ce8cef037fa737809b74570c886b0e84bc1a5116c7e0"
     },
     {
       "collectionId": "collections.genres",
@@ -197,33 +203,9 @@
     },
     {
       "collectionId": "collections.genres",
-      "id": "folder-6DUG1MQF",
-      "title": "Ντοκιμαντέρ",
-      "metadataFingerprint": "4d64e4a1a756f2d0b91eba747d694387ae66bd11d9ac2c6c64d8b72e9c9d7851"
-    },
-    {
-      "collectionId": "collections.genres",
-      "id": "folder-FWKG65UR",
-      "title": "Οικογενειακά",
-      "metadataFingerprint": "3ac9073239cad29e767a2c7dfe42c3ff686872c54b9df66e33b5492c6f295cf7"
-    },
-    {
-      "collectionId": "collections.genres",
-      "id": "folder-CSJVDVSC",
-      "title": "Περιπέτεια",
-      "metadataFingerprint": "5d62117e122058fa4623719033ae192f004c6518062660feb35928d86cbd9e05"
-    },
-    {
-      "collectionId": "collections.genres",
-      "id": "folder-P3VIAWP0",
-      "title": "Πολεμικές τέχνες",
-      "metadataFingerprint": "47515b35c9a4fa9e7b47ce8cef037fa737809b74570c886b0e84bc1a5116c7e0"
-    },
-    {
-      "collectionId": "collections.genres",
-      "id": "folder-SY0BJAAJ",
-      "title": "Πολεμικό",
-      "metadataFingerprint": "ce1f219b5803849e780908af477ac3fd8b3b1383e3e5c5c7012c0c972c12266c"
+      "id": "folder-GXG1NG9E",
+      "title": "Ρομαντικό",
+      "metadataFingerprint": "4b25414fa827b77e23d0078a74bd55c32de0fce1f7477eaf36ea8910bfd3022a"
     },
     {
       "collectionId": "collections.genres",
@@ -233,15 +215,21 @@
     },
     {
       "collectionId": "collections.genres",
-      "id": "folder-GXG1NG9E",
-      "title": "Ρομαντικό",
-      "metadataFingerprint": "4b25414fa827b77e23d0078a74bd55c32de0fce1f7477eaf36ea8910bfd3022a"
+      "id": "folder-edbb0941",
+      "title": "Επιστημονική φαντασία",
+      "metadataFingerprint": "dbc6e071b8f1f400da7b87d767ce89b65bd043977014bec780146cc3b1946d33"
     },
     {
       "collectionId": "collections.genres",
-      "id": "folder-W7VQ4ZGQ",
-      "title": "Τρόμος",
-      "metadataFingerprint": "ac9c6ea8d7d5127737b7b924aaa567b204cd6bd7ff114bd624367776ee3311f5"
+      "id": "folder-VLDG4GZP",
+      "title": "Αθλητικά",
+      "metadataFingerprint": "c08449410ee4a03cece8bfbf621af1f8626b51c493e12e959716e9755d219ae0"
+    },
+    {
+      "collectionId": "collections.genres",
+      "id": "folder-8B3PEI1Y",
+      "title": "Κωμικές παραστάσεις",
+      "metadataFingerprint": "3883607a5ff0f23fababbe9cce66803dd58b2a6d96c276ec2f7ae2f6a205b7e2"
     },
     {
       "collectionId": "collections.genres",
@@ -251,9 +239,21 @@
     },
     {
       "collectionId": "collections.genres",
-      "id": "folder-ZYDJZBEV",
-      "title": "Φαντασία",
-      "metadataFingerprint": "dbfffbd4500d358bb5b4db2bd817503f903b53a9b1558e4d886b0e2fdc40be4c"
+      "id": "folder-X9YZCXBH",
+      "title": "Θρίλερ",
+      "metadataFingerprint": "547c14f44625a7850d6b0af3e155f1d4de46f3a04036be3e46b774ded75eabf4"
+    },
+    {
+      "collectionId": "collections.genres",
+      "id": "folder-SY0BJAAJ",
+      "title": "Πολεμικό",
+      "metadataFingerprint": "ce1f219b5803849e780908af477ac3fd8b3b1383e3e5c5c7012c0c972c12266c"
+    },
+    {
+      "collectionId": "collections.genres",
+      "id": "folder-VHE2JOX2",
+      "title": "Γουέστερν",
+      "metadataFingerprint": "0ddf127a9d5f36eb39c4be7fc738220d76042e1ed86c263a980a538a7560caac"
     },
     {
       "collectionId": "collections.film-series",
@@ -263,591 +263,9 @@
     },
     {
       "collectionId": "collections.film-series",
-      "id": "folder-GO9EJ7WK",
-      "title": "Αγώνες πείνας",
-      "metadataFingerprint": "67b32cded98559eeb047cbca8948e9418ff2285204bc85080c71094c3bf61ff0"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-6AKYJNFB",
-      "title": "Ο Άλβιν και η Παρέα του",
-      "metadataFingerprint": "0a61c2506c24b608c6c913f7b656cbd9bc9e509f9d1e2829af73ef34c9d246c2"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-YKZOU9YB",
-      "title": "Αλεξίσφαιροι Ντετέκτιβ",
-      "metadataFingerprint": "eeb9fd9a779aaa5c1de85c5069de5a28073f778e6228f4933f8f3eb3f232ef7f"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-C3ZUQWMC",
-      "title": "Άλιεν",
-      "metadataFingerprint": "ad96eb6716e9c2cef68f82cdc4df938a0fef597fe2f0872d70e5b77108f0de0e"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-UWX1LLAD",
-      "title": "Άνθρωπος από ατσάλι",
-      "metadataFingerprint": "57945c5905fc62b19cc7f9375a1ef99d8c329dff71907497016dfc9e7a8e839d"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-P0P1OKQT",
-      "title": "Οι Άντρες με τα Μαύρα",
-      "metadataFingerprint": "39730ec6b069e2aca05680cb8913a927ae4d824a13759b094c8e5d79d300737e"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-4DSFHELZ",
-      "title": "Οι Απίθανοι",
-      "metadataFingerprint": "96f5dd9edf72001f35be323b1287fe2329356d6414436f6a89125cc03a7fdf20"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-EG0POZBG",
-      "title": "Ο απίθανος κόσμος του Γουέιν",
-      "metadataFingerprint": "abd969201a1b2670b648e4bc225f83eef50b2d70e57fc8833ce914307dc51005"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-I68P6JDB",
-      "title": "Αρχηγός από Κούνια",
-      "metadataFingerprint": "f08619e37bb89b43473767aae0555cf47694bffaa14fca6c9993e1f212751423"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-D4DC9YMI",
-      "title": "Ο Άρχοντας των Δαχτυλιδιών",
-      "metadataFingerprint": "67e847eacfb64369b103fe005cfd615296b7f0f4e451b1e7b80355c59d377686"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-0V63GE6Q",
-      "title": "Το Αυτό",
-      "metadataFingerprint": "7dd9bac916d9a32bd3c2c7d8d785d78bbd2327b72f8c159c15d404318376cbf6"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-PJ1XJMTI",
-      "title": "Αυτοκίνητα",
-      "metadataFingerprint": "6d8f24fb77fe5c511be785359e256d58b97815ca2dfadc0dfb29dcb1062d064b"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-4E6361FA",
-      "title": "Ο Βετεράνος",
-      "metadataFingerprint": "b7656b1bb1e930dcc829c34a46f82fc2e48d8974a294b8ffa91e2ee570a6b4ca"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-7QJEQRSP",
-      "title": "Βλέπω το Θάνατό σου",
-      "metadataFingerprint": "bcdcf1896a5e9286badeaad2062dddb48d6a7f6a5932970d2049c4c1c2ad1fdd"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-YOI5X3WM",
-      "title": "Βρέχει κεφτέδες",
-      "metadataFingerprint": "d9b1fd59a5175f3b1be70b385bb64ffa136830f4da80dba4e9e8a657f995bb8d"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-CNOAB9BW",
-      "title": "Βρώμικος Χάρι",
-      "metadataFingerprint": "23c870f6618b9e4bf99befff27ff99343935baae713583000a92d92e852f7235"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-J42YTYW9",
-      "title": "Γαμπρός της Συμφοράς",
-      "metadataFingerprint": "3ea57ec590bacc750b0a0bdc7c326032c4f893abe7e4f1db6fef79270ca553b9"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-9ANELR9B",
-      "title": "Γκόστμπαστερς",
-      "metadataFingerprint": "364534d0a86b2e02cdd0f1766b0dafb82cde76fc7e93b9fe8c397b2b31e63389"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-YGDARF72",
-      "title": "Γύρισε ο μπαμπάς",
-      "metadataFingerprint": "b4b4ae87cf586f5a71592e13c5a9c962ea4185339c785936ac15d7048d5302d0"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-BE0409EB",
-      "title": "Η Δική μου Ακαδημία Ηρώων",
-      "metadataFingerprint": "515dcab9c9d42093df7080c2a1d48088c45561458c394f54659f27116a4eda57"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-VUHKCDPM",
-      "title": "Εγώ, ο Απαισιότατος",
-      "metadataFingerprint": "830d0f491812c1536fbd43afe358c62caa5e8e2bfeb7446a143ba28937a53518"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-5RJTENQ3",
-      "title": "Η εκδίκηση της ξανθιάς",
-      "metadataFingerprint": "e29a61b0abe0bd3f318d61a2810265bf11d8f9d9824529966d1fcd5448326123"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-59YRE6DB",
-      "title": "Οι Εκδικητές",
-      "metadataFingerprint": "ef4b1318fa6b0fd7b38c2717a3718f55c6cb58ef3faf3fa4caf31ec0defeac7b"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-76513F64",
-      "title": "Ενόλα Χολμς",
-      "metadataFingerprint": "c672b0e58687f374699957f7a866f3910b553b6e7931d9b9fa38e64678d0a6f9"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-O995DQEI",
-      "title": "Ο Εξολοθρευτής",
-      "metadataFingerprint": "25125d4fcdc699e2ee0fe61ff494d0d7c2f05864d2bcd8de2aac048995136823"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-BV10CREW",
-      "title": "Ο Εξορκιστής",
-      "metadataFingerprint": "49258ef8febd40dbd44b006560a52394433155db866f988b3219ca1e414b9b58"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-KPX2Q2WZ",
-      "title": "Επικίνδυνη αποστολή",
-      "metadataFingerprint": "cd246570e4d0b0d718b28cbb34b33dd15ede4c257e3f0ccd2404d16f396d4eb7"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-X582BX4A",
-      "title": "Επιστροφή στο μέλλον",
-      "metadataFingerprint": "9f54895406bd4bf2b6c6736ac49fe21ffa3a6a9d454ff80657f630a44d81be1c"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-GRLYVJ19",
-      "title": "Η Εποχή των Παγετώνων",
-      "metadataFingerprint": "b04b531bd6f7d2d1fc798aeb3f48a5300c93052658b77cc4aba04852b45cd93b"
-    },
-    {
-      "collectionId": "collections.film-series",
       "id": "folder-KJZ5BUX7",
       "title": "Εφιάλτης στο δρόμο με τις λεύκες",
       "metadataFingerprint": "dcea206ea3cf7b7303516eb6b34b8bbb9d143a05fd880442805c34b1354637f7"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-DPKGQKLD",
-      "title": "Το Ημερολόγιο ενός Σπασίκλα",
-      "metadataFingerprint": "5e9ed8eb00470908d1ceb03ba0c19d8eff590d47b5a7ecaa8ec6e186682c000e"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-GVH4W51M",
-      "title": "Ιντιάνα Τζόουνς",
-      "metadataFingerprint": "c0f2f519eec919d4070877d31a33cc0fb37611bb11ae96c1b02f358a1498622d"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-IN4KJMF0",
-      "title": "Η Ιστορία των Παιχνιδιών",
-      "metadataFingerprint": "d4495c5308d06a93e4844871f2606d9405606a938d18e52fd7cc8b003d372620"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-AZ4XK68L",
-      "title": "Η Κάθαρση",
-      "metadataFingerprint": "07d4fcd71cbae30d05d0208d031868b7d1dfbace9b7e9258e38beb867cb879b2"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-MOHS9H0N",
-      "title": "Τα Κακά Παιδιά",
-      "metadataFingerprint": "00fbcb17c24bd89d730a1bfecfd2a70d45421fdeeb87798cc26574672071df30"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-O7OCAZQT",
-      "title": "Το Κάλεσμα",
-      "metadataFingerprint": "9ab3840fb1fd0de123d9e55fbd1d5a30150187cb3cde5e69ed21418c8d5890fe"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-0NH4J7MZ",
-      "title": "Η Καλόγρια",
-      "metadataFingerprint": "b76cdae8e54cd21540cd9ed0b2039ac1de0a3d09f3f8189ec6b21315d4bfe2d5"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-6K2840HJ",
-      "title": "Η Κατάρα",
-      "metadataFingerprint": "0c56ff8b0b16ea498e995ca34f63573d1525b714499080e10692fad314b2569c"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-Z57JAOND",
-      "title": "Καταστροφέας Ραλφ",
-      "metadataFingerprint": "311bf6f5a0f8bca345d80a90ce9e01b937ebf8d5d01956920c1787c96c2355e3"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-X2VO0H0D",
-      "title": "Κουνγκ Φου Πάντα",
-      "metadataFingerprint": "3a36320fcf2ccbbd4414d6f07248fc44401cb55ce1732189d892e7275c4ff046"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-1DDSBN8C",
-      "title": "Κραυγή αγωνίας",
-      "metadataFingerprint": "1bb73a3682c308295a5893da25993bbbc5fcda23b52fb2719c8ebdcf49ec282e"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-26RPSH1H",
-      "title": "Ο Κυνηγός",
-      "metadataFingerprint": "624132eba34767ed43994cf868f867f8a06410d1b2a46257f4eba639a2f72b30"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-Y9M2V713",
-      "title": "Ο Λαβύρινθος",
-      "metadataFingerprint": "51c73cada75a1b67b0a4feafae1093d39594ee0a4b3c922fa736d67fdcc793fa"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-294EE0I6",
-      "title": "Το Λυκόφως",
-      "metadataFingerprint": "145fc368d72f1a6dad8b15fbe9d8a9ee19865de75a0588a4244e474666d9e04f"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-XZYOGHCP",
-      "title": "Μαδαγασκάρη",
-      "metadataFingerprint": "e554ec8710d2da0f39662ce923da76f224ba9c996722cd11df37a6d1c1be0523"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-APQ8HRDA",
-      "title": "Μαθητευόμενος Μπάτσος",
-      "metadataFingerprint": "9f402ec6ce8c5bcd4af6bac9ee54f1a22d9dde33fa6b6a9779867a7484faec6f"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-1TI94GOT",
-      "title": "Μαντ Μαξ",
-      "metadataFingerprint": "6fbb895aee17f05b43f1599b817b24eb248657eb62135f7ccdebd395be9d8ed3"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-P6NJJ7M5",
-      "title": "Οι Μαχητές των Δρόμων",
-      "metadataFingerprint": "13b0ad60ecf01f3bd60123172b7b7d1f6ffb447941592708dabc130e604a99fc"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-WWCP4J8A",
-      "title": "Οι Μεγάλοι",
-      "metadataFingerprint": "05183a7d8ee0b8781553b33006f11f14e59e36fac554749261573417a6aac225"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-PD54TO8F",
-      "title": "Ο Μεταφορέας",
-      "metadataFingerprint": "f7c918a4f2b2cb8e4a1680d310ba3912290093662e798a7e0998896bcb0e3c13"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-4F6AB496",
-      "title": "Μην Ανασαίνεις",
-      "metadataFingerprint": "9f180b20d6d6b0e1a6619d276a9e73d297296806d9f3bb4e76a564b8508f36d0"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-7BX3LL9D",
-      "title": "Μην πυροβολείτε τη γιαγιά",
-      "metadataFingerprint": "013bd73396624253e740f1b34849f36c5187e6c6f42a70be78987a19011c498d"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-QHTS44BL",
-      "title": "Μια Νύχτα στο Μουσείο",
-      "metadataFingerprint": "8fae47558533d485d326d1a4f46ac6babe27794673db2ec0aedfb50df0651124"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-2988FEE1",
-      "title": "Οι Μικροί Πρωταθλητές",
-      "metadataFingerprint": "da7337a92cf64d746d3fa9c4722d7a9448ff129ea8bb5a6261d20412a2688bb0"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-ZIPRVS3O",
-      "title": "Μίνιονς",
-      "metadataFingerprint": "0230c098c6dbc28b57ed9be063ff29033fa13e307717b3a20fd28661fea03f3e"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-76BVHL1E",
-      "title": "Μόνος στο Σπίτι",
-      "metadataFingerprint": "9d60df9959f9a0c239c4d206921602d737eed57be60909be4cb09dad3beb528f"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-9PD8N0IA",
-      "title": "Η Μούμια",
-      "metadataFingerprint": "8f2886d5c5338b635747bec8ed1c6cca86b90d85f4abac04427941deffba11fd"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-SHRQQWUC",
-      "title": "Μπαμπούλες",
-      "metadataFingerprint": "09ce93143dfd21acc574ab10ec6ad0e2853a5b9c3946fbec39ac0c46fadf614c"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-ADDORPVE",
-      "title": "Μπάτε σκύλοι αλέστε",
-      "metadataFingerprint": "f79c59e240a23616a4c507f674bc3c054d410e04a91049a4bf580dd33083bea1"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-N6S918EV",
-      "title": "Μπορν",
-      "metadataFingerprint": "74164a00907533778cf9c61f18f02a0dd27e5cfd6bfcfb4a94afd7217bf030af"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-WKWXVLKA",
-      "title": "Τα Μυαλά που Κουβαλάς",
-      "metadataFingerprint": "51a82a263d915ee19fba72894054fd0cd0d2d9c520e60bddefc98bf6a7414754"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-8E15F6E7",
-      "title": "Ο Νονός",
-      "metadataFingerprint": "b40573e8b6af939b8beac98d03081aa61f060c487a8787550c9130f132bcb218"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-WID9KLHT",
-      "title": "Η Νύχτα με τις Μάσκες",
-      "metadataFingerprint": "13a494b1f766117cf245b7d5b2605e0f0458bef60478e5d9cc84357c902fad37"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-C4UHEVJO",
-      "title": "Ξενοδοχείο για Τέρατα",
-      "metadataFingerprint": "37e5eabe53593d5c9899a25440911e935091be01c5dc698eb8e46a6343c97f80"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-VY74USVO",
-      "title": "Η Οικογένεια Άνταμς",
-      "metadataFingerprint": "e2d9466698212fdd27d2457958fe59231e1befe3090a780a87ccae363e4d3d83"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-K5OYMCK5",
-      "title": "Παγιδευμένη Ψυχή",
-      "metadataFingerprint": "0d4e8ce4334b79a4771de1a66900b464f26fbf8ebe87eaefe796a39d73458f86"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-710COXTP",
-      "title": "Πάντινγκτον",
-      "metadataFingerprint": "4d8f8e01d8ec3baec442556dd2e82069abae5c2d738f6f1ef83aeacf5a47a4a3"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-O03VNAH2",
-      "title": "Παρασκευή και 13",
-      "metadataFingerprint": "707a23adda9a5896486ecca1ec2594d65f308f7a030b6e7d6c9c83cd518a1dc2"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-120URWPB",
-      "title": "Οι Πειρατές της Καραϊβικής",
-      "metadataFingerprint": "0f2b263c2d57169bf6ad4b5660d3212058ce5804dd5f69451f507800f64a7e08"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-63CBE301",
-      "title": "Πενήντα αποχρώσεις του γκρι",
-      "metadataFingerprint": "71051c10d2f0fca7e27eccf3decd16337b272a27ddedc2bfc4455654fc8ae25d"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-5WWDM0GW",
-      "title": "Ο Πλανήτης των Πιθήκων",
-      "metadataFingerprint": "56e0eb367ebaf521f1b9c34bde8adf9133074091133cf4ada65e9490bcfbad7d"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-O4YH9LT7",
-      "title": "Ο Πλανήτης των Πιθήκων (Reboot)",
-      "metadataFingerprint": "38cfc2b5a61c73fca02203e2d613e55e10e25f1ccd08574cc990d2ac62e7a51b"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-ACD00A34",
-      "title": "Πόκεμον: Οι ταινίες",
-      "metadataFingerprint": "342487aa1224ed553370f6722284ceff5363a7b54f419116cb47ef14c58d20a1"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-5EBJHPQ5",
-      "title": "Η προφητεία",
-      "metadataFingerprint": "019cf843963777065aeccc01d94d60944440b089ca5631cbc78697534ed61984"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-GRP514U5",
-      "title": "Πώς να Εκπαιδεύσετε το Δράκο σας",
-      "metadataFingerprint": "809369f466d40cf460cc22f25a5146954d227cdcf2b3472ecf573fa29edbc32b"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-R1ZY7195",
-      "title": "Ρόκυ",
-      "metadataFingerprint": "62e756bfd4313ba4cdaa7a981fad04cee71790dd24bb154d80dd73abf18b1cfc"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-0AD513EC",
-      "title": "Ρόμπερτ Λάνγκντον",
-      "metadataFingerprint": "c27e9f232d8546182efb4269b844df4bd92ec9c27d7023ee90fc253c4752ab3b"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-PPEIXVD0",
-      "title": "Ρόμποκοπ",
-      "metadataFingerprint": "249e3593c7a625c79803256e7a52e38905793a745996abfd8f7ed51651b96321"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-CPO9DWK5",
-      "title": "Σε βλέπω",
-      "metadataFingerprint": "78071c9b882221e3a596c5eb0761940b530b18fca46f1c318b6dafc15c3a4631"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-FD4C9C01",
-      "title": "Σέρλοκ Χολμς",
-      "metadataFingerprint": "61c61d7479aaef88ac9d0ed88442d869e80255870f0a7def25023e87ea4436a7"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-NN4N7AQY",
-      "title": "Σήμα κινδύνου",
-      "metadataFingerprint": "65df7f00ddd4806bdcd4f6dcebd0b3e6c77f3b5e25ef36518bb5f891faeeeee9"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-320FQYEZ",
-      "title": "Σκοτεινή Δύναμη",
-      "metadataFingerprint": "dfd7655e95ee562352a31ed30a8c384c453d7e90f6e59a7ab06e90df9cff48d4"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-DIFWS4BO",
-      "title": "Ο Σκοτεινός Ιππότης",
-      "metadataFingerprint": "3a29d2ade2f3727fc9121a03cf77f8ace0c93a4d3fd3c18bcc77d8cdf9377de5"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-VIEZ2QKM",
-      "title": "Σρεκ",
-      "metadataFingerprint": "81ec5f7ead9e75417888039a7e243dd175af1dc720cdfe437c7496ee1701d1eb"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-KHE9H664",
-      "title": "Η Ταινία Lego",
-      "metadataFingerprint": "67c9fba9df7f28b57bcf2668a257c6de852fb1ebd6e86290493d0aaccec0c495"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-4SRL3EHG",
-      "title": "Τζέιμς Μποντ, Πράκτωρ 007",
-      "metadataFingerprint": "e3c559eb709567626243a642e81331303c0f261736f730c310b7593dc238ad43"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-V70WWC3W",
-      "title": "Τζουράσικ Παρκ",
-      "metadataFingerprint": "538046d6ac06ab38461f61e7c210bb8d7ff2e908220e06cc4cc8cc85c5aecb71"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-NCAHRBWY",
-      "title": "Τραγούδα!",
-      "metadataFingerprint": "c468c14d616c1a6ea10158178740e8d643991a3c6f647881f78456da78dd3fab"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-50AOAZHB",
-      "title": "Το τρελό θηριοτροφείο",
-      "metadataFingerprint": "1c48bcc19c03b280918b7df1930f9b790b40af31d6344be36b0b57289c1b36b9"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-53QK358F",
-      "title": "Η Τριλογία της Απόκλισης",
-      "metadataFingerprint": "30653946d848a38a4b12fe8794a8d7798f232eb41057af9e901b9fa8bb3bcf62"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-HTIDPKBZ",
-      "title": "Υπάλληλοι",
-      "metadataFingerprint": "703e1b09b7d2ef48aede3b68577e5b9cd0450fd8ece1972f4a23734313df50d5"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-1AU8TDK7",
-      "title": "Φανταστικά Ζώα",
-      "metadataFingerprint": "6db311f35b383dbb5f08a254bb8d3251cabef0579deac5929922e669336bdb9d"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-Z1IYO44U",
-      "title": "Φύλακες του Γαλαξία",
-      "metadataFingerprint": "b31eb2de5000dbad5d5198185e15df28f52a9f1dd95e403d832afd27c3244823"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-ZWC6BB73",
-      "title": "Χαϊλάντερ",
-      "metadataFingerprint": "e2399a392f606d2aa95067e904c7be44a41389cc7a3e4fc18b0ac4a9227c20a4"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-J2Z9JLRI",
-      "title": "Χάρι Πότερ",
-      "metadataFingerprint": "a4661a4a43f78e4ebed2f6c11b0b27b2fe68e9f3b49fa9c873c2a2fb974950ce"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-XT8PKMOL",
-      "title": "Χόμπιτ",
-      "metadataFingerprint": "9f78d0fb63c7618fa9479d61776ada635a233836ada81f37c5c0162c7c401a0c"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-MGWC6ZT3",
-      "title": "Το Χρονικό της Νάρνια",
-      "metadataFingerprint": "0b83a3253b69541a57c8cce495f2b14f9d3702c46d076d04cfa795eb85f432c9"
-    },
-    {
-      "collectionId": "collections.film-series",
-      "id": "folder-Q9GZNU7Y",
-      "title": "Ψάχνοντας τον Νέμο",
-      "metadataFingerprint": "ad79ba1c5d1ba1aa6bc09106cf963fe2b8877106f933d8a522babf8f410cd1b5"
     },
     {
       "collectionId": "collections.film-series",
@@ -860,6 +278,18 @@
       "id": "folder-IOF3LR1A",
       "title": "Ace Ventura",
       "metadataFingerprint": "37ffe166d134b5cd92951a8f98392b1c80a4bcc605dcd6b60770dbbe526c00d1"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-C3ZUQWMC",
+      "title": "Άλιεν",
+      "metadataFingerprint": "ad96eb6716e9c2cef68f82cdc4df938a0fef597fe2f0872d70e5b77108f0de0e"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-6AKYJNFB",
+      "title": "Ο Άλβιν και η Παρέα του",
+      "metadataFingerprint": "0a61c2506c24b608c6c913f7b656cbd9bc9e509f9d1e2829af73ef34c9d246c2"
     },
     {
       "collectionId": "collections.film-series",
@@ -893,6 +323,18 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-X582BX4A",
+      "title": "Επιστροφή στο μέλλον",
+      "metadataFingerprint": "9f54895406bd4bf2b6c6736ac49fe21ffa3a6a9d454ff80657f630a44d81be1c"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-MOHS9H0N",
+      "title": "Τα Κακά Παιδιά",
+      "metadataFingerprint": "00fbcb17c24bd89d730a1bfecfd2a70d45421fdeeb87798cc26574672071df30"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-DB662A5E",
       "title": "Behind Enemy Lines",
       "metadataFingerprint": "edcccb755adb7c0e1623a74fd96cd98b6b0e1a5811c44c5291bbabe151ba72bc"
@@ -905,15 +347,21 @@
     },
     {
       "collectionId": "collections.film-series",
-      "id": "folder-LF8A431B",
-      "title": "Blade Runner",
-      "metadataFingerprint": "5545d26e37db625943f0a98592ac03f30ba66931b4f7a56ff15117817a0ea7b9"
+      "id": "folder-7BX3LL9D",
+      "title": "Μην πυροβολείτε τη γιαγιά",
+      "metadataFingerprint": "013bd73396624253e740f1b34849f36c5187e6c6f42a70be78987a19011c498d"
     },
     {
       "collectionId": "collections.film-series",
-      "id": "folder-53F30D32",
-      "title": "Boondock Saints",
-      "metadataFingerprint": "913d4eedbec39882f2e4fbbe3844940cafdcab57b527ccdd155ca801246f1a00"
+      "id": "folder-320FQYEZ",
+      "title": "Σκοτεινή Δύναμη",
+      "metadataFingerprint": "dfd7655e95ee562352a31ed30a8c384c453d7e90f6e59a7ab06e90df9cff48d4"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-LF8A431B",
+      "title": "Blade Runner",
+      "metadataFingerprint": "5545d26e37db625943f0a98592ac03f30ba66931b4f7a56ff15117817a0ea7b9"
     },
     {
       "collectionId": "collections.film-series",
@@ -929,6 +377,12 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-PJ1XJMTI",
+      "title": "Αυτοκίνητα",
+      "metadataFingerprint": "6d8f24fb77fe5c511be785359e256d58b97815ca2dfadc0dfb29dcb1062d064b"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-5GS484XX",
       "title": "Child's Play",
       "metadataFingerprint": "817c3805cda8f7ff353e38c3b7b0ebed8f5f7a2bbaf4b1fb2784a0ef76d185fe"
@@ -941,9 +395,27 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-HTIDPKBZ",
+      "title": "Υπάλληλοι",
+      "metadataFingerprint": "703e1b09b7d2ef48aede3b68577e5b9cd0450fd8ece1972f4a23734313df50d5"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-YOI5X3WM",
+      "title": "Βρέχει κεφτέδες",
+      "metadataFingerprint": "d9b1fd59a5175f3b1be70b385bb64ffa136830f4da80dba4e9e8a657f995bb8d"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-C1ACADFD",
       "title": "Creed",
       "metadataFingerprint": "7cbe653fee5dc45a2a0c64ed390ba6c020e0fd02da4fa615df4bef3062dbc3bc"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-YGDARF72",
+      "title": "Γύρισε ο μπαμπάς",
+      "metadataFingerprint": "b4b4ae87cf586f5a71592e13c5a9c962ea4185339c785936ac15d7048d5302d0"
     },
     {
       "collectionId": "collections.film-series",
@@ -953,9 +425,21 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-VUHKCDPM",
+      "title": "Εγώ, ο Απαισιότατος",
+      "metadataFingerprint": "830d0f491812c1536fbd43afe358c62caa5e8e2bfeb7446a143ba28937a53518"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-753F7B69",
       "title": "Detective Conan",
       "metadataFingerprint": "7ab6c785aa5dadde4bfe564c293510ca5325945b50b6b51cd6d6bf65c39627fb"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-DPKGQKLD",
+      "title": "Το Ημερολόγιο ενός Σπασίκλα",
+      "metadataFingerprint": "5e9ed8eb00470908d1ceb03ba0c19d8eff590d47b5a7ecaa8ec6e186682c000e"
     },
     {
       "collectionId": "collections.film-series",
@@ -965,9 +449,21 @@
     },
     {
       "collectionId": "collections.film-series",
-      "id": "folder-C7969F90",
-      "title": "Dirty Dozen",
-      "metadataFingerprint": "1dad46bba1a9a3dc37ec4d3dbf3c420701dabff399610389882a2fd9574860c5"
+      "id": "folder-CNOAB9BW",
+      "title": "Βρώμικος Χάρι",
+      "metadataFingerprint": "23c870f6618b9e4bf99befff27ff99343935baae713583000a92d92e852f7235"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-53QK358F",
+      "title": "Η Τριλογία της Απόκλισης",
+      "metadataFingerprint": "30653946d848a38a4b12fe8794a8d7798f232eb41057af9e901b9fa8bb3bcf62"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-4F6AB496",
+      "title": "Μην Ανασαίνεις",
+      "metadataFingerprint": "9f180b20d6d6b0e1a6619d276a9e73d297296806d9f3bb4e76a564b8508f36d0"
     },
     {
       "collectionId": "collections.film-series",
@@ -983,9 +479,9 @@
     },
     {
       "collectionId": "collections.film-series",
-      "id": "folder-66JC9K0O",
-      "title": "Equalizer",
-      "metadataFingerprint": "659c97b2ce98f23704e655ae800c8c9e9fbdc972711f4ee36726734466fa192d"
+      "id": "folder-76513F64",
+      "title": "Ενόλα Χολμς",
+      "metadataFingerprint": "c672b0e58687f374699957f7a866f3910b553b6e7931d9b9fa38e64678d0a6f9"
     },
     {
       "collectionId": "collections.film-series",
@@ -995,21 +491,57 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-6CDB9C65",
+      "title": "Rebuild of Evangelion",
+      "metadataFingerprint": "7b442584ce782f02c5972cdf96498a681d115e0619d38e5e45ded1b6cf4bf2fc"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-YKAUXIGO",
       "title": "Evil Dead",
       "metadataFingerprint": "629eca73839f2fec17a5a04ac319ae1c489056bd58f76e596abad019ce4d8f93"
     },
     {
       "collectionId": "collections.film-series",
-      "id": "folder-W3RIXIH9",
-      "title": "Expendables",
-      "metadataFingerprint": "a9a92d19877b9152cae15177dfc0b61f4f1c5be82797789ca18940261a76ac6b"
+      "id": "folder-1AU8TDK7",
+      "title": "Φανταστικά Ζώα",
+      "metadataFingerprint": "6db311f35b383dbb5f08a254bb8d3251cabef0579deac5929922e669336bdb9d"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-63CBE301",
+      "title": "Πενήντα αποχρώσεις του γκρι",
+      "metadataFingerprint": "71051c10d2f0fca7e27eccf3decd16337b272a27ddedc2bfc4455654fc8ae25d"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-7QJEQRSP",
+      "title": "Βλέπω το Θάνατό σου",
+      "metadataFingerprint": "bcdcf1896a5e9286badeaad2062dddb48d6a7f6a5932970d2049c4c1c2ad1fdd"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-Q9GZNU7Y",
+      "title": "Ψάχνοντας τον Νέμο",
+      "metadataFingerprint": "ad79ba1c5d1ba1aa6bc09106cf963fe2b8877106f933d8a522babf8f410cd1b5"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-O03VNAH2",
+      "title": "Παρασκευή και 13",
+      "metadataFingerprint": "707a23adda9a5896486ecca1ec2594d65f308f7a030b6e7d6c9c83cd518a1dc2"
     },
     {
       "collectionId": "collections.film-series",
       "id": "folder-M8NF0CBI",
       "title": "G.I. Joe (Live-Action)",
       "metadataFingerprint": "25b12b4f8e794174e7fb856ca12df1d3a08ee4a7293ccb07c441a48e66231ef0"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-9ANELR9B",
+      "title": "Γκόστμπαστερς",
+      "metadataFingerprint": "364534d0a86b2e02cdd0f1766b0dafb82cde76fc7e93b9fe8c397b2b31e63389"
     },
     {
       "collectionId": "collections.film-series",
@@ -1025,9 +557,21 @@
     },
     {
       "collectionId": "collections.film-series",
-      "id": "folder-9FZBX98B",
-      "title": "Hangover",
-      "metadataFingerprint": "a9d683aaae0667e454fd13517dcc6e7fd6b5953bca8ef631c8380e3238ea066d"
+      "id": "folder-WWCP4J8A",
+      "title": "Οι Μεγάλοι",
+      "metadataFingerprint": "05183a7d8ee0b8781553b33006f11f14e59e36fac554749261573417a6aac225"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-Z1IYO44U",
+      "title": "Φύλακες του Γαλαξία",
+      "metadataFingerprint": "b31eb2de5000dbad5d5198185e15df28f52a9f1dd95e403d832afd27c3244823"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-WID9KLHT",
+      "title": "Η Νύχτα με τις Μάσκες",
+      "metadataFingerprint": "13a494b1f766117cf245b7d5b2605e0f0458bef60478e5d9cc84357c902fad37"
     },
     {
       "collectionId": "collections.film-series",
@@ -1037,15 +581,27 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-J2Z9JLRI",
+      "title": "Χάρι Πότερ",
+      "metadataFingerprint": "a4661a4a43f78e4ebed2f6c11b0b27b2fe68e9f3b49fa9c873c2a2fb974950ce"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-PM09ON0Y",
       "title": "Hellraiser",
       "metadataFingerprint": "fcd3658331460092df3aac448831047805870c3ff5bf609b4b5807bb7d387e1c"
     },
     {
       "collectionId": "collections.film-series",
-      "id": "folder-2GGVV5KS",
-      "title": "Hitman's Bodyguard",
-      "metadataFingerprint": "f5f8b883fb31fd809b79e69d9277659394fb1c599b1a7dc37dcfc16b4cabe8ab"
+      "id": "folder-ZWC6BB73",
+      "title": "Χαϊλάντερ",
+      "metadataFingerprint": "e2399a392f606d2aa95067e904c7be44a41389cc7a3e4fc18b0ac4a9227c20a4"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-76BVHL1E",
+      "title": "Μόνος στο Σπίτι",
+      "metadataFingerprint": "9d60df9959f9a0c239c4d206921602d737eed57be60909be4cb09dad3beb528f"
     },
     {
       "collectionId": "collections.film-series",
@@ -1055,9 +611,57 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-C4UHEVJO",
+      "title": "Ξενοδοχείο για Τέρατα",
+      "metadataFingerprint": "37e5eabe53593d5c9899a25440911e935091be01c5dc698eb8e46a6343c97f80"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-GRP514U5",
+      "title": "Πώς να Εκπαιδεύσετε το Δράκο σας",
+      "metadataFingerprint": "809369f466d40cf460cc22f25a5146954d227cdcf2b3472ecf573fa29edbc32b"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-GRLYVJ19",
+      "title": "Η Εποχή των Παγετώνων",
+      "metadataFingerprint": "b04b531bd6f7d2d1fc798aeb3f48a5300c93052658b77cc4aba04852b45cd93b"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-GVH4W51M",
+      "title": "Ιντιάνα Τζόουνς",
+      "metadataFingerprint": "c0f2f519eec919d4070877d31a33cc0fb37611bb11ae96c1b02f358a1498622d"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-WKWXVLKA",
+      "title": "Τα Μυαλά που Κουβαλάς",
+      "metadataFingerprint": "51a82a263d915ee19fba72894054fd0cd0d2d9c520e60bddefc98bf6a7414754"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-K5OYMCK5",
+      "title": "Παγιδευμένη Ψυχή",
+      "metadataFingerprint": "0d4e8ce4334b79a4771de1a66900b464f26fbf8ebe87eaefe796a39d73458f86"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-0V63GE6Q",
+      "title": "Το Αυτό",
+      "metadataFingerprint": "7dd9bac916d9a32bd3c2c7d8d785d78bbd2327b72f8c159c15d404318376cbf6"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-MPLDA6KJ",
       "title": "Jack Reacher",
       "metadataFingerprint": "b229318b139b17f4441d5b13eb311781ab1e6a8ba3e882c1c1971235f4c51b70"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-4SRL3EHG",
+      "title": "Τζέιμς Μποντ, Πράκτωρ 007",
+      "metadataFingerprint": "e3c559eb709567626243a642e81331303c0f261736f730c310b7593dc238ad43"
     },
     {
       "collectionId": "collections.film-series",
@@ -1097,9 +701,9 @@
     },
     {
       "collectionId": "collections.film-series",
-      "id": "folder-JCUYFXBO",
-      "title": "Karate Kid",
-      "metadataFingerprint": "94adcbd6473abf1366359877601f2649631c2e4513ef5b4388d8902b6218210c"
+      "id": "folder-V70WWC3W",
+      "title": "Τζουράσικ Παρκ",
+      "metadataFingerprint": "538046d6ac06ab38461f61e7c210bb8d7ff2e908220e06cc4cc8cc85c5aecb71"
     },
     {
       "collectionId": "collections.film-series",
@@ -1121,9 +725,33 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-X2VO0H0D",
+      "title": "Κουνγκ Φου Πάντα",
+      "metadataFingerprint": "3a36320fcf2ccbbd4414d6f07248fc44401cb55ce1732189d892e7275c4ff046"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-5RJTENQ3",
+      "title": "Η εκδίκηση της ξανθιάς",
+      "metadataFingerprint": "e29a61b0abe0bd3f318d61a2810265bf11d8f9d9824529966d1fcd5448326123"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-CQNUP6E3",
       "title": "Lethal Weapon",
       "metadataFingerprint": "038c22a68c36f4c46d8ecae7f300a89cceb75cf092499d33b0a913912cf14a41"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-1TI94GOT",
+      "title": "Μαντ Μαξ",
+      "metadataFingerprint": "6fbb895aee17f05b43f1599b817b24eb248657eb62135f7ccdebd395be9d8ed3"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-XZYOGHCP",
+      "title": "Μαδαγασκάρη",
+      "metadataFingerprint": "e554ec8710d2da0f39662ce923da76f224ba9c996722cd11df37a6d1c1be0523"
     },
     {
       "collectionId": "collections.film-series",
@@ -1139,9 +767,51 @@
     },
     {
       "collectionId": "collections.film-series",
-      "id": "folder-MULC2HR6",
-      "title": "Matrix",
-      "metadataFingerprint": "bc6f7b185e01b493134b3f52cd0c89649c9c8413c1742c0c73412645cda224d1"
+      "id": "folder-UWX1LLAD",
+      "title": "Άνθρωπος από ατσάλι",
+      "metadataFingerprint": "57945c5905fc62b19cc7f9375a1ef99d8c329dff71907497016dfc9e7a8e839d"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-J42YTYW9",
+      "title": "Γαμπρός της Συμφοράς",
+      "metadataFingerprint": "3ea57ec590bacc750b0a0bdc7c326032c4f893abe7e4f1db6fef79270ca553b9"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-P0P1OKQT",
+      "title": "Οι Άντρες με τα Μαύρα",
+      "metadataFingerprint": "39730ec6b069e2aca05680cb8913a927ae4d824a13759b094c8e5d79d300737e"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-ZIPRVS3O",
+      "title": "Μίνιονς",
+      "metadataFingerprint": "0230c098c6dbc28b57ed9be063ff29033fa13e307717b3a20fd28661fea03f3e"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-4E6361FA",
+      "title": "Ο Βετεράνος",
+      "metadataFingerprint": "b7656b1bb1e930dcc829c34a46f82fc2e48d8974a294b8ffa91e2ee570a6b4ca"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-KPX2Q2WZ",
+      "title": "Επικίνδυνη αποστολή",
+      "metadataFingerprint": "cd246570e4d0b0d718b28cbb34b33dd15ede4c257e3f0ccd2404d16f396d4eb7"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-SHRQQWUC",
+      "title": "Μπαμπούλες",
+      "metadataFingerprint": "09ce93143dfd21acc574ab10ec6ad0e2853a5b9c3946fbec39ac0c46fadf614c"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-BE0409EB",
+      "title": "Η Δική μου Ακαδημία Ηρώων",
+      "metadataFingerprint": "515dcab9c9d42093df7080c2a1d48088c45561458c394f54659f27116a4eda57"
     },
     {
       "collectionId": "collections.film-series",
@@ -1151,9 +821,21 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-50AOAZHB",
+      "title": "Το τρελό θηριοτροφείο",
+      "metadataFingerprint": "1c48bcc19c03b280918b7df1930f9b790b40af31d6344be36b0b57289c1b36b9"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-2F3OCZAQ",
       "title": "National Treasure",
       "metadataFingerprint": "19b9c116b72ff9f85251623eaa4e35cb5a2afad103a3e1b2f2be78106667f4f8"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-QHTS44BL",
+      "title": "Μια Νύχτα στο Μουσείο",
+      "metadataFingerprint": "8fae47558533d485d326d1a4f46ac6babe27794673db2ec0aedfb50df0651124"
     },
     {
       "collectionId": "collections.film-series",
@@ -1181,6 +863,12 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-710COXTP",
+      "title": "Πάντινγκτον",
+      "metadataFingerprint": "4d8f8e01d8ec3baec442556dd2e82069abae5c2d738f6f1ef83aeacf5a47a4a3"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-R96DZK69",
       "title": "Paranormal Activity",
       "metadataFingerprint": "f6db47c21eb3721ae652d25e3afad6a0efe370dd3caee93830703e9937787959"
@@ -1193,9 +881,33 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-120URWPB",
+      "title": "Οι Πειρατές της Καραϊβικής",
+      "metadataFingerprint": "0f2b263c2d57169bf6ad4b5660d3212058ce5804dd5f69451f507800f64a7e08"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-S02SZLJA",
       "title": "Pitch Perfect",
       "metadataFingerprint": "28f7ab1fbd45b5e85a8dcf6afaa7a6ab87503cf314513b5aa2f6110718b8eb07"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-5WWDM0GW",
+      "title": "Ο Πλανήτης των Πιθήκων",
+      "metadataFingerprint": "56e0eb367ebaf521f1b9c34bde8adf9133074091133cf4ada65e9490bcfbad7d"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-O4YH9LT7",
+      "title": "Ο Πλανήτης των Πιθήκων (Reboot)",
+      "metadataFingerprint": "38cfc2b5a61c73fca02203e2d613e55e10e25f1ccd08574cc990d2ac62e7a51b"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-ACD00A34",
+      "title": "Πόκεμον: Οι ταινίες",
+      "metadataFingerprint": "342487aa1224ed553370f6722284ceff5363a7b54f419116cb47ef14c58d20a1"
     },
     {
       "collectionId": "collections.film-series",
@@ -1205,9 +917,9 @@
     },
     {
       "collectionId": "collections.film-series",
-      "id": "folder-A8678P2N",
-      "title": "Raid",
-      "metadataFingerprint": "9f2c6302e99ec964e130c15d77a47a345bfc23223a24fc6ff0267bd5b9be12af"
+      "id": "folder-26RPSH1H",
+      "title": "Ο Κυνηγός",
+      "metadataFingerprint": "624132eba34767ed43994cf868f867f8a06410d1b2a46257f4eba639a2f72b30"
     },
     {
       "collectionId": "collections.film-series",
@@ -1217,15 +929,45 @@
     },
     {
       "collectionId": "collections.film-series",
-      "id": "folder-6CDB9C65",
-      "title": "Rebuild of Evangelion",
-      "metadataFingerprint": "7b442584ce782f02c5972cdf96498a681d115e0619d38e5e45ded1b6cf4bf2fc"
-    },
-    {
-      "collectionId": "collections.film-series",
       "id": "folder-06KXSSPW",
       "title": "Resident Evil",
       "metadataFingerprint": "ba35958624c3a223064c6e138f6dfb747812099bac9cd22a936f98c6a6b5bd5d"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-APQ8HRDA",
+      "title": "Μαθητευόμενος Μπάτσος",
+      "metadataFingerprint": "9f402ec6ce8c5bcd4af6bac9ee54f1a22d9dde33fa6b6a9779867a7484faec6f"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-0AD513EC",
+      "title": "Ρόμπερτ Λάνγκντον",
+      "metadataFingerprint": "c27e9f232d8546182efb4269b844df4bd92ec9c27d7023ee90fc253c4752ab3b"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-PPEIXVD0",
+      "title": "Ρόμποκοπ",
+      "metadataFingerprint": "249e3593c7a625c79803256e7a52e38905793a745996abfd8f7ed51651b96321"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-R1ZY7195",
+      "title": "Ρόκυ",
+      "metadataFingerprint": "62e756bfd4313ba4cdaa7a981fad04cee71790dd24bb154d80dd73abf18b1cfc"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-YKZOU9YB",
+      "title": "Αλεξίσφαιροι Ντετέκτιβ",
+      "metadataFingerprint": "eeb9fd9a779aaa5c1de85c5069de5a28073f778e6228f4933f8f3eb3f232ef7f"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-CPO9DWK5",
+      "title": "Σε βλέπω",
+      "metadataFingerprint": "78071c9b882221e3a596c5eb0761940b530b18fca46f1c318b6dafc15c3a4631"
     },
     {
       "collectionId": "collections.film-series",
@@ -1241,9 +983,33 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-1DDSBN8C",
+      "title": "Κραυγή αγωνίας",
+      "metadataFingerprint": "1bb73a3682c308295a5893da25993bbbc5fcda23b52fb2719c8ebdcf49ec282e"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-FD4C9C01",
+      "title": "Σέρλοκ Χολμς",
+      "metadataFingerprint": "61c61d7479aaef88ac9d0ed88442d869e80255870f0a7def25023e87ea4436a7"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-VIEZ2QKM",
+      "title": "Σρεκ",
+      "metadataFingerprint": "81ec5f7ead9e75417888039a7e243dd175af1dc720cdfe437c7496ee1701d1eb"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-KZKZCR0D",
       "title": "Sicario",
       "metadataFingerprint": "a11e33abd803920ab0572712694b6a420f7ceec3e3445032f9f2981bca965bec"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-NCAHRBWY",
+      "title": "Τραγούδα!",
+      "metadataFingerprint": "c468c14d616c1a6ea10158178740e8d643991a3c6f647881f78456da78dd3fab"
     },
     {
       "collectionId": "collections.film-series",
@@ -1307,9 +1073,231 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-VY74USVO",
+      "title": "Η Οικογένεια Άνταμς",
+      "metadataFingerprint": "e2d9466698212fdd27d2457958fe59231e1befe3090a780a87ccae363e4d3d83"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-59YRE6DB",
+      "title": "Οι Εκδικητές",
+      "metadataFingerprint": "ef4b1318fa6b0fd7b38c2717a3718f55c6cb58ef3faf3fa4caf31ec0defeac7b"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-53F30D32",
+      "title": "Boondock Saints",
+      "metadataFingerprint": "913d4eedbec39882f2e4fbbe3844940cafdcab57b527ccdd155ca801246f1a00"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-I68P6JDB",
+      "title": "Αρχηγός από Κούνια",
+      "metadataFingerprint": "f08619e37bb89b43473767aae0555cf47694bffaa14fca6c9993e1f212751423"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-N6S918EV",
+      "title": "Μπορν",
+      "metadataFingerprint": "74164a00907533778cf9c61f18f02a0dd27e5cfd6bfcfb4a94afd7217bf030af"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-MGWC6ZT3",
+      "title": "Το Χρονικό της Νάρνια",
+      "metadataFingerprint": "0b83a3253b69541a57c8cce495f2b14f9d3702c46d076d04cfa795eb85f432c9"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-O7OCAZQT",
+      "title": "Το Κάλεσμα",
+      "metadataFingerprint": "9ab3840fb1fd0de123d9e55fbd1d5a30150187cb3cde5e69ed21418c8d5890fe"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-DIFWS4BO",
+      "title": "Ο Σκοτεινός Ιππότης",
+      "metadataFingerprint": "3a29d2ade2f3727fc9121a03cf77f8ace0c93a4d3fd3c18bcc77d8cdf9377de5"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-C7969F90",
+      "title": "Dirty Dozen",
+      "metadataFingerprint": "1dad46bba1a9a3dc37ec4d3dbf3c420701dabff399610389882a2fd9574860c5"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-66JC9K0O",
+      "title": "Equalizer",
+      "metadataFingerprint": "659c97b2ce98f23704e655ae800c8c9e9fbdc972711f4ee36726734466fa192d"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-BV10CREW",
+      "title": "Ο Εξορκιστής",
+      "metadataFingerprint": "49258ef8febd40dbd44b006560a52394433155db866f988b3219ca1e414b9b58"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-W3RIXIH9",
+      "title": "Expendables",
+      "metadataFingerprint": "a9a92d19877b9152cae15177dfc0b61f4f1c5be82797789ca18940261a76ac6b"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-P6NJJ7M5",
+      "title": "Οι Μαχητές των Δρόμων",
+      "metadataFingerprint": "13b0ad60ecf01f3bd60123172b7b7d1f6ffb447941592708dabc130e604a99fc"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-8E15F6E7",
+      "title": "Ο Νονός",
+      "metadataFingerprint": "b40573e8b6af939b8beac98d03081aa61f060c487a8787550c9130f132bcb218"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-6K2840HJ",
+      "title": "Η Κατάρα",
+      "metadataFingerprint": "0c56ff8b0b16ea498e995ca34f63573d1525b714499080e10692fad314b2569c"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-9FZBX98B",
+      "title": "Hangover",
+      "metadataFingerprint": "a9d683aaae0667e454fd13517dcc6e7fd6b5953bca8ef631c8380e3238ea066d"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-2GGVV5KS",
+      "title": "Hitman's Bodyguard",
+      "metadataFingerprint": "f5f8b883fb31fd809b79e69d9277659394fb1c599b1a7dc37dcfc16b4cabe8ab"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-XT8PKMOL",
+      "title": "Χόμπιτ",
+      "metadataFingerprint": "9f78d0fb63c7618fa9479d61776ada635a233836ada81f37c5c0162c7c401a0c"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-GO9EJ7WK",
+      "title": "Αγώνες πείνας",
+      "metadataFingerprint": "67b32cded98559eeb047cbca8948e9418ff2285204bc85080c71094c3bf61ff0"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-4DSFHELZ",
+      "title": "Οι Απίθανοι",
+      "metadataFingerprint": "96f5dd9edf72001f35be323b1287fe2329356d6414436f6a89125cc03a7fdf20"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-JCUYFXBO",
+      "title": "Karate Kid",
+      "metadataFingerprint": "94adcbd6473abf1366359877601f2649631c2e4513ef5b4388d8902b6218210c"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-KHE9H664",
+      "title": "Η Ταινία Lego",
+      "metadataFingerprint": "67c9fba9df7f28b57bcf2668a257c6de852fb1ebd6e86290493d0aaccec0c495"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-D4DC9YMI",
+      "title": "Ο Άρχοντας των Δαχτυλιδιών",
+      "metadataFingerprint": "67e847eacfb64369b103fe005cfd615296b7f0f4e451b1e7b80355c59d377686"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-MULC2HR6",
+      "title": "Matrix",
+      "metadataFingerprint": "bc6f7b185e01b493134b3f52cd0c89649c9c8413c1742c0c73412645cda224d1"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-Y9M2V713",
+      "title": "Ο Λαβύρινθος",
+      "metadataFingerprint": "51c73cada75a1b67b0a4feafae1093d39594ee0a4b3c922fa736d67fdcc793fa"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-2988FEE1",
+      "title": "Οι Μικροί Πρωταθλητές",
+      "metadataFingerprint": "da7337a92cf64d746d3fa9c4722d7a9448ff129ea8bb5a6261d20412a2688bb0"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-9PD8N0IA",
+      "title": "Η Μούμια",
+      "metadataFingerprint": "8f2886d5c5338b635747bec8ed1c6cca86b90d85f4abac04427941deffba11fd"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-0NH4J7MZ",
+      "title": "Η Καλόγρια",
+      "metadataFingerprint": "b76cdae8e54cd21540cd9ed0b2039ac1de0a3d09f3f8189ec6b21315d4bfe2d5"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-5EBJHPQ5",
+      "title": "Η προφητεία",
+      "metadataFingerprint": "019cf843963777065aeccc01d94d60944440b089ca5631cbc78697534ed61984"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-AZ4XK68L",
+      "title": "Η Κάθαρση",
+      "metadataFingerprint": "07d4fcd71cbae30d05d0208d031868b7d1dfbace9b7e9258e38beb867cb879b2"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-A8678P2N",
+      "title": "Raid",
+      "metadataFingerprint": "9f2c6302e99ec964e130c15d77a47a345bfc23223a24fc6ff0267bd5b9be12af"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-NN4N7AQY",
+      "title": "Σήμα κινδύνου",
+      "metadataFingerprint": "65df7f00ddd4806bdcd4f6dcebd0b3e6c77f3b5e25ef36518bb5f891faeeeee9"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-ADDORPVE",
+      "title": "Μπάτε σκύλοι αλέστε",
+      "metadataFingerprint": "f79c59e240a23616a4c507f674bc3c054d410e04a91049a4bf580dd33083bea1"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-O995DQEI",
+      "title": "Ο Εξολοθρευτής",
+      "metadataFingerprint": "25125d4fcdc699e2ee0fe61ff494d0d7c2f05864d2bcd8de2aac048995136823"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-PD54TO8F",
+      "title": "Ο Μεταφορέας",
+      "metadataFingerprint": "f7c918a4f2b2cb8e4a1680d310ba3912290093662e798a7e0998896bcb0e3c13"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-294EE0I6",
+      "title": "Το Λυκόφως",
+      "metadataFingerprint": "145fc368d72f1a6dad8b15fbe9d8a9ee19865de75a0588a4244e474666d9e04f"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-V41P1RJJ",
       "title": "Top Gun",
       "metadataFingerprint": "133e504d7567329345b6d5651d2ca506c008757c43a921ac08baeb0424c6f179"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-IN4KJMF0",
+      "title": "Η Ιστορία των Παιχνιδιών",
+      "metadataFingerprint": "d4495c5308d06a93e4844871f2606d9405606a938d18e52fd7cc8b003d372620"
     },
     {
       "collectionId": "collections.film-series",
@@ -1349,6 +1337,18 @@
     },
     {
       "collectionId": "collections.film-series",
+      "id": "folder-EG0POZBG",
+      "title": "Ο απίθανος κόσμος του Γουέιν",
+      "metadataFingerprint": "abd969201a1b2670b648e4bc225f83eef50b2d70e57fc8833ce914307dc51005"
+    },
+    {
+      "collectionId": "collections.film-series",
+      "id": "folder-Z57JAOND",
+      "title": "Καταστροφέας Ραλφ",
+      "metadataFingerprint": "311bf6f5a0f8bca345d80a90ce9e01b937ebf8d5d01956920c1787c96c2355e3"
+    },
+    {
+      "collectionId": "collections.film-series",
       "id": "folder-QGUYYRM4",
       "title": "X-Men",
       "metadataFingerprint": "919d468296128487b0cf9b740f7481d4eeb1a4e4bc5e366c7edbf0d10f852fa8"
@@ -1373,33 +1373,9 @@
     },
     {
       "collectionId": "collections.moods",
-      "id": "folder-79A8YOOM",
-      "title": "Ανατριχιαστικά & απόκοσμα",
-      "metadataFingerprint": "f7128c899be32b58ff6b8f0eac373cbe1079d2e695b79ada822d42f884d16988"
-    },
-    {
-      "collectionId": "collections.moods",
-      "id": "folder-7AXTM9QX",
-      "title": "Ανεβαστικά & αισιόδοξα",
-      "metadataFingerprint": "5bd2b974fe247dc41f01b4abbe7556ee512d1371a1d6f81258405682b3b0b511"
-    },
-    {
-      "collectionId": "collections.moods",
-      "id": "folder-RSVZ5OM5",
-      "title": "Αργής καύσης",
-      "metadataFingerprint": "874d2321e2d92a5bc88e43aae1c97b5e6f5b2d0fd56afdc1a7b109f941c6fd35"
-    },
-    {
-      "collectionId": "collections.moods",
       "id": "folder-VRAANHHD",
       "title": "Ατμόσφαιρα '80s & '90s",
       "metadataFingerprint": "05f538af9df66f6b6df9700de3ca4eed8b74dfcc44985c69cb88ace8d0e9a777"
-    },
-    {
-      "collectionId": "collections.moods",
-      "id": "folder-SJGV86EH",
-      "title": "Δακρύβρεχτα",
-      "metadataFingerprint": "7eb6293556f2f00562718d69f9ce6b131383e9f1053dcc5fa2914624da44ac5d"
     },
     {
       "collectionId": "collections.moods",
@@ -1409,15 +1385,27 @@
     },
     {
       "collectionId": "collections.moods",
+      "id": "folder-W52X6SMF",
+      "title": "Ζεστά & παρηγορητικά",
+      "metadataFingerprint": "9e94e2c3a16a317e128cbef88991841f429822161f44fa4ea473c3ee23a11c22"
+    },
+    {
+      "collectionId": "collections.moods",
+      "id": "folder-M50463BF",
+      "title": "Σκοτεινά & σκληρά",
+      "metadataFingerprint": "5ac94b2a1f257e3980a6901dad556b5d00f544fbad4d532741f2a299006d8308"
+    },
+    {
+      "collectionId": "collections.moods",
       "id": "folder-070BQVHR",
       "title": "Επικά & μεγαλειώδη",
       "metadataFingerprint": "86f40775b7251d61257f3938e42c69d29a1291d722a32342b3c0ebebba77e50c"
     },
     {
       "collectionId": "collections.moods",
-      "id": "folder-W52X6SMF",
-      "title": "Ζεστά & παρηγορητικά",
-      "metadataFingerprint": "9e94e2c3a16a317e128cbef88991841f429822161f44fa4ea473c3ee23a11c22"
+      "id": "folder-7AXTM9QX",
+      "title": "Ανεβαστικά & αισιόδοξα",
+      "metadataFingerprint": "5bd2b974fe247dc41f01b4abbe7556ee512d1371a1d6f81258405682b3b0b511"
     },
     {
       "collectionId": "collections.moods",
@@ -1427,9 +1415,21 @@
     },
     {
       "collectionId": "collections.moods",
-      "id": "folder-M50463BF",
-      "title": "Σκοτεινά & σκληρά",
-      "metadataFingerprint": "5ac94b2a1f257e3980a6901dad556b5d00f544fbad4d532741f2a299006d8308"
+      "id": "folder-RSVZ5OM5",
+      "title": "Αργής καύσης",
+      "metadataFingerprint": "874d2321e2d92a5bc88e43aae1c97b5e6f5b2d0fd56afdc1a7b109f941c6fd35"
+    },
+    {
+      "collectionId": "collections.moods",
+      "id": "folder-79A8YOOM",
+      "title": "Ανατριχιαστικά & απόκοσμα",
+      "metadataFingerprint": "f7128c899be32b58ff6b8f0eac373cbe1079d2e695b79ada822d42f884d16988"
+    },
+    {
+      "collectionId": "collections.moods",
+      "id": "folder-SJGV86EH",
+      "title": "Δακρύβρεχτα",
+      "metadataFingerprint": "7eb6293556f2f00562718d69f9ce6b131383e9f1053dcc5fa2914624da44ac5d"
     },
     {
       "collectionId": "collections.studios",
@@ -1733,33 +1733,27 @@
     },
     {
       "collectionId": "collections.actors",
+      "id": "folder-WBL5AUA4",
+      "title": "Άνταμ Σάντλερ",
+      "metadataFingerprint": "ce36c37210d55bf8d449ce7ed1bf2b9f6f61e93183e4fe67a49a535493179bb7"
+    },
+    {
+      "collectionId": "collections.actors",
       "id": "folder-ZJ8TOJOV",
       "title": "Αλ Πατσίνο",
       "metadataFingerprint": "30737f9b375c1206c4574029ecd03f07d10ca6421973172b85a3521da3df056c"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-NOGR7OHV",
-      "title": "Αν Χάθαγουεϊ",
-      "metadataFingerprint": "89e89f0b91859a5cbd64708681bad4cfd47d302b4fe43f23c5da7357b254eef6"
+      "id": "folder-30HU5XKY",
+      "title": "Έιμι Άνταμς",
+      "metadataFingerprint": "b099d5cab919bd5ef093c5257aada73edd3a8e11836650e78c5454a30048d973"
     },
     {
       "collectionId": "collections.actors",
       "id": "folder-DA5P6E85",
       "title": "Άνα ντε Άρμας",
       "metadataFingerprint": "dca24bf66361c743999750aba69ba02af4f53c3425ef67d27c0fb2d14c125d2a"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-RQ6SLROZ",
-      "title": "Άνια Τέιλορ-Τζόι",
-      "metadataFingerprint": "37483a881b5e5f134f01f4f420153e8ba28c7ec7b4fe2bdb3c58ce967a74b2fa"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-WBL5AUA4",
-      "title": "Άνταμ Σάντλερ",
-      "metadataFingerprint": "ce36c37210d55bf8d449ce7ed1bf2b9f6f61e93183e4fe67a49a535493179bb7"
     },
     {
       "collectionId": "collections.actors",
@@ -1775,9 +1769,21 @@
     },
     {
       "collectionId": "collections.actors",
+      "id": "folder-NOGR7OHV",
+      "title": "Αν Χάθαγουεϊ",
+      "metadataFingerprint": "89e89f0b91859a5cbd64708681bad4cfd47d302b4fe43f23c5da7357b254eef6"
+    },
+    {
+      "collectionId": "collections.actors",
       "id": "folder-MULF8GWG",
       "title": "Άντονι Χόπκινς",
       "metadataFingerprint": "bb226e88fb7e37b83feb622dab2ccc6f8a9f529f39a73a02f18b862ffc33e539"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-RQ6SLROZ",
+      "title": "Άνια Τέιλορ-Τζόι",
+      "metadataFingerprint": "37483a881b5e5f134f01f4f420153e8ba28c7ec7b4fe2bdb3c58ce967a74b2fa"
     },
     {
       "collectionId": "collections.actors",
@@ -1787,249 +1793,9 @@
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-K4SHYOWV",
-      "title": "Βαϊόλα Ντέιβις",
-      "metadataFingerprint": "128ae9d8e8b0c4ac6fd7db119d32bcd62da3c44283ab016f8d158702cdb810fa"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-D018AV8U",
-      "title": "Βιν Ντίζελ",
-      "metadataFingerprint": "16fe736434865f5e5629a85c916599c5d021ca0dd6c265382a0a334818de4353"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-CX0JHAUK",
-      "title": "Γκάρι Όλντμαν",
-      "metadataFingerprint": "a72adbcc4c7f3203d4e797938e96381397a90eab8f5786eb029516b09473e19b"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-TZ8ZFGCN",
-      "title": "Γκλεν Πάουελ",
-      "metadataFingerprint": "fcee903cabf88801956754d9723e5c500a7a4d2691003f480498585e07c48a4e"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-59J071DM",
-      "title": "Γουίλ Σμιθ",
-      "metadataFingerprint": "0cce0604d8370e0de704156cbffabf36b79c9f5d3670dad1419f4965dc3d2ea8"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-RQXU2K5A",
-      "title": "Γουίλ Φέρελ",
-      "metadataFingerprint": "7e519ff30c1382c3681a6f0d7c844403582f38f0bd7cc99d38533ebe54c12e4d"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-5R6SLQIA",
-      "title": "Γουίλεμ Νταφόε",
-      "metadataFingerprint": "9803f8fa273676943849929a54a1f6fadd6d17e4c6c0486b6ad9703945e03d2a"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-30HU5XKY",
-      "title": "Έιμι Άνταμς",
-      "metadataFingerprint": "b099d5cab919bd5ef093c5257aada73edd3a8e11836650e78c5454a30048d973"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-L7XT7A7L",
-      "title": "Έμα Στόουν",
-      "metadataFingerprint": "d7d71cd0eb936b92118802b5865c0f161de59b329c6b7312140b72ef6a8e3093"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-WZ227UB7",
-      "title": "Έμιλι Μπλαντ",
-      "metadataFingerprint": "e9fc5e96dabd2c1f39b4b9655d5f5c81a6022889364818db30e5700be3aab287"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-Z6S54LGD",
-      "title": "Έντι Μέρφι",
-      "metadataFingerprint": "1807af9a6f5fe873ab22b7292470ea309c3af50bf427ee148348054d86e4bde7"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-3WC8I4GA",
-      "title": "Ζαν-Κλοντ Βαν Νταμ",
-      "metadataFingerprint": "e74958cac743694b4f1fe9f16445d7018966d896c3093ab9a6b10dd6e388797f"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-NCVWCX3E",
-      "title": "Ζεντάγια",
-      "metadataFingerprint": "57d96ffc4fbb96bd3a92196721474f6b5e258eeadc16e3f1e90d3b7e796d7c4f"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-HMXS9XCV",
-      "title": "Ζόι Σαλντάνα",
-      "metadataFingerprint": "98e7b8a416f3a51bad2fceacc39838438de6224b29e3e88f3f9cdc63aaed0ca2"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-WDV07SJY",
-      "title": "Ίντρις Έλμπα",
-      "metadataFingerprint": "9d54c6604e7db16d35a9ca266e3f29db4904e4f9ed55b4de3aaa7aafdd70abfc"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-1GMOXRXX",
-      "title": "Κάθριν Χέιγκλ",
-      "metadataFingerprint": "1626520f37ab466429ba4cd6cc8cce2be0422e42531baaad990f7d084be3908b"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-MR9WMHUR",
-      "title": "Κέιτ Γουίνσλετ",
-      "metadataFingerprint": "8c94ff1893cae25ee134ba9310eba0a9ed9f3193dd6b8a490a09ad79e5ae8c03"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-A58P48N5",
-      "title": "Κέιτ Μπλάνσετ",
-      "metadataFingerprint": "a3cc38cd0f908ea6433f1f3667954b3084fa8e2c858c24532796846dc442fd4e"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-D37JKRU8",
-      "title": "Κιάνου Ριβς",
-      "metadataFingerprint": "d44c23f9fb0a8ee34850f4f6756869bb9b50932bd7f53dc89b5b8c16f334ee44"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-T43JW6XT",
-      "title": "Κίλιαν Μέρφι",
-      "metadataFingerprint": "24646c6f3ba903ebee682771dd6dc428cebde31c19171383045b147593145237"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-PL4P3B1Q",
-      "title": "Κλιντ Ίστγουντ",
-      "metadataFingerprint": "79d0b8247567ddb53f9e80e5e01a91084ac7c997e433b39a066cec0b023967da"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-ASZD5A4V",
-      "title": "Κρις Πρατ",
-      "metadataFingerprint": "382995b8ef34dc47180384022f0dc1512b2b10a7f731107bb822c30828ba2455"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-8TAZ6A0Q",
-      "title": "Κρίστιαν Μπέιλ",
-      "metadataFingerprint": "989aa496ca539c458dde1720b43bc57be5b9685243730a63cde1ccec9c1b8224"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-U2UQO2BJ",
-      "title": "Κρίστοφ Βαλτς",
-      "metadataFingerprint": "2fb07e377a8ed511a92404b5ef510136bc30b855b9ecf5dfb60f6279a4e41924"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-KAF08LH9",
-      "title": "Λεονάρντο Ντι Κάπριο",
-      "metadataFingerprint": "dd15814d3bd6a19ca09c95890a4fbefec630a214281edfb15b90c6b56d664b51"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-Y6IIBR23",
-      "title": "Λίλι Κόλινς",
-      "metadataFingerprint": "fc9b1197d238979f42b25c7ae0f6cfb015af5d4a5d1202b3a0c1af71d1dafd3a"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-X6DZXD29",
-      "title": "Λόρενς Φίσμπερν",
-      "metadataFingerprint": "0688d670ede3dfed2f730117038383f93cf46214bc268a35c9e453aceb84eaf2"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-I62XOTHC",
-      "title": "Λουπίτα Νιόνγκο",
-      "metadataFingerprint": "f536a8875cb8b57b88f86c27fd2ba6daa96ce9cb9311691b2388e03fc4918eed"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-TR8NRI88",
-      "title": "Μάθιου ΜακΚόναχι",
-      "metadataFingerprint": "a2acaf745a143b5f68f2516623608f61d5b990e814b016161c8c9324251ef76c"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-Q5MTSVE1",
-      "title": "Μάικλ Μπ. Τζόρνταν",
-      "metadataFingerprint": "3849964296958508efe8b06f0b865bb5249ba096bf9574e62e4298c62e8ed065"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-71ZEPSY8",
-      "title": "Μαντς Μίκελσεν",
-      "metadataFingerprint": "85408d2a704f14ade82473341e43d5ce33b037bc9019b36c920188f93b255ab0"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-63GJUMC0",
-      "title": "Μάρλον Μπράντο",
-      "metadataFingerprint": "2767c552ac07b047beff189503690fd72336564a93da9b495d07693dbc6a3df8"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-TYX4G5P3",
-      "title": "Ματ Ντέιμον",
-      "metadataFingerprint": "d9facf4aecbed304d81fa5570ea3142d7f47ad5deb588810897c53af45fa46fd"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-RYNCM2WO",
-      "title": "Μαχέρσαλα Άλι",
-      "metadataFingerprint": "0391163762996426905da794f92f58857f8b7b80ab3eee75da082595d4580136"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-1L09X3YR",
-      "title": "Μελίσα ΜακΚάρθι",
-      "metadataFingerprint": "27705e2327a01e44f546847523e4ca0df0b303817757bc914d954a2deb926c74"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-6WUONCAR",
-      "title": "Μέριλ Στριπ",
-      "metadataFingerprint": "074266ee23d0bf01186b7688e7dfa01181ced7b28d9bc9ed03efcf9dd46e4b8b"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-Q5ZZ4IJQ",
-      "title": "Μίλα Κούνις",
-      "metadataFingerprint": "086ab52bef3f04322261859ace1947c6b415383737b3010218ea9133c9bfaf78"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-I3VIBXVB",
-      "title": "Μίλι Μπόμπι Μπράουν",
-      "metadataFingerprint": "ce5f7dfb7ed8a42769fa4b0555d008fb7b4433512fff43c88e2685d050fe0e33"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-121Y6Z25",
-      "title": "Μισέλ Γιο",
-      "metadataFingerprint": "650c7b6723e7b20dc59f36e904317584fbd3c6150fd66bc1fac3906442a04f00"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-6QKXQ0P3",
-      "title": "Μίχαελ Χέρμπιγκ",
-      "metadataFingerprint": "d7ceafee5265aef1052b9bd8ae9719c87b7d04b3cd4f3aabdc8ca23d3abbbe56"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-JNCCEB8T",
-      "title": "Μόργκαν Φρίμαν",
-      "metadataFingerprint": "e4bbc48b4ef9acc2e3221cdde0dbcd60b0d6f897f0792df9cb90edef16ba8038"
+      "id": "folder-DOII6WV3",
+      "title": "Όστιν Μπάτλερ",
+      "metadataFingerprint": "c908df5ad1a4e553a08611b8f1c128e44a2ae1d36e60b02f8421f77a749daa59"
     },
     {
       "collectionId": "collections.actors",
@@ -2069,27 +1835,57 @@
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-6BKY6W3C",
-      "title": "Νάταλι Πόρτμαν",
-      "metadataFingerprint": "94a53b23c8b0f15c5a44f55c3dac7b97d5e600638f33412e427a65226e615708"
+      "id": "folder-A58P48N5",
+      "title": "Κέιτ Μπλάνσετ",
+      "metadataFingerprint": "a3cc38cd0f908ea6433f1f3667954b3084fa8e2c858c24532796846dc442fd4e"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-3V7BIKDZ",
-      "title": "Νικόλ Κίντμαν",
-      "metadataFingerprint": "9143ee0341fcdc387baf366e5b8ad1c5adb5df4393f2c18d90c34a2fca14de5c"
+      "id": "folder-TQ46STUW",
+      "title": "Τσάνινγκ Τέιτουμ",
+      "metadataFingerprint": "ab93a99e2ae334c96dab0f58a96f708865f45b622325f2949766182ccd4289ae"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-CGWEX5NT",
-      "title": "Νίκολας Κέιτζ",
-      "metadataFingerprint": "988b93e83ed443699f8a47c056c3e5f812beb0c24d5c3b4e612fb1b4a9f2c42c"
+      "id": "folder-MJBGYP6B",
+      "title": "Σαρλίζ Θερόν",
+      "metadataFingerprint": "21b110eeb197c85821cad3c619db4e869277c21bceb2b013eaf13e5157803dac"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-4S69X6BS",
-      "title": "Ντάνιελ Καλούγια",
-      "metadataFingerprint": "dcfbf5b3c98bc69c4b5658b53f6d4ee528cb142f43d3e67f029cc20bf57260c0"
+      "id": "folder-ASZD5A4V",
+      "title": "Κρις Πρατ",
+      "metadataFingerprint": "382995b8ef34dc47180384022f0dc1512b2b10a7f731107bb822c30828ba2455"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-8TAZ6A0Q",
+      "title": "Κρίστιαν Μπέιλ",
+      "metadataFingerprint": "989aa496ca539c458dde1720b43bc57be5b9685243730a63cde1ccec9c1b8224"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-U2UQO2BJ",
+      "title": "Κρίστοφ Βαλτς",
+      "metadataFingerprint": "2fb07e377a8ed511a92404b5ef510136bc30b855b9ecf5dfb60f6279a4e41924"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-UUYB9RPU",
+      "title": "Τσακ Νόρις",
+      "metadataFingerprint": "662b3fd2016d82a489d3a9b7b7e8ed794c5a178fdb014684e63d8d451ead96b9"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-T43JW6XT",
+      "title": "Κίλιαν Μέρφι",
+      "metadataFingerprint": "24646c6f3ba903ebee682771dd6dc428cebde31c19171383045b147593145237"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-PL4P3B1Q",
+      "title": "Κλιντ Ίστγουντ",
+      "metadataFingerprint": "79d0b8247567ddb53f9e80e5e01a91084ac7c997e433b39a066cec0b023967da"
     },
     {
       "collectionId": "collections.actors",
@@ -2099,21 +1895,27 @@
     },
     {
       "collectionId": "collections.actors",
+      "id": "folder-4S69X6BS",
+      "title": "Ντάνιελ Καλούγια",
+      "metadataFingerprint": "dcfbf5b3c98bc69c4b5658b53f6d4ee528cb142f43d3e67f029cc20bf57260c0"
+    },
+    {
+      "collectionId": "collections.actors",
       "id": "folder-RIA5HR35",
       "title": "Ντάνιελ Ράντκλιφ",
       "metadataFingerprint": "3e65d7ef85b948cde2e9086b2f91b07863afa79a18a378074db6b6d0d5e79311"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-CYVFGY96",
-      "title": "Ντεβ Πατέλ",
-      "metadataFingerprint": "516281152f4c9d43f87576c8cff777167eee9a7cba8da26de2d7fa53b151186d"
-    },
-    {
-      "collectionId": "collections.actors",
       "id": "folder-ONAK2C9N",
       "title": "Ντένζελ Ουάσινγκτον",
       "metadataFingerprint": "02bf386efc04e21f0b1da056ec1e1d0a658285157fdf4573bb3a221446a5cc84"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-CYVFGY96",
+      "title": "Ντεβ Πατέλ",
+      "metadataFingerprint": "516281152f4c9d43f87576c8cff777167eee9a7cba8da26de2d7fa53b151186d"
     },
     {
       "collectionId": "collections.actors",
@@ -2129,159 +1931,81 @@
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-BU4IT2EK",
-      "title": "Οκτάβια Σπένσερ",
-      "metadataFingerprint": "250c9ae420dde41ba16f0d28706835ca511ee59be7c775b47868578d11ce469a"
+      "id": "folder-Z6S54LGD",
+      "title": "Έντι Μέρφι",
+      "metadataFingerprint": "1807af9a6f5fe873ab22b7292470ea309c3af50bf427ee148348054d86e4bde7"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-LJ6K6WQ4",
-      "title": "Όουεν Γουίλσον",
-      "metadataFingerprint": "0c404211ff576c0e20989a875303d92fcaf5d5af9591265dc87cf9b6472be4db"
+      "id": "folder-WZ227UB7",
+      "title": "Έμιλι Μπλαντ",
+      "metadataFingerprint": "e9fc5e96dabd2c1f39b4b9655d5f5c81a6022889364818db30e5700be3aab287"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-76H6KRA1",
-      "title": "Όσκαρ Άιζακ",
-      "metadataFingerprint": "4e7df916f0c117fa494a2989871b33f8a34b9c18bfa6fb02d089d27c74be261a"
+      "id": "folder-L7XT7A7L",
+      "title": "Έμα Στόουν",
+      "metadataFingerprint": "d7d71cd0eb936b92118802b5865c0f161de59b329c6b7312140b72ef6a8e3093"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-DOII6WV3",
-      "title": "Όστιν Μπάτλερ",
-      "metadataFingerprint": "c908df5ad1a4e553a08611b8f1c128e44a2ae1d36e60b02f8421f77a749daa59"
+      "id": "folder-D3DK695R",
+      "title": "Φλόρενς Πιου",
+      "metadataFingerprint": "d03cc17be78ba4cea7fbb5c4b2c39c79f70ce5672b8c5024768d6ce750da1e12"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-OK8Z3CTX",
-      "title": "Πέδρο Πασκάλ",
-      "metadataFingerprint": "d5bcf06a03478be8f466fe6e0259019cdaca16561bd8fd92f98129e29dc07b31"
+      "id": "folder-4WZSK2HQ",
+      "title": "Φόρεστ Γουίτακερ",
+      "metadataFingerprint": "61c062becd2f0872bb103b66c7be43fdb1538abaef7a569018df2043d0358fe9"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-HTT7QLSK",
-      "title": "Πενέλοπε Κρουζ",
-      "metadataFingerprint": "b655e033c5ea0b6129f0564582994d13e68eaa307005650b23f3b759a5e49fde"
+      "id": "folder-CX0JHAUK",
+      "title": "Γκάρι Όλντμαν",
+      "metadataFingerprint": "a72adbcc4c7f3203d4e797938e96381397a90eab8f5786eb029516b09473e19b"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-E71626SP",
-      "title": "Πολ Μέσκαλ",
-      "metadataFingerprint": "5e6e7a85760f293d12d72a08e808de56e907b0fb78fc502876bdf1025b32b83c"
+      "id": "folder-ACWQ14XR",
+      "title": "Τζιν Χάκμαν",
+      "metadataFingerprint": "c492a1e4f7624d0e456b1acb4eccbd9701cf243739263a40823c05c9d4c8683e"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-45WHECZN",
-      "title": "Πολ Ραντ",
-      "metadataFingerprint": "1ba3ec24008d8cc153c36d36c98c731cbe9b79d29dc6537f0a69abddca480b18"
+      "id": "folder-4XRKGC82",
+      "title": "Τζορτζ Κλούνεϊ",
+      "metadataFingerprint": "1c5615bc824c273ce2e8fe24f75e4a3b9b322f216009cbe6c422e64e32d3aab7"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-NRAGDACW",
-      "title": "Ράιαν Γκόσλινγκ",
-      "metadataFingerprint": "d91b9a20ece101e4b45d59d804555b424507ab4aa16c944c55cd4f5b6c678cc2"
+      "id": "folder-TZ8ZFGCN",
+      "title": "Γκλεν Πάουελ",
+      "metadataFingerprint": "fcee903cabf88801956754d9723e5c500a7a4d2691003f480498585e07c48a4e"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-1WLIGD5C",
-      "title": "Ράιαν Ρέινολντς",
-      "metadataFingerprint": "581f8e195d4c586cad3ceda02f1a5d2bacdd6b1faabb82933eb7e65a32211a12"
+      "id": "folder-FK9VMYHY",
+      "title": "Χάλι Μπέρι",
+      "metadataFingerprint": "f5af3ff587d24caa19b736b6cd963b1447d7a540365ababf964885a727d054d2"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-TDL8CIHS",
-      "title": "Ρις Γουίδερσπουν",
-      "metadataFingerprint": "cf9ecdcc39568d43732d6fc7464755aa165c2c042bf5da611b29dea8334f1ee0"
+      "id": "folder-QUCYLCY9",
+      "title": "Χάρισον Φορντ",
+      "metadataFingerprint": "bd83e313a1c16932faec5f90524bd93569ce511e9e0cb9b0dd891a8aebcc6927"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-TWR66N19",
-      "title": "Ρόμπερτ Ντάουνι Τζούνιορ",
-      "metadataFingerprint": "0936650753fac84795bc500234cc5844ad959f01e23b8d16c8219e37af853024"
+      "id": "folder-18GZE0MQ",
+      "title": "Χιου Τζάκμαν",
+      "metadataFingerprint": "40e736a9aa98be93296cf87db84d36677e5e4ec2e8b1f546eb78bf4c6021f8ec"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-NBIFUAKW",
-      "title": "Ρόμπερτ Ντε Νίρο",
-      "metadataFingerprint": "927603a243ff785a2c50526c8a9a7abe60f2b51528c7f50c214ad80fb1a62ff8"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-FJZ84GA3",
-      "title": "Ρόμπιν Γουίλιαμς",
-      "metadataFingerprint": "a105ef68a37e03dc4c1a09b8f96a4cb982aadf949f274743acb7f417c49c9126"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-MP1RNVPJ",
-      "title": "Σάλμα Χάγιεκ Πινό",
-      "metadataFingerprint": "365224ababe606486f0cc4a93dc9cc65cfc8fbf1d711189c257e8b3476304362"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-DVIHJC86",
-      "title": "Σάμιουελ Λ. Τζάκσον",
-      "metadataFingerprint": "7916ba4395dfb8a6d81d786a04449e71930364bd068fcf409ada8330da6fbf8e"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-H1P5FUH1",
-      "title": "Σάντρα Μπούλοκ",
-      "metadataFingerprint": "cadbc34ae7cc8255e0048b150cab66b53d24d28455c7a2ad1f9aa170c2137e4d"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-MJBGYP6B",
-      "title": "Σαρλίζ Θερόν",
-      "metadataFingerprint": "21b110eeb197c85821cad3c619db4e869277c21bceb2b013eaf13e5157803dac"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-MHGNAS02",
-      "title": "Σεθ Ρόγκεν",
-      "metadataFingerprint": "b91aa6c232c5446732b0e9775ffca05fc0c2722752a28b1c0c454da2cfa5f920"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-YOR5PVAB",
-      "title": "Σέιντι Σινκ",
-      "metadataFingerprint": "1a84d0719ba51716153c50e9960a29015c3b90497ecb5df6e70a99b89f53cfc9"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-C3Z55FSW",
-      "title": "Σιλβέστερ Σταλόνε",
-      "metadataFingerprint": "cef3b064b88a2a73e4bc11378f620fbe9c3be941d57b7949ad287dda59a3c710"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-QQ7P8T6J",
-      "title": "Σίντνεϊ Σουίνι",
-      "metadataFingerprint": "332cc7ba7aa6190a1723935ebf833cbf3b307dacad84e5e37816a8d32ca6bf1b"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-LI1PDADR",
-      "title": "Σκάρλετ Γιόχανσον",
-      "metadataFingerprint": "10c54556afed38588d48e3c6b9a1827df355370a0d7b9a677fdbf99885852185"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-9QHTMQDZ",
-      "title": "Στιβ Καρέλ",
-      "metadataFingerprint": "b435da44b80f27942d8076d146a54a44900be1690c4e260883b1ee5116b431aa"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-2AFAKOUX",
-      "title": "Στιβ Μάρτιν",
-      "metadataFingerprint": "1902af6311974e5caec840794085fe94ea6a387e62bb991fa4089a83258fb009"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-5DNUVAKW",
-      "title": "Τέσα Τόμσον",
-      "metadataFingerprint": "5a5b87938606b914d94a66c3e6e74eb1811e96e50dd8751b3f6cda0a6e03b35a"
+      "id": "folder-WDV07SJY",
+      "title": "Ίντρις Έλμπα",
+      "metadataFingerprint": "9d54c6604e7db16d35a9ca266e3f29db4904e4f9ed55b4de3aaa7aafdd70abfc"
     },
     {
       "collectionId": "collections.actors",
@@ -2321,6 +2045,24 @@
     },
     {
       "collectionId": "collections.actors",
+      "id": "folder-SYGPEDMV",
+      "title": "Χαβιέρ Μπαρδέμ",
+      "metadataFingerprint": "3004c2cc21b5dc4e67d0240f65935e5f04461a5e0446f750689e905378fb9d04"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-3WC8I4GA",
+      "title": "Ζαν-Κλοντ Βαν Νταμ",
+      "metadataFingerprint": "e74958cac743694b4f1fe9f16445d7018966d896c3093ab9a6b10dd6e388797f"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-ZASSCSIC",
+      "title": "Τζέφρι Ράιτ",
+      "metadataFingerprint": "cdeab562ff8bf6a6c6d80ea8ca9ae9ee20a20b90e987b6c127430cc2e578deae"
+    },
+    {
+      "collectionId": "collections.actors",
       "id": "folder-O3OG8E01",
       "title": "Τζένα Ορτέγκα",
       "metadataFingerprint": "fde741095cb7fd00910c113dc5602a587f7246ac376877207e18a7ee14d286c7"
@@ -2357,21 +2099,9 @@
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-ZASSCSIC",
-      "title": "Τζέφρι Ράιτ",
-      "metadataFingerprint": "cdeab562ff8bf6a6c6d80ea8ca9ae9ee20a20b90e987b6c127430cc2e578deae"
-    },
-    {
-      "collectionId": "collections.actors",
       "id": "folder-Q1HEIV6U",
       "title": "Τζιμ Κάρεϊ",
       "metadataFingerprint": "9754ae4f88e405a790049b89adf2d5e025679b9858425212b59b5413c9f8506b"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-ACWQ14XR",
-      "title": "Τζιν Χάκμαν",
-      "metadataFingerprint": "c492a1e4f7624d0e456b1acb4eccbd9701cf243739263a40823c05c9d4c8683e"
     },
     {
       "collectionId": "collections.actors",
@@ -2381,27 +2111,303 @@
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-M16Q1W2H",
-      "title": "Τζόνα Χιλ",
-      "metadataFingerprint": "b27dba47a6f5218e30b979fdeae31e6f307cc205304a14a71c7bd1fab1413db8"
-    },
-    {
-      "collectionId": "collections.actors",
       "id": "folder-O8QPCGH2",
       "title": "Τζόνι Ντεπ",
       "metadataFingerprint": "4946a5a6acaa95645085c2144d6e5a08456a51864205cb6ad36d796022d1f718"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-4XRKGC82",
-      "title": "Τζορτζ Κλούνεϊ",
-      "metadataFingerprint": "1c5615bc824c273ce2e8fe24f75e4a3b9b322f216009cbe6c422e64e32d3aab7"
+      "id": "folder-M16Q1W2H",
+      "title": "Τζόνα Χιλ",
+      "metadataFingerprint": "b27dba47a6f5218e30b979fdeae31e6f307cc205304a14a71c7bd1fab1413db8"
     },
     {
       "collectionId": "collections.actors",
       "id": "folder-2IAN1H6H",
       "title": "Τζούλια Ρόμπερτς",
       "metadataFingerprint": "9438ef87e36e16c76b8b594c40914f5f2ff0cca925b0a9b0f224d7789aa11885"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-MR9WMHUR",
+      "title": "Κέιτ Γουίνσλετ",
+      "metadataFingerprint": "8c94ff1893cae25ee134ba9310eba0a9ed9f3193dd6b8a490a09ad79e5ae8c03"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-1GMOXRXX",
+      "title": "Κάθριν Χέιγκλ",
+      "metadataFingerprint": "1626520f37ab466429ba4cd6cc8cce2be0422e42531baaad990f7d084be3908b"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-D37JKRU8",
+      "title": "Κιάνου Ριβς",
+      "metadataFingerprint": "d44c23f9fb0a8ee34850f4f6756869bb9b50932bd7f53dc89b5b8c16f334ee44"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-X6DZXD29",
+      "title": "Λόρενς Φίσμπερν",
+      "metadataFingerprint": "0688d670ede3dfed2f730117038383f93cf46214bc268a35c9e453aceb84eaf2"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-KAF08LH9",
+      "title": "Λεονάρντο Ντι Κάπριο",
+      "metadataFingerprint": "dd15814d3bd6a19ca09c95890a4fbefec630a214281edfb15b90c6b56d664b51"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-Y6IIBR23",
+      "title": "Λίλι Κόλινς",
+      "metadataFingerprint": "fc9b1197d238979f42b25c7ae0f6cfb015af5d4a5d1202b3a0c1af71d1dafd3a"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-I62XOTHC",
+      "title": "Λουπίτα Νιόνγκο",
+      "metadataFingerprint": "f536a8875cb8b57b88f86c27fd2ba6daa96ce9cb9311691b2388e03fc4918eed"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-71ZEPSY8",
+      "title": "Μαντς Μίκελσεν",
+      "metadataFingerprint": "85408d2a704f14ade82473341e43d5ce33b037bc9019b36c920188f93b255ab0"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-RYNCM2WO",
+      "title": "Μαχέρσαλα Άλι",
+      "metadataFingerprint": "0391163762996426905da794f92f58857f8b7b80ab3eee75da082595d4580136"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-63GJUMC0",
+      "title": "Μάρλον Μπράντο",
+      "metadataFingerprint": "2767c552ac07b047beff189503690fd72336564a93da9b495d07693dbc6a3df8"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-TYX4G5P3",
+      "title": "Ματ Ντέιμον",
+      "metadataFingerprint": "d9facf4aecbed304d81fa5570ea3142d7f47ad5deb588810897c53af45fa46fd"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-TR8NRI88",
+      "title": "Μάθιου ΜακΚόναχι",
+      "metadataFingerprint": "a2acaf745a143b5f68f2516623608f61d5b990e814b016161c8c9324251ef76c"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-1L09X3YR",
+      "title": "Μελίσα ΜακΚάρθι",
+      "metadataFingerprint": "27705e2327a01e44f546847523e4ca0df0b303817757bc914d954a2deb926c74"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-6WUONCAR",
+      "title": "Μέριλ Στριπ",
+      "metadataFingerprint": "074266ee23d0bf01186b7688e7dfa01181ced7b28d9bc9ed03efcf9dd46e4b8b"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-Q5MTSVE1",
+      "title": "Μάικλ Μπ. Τζόρνταν",
+      "metadataFingerprint": "3849964296958508efe8b06f0b865bb5249ba096bf9574e62e4298c62e8ed065"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-6QKXQ0P3",
+      "title": "Μίχαελ Χέρμπιγκ",
+      "metadataFingerprint": "d7ceafee5265aef1052b9bd8ae9719c87b7d04b3cd4f3aabdc8ca23d3abbbe56"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-121Y6Z25",
+      "title": "Μισέλ Γιο",
+      "metadataFingerprint": "650c7b6723e7b20dc59f36e904317584fbd3c6150fd66bc1fac3906442a04f00"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-Q5ZZ4IJQ",
+      "title": "Μίλα Κούνις",
+      "metadataFingerprint": "086ab52bef3f04322261859ace1947c6b415383737b3010218ea9133c9bfaf78"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-I3VIBXVB",
+      "title": "Μίλι Μπόμπι Μπράουν",
+      "metadataFingerprint": "ce5f7dfb7ed8a42769fa4b0555d008fb7b4433512fff43c88e2685d050fe0e33"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-JNCCEB8T",
+      "title": "Μόργκαν Φρίμαν",
+      "metadataFingerprint": "e4bbc48b4ef9acc2e3221cdde0dbcd60b0d6f897f0792df9cb90edef16ba8038"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-6BKY6W3C",
+      "title": "Νάταλι Πόρτμαν",
+      "metadataFingerprint": "94a53b23c8b0f15c5a44f55c3dac7b97d5e600638f33412e427a65226e615708"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-CGWEX5NT",
+      "title": "Νίκολας Κέιτζ",
+      "metadataFingerprint": "988b93e83ed443699f8a47c056c3e5f812beb0c24d5c3b4e612fb1b4a9f2c42c"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-3V7BIKDZ",
+      "title": "Νικόλ Κίντμαν",
+      "metadataFingerprint": "9143ee0341fcdc387baf366e5b8ad1c5adb5df4393f2c18d90c34a2fca14de5c"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-BU4IT2EK",
+      "title": "Οκτάβια Σπένσερ",
+      "metadataFingerprint": "250c9ae420dde41ba16f0d28706835ca511ee59be7c775b47868578d11ce469a"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-76H6KRA1",
+      "title": "Όσκαρ Άιζακ",
+      "metadataFingerprint": "4e7df916f0c117fa494a2989871b33f8a34b9c18bfa6fb02d089d27c74be261a"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-LJ6K6WQ4",
+      "title": "Όουεν Γουίλσον",
+      "metadataFingerprint": "0c404211ff576c0e20989a875303d92fcaf5d5af9591265dc87cf9b6472be4db"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-E71626SP",
+      "title": "Πολ Μέσκαλ",
+      "metadataFingerprint": "5e6e7a85760f293d12d72a08e808de56e907b0fb78fc502876bdf1025b32b83c"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-45WHECZN",
+      "title": "Πολ Ραντ",
+      "metadataFingerprint": "1ba3ec24008d8cc153c36d36c98c731cbe9b79d29dc6537f0a69abddca480b18"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-OK8Z3CTX",
+      "title": "Πέδρο Πασκάλ",
+      "metadataFingerprint": "d5bcf06a03478be8f466fe6e0259019cdaca16561bd8fd92f98129e29dc07b31"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-HTT7QLSK",
+      "title": "Πενέλοπε Κρουζ",
+      "metadataFingerprint": "b655e033c5ea0b6129f0564582994d13e68eaa307005650b23f3b759a5e49fde"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-TDL8CIHS",
+      "title": "Ρις Γουίδερσπουν",
+      "metadataFingerprint": "cf9ecdcc39568d43732d6fc7464755aa165c2c042bf5da611b29dea8334f1ee0"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-NBIFUAKW",
+      "title": "Ρόμπερτ Ντε Νίρο",
+      "metadataFingerprint": "927603a243ff785a2c50526c8a9a7abe60f2b51528c7f50c214ad80fb1a62ff8"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-TWR66N19",
+      "title": "Ρόμπερτ Ντάουνι Τζούνιορ",
+      "metadataFingerprint": "0936650753fac84795bc500234cc5844ad959f01e23b8d16c8219e37af853024"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-FJZ84GA3",
+      "title": "Ρόμπιν Γουίλιαμς",
+      "metadataFingerprint": "a105ef68a37e03dc4c1a09b8f96a4cb982aadf949f274743acb7f417c49c9126"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-NRAGDACW",
+      "title": "Ράιαν Γκόσλινγκ",
+      "metadataFingerprint": "d91b9a20ece101e4b45d59d804555b424507ab4aa16c944c55cd4f5b6c678cc2"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-1WLIGD5C",
+      "title": "Ράιαν Ρέινολντς",
+      "metadataFingerprint": "581f8e195d4c586cad3ceda02f1a5d2bacdd6b1faabb82933eb7e65a32211a12"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-YOR5PVAB",
+      "title": "Σέιντι Σινκ",
+      "metadataFingerprint": "1a84d0719ba51716153c50e9960a29015c3b90497ecb5df6e70a99b89f53cfc9"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-MP1RNVPJ",
+      "title": "Σάλμα Χάγιεκ Πινό",
+      "metadataFingerprint": "365224ababe606486f0cc4a93dc9cc65cfc8fbf1d711189c257e8b3476304362"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-DVIHJC86",
+      "title": "Σάμιουελ Λ. Τζάκσον",
+      "metadataFingerprint": "7916ba4395dfb8a6d81d786a04449e71930364bd068fcf409ada8330da6fbf8e"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-H1P5FUH1",
+      "title": "Σάντρα Μπούλοκ",
+      "metadataFingerprint": "cadbc34ae7cc8255e0048b150cab66b53d24d28455c7a2ad1f9aa170c2137e4d"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-LI1PDADR",
+      "title": "Σκάρλετ Γιόχανσον",
+      "metadataFingerprint": "10c54556afed38588d48e3c6b9a1827df355370a0d7b9a677fdbf99885852185"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-MHGNAS02",
+      "title": "Σεθ Ρόγκεν",
+      "metadataFingerprint": "b91aa6c232c5446732b0e9775ffca05fc0c2722752a28b1c0c454da2cfa5f920"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-9QHTMQDZ",
+      "title": "Στιβ Καρέλ",
+      "metadataFingerprint": "b435da44b80f27942d8076d146a54a44900be1690c4e260883b1ee5116b431aa"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-2AFAKOUX",
+      "title": "Στιβ Μάρτιν",
+      "metadataFingerprint": "1902af6311974e5caec840794085fe94ea6a387e62bb991fa4089a83258fb009"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-QQ7P8T6J",
+      "title": "Σίντνεϊ Σουίνι",
+      "metadataFingerprint": "332cc7ba7aa6190a1723935ebf833cbf3b307dacad84e5e37816a8d32ca6bf1b"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-C3Z55FSW",
+      "title": "Σιλβέστερ Σταλόνε",
+      "metadataFingerprint": "cef3b064b88a2a73e4bc11378f620fbe9c3be941d57b7949ad287dda59a3c710"
+    },
+    {
+      "collectionId": "collections.actors",
+      "id": "folder-5DNUVAKW",
+      "title": "Τέσα Τόμσον",
+      "metadataFingerprint": "5a5b87938606b914d94a66c3e6e74eb1811e96e50dd8751b3f6cda0a6e03b35a"
     },
     {
       "collectionId": "collections.actors",
@@ -2435,51 +2441,45 @@
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-UUYB9RPU",
-      "title": "Τσακ Νόρις",
-      "metadataFingerprint": "662b3fd2016d82a489d3a9b7b7e8ed794c5a178fdb014684e63d8d451ead96b9"
+      "id": "folder-D018AV8U",
+      "title": "Βιν Ντίζελ",
+      "metadataFingerprint": "16fe736434865f5e5629a85c916599c5d021ca0dd6c265382a0a334818de4353"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-TQ46STUW",
-      "title": "Τσάνινγκ Τέιτουμ",
-      "metadataFingerprint": "ab93a99e2ae334c96dab0f58a96f708865f45b622325f2949766182ccd4289ae"
+      "id": "folder-K4SHYOWV",
+      "title": "Βαϊόλα Ντέιβις",
+      "metadataFingerprint": "128ae9d8e8b0c4ac6fd7db119d32bcd62da3c44283ab016f8d158702cdb810fa"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-D3DK695R",
-      "title": "Φλόρενς Πιου",
-      "metadataFingerprint": "d03cc17be78ba4cea7fbb5c4b2c39c79f70ce5672b8c5024768d6ce750da1e12"
+      "id": "folder-RQXU2K5A",
+      "title": "Γουίλ Φέρελ",
+      "metadataFingerprint": "7e519ff30c1382c3681a6f0d7c844403582f38f0bd7cc99d38533ebe54c12e4d"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-4WZSK2HQ",
-      "title": "Φόρεστ Γουίτακερ",
-      "metadataFingerprint": "61c062becd2f0872bb103b66c7be43fdb1538abaef7a569018df2043d0358fe9"
+      "id": "folder-59J071DM",
+      "title": "Γουίλ Σμιθ",
+      "metadataFingerprint": "0cce0604d8370e0de704156cbffabf36b79c9f5d3670dad1419f4965dc3d2ea8"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-SYGPEDMV",
-      "title": "Χαβιέρ Μπαρδέμ",
-      "metadataFingerprint": "3004c2cc21b5dc4e67d0240f65935e5f04461a5e0446f750689e905378fb9d04"
+      "id": "folder-5R6SLQIA",
+      "title": "Γουίλεμ Νταφόε",
+      "metadataFingerprint": "9803f8fa273676943849929a54a1f6fadd6d17e4c6c0486b6ad9703945e03d2a"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-FK9VMYHY",
-      "title": "Χάλι Μπέρι",
-      "metadataFingerprint": "f5af3ff587d24caa19b736b6cd963b1447d7a540365ababf964885a727d054d2"
+      "id": "folder-NCVWCX3E",
+      "title": "Ζεντάγια",
+      "metadataFingerprint": "57d96ffc4fbb96bd3a92196721474f6b5e258eeadc16e3f1e90d3b7e796d7c4f"
     },
     {
       "collectionId": "collections.actors",
-      "id": "folder-QUCYLCY9",
-      "title": "Χάρισον Φορντ",
-      "metadataFingerprint": "bd83e313a1c16932faec5f90524bd93569ce511e9e0cb9b0dd891a8aebcc6927"
-    },
-    {
-      "collectionId": "collections.actors",
-      "id": "folder-18GZE0MQ",
-      "title": "Χιου Τζάκμαν",
-      "metadataFingerprint": "40e736a9aa98be93296cf87db84d36677e5e4ec2e8b1f546eb78bf4c6021f8ec"
+      "id": "folder-HMXS9XCV",
+      "title": "Ζόι Σαλντάνα",
+      "metadataFingerprint": "98e7b8a416f3a51bad2fceacc39838438de6224b29e3e88f3f9cdc63aaed0ca2"
     },
     {
       "collectionId": "collections.directors",
@@ -2489,15 +2489,15 @@
     },
     {
       "collectionId": "collections.directors",
-      "id": "folder-OCM9TEN5",
-      "title": "Άλεξ Γκάρλαντ",
-      "metadataFingerprint": "43597f919c7e3c29fe76f4e53e8417aaae66e5ed30b7e14d73b00c70e27bbf4a"
-    },
-    {
-      "collectionId": "collections.directors",
       "id": "folder-R0TG3ZPQ",
       "title": "Αλεχάντρο Γκονσάλες Ινιάριτου",
       "metadataFingerprint": "b991722a484180cdff4ae9f0c2fef119a7872976e8c55482f5fe4b7629b2d63f"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-OCM9TEN5",
+      "title": "Άλεξ Γκάρλαντ",
+      "metadataFingerprint": "43597f919c7e3c29fe76f4e53e8417aaae66e5ed30b7e14d73b00c70e27bbf4a"
     },
     {
       "collectionId": "collections.directors",
@@ -2519,75 +2519,15 @@
     },
     {
       "collectionId": "collections.directors",
-      "id": "folder-0TQB9YAC",
-      "title": "Βινς Γκίλιγκαν",
-      "metadataFingerprint": "4ad82f6f2367e2d41bf5cab6eefe6a53ff8b13d090429a82da0d8cd3407afa5c"
+      "id": "folder-5KEV9F74",
+      "title": "Μπονγκ Τζουν-χο",
+      "metadataFingerprint": "258640ecefb28df0c6941417f8401c637042608f7b1d9da46710df4942d3f223"
     },
     {
       "collectionId": "collections.directors",
-      "id": "folder-F2FRH147",
-      "title": "Γιώργος Λάνθιμος",
-      "metadataFingerprint": "22ec5c2504be7b0fdf6f14c0b2cedb3f72f1648b39c43bf49cd5814e7d5cb82c"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-VZAELEDR",
-      "title": "Γκάι Ρίτσι",
-      "metadataFingerprint": "bf1b1f3cccce3045156f3db6b288f7d97d6af34eca38a0afd559f6084f169e4a"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-Z6H0DPEH",
-      "title": "Γκιγιέρμο ντελ Τόρο",
-      "metadataFingerprint": "32a152f08c1cced7d84e9292893dc1f59cce709427e58b65345f062a951f2546"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-8UPHB2I5",
-      "title": "Γκρέτα Γκέργουιγκ",
-      "metadataFingerprint": "3697a083f494fd5adf2b95a0a7723641f665366238a75b258200a44441531d27"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-U5WAYZNG",
-      "title": "Γουές Άντερσον",
-      "metadataFingerprint": "bc64a8be0e48985b25ea3566780f69c0deb1748f7861c20ecdac8533f6d90781"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-3ARDD5TS",
-      "title": "Γουές Κρέιβεν",
-      "metadataFingerprint": "fab3fbbc070c8cd6e87ded515c3bb716853c449a9c189a4d9b94d44dadd125ab"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-C34MCJNY",
-      "title": "Έμεραλντ Φένελ",
-      "metadataFingerprint": "0bc50733c7c68349eee7608504909a9066bd51156fc0441d68f0fb2912606ce3"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-0RN654SH",
-      "title": "Έντγκαρ Ράιτ",
-      "metadataFingerprint": "7144aefb0e740bf890b79bae49d456bc06d1435c353beaa5f47fa650d6ac32e1"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-LWZIKER3",
-      "title": "Ζακ Σνάιντερ",
-      "metadataFingerprint": "3388610ff76d524324832e5bf258944dd09a3e155aef133512bc7f221ea7b6e6"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-F8WMWLBP",
-      "title": "Κάθριν Μπίγκελοου",
-      "metadataFingerprint": "552e72ff9fad70030f178e909f2783c7633a191c57436e922106896c36ae95be"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-KGVNOYUN",
-      "title": "Κουέντιν Ταραντίνο",
-      "metadataFingerprint": "84341504a1b8f20be379a3f0f97658e655f22d2f3b0f4dc7767eb56059f69d27"
+      "id": "folder-0JLCJIWA",
+      "title": "Μπράιαν Ντε Πάλμα",
+      "metadataFingerprint": "520ed5cf44b411df427bb4ed9521c8bcbe61cfdec31cac05d6ec7fe941660411"
     },
     {
       "collectionId": "collections.directors",
@@ -2597,15 +2537,129 @@
     },
     {
       "collectionId": "collections.directors",
-      "id": "folder-S7FCTI9L",
-      "title": "Μάικ Φλάναγκαν",
-      "metadataFingerprint": "f2e42ee787e0d837e054ef70ed0c34dd684549b7bcfbfeee692db1505ec56572"
+      "id": "folder-FZLHL0FP",
+      "title": "Ντάμιεν Σαζέλ",
+      "metadataFingerprint": "a54f7ce2525913f856119f444d111a23b2412cb23801a8b07a69fd1cbe4d44d5"
     },
     {
       "collectionId": "collections.directors",
-      "id": "folder-BA7JJ48I",
-      "title": "Μάικλ Μαν",
-      "metadataFingerprint": "edb9df1cf7eac1ab4274abfc259007b50ba1681214cd3db1f5f9316f1a5705e7"
+      "id": "folder-1S2KWLHD",
+      "title": "Ντάνιελ Σάινερτ",
+      "metadataFingerprint": "6acd472a774f12819ce8a4e19002d0338c80367e06240fb353f657eab9119fb3"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-RVWJ8YXW",
+      "title": "Ντάνι Μπόιλ",
+      "metadataFingerprint": "c947d14a77b4a9d7856aa7b968a080c4e89b73198c0269b4bb509aaf47ce14b2"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-TQLTEJ41",
+      "title": "Ντάρεν Αρονόφσκι",
+      "metadataFingerprint": "54afb74ac38eb10e2099c30210d14346655b3128c50a45b75a2d621b55dcc117"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-ORT2G4HQ",
+      "title": "Ντέιβιντ Φίντσερ",
+      "metadataFingerprint": "27ec87abe73676114246d3995de625a58b116d361ff8e27e3d1e366d49aea6c1"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-BXQCPCBV",
+      "title": "Ντέιβιντ Λιντς",
+      "metadataFingerprint": "2376b1cc1984c1d6413298919087ddfb364a80deb0e8c3d6651b337fc58ca141"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-I4NYCWWV",
+      "title": "Ντενί Βιλνέβ",
+      "metadataFingerprint": "aec849502656fa2be464be19950ed852870cfe928923084e43d12e2167d00e8d"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-0RN654SH",
+      "title": "Έντγκαρ Ράιτ",
+      "metadataFingerprint": "7144aefb0e740bf890b79bae49d456bc06d1435c353beaa5f47fa650d6ac32e1"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-C34MCJNY",
+      "title": "Έμεραλντ Φένελ",
+      "metadataFingerprint": "0bc50733c7c68349eee7608504909a9066bd51156fc0441d68f0fb2912606ce3"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-RX1KW27K",
+      "title": "Φράνσις Φορντ Κόπολα",
+      "metadataFingerprint": "7417a23a9ce7f8338e3c4c2a99d1267fe85bf348466b6991cd0364f62a8ffef0"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-P3TT53P3",
+      "title": "Τζορτζ Λούκας",
+      "metadataFingerprint": "1d1d5809e604d1176a04dc974973e56ac1ded6b0d55c395cba2e9478f69c489a"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-8UPHB2I5",
+      "title": "Γκρέτα Γκέργουιγκ",
+      "metadataFingerprint": "3697a083f494fd5adf2b95a0a7723641f665366238a75b258200a44441531d27"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-Z6H0DPEH",
+      "title": "Γκιγιέρμο ντελ Τόρο",
+      "metadataFingerprint": "32a152f08c1cced7d84e9292893dc1f59cce709427e58b65345f062a951f2546"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-VZAELEDR",
+      "title": "Γκάι Ρίτσι",
+      "metadataFingerprint": "bf1b1f3cccce3045156f3db6b288f7d97d6af34eca38a0afd559f6084f169e4a"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-B3ZDSG01",
+      "title": "Χαγιάο Μιγιαζάκι",
+      "metadataFingerprint": "ff218c1195455dd94373829b9ddf351e6a13f446c2a92403de7329b2c707e9e2"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-KIYFQDGL",
+      "title": "Τζέιμς Κάμερον",
+      "metadataFingerprint": "785bef7981b8573cbf7a0b409ce6fdf64d372223f5a576f2fc35a32fa2613175"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-7T9Z13PN",
+      "title": "Τζέιμς Γουάν",
+      "metadataFingerprint": "0508fd73cddf5dad20c80a27bc5464254175fd874adbf77fb61e0bb08bfbec56"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-4Q94KG36",
+      "title": "Τζόελ Κοέν",
+      "metadataFingerprint": "f315debf4ea6cdd101c013687bf728e79c12aabf9657f550a8c6667de2b8115f"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-E7TC1R89",
+      "title": "Τζον Κάρπεντερ",
+      "metadataFingerprint": "6ce0104f2e1c018a74f4e8132705fc5b1d88df5fd6d6bdec15009e0e453727be"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-SJCCP0SK",
+      "title": "Τζόρνταν Πιλ",
+      "metadataFingerprint": "ce3459a44fb20003aa787d07f56540651ae95f463ce5f333f6d935d07f59b2c8"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-F8WMWLBP",
+      "title": "Κάθριν Μπίγκελοου",
+      "metadataFingerprint": "552e72ff9fad70030f178e909f2783c7633a191c57436e922106896c36ae95be"
     },
     {
       "collectionId": "collections.directors",
@@ -2621,57 +2675,15 @@
     },
     {
       "collectionId": "collections.directors",
-      "id": "folder-5KEV9F74",
-      "title": "Μπονγκ Τζουν-χο",
-      "metadataFingerprint": "258640ecefb28df0c6941417f8401c637042608f7b1d9da46710df4942d3f223"
+      "id": "folder-BA7JJ48I",
+      "title": "Μάικλ Μαν",
+      "metadataFingerprint": "edb9df1cf7eac1ab4274abfc259007b50ba1681214cd3db1f5f9316f1a5705e7"
     },
     {
       "collectionId": "collections.directors",
-      "id": "folder-0JLCJIWA",
-      "title": "Μπράιαν Ντε Πάλμα",
-      "metadataFingerprint": "520ed5cf44b411df427bb4ed9521c8bcbe61cfdec31cac05d6ec7fe941660411"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-FZLHL0FP",
-      "title": "Ντάμιεν Σαζέλ",
-      "metadataFingerprint": "a54f7ce2525913f856119f444d111a23b2412cb23801a8b07a69fd1cbe4d44d5"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-RVWJ8YXW",
-      "title": "Ντάνι Μπόιλ",
-      "metadataFingerprint": "c947d14a77b4a9d7856aa7b968a080c4e89b73198c0269b4bb509aaf47ce14b2"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-1S2KWLHD",
-      "title": "Ντάνιελ Σάινερτ",
-      "metadataFingerprint": "6acd472a774f12819ce8a4e19002d0338c80367e06240fb353f657eab9119fb3"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-TQLTEJ41",
-      "title": "Ντάρεν Αρονόφσκι",
-      "metadataFingerprint": "54afb74ac38eb10e2099c30210d14346655b3128c50a45b75a2d621b55dcc117"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-BXQCPCBV",
-      "title": "Ντέιβιντ Λιντς",
-      "metadataFingerprint": "2376b1cc1984c1d6413298919087ddfb364a80deb0e8c3d6651b337fc58ca141"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-ORT2G4HQ",
-      "title": "Ντέιβιντ Φίντσερ",
-      "metadataFingerprint": "27ec87abe73676114246d3995de625a58b116d361ff8e27e3d1e366d49aea6c1"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-I4NYCWWV",
-      "title": "Ντενί Βιλνέβ",
-      "metadataFingerprint": "aec849502656fa2be464be19950ed852870cfe928923084e43d12e2167d00e8d"
+      "id": "folder-S7FCTI9L",
+      "title": "Μάικ Φλάναγκαν",
+      "metadataFingerprint": "f2e42ee787e0d837e054ef70ed0c34dd684549b7bcfbfeee692db1505ec56572"
     },
     {
       "collectionId": "collections.directors",
@@ -2687,6 +2699,12 @@
     },
     {
       "collectionId": "collections.directors",
+      "id": "folder-3YVWC7AA",
+      "title": "Πολ Τόμας Άντερσον",
+      "metadataFingerprint": "9f8353d9bc972d116aa1367f75742c84f1c0cd27677df798e4f8a3f151e4ef6d"
+    },
+    {
+      "collectionId": "collections.directors",
       "id": "folder-OKSBGVJB",
       "title": "Πέδρο Αλμοδόβαρ",
       "metadataFingerprint": "da2de07832ba5821a55b3775674c38381ad868706fcf6c309d0d220400aaa15f"
@@ -2699,21 +2717,9 @@
     },
     {
       "collectionId": "collections.directors",
-      "id": "folder-3YVWC7AA",
-      "title": "Πολ Τόμας Άντερσον",
-      "metadataFingerprint": "9f8353d9bc972d116aa1367f75742c84f1c0cd27677df798e4f8a3f151e4ef6d"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-6VLQPAQY",
-      "title": "Ράιαν Κούγκλερ",
-      "metadataFingerprint": "79458b3a7fab396f1b17610f4de705e1c5558c2a8ec8d51a5d8a13c668e5c269"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-2MVP44YL",
-      "title": "Ρίντλεϊ Σκοτ",
-      "metadataFingerprint": "57df54d61cf68e4aa343580bf441128410780e3aceac36e39526be60f8780219"
+      "id": "folder-KGVNOYUN",
+      "title": "Κουέντιν Ταραντίνο",
+      "metadataFingerprint": "84341504a1b8f20be379a3f0f97658e655f22d2f3b0f4dc7767eb56059f69d27"
     },
     {
       "collectionId": "collections.directors",
@@ -2723,9 +2729,9 @@
     },
     {
       "collectionId": "collections.directors",
-      "id": "folder-LD7EJZ3Q",
-      "title": "Ρόλαντ Έμεριχ",
-      "metadataFingerprint": "389683ca29ffe6cbb0008e86e35b274eed7f2457b9dd01caa1f690d8015222b0"
+      "id": "folder-2MVP44YL",
+      "title": "Ρίντλεϊ Σκοτ",
+      "metadataFingerprint": "57df54d61cf68e4aa343580bf441128410780e3aceac36e39526be60f8780219"
     },
     {
       "collectionId": "collections.directors",
@@ -2744,6 +2750,18 @@
       "id": "folder-XVF16L85",
       "title": "Ρόμπερτ Ζεμέκις",
       "metadataFingerprint": "3ac086aabc4a5480be83af1627234f9ed4b968b387aa5495a9addc78d3064588"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-LD7EJZ3Q",
+      "title": "Ρόλαντ Έμεριχ",
+      "metadataFingerprint": "389683ca29ffe6cbb0008e86e35b274eed7f2457b9dd01caa1f690d8015222b0"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-6VLQPAQY",
+      "title": "Ράιαν Κούγκλερ",
+      "metadataFingerprint": "79458b3a7fab396f1b17610f4de705e1c5558c2a8ec8d51a5d8a13c668e5c269"
     },
     {
       "collectionId": "collections.directors",
@@ -2795,42 +2813,6 @@
     },
     {
       "collectionId": "collections.directors",
-      "id": "folder-7T9Z13PN",
-      "title": "Τζέιμς Γουάν",
-      "metadataFingerprint": "0508fd73cddf5dad20c80a27bc5464254175fd874adbf77fb61e0bb08bfbec56"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-KIYFQDGL",
-      "title": "Τζέιμς Κάμερον",
-      "metadataFingerprint": "785bef7981b8573cbf7a0b409ce6fdf64d372223f5a576f2fc35a32fa2613175"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-4Q94KG36",
-      "title": "Τζόελ Κοέν",
-      "metadataFingerprint": "f315debf4ea6cdd101c013687bf728e79c12aabf9657f550a8c6667de2b8115f"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-E7TC1R89",
-      "title": "Τζον Κάρπεντερ",
-      "metadataFingerprint": "6ce0104f2e1c018a74f4e8132705fc5b1d88df5fd6d6bdec15009e0e453727be"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-SJCCP0SK",
-      "title": "Τζόρνταν Πιλ",
-      "metadataFingerprint": "ce3459a44fb20003aa787d07f56540651ae95f463ce5f333f6d935d07f59b2c8"
-    },
-    {
-      "collectionId": "collections.directors",
-      "id": "folder-P3TT53P3",
-      "title": "Τζορτζ Λούκας",
-      "metadataFingerprint": "1d1d5809e604d1176a04dc974973e56ac1ded6b0d55c395cba2e9478f69c489a"
-    },
-    {
-      "collectionId": "collections.directors",
       "id": "folder-JNAONKLX",
       "title": "Τιμ Μπάρτον",
       "metadataFingerprint": "d8f7ec0adbec62159ff05dcb754456eb7fc44a8b449e9a8aa27253568633aeba"
@@ -2843,15 +2825,33 @@
     },
     {
       "collectionId": "collections.directors",
-      "id": "folder-RX1KW27K",
-      "title": "Φράνσις Φορντ Κόπολα",
-      "metadataFingerprint": "7417a23a9ce7f8338e3c4c2a99d1267fe85bf348466b6991cd0364f62a8ffef0"
+      "id": "folder-0TQB9YAC",
+      "title": "Βινς Γκίλιγκαν",
+      "metadataFingerprint": "4ad82f6f2367e2d41bf5cab6eefe6a53ff8b13d090429a82da0d8cd3407afa5c"
     },
     {
       "collectionId": "collections.directors",
-      "id": "folder-B3ZDSG01",
-      "title": "Χαγιάο Μιγιαζάκι",
-      "metadataFingerprint": "ff218c1195455dd94373829b9ddf351e6a13f446c2a92403de7329b2c707e9e2"
+      "id": "folder-U5WAYZNG",
+      "title": "Γουές Άντερσον",
+      "metadataFingerprint": "bc64a8be0e48985b25ea3566780f69c0deb1748f7861c20ecdac8533f6d90781"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-3ARDD5TS",
+      "title": "Γουές Κρέιβεν",
+      "metadataFingerprint": "fab3fbbc070c8cd6e87ded515c3bb716853c449a9c189a4d9b94d44dadd125ab"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-F2FRH147",
+      "title": "Γιώργος Λάνθιμος",
+      "metadataFingerprint": "22ec5c2504be7b0fdf6f14c0b2cedb3f72f1648b39c43bf49cd5814e7d5cb82c"
+    },
+    {
+      "collectionId": "collections.directors",
+      "id": "folder-LWZIKER3",
+      "title": "Ζακ Σνάιντερ",
+      "metadataFingerprint": "3388610ff76d524324832e5bf258944dd09a3e155aef133512bc7f221ea7b6e6"
     },
     {
       "collectionId": "collections.awards",
@@ -2873,27 +2873,9 @@
     },
     {
       "collectionId": "collections.world",
-      "id": "folder-0ZI700NE",
-      "title": "Αιγυπτιακές",
-      "metadataFingerprint": "4398fe033b9020b4df73d1f1aaa08bccb4fa3459048d904a943114fdd2a15248"
-    },
-    {
-      "collectionId": "collections.world",
-      "id": "folder-W2F9SBO8",
-      "title": "Αιθιοπικές",
-      "metadataFingerprint": "3ce6e4e1da04d68131c949e9a54c0886204980e1bebc0e5ab4eea460af7c35a8"
-    },
-    {
-      "collectionId": "collections.world",
       "id": "folder-1DLH4Q3B",
       "title": "Αλγερινές",
       "metadataFingerprint": "11373558737e09d0b751ff69adb94443e8f454d03ac17313652cd864b7e1f098"
-    },
-    {
-      "collectionId": "collections.world",
-      "id": "folder-CHLCSAJ1",
-      "title": "Αμερικανικές (ΗΠΑ)",
-      "metadataFingerprint": "f81d71d82396223b381571765e1e9471866aaf0504c4cf8ea60e22ecfd01a03c"
     },
     {
       "collectionId": "collections.world",
@@ -2909,15 +2891,15 @@
     },
     {
       "collectionId": "collections.world",
-      "id": "folder-2YV5HI8I",
-      "title": "Βελγικές",
-      "metadataFingerprint": "279dbb40e4c0db9591550051702ddf2d46d732746108827812dd506af0d7fab8"
+      "id": "folder-Z55EA73B",
+      "title": "Μπανγκλαντεσιανές",
+      "metadataFingerprint": "4c85ee70e8210a6f7454d3cfb16f65b19112ff3b87d14720ae938b3734a3daac"
     },
     {
       "collectionId": "collections.world",
-      "id": "folder-10NNKWPU",
-      "title": "Βιετναμέζικες",
-      "metadataFingerprint": "e67f4e1f2216e8861ffc67073d56b0b727c2e9a930d30b047d8573e991ec3c94"
+      "id": "folder-2YV5HI8I",
+      "title": "Βελγικές",
+      "metadataFingerprint": "279dbb40e4c0db9591550051702ddf2d46d732746108827812dd506af0d7fab8"
     },
     {
       "collectionId": "collections.world",
@@ -2930,6 +2912,72 @@
       "id": "folder-BICUTNJY",
       "title": "Βρετανικές",
       "metadataFingerprint": "b17c11bafaf273f174cf38e7056c58e50c00e8c2c7f30fc22958458e3b443d46"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "folder-WCOQJ028",
+      "title": "Καναδικές",
+      "metadataFingerprint": "33a4d3a8601c303ac8e97d37a883abbace7a96e47ed096cee1a49f0393c87d62"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "folder-FI6BJN1Z",
+      "title": "Χιλιανές",
+      "metadataFingerprint": "2f9d64cfc698bbfcf8d46cbba661f53a2e53dc47c6005527404725caa87ecc18"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "collections.world.chinese",
+      "title": "Κινέζικες",
+      "metadataFingerprint": "cf20c80174a430e683ba7791dea7e779b685268df1cf31cbf3a8ac3714b3470b"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "folder-5069W7D9",
+      "title": "Κολομβιανές",
+      "metadataFingerprint": "f654cb5ff5763e7957d6277155c8cc5e42851a2d087a397d3ab6464889e00b07"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "folder-XJ6HNL6G",
+      "title": "Δανέζικες",
+      "metadataFingerprint": "3cc657a23a1e84ed3620220b570c3269b81378b57c9316676a8198860d99a8a0"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "folder-V9HNQAV1",
+      "title": "Ολλανδικές",
+      "metadataFingerprint": "16bcc6ba1ed95a6a348dfc2e8986d8ef339c80a01e42c4a17d75b29fb3d122f1"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "folder-0ZI700NE",
+      "title": "Αιγυπτιακές",
+      "metadataFingerprint": "4398fe033b9020b4df73d1f1aaa08bccb4fa3459048d904a943114fdd2a15248"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "folder-D1NICV2Z",
+      "title": "Εμιρατινές",
+      "metadataFingerprint": "32dd58adffa7af7e8ae9b30723b562d4c63a2dda511f6adc966411b6d63a3c72"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "folder-W2F9SBO8",
+      "title": "Αιθιοπικές",
+      "metadataFingerprint": "3ce6e4e1da04d68131c949e9a54c0886204980e1bebc0e5ab4eea460af7c35a8"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "folder-FVCF354Y",
+      "title": "Φιλιππινέζικες",
+      "metadataFingerprint": "79238ad2e2afad938cb7d0cfcdffc2fd428bfc3dc35d47ef8854ca7be5a86b37"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "folder-5U334FWO",
+      "title": "Φινλανδικές",
+      "metadataFingerprint": "80afe1a1e1a83f653937b93736f99549ad57dae3dd6057b76af7c2f83c2bdab6"
     },
     {
       "collectionId": "collections.world",
@@ -2951,27 +2999,21 @@
     },
     {
       "collectionId": "collections.world",
-      "id": "folder-XJ6HNL6G",
-      "title": "Δανέζικες",
-      "metadataFingerprint": "3cc657a23a1e84ed3620220b570c3269b81378b57c9316676a8198860d99a8a0"
-    },
-    {
-      "collectionId": "collections.world",
       "id": "collections.world.greek",
       "title": "Ελληνικές",
       "metadataFingerprint": "36853fd3ee9c908b2e4ad04cda6d96ca1291526db63f0e2cae894338ea3034e9"
     },
     {
       "collectionId": "collections.world",
-      "id": "folder-D1NICV2Z",
-      "title": "Εμιρατινές",
-      "metadataFingerprint": "32dd58adffa7af7e8ae9b30723b562d4c63a2dda511f6adc966411b6d63a3c72"
+      "id": "folder-369A49J9",
+      "title": "Χονγκ Κονγκ",
+      "metadataFingerprint": "ce41c7b753f78409e5eb10573e336e8a6042223828532188325fa90f79220f46"
     },
     {
       "collectionId": "collections.world",
-      "id": "collections.world.japanese",
-      "title": "Ιαπωνικές",
-      "metadataFingerprint": "8879cc2563dcd1927cd2ba422f081b01f64e961e1619575d6b846009381ceec5"
+      "id": "folder-U58KOK24",
+      "title": "Ισλανδικές",
+      "metadataFingerprint": "cd11ed2d184a608aecad5cd4e4b276ee38c7f6e9223e4454f4fc9dd78a1b1f5f"
     },
     {
       "collectionId": "collections.world",
@@ -2987,12 +3029,6 @@
     },
     {
       "collectionId": "collections.world",
-      "id": "folder-BPH7ACF1",
-      "title": "Ιορδανικές",
-      "metadataFingerprint": "f6c1509b0e59d622f56d72fb8664d975f65bd29b2348dc745e34068a0fe9470b"
-    },
-    {
-      "collectionId": "collections.world",
       "id": "folder-VBBN438M",
       "title": "Ιρακινές",
       "metadataFingerprint": "bd66711358aae9c86c0b7a216ae63fcc68b92e77dcf8de8dfc177487fc443310"
@@ -3002,18 +3038,6 @@
       "id": "folder-9EYEPU66",
       "title": "Ιρλανδικές",
       "metadataFingerprint": "7e8449281869018f7278cdc883fbeb9764897c2e5eef979c4a45fda05883952a"
-    },
-    {
-      "collectionId": "collections.world",
-      "id": "folder-U58KOK24",
-      "title": "Ισλανδικές",
-      "metadataFingerprint": "cd11ed2d184a608aecad5cd4e4b276ee38c7f6e9223e4454f4fc9dd78a1b1f5f"
-    },
-    {
-      "collectionId": "collections.world",
-      "id": "collections.world.spanish",
-      "title": "Ισπανικές",
-      "metadataFingerprint": "090b85754e94c14c247e6325d8c171f0e04c77266f18156d957db3e1b3ed516e"
     },
     {
       "collectionId": "collections.world",
@@ -3029,27 +3053,21 @@
     },
     {
       "collectionId": "collections.world",
-      "id": "folder-WCOQJ028",
-      "title": "Καναδικές",
-      "metadataFingerprint": "33a4d3a8601c303ac8e97d37a883abbace7a96e47ed096cee1a49f0393c87d62"
+      "id": "collections.world.japanese",
+      "title": "Ιαπωνικές",
+      "metadataFingerprint": "8879cc2563dcd1927cd2ba422f081b01f64e961e1619575d6b846009381ceec5"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "folder-BPH7ACF1",
+      "title": "Ιορδανικές",
+      "metadataFingerprint": "f6c1509b0e59d622f56d72fb8664d975f65bd29b2348dc745e34068a0fe9470b"
     },
     {
       "collectionId": "collections.world",
       "id": "folder-U4QLYE75",
       "title": "Κενυάτικες",
       "metadataFingerprint": "316227ea0a22dd242c998d2a17b7d3b196a683bf7affaa1a010eb6c9a51abfce"
-    },
-    {
-      "collectionId": "collections.world",
-      "id": "collections.world.chinese",
-      "title": "Κινέζικες",
-      "metadataFingerprint": "cf20c80174a430e683ba7791dea7e779b685268df1cf31cbf3a8ac3714b3470b"
-    },
-    {
-      "collectionId": "collections.world",
-      "id": "folder-5069W7D9",
-      "title": "Κολομβιανές",
-      "metadataFingerprint": "f654cb5ff5763e7957d6277155c8cc5e42851a2d087a397d3ab6464889e00b07"
     },
     {
       "collectionId": "collections.world",
@@ -3071,21 +3089,15 @@
     },
     {
       "collectionId": "collections.world",
-      "id": "folder-F5XQ4UP6",
-      "title": "Μαροκινές",
-      "metadataFingerprint": "c6afcde94a28100a544017aebcc0fb241077544080c123cae64945d1d59b538e"
-    },
-    {
-      "collectionId": "collections.world",
       "id": "folder-F4SMGZBV",
       "title": "Μεξικάνικες",
       "metadataFingerprint": "4c4f13584cfd0b4a2485b77bbbfa254a31ad29e01f38d32b7025a07eac45ce8e"
     },
     {
       "collectionId": "collections.world",
-      "id": "folder-Z55EA73B",
-      "title": "Μπανγκλαντεσιανές",
-      "metadataFingerprint": "4c85ee70e8210a6f7454d3cfb16f65b19112ff3b87d14720ae938b3734a3daac"
+      "id": "folder-F5XQ4UP6",
+      "title": "Μαροκινές",
+      "metadataFingerprint": "c6afcde94a28100a544017aebcc0fb241077544080c123cae64945d1d59b538e"
     },
     {
       "collectionId": "collections.world",
@@ -3104,18 +3116,6 @@
       "id": "folder-TT3MZNJE",
       "title": "Νορβηγικές",
       "metadataFingerprint": "d143328529cbfd56d60151883d0fd5a488a2e8c6237f6007a48ea1db7b8744d9"
-    },
-    {
-      "collectionId": "collections.world",
-      "id": "folder-8XVOQGAJ",
-      "title": "Νοτιοαφρικανικές",
-      "metadataFingerprint": "200356b12bf19dcde03f256fd5f9abe2d3f68be5d5c1d643426ee3f66b6d6940"
-    },
-    {
-      "collectionId": "collections.world",
-      "id": "folder-V9HNQAV1",
-      "title": "Ολλανδικές",
-      "metadataFingerprint": "16bcc6ba1ed95a6a348dfc2e8986d8ef339c80a01e42c4a17d75b29fb3d122f1"
     },
     {
       "collectionId": "collections.world",
@@ -3161,15 +3161,27 @@
     },
     {
       "collectionId": "collections.world",
-      "id": "folder-MV0AT0KN",
-      "title": "Σουηδικές",
-      "metadataFingerprint": "d6ba383528b1d2f66a9c6e60a0aae3354f7f800ac8934dc0705c0c2fb9220416"
+      "id": "folder-8XVOQGAJ",
+      "title": "Νοτιοαφρικανικές",
+      "metadataFingerprint": "200356b12bf19dcde03f256fd5f9abe2d3f68be5d5c1d643426ee3f66b6d6940"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "collections.world.spanish",
+      "title": "Ισπανικές",
+      "metadataFingerprint": "090b85754e94c14c247e6325d8c171f0e04c77266f18156d957db3e1b3ed516e"
     },
     {
       "collectionId": "collections.world",
       "id": "folder-KFJI7SS7",
       "title": "Σριλανκέζικες",
       "metadataFingerprint": "ea7a925026a5f465f5f509bf25cf78374cecb5d2982ab01b7035b6e2012ac15e"
+    },
+    {
+      "collectionId": "collections.world",
+      "id": "folder-MV0AT0KN",
+      "title": "Σουηδικές",
+      "metadataFingerprint": "d6ba383528b1d2f66a9c6e60a0aae3354f7f800ac8934dc0705c0c2fb9220416"
     },
     {
       "collectionId": "collections.world",
@@ -3185,39 +3197,27 @@
     },
     {
       "collectionId": "collections.world",
-      "id": "collections.world.turkish",
-      "title": "Τούρκικες",
-      "metadataFingerprint": "228e7094a2e93bd4f2bdb595b376c373762311d08f9f207311f716364dd7abc6"
-    },
-    {
-      "collectionId": "collections.world",
       "id": "folder-ZFQ2TA63",
       "title": "Τυνησιακές",
       "metadataFingerprint": "32db041ad564d89e73395578fdaede6ca4561da29146491ac09e74e34ff40c1b"
     },
     {
       "collectionId": "collections.world",
-      "id": "folder-FVCF354Y",
-      "title": "Φιλιππινέζικες",
-      "metadataFingerprint": "79238ad2e2afad938cb7d0cfcdffc2fd428bfc3dc35d47ef8854ca7be5a86b37"
+      "id": "collections.world.turkish",
+      "title": "Τούρκικες",
+      "metadataFingerprint": "228e7094a2e93bd4f2bdb595b376c373762311d08f9f207311f716364dd7abc6"
     },
     {
       "collectionId": "collections.world",
-      "id": "folder-5U334FWO",
-      "title": "Φινλανδικές",
-      "metadataFingerprint": "80afe1a1e1a83f653937b93736f99549ad57dae3dd6057b76af7c2f83c2bdab6"
+      "id": "folder-CHLCSAJ1",
+      "title": "Αμερικανικές (ΗΠΑ)",
+      "metadataFingerprint": "f81d71d82396223b381571765e1e9471866aaf0504c4cf8ea60e22ecfd01a03c"
     },
     {
       "collectionId": "collections.world",
-      "id": "folder-FI6BJN1Z",
-      "title": "Χιλιανές",
-      "metadataFingerprint": "2f9d64cfc698bbfcf8d46cbba661f53a2e53dc47c6005527404725caa87ecc18"
-    },
-    {
-      "collectionId": "collections.world",
-      "id": "folder-369A49J9",
-      "title": "Χονγκ Κονγκ",
-      "metadataFingerprint": "ce41c7b753f78409e5eb10573e336e8a6042223828532188325fa90f79220f46"
+      "id": "folder-10NNKWPU",
+      "title": "Βιετναμέζικες",
+      "metadataFingerprint": "e67f4e1f2216e8861ffc67073d56b0b727c2e9a930d30b047d8573e991ec3c94"
     },
     {
       "collectionId": "collections.decades",

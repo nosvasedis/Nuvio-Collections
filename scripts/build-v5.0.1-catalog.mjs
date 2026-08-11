@@ -5,6 +5,7 @@ import crypto from "node:crypto";
 const root = path.resolve(import.meta.dirname, "..");
 const basePath = path.join(root, "nuvio collections v4.5.13 - static-studio-lists-released.json");
 const outputPath = path.join(root, "data", "nuvio-collections-v5.0.1-source.json");
+const sortKeysPath = path.join(root, "data", "folder-sort-keys.json");
 const kaptainUrl = "https://imkaptain.github.io/Kaptain-Collection/collections/database.js?v=47";
 const kaptainSha256 = "d9368757d26b8febfb973ca75746ce5cf35a35e62f897fa9b60e78a343014765";
 
@@ -129,5 +130,36 @@ for (const [id, [title, country]] of Object.entries(countryAdditions)) {
 }
 world.folders.sort((a, b) => a.title.localeCompare(b.title, "el"));
 
+const englishSortedCollectionIds = new Set([
+  "collections.genres", "collections.film-series", "collections.moods",
+  "collections.actors", "collections.directors", "collections.world",
+]);
+const englishTitleOverrides = {
+  "collections.world.french": "French Cinema",
+  "collections.world.german": "German Cinema",
+  "collections.world.greek": "Greek Cinema",
+  "collections.world.japanese": "Japanese Cinema",
+  "collections.world.indian": "Indian Cinema",
+  "collections.world.spanish": "Spanish Cinema",
+  "collections.world.italian": "Italian Cinema",
+  "collections.world.chinese": "Chinese Cinema",
+  "collections.world.korean": "Korean Cinema",
+  "collections.world.latin-american": "Latin American Cinema",
+  "collections.world.portuguese": "Portuguese Cinema",
+  "collections.world.russian": "Russian Cinema",
+  "collections.world.turkish": "Turkish Cinema",
+};
+const liveEnglishTitles = new Map(live.flatMap((collection) => collection.folders.map((folder) => [folder.id, folder.title])));
+const folderSortKeys = {};
+for (const collection of base.filter((item) => englishSortedCollectionIds.has(item.id))) {
+  for (const folder of collection.folders) {
+    const englishTitle = englishTitleOverrides[folder.id] ?? liveEnglishTitles.get(folder.id);
+    if (!englishTitle) throw new Error(`Canonical English folder title missing: ${collection.id}/${folder.id}`);
+    folderSortKeys[folder.id] = englishTitle;
+  }
+  collection.folders.sort((a, b) => folderSortKeys[a.id].localeCompare(folderSortKeys[b.id], "en", { sensitivity: "base", numeric: true }) || a.id.localeCompare(b.id));
+}
+
 await fs.writeFile(outputPath, `${JSON.stringify(base, null, 2)}\n`, "utf8");
-console.log(JSON.stringify({ output: outputPath, collections: base.length, folders: base.flatMap((c) => c.folders).length, sources: base.flatMap((c) => c.folders).flatMap((f) => f.sources).length, removedRealityListIds: [8681927, 8681928, 8681929, 8681930], kaptainUrl }, null, 2));
+await fs.writeFile(sortKeysPath, `${JSON.stringify({ version: 1, locale: "en", collections: [...englishSortedCollectionIds], keys: folderSortKeys }, null, 2)}\n`, "utf8");
+console.log(JSON.stringify({ output: outputPath, sortKeys: sortKeysPath, collections: base.length, folders: base.flatMap((c) => c.folders).length, sources: base.flatMap((c) => c.folders).flatMap((f) => f.sources).length, removedRealityListIds: [8681927, 8681928, 8681929, 8681930], kaptainUrl }, null, 2));
