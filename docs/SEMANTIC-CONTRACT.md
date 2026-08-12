@@ -16,8 +16,8 @@ a test so bootstrap cannot silently reintroduce it.
 - `collections.discover.recommended` is manually curated and fingerprint-locked.
 - Rails may be retired only after evidence and explicit approval. Retired list
   IDs remain in `state.retiredRails`; nightly sync never deletes remote lists.
-- Active release: 2,677 sources = 2,675 managed + 2 recommended. Managed sources
-  are 396 native and 2,279 materialized lists.
+- Active release: 2,677 sources = 2,675 managed materialized lists + 2
+  protected recommended addon sources. There are zero managed native sources.
 
 ## Media identity and Greek presentation
 
@@ -27,7 +27,8 @@ a test so bootstrap cannot silently reintroduce it.
   `series/TV`. The reviewed 2026-08-10 Nuvio export contained **987** corrupted
   `series/MOVIE` pairs across ten collections (was 980 before the Portuguese and
   Latin American World TV rails). All 987 are materialized `tmdbSourceType:LIST`
-  rails. The 121 native TV sources (`DISCOVER` / `NETWORK`) stayed `series/TV`.
+  rails. This is historical evidence from that profile: the current canonical
+  artifact contains 1,153 TV LIST sources and zero managed native sources.
   `profile-audit` detects this stored-state drift and generates a collection-ID
   replacement artifact covering only the affected collections (10 of 12).
 - Nuvio 0.8.3 root cause (stable tag `0.8.3-beta`):
@@ -91,10 +92,9 @@ a test so bootstrap cannot silently reintroduce it.
   directly to those IDs instead of rerunning fuzzy historical title resolution.
 - If poster/semantic filtering empties a rail, preparation fails closed: no TMDB
   clear/write occurs and the last-known-good remote list remains intact.
-- The 396 native sources are resolved directly by Nuvio 0.8.3 and Nuvio exposes
-  no supported `has poster` filter for them. The repository cannot enforce this
-  gate on native sources without converting them to additional materialized
-  lists. This limitation must not be hidden.
+- All 2,675 managed rails are materialized, so the repository enforces the
+  poster gate, release eligibility and explicit media identity everywhere.
+  Only the two protected recommended addon sources remain outside this system.
 
 Regression: `poster gate excludes blank cards and automatically restores a
 title once TMDB adds a poster`.
@@ -191,15 +191,15 @@ Regression: same-day stability, next-day rotation, vote floor and exact bounds.
 
 ## Film Series ordering
 
-- All 186 Film Series rails remain native official TMDB `COLLECTION` sources.
-- Every source is compiled with `sortBy: primary_release_date.desc`, which
-  Nuvio 0.8.3 implements locally for collection parts. Newest films therefore
-  appear on the left and oldest films on the right.
-- A sequel newly added to the official TMDB collection is picked up directly by
-  Nuvio and moves to the left automatically. These rails need no duplicate
-  public list IDs and no nightly TMDB writes.
-- Bootstrap and compiled-artifact regressions require the same sort on all 186
-  sources; `original` or popularity sorting is forbidden for Film Series.
+- All 186 Film Series rails are materialized from official TMDB `COLLECTION`
+  parts into stable movie-only public lists.
+- Released, non-adult, non-video parts with posters are ordered by release date
+  descending. Newest films therefore appear on the left and oldest on the right.
+- A newly added official sequel is picked up by nightly sync and written into
+  the same stable list ID. Nuvio receives `sortBy: original`, preserving the
+  materialized order across pages.
+- Bootstrap and compiled-artifact regressions require all 186 rails to remain
+  materialized and homogeneous.
 
 ## Studio feature films and curated animation canons
 
@@ -309,10 +309,12 @@ Record current evidence in `reports/latest.json` and README, never only in chat:
 - bootstrap counts match constants and every non-recommended folder is non-empty;
 - all tests pass;
 - audit passes folder/recommended locks, source counts and compatibility rules;
-- full live dry-run considers all 2,279 materialized rails with zero failures;
+- full live dry-run considers all 2,675 materialized rails with zero failures
+  and zero empty candidates;
 - production updates pass exact read-back and leave zero active empty rails;
+- `npm run audit:remote` validates all 2,675 remote lists with zero failures;
 - compiled `dist/nuvio-collections-v5.0.1.json` contains 2,677 sources;
-- the reviewed Nuvio profile repair report records 987 managed media-type mismatches
-  (all materialized LIST TV rails; 121 native TV rails stayed correct),
-  and the post-import export must record zero;
+- the reviewed historical Nuvio profile report records 987 managed media-type
+  mismatches; the current artifact contains 1,153 TV LIST sources and the
+  post-import export must record zero mismatches;
 - secret scan finds no credentials in tracked files.

@@ -4,7 +4,7 @@ import { readFile } from "node:fs/promises";
 import { bootstrap } from "../src/bootstrap.mjs";
 import { auditRepository } from "../src/validate.mjs";
 import { compile } from "../src/compiler.mjs";
-import { runtimeBucket, dailyRuntimeSelection, chooseAvailability, materializeRail, applySemanticPredicates, applyContentSafetyPredicates, discoverParams, streamingRecognitionFloor, EXPLICIT_CONTENT_KEYWORD_IDS, isSubstantiveCastCredit, isFeatureFilm, requireUsablePosters } from "../src/materialize.mjs";
+import { runtimeBucket, dailyRuntimeSelection, chooseAvailability, materializeRail, applySemanticPredicates, applyContentSafetyPredicates, discoverParams, streamingRecognitionFloor, EXPLICIT_CONTENT_KEYWORD_IDS, isSubstantiveCastCredit, isFeatureFilm, requireEligibleReleasedItems, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
 import { confirmationCompatible, normalizeCandidateItems, orderedIdsEqual, semanticRefreshDue } from "../src/sync.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS, CATALOG_REMOVED_RAIL_REASONS, COUNTRY_BY_FOLDER } from "../src/constants.mjs";
@@ -14,7 +14,7 @@ import { compareProfile } from "../src/profile-audit.mjs";
 
 test("bootstrap creates the final immutable mapping", async () => {
   const result = await bootstrap();
-  assert.deepEqual(result, { collections: 13, folders: 548, inputSources: 2745, managedRails: 2675, native: 396, materialized: 2279 });
+  assert.deepEqual(result, { collections: 13, folders: 548, inputSources: 2745, managedRails: 2675, native: 0, materialized: 2675 });
   const audit = await auditRepository(); assert.equal(audit.finalSources, EXPECTED.finalSources);
   const manifest = await readJson(new URL("../config/rails.yml", import.meta.url));
   const companions = manifest.rails.filter((rail) => rail.key.endsWith(":movie-companion"));
@@ -69,7 +69,7 @@ test("bootstrap creates the final immutable mapping", async () => {
   assert.ok(discoverTop.every((rail) => rail.strategy === "materialized"));
   const filmSeries = manifest.rails.filter((rail) => rail.collectionId === "collections.film-series");
   assert.equal(filmSeries.length, 186);
-  assert.ok(filmSeries.every((rail) => rail.strategy === "native" && rail.originalSource.tmdbSourceType === "COLLECTION" && rail.originalSource.sortBy === "primary_release_date.desc"));
+  assert.ok(filmSeries.every((rail) => rail.strategy === "materialized" && rail.materializer === "collection" && rail.params.legacy.tmdbSourceType === "COLLECTION"));
 });
 
 test("studio feature policy rejects shorts, documentaries, TV movies, and future releases", () => {
@@ -119,6 +119,48 @@ test("poster gate excludes blank cards and automatically restores a title once T
   assert.equal(detailCalls, 2);
 });
 
+test("poster gate drops deleted identities but does not hide provider outages", async () => {
+  const deleted = { details: async () => { throw new Error('TMDB GET /3/movie/99: 404 {"status_code":34}'); } };
+  assert.deepEqual(await requireUsablePosters(deleted, [{ id: 99, poster_path: null }], "movie"), []);
+  const outage = { details: async () => { throw new Error("TMDB GET /3/movie/99: 503 upstream unavailable"); } };
+  await assert.rejects(() => requireUsablePosters(outage, [{ id: 99, poster_path: null }], "movie"), /503/);
+});
+
+test("released eligibility gate rejects adult, video, future, undated and cancelled works", async () => {
+  const client = { details: async (_media, id) => ({
+    id, adult: false, video: false, poster_path: "/ok.jpg",
+    release_date: id === 5 ? "2020-01-01" : null,
+    status: id === 5 ? "Released" : "Canceled",
+  }) };
+  const items = [
+    { id: 1, adult: false, video: false, release_date: "2020-01-01" },
+    { id: 2, adult: true, video: false, release_date: "2020-01-01" },
+    { id: 3, adult: false, video: true, release_date: "2020-01-01" },
+    { id: 4, adult: false, video: false, release_date: "2027-01-01" },
+    { id: 5 },
+    { id: 6 },
+  ];
+  assert.deepEqual((await requireEligibleReleasedItems(client, items, "movie", "2026-08-12")).map((item) => item.id), [1, 5]);
+});
+
+test("released eligibility drops definitive deleted IDs but fails closed on outages", async () => {
+  const deleted = { details: async () => { throw new Error('TMDB GET /3/movie/99: 404 {"status_code":34,"status_message":"The resource you requested could not be found."}'); } };
+  assert.deepEqual(await requireEligibleReleasedItems(deleted, [{ id: 99 }], "movie", "2026-08-12"), []);
+  const outage = { details: async () => { throw new Error("TMDB GET /3/movie/99: 503 upstream unavailable"); } };
+  await assert.rejects(() => requireEligibleReleasedItems(outage, [{ id: 99 }], "movie", "2026-08-12"), /503/);
+});
+
+test("official TMDB collections materialize released parts newest first", async () => {
+  const client = { language: "el", v3: async () => ({ parts: [
+    { id: 1, release_date: "2001-01-01", adult: false, video: false },
+    { id: 3, release_date: "2024-01-01", adult: false, video: false },
+    { id: 2, release_date: "2010-01-01", adult: false, video: false },
+  ] }) };
+  const result = await materializeRail(client, { key: "series:x", mediaType: "MOVIE", materializer: "collection", params: { legacy: { tmdbId: 42 } } }, { today: "2026-08-12" });
+  assert.deepEqual(result.items.map((item) => item.id), [3, 2, 1]);
+  assert.equal(result.scope, "OFFICIAL_TMDB_COLLECTION:42:RELEASE_DATE_DESC");
+});
+
 test("runtime boundaries are exact and non-overlapping", () => {
   assert.deepEqual([89, 90, 149, 150, 179, 180].map(runtimeBucket), ["short", "standard", "standard", "long", "long", "epic"]);
 });
@@ -139,6 +181,25 @@ test("runtime daily rotation is deterministic, changes by Athens date, and admit
   const next = dailyRuntimeSelection(items, "runtime:long", "2026-08-11");
   assert.deepEqual(first, repeat); assert.notDeepEqual(first.map((item) => item.id), next.map((item) => item.id));
   assert.equal(first.length, 100); assert.ok(first.every((item) => item.vote_count >= 100));
+});
+
+test("runtime daily rotation is stable when the upstream candidate pool changes slightly", () => {
+  const items = Array.from({ length: 240 }, (_, index) => ({ id: index + 1, vote_count: 1000, popularity: 1000 - index }));
+  const baseline = dailyRuntimeSelection(items, "runtime:long", "2026-08-12");
+  const withOneNewCandidate = dailyRuntimeSelection(
+    [{ id: 999, vote_count: 1000, popularity: 2000 }, ...items],
+    "runtime:long",
+    "2026-08-12",
+  );
+  const retained = new Set(withOneNewCandidate.map((item) => item.id));
+  assert.ok(baseline.filter((item) => retained.has(item.id)).length >= 99);
+});
+
+test("runtime familiarity pool is vote-led and resists short-lived popularity spikes", () => {
+  const established = Array.from({ length: 240 }, (_, index) => ({ id: index + 1, vote_count: 1000 - index, popularity: 50 }));
+  const viralButBarelyRated = { id: 999, vote_count: 100, popularity: 100000 };
+  const selected = dailyRuntimeSelection([viralButBarelyRated, ...established], "runtime:standard", "2026-08-12");
+  assert.equal(selected.some((item) => item.id === viralButBarelyRated.id), false);
 });
 
 test("person rails reject self, archive, and uncredited noise and use vote-aware Top ranking", async () => {
@@ -382,16 +443,16 @@ test("Nuvio 0.8.3 LIST editor hardcodes MOVIE while DataStore preserves TV", asy
   const sources = artifact.flatMap((c) => c.folders ?? []).flatMap((f) => f.sources ?? []);
   const listTv = sources.filter((s) => s.provider === "tmdb" && s.tmdbSourceType === "LIST" && s.mediaType === "TV");
   const nativeTv = sources.filter((s) => s.provider === "tmdb" && s.tmdbSourceType !== "LIST" && s.mediaType === "TV");
-  assert.equal(listTv.length, 1033);
-  assert.equal(nativeTv.length, 120);
+  assert.equal(listTv.length, 1153);
+  assert.equal(nativeTv.length, 0);
   assert.ok(listTv.every((s) => s.type === "series" && s.sortBy === "original"));
   assert.ok(listTv.every((s) => emulateNuvio083DataStoreRoundTrip(s).mediaType === "TV"));
   const corrupted = listTv.map(emulateMobileListTvCorruption);
   const analysis = analyzeListTvCompat(sources, [...corrupted, ...nativeTv]);
-  assert.equal(analysis.canonicalListTv, 1033);
-  assert.equal(analysis.profileSeriesMovieList, 1033);
+  assert.equal(analysis.canonicalListTv, 1153);
+  assert.equal(analysis.profileSeriesMovieList, 1153);
   assert.equal(analysis.profileSeriesTvList, 0);
-  assert.equal(analysis.profileNativeSeriesTv, 120);
+  assert.equal(analysis.profileNativeSeriesTv, 0);
   assert.equal(analysis.editorWouldForceMovie, true);
   assert.equal(analysis.dataStoreWouldPreserveTv, true);
 });
@@ -566,7 +627,7 @@ test("placeholder compilation preserves all folders and recommended byte semanti
   assert.ok(managed.filter((s) => s.tmdbSourceType === "LIST").every((s) => s.sortBy === "original"));
   const filmSeries = after.find((collection) => collection.id === "collections.film-series").folders.flatMap((folder) => folder.sources);
   assert.equal(filmSeries.length, 186);
-  assert.ok(filmSeries.every((source) => source.tmdbSourceType === "COLLECTION" && source.sortBy === "primary_release_date.desc"));
+  assert.ok(filmSeries.every((source) => source.tmdbSourceType === "LIST" && source.sortBy === "original" && source.mediaType === "MOVIE"));
   assert.ok(managed.filter((s) => s.provider === "tmdb").every((s) => s.type === (s.mediaType === "TV" ? "series" : "movie")));
   assert.equal(assertNuvioMediaTypeContract(after, { managedOnly: true }), true);
 });

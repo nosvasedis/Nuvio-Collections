@@ -1,10 +1,10 @@
 import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, CURATED_STUDIO_FEATURES_FILE, STATE_FILE, REPORT_FILE, EXPECTED } from "./constants.mjs";
 import { readJson, writeJson, fingerprint, athensDate, invariant, normalizeText, mapLimit } from "./utils.mjs";
 import { TmdbClient } from "./tmdb.mjs";
-import { materializeRail, requireUsablePosters } from "./materialize.mjs";
+import { materializeRail, requireEligibleReleasedItems, requireUsablePosters } from "./materialize.mjs";
 
 function itemIds(items, media) { return items.map((x) => `${x.media_type ?? media}:${x.id}`); }
-const WRITE_SCHEMA_VERSION = 4;
+export const WRITE_SCHEMA_VERSION = 5;
 export function normalizeCandidateItems(items, media) {
   const seen = new Set();
   return items.map((item) => ({ ...item, media_type: item.media_type ?? media })).filter((item) => {
@@ -111,9 +111,13 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
   state.providerIndex ??= { availability: {}, lastFullReconciliation: null };
   const lastFull = state.providerIndex.lastFullReconciliation, fullDue = !lastFull || Date.now() - Date.parse(lastFull) >= 7 * 86400000;
   if (!fullDue) for (const [key, value] of Object.entries(state.providerIndex.availability ?? {})) client.memo.set(key, value);
-  if (!fullDue && state.lastSuccessfulSync) {
+  const changedIdentities = new Set();
+  if (state.lastSuccessfulSync) {
     const start = state.lastSuccessfulSync.slice(0, 10);
-    for (const media of ["movie", "tv"]) for (const id of await client.changedIds(media, start, today)) client.memo.delete(`watch:${media}:${id}`);
+    for (const media of ["movie", "tv"]) for (const id of await client.changedIds(media, start, today)) {
+      changedIdentities.add(`${media}:${id}`);
+      client.memo.delete(`watch:${media}:${id}`);
+    }
   }
   const report = { version: 1, date: today, mode: execute ? "execute" : "dry-run", totals: { considered: 0, changed: 0, skipped: 0, failed: 0, created: 0 }, rails: [] };
   const managedRails = manifest.rails.filter((x) => x.strategy === "materialized");
@@ -143,6 +147,10 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
         : await materializeRail(client, rail, context);
       invariant(!deferredAward || candidate.items.length === prior.count, `Verified award state is incomplete: ${rail.key}`);
       candidate = { ...candidate, items: normalizeCandidateItems(candidate.items, media) };
+      const knownIdentities = new Set(prior.orderedIds ?? []);
+      const candidateBeforeEligibilityGate = candidate.items.length;
+      candidate.items = await requireEligibleReleasedItems(client, candidate.items, media, today, { verifyIdentities: changedIdentities, knownIdentities });
+      let ineligibleExcluded = candidateBeforeEligibilityGate - candidate.items.length;
       const candidateBeforePosterGate = candidate.items.length;
       candidate.items = await requireUsablePosters(client, candidate.items, media);
       let posterlessExcluded = candidateBeforePosterGate - candidate.items.length;
@@ -155,6 +163,9 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
       if (ratio > 0.4 && prior.orderedIds?.length) {
         let confirm = await materializeRail(confirmationClient, rail, context);
         confirm = { ...confirm, items: normalizeCandidateItems(confirm.items, media) };
+        const confirmBeforeEligibilityGate = confirm.items.length;
+        confirm.items = await requireEligibleReleasedItems(confirmationClient, confirm.items, media, today, { verifyIdentities: changedIdentities, knownIdentities });
+        ineligibleExcluded = confirmBeforeEligibilityGate - confirm.items.length;
         const confirmBeforePosterGate = confirm.items.length;
         confirm.items = await requireUsablePosters(confirmationClient, confirm.items, media);
         posterlessExcluded = confirmBeforePosterGate - confirm.items.length;
@@ -175,15 +186,15 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
       // description, or schema checkpoint must never clear/re-add an identical
       // remote list. Refresh the checkpoint locally and skip every TMDB write.
       if (prior.syncStatus === "verified" && sameOrderedIds) {
-        const checkpointDrift = prior.fingerprint !== hash || prior.writeSchema !== WRITE_SCHEMA_VERSION || prior.scope !== candidate.scope || prior.posterlessExcluded !== posterlessExcluded;
+        const checkpointDrift = prior.fingerprint !== hash || prior.writeSchema !== WRITE_SCHEMA_VERSION || prior.scope !== candidate.scope || prior.ineligibleExcluded !== ineligibleExcluded || prior.posterlessExcluded !== posterlessExcluded;
         if (execute && checkpointDrift) {
-          state.rails[rail.key] = { ...prior, fingerprint: hash, count: ids.length, scope: candidate.scope, writeSchema: WRITE_SCHEMA_VERSION, posterlessExcluded, lastVerified: new Date().toISOString(), ...(semanticRefreshedAt ? { lastSemanticRefresh: semanticRefreshedAt } : {}) };
+          state.rails[rail.key] = { ...prior, fingerprint: hash, count: ids.length, scope: candidate.scope, writeSchema: WRITE_SCHEMA_VERSION, ineligibleExcluded, posterlessExcluded, lastVerified: new Date().toISOString(), ...(semanticRefreshedAt ? { lastSemanticRefresh: semanticRefreshedAt } : {}) };
           await checkpointState();
         }
-        return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, posterlessExcluded, ...(checkpointDrift ? { checkpointRefresh: true } : {}), _durationMs };
+        return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, ineligibleExcluded, posterlessExcluded, ...(checkpointDrift ? { checkpointRefresh: true } : {}), _durationMs };
       }
-      if (!force && prior.syncStatus === "verified" && prior.fingerprint === hash) return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, posterlessExcluded, _durationMs };
-      return { key: rail.key, status: "would-update", listId: prior.listId, count: ids.length, scope: candidate.scope, posterlessExcluded, changeRatio: ratio, _durationMs, _rail: rail, _folderTitle: folderTitle, _candidate: candidate, _media: media, _ids: ids, _hash: hash, _invalidItems: invalidItems, _semanticRefreshedAt: semanticRefreshedAt };
+      if (!force && prior.syncStatus === "verified" && prior.fingerprint === hash) return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, ineligibleExcluded, posterlessExcluded, _durationMs };
+      return { key: rail.key, status: "would-update", listId: prior.listId, count: ids.length, scope: candidate.scope, ineligibleExcluded, posterlessExcluded, changeRatio: ratio, _durationMs, _rail: rail, _folderTitle: folderTitle, _candidate: candidate, _media: media, _ids: ids, _hash: hash, _invalidItems: invalidItems, _semanticRefreshedAt: semanticRefreshedAt };
     } catch (error) { return { key: rail.key, status: "failed", error: error.message, _durationMs: Math.round(performance.now() - startedAt) }; }
   });
   const preparationFailures = prepared.filter((x) => x.status === "failed");
@@ -246,7 +257,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
           entry._hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids: entry._ids });
           await reconcile(client, entry.listId, entry._candidate.items, oldItems);
         }
-        state.rails[entry.key] = { listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, writeSchema: WRITE_SCHEMA_VERSION, posterlessExcluded: entry.posterlessExcluded, syncStatus: "verified", lastVerified: new Date().toISOString(), invalidItems: entry._invalidItems ?? [], ...(entry._semanticRefreshedAt ? { lastSemanticRefresh: entry._semanticRefreshedAt } : {}) };
+        state.rails[entry.key] = { listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, writeSchema: WRITE_SCHEMA_VERSION, ineligibleExcluded: entry.ineligibleExcluded, posterlessExcluded: entry.posterlessExcluded, syncStatus: "verified", lastVerified: new Date().toISOString(), invalidItems: entry._invalidItems ?? [], ...(entry._semanticRefreshedAt ? { lastSemanticRefresh: entry._semanticRefreshedAt } : {}) };
         await checkpointState();
         verifiedProgress++;
         if (verifiedProgress === 1 || verifiedProgress % 25 === 0 || verifiedProgress === updateTotal) console.error(`[sync] verified ${verifiedProgress}/${updateTotal} rails; latest=${entry.key}; items=${entry.count}`);
@@ -271,6 +282,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
   report.totals.skipped = report.rails.filter((x) => x.status === "unchanged").length;
   report.totals.changed = report.rails.filter((x) => execute ? x.status === "updated" : x.status === "would-update").length;
   report.totals.created = report.rails.filter((x) => x.createdList).length;
+  report.totals.ineligibleExcluded = report.rails.reduce((sum, rail) => sum + Number(rail.ineligibleExcluded ?? 0), 0);
   report.totals.posterlessExcluded = report.rails.reduce((sum, rail) => sum + Number(rail.posterlessExcluded ?? 0), 0);
   invariant(report.totals.considered === EXPECTED.materialized, "Sync did not consider every materialized rail");
   if (execute) {

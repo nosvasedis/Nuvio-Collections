@@ -183,24 +183,33 @@ function dedupeCanonicalTitles(items, media) {
   return [...selected.values(), ...untitled];
 }
 
-function deterministicShuffle(items, seedText) {
-  const output = [...items];
-  let state = Number.parseInt(fingerprint(seedText).slice(0, 8), 16) || 0x9e3779b9;
-  const random = () => { state ^= state << 13; state ^= state >>> 17; state ^= state << 5; return (state >>> 0) / 0x100000000; };
-  for (let index = output.length - 1; index > 0; index--) { const next = Math.floor(random() * (index + 1)); [output[index], output[next]] = [output[next], output[index]]; }
-  return output;
-}
-
 export function dailyRuntimeSelection(items, railKey, today, { poolSize = 240, limit = 100, voteFloor = 100 } = {}) {
   const familiar = items.filter((item) => Number(item.vote_count ?? 0) >= voteFloor)
-    .sort((a, b) => recognitionScore(b) - recognitionScore(a) || a.id - b.id)
+    // Vote count is the durable familiarity signal. Raw TMDB popularity can
+    // move enough within minutes to replace a noticeable part of the pool,
+    // defeating same-day stability even though the seeded selector is stable.
+    .sort((a, b) => Number(b.vote_count ?? 0) - Number(a.vote_count ?? 0)
+      || Number(b.popularity ?? 0) - Number(a.popularity ?? 0)
+      || a.id - b.id)
     .slice(0, poolSize);
-  return deterministicShuffle(familiar, `${today}:${railKey}`).slice(0, limit);
+  // Rank each title independently for the Athens day. Unlike an in-place
+  // seeded shuffle, adding or removing one TMDB candidate cannot reshuffle
+  // every subsequent title. This keeps nightly writes small while still
+  // producing a genuinely different, deterministic selection each day.
+  const seed = `${today}:${railKey}`;
+  return familiar
+    .map((item) => ({ item, score: fingerprint(`${seed}:${item.id}`) }))
+    .sort((a, b) => a.score.localeCompare(b.score) || a.item.id - b.item.id)
+    .slice(0, limit)
+    .map(({ item }) => item);
 }
 export function isSubstantiveCastCredit(item) {
   const character = normalizeText(item.character ?? "");
   if (!character) return false;
   return !/(?:^|\s)(?:self|himself|herself|themselves|archive footage|uncredited|host|presenter|honoree|interviewee|guest judge|ο ιδιος|η ιδια|αρχειακο υλικο|χωρις αναφορα)(?:\s|$)/u.test(character);
+}
+function isDefinitiveNotFound(error) {
+  return /\b404\b|status_code["':\s]+34\b|resource you requested could not be found/i.test(String(error?.message ?? error));
 }
 
 // TMDB lists store identities, not artwork. Nuvio resolves artwork again when
@@ -210,9 +219,45 @@ export function isSubstantiveCastCredit(item) {
 export async function requireUsablePosters(client, items, media) {
   const checked = await mapLimit(items, 16, async (item) => {
     if (typeof item.poster_path === "string" && item.poster_path.trim()) return item;
-    const details = await client.details(media, item.id);
+    let details;
+    try { details = await client.details(media, item.id); }
+    catch (error) { if (isDefinitiveNotFound(error)) return null; throw error; }
     if (typeof details.poster_path !== "string" || !details.poster_path.trim()) return null;
     return { ...item, ...details, media_type: item.media_type ?? media };
+  });
+  return checked.filter(Boolean);
+}
+
+// A poster alone is not sufficient for a released-only catalog. Credits and
+// award endpoints can expose direct-to-video releases, adult works, planned or
+// cancelled projects, and identities with no release date. Reuse complete
+// payloads when possible and resolve details only when a required field is
+// absent, so the nightly gate is exact without turning every rail into an
+// unnecessary details crawl.
+export async function requireEligibleReleasedItems(client, items, media, today, { verifyIdentities = new Set(), knownIdentities = null } = {}) {
+  const checked = await mapLimit(items, 16, async (item) => {
+    let candidate = item;
+    const missingDate = !dateFor(candidate, media);
+    const missingAdultFlag = typeof candidate.adult !== "boolean";
+    const missingVideoFlag = media === "movie" && typeof candidate.video !== "boolean";
+    const identity = `${item.media_type ?? media}:${item.id}`;
+    const requiresFreshVerification = verifyIdentities.has(identity) || (knownIdentities && !knownIdentities.has(identity));
+    if (missingDate || missingAdultFlag || missingVideoFlag || requiresFreshVerification) {
+      let details;
+      try { details = await client.details(media, item.id); }
+      catch (error) {
+        // Credits/trending payloads can briefly retain an identity after TMDB
+        // deletes the resource. A definitive not-found means the candidate no
+        // longer exists and is safe to drop; transport, rate-limit and 5xx
+        // failures remain fatal so outages never masquerade as exclusions.
+        if (isDefinitiveNotFound(error)) return null;
+        throw error;
+      }
+      candidate = { ...item, ...details, media_type: item.media_type ?? media };
+    }
+    const date = dateFor(candidate, media);
+    if (!date || date > today || candidate.adult === true || candidate.video === true) return null;
+    return candidate;
   });
   return checked.filter(Boolean);
 }
@@ -338,6 +383,16 @@ export async function materializeRail(client, rail, context) {
     else items = items.filter(isSubstantiveCastCredit);
     return { scope: "GLOBAL:SUBSTANTIVE_CREDITS", items: rank(items, rail, media, context.today, true, true) };
   }
+  if (rail.materializer === "collection") {
+    const collectionId = rail.params.legacy?.tmdbId;
+    if (!collectionId) throw new Error(`TMDB collection unresolved: ${rail.key}`);
+    const collection = await client.v3(`/collection/${collectionId}`, { language: client.language });
+    const items = uniqueItems(collection.parts ?? [], "movie")
+      .sort((a, b) => String(b.release_date ?? "").localeCompare(String(a.release_date ?? "")) || a.id - b.id)
+      .map((item) => ({ ...item, media_type: "movie" }));
+    if (!items.length) throw new Error(`TMDB collection is empty: ${rail.key}`);
+    return { scope: `OFFICIAL_TMDB_COLLECTION:${collectionId}:RELEASE_DATE_DESC`, items };
+  }
   const params = discoverParams(rail, media, context.today);
   if (rail.collectionId === "collections.genres" && !rail.params.explicitSemantic) await applySemanticPredicates(client, rail, media, params, context.folderTitle);
   applyContentSafetyPredicates(params, `${context.folderTitle} ${rail.title ?? ""}`, media);
@@ -347,7 +402,13 @@ export async function materializeRail(client, rail, context) {
     if (normalizeText(rail.title ?? "").includes("κλασικ")) { params.with_genres = "16"; params["primary_release_date.lte"] = context.today; }
     if (!params.with_companies) throw new Error(`Company unresolved: ${context.folderTitle}`);
   }
-  if (rail.materializer === "network_recent") { params.with_networks = id; params.sort_by = media === "tv" ? "first_air_date.desc" : "primary_release_date.desc"; params[`${media === "tv" ? "first_air_date" : "primary_release_date"}.gte`] = shiftYears(context.today, -2); }
+  if (rail.materializer === "network") {
+    params.with_networks = id;
+    if (normalizeText(rail.title ?? "").includes("προσφα")) {
+      params.sort_by = media === "tv" ? "first_air_date.desc" : "primary_release_date.desc";
+      params[`${media === "tv" ? "first_air_date" : "primary_release_date"}.gte`] = shiftYears(context.today, -2);
+    } else params.sort_by = "popularity.desc";
+  }
   if (rail.materializer === "runtime") {
     params.sort_by = "popularity.desc"; params["vote_count.gte"] = 100;
     if (rail.folderId === "collections.runtime.short") params["with_runtime.lte"] = 89;

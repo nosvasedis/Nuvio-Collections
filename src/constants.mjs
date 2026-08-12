@@ -15,6 +15,7 @@ export const LOCK_FILE = path.join(ROOT, "config", "folders.lock.json");
 export const STATE_FILE = path.join(ROOT, "state", "sync-state.json");
 export const OUTPUT_FILE = path.join(ROOT, "dist", "nuvio-collections-v5.0.1.json");
 export const REPORT_FILE = path.join(ROOT, "reports", "latest.json");
+export const REMOTE_AUDIT_REPORT_FILE = path.join(ROOT, "reports", "remote-audit.json");
 export const PROFILE_AUDIT_REPORT_FILE = path.join(ROOT, "reports", "profile-audit-2026-08-10.json");
 export const PROFILE_REPAIR_FILE = path.join(ROOT, "dist", "nuvio-collections-v5.0.1-profile-repair.json");
 export const RECOMMENDED_FOLDER_ID = "collections.discover.recommended";
@@ -91,16 +92,16 @@ export const CATALOG_REMOVED_RAIL_REASONS = Object.freeze(new Map([
 export const EXPECTED = Object.freeze({
   collections: 13, folders: 548, inputSources: 2745, managedInputSources: 2743,
   finalSources: 2677, managedFinalSources: 2675, recommendedSources: 2,
-  native: 396, materialized: 2279, retiredRails: 77, catalogRemovedRails: 98,
+  native: 0, materialized: 2675, retiredRails: 77, catalogRemovedRails: 98,
 });
 export const EXPECTED_MAPPING = Object.freeze({
   "collections.discover": [0, 12], "collections.streaming": [0, 455],
-  "collections.genres": [0, 192], "collections.film-series": [186, 0],
+  "collections.genres": [0, 192], "collections.film-series": [0, 186],
   "collections.moods": [0, 60],
-  "collections.studios": [0, 107], "collections.networks": [30, 29],
+  "collections.studios": [0, 107], "collections.networks": [0, 59],
   "collections.actors": [0, 744], "collections.directors": [0, 186],
   "collections.awards": [0, 60], "collections.world": [0, 424],
-  "collections.decades": [180, 6], "collections.runtime": [0, 4],
+  "collections.decades": [0, 186], "collections.runtime": [0, 4],
 });
 
 export const COUNTRY_BY_FOLDER = Object.freeze({

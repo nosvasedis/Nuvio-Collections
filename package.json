@@ -22,6 +22,8 @@
     "delete:retired-streaming-lists": "node --env-file-if-exists=.env scripts/delete-retired-streaming-lists.mjs",
     "sync:dry": "node --env-file-if-exists=.env src/cli.mjs sync --dry-run",
     "sync": "node --env-file-if-exists=.env src/cli.mjs sync --execute",
+    "audit:remote": "node --env-file-if-exists=.env src/cli.mjs remote-audit",
+    "audit:remote:repair": "node --env-file-if-exists=.env src/cli.mjs remote-audit --execute",
     "test": "node --test",
     "check": "node --test && node src/cli.mjs audit"
   }

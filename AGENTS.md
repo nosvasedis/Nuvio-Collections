@@ -39,8 +39,9 @@ Before release run, in order:
 3. `npm run audit`
 4. `npm run sync:dry`
 5. production `npm run sync` only with the explicit write guard
-6. `npm run compile`
-7. `npm run audit`
+6. `npm run audit:remote` (or the guarded repair form for confirmed deleted IDs)
+7. `npm run compile`
+8. `npm run audit`
 
 For releases that repair an already imported profile, also run
 `npm run profile:audit -- --profile=<export.json> --write-repair`, import the

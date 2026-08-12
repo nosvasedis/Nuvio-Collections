@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "date": "2026-08-12",
+  "mode": "dry-run",
+  "totals": {
+    "considered": 2675,
+    "valid": 2675,
+    "repairedDeleted": 0,
+    "repairableDeleted": 0,
+    "failed": 0
+  },
+  "results": []
+}

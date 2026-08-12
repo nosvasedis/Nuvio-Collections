@@ -10,7 +10,8 @@
   <img src="https://img.shields.io/badge/folders-548-111827?style=flat-square" alt="548 folders">
   <img src="https://img.shields.io/badge/active_rails-2%2C677-111827?style=flat-square" alt="2,677 active rails">
   <img src="https://img.shields.io/badge/empty_rails-0-16a34a?style=flat-square" alt="0 empty rails">
-  <img src="https://img.shields.io/badge/tests-47%2F47-16a34a?style=flat-square" alt="47/47 tests">
+  <img src="https://img.shields.io/badge/tests-53%2F53-16a34a?style=flat-square" alt="53/53 tests">
+  <img src="https://img.shields.io/badge/remote_lists-2675%2F2675-16a34a?style=flat-square" alt="2675/2675 remote lists valid">
 </p>
 
 <p align="center">
@@ -38,14 +39,15 @@ resumable synchronizer και το GitHub Actions workflow που κρατά τ�
 | Folders | 548 |
 | Ενεργά sources | 2.677 |
 | Managed sources | 2.675 |
-| Materialized TMDB lists | 2.279 |
-| Native Nuvio/TMDB sources | 396 |
+| Materialized TMDB lists | 2.675 |
+| Native Nuvio/TMDB sources | 0 |
 | Χειροκίνητα ορισμένα `recommended` sources | 2 |
 | Κενά ενεργά rails | **0** |
 | Κενά folders | **0** |
 | Unresolved list IDs | **0** |
 | Trakt / runtime-addon sources | **0 / 0** |
-| Automated tests | **47 / 47** |
+| Automated tests | **53 / 53** |
+| Exact remote audit | **2.675 / 2.675 valid** |
 
 Τα sources που επέστρεφαν αποδεδειγμένα μηδενικό αποτέλεσμα με τον ακριβή
 predicate τους έχουν αποσυρθεί. Οι μόνες αλλαγές folder identity είναι οι δύο
@@ -83,17 +85,17 @@ fingerprint κλειδώνεται ώστε bootstrap/compile/nightly sync να 
 | Discover, χωρίς `recommended` | 0 | 12 | 12 |
 | Streaming | 0 | 455 | 455 |
 | Genres | 0 | 192 | 192 |
-| Film Series | 186 | 0 | 186 |
+| Film Series | 0 | 186 | 186 |
 | Mood & Vibes | 0 | 60 | 60 |
 | Studios | 0 | 107 | 107 |
-| Networks | 30 | 29 | 59 |
+| Networks | 0 | 59 | 59 |
 | Actors | 0 | 744 | 744 |
 | Directors | 0 | 186 | 186 |
 | Awards | 0 | 60 | 60 |
 | World | 0 | 424 | 424 |
-| Decades | 180 | 6 | 186 |
+| Decades | 0 | 186 | 186 |
 | Runtime | 0 | 4 | 4 |
-| **Managed σύνολο** | **396** | **2.279** | **2.675** |
+| **Managed σύνολο** | **0** | **2.675** | **2.675** |
 
 ### Σειρά folders
 
@@ -138,13 +140,13 @@ audit, ώστε μελλοντικό build να μην επιστρέψει κα
 project δεν μπορεί να εφεύρει την πραγματική πληροφορία· αποτρέπει όμως τη
 δημοσίευση τεχνικά λανθασμένων, mixed, incomplete ή ανεπιβεβαίωτων lists.
 
-Στο τελευταίο πλήρες scan αποκλείστηκαν 3.486 posterless rail-occurrences. Το
+Στο production scan της 12ης Αυγούστου 2026 αποκλείστηκαν 5.811 posterless και
+1.904 μη επιλέξιμα rail-occurrences. Το
 `Somebody Knows Something` (TMDB TV 330654) επαληθεύτηκε με
 `poster_path: null` και δεν δημοσιεύεται. Θα επιστρέψει αυτόματα αν προστεθεί
-poster στο TMDB. Ο κανόνας επιβάλλεται στα 2.279 materialized rails. Τα 396
-native sources εκτελούνται απευθείας από το Nuvio 0.8.3, το οποίο δεν παρέχει
-υποστηριζόμενο `has poster` filter· η εξαίρεση καταγράφεται ρητά αντί να
-προσποιείται το repository ότι μπορεί να την επιβάλει.
+poster στο TMDB. Ο κανόνας επιβάλλεται και στα 2.675 managed rails: δεν
+υπάρχουν πλέον native managed sources που να παρακάμπτουν το poster/release
+contract.
 
 ## Semantics ανά collection
 
@@ -204,11 +206,11 @@ backdrop του Kaptain v0.90 beta export, ενώ τα predicates και οι pu
   εφαρμόζουν ειδικά keywords/tags και όχι άσχετες προσεγγίσεις.
 - Τα ντοκιμαντέρ φύσης απαιτούν Documentary και δέχονται τα ισοδύναμα sparse
   TMDB tags nature/wildlife/natural history/environment/ecology.
-- Τα 186 Film Series παραμένουν επίσημα TMDB `COLLECTION` sources και δεν
-  λαμβάνουν filters που το Nuvio αγνοεί. Όλα χρησιμοποιούν το native Nuvio
-  `primary_release_date.desc`: η νεότερη ταινία εμφανίζεται αριστερά και η
-  παλαιότερη δεξιά. Όταν το TMDB προσθέσει νέο μέρος στην επίσημη collection,
-  το Nuvio το τοποθετεί αυτόματα πρώτο χωρίς νέο list ID ή nightly write.
+- Τα 186 Film Series διαβάζουν τα parts των επίσημων TMDB `COLLECTION`
+  endpoints, κρατούν μόνο released movie entries με poster και materialize-άρονται
+  σε σταθερές homogeneous lists. Η νεότερη ταινία εμφανίζεται αριστερά και η
+  παλαιότερη δεξιά· νέο επίσημο μέρος προστίθεται από το nightly sync χωρίς
+  αλλαγή list ID.
 - Όλα τα movie studio rails κάνουν details verification: runtime τουλάχιστον
   40′, released έως σήμερα, όχι Documentary/TV Movie, adult ή video. Άρα shorts,
   specials, making-of και τηλεταινίες δεν βαφτίζονται studio feature films.
@@ -222,8 +224,9 @@ backdrop του Kaptain v0.90 beta export, ενώ τα predicates και οι pu
 - Studio `Recent` εφαρμόζει πρώτα rolling 24 μήνες. Αν εκεί υπάρχουν μόνο noise
   ή κανένα feature, εμφανίζει τα πιο πρόσφατα έγκυρα feature films του studio,
   ποτέ filler και ποτέ κενό rail.
-- Network Popular rails είναι native και τα Recent materialized όπου απαιτείται
-  πλήρης ordering/ημερομηνιακή ακρίβεια.
+- Και τα 59 Network rails είναι materialized. Popular και Recent διατηρούν το
+  δικό τους predicate, αλλά περνούν το ίδιο type/release/poster/exact-order
+  contract με κάθε άλλη managed list.
 
 ### Actors και Directors
 
@@ -311,10 +314,10 @@ flowchart LR
 - Reuse person credits/provider availability μεταξύ sibling rails.
 - Verified snapshots για immutable historical awards.
 - Ordered fingerprints: μηδενικά writes για αμετάβλητες lists.
-- Ownership recovery και των 2.279 stable list IDs πριν από create/update.
+- Ownership recovery και των 2.675 stable list IDs πριν από create/update.
 - Resumable sync ανά rail με durable checkpoints.
 
-Τελευταία live μέτρηση μετά το production release στις 11 Αυγούστου 2026:
+Τελευταία πλήρης live μέτρηση στις 12 Αυγούστου 2026:
 
 | Εργασία | Χρόνος | Αποτέλεσμα |
 |---|---:|---|
@@ -327,14 +330,19 @@ flowchart LR
 | Post-production live dry-run | 61,1 s | 2.251 skips, 28 νέες upstream order μετακινήσεις, 0 failures |
 | Streaming migration production retry (12 Αυγούστου 2026) | 7 min 59 s | ownership recovery 2.279/2.279, 92/92 νέα rails verified, 0 duplicates, 0 failures |
 | Retired streaming cleanup | 56,4 s | 94/94 owned Hulu/Discovery+/Starz lists διαγράφηκαν και επέστρεψαν 404 |
-| Tests + strict audit | < 3 s τοπικά | 47/47, 2.677 sources |
+| Final live dry-run | 2 min 54 s | 2.675 considered, 427 changed, 2.248 skips, 0 failures |
+| Final production reconcile | 11 min 04 s | 445/445 exact-read-back updates, 2.230 skips, 0 failures, 0 creates |
+| Ανεξάρτητο exact remote audit | 6 min 27 s | 2.675/2.675 valid, 0 repairs, 0 failures |
+| Tests + strict audit | < 3 s τοπικά | 53/53, 2.677 sources |
 
 Ο nightly χρόνος εξαρτάται από changed fingerprints και TMDB rate limits. Το
 εβδομαδιαίο πλήρες awards refresh είναι σκόπιμα βαρύτερο. Η σχεδόν ωριαία
 μέτρηση παραπάνω είναι το εφάπαξ bootstrap/reconciliation 1.487 αλλαγμένων
 rails, όχι ένα συνηθισμένο nightly run. Μετά το production checkpoint, το
-αμέσως επόμενο πλήρες dry-run χρειάστηκε 53,5 s και προέβλεψε μηδενικά TMDB
-writes: όλα τα 2.279 ordered fingerprints ήταν ήδη ίδια.
+Το πλήρες candidate validation παραμένει βαρύτερο από ένα απλό API refresh,
+αλλά τα ordered fingerprints περιορίζουν τα TMDB writes μόνο στις λίστες που
+άλλαξαν. Το τελικό production run της 12ης Αυγούστου παρέλειψε 2.230/2.675
+lists και ολοκληρώθηκε σε περίπου 11 λεπτά.
 
 ## Fail-safe συμπεριφορά
 
@@ -364,6 +372,7 @@ writes: όλα τα 2.279 ordered fingerprints ήταν ήδη ίδια.
 | `docs/SEMANTIC-CONTRACT.md` | Durable κανόνες, regressions και hand-off evidence |
 | `AGENTS.md` | Υποχρεωτική διαδικασία για επόμενους agents/contributors |
 | `reports/latest.json` | Αναλυτικό αποτέλεσμα τελευταίου sync |
+| `reports/remote-audit.json` | Exact read-back audit και των 2.675 remote lists |
 | `reports/streaming-migration-2026-08-12.json` | Provider/artwork/list evidence της streaming migration |
 | `reports/streaming-retirement-2026-08-12.json` | 94/94 ownership-verified remote deletions |
 | `dist/nuvio-collections-v5.0.1.json` | Τελικό Nuvio import artifact |
@@ -376,10 +385,12 @@ writes: όλα τα 2.279 ordered fingerprints ήταν ήδη ίδια.
 Απαιτείται Node.js 22+· το hosted workflow χρησιμοποιεί Node.js 24.
 
 ```powershell
-npm test                    # 47 automated contract tests
+npm test                    # 53 automated contract tests
 npm run audit               # structure, counts, locks και compatibility
 npm run sync:dry            # live candidates, χωρίς remote writes
 npm run sync                # production reconciliation
+npm run audit:remote        # read-only exact audit όλων των remote lists
+npm run audit:remote:repair # μόνο confirmed deleted-ID reconciliation
 npm run compile             # τελικό Nuvio v5.0.1 JSON
 npm run validate:awards     # live validation όλων των award rails
 npm run capability-probe    # προσωρινό TMDB list capability test
@@ -412,10 +423,12 @@ Production writes απαιτούν `--execute` και
 
 ### Repair παλιού `Σειρά → Ταινία` profile
 
-Το reviewed Nuvio export της 10ης Αυγούστου 2026 αποθήκευσε **987** managed TV
+Το reviewed Nuvio export της 10ης Αυγούστου 2026 αποθήκευσε **987** τότε-managed TV
 LIST rails ως `type: series` αλλά `mediaType: MOVIE` (980 πριν τα World PT/LATAM
-TV rails). Τα 121 native TV sources παρέμειναν `series/TV`. Το Nuvio εμφανίζει
-τον τύπο από το `mediaType`, άρα το ορατό suffix έγινε «Ταινία». Το προστατευμένο
+TV rails). Αυτό είναι ιστορικό evidence του παλιού profile, όχι η σημερινή
+canonical κατανομή. Η v5.0.1 περιέχει 1.153 TV `LIST` sources και κανένα managed
+native source. Το Nuvio εμφανίζει τον τύπο από το `mediaType`, άρα ένα stored
+`MOVIE` εξακολουθεί να εμφανίζεται ως «Ταινία». Το προστατευμένο
 Recommended addon έχει nullable `mediaType` και παραμένει ανέγγιχτο. Το τελικό
 artifact επιβάλλει παντού `series/TV` και `movie/MOVIE` και κρατά σταθερά τα
 TMDB list IDs.

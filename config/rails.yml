@@ -28459,8 +28459,8 @@
       "position": 0,
       "title": "Δημοφιλείς ταινίες της δεκαετίας του 1950",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -28502,8 +28502,8 @@
       "position": 1,
       "title": "Δημοφιλείς σειρές της δεκαετίας του 1950",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -28545,8 +28545,8 @@
       "position": 2,
       "title": "Κορυφαίες ταινίες της δεκαετίας του 1950",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -28588,8 +28588,8 @@
       "position": 3,
       "title": "Κορυφαίες σειρές της δεκαετίας του 1950",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -28631,8 +28631,8 @@
       "position": 4,
       "title": "Δημοφιλέστερες ταινίες του 1950",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -28676,8 +28676,8 @@
       "position": 5,
       "title": "Δημοφιλέστερες σειρές του 1950",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -28721,8 +28721,8 @@
       "position": 6,
       "title": "Δημοφιλέστερες ταινίες του 1951",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -28766,8 +28766,8 @@
       "position": 7,
       "title": "Δημοφιλέστερες σειρές του 1951",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -28811,8 +28811,8 @@
       "position": 8,
       "title": "Δημοφιλέστερες ταινίες του 1952",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -28856,8 +28856,8 @@
       "position": 9,
       "title": "Δημοφιλέστερες σειρές του 1952",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -28901,8 +28901,8 @@
       "position": 10,
       "title": "Δημοφιλέστερες ταινίες του 1953",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -28946,8 +28946,8 @@
       "position": 11,
       "title": "Δημοφιλέστερες σειρές του 1953",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -28991,8 +28991,8 @@
       "position": 12,
       "title": "Δημοφιλέστερες ταινίες του 1954",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29036,8 +29036,8 @@
       "position": 13,
       "title": "Δημοφιλέστερες σειρές του 1954",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29081,8 +29081,8 @@
       "position": 14,
       "title": "Δημοφιλέστερες ταινίες του 1955",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29126,8 +29126,8 @@
       "position": 15,
       "title": "Δημοφιλέστερες σειρές του 1955",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29171,8 +29171,8 @@
       "position": 16,
       "title": "Δημοφιλέστερες ταινίες του 1956",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29216,8 +29216,8 @@
       "position": 17,
       "title": "Δημοφιλέστερες σειρές του 1956",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29261,8 +29261,8 @@
       "position": 18,
       "title": "Δημοφιλέστερες ταινίες του 1957",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29306,8 +29306,8 @@
       "position": 19,
       "title": "Δημοφιλέστερες σειρές του 1957",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29351,8 +29351,8 @@
       "position": 20,
       "title": "Δημοφιλέστερες ταινίες του 1958",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29396,8 +29396,8 @@
       "position": 21,
       "title": "Δημοφιλέστερες σειρές του 1958",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29441,8 +29441,8 @@
       "position": 22,
       "title": "Δημοφιλέστερες ταινίες του 1959",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29486,8 +29486,8 @@
       "position": 23,
       "title": "Δημοφιλέστερες σειρές του 1959",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29531,8 +29531,8 @@
       "position": 0,
       "title": "Δημοφιλείς ταινίες της δεκαετίας του 1960",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29574,8 +29574,8 @@
       "position": 1,
       "title": "Δημοφιλείς σειρές της δεκαετίας του 1960",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29617,8 +29617,8 @@
       "position": 2,
       "title": "Κορυφαίες ταινίες της δεκαετίας του 1960",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29660,8 +29660,8 @@
       "position": 3,
       "title": "Κορυφαίες σειρές της δεκαετίας του 1960",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29703,8 +29703,8 @@
       "position": 4,
       "title": "Δημοφιλέστερες ταινίες του 1960",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29748,8 +29748,8 @@
       "position": 5,
       "title": "Δημοφιλέστερες σειρές του 1960",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29793,8 +29793,8 @@
       "position": 6,
       "title": "Δημοφιλέστερες ταινίες του 1961",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29838,8 +29838,8 @@
       "position": 7,
       "title": "Δημοφιλέστερες σειρές του 1961",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29883,8 +29883,8 @@
       "position": 8,
       "title": "Δημοφιλέστερες ταινίες του 1962",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29928,8 +29928,8 @@
       "position": 9,
       "title": "Δημοφιλέστερες σειρές του 1962",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -29973,8 +29973,8 @@
       "position": 10,
       "title": "Δημοφιλέστερες ταινίες του 1963",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30018,8 +30018,8 @@
       "position": 11,
       "title": "Δημοφιλέστερες σειρές του 1963",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30063,8 +30063,8 @@
       "position": 12,
       "title": "Δημοφιλέστερες ταινίες του 1964",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30108,8 +30108,8 @@
       "position": 13,
       "title": "Δημοφιλέστερες σειρές του 1964",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30153,8 +30153,8 @@
       "position": 14,
       "title": "Δημοφιλέστερες ταινίες του 1965",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30198,8 +30198,8 @@
       "position": 15,
       "title": "Δημοφιλέστερες σειρές του 1965",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30243,8 +30243,8 @@
       "position": 16,
       "title": "Δημοφιλέστερες ταινίες του 1966",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30288,8 +30288,8 @@
       "position": 17,
       "title": "Δημοφιλέστερες σειρές του 1966",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30333,8 +30333,8 @@
       "position": 18,
       "title": "Δημοφιλέστερες ταινίες του 1967",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30378,8 +30378,8 @@
       "position": 19,
       "title": "Δημοφιλέστερες σειρές του 1967",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30423,8 +30423,8 @@
       "position": 20,
       "title": "Δημοφιλέστερες ταινίες του 1968",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30468,8 +30468,8 @@
       "position": 21,
       "title": "Δημοφιλέστερες σειρές του 1968",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30513,8 +30513,8 @@
       "position": 22,
       "title": "Δημοφιλέστερες ταινίες του 1969",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30558,8 +30558,8 @@
       "position": 23,
       "title": "Δημοφιλέστερες σειρές του 1969",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30603,8 +30603,8 @@
       "position": 0,
       "title": "Δημοφιλείς ταινίες της δεκαετίας του 1970",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30646,8 +30646,8 @@
       "position": 1,
       "title": "Δημοφιλείς σειρές της δεκαετίας του 1970",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30689,8 +30689,8 @@
       "position": 2,
       "title": "Κορυφαίες ταινίες της δεκαετίας του 1970",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30732,8 +30732,8 @@
       "position": 3,
       "title": "Κορυφαίες σειρές της δεκαετίας του 1970",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30775,8 +30775,8 @@
       "position": 4,
       "title": "Δημοφιλέστερες ταινίες του 1970",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30820,8 +30820,8 @@
       "position": 5,
       "title": "Δημοφιλέστερες σειρές του 1970",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30865,8 +30865,8 @@
       "position": 6,
       "title": "Δημοφιλέστερες ταινίες του 1971",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30910,8 +30910,8 @@
       "position": 7,
       "title": "Δημοφιλέστερες σειρές του 1971",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -30955,8 +30955,8 @@
       "position": 8,
       "title": "Δημοφιλέστερες ταινίες του 1972",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31000,8 +31000,8 @@
       "position": 9,
       "title": "Δημοφιλέστερες σειρές του 1972",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31045,8 +31045,8 @@
       "position": 10,
       "title": "Δημοφιλέστερες ταινίες του 1973",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31090,8 +31090,8 @@
       "position": 11,
       "title": "Δημοφιλέστερες σειρές του 1973",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31135,8 +31135,8 @@
       "position": 12,
       "title": "Δημοφιλέστερες ταινίες του 1974",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31180,8 +31180,8 @@
       "position": 13,
       "title": "Δημοφιλέστερες σειρές του 1974",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31225,8 +31225,8 @@
       "position": 14,
       "title": "Δημοφιλέστερες ταινίες του 1975",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31270,8 +31270,8 @@
       "position": 15,
       "title": "Δημοφιλέστερες σειρές του 1975",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31315,8 +31315,8 @@
       "position": 16,
       "title": "Δημοφιλέστερες ταινίες του 1976",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31360,8 +31360,8 @@
       "position": 17,
       "title": "Δημοφιλέστερες σειρές του 1976",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31405,8 +31405,8 @@
       "position": 18,
       "title": "Δημοφιλέστερες ταινίες του 1977",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31450,8 +31450,8 @@
       "position": 19,
       "title": "Δημοφιλέστερες σειρές του 1977",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31495,8 +31495,8 @@
       "position": 20,
       "title": "Δημοφιλέστερες ταινίες του 1978",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31540,8 +31540,8 @@
       "position": 21,
       "title": "Δημοφιλέστερες σειρές του 1978",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31585,8 +31585,8 @@
       "position": 22,
       "title": "Δημοφιλέστερες ταινίες του 1979",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31630,8 +31630,8 @@
       "position": 23,
       "title": "Δημοφιλέστερες σειρές του 1979",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31675,8 +31675,8 @@
       "position": 0,
       "title": "Δημοφιλείς ταινίες της δεκαετίας του 1980",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31718,8 +31718,8 @@
       "position": 1,
       "title": "Δημοφιλείς σειρές της δεκαετίας του 1980",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31761,8 +31761,8 @@
       "position": 2,
       "title": "Κορυφαίες ταινίες της δεκαετίας του 1980",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31804,8 +31804,8 @@
       "position": 3,
       "title": "Κορυφαίες σειρές της δεκαετίας του 1980",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31847,8 +31847,8 @@
       "position": 4,
       "title": "Δημοφιλέστερες ταινίες του 1980",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31892,8 +31892,8 @@
       "position": 5,
       "title": "Δημοφιλέστερες σειρές του 1980",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31937,8 +31937,8 @@
       "position": 6,
       "title": "Δημοφιλέστερες ταινίες του 1981",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -31982,8 +31982,8 @@
       "position": 7,
       "title": "Δημοφιλέστερες σειρές του 1981",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32027,8 +32027,8 @@
       "position": 8,
       "title": "Δημοφιλέστερες ταινίες του 1982",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32072,8 +32072,8 @@
       "position": 9,
       "title": "Δημοφιλέστερες σειρές του 1982",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32117,8 +32117,8 @@
       "position": 10,
       "title": "Δημοφιλέστερες ταινίες του 1983",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32162,8 +32162,8 @@
       "position": 11,
       "title": "Δημοφιλέστερες σειρές του 1983",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32207,8 +32207,8 @@
       "position": 12,
       "title": "Δημοφιλέστερες ταινίες του 1984",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32252,8 +32252,8 @@
       "position": 13,
       "title": "Δημοφιλέστερες σειρές του 1984",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32297,8 +32297,8 @@
       "position": 14,
       "title": "Δημοφιλέστερες ταινίες του 1985",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32342,8 +32342,8 @@
       "position": 15,
       "title": "Δημοφιλέστερες σειρές του 1985",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32387,8 +32387,8 @@
       "position": 16,
       "title": "Δημοφιλέστερες ταινίες του 1986",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32432,8 +32432,8 @@
       "position": 17,
       "title": "Δημοφιλέστερες σειρές του 1986",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32477,8 +32477,8 @@
       "position": 18,
       "title": "Δημοφιλέστερες ταινίες του 1987",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32522,8 +32522,8 @@
       "position": 19,
       "title": "Δημοφιλέστερες σειρές του 1987",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32567,8 +32567,8 @@
       "position": 20,
       "title": "Δημοφιλέστερες ταινίες του 1988",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32612,8 +32612,8 @@
       "position": 21,
       "title": "Δημοφιλέστερες σειρές του 1988",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32657,8 +32657,8 @@
       "position": 22,
       "title": "Δημοφιλέστερες ταινίες του 1989",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32702,8 +32702,8 @@
       "position": 23,
       "title": "Δημοφιλέστερες σειρές του 1989",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32747,8 +32747,8 @@
       "position": 0,
       "title": "Δημοφιλείς ταινίες της δεκαετίας του 1990",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32790,8 +32790,8 @@
       "position": 1,
       "title": "Δημοφιλείς σειρές της δεκαετίας του 1990",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32833,8 +32833,8 @@
       "position": 2,
       "title": "Κορυφαίες ταινίες της δεκαετίας του 1990",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32876,8 +32876,8 @@
       "position": 3,
       "title": "Κορυφαίες σειρές της δεκαετίας του 1990",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32919,8 +32919,8 @@
       "position": 4,
       "title": "Δημοφιλέστερες ταινίες του 1990",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -32964,8 +32964,8 @@
       "position": 5,
       "title": "Δημοφιλέστερες σειρές του 1990",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33009,8 +33009,8 @@
       "position": 6,
       "title": "Δημοφιλέστερες ταινίες του 1991",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33054,8 +33054,8 @@
       "position": 7,
       "title": "Δημοφιλέστερες σειρές του 1991",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33099,8 +33099,8 @@
       "position": 8,
       "title": "Δημοφιλέστερες ταινίες του 1992",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33144,8 +33144,8 @@
       "position": 9,
       "title": "Δημοφιλέστερες σειρές του 1992",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33189,8 +33189,8 @@
       "position": 10,
       "title": "Δημοφιλέστερες ταινίες του 1993",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33234,8 +33234,8 @@
       "position": 11,
       "title": "Δημοφιλέστερες σειρές του 1993",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33279,8 +33279,8 @@
       "position": 12,
       "title": "Δημοφιλέστερες ταινίες του 1994",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33324,8 +33324,8 @@
       "position": 13,
       "title": "Δημοφιλέστερες σειρές του 1994",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33369,8 +33369,8 @@
       "position": 14,
       "title": "Δημοφιλέστερες ταινίες του 1995",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33414,8 +33414,8 @@
       "position": 15,
       "title": "Δημοφιλέστερες σειρές του 1995",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33459,8 +33459,8 @@
       "position": 16,
       "title": "Δημοφιλέστερες ταινίες του 1996",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33504,8 +33504,8 @@
       "position": 17,
       "title": "Δημοφιλέστερες σειρές του 1996",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33549,8 +33549,8 @@
       "position": 18,
       "title": "Δημοφιλέστερες ταινίες του 1997",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33594,8 +33594,8 @@
       "position": 19,
       "title": "Δημοφιλέστερες σειρές του 1997",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33639,8 +33639,8 @@
       "position": 20,
       "title": "Δημοφιλέστερες ταινίες του 1998",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33684,8 +33684,8 @@
       "position": 21,
       "title": "Δημοφιλέστερες σειρές του 1998",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33729,8 +33729,8 @@
       "position": 22,
       "title": "Δημοφιλέστερες ταινίες του 1999",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33774,8 +33774,8 @@
       "position": 23,
       "title": "Δημοφιλέστερες σειρές του 1999",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33819,8 +33819,8 @@
       "position": 0,
       "title": "Δημοφιλείς ταινίες της δεκαετίας του 2000",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33862,8 +33862,8 @@
       "position": 1,
       "title": "Δημοφιλείς σειρές της δεκαετίας του 2000",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33905,8 +33905,8 @@
       "position": 2,
       "title": "Κορυφαίες ταινίες της δεκαετίας του 2000",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33948,8 +33948,8 @@
       "position": 3,
       "title": "Κορυφαίες σειρές της δεκαετίας του 2000",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -33991,8 +33991,8 @@
       "position": 4,
       "title": "Δημοφιλέστερες ταινίες του 2000",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34036,8 +34036,8 @@
       "position": 5,
       "title": "Δημοφιλέστερες σειρές του 2000",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34081,8 +34081,8 @@
       "position": 6,
       "title": "Δημοφιλέστερες ταινίες του 2001",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34126,8 +34126,8 @@
       "position": 7,
       "title": "Δημοφιλέστερες σειρές του 2001",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34171,8 +34171,8 @@
       "position": 8,
       "title": "Δημοφιλέστερες ταινίες του 2002",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34216,8 +34216,8 @@
       "position": 9,
       "title": "Δημοφιλέστερες σειρές του 2002",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34261,8 +34261,8 @@
       "position": 10,
       "title": "Δημοφιλέστερες ταινίες του 2003",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34306,8 +34306,8 @@
       "position": 11,
       "title": "Δημοφιλέστερες σειρές του 2003",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34351,8 +34351,8 @@
       "position": 12,
       "title": "Δημοφιλέστερες ταινίες του 2004",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34396,8 +34396,8 @@
       "position": 13,
       "title": "Δημοφιλέστερες σειρές του 2004",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34441,8 +34441,8 @@
       "position": 14,
       "title": "Δημοφιλέστερες ταινίες του 2005",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34486,8 +34486,8 @@
       "position": 15,
       "title": "Δημοφιλέστερες σειρές του 2005",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34531,8 +34531,8 @@
       "position": 16,
       "title": "Δημοφιλέστερες ταινίες του 2006",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34576,8 +34576,8 @@
       "position": 17,
       "title": "Δημοφιλέστερες σειρές του 2006",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34621,8 +34621,8 @@
       "position": 18,
       "title": "Δημοφιλέστερες ταινίες του 2007",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34666,8 +34666,8 @@
       "position": 19,
       "title": "Δημοφιλέστερες σειρές του 2007",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34711,8 +34711,8 @@
       "position": 20,
       "title": "Δημοφιλέστερες ταινίες του 2008",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34756,8 +34756,8 @@
       "position": 21,
       "title": "Δημοφιλέστερες σειρές του 2008",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34801,8 +34801,8 @@
       "position": 22,
       "title": "Δημοφιλέστερες ταινίες του 2009",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34846,8 +34846,8 @@
       "position": 23,
       "title": "Δημοφιλέστερες σειρές του 2009",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34891,8 +34891,8 @@
       "position": 0,
       "title": "Δημοφιλείς ταινίες της δεκαετίας του 2010",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34934,8 +34934,8 @@
       "position": 1,
       "title": "Δημοφιλείς σειρές της δεκαετίας του 2010",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -34977,8 +34977,8 @@
       "position": 2,
       "title": "Κορυφαίες ταινίες της δεκαετίας του 2010",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35020,8 +35020,8 @@
       "position": 3,
       "title": "Κορυφαίες σειρές της δεκαετίας του 2010",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35063,8 +35063,8 @@
       "position": 4,
       "title": "Δημοφιλέστερες ταινίες του 2010",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35108,8 +35108,8 @@
       "position": 5,
       "title": "Δημοφιλέστερες σειρές του 2010",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35153,8 +35153,8 @@
       "position": 6,
       "title": "Δημοφιλέστερες ταινίες του 2011",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35198,8 +35198,8 @@
       "position": 7,
       "title": "Δημοφιλέστερες σειρές του 2011",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35243,8 +35243,8 @@
       "position": 8,
       "title": "Δημοφιλέστερες ταινίες του 2012",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35288,8 +35288,8 @@
       "position": 9,
       "title": "Δημοφιλέστερες σειρές του 2012",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35333,8 +35333,8 @@
       "position": 10,
       "title": "Δημοφιλέστερες ταινίες του 2013",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35378,8 +35378,8 @@
       "position": 11,
       "title": "Δημοφιλέστερες σειρές του 2013",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35423,8 +35423,8 @@
       "position": 12,
       "title": "Δημοφιλέστερες ταινίες του 2014",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35468,8 +35468,8 @@
       "position": 13,
       "title": "Δημοφιλέστερες σειρές του 2014",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35513,8 +35513,8 @@
       "position": 14,
       "title": "Δημοφιλέστερες ταινίες του 2015",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35558,8 +35558,8 @@
       "position": 15,
       "title": "Δημοφιλέστερες σειρές του 2015",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35603,8 +35603,8 @@
       "position": 16,
       "title": "Δημοφιλέστερες ταινίες του 2016",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35648,8 +35648,8 @@
       "position": 17,
       "title": "Δημοφιλέστερες σειρές του 2016",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35693,8 +35693,8 @@
       "position": 18,
       "title": "Δημοφιλέστερες ταινίες του 2017",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35738,8 +35738,8 @@
       "position": 19,
       "title": "Δημοφιλέστερες σειρές του 2017",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35783,8 +35783,8 @@
       "position": 20,
       "title": "Δημοφιλέστερες ταινίες του 2018",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35828,8 +35828,8 @@
       "position": 21,
       "title": "Δημοφιλέστερες σειρές του 2018",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35873,8 +35873,8 @@
       "position": 22,
       "title": "Δημοφιλέστερες ταινίες του 2019",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -35918,8 +35918,8 @@
       "position": 23,
       "title": "Δημοφιλέστερες σειρές του 2019",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -36031,8 +36031,8 @@
       "position": 4,
       "title": "Δημοφιλέστερες ταινίες του 2020",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -36076,8 +36076,8 @@
       "position": 5,
       "title": "Δημοφιλέστερες σειρές του 2020",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -36121,8 +36121,8 @@
       "position": 6,
       "title": "Δημοφιλέστερες ταινίες του 2021",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -36166,8 +36166,8 @@
       "position": 7,
       "title": "Δημοφιλέστερες σειρές του 2021",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -36211,8 +36211,8 @@
       "position": 8,
       "title": "Δημοφιλέστερες ταινίες του 2022",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -36256,8 +36256,8 @@
       "position": 9,
       "title": "Δημοφιλέστερες σειρές του 2022",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -36301,8 +36301,8 @@
       "position": 10,
       "title": "Δημοφιλέστερες ταινίες του 2023",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -36346,8 +36346,8 @@
       "position": 11,
       "title": "Δημοφιλέστερες σειρές του 2023",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -36391,8 +36391,8 @@
       "position": 12,
       "title": "Δημοφιλέστερες ταινίες του 2024",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -36436,8 +36436,8 @@
       "position": 13,
       "title": "Δημοφιλέστερες σειρές του 2024",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -36481,8 +36481,8 @@
       "position": 14,
       "title": "Δημοφιλέστερες ταινίες του 2025",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -36526,8 +36526,8 @@
       "position": 15,
       "title": "Δημοφιλέστερες σειρές του 2025",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "discover",
       "listId": null,
       "params": {
         "legacy": {
@@ -43707,8 +43707,8 @@
       "position": 0,
       "title": "Resident Evil",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -43720,7 +43720,7 @@
       },
       "originalSource": {
         "title": "Resident Evil",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 17255,
         "filters": {},
         "provider": "tmdb",
@@ -43735,8 +43735,8 @@
       "position": 0,
       "title": "One Piece",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -43748,7 +43748,7 @@
       },
       "originalSource": {
         "title": "One Piece",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 23456,
         "filters": {},
         "provider": "tmdb",
@@ -43763,8 +43763,8 @@
       "position": 0,
       "title": "Poltergeist",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -43776,7 +43776,7 @@
       },
       "originalSource": {
         "title": "Poltergeist",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 10453,
         "filters": {},
         "provider": "tmdb",
@@ -43791,8 +43791,8 @@
       "position": 0,
       "title": "Ρόμπερτ Λάνγκντον",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -43804,7 +43804,7 @@
       },
       "originalSource": {
         "title": "Ρόμπερτ Λάνγκντον",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 115776,
         "filters": {},
         "provider": "tmdb",
@@ -43819,8 +43819,8 @@
       "position": 0,
       "title": "Jarhead",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -43832,7 +43832,7 @@
       },
       "originalSource": {
         "title": "Jarhead",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 285564,
         "filters": {},
         "provider": "tmdb",
@@ -43847,8 +43847,8 @@
       "position": 0,
       "title": "Η Καλόγρια",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -43860,7 +43860,7 @@
       },
       "originalSource": {
         "title": "Η Καλόγρια",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 968052,
         "filters": {},
         "provider": "tmdb",
@@ -43875,8 +43875,8 @@
       "position": 0,
       "title": "Το Αυτό",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -43888,7 +43888,7 @@
       },
       "originalSource": {
         "title": "Το Αυτό",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 477962,
         "filters": {},
         "provider": "tmdb",
@@ -43903,8 +43903,8 @@
       "position": 0,
       "title": "John Wick",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -43916,7 +43916,7 @@
       },
       "originalSource": {
         "title": "John Wick",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 404609,
         "filters": {},
         "provider": "tmdb",
@@ -43931,8 +43931,8 @@
       "position": 0,
       "title": "Οι Πειρατές της Καραϊβικής",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -43944,7 +43944,7 @@
       },
       "originalSource": {
         "title": "Οι Πειρατές της Καραϊβικής",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 295,
         "filters": {},
         "provider": "tmdb",
@@ -43959,8 +43959,8 @@
       "position": 0,
       "title": "Φανταστικά Ζώα",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -43972,7 +43972,7 @@
       },
       "originalSource": {
         "title": "Φανταστικά Ζώα",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 435259,
         "filters": {},
         "provider": "tmdb",
@@ -43987,8 +43987,8 @@
       "position": 0,
       "title": "Κραυγή αγωνίας",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44000,7 +44000,7 @@
       },
       "originalSource": {
         "title": "Κραυγή αγωνίας",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 2602,
         "filters": {},
         "provider": "tmdb",
@@ -44015,8 +44015,8 @@
       "position": 0,
       "title": "Annabelle",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44028,7 +44028,7 @@
       },
       "originalSource": {
         "title": "Annabelle",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 402074,
         "filters": {},
         "provider": "tmdb",
@@ -44043,8 +44043,8 @@
       "position": 0,
       "title": "Spider-Man: Μέσα στο αραχνο-σύμπαν",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44056,7 +44056,7 @@
       },
       "originalSource": {
         "title": "Spider-Man: Μέσα στο αραχνο-σύμπαν",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 573436,
         "filters": {},
         "provider": "tmdb",
@@ -44071,8 +44071,8 @@
       "position": 0,
       "title": "Μαντ Μαξ",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44084,7 +44084,7 @@
       },
       "originalSource": {
         "title": "Μαντ Μαξ",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 8945,
         "filters": {},
         "provider": "tmdb",
@@ -44099,8 +44099,8 @@
       "position": 0,
       "title": "Ted",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44112,7 +44112,7 @@
       },
       "originalSource": {
         "title": "Ted",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 266672,
         "filters": {},
         "provider": "tmdb",
@@ -44127,8 +44127,8 @@
       "position": 0,
       "title": "Step Up",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44140,7 +44140,7 @@
       },
       "originalSource": {
         "title": "Step Up",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 86092,
         "filters": {},
         "provider": "tmdb",
@@ -44155,8 +44155,8 @@
       "position": 0,
       "title": "Ο Κυνηγός",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44168,7 +44168,7 @@
       },
       "originalSource": {
         "title": "Ο Κυνηγός",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 399,
         "filters": {},
         "provider": "tmdb",
@@ -44183,8 +44183,8 @@
       "position": 0,
       "title": "Το Λυκόφως",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44196,7 +44196,7 @@
       },
       "originalSource": {
         "title": "Το Λυκόφως",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 33514,
         "filters": {},
         "provider": "tmdb",
@@ -44211,8 +44211,8 @@
       "position": 0,
       "title": "Οι Μικροί Πρωταθλητές",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44224,7 +44224,7 @@
       },
       "originalSource": {
         "title": "Οι Μικροί Πρωταθλητές",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 10709,
         "filters": {},
         "provider": "tmdb",
@@ -44239,8 +44239,8 @@
       "position": 0,
       "title": "National Treasure",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44252,7 +44252,7 @@
       },
       "originalSource": {
         "title": "National Treasure",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 52984,
         "filters": {},
         "provider": "tmdb",
@@ -44267,8 +44267,8 @@
       "position": 0,
       "title": "Hitman's Bodyguard",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44280,7 +44280,7 @@
       },
       "originalSource": {
         "title": "Hitman's Bodyguard",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 608101,
         "filters": {},
         "provider": "tmdb",
@@ -44295,8 +44295,8 @@
       "position": 0,
       "title": "Σκοτεινή Δύναμη",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44308,7 +44308,7 @@
       },
       "originalSource": {
         "title": "Σκοτεινή Δύναμη",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 735,
         "filters": {},
         "provider": "tmdb",
@@ -44323,8 +44323,8 @@
       "position": 0,
       "title": "Now You See Me",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44336,7 +44336,7 @@
       },
       "originalSource": {
         "title": "Now You See Me",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 382685,
         "filters": {},
         "provider": "tmdb",
@@ -44351,8 +44351,8 @@
       "position": 0,
       "title": "Jumanji",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44364,7 +44364,7 @@
       },
       "originalSource": {
         "title": "Jumanji",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 495527,
         "filters": {},
         "provider": "tmdb",
@@ -44379,8 +44379,8 @@
       "position": 0,
       "title": "TRON",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44392,7 +44392,7 @@
       },
       "originalSource": {
         "title": "TRON",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 63043,
         "filters": {},
         "provider": "tmdb",
@@ -44407,8 +44407,8 @@
       "position": 0,
       "title": "Anchorman",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44420,7 +44420,7 @@
       },
       "originalSource": {
         "title": "Anchorman",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 93791,
         "filters": {},
         "provider": "tmdb",
@@ -44435,8 +44435,8 @@
       "position": 0,
       "title": "Οι Απίθανοι",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44448,7 +44448,7 @@
       },
       "originalSource": {
         "title": "Οι Απίθανοι",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 468222,
         "filters": {},
         "provider": "tmdb",
@@ -44463,8 +44463,8 @@
       "position": 0,
       "title": "Ο Βετεράνος",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44476,7 +44476,7 @@
       },
       "originalSource": {
         "title": "Ο Βετεράνος",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 46512,
         "filters": {},
         "provider": "tmdb",
@@ -44491,8 +44491,8 @@
       "position": 0,
       "title": "Μην Ανασαίνεις",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44504,7 +44504,7 @@
       },
       "originalSource": {
         "title": "Μην Ανασαίνεις",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 748919,
         "filters": {},
         "provider": "tmdb",
@@ -44519,8 +44519,8 @@
       "position": 0,
       "title": "Ocean's",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44532,7 +44532,7 @@
       },
       "originalSource": {
         "title": "Ocean's",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 304,
         "filters": {},
         "provider": "tmdb",
@@ -44547,8 +44547,8 @@
       "position": 0,
       "title": "Τζέιμς Μποντ, Πράκτωρ 007",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44560,7 +44560,7 @@
       },
       "originalSource": {
         "title": "Τζέιμς Μποντ, Πράκτωρ 007",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 645,
         "filters": {},
         "provider": "tmdb",
@@ -44575,8 +44575,8 @@
       "position": 0,
       "title": "Το τρελό θηριοτροφείο",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44588,7 +44588,7 @@
       },
       "originalSource": {
         "title": "Το τρελό θηριοτροφείο",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 108693,
         "filters": {},
         "provider": "tmdb",
@@ -44603,8 +44603,8 @@
       "position": 0,
       "title": "Boondock Saints",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44616,7 +44616,7 @@
       },
       "originalSource": {
         "title": "Boondock Saints",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 87186,
         "filters": {},
         "provider": "tmdb",
@@ -44631,8 +44631,8 @@
       "position": 0,
       "title": "Η Τριλογία της Απόκλισης",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44644,7 +44644,7 @@
       },
       "originalSource": {
         "title": "Η Τριλογία της Απόκλισης",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 283579,
         "filters": {},
         "provider": "tmdb",
@@ -44659,8 +44659,8 @@
       "position": 0,
       "title": "Οι Εκδικητές",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44672,7 +44672,7 @@
       },
       "originalSource": {
         "title": "Οι Εκδικητές",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 86311,
         "filters": {},
         "provider": "tmdb",
@@ -44687,8 +44687,8 @@
       "position": 0,
       "title": "Naruto",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44700,7 +44700,7 @@
       },
       "originalSource": {
         "title": "Naruto",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 23616,
         "filters": {},
         "provider": "tmdb",
@@ -44715,8 +44715,8 @@
       "position": 0,
       "title": "Η προφητεία",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44728,7 +44728,7 @@
       },
       "originalSource": {
         "title": "Η προφητεία",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 10919,
         "filters": {},
         "provider": "tmdb",
@@ -44743,8 +44743,8 @@
       "position": 0,
       "title": "Escape Room",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44756,7 +44756,7 @@
       },
       "originalSource": {
         "title": "Escape Room",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 769423,
         "filters": {},
         "provider": "tmdb",
@@ -44771,8 +44771,8 @@
       "position": 0,
       "title": "Child's Play",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44784,7 +44784,7 @@
       },
       "originalSource": {
         "title": "Child's Play",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 10455,
         "filters": {},
         "provider": "tmdb",
@@ -44799,8 +44799,8 @@
       "position": 0,
       "title": "American Pie",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44812,7 +44812,7 @@
       },
       "originalSource": {
         "title": "American Pie",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 2806,
         "filters": {},
         "provider": "tmdb",
@@ -44827,8 +44827,8 @@
       "position": 0,
       "title": "King Kong (1976)",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44840,7 +44840,7 @@
       },
       "originalSource": {
         "title": "King Kong (1976)",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 135498,
         "filters": {},
         "provider": "tmdb",
@@ -44855,8 +44855,8 @@
       "position": 0,
       "title": "Η εκδίκηση της ξανθιάς",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44868,7 +44868,7 @@
       },
       "originalSource": {
         "title": "Η εκδίκηση της ξανθιάς",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 86024,
         "filters": {},
         "provider": "tmdb",
@@ -44883,8 +44883,8 @@
       "position": 0,
       "title": "Ο Πλανήτης των Πιθήκων",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44896,7 +44896,7 @@
       },
       "originalSource": {
         "title": "Ο Πλανήτης των Πιθήκων",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 1709,
         "filters": {},
         "provider": "tmdb",
@@ -44911,8 +44911,8 @@
       "position": 0,
       "title": "Πενήντα αποχρώσεις του γκρι",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44924,7 +44924,7 @@
       },
       "originalSource": {
         "title": "Πενήντα αποχρώσεις του γκρι",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 344830,
         "filters": {},
         "provider": "tmdb",
@@ -44939,8 +44939,8 @@
       "position": 0,
       "title": "Equalizer",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44952,7 +44952,7 @@
       },
       "originalSource": {
         "title": "Equalizer",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 523855,
         "filters": {},
         "provider": "tmdb",
@@ -44967,8 +44967,8 @@
       "position": 0,
       "title": "Knives Out",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -44980,7 +44980,7 @@
       },
       "originalSource": {
         "title": "Knives Out",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 722971,
         "filters": {},
         "provider": "tmdb",
@@ -44995,8 +44995,8 @@
       "position": 0,
       "title": "Ο Άλβιν και η Παρέα του",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45008,7 +45008,7 @@
       },
       "originalSource": {
         "title": "Ο Άλβιν και η Παρέα του",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 167613,
         "filters": {},
         "provider": "tmdb",
@@ -45023,8 +45023,8 @@
       "position": 0,
       "title": "Rebuild of Evangelion",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45036,7 +45036,7 @@
       },
       "originalSource": {
         "title": "Rebuild of Evangelion",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 210303,
         "filters": {},
         "provider": "tmdb",
@@ -45051,8 +45051,8 @@
       "position": 0,
       "title": "Η Κατάρα",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45064,7 +45064,7 @@
       },
       "originalSource": {
         "title": "Η Κατάρα",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 1974,
         "filters": {},
         "provider": "tmdb",
@@ -45079,8 +45079,8 @@
       "position": 0,
       "title": "Πάντινγκτον",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45092,7 +45092,7 @@
       },
       "originalSource": {
         "title": "Πάντινγκτον",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 488924,
         "filters": {},
         "provider": "tmdb",
@@ -45107,8 +45107,8 @@
       "position": 0,
       "title": "Detective Conan",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45120,7 +45120,7 @@
       },
       "originalSource": {
         "title": "Detective Conan",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 39199,
         "filters": {},
         "provider": "tmdb",
@@ -45135,8 +45135,8 @@
       "position": 0,
       "title": "Ενόλα Χολμς",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45148,7 +45148,7 @@
       },
       "originalSource": {
         "title": "Ενόλα Χολμς",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 829314,
         "filters": {},
         "provider": "tmdb",
@@ -45163,8 +45163,8 @@
       "position": 0,
       "title": "Μόνος στο Σπίτι",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45176,7 +45176,7 @@
       },
       "originalSource": {
         "title": "Μόνος στο Σπίτι",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 9888,
         "filters": {},
         "provider": "tmdb",
@@ -45191,8 +45191,8 @@
       "position": 0,
       "title": "Μην πυροβολείτε τη γιαγιά",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45204,7 +45204,7 @@
       },
       "originalSource": {
         "title": "Μην πυροβολείτε τη γιαγιά",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 44979,
         "filters": {},
         "provider": "tmdb",
@@ -45219,8 +45219,8 @@
       "position": 0,
       "title": "Βλέπω το Θάνατό σου",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45232,7 +45232,7 @@
       },
       "originalSource": {
         "title": "Βλέπω το Θάνατό σου",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 8864,
         "filters": {},
         "provider": "tmdb",
@@ -45247,8 +45247,8 @@
       "position": 0,
       "title": "Magic Mike",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45260,7 +45260,7 @@
       },
       "originalSource": {
         "title": "Magic Mike",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 328247,
         "filters": {},
         "provider": "tmdb",
@@ -45275,8 +45275,8 @@
       "position": 0,
       "title": "Ο Νονός",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45288,7 +45288,7 @@
       },
       "originalSource": {
         "title": "Ο Νονός",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 230,
         "filters": {},
         "provider": "tmdb",
@@ -45303,8 +45303,8 @@
       "position": 0,
       "title": "Bring It On",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45316,7 +45316,7 @@
       },
       "originalSource": {
         "title": "Bring It On",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 430186,
         "filters": {},
         "provider": "tmdb",
@@ -45331,8 +45331,8 @@
       "position": 0,
       "title": "Hannibal Lecter",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45344,7 +45344,7 @@
       },
       "originalSource": {
         "title": "Hannibal Lecter",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 9743,
         "filters": {},
         "provider": "tmdb",
@@ -45359,8 +45359,8 @@
       "position": 0,
       "title": "Γκόστμπαστερς",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45372,7 +45372,7 @@
       },
       "originalSource": {
         "title": "Γκόστμπαστερς",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 2980,
         "filters": {},
         "provider": "tmdb",
@@ -45387,8 +45387,8 @@
       "position": 0,
       "title": "Hangover",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45400,7 +45400,7 @@
       },
       "originalSource": {
         "title": "Hangover",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 86119,
         "filters": {},
         "provider": "tmdb",
@@ -45415,8 +45415,8 @@
       "position": 0,
       "title": "Transformers",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45428,7 +45428,7 @@
       },
       "originalSource": {
         "title": "Transformers",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 8650,
         "filters": {},
         "provider": "tmdb",
@@ -45443,8 +45443,8 @@
       "position": 0,
       "title": "Η Μούμια",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45456,7 +45456,7 @@
       },
       "originalSource": {
         "title": "Η Μούμια",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 1733,
         "filters": {},
         "provider": "tmdb",
@@ -45471,8 +45471,8 @@
       "position": 0,
       "title": "Zoolander",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45484,7 +45484,7 @@
       },
       "originalSource": {
         "title": "Zoolander",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 352789,
         "filters": {},
         "provider": "tmdb",
@@ -45499,8 +45499,8 @@
       "position": 0,
       "title": "Raid",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45512,7 +45512,7 @@
       },
       "originalSource": {
         "title": "Raid",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 257960,
         "filters": {},
         "provider": "tmdb",
@@ -45527,8 +45527,8 @@
       "position": 0,
       "title": "Πόκεμον: Οι ταινίες",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45540,7 +45540,7 @@
       },
       "originalSource": {
         "title": "Πόκεμον: Οι ταινίες",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 34055,
         "filters": {},
         "provider": "tmdb",
@@ -45555,8 +45555,8 @@
       "position": 0,
       "title": "Μπάτε σκύλοι αλέστε",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45568,7 +45568,7 @@
       },
       "originalSource": {
         "title": "Μπάτε σκύλοι αλέστε",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 427084,
         "filters": {},
         "provider": "tmdb",
@@ -45583,8 +45583,8 @@
       "position": 0,
       "title": "28 Days/Weeks/Years Later",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45596,7 +45596,7 @@
       },
       "originalSource": {
         "title": "28 Days/Weeks/Years Later",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 1565,
         "filters": {},
         "provider": "tmdb",
@@ -45611,8 +45611,8 @@
       "position": 0,
       "title": "Taken",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45624,7 +45624,7 @@
       },
       "originalSource": {
         "title": "Taken",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 135483,
         "filters": {},
         "provider": "tmdb",
@@ -45639,8 +45639,8 @@
       "position": 0,
       "title": "Μαθητευόμενος Μπάτσος",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45652,7 +45652,7 @@
       },
       "originalSource": {
         "title": "Μαθητευόμενος Μπάτσος",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 376650,
         "filters": {},
         "provider": "tmdb",
@@ -45667,8 +45667,8 @@
       "position": 0,
       "title": "Η Κάθαρση",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45680,7 +45680,7 @@
       },
       "originalSource": {
         "title": "Η Κάθαρση",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 256322,
         "filters": {},
         "provider": "tmdb",
@@ -45695,8 +45695,8 @@
       "position": 0,
       "title": "Jeepers Creepers",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45708,7 +45708,7 @@
       },
       "originalSource": {
         "title": "Jeepers Creepers",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 94899,
         "filters": {},
         "provider": "tmdb",
@@ -45723,8 +45723,8 @@
       "position": 0,
       "title": "Sniper",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45736,7 +45736,7 @@
       },
       "originalSource": {
         "title": "Sniper",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 14246,
         "filters": {},
         "provider": "tmdb",
@@ -45751,8 +45751,8 @@
       "position": 0,
       "title": "Major League",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45764,7 +45764,7 @@
       },
       "originalSource": {
         "title": "Major League",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 97771,
         "filters": {},
         "provider": "tmdb",
@@ -45779,8 +45779,8 @@
       "position": 0,
       "title": "Η Δική μου Ακαδημία Ηρώων",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45792,7 +45792,7 @@
       },
       "originalSource": {
         "title": "Η Δική μου Ακαδημία Ηρώων",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 1189668,
         "filters": {},
         "provider": "tmdb",
@@ -45807,8 +45807,8 @@
       "position": 0,
       "title": "Die Hard",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45820,7 +45820,7 @@
       },
       "originalSource": {
         "title": "Die Hard",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 1570,
         "filters": {},
         "provider": "tmdb",
@@ -45835,8 +45835,8 @@
       "position": 0,
       "title": "Ο Εξορκιστής",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45848,7 +45848,7 @@
       },
       "originalSource": {
         "title": "Ο Εξορκιστής",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 12263,
         "filters": {},
         "provider": "tmdb",
@@ -45863,8 +45863,8 @@
       "position": 0,
       "title": "Creed",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45876,7 +45876,7 @@
       },
       "originalSource": {
         "title": "Creed",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 553717,
         "filters": {},
         "provider": "tmdb",
@@ -45891,8 +45891,8 @@
       "position": 0,
       "title": "Άλιεν",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45904,7 +45904,7 @@
       },
       "originalSource": {
         "title": "Άλιεν",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 8091,
         "filters": {},
         "provider": "tmdb",
@@ -45919,8 +45919,8 @@
       "position": 0,
       "title": "Ξενοδοχείο για Τέρατα",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45932,7 +45932,7 @@
       },
       "originalSource": {
         "title": "Ξενοδοχείο για Τέρατα",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 185103,
         "filters": {},
         "provider": "tmdb",
@@ -45947,8 +45947,8 @@
       "position": 0,
       "title": "Dirty Dozen",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45960,7 +45960,7 @@
       },
       "originalSource": {
         "title": "Dirty Dozen",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 124492,
         "filters": {},
         "provider": "tmdb",
@@ -45975,8 +45975,8 @@
       "position": 0,
       "title": "Βρώμικος Χάρι",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -45988,7 +45988,7 @@
       },
       "originalSource": {
         "title": "Βρώμικος Χάρι",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 10456,
         "filters": {},
         "provider": "tmdb",
@@ -46003,8 +46003,8 @@
       "position": 0,
       "title": "Σε βλέπω",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46016,7 +46016,7 @@
       },
       "originalSource": {
         "title": "Σε βλέπω",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 656,
         "filters": {},
         "provider": "tmdb",
@@ -46031,8 +46031,8 @@
       "position": 0,
       "title": "Lethal Weapon",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46044,7 +46044,7 @@
       },
       "originalSource": {
         "title": "Lethal Weapon",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 945,
         "filters": {},
         "provider": "tmdb",
@@ -46059,8 +46059,8 @@
       "position": 0,
       "title": "Ο Άρχοντας των Δαχτυλιδιών",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46072,7 +46072,7 @@
       },
       "originalSource": {
         "title": "Ο Άρχοντας των Δαχτυλιδιών",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 119,
         "filters": {},
         "provider": "tmdb",
@@ -46087,8 +46087,8 @@
       "position": 0,
       "title": "Dragon Ball",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46100,7 +46100,7 @@
       },
       "originalSource": {
         "title": "Dragon Ball",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 386410,
         "filters": {},
         "provider": "tmdb",
@@ -46115,8 +46115,8 @@
       "position": 0,
       "title": "Behind Enemy Lines",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46128,7 +46128,7 @@
       },
       "originalSource": {
         "title": "Behind Enemy Lines",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 98513,
         "filters": {},
         "provider": "tmdb",
@@ -46143,8 +46143,8 @@
       "position": 0,
       "title": "Ο Σκοτεινός Ιππότης",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46156,7 +46156,7 @@
       },
       "originalSource": {
         "title": "Ο Σκοτεινός Ιππότης",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 263,
         "filters": {},
         "provider": "tmdb",
@@ -46171,8 +46171,8 @@
       "position": 0,
       "title": "Το Ημερολόγιο ενός Σπασίκλα",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46184,7 +46184,7 @@
       },
       "originalSource": {
         "title": "Το Ημερολόγιο ενός Σπασίκλα",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 86110,
         "filters": {},
         "provider": "tmdb",
@@ -46199,8 +46199,8 @@
       "position": 0,
       "title": "Demon Slayer: Kimetsu no Yaiba",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46212,7 +46212,7 @@
       },
       "originalSource": {
         "title": "Demon Slayer: Kimetsu no Yaiba",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 925155,
         "filters": {},
         "provider": "tmdb",
@@ -46227,8 +46227,8 @@
       "position": 0,
       "title": "Ο απίθανος κόσμος του Γουέιν",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46240,7 +46240,7 @@
       },
       "originalSource": {
         "title": "Ο απίθανος κόσμος του Γουέιν",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 8979,
         "filters": {},
         "provider": "tmdb",
@@ -46255,8 +46255,8 @@
       "position": 0,
       "title": "xXx",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46268,7 +46268,7 @@
       },
       "originalSource": {
         "title": "xXx",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 52785,
         "filters": {},
         "provider": "tmdb",
@@ -46283,8 +46283,8 @@
       "position": 0,
       "title": "Clash of the Titans",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46296,7 +46296,7 @@
       },
       "originalSource": {
         "title": "Clash of the Titans",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 86780,
         "filters": {},
         "provider": "tmdb",
@@ -46311,8 +46311,8 @@
       "position": 0,
       "title": "Jaws",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46324,7 +46324,7 @@
       },
       "originalSource": {
         "title": "Jaws",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 2366,
         "filters": {},
         "provider": "tmdb",
@@ -46339,8 +46339,8 @@
       "position": 0,
       "title": "Avatar",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46352,7 +46352,7 @@
       },
       "originalSource": {
         "title": "Avatar",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 87096,
         "filters": {},
         "provider": "tmdb",
@@ -46367,8 +46367,8 @@
       "position": 0,
       "title": "Bridget Jones",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46380,7 +46380,7 @@
       },
       "originalSource": {
         "title": "Bridget Jones",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 8936,
         "filters": {},
         "provider": "tmdb",
@@ -46395,8 +46395,8 @@
       "position": 0,
       "title": "Goal!",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46408,7 +46408,7 @@
       },
       "originalSource": {
         "title": "Goal!",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 110177,
         "filters": {},
         "provider": "tmdb",
@@ -46423,8 +46423,8 @@
       "position": 0,
       "title": "Σέρλοκ Χολμς",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46436,7 +46436,7 @@
       },
       "originalSource": {
         "title": "Σέρλοκ Χολμς",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 102322,
         "filters": {},
         "provider": "tmdb",
@@ -46451,8 +46451,8 @@
       "position": 0,
       "title": "Scary Movie",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46464,7 +46464,7 @@
       },
       "originalSource": {
         "title": "Scary Movie",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 4246,
         "filters": {},
         "provider": "tmdb",
@@ -46479,8 +46479,8 @@
       "position": 0,
       "title": "Αγώνες πείνας",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46492,7 +46492,7 @@
       },
       "originalSource": {
         "title": "Αγώνες πείνας",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 131635,
         "filters": {},
         "provider": "tmdb",
@@ -46507,8 +46507,8 @@
       "position": 0,
       "title": "Η Εποχή των Παγετώνων",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46520,7 +46520,7 @@
       },
       "originalSource": {
         "title": "Η Εποχή των Παγετώνων",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 8354,
         "filters": {},
         "provider": "tmdb",
@@ -46535,8 +46535,8 @@
       "position": 0,
       "title": "Πώς να Εκπαιδεύσετε το Δράκο σας",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46548,7 +46548,7 @@
       },
       "originalSource": {
         "title": "Πώς να Εκπαιδεύσετε το Δράκο σας",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 89137,
         "filters": {},
         "provider": "tmdb",
@@ -46563,8 +46563,8 @@
       "position": 0,
       "title": "Ιντιάνα Τζόουνς",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46576,7 +46576,7 @@
       },
       "originalSource": {
         "title": "Ιντιάνα Τζόουνς",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 84,
         "filters": {},
         "provider": "tmdb",
@@ -46591,8 +46591,8 @@
       "position": 0,
       "title": "Jump Street",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46604,7 +46604,7 @@
       },
       "originalSource": {
         "title": "Jump Street",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 212562,
         "filters": {},
         "provider": "tmdb",
@@ -46619,8 +46619,8 @@
       "position": 0,
       "title": "Starship Troopers",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46632,7 +46632,7 @@
       },
       "originalSource": {
         "title": "Starship Troopers",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 10522,
         "filters": {},
         "provider": "tmdb",
@@ -46647,8 +46647,8 @@
       "position": 0,
       "title": "Υπάλληλοι",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46660,7 +46660,7 @@
       },
       "originalSource": {
         "title": "Υπάλληλοι",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 182813,
         "filters": {},
         "provider": "tmdb",
@@ -46675,8 +46675,8 @@
       "position": 0,
       "title": "Αρχηγός από Κούνια",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46688,7 +46688,7 @@
       },
       "originalSource": {
         "title": "Αρχηγός από Κούνια",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 519457,
         "filters": {},
         "provider": "tmdb",
@@ -46703,8 +46703,8 @@
       "position": 0,
       "title": "Texas Chainsaw Massacre",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46716,7 +46716,7 @@
       },
       "originalSource": {
         "title": "Texas Chainsaw Massacre",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 111751,
         "filters": {},
         "provider": "tmdb",
@@ -46731,8 +46731,8 @@
       "position": 0,
       "title": "Η Ιστορία των Παιχνιδιών",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46744,7 +46744,7 @@
       },
       "originalSource": {
         "title": "Η Ιστορία των Παιχνιδιών",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 10194,
         "filters": {},
         "provider": "tmdb",
@@ -46759,8 +46759,8 @@
       "position": 0,
       "title": "Ace Ventura",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46772,7 +46772,7 @@
       },
       "originalSource": {
         "title": "Ace Ventura",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 3167,
         "filters": {},
         "provider": "tmdb",
@@ -46787,8 +46787,8 @@
       "position": 0,
       "title": "Χάρι Πότερ",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46800,7 +46800,7 @@
       },
       "originalSource": {
         "title": "Χάρι Πότερ",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 1241,
         "filters": {},
         "provider": "tmdb",
@@ -46815,8 +46815,8 @@
       "position": 0,
       "title": "Γαμπρός της Συμφοράς",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46828,7 +46828,7 @@
       },
       "originalSource": {
         "title": "Γαμπρός της Συμφοράς",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 51509,
         "filters": {},
         "provider": "tmdb",
@@ -46843,8 +46843,8 @@
       "position": 0,
       "title": "Karate Kid",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46856,7 +46856,7 @@
       },
       "originalSource": {
         "title": "Karate Kid",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 8580,
         "filters": {},
         "provider": "tmdb",
@@ -46871,8 +46871,8 @@
       "position": 0,
       "title": "Tremors",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46884,7 +46884,7 @@
       },
       "originalSource": {
         "title": "Tremors",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 91799,
         "filters": {},
         "provider": "tmdb",
@@ -46899,8 +46899,8 @@
       "position": 0,
       "title": "Παγιδευμένη Ψυχή",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46912,7 +46912,7 @@
       },
       "originalSource": {
         "title": "Παγιδευμένη Ψυχή",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 228446,
         "filters": {},
         "provider": "tmdb",
@@ -46927,8 +46927,8 @@
       "position": 0,
       "title": "Η Ταινία Lego",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46940,7 +46940,7 @@
       },
       "originalSource": {
         "title": "Η Ταινία Lego",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 325470,
         "filters": {},
         "provider": "tmdb",
@@ -46955,8 +46955,8 @@
       "position": 0,
       "title": "Εφιάλτης στο δρόμο με τις λεύκες",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46968,7 +46968,7 @@
       },
       "originalSource": {
         "title": "Εφιάλτης στο δρόμο με τις λεύκες",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 8581,
         "filters": {},
         "provider": "tmdb",
@@ -46983,8 +46983,8 @@
       "position": 0,
       "title": "Επικίνδυνη αποστολή",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -46996,7 +46996,7 @@
       },
       "originalSource": {
         "title": "Επικίνδυνη αποστολή",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 87359,
         "filters": {},
         "provider": "tmdb",
@@ -47011,8 +47011,8 @@
       "position": 0,
       "title": "Sicario",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47024,7 +47024,7 @@
       },
       "originalSource": {
         "title": "Sicario",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 496796,
         "filters": {},
         "provider": "tmdb",
@@ -47039,8 +47039,8 @@
       "position": 0,
       "title": "Horrible Bosses",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47052,7 +47052,7 @@
       },
       "originalSource": {
         "title": "Horrible Bosses",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 280588,
         "filters": {},
         "provider": "tmdb",
@@ -47067,8 +47067,8 @@
       "position": 0,
       "title": "Blade Runner",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47080,7 +47080,7 @@
       },
       "originalSource": {
         "title": "Blade Runner",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 422837,
         "filters": {},
         "provider": "tmdb",
@@ -47095,8 +47095,8 @@
       "position": 0,
       "title": "G.I. Joe (Live-Action)",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47108,7 +47108,7 @@
       },
       "originalSource": {
         "title": "G.I. Joe (Live-Action)",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 135468,
         "filters": {},
         "provider": "tmdb",
@@ -47123,8 +47123,8 @@
       "position": 0,
       "title": "Το Χρονικό της Νάρνια",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47136,7 +47136,7 @@
       },
       "originalSource": {
         "title": "Το Χρονικό της Νάρνια",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 420,
         "filters": {},
         "provider": "tmdb",
@@ -47151,8 +47151,8 @@
       "position": 0,
       "title": "Τα Κακά Παιδιά",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47164,7 +47164,7 @@
       },
       "originalSource": {
         "title": "Τα Κακά Παιδιά",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 14890,
         "filters": {},
         "provider": "tmdb",
@@ -47179,8 +47179,8 @@
       "position": 0,
       "title": "Jack Reacher",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47192,7 +47192,7 @@
       },
       "originalSource": {
         "title": "Jack Reacher",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 403374,
         "filters": {},
         "provider": "tmdb",
@@ -47207,8 +47207,8 @@
       "position": 0,
       "title": "Matrix",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47220,7 +47220,7 @@
       },
       "originalSource": {
         "title": "Matrix",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 2344,
         "filters": {},
         "provider": "tmdb",
@@ -47235,8 +47235,8 @@
       "position": 0,
       "title": "Godzilla",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47248,7 +47248,7 @@
       },
       "originalSource": {
         "title": "Godzilla",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 535313,
         "filters": {},
         "provider": "tmdb",
@@ -47263,8 +47263,8 @@
       "position": 0,
       "title": "Μπορν",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47276,7 +47276,7 @@
       },
       "originalSource": {
         "title": "Μπορν",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 31562,
         "filters": {},
         "provider": "tmdb",
@@ -47291,8 +47291,8 @@
       "position": 0,
       "title": "Τραγούδα!",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47304,7 +47304,7 @@
       },
       "originalSource": {
         "title": "Τραγούδα!",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 544670,
         "filters": {},
         "provider": "tmdb",
@@ -47319,8 +47319,8 @@
       "position": 0,
       "title": "Σήμα κινδύνου",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47332,7 +47332,7 @@
       },
       "originalSource": {
         "title": "Σήμα κινδύνου",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 14563,
         "filters": {},
         "provider": "tmdb",
@@ -47347,8 +47347,8 @@
       "position": 0,
       "title": "Παρασκευή και 13",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47360,7 +47360,7 @@
       },
       "originalSource": {
         "title": "Παρασκευή και 13",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 9735,
         "filters": {},
         "provider": "tmdb",
@@ -47375,8 +47375,8 @@
       "position": 0,
       "title": "Kingsman",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47388,7 +47388,7 @@
       },
       "originalSource": {
         "title": "Kingsman",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 391860,
         "filters": {},
         "provider": "tmdb",
@@ -47403,8 +47403,8 @@
       "position": 0,
       "title": "Ο Πλανήτης των Πιθήκων (Reboot)",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47416,7 +47416,7 @@
       },
       "originalSource": {
         "title": "Ο Πλανήτης των Πιθήκων (Reboot)",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 173710,
         "filters": {},
         "provider": "tmdb",
@@ -47431,8 +47431,8 @@
       "position": 0,
       "title": "Το Κάλεσμα",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47444,7 +47444,7 @@
       },
       "originalSource": {
         "title": "Το Κάλεσμα",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 313086,
         "filters": {},
         "provider": "tmdb",
@@ -47459,8 +47459,8 @@
       "position": 0,
       "title": "Ο Εξολοθρευτής",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47472,7 +47472,7 @@
       },
       "originalSource": {
         "title": "Ο Εξολοθρευτής",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 528,
         "filters": {},
         "provider": "tmdb",
@@ -47487,8 +47487,8 @@
       "position": 0,
       "title": "Scooby-Doo",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47500,7 +47500,7 @@
       },
       "originalSource": {
         "title": "Scooby-Doo",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 86860,
         "filters": {},
         "provider": "tmdb",
@@ -47515,8 +47515,8 @@
       "position": 0,
       "title": "Οι Άντρες με τα Μαύρα",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47528,7 +47528,7 @@
       },
       "originalSource": {
         "title": "Οι Άντρες με τα Μαύρα",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 86055,
         "filters": {},
         "provider": "tmdb",
@@ -47543,8 +47543,8 @@
       "position": 0,
       "title": "Star Trek: Alternate Reality",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47556,7 +47556,7 @@
       },
       "originalSource": {
         "title": "Star Trek: Alternate Reality",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 115575,
         "filters": {},
         "provider": "tmdb",
@@ -47571,8 +47571,8 @@
       "position": 0,
       "title": "Οι Μαχητές των Δρόμων",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47584,7 +47584,7 @@
       },
       "originalSource": {
         "title": "Οι Μαχητές των Δρόμων",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 9485,
         "filters": {},
         "provider": "tmdb",
@@ -47599,8 +47599,8 @@
       "position": 0,
       "title": "Spider-Man",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47612,7 +47612,7 @@
       },
       "originalSource": {
         "title": "Spider-Man",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 556,
         "filters": {},
         "provider": "tmdb",
@@ -47627,8 +47627,8 @@
       "position": 0,
       "title": "Ο Μεταφορέας",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47640,7 +47640,7 @@
       },
       "originalSource": {
         "title": "Ο Μεταφορέας",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 9518,
         "filters": {},
         "provider": "tmdb",
@@ -47655,8 +47655,8 @@
       "position": 0,
       "title": "Αυτοκίνητα",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47668,7 +47668,7 @@
       },
       "originalSource": {
         "title": "Αυτοκίνητα",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 87118,
         "filters": {},
         "provider": "tmdb",
@@ -47683,8 +47683,8 @@
       "position": 0,
       "title": "Hellraiser",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47696,7 +47696,7 @@
       },
       "originalSource": {
         "title": "Hellraiser",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 8917,
         "filters": {},
         "provider": "tmdb",
@@ -47711,8 +47711,8 @@
       "position": 0,
       "title": "Ρόμποκοπ",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47724,7 +47724,7 @@
       },
       "originalSource": {
         "title": "Ρόμποκοπ",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 5547,
         "filters": {},
         "provider": "tmdb",
@@ -47739,8 +47739,8 @@
       "position": 0,
       "title": "Ψάχνοντας τον Νέμο",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47752,7 +47752,7 @@
       },
       "originalSource": {
         "title": "Ψάχνοντας τον Νέμο",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 137697,
         "filters": {},
         "provider": "tmdb",
@@ -47767,8 +47767,8 @@
       "position": 0,
       "title": "X-Men",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47780,7 +47780,7 @@
       },
       "originalSource": {
         "title": "X-Men",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 748,
         "filters": {},
         "provider": "tmdb",
@@ -47795,8 +47795,8 @@
       "position": 0,
       "title": "Μια Νύχτα στο Μουσείο",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47808,7 +47808,7 @@
       },
       "originalSource": {
         "title": "Μια Νύχτα στο Μουσείο",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 85943,
         "filters": {},
         "provider": "tmdb",
@@ -47823,8 +47823,8 @@
       "position": 0,
       "title": "Rambo",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47836,7 +47836,7 @@
       },
       "originalSource": {
         "title": "Rambo",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 5039,
         "filters": {},
         "provider": "tmdb",
@@ -47851,8 +47851,8 @@
       "position": 0,
       "title": "Ρόκυ",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47864,7 +47864,7 @@
       },
       "originalSource": {
         "title": "Ρόκυ",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 1575,
         "filters": {},
         "provider": "tmdb",
@@ -47879,8 +47879,8 @@
       "position": 0,
       "title": "Austin Powers",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47892,7 +47892,7 @@
       },
       "originalSource": {
         "title": "Austin Powers",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 1006,
         "filters": {},
         "provider": "tmdb",
@@ -47907,8 +47907,8 @@
       "position": 0,
       "title": "Paranormal Activity",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47920,7 +47920,7 @@
       },
       "originalSource": {
         "title": "Paranormal Activity",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 41437,
         "filters": {},
         "provider": "tmdb",
@@ -47935,8 +47935,8 @@
       "position": 0,
       "title": "Pitch Perfect",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47948,7 +47948,7 @@
       },
       "originalSource": {
         "title": "Pitch Perfect",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 306031,
         "filters": {},
         "provider": "tmdb",
@@ -47963,8 +47963,8 @@
       "position": 0,
       "title": "Μπαμπούλες",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -47976,7 +47976,7 @@
       },
       "originalSource": {
         "title": "Μπαμπούλες",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 137696,
         "filters": {},
         "provider": "tmdb",
@@ -47991,8 +47991,8 @@
       "position": 0,
       "title": "Beverly Hills Cop",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48004,7 +48004,7 @@
       },
       "originalSource": {
         "title": "Beverly Hills Cop",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 85861,
         "filters": {},
         "provider": "tmdb",
@@ -48019,8 +48019,8 @@
       "position": 0,
       "title": "Dune",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48032,7 +48032,7 @@
       },
       "originalSource": {
         "title": "Dune",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 726871,
         "filters": {},
         "provider": "tmdb",
@@ -48047,8 +48047,8 @@
       "position": 0,
       "title": "V/H/S",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48060,7 +48060,7 @@
       },
       "originalSource": {
         "title": "V/H/S",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 207621,
         "filters": {},
         "provider": "tmdb",
@@ -48075,8 +48075,8 @@
       "position": 0,
       "title": "Άνθρωπος από ατσάλι",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48088,7 +48088,7 @@
       },
       "originalSource": {
         "title": "Άνθρωπος από ατσάλι",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 209131,
         "filters": {},
         "provider": "tmdb",
@@ -48103,8 +48103,8 @@
       "position": 0,
       "title": "Top Gun",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48116,7 +48116,7 @@
       },
       "originalSource": {
         "title": "Top Gun",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 531330,
         "filters": {},
         "provider": "tmdb",
@@ -48131,8 +48131,8 @@
       "position": 0,
       "title": "Τζουράσικ Παρκ",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48144,7 +48144,7 @@
       },
       "originalSource": {
         "title": "Τζουράσικ Παρκ",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 328,
         "filters": {},
         "provider": "tmdb",
@@ -48159,8 +48159,8 @@
       "position": 0,
       "title": "Σρεκ",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48172,7 +48172,7 @@
       },
       "originalSource": {
         "title": "Σρεκ",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 2150,
         "filters": {},
         "provider": "tmdb",
@@ -48187,8 +48187,8 @@
       "position": 0,
       "title": "Εγώ, ο Απαισιότατος",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48200,7 +48200,7 @@
       },
       "originalSource": {
         "title": "Εγώ, ο Απαισιότατος",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 86066,
         "filters": {},
         "provider": "tmdb",
@@ -48215,8 +48215,8 @@
       "position": 0,
       "title": "Η Οικογένεια Άνταμς",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48228,7 +48228,7 @@
       },
       "originalSource": {
         "title": "Η Οικογένεια Άνταμς",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 750822,
         "filters": {},
         "provider": "tmdb",
@@ -48243,8 +48243,8 @@
       "position": 0,
       "title": "Expendables",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48256,7 +48256,7 @@
       },
       "originalSource": {
         "title": "Expendables",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 126125,
         "filters": {},
         "provider": "tmdb",
@@ -48271,8 +48271,8 @@
       "position": 0,
       "title": "Η Νύχτα με τις Μάσκες",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48284,7 +48284,7 @@
       },
       "originalSource": {
         "title": "Η Νύχτα με τις Μάσκες",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 91361,
         "filters": {},
         "provider": "tmdb",
@@ -48299,8 +48299,8 @@
       "position": 0,
       "title": "Τα Μυαλά που Κουβαλάς",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48312,7 +48312,7 @@
       },
       "originalSource": {
         "title": "Τα Μυαλά που Κουβαλάς",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 1022790,
         "filters": {},
         "provider": "tmdb",
@@ -48327,8 +48327,8 @@
       "position": 0,
       "title": "Pacific Rim",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48340,7 +48340,7 @@
       },
       "originalSource": {
         "title": "Pacific Rim",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 363369,
         "filters": {},
         "provider": "tmdb",
@@ -48355,8 +48355,8 @@
       "position": 0,
       "title": "Percy Jackson",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48368,7 +48368,7 @@
       },
       "originalSource": {
         "title": "Percy Jackson",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 179919,
         "filters": {},
         "provider": "tmdb",
@@ -48383,8 +48383,8 @@
       "position": 0,
       "title": "Οι Μεγάλοι",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48396,7 +48396,7 @@
       },
       "originalSource": {
         "title": "Οι Μεγάλοι",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 180546,
         "filters": {},
         "provider": "tmdb",
@@ -48411,8 +48411,8 @@
       "position": 0,
       "title": "Κουνγκ Φου Πάντα",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48424,7 +48424,7 @@
       },
       "originalSource": {
         "title": "Κουνγκ Φου Πάντα",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 77816,
         "filters": {},
         "provider": "tmdb",
@@ -48439,8 +48439,8 @@
       "position": 0,
       "title": "Επιστροφή στο μέλλον",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48452,7 +48452,7 @@
       },
       "originalSource": {
         "title": "Επιστροφή στο μέλλον",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 264,
         "filters": {},
         "provider": "tmdb",
@@ -48467,8 +48467,8 @@
       "position": 0,
       "title": "A Quiet Place",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48480,7 +48480,7 @@
       },
       "originalSource": {
         "title": "A Quiet Place",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 521226,
         "filters": {},
         "provider": "tmdb",
@@ -48495,8 +48495,8 @@
       "position": 0,
       "title": "Χόμπιτ",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48508,7 +48508,7 @@
       },
       "originalSource": {
         "title": "Χόμπιτ",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 121938,
         "filters": {},
         "provider": "tmdb",
@@ -48523,8 +48523,8 @@
       "position": 0,
       "title": "Star Wars: Το Έπος των Skywalker",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48536,7 +48536,7 @@
       },
       "originalSource": {
         "title": "Star Wars: Το Έπος των Skywalker",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 10,
         "filters": {},
         "provider": "tmdb",
@@ -48551,8 +48551,8 @@
       "position": 0,
       "title": "Μαδαγασκάρη",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48564,7 +48564,7 @@
       },
       "originalSource": {
         "title": "Μαδαγασκάρη",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 14740,
         "filters": {},
         "provider": "tmdb",
@@ -48579,8 +48579,8 @@
       "position": 0,
       "title": "Underworld",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48592,7 +48592,7 @@
       },
       "originalSource": {
         "title": "Underworld",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 2326,
         "filters": {},
         "provider": "tmdb",
@@ -48607,8 +48607,8 @@
       "position": 0,
       "title": "Ο Λαβύρινθος",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48620,7 +48620,7 @@
       },
       "originalSource": {
         "title": "Ο Λαβύρινθος",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 295130,
         "filters": {},
         "provider": "tmdb",
@@ -48635,8 +48635,8 @@
       "position": 0,
       "title": "Zombieland",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48648,7 +48648,7 @@
       },
       "originalSource": {
         "title": "Zombieland",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 537982,
         "filters": {},
         "provider": "tmdb",
@@ -48663,8 +48663,8 @@
       "position": 0,
       "title": "Γύρισε ο μπαμπάς",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48676,7 +48676,7 @@
       },
       "originalSource": {
         "title": "Γύρισε ο μπαμπάς",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 473971,
         "filters": {},
         "provider": "tmdb",
@@ -48691,8 +48691,8 @@
       "position": 0,
       "title": "Evil Dead",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48704,7 +48704,7 @@
       },
       "originalSource": {
         "title": "Evil Dead",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 1960,
         "filters": {},
         "provider": "tmdb",
@@ -48719,8 +48719,8 @@
       "position": 0,
       "title": "Αλεξίσφαιροι Ντετέκτιβ",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48732,7 +48732,7 @@
       },
       "originalSource": {
         "title": "Αλεξίσφαιροι Ντετέκτιβ",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 90863,
         "filters": {},
         "provider": "tmdb",
@@ -48747,8 +48747,8 @@
       "position": 0,
       "title": "Βρέχει κεφτέδες",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48760,7 +48760,7 @@
       },
       "originalSource": {
         "title": "Βρέχει κεφτέδες",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 177467,
         "filters": {},
         "provider": "tmdb",
@@ -48775,8 +48775,8 @@
       "position": 0,
       "title": "Φύλακες του Γαλαξία",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48788,7 +48788,7 @@
       },
       "originalSource": {
         "title": "Φύλακες του Γαλαξία",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 284433,
         "filters": {},
         "provider": "tmdb",
@@ -48803,8 +48803,8 @@
       "position": 0,
       "title": "Καταστροφέας Ραλφ",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48816,7 +48816,7 @@
       },
       "originalSource": {
         "title": "Καταστροφέας Ραλφ",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 404825,
         "filters": {},
         "provider": "tmdb",
@@ -48831,8 +48831,8 @@
       "position": 0,
       "title": "Trolls Holiday",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48844,7 +48844,7 @@
       },
       "originalSource": {
         "title": "Trolls Holiday",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 1184152,
         "filters": {},
         "provider": "tmdb",
@@ -48859,8 +48859,8 @@
       "position": 0,
       "title": "Μίνιονς",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48872,7 +48872,7 @@
       },
       "originalSource": {
         "title": "Μίνιονς",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 544669,
         "filters": {},
         "provider": "tmdb",
@@ -48887,8 +48887,8 @@
       "position": 0,
       "title": "Χαϊλάντερ",
       "mediaType": "MOVIE",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "collection",
       "listId": null,
       "params": {
         "legacy": {
@@ -48900,7 +48900,7 @@
       },
       "originalSource": {
         "title": "Χαϊλάντερ",
-        "sortBy": "primary_release_date.desc",
+        "sortBy": "original",
         "tmdbId": 8050,
         "filters": {},
         "provider": "tmdb",
@@ -60337,8 +60337,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60355,7 +60355,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 68,
         "addonId": null,
         "filters": {
@@ -60377,7 +60377,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60417,8 +60417,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60435,7 +60435,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 54,
         "addonId": null,
         "filters": {
@@ -60457,7 +60457,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60497,8 +60497,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60515,7 +60515,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 30,
         "addonId": null,
         "filters": {
@@ -60537,7 +60537,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60577,8 +60577,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60595,7 +60595,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 56,
         "addonId": null,
         "filters": {
@@ -60617,7 +60617,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60657,8 +60657,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60675,7 +60675,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 318,
         "addonId": null,
         "filters": {
@@ -60697,7 +60697,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60737,8 +60737,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60755,7 +60755,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 49,
         "addonId": null,
         "filters": {
@@ -60777,7 +60777,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60817,8 +60817,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60835,7 +60835,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 71,
         "addonId": null,
         "filters": {
@@ -60857,7 +60857,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60897,8 +60897,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60915,7 +60915,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 67,
         "addonId": null,
         "filters": {
@@ -60936,8 +60936,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -60954,7 +60954,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 74,
         "addonId": null,
         "filters": {
@@ -60976,7 +60976,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61016,8 +61016,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61034,7 +61034,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 77,
         "addonId": null,
         "filters": {
@@ -61056,7 +61056,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61096,8 +61096,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61114,7 +61114,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 47,
         "addonId": null,
         "filters": {
@@ -61136,7 +61136,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61176,8 +61176,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61194,7 +61194,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 4,
         "addonId": null,
         "filters": {
@@ -61216,7 +61216,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61256,8 +61256,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61274,7 +61274,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 210,
         "addonId": null,
         "filters": {
@@ -61296,7 +61296,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61336,8 +61336,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61354,7 +61354,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 84,
         "addonId": null,
         "filters": {
@@ -61376,7 +61376,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61416,8 +61416,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61434,7 +61434,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 41,
         "addonId": null,
         "filters": {
@@ -61456,7 +61456,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61496,8 +61496,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61514,7 +61514,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 26,
         "addonId": null,
         "filters": {
@@ -61536,7 +61536,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61576,8 +61576,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61594,7 +61594,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 88,
         "addonId": null,
         "filters": {
@@ -61616,7 +61616,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61656,8 +61656,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61674,7 +61674,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 65,
         "addonId": null,
         "filters": {
@@ -61696,7 +61696,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61736,8 +61736,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61754,7 +61754,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 64,
         "addonId": null,
         "filters": {
@@ -61776,7 +61776,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61816,8 +61816,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61834,7 +61834,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 174,
         "addonId": null,
         "filters": {
@@ -61856,7 +61856,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61896,8 +61896,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61914,7 +61914,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 13,
         "addonId": null,
         "filters": {
@@ -61936,7 +61936,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61976,8 +61976,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -61994,7 +61994,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 129,
         "addonId": null,
         "filters": {
@@ -62016,7 +62016,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62056,8 +62056,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62074,7 +62074,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 14,
         "addonId": null,
         "filters": {
@@ -62096,7 +62096,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62136,8 +62136,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62154,7 +62154,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 16,
         "addonId": null,
         "filters": {
@@ -62176,7 +62176,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62216,8 +62216,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62234,7 +62234,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 43,
         "addonId": null,
         "filters": {
@@ -62256,7 +62256,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62296,8 +62296,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62314,7 +62314,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 6,
         "addonId": null,
         "filters": {
@@ -62336,7 +62336,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62376,8 +62376,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62394,7 +62394,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 2,
         "addonId": null,
         "filters": {
@@ -62416,7 +62416,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62456,8 +62456,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62474,7 +62474,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 80,
         "addonId": null,
         "filters": {
@@ -62496,7 +62496,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62536,8 +62536,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62554,7 +62554,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 33,
         "addonId": null,
         "filters": {
@@ -62576,7 +62576,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62616,8 +62616,8 @@
       "position": 0,
       "title": "Δημοφιλείς σειρές",
       "mediaType": "TV",
-      "strategy": "native",
-      "materializer": null,
+      "strategy": "materialized",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {
@@ -62634,7 +62634,7 @@
         "type": null,
         "genre": null,
         "title": "Δημοφιλείς σειρές",
-        "sortBy": "popularity.desc",
+        "sortBy": "first_air_date.desc",
         "tmdbId": 19,
         "addonId": null,
         "filters": {
@@ -62656,7 +62656,7 @@
       "title": "Πρόσφατες σειρές",
       "mediaType": "TV",
       "strategy": "materialized",
-      "materializer": "network_recent",
+      "materializer": "network",
       "listId": null,
       "params": {
         "legacy": {

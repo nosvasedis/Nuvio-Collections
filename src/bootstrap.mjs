@@ -5,10 +5,10 @@ const MATERIALIZED_COLLECTIONS = new Set(["collections.streaming", "collections.
 
 function strategy(collection, folder, source, index) {
   if (MATERIALIZED_COLLECTIONS.has(collection.id)) return "materialized";
-  if (collection.id === "collections.film-series") return "native";
-  if (collection.id === "collections.networks") return index === 0 ? "native" : "materialized";
+  if (collection.id === "collections.film-series") return "materialized";
+  if (collection.id === "collections.networks") return "materialized";
   if (collection.id === "collections.discover") return "materialized";
-  if (collection.id === "collections.decades") return folder.id === "collections.decades.2020s" && /2026/.test(source.title ?? "") ? "materialized" : "native";
+  if (collection.id === "collections.decades") return "materialized";
   throw new Error(`Unclassified source: ${collection.id}/${folder.id}/${index}`);
 }
 
@@ -22,11 +22,11 @@ const DISCOVER_TOP_POLICIES = Object.freeze({
 function materializer(collectionId) {
   return ({
     "collections.streaming": "streaming", "collections.genres": "discover", "collections.moods": "discover",
-    "collections.studios": "company", "collections.networks": "network_recent",
+    "collections.studios": "company", "collections.networks": "network",
     "collections.actors": "person_cast", "collections.directors": "person_director",
     "collections.awards": "award", "collections.world": "origin_country",
     "collections.decades": "discover", "collections.runtime": "runtime",
-    "collections.discover": "discover",
+    "collections.discover": "discover", "collections.film-series": "collection",
   })[collectionId];
 }
 

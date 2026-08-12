@@ -1,9 +1,9 @@
 {
-  "date": "2026-08-11",
-  "folders": 30,
-  "rails": 189,
+  "date": "2026-08-12",
+  "folders": 33,
+  "rails": 281,
   "totals": {
-    "ok": 189,
+    "ok": 281,
     "empty": 0,
     "failed": 0
   },
@@ -17,7 +17,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 48,
       "status": "ok",
-      "durationMs": 127
+      "durationMs": 286
     },
     {
       "key": "collections.genres:folder-d1d8a13d:1",
@@ -25,9 +25,9 @@
       "title": "Νέες σειρές",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=10",
-      "count": 21,
+      "count": 19,
       "status": "ok",
-      "durationMs": 77
+      "durationMs": 84
     },
     {
       "key": "collections.genres:folder-d1d8a13d:2",
@@ -35,9 +35,9 @@
       "title": "Δημοφιλείς ταινίες",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=500",
-      "count": 200,
+      "count": 165,
       "status": "ok",
-      "durationMs": 198
+      "durationMs": 493
     },
     {
       "key": "collections.genres:folder-d1d8a13d:3",
@@ -45,29 +45,29 @@
       "title": "Δημοφιλείς σειρές",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=200",
-      "count": 55,
+      "count": 48,
       "status": "ok",
-      "durationMs": 92
+      "durationMs": 97
     },
     {
       "key": "collections.genres:folder-d1d8a13d:4",
       "folder": "Ρομαντική κομεντί",
       "title": "Κορυφαίες ταινίες όλων των εποχών",
       "media": "MOVIE",
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "count": 200,
       "status": "ok",
-      "durationMs": 106
+      "durationMs": 256
     },
     {
       "key": "collections.genres:folder-d1d8a13d:5",
       "folder": "Ρομαντική κομεντί",
       "title": "Κορυφαίες σειρές όλων των εποχών",
       "media": "TV",
-      "scope": "GLOBAL:VOTE_QUORUM=200",
-      "count": 55,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "count": 18,
       "status": "ok",
-      "durationMs": 37
+      "durationMs": 8
     },
     {
       "key": "collections.genres:folder-d1d8a13d:6",
@@ -77,7 +77,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 48,
       "status": "ok",
-      "durationMs": 34
+      "durationMs": 25
     },
     {
       "key": "collections.genres:folder-d1d8a13d:7",
@@ -85,9 +85,9 @@
       "title": "Κορυφαίες σειρές της χρονιάς",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=10",
-      "count": 21,
+      "count": 19,
       "status": "ok",
-      "durationMs": 18
+      "durationMs": 8
     },
     {
       "key": "collections.genres:folder-KDRAMA01:0",
@@ -97,7 +97,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 5,
       "status": "ok",
-      "durationMs": 10
+      "durationMs": 8
     },
     {
       "key": "collections.genres:folder-KDRAMA01:1",
@@ -107,7 +107,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 43,
       "status": "ok",
-      "durationMs": 28
+      "durationMs": 26
     },
     {
       "key": "collections.genres:folder-KDRAMA01:2",
@@ -115,9 +115,9 @@
       "title": "Δημοφιλείς ταινίες",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=200",
-      "count": 96,
+      "count": 94,
       "status": "ok",
-      "durationMs": 56
+      "durationMs": 212
     },
     {
       "key": "collections.genres:folder-KDRAMA01:3",
@@ -127,27 +127,27 @@
       "scope": "GLOBAL:VOTE_QUORUM=200",
       "count": 114,
       "status": "ok",
-      "durationMs": 61
+      "durationMs": 50
     },
     {
       "key": "collections.genres:folder-KDRAMA01:4",
       "folder": "Κορεατικά δράματα (K-Drama)",
       "title": "Κορυφαίες ταινίες όλων των εποχών",
       "media": "MOVIE",
-      "scope": "GLOBAL:VOTE_QUORUM=200",
-      "count": 96,
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
+      "count": 17,
       "status": "ok",
-      "durationMs": 51
+      "durationMs": 12
     },
     {
       "key": "collections.genres:folder-KDRAMA01:5",
       "folder": "Κορεατικά δράματα (K-Drama)",
       "title": "Κορυφαίες σειρές όλων των εποχών",
       "media": "TV",
-      "scope": "GLOBAL:VOTE_QUORUM=200",
-      "count": 114,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "count": 51,
       "status": "ok",
-      "durationMs": 59
+      "durationMs": 27
     },
     {
       "key": "collections.genres:folder-KDRAMA01:6",
@@ -167,7 +167,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 43,
       "status": "ok",
-      "durationMs": 24
+      "durationMs": 27
     },
     {
       "key": "collections.moods:folder-070BQVHR:0",
@@ -175,9 +175,9 @@
       "title": "Ιστορικά & πολεμικά έπη",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 182,
       "status": "ok",
-      "durationMs": 100
+      "durationMs": 567
     },
     {
       "key": "collections.moods:folder-070BQVHR:1",
@@ -185,9 +185,9 @@
       "title": "Μεγαλειώδη έπη φαντασίας",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 180,
       "status": "ok",
-      "durationMs": 98
+      "durationMs": 93
     },
     {
       "key": "collections.moods:folder-070BQVHR:2",
@@ -195,9 +195,9 @@
       "title": "Τηλεοπτικά έπη μεγάλης κλίμακας",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=50",
-      "count": 200,
+      "count": 190,
       "status": "ok",
-      "durationMs": 104
+      "durationMs": 85
     },
     {
       "key": "collections.moods:folder-070BQVHR:3",
@@ -207,7 +207,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 56,
       "status": "ok",
-      "durationMs": 28
+      "durationMs": 29
     },
     {
       "key": "collections.moods:folder-070BQVHR:4",
@@ -217,7 +217,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 200,
       "status": "ok",
-      "durationMs": 98
+      "durationMs": 422
     },
     {
       "key": "collections.moods:folder-070BQVHR:5",
@@ -227,7 +227,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 200,
       "status": "ok",
-      "durationMs": 101
+      "durationMs": 583
     },
     {
       "key": "collections.moods:folder-79A8YOOM:0",
@@ -235,9 +235,9 @@
       "title": "Στοιχειωμένα σπίτια & φαντάσματα",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 185,
       "status": "ok",
-      "durationMs": 94
+      "durationMs": 248
     },
     {
       "key": "collections.moods:folder-79A8YOOM:1",
@@ -245,9 +245,9 @@
       "title": "Απόκοσμες παραφυσικές σειρές",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=50",
-      "count": 200,
+      "count": 189,
       "status": "ok",
-      "durationMs": 95
+      "durationMs": 427
     },
     {
       "key": "collections.moods:folder-79A8YOOM:2",
@@ -265,9 +265,9 @@
       "title": "Τέρατα & πλάσματα",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 173,
+      "count": 159,
       "status": "ok",
-      "durationMs": 83
+      "durationMs": 105
     },
     {
       "key": "collections.moods:folder-79A8YOOM:4",
@@ -275,9 +275,9 @@
       "title": "Κορυφαία αριστουργήματα τρόμου",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 198,
       "status": "ok",
-      "durationMs": 92
+      "durationMs": 273
     },
     {
       "key": "collections.moods:folder-79A8YOOM:5",
@@ -287,7 +287,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 200,
       "status": "ok",
-      "durationMs": 85
+      "durationMs": 252
     },
     {
       "key": "collections.moods:folder-7AXTM9QX:0",
@@ -295,9 +295,9 @@
       "title": "Ανεβαστικές & εμπνευσμένες ταινίες",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 167,
       "status": "ok",
-      "durationMs": 102
+      "durationMs": 260
     },
     {
       "key": "collections.moods:folder-7AXTM9QX:1",
@@ -305,9 +305,9 @@
       "title": "Χαρούμενες κωμικές σειρές",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=50",
-      "count": 200,
+      "count": 186,
       "status": "ok",
-      "durationMs": 89
+      "durationMs": 243
     },
     {
       "key": "collections.moods:folder-7AXTM9QX:2",
@@ -315,9 +315,9 @@
       "title": "Εμπνευσμένες αληθινές ιστορίες",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 173,
       "status": "ok",
-      "durationMs": 101
+      "durationMs": 921
     },
     {
       "key": "collections.moods:folder-7AXTM9QX:3",
@@ -325,9 +325,9 @@
       "title": "Road trips & κωμωδίες φίλων",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 128,
+      "count": 125,
       "status": "ok",
-      "durationMs": 66
+      "durationMs": 60
     },
     {
       "key": "collections.moods:folder-7AXTM9QX:4",
@@ -335,9 +335,9 @@
       "title": "Κορυφαία feel-good κλασικά",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 199,
       "status": "ok",
-      "durationMs": 101
+      "durationMs": 84
     },
     {
       "key": "collections.moods:folder-7AXTM9QX:5",
@@ -347,7 +347,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 123,
       "status": "ok",
-      "durationMs": 63
+      "durationMs": 226
     },
     {
       "key": "collections.moods:folder-7TSDBZYI:0",
@@ -355,9 +355,9 @@
       "title": "Ανατρεπτικά θρίλερ επιστημονικής φαντασίας",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 180,
       "status": "ok",
-      "durationMs": 99
+      "durationMs": 89
     },
     {
       "key": "collections.moods:folder-7TSDBZYI:1",
@@ -367,7 +367,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=50",
       "count": 200,
       "status": "ok",
-      "durationMs": 103
+      "durationMs": 88
     },
     {
       "key": "collections.moods:folder-7TSDBZYI:2",
@@ -375,9 +375,9 @@
       "title": "Απρόβλεπτες ταινίες με ανατροπές",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 180,
       "status": "ok",
-      "durationMs": 99
+      "durationMs": 245
     },
     {
       "key": "collections.moods:folder-7TSDBZYI:3",
@@ -385,9 +385,9 @@
       "title": "Χρονικοί βρόχοι & εναλλακτικές πραγματικότητες",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 185,
       "status": "ok",
-      "durationMs": 111
+      "durationMs": 624
     },
     {
       "key": "collections.moods:folder-7TSDBZYI:4",
@@ -395,9 +395,9 @@
       "title": "Κορυφαία ψυχολογικά θρίλερ",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 198,
       "status": "ok",
-      "durationMs": 102
+      "durationMs": 412
     },
     {
       "key": "collections.moods:folder-7TSDBZYI:5",
@@ -407,7 +407,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 200,
       "status": "ok",
-      "durationMs": 87
+      "durationMs": 78
     },
     {
       "key": "collections.moods:folder-M50463BF:0",
@@ -415,9 +415,9 @@
       "title": "Σκληρό έγκλημα & υπόκοσμος",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 175,
       "status": "ok",
-      "durationMs": 97
+      "durationMs": 274
     },
     {
       "key": "collections.moods:folder-M50463BF:1",
@@ -425,9 +425,9 @@
       "title": "Έντονες σκοτεινές σειρές",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=50",
-      "count": 200,
+      "count": 196,
       "status": "ok",
-      "durationMs": 92
+      "durationMs": 245
     },
     {
       "key": "collections.moods:folder-M50463BF:2",
@@ -435,9 +435,9 @@
       "title": "Αντιήρωες & ιστορίες εκδίκησης",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 177,
       "status": "ok",
-      "durationMs": 105
+      "durationMs": 98
     },
     {
       "key": "collections.moods:folder-M50463BF:3",
@@ -445,9 +445,9 @@
       "title": "Δυστοπικά & μεταποκαλυπτικά",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 184,
       "status": "ok",
-      "durationMs": 95
+      "durationMs": 98
     },
     {
       "key": "collections.moods:folder-M50463BF:4",
@@ -457,7 +457,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 200,
       "status": "ok",
-      "durationMs": 92
+      "durationMs": 94
     },
     {
       "key": "collections.moods:folder-M50463BF:5",
@@ -467,7 +467,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 200,
       "status": "ok",
-      "durationMs": 100
+      "durationMs": 243
     },
     {
       "key": "collections.moods:folder-RSVZ5OM5:0",
@@ -475,9 +475,9 @@
       "title": "Ατμοσφαιρικά μυστήρια αργής καύσης",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 178,
       "status": "ok",
-      "durationMs": 98
+      "durationMs": 601
     },
     {
       "key": "collections.moods:folder-RSVZ5OM5:1",
@@ -485,9 +485,9 @@
       "title": "Στοιχειωτικές σειρές αργής καύσης",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=50",
-      "count": 200,
+      "count": 189,
       "status": "ok",
-      "durationMs": 94
+      "durationMs": 583
     },
     {
       "key": "collections.moods:folder-RSVZ5OM5:2",
@@ -495,9 +495,9 @@
       "title": "Neo-noir & σκοτεινό έγκλημα",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 174,
       "status": "ok",
-      "durationMs": 95
+      "durationMs": 237
     },
     {
       "key": "collections.moods:folder-RSVZ5OM5:3",
@@ -505,9 +505,9 @@
       "title": "Βαθιά δράματα χαρακτήρων",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 199,
       "status": "ok",
-      "durationMs": 92
+      "durationMs": 435
     },
     {
       "key": "collections.moods:folder-RSVZ5OM5:4",
@@ -517,7 +517,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 200,
       "status": "ok",
-      "durationMs": 111
+      "durationMs": 243
     },
     {
       "key": "collections.moods:folder-RSVZ5OM5:5",
@@ -527,7 +527,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 63,
       "status": "ok",
-      "durationMs": 36
+      "durationMs": 193
     },
     {
       "key": "collections.moods:folder-S21P049B:0",
@@ -535,9 +535,9 @@
       "title": "Καταιγιστικά action blockbusters",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 191,
       "status": "ok",
-      "durationMs": 106
+      "durationMs": 86
     },
     {
       "key": "collections.moods:folder-S21P049B:1",
@@ -545,9 +545,9 @@
       "title": "Ταινίες επιβίωσης & ληστειών",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 181,
       "status": "ok",
-      "durationMs": 114
+      "durationMs": 254
     },
     {
       "key": "collections.moods:folder-S21P049B:2",
@@ -555,9 +555,9 @@
       "title": "Σειρές δράσης & θρίλερ",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=50",
-      "count": 200,
+      "count": 192,
       "status": "ok",
-      "durationMs": 107
+      "durationMs": 405
     },
     {
       "key": "collections.moods:folder-S21P049B:3",
@@ -565,9 +565,9 @@
       "title": "Πολεμικές τέχνες & μάχες",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 174,
       "status": "ok",
-      "durationMs": 103
+      "durationMs": 741
     },
     {
       "key": "collections.moods:folder-S21P049B:4",
@@ -577,7 +577,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 200,
       "status": "ok",
-      "durationMs": 106
+      "durationMs": 587
     },
     {
       "key": "collections.moods:folder-S21P049B:5",
@@ -587,7 +587,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 200,
       "status": "ok",
-      "durationMs": 91
+      "durationMs": 252
     },
     {
       "key": "collections.moods:folder-SJGV86EH:0",
@@ -595,9 +595,9 @@
       "title": "Καταξιωμένες συγκινητικές ταινίες",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 185,
       "status": "ok",
-      "durationMs": 97
+      "durationMs": 409
     },
     {
       "key": "collections.moods:folder-SJGV86EH:1",
@@ -605,9 +605,9 @@
       "title": "Συναισθηματικές σειρές",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=50",
-      "count": 79,
+      "count": 77,
       "status": "ok",
-      "durationMs": 36
+      "durationMs": 623
     },
     {
       "key": "collections.moods:folder-SJGV86EH:2",
@@ -617,7 +617,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 200,
       "status": "ok",
-      "durationMs": 97
+      "durationMs": 255
     },
     {
       "key": "collections.moods:folder-SJGV86EH:3",
@@ -625,9 +625,9 @@
       "title": "Ιστορίες οικογένειας & απώλειας",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 101,
+      "count": 99,
       "status": "ok",
-      "durationMs": 59
+      "durationMs": 212
     },
     {
       "key": "collections.moods:folder-SJGV86EH:4",
@@ -635,9 +635,9 @@
       "title": "Κορυφαία συναισθηματικά αριστουργήματα",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 199,
       "status": "ok",
-      "durationMs": 98
+      "durationMs": 241
     },
     {
       "key": "collections.moods:folder-SJGV86EH:5",
@@ -647,7 +647,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 200,
       "status": "ok",
-      "durationMs": 96
+      "durationMs": 778
     },
     {
       "key": "collections.moods:folder-VRAANHHD:0",
@@ -655,9 +655,9 @@
       "title": "Εμβληματικά blockbusters των '80s",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=300",
-      "count": 200,
+      "count": 178,
       "status": "ok",
-      "durationMs": 96
+      "durationMs": 261
     },
     {
       "key": "collections.moods:folder-VRAANHHD:1",
@@ -665,9 +665,9 @@
       "title": "Εμβληματικά blockbusters των '90s",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=300",
-      "count": 200,
+      "count": 183,
       "status": "ok",
-      "durationMs": 96
+      "durationMs": 255
     },
     {
       "key": "collections.moods:folder-VRAANHHD:2",
@@ -675,9 +675,9 @@
       "title": "Popcorn δράση των '80s & '90s",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=300",
-      "count": 200,
+      "count": 181,
       "status": "ok",
-      "durationMs": 84
+      "durationMs": 606
     },
     {
       "key": "collections.moods:folder-VRAANHHD:3",
@@ -685,9 +685,9 @@
       "title": "Κλασικές κωμωδίες των '80s & '90s",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=300",
-      "count": 200,
+      "count": 168,
       "status": "ok",
-      "durationMs": 94
+      "durationMs": 271
     },
     {
       "key": "collections.moods:folder-VRAANHHD:4",
@@ -707,7 +707,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=200",
       "count": 15,
       "status": "ok",
-      "durationMs": 9
+      "durationMs": 166
     },
     {
       "key": "collections.moods:folder-W52X6SMF:0",
@@ -715,9 +715,9 @@
       "title": "Ρομαντικές κομεντί ζωντανής δράσης",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 181,
       "status": "ok",
-      "durationMs": 83
+      "durationMs": 415
     },
     {
       "key": "collections.moods:folder-W52X6SMF:1",
@@ -725,9 +725,9 @@
       "title": "Ζεστές κωμικές και δραματικές σειρές",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=50",
-      "count": 200,
+      "count": 183,
       "status": "ok",
-      "durationMs": 81
+      "durationMs": 234
     },
     {
       "key": "collections.moods:folder-W52X6SMF:2",
@@ -737,7 +737,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 200,
       "status": "ok",
-      "durationMs": 81
+      "durationMs": 87
     },
     {
       "key": "collections.moods:folder-W52X6SMF:3",
@@ -755,9 +755,9 @@
       "title": "Αγαπημένα ζεστά κινούμενα σχέδια",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 184,
       "status": "ok",
-      "durationMs": 90
+      "durationMs": 487
     },
     {
       "key": "collections.moods:folder-W52X6SMF:5",
@@ -765,9 +765,929 @@
       "title": "Πρόσφατες ζεστές ταινίες",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=10",
+      "count": 199,
+      "status": "ok",
+      "durationMs": 275
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:0",
+      "folder": "AMC+",
+      "title": "Τάσεις ταινιών",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 4,
+      "status": "ok",
+      "durationMs": 10381
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:1",
+      "folder": "AMC+",
+      "title": "Τάσεις σειρών",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 6195
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:2",
+      "folder": "AMC+",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 195,
+      "status": "ok",
+      "durationMs": 1992
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:3",
+      "folder": "AMC+",
+      "title": "Νέες σειρές",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 196,
+      "status": "ok",
+      "durationMs": 1520
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:4",
+      "folder": "AMC+",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
       "count": 200,
       "status": "ok",
-      "durationMs": 85
+      "durationMs": 2059
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:5",
+      "folder": "AMC+",
+      "title": "Δημοφιλείς σειρές",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 1899
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:6",
+      "folder": "AMC+",
+      "title": "Κορυφαίες ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 2197
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:7",
+      "folder": "AMC+",
+      "title": "Κορυφαίες σειρές",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 55,
+      "status": "ok",
+      "durationMs": 1457
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:8",
+      "folder": "AMC+",
+      "title": "Ταινίες δράσης",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 119,
+      "status": "ok",
+      "durationMs": 989
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:9",
+      "folder": "AMC+",
+      "title": "Σειρές δράσης",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 25,
+      "status": "ok",
+      "durationMs": 1028
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:10",
+      "folder": "AMC+",
+      "title": "Ταινίες περιπέτειας",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 44,
+      "status": "ok",
+      "durationMs": 913
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:11",
+      "folder": "AMC+",
+      "title": "Σειρές περιπέτειας",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 25,
+      "status": "ok",
+      "durationMs": 676
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:12",
+      "folder": "AMC+",
+      "title": "Ταινίες κινουμένων σχεδίων",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 10,
+      "status": "ok",
+      "durationMs": 797
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:13",
+      "folder": "AMC+",
+      "title": "Σειρές κινουμένων σχεδίων",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 1702
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:14",
+      "folder": "AMC+",
+      "title": "Κωμικές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 2823
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:15",
+      "folder": "AMC+",
+      "title": "Κωμικές σειρές",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 79,
+      "status": "ok",
+      "durationMs": 819
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:16",
+      "folder": "AMC+",
+      "title": "Αστυνομικές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 135,
+      "status": "ok",
+      "durationMs": 1724
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:17",
+      "folder": "AMC+",
+      "title": "Αστυνομικές σειρές",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 161,
+      "status": "ok",
+      "durationMs": 3105
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:18",
+      "folder": "AMC+",
+      "title": "Ταινίες ντοκιμαντέρ",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 147,
+      "status": "ok",
+      "durationMs": 808
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:19",
+      "folder": "AMC+",
+      "title": "Σειρές ντοκιμαντέρ",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 71,
+      "status": "ok",
+      "durationMs": 1644
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:20",
+      "folder": "AMC+",
+      "title": "Δραματικές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 3014
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:21",
+      "folder": "AMC+",
+      "title": "Δραματικές σειρές",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 199,
+      "status": "ok",
+      "durationMs": 4567
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:22",
+      "folder": "AMC+",
+      "title": "Οικογενειακές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 9,
+      "status": "ok",
+      "durationMs": 825
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:23",
+      "folder": "AMC+",
+      "title": "Οικογενειακές σειρές",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 909
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:24",
+      "folder": "AMC+",
+      "title": "Ταινίες φαντασίας",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 93,
+      "status": "ok",
+      "durationMs": 1270
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:25",
+      "folder": "AMC+",
+      "title": "Σειρές φαντασίας",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 10,
+      "status": "ok",
+      "durationMs": 1777
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:26",
+      "folder": "AMC+",
+      "title": "Ιστορικές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 42,
+      "status": "ok",
+      "durationMs": 541
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:27",
+      "folder": "AMC+",
+      "title": "Ιστορικές σειρές",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 6,
+      "status": "ok",
+      "durationMs": 659
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:28",
+      "folder": "AMC+",
+      "title": "Ταινίες τρόμου",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 2872
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:29",
+      "folder": "AMC+",
+      "title": "Σειρές τρόμου",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 20,
+      "status": "ok",
+      "durationMs": 1139
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:30",
+      "folder": "AMC+",
+      "title": "Ταινίες μυστηρίου",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 185,
+      "status": "ok",
+      "durationMs": 3290
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:31",
+      "folder": "AMC+",
+      "title": "Σειρές μυστηρίου",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 97,
+      "status": "ok",
+      "durationMs": 2069
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:32",
+      "folder": "AMC+",
+      "title": "Ντοκιμαντέρ φύσης",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 2,
+      "status": "ok",
+      "durationMs": 1038
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:33",
+      "folder": "AMC+",
+      "title": "Σειρές ντοκιμαντέρ φύσης",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 712
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:34",
+      "folder": "AMC+",
+      "title": "Ρομαντικές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 148,
+      "status": "ok",
+      "durationMs": 1351
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:35",
+      "folder": "AMC+",
+      "title": "Ρομαντικές σειρές",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 7,
+      "status": "ok",
+      "durationMs": 1604
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:36",
+      "folder": "AMC+",
+      "title": "Ρομαντικές κομεντί",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 65,
+      "status": "ok",
+      "durationMs": 2859
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:37",
+      "folder": "AMC+",
+      "title": "Ρομαντικές κωμικές σειρές",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 1316
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:38",
+      "folder": "AMC+",
+      "title": "Ταινίες επιστημονικής φαντασίας",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 138,
+      "status": "ok",
+      "durationMs": 1713
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:39",
+      "folder": "AMC+",
+      "title": "Σειρές επιστημονικής φαντασίας",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 10,
+      "status": "ok",
+      "durationMs": 4
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:40",
+      "folder": "AMC+",
+      "title": "Ταινίες θρίλερ",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 2492
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:41",
+      "folder": "AMC+",
+      "title": "Σειρές θρίλερ",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 17,
+      "status": "ok",
+      "durationMs": 1701
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:42",
+      "folder": "AMC+",
+      "title": "Πολεμικές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 19,
+      "status": "ok",
+      "durationMs": 1535
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:43",
+      "folder": "AMC+",
+      "title": "Πολεμικές σειρές",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 1904
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:44",
+      "folder": "AMC+",
+      "title": "Ταινίες γουέστερν",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 23,
+      "status": "ok",
+      "durationMs": 1286
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:45",
+      "folder": "AMC+",
+      "title": "Σειρές γουέστερν",
+      "media": "TV",
+      "scope": "WORLDWIDE",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 1524
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:0",
+      "folder": "Criterion",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 187,
+      "status": "ok",
+      "durationMs": 1793
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:1",
+      "folder": "Criterion",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 1911
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:2",
+      "folder": "Criterion",
+      "title": "Κορυφαίες ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 678
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:3",
+      "folder": "Criterion",
+      "title": "Ταινίες δράσης",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 173,
+      "status": "ok",
+      "durationMs": 1271
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:4",
+      "folder": "Criterion",
+      "title": "Ταινίες περιπέτειας",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 126,
+      "status": "ok",
+      "durationMs": 1533
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:5",
+      "folder": "Criterion",
+      "title": "Ταινίες κινουμένων σχεδίων",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 70,
+      "status": "ok",
+      "durationMs": 1416
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:6",
+      "folder": "Criterion",
+      "title": "Ταινίες άνιμε",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 192
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:7",
+      "folder": "Criterion",
+      "title": "Κωμικές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 766
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:8",
+      "folder": "Criterion",
+      "title": "Αστυνομικές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 1028
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:9",
+      "folder": "Criterion",
+      "title": "Ταινίες ντοκιμαντέρ",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 199,
+      "status": "ok",
+      "durationMs": 807
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:10",
+      "folder": "Criterion",
+      "title": "Δραματικές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 712
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:11",
+      "folder": "Criterion",
+      "title": "Οικογενειακές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 28,
+      "status": "ok",
+      "durationMs": 502
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:12",
+      "folder": "Criterion",
+      "title": "Ταινίες φαντασίας",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 127,
+      "status": "ok",
+      "durationMs": 973
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:13",
+      "folder": "Criterion",
+      "title": "Ιστορικές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 131,
+      "status": "ok",
+      "durationMs": 1385
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:14",
+      "folder": "Criterion",
+      "title": "Ταινίες τρόμου",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 102,
+      "status": "ok",
+      "durationMs": 422
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:15",
+      "folder": "Criterion",
+      "title": "Ταινίες μυστηρίου",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 123,
+      "status": "ok",
+      "durationMs": 706
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:16",
+      "folder": "Criterion",
+      "title": "Ντοκιμαντέρ φύσης",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 179
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:17",
+      "folder": "Criterion",
+      "title": "Ρομαντικές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 1397
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:18",
+      "folder": "Criterion",
+      "title": "Ρομαντικές κομεντί",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 119,
+      "status": "ok",
+      "durationMs": 377
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:19",
+      "folder": "Criterion",
+      "title": "Ταινίες επιστημονικής φαντασίας",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 97,
+      "status": "ok",
+      "durationMs": 633
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:20",
+      "folder": "Criterion",
+      "title": "Ταινίες θρίλερ",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 200,
+      "status": "ok",
+      "durationMs": 1343
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:21",
+      "folder": "Criterion",
+      "title": "Πολεμικές ταινίες",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 96,
+      "status": "ok",
+      "durationMs": 524
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:22",
+      "folder": "Criterion",
+      "title": "Ταινίες γουέστερν",
+      "media": "MOVIE",
+      "scope": "WORLDWIDE",
+      "count": 19,
+      "status": "ok",
+      "durationMs": 169
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:0",
+      "folder": "MUBI",
+      "title": "Νέες ταινίες",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 197,
+      "status": "ok",
+      "durationMs": 258
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:1",
+      "folder": "MUBI",
+      "title": "Πρόσφατες ταινίες",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 29,
+      "status": "ok",
+      "durationMs": 188
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:2",
+      "folder": "MUBI",
+      "title": "Κλασικές ταινίες",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 134,
+      "status": "ok",
+      "durationMs": 65
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:3",
+      "folder": "MUBI",
+      "title": "Δημοφιλείς ταινίες",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 176,
+      "status": "ok",
+      "durationMs": 571
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:4",
+      "folder": "MUBI",
+      "title": "Κορυφαίες ταινίες",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 56,
+      "status": "ok",
+      "durationMs": 30
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:5",
+      "folder": "MUBI",
+      "title": "Ταινίες δράσης",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 4,
+      "status": "ok",
+      "durationMs": 171
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:6",
+      "folder": "MUBI",
+      "title": "Ταινίες περιπέτειας",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 8,
+      "status": "ok",
+      "durationMs": 160
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:7",
+      "folder": "MUBI",
+      "title": "Ταινίες κινουμένων σχεδίων",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 19,
+      "status": "ok",
+      "durationMs": 13
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:8",
+      "folder": "MUBI",
+      "title": "Ταινίες άνιμε",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 12
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:9",
+      "folder": "MUBI",
+      "title": "Κωμικές ταινίες",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 66,
+      "status": "ok",
+      "durationMs": 36
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:10",
+      "folder": "MUBI",
+      "title": "Αστυνομικές ταινίες",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 21,
+      "status": "ok",
+      "durationMs": 390
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:11",
+      "folder": "MUBI",
+      "title": "Ταινίες ντοκιμαντέρ",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 91,
+      "status": "ok",
+      "durationMs": 213
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:12",
+      "folder": "MUBI",
+      "title": "Δραματικές ταινίες",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 189,
+      "status": "ok",
+      "durationMs": 460
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:13",
+      "folder": "MUBI",
+      "title": "Οικογενειακές ταινίες",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 3,
+      "status": "ok",
+      "durationMs": 162
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:14",
+      "folder": "MUBI",
+      "title": "Ταινίες φαντασίας",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 36,
+      "status": "ok",
+      "durationMs": 180
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:15",
+      "folder": "MUBI",
+      "title": "Ιστορικές ταινίες",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 15,
+      "status": "ok",
+      "durationMs": 12
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:16",
+      "folder": "MUBI",
+      "title": "Ταινίες τρόμου",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 26,
+      "status": "ok",
+      "durationMs": 19
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:17",
+      "folder": "MUBI",
+      "title": "Ταινίες μυστηρίου",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 13,
+      "status": "ok",
+      "durationMs": 12
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:18",
+      "folder": "MUBI",
+      "title": "Ρομαντικές ταινίες",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 38,
+      "status": "ok",
+      "durationMs": 26
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:19",
+      "folder": "MUBI",
+      "title": "Ρομαντικές κομεντί",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 11,
+      "status": "ok",
+      "durationMs": 15
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:20",
+      "folder": "MUBI",
+      "title": "Ταινίες επιστημονικής φαντασίας",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 23,
+      "status": "ok",
+      "durationMs": 19
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:21",
+      "folder": "MUBI",
+      "title": "Ταινίες θρίλερ",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 27,
+      "status": "ok",
+      "durationMs": 20
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:22",
+      "folder": "MUBI",
+      "title": "Ταινίες γουέστερν",
+      "media": "MOVIE",
+      "scope": "GR",
+      "count": 1,
+      "status": "ok",
+      "durationMs": 158
     },
     {
       "key": "collections.world:folder-1DLH4Q3B:0",
@@ -777,7 +1697,7 @@
       "scope": "GLOBAL",
       "count": 22,
       "status": "ok",
-      "durationMs": 34
+      "durationMs": 184
     },
     {
       "key": "collections.world:folder-1DLH4Q3B:1",
@@ -787,7 +1707,7 @@
       "scope": "GLOBAL",
       "count": 2,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 8
     },
     {
       "key": "collections.world:folder-1DLH4Q3B:2",
@@ -797,7 +1717,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 10,
       "status": "ok",
-      "durationMs": 10
+      "durationMs": 7
     },
     {
       "key": "collections.world:folder-1DLH4Q3B:3",
@@ -807,7 +1727,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=3",
       "count": 1,
       "status": "ok",
-      "durationMs": 174
+      "durationMs": 172
     },
     {
       "key": "collections.world:folder-1DLH4Q3B:4",
@@ -817,7 +1737,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 4,
       "status": "ok",
-      "durationMs": 8
+      "durationMs": 9
     },
     {
       "key": "collections.world:folder-1DLH4Q3B:5",
@@ -827,7 +1747,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=3",
       "count": 1,
       "status": "ok",
-      "durationMs": 323
+      "durationMs": 322
     },
     {
       "key": "collections.world:folder-2DT7DVAT:0",
@@ -837,7 +1757,7 @@
       "scope": "GLOBAL",
       "count": 115,
       "status": "ok",
-      "durationMs": 145
+      "durationMs": 821
     },
     {
       "key": "collections.world:folder-2DT7DVAT:1",
@@ -847,7 +1767,7 @@
       "scope": "GLOBAL",
       "count": 26,
       "status": "ok",
-      "durationMs": 25
+      "durationMs": 24
     },
     {
       "key": "collections.world:folder-2DT7DVAT:2",
@@ -855,9 +1775,9 @@
       "title": "Δημοφιλείς ταινίες",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=25",
-      "count": 87,
+      "count": 81,
       "status": "ok",
-      "durationMs": 82
+      "durationMs": 42
     },
     {
       "key": "collections.world:folder-2DT7DVAT:3",
@@ -865,9 +1785,9 @@
       "title": "Δημοφιλείς σειρές",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=10",
-      "count": 29,
+      "count": 28,
       "status": "ok",
-      "durationMs": 32
+      "durationMs": 16
     },
     {
       "key": "collections.world:folder-2DT7DVAT:4",
@@ -877,7 +1797,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 21,
       "status": "ok",
-      "durationMs": 22
+      "durationMs": 18
     },
     {
       "key": "collections.world:folder-2DT7DVAT:5",
@@ -887,7 +1807,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=50",
       "count": 5,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 8
     },
     {
       "key": "collections.world:folder-2DT7DVAT:7",
@@ -897,7 +1817,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 1,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 12
     },
     {
       "key": "collections.world:folder-34G8YHUB:0",
@@ -907,7 +1827,7 @@
       "scope": "GLOBAL",
       "count": 7,
       "status": "ok",
-      "durationMs": 15
+      "durationMs": 20
     },
     {
       "key": "collections.world:folder-34G8YHUB:1",
@@ -917,7 +1837,7 @@
       "scope": "GLOBAL",
       "count": 9,
       "status": "ok",
-      "durationMs": 8
+      "durationMs": 10
     },
     {
       "key": "collections.world:folder-34G8YHUB:2",
@@ -927,7 +1847,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 11,
       "status": "ok",
-      "durationMs": 9
+      "durationMs": 11
     },
     {
       "key": "collections.world:folder-34G8YHUB:3",
@@ -937,7 +1857,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=3",
       "count": 1,
       "status": "ok",
-      "durationMs": 220
+      "durationMs": 742
     },
     {
       "key": "collections.world:folder-34G8YHUB:4",
@@ -947,7 +1867,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 3,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 163
     },
     {
       "key": "collections.world:folder-34G8YHUB:5",
@@ -957,7 +1877,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=3",
       "count": 1,
       "status": "ok",
-      "durationMs": 439
+      "durationMs": 350
     },
     {
       "key": "collections.world:folder-AK9ECCMJ:0",
@@ -967,7 +1887,7 @@
       "scope": "GLOBAL",
       "count": 6,
       "status": "ok",
-      "durationMs": 14
+      "durationMs": 23
     },
     {
       "key": "collections.world:folder-AK9ECCMJ:1",
@@ -977,7 +1897,7 @@
       "scope": "GLOBAL",
       "count": 1,
       "status": "ok",
-      "durationMs": 9
+      "durationMs": 8
     },
     {
       "key": "collections.world:folder-AK9ECCMJ:2",
@@ -987,7 +1907,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 1,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 10
     },
     {
       "key": "collections.world:folder-AK9ECCMJ:4",
@@ -997,7 +1917,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 1,
       "status": "ok",
-      "durationMs": 278
+      "durationMs": 378
     },
     {
       "key": "collections.world:folder-BPH7ACF1:0",
@@ -1007,7 +1927,7 @@
       "scope": "GLOBAL",
       "count": 4,
       "status": "ok",
-      "durationMs": 17
+      "durationMs": 31
     },
     {
       "key": "collections.world:folder-BPH7ACF1:1",
@@ -1017,7 +1937,7 @@
       "scope": "GLOBAL",
       "count": 4,
       "status": "ok",
-      "durationMs": 8
+      "durationMs": 7
     },
     {
       "key": "collections.world:folder-BPH7ACF1:2",
@@ -1027,7 +1947,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 6,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 9
     },
     {
       "key": "collections.world:folder-BPH7ACF1:3",
@@ -1057,7 +1977,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=50",
       "count": 2,
       "status": "ok",
-      "durationMs": 8
+      "durationMs": 13
     },
     {
       "key": "collections.world:folder-CHLCSAJ1:0",
@@ -1065,9 +1985,9 @@
       "title": "Νέες ταινίες",
       "media": "MOVIE",
       "scope": "GLOBAL",
-      "count": 165,
+      "count": 159,
       "status": "ok",
-      "durationMs": 227
+      "durationMs": 454
     },
     {
       "key": "collections.world:folder-CHLCSAJ1:1",
@@ -1075,9 +1995,9 @@
       "title": "Νέες σειρές",
       "media": "TV",
       "scope": "GLOBAL",
-      "count": 162,
+      "count": 161,
       "status": "ok",
-      "durationMs": 249
+      "durationMs": 1159
     },
     {
       "key": "collections.world:folder-CHLCSAJ1:2",
@@ -1085,9 +2005,9 @@
       "title": "Δημοφιλείς ταινίες",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=25",
-      "count": 200,
+      "count": 181,
       "status": "ok",
-      "durationMs": 116
+      "durationMs": 1610
     },
     {
       "key": "collections.world:folder-CHLCSAJ1:3",
@@ -1097,7 +2017,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 200,
       "status": "ok",
-      "durationMs": 85
+      "durationMs": 91
     },
     {
       "key": "collections.world:folder-CHLCSAJ1:4",
@@ -1105,9 +2025,9 @@
       "title": "Κορυφαίες ταινίες όλων των εποχών",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 198,
       "status": "ok",
-      "durationMs": 91
+      "durationMs": 150
     },
     {
       "key": "collections.world:folder-CHLCSAJ1:5",
@@ -1115,9 +2035,9 @@
       "title": "Κορυφαίες σειρές όλων των εποχών",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=50",
-      "count": 200,
+      "count": 199,
       "status": "ok",
-      "durationMs": 89
+      "durationMs": 496
     },
     {
       "key": "collections.world:folder-CHLCSAJ1:6",
@@ -1125,9 +2045,9 @@
       "title": "Κορυφαίες ταινίες της χρονιάς",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=10",
-      "count": 200,
+      "count": 190,
       "status": "ok",
-      "durationMs": 89
+      "durationMs": 938
     },
     {
       "key": "collections.world:folder-CHLCSAJ1:7",
@@ -1135,9 +2055,9 @@
       "title": "Κορυφαίες σειρές της χρονιάς",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=10",
-      "count": 106,
+      "count": 105,
       "status": "ok",
-      "durationMs": 49
+      "durationMs": 263
     },
     {
       "key": "collections.world:folder-D1NICV2Z:0",
@@ -1157,7 +2077,7 @@
       "scope": "GLOBAL",
       "count": 5,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 203
     },
     {
       "key": "collections.world:folder-D1NICV2Z:2",
@@ -1167,7 +2087,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 22,
       "status": "ok",
-      "durationMs": 16
+      "durationMs": 209
     },
     {
       "key": "collections.world:folder-D1NICV2Z:3",
@@ -1187,7 +2107,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 9,
       "status": "ok",
-      "durationMs": 8
+      "durationMs": 9
     },
     {
       "key": "collections.world:folder-D1NICV2Z:5",
@@ -1197,7 +2117,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 5,
       "status": "ok",
-      "durationMs": 160
+      "durationMs": 230
     },
     {
       "key": "collections.world:folder-DWVPX66N:0",
@@ -1207,7 +2127,7 @@
       "scope": "GLOBAL",
       "count": 25,
       "status": "ok",
-      "durationMs": 27
+      "durationMs": 42
     },
     {
       "key": "collections.world:folder-DWVPX66N:1",
@@ -1217,7 +2137,7 @@
       "scope": "GLOBAL",
       "count": 8,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 8
     },
     {
       "key": "collections.world:folder-DWVPX66N:2",
@@ -1227,7 +2147,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 17,
       "status": "ok",
-      "durationMs": 9
+      "durationMs": 8
     },
     {
       "key": "collections.world:folder-DWVPX66N:3",
@@ -1237,7 +2157,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 3,
       "status": "ok",
-      "durationMs": 10
+      "durationMs": 195
     },
     {
       "key": "collections.world:folder-DWVPX66N:4",
@@ -1257,7 +2177,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 3,
       "status": "ok",
-      "durationMs": 165
+      "durationMs": 172
     },
     {
       "key": "collections.world:folder-DWVPX66N:7",
@@ -1267,7 +2187,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=3",
       "count": 1,
       "status": "ok",
-      "durationMs": 166
+      "durationMs": 182
     },
     {
       "key": "collections.world:folder-F5XQ4UP6:0",
@@ -1277,7 +2197,7 @@
       "scope": "GLOBAL",
       "count": 28,
       "status": "ok",
-      "durationMs": 24
+      "durationMs": 193
     },
     {
       "key": "collections.world:folder-F5XQ4UP6:1",
@@ -1287,7 +2207,7 @@
       "scope": "GLOBAL",
       "count": 10,
       "status": "ok",
-      "durationMs": 10
+      "durationMs": 9
     },
     {
       "key": "collections.world:folder-F5XQ4UP6:2",
@@ -1297,7 +2217,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 25,
       "status": "ok",
-      "durationMs": 14
+      "durationMs": 17
     },
     {
       "key": "collections.world:folder-F5XQ4UP6:3",
@@ -1307,7 +2227,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 1,
       "status": "ok",
-      "durationMs": 6
+      "durationMs": 8
     },
     {
       "key": "collections.world:folder-F5XQ4UP6:4",
@@ -1317,7 +2237,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 11,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 162
     },
     {
       "key": "collections.world:folder-F5XQ4UP6:5",
@@ -1327,7 +2247,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=50",
       "count": 1,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 8
     },
     {
       "key": "collections.world:folder-F5XQ4UP6:6",
@@ -1337,7 +2257,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=5",
       "count": 1,
       "status": "ok",
-      "durationMs": 160
+      "durationMs": 167
     },
     {
       "key": "collections.world:folder-KFJI7SS7:0",
@@ -1347,7 +2267,7 @@
       "scope": "GLOBAL",
       "count": 19,
       "status": "ok",
-      "durationMs": 23
+      "durationMs": 194
     },
     {
       "key": "collections.world:folder-KFJI7SS7:1",
@@ -1355,9 +2275,9 @@
       "title": "Νέες σειρές",
       "media": "TV",
       "scope": "GLOBAL",
-      "count": 21,
+      "count": 23,
       "status": "ok",
-      "durationMs": 17
+      "durationMs": 16
     },
     {
       "key": "collections.world:folder-KFJI7SS7:2",
@@ -1367,7 +2287,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 1,
       "status": "ok",
-      "durationMs": 8
+      "durationMs": 7
     },
     {
       "key": "collections.world:folder-KFJI7SS7:3",
@@ -1377,7 +2297,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=3",
       "count": 2,
       "status": "ok",
-      "durationMs": 163
+      "durationMs": 173
     },
     {
       "key": "collections.world:folder-KFJI7SS7:4",
@@ -1387,7 +2307,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 1,
       "status": "ok",
-      "durationMs": 164
+      "durationMs": 172
     },
     {
       "key": "collections.world:folder-KFJI7SS7:5",
@@ -1397,7 +2317,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=3",
       "count": 2,
       "status": "ok",
-      "durationMs": 320
+      "durationMs": 324
     },
     {
       "key": "collections.world:folder-MH8C4JIK:0",
@@ -1407,7 +2327,7 @@
       "scope": "GLOBAL",
       "count": 89,
       "status": "ok",
-      "durationMs": 45
+      "durationMs": 211
     },
     {
       "key": "collections.world:folder-MH8C4JIK:1",
@@ -1417,7 +2337,7 @@
       "scope": "GLOBAL",
       "count": 1,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 159
     },
     {
       "key": "collections.world:folder-MH8C4JIK:2",
@@ -1427,7 +2347,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 1,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 8
     },
     {
       "key": "collections.world:folder-MH8C4JIK:4",
@@ -1447,7 +2367,7 @@
       "scope": "GLOBAL",
       "count": 36,
       "status": "ok",
-      "durationMs": 29
+      "durationMs": 332
     },
     {
       "key": "collections.world:folder-OBIM1CC7:1",
@@ -1457,7 +2377,7 @@
       "scope": "GLOBAL",
       "count": 66,
       "status": "ok",
-      "durationMs": 30
+      "durationMs": 48
     },
     {
       "key": "collections.world:folder-OBIM1CC7:2",
@@ -1487,7 +2407,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 1,
       "status": "ok",
-      "durationMs": 8
+      "durationMs": 160
     },
     {
       "key": "collections.world:folder-OBIM1CC7:5",
@@ -1497,7 +2417,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 3,
       "status": "ok",
-      "durationMs": 168
+      "durationMs": 167
     },
     {
       "key": "collections.world:folder-U4QLYE75:0",
@@ -1507,7 +2427,7 @@
       "scope": "GLOBAL",
       "count": 8,
       "status": "ok",
-      "durationMs": 16
+      "durationMs": 21
     },
     {
       "key": "collections.world:folder-U4QLYE75:1",
@@ -1517,7 +2437,7 @@
       "scope": "GLOBAL",
       "count": 1,
       "status": "ok",
-      "durationMs": 8
+      "durationMs": 201
     },
     {
       "key": "collections.world:folder-U4QLYE75:2",
@@ -1527,7 +2447,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 4,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 166
     },
     {
       "key": "collections.world:folder-U4QLYE75:3",
@@ -1547,7 +2467,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 1,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 10
     },
     {
       "key": "collections.world:folder-U4QLYE75:5",
@@ -1567,7 +2487,7 @@
       "scope": "GLOBAL",
       "count": 16,
       "status": "ok",
-      "durationMs": 15
+      "durationMs": 18
     },
     {
       "key": "collections.world:folder-VBBN438M:1",
@@ -1577,7 +2497,7 @@
       "scope": "GLOBAL",
       "count": 31,
       "status": "ok",
-      "durationMs": 14
+      "durationMs": 507
     },
     {
       "key": "collections.world:folder-VBBN438M:2",
@@ -1587,7 +2507,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 4,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 10
     },
     {
       "key": "collections.world:folder-VBBN438M:3",
@@ -1597,7 +2517,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=3",
       "count": 11,
       "status": "ok",
-      "durationMs": 165
+      "durationMs": 170
     },
     {
       "key": "collections.world:folder-VBBN438M:4",
@@ -1607,7 +2527,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 2,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 10
     },
     {
       "key": "collections.world:folder-VBBN438M:5",
@@ -1617,7 +2537,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=3",
       "count": 11,
       "status": "ok",
-      "durationMs": 324
+      "durationMs": 959
     },
     {
       "key": "collections.world:folder-VBBN438M:6",
@@ -1627,7 +2547,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 1,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 9
     },
     {
       "key": "collections.world:folder-VBBN438M:7",
@@ -1637,7 +2557,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=3",
       "count": 2,
       "status": "ok",
-      "durationMs": 179
+      "durationMs": 173
     },
     {
       "key": "collections.world:folder-W2F9SBO8:0",
@@ -1647,7 +2567,7 @@
       "scope": "GLOBAL",
       "count": 22,
       "status": "ok",
-      "durationMs": 22
+      "durationMs": 168
     },
     {
       "key": "collections.world:folder-W2F9SBO8:2",
@@ -1657,7 +2577,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 3,
       "status": "ok",
-      "durationMs": 9
+      "durationMs": 162
     },
     {
       "key": "collections.world:folder-W2F9SBO8:4",
@@ -1667,7 +2587,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 3,
       "status": "ok",
-      "durationMs": 171
+      "durationMs": 170
     },
     {
       "key": "collections.world:folder-WCOQJ028:0",
@@ -1675,9 +2595,9 @@
       "title": "Νέες ταινίες",
       "media": "MOVIE",
       "scope": "GLOBAL",
-      "count": 182,
+      "count": 183,
       "status": "ok",
-      "durationMs": 226
+      "durationMs": 425
     },
     {
       "key": "collections.world:folder-WCOQJ028:1",
@@ -1685,9 +2605,9 @@
       "title": "Νέες σειρές",
       "media": "TV",
       "scope": "GLOBAL",
-      "count": 126,
+      "count": 127,
       "status": "ok",
-      "durationMs": 76
+      "durationMs": 225
     },
     {
       "key": "collections.world:folder-WCOQJ028:2",
@@ -1695,9 +2615,9 @@
       "title": "Δημοφιλείς ταινίες",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=25",
-      "count": 200,
+      "count": 182,
       "status": "ok",
-      "durationMs": 100
+      "durationMs": 88
     },
     {
       "key": "collections.world:folder-WCOQJ028:3",
@@ -1705,9 +2625,9 @@
       "title": "Δημοφιλείς σειρές",
       "media": "TV",
       "scope": "GLOBAL:VOTE_QUORUM=10",
-      "count": 200,
+      "count": 185,
       "status": "ok",
-      "durationMs": 91
+      "durationMs": 247
     },
     {
       "key": "collections.world:folder-WCOQJ028:4",
@@ -1715,9 +2635,9 @@
       "title": "Κορυφαίες ταινίες όλων των εποχών",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=100",
-      "count": 200,
+      "count": 199,
       "status": "ok",
-      "durationMs": 89
+      "durationMs": 436
     },
     {
       "key": "collections.world:folder-WCOQJ028:5",
@@ -1727,7 +2647,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=50",
       "count": 198,
       "status": "ok",
-      "durationMs": 109
+      "durationMs": 253
     },
     {
       "key": "collections.world:folder-WCOQJ028:6",
@@ -1735,7 +2655,7 @@
       "title": "Κορυφαίες ταινίες της χρονιάς",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=10",
-      "count": 18,
+      "count": 19,
       "status": "ok",
       "durationMs": 8
     },
@@ -1747,7 +2667,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 4,
       "status": "ok",
-      "durationMs": 8
+      "durationMs": 9
     },
     {
       "key": "collections.world:folder-ZFQ2TA63:0",
@@ -1755,9 +2675,9 @@
       "title": "Νέες ταινίες",
       "media": "MOVIE",
       "scope": "GLOBAL",
-      "count": 16,
+      "count": 17,
       "status": "ok",
-      "durationMs": 18
+      "durationMs": 19
     },
     {
       "key": "collections.world:folder-ZFQ2TA63:1",
@@ -1767,7 +2687,7 @@
       "scope": "GLOBAL",
       "count": 11,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 164
     },
     {
       "key": "collections.world:folder-ZFQ2TA63:2",
@@ -1777,7 +2697,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "count": 14,
       "status": "ok",
-      "durationMs": 8
+      "durationMs": 9
     },
     {
       "key": "collections.world:folder-ZFQ2TA63:3",
@@ -1787,7 +2707,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=3",
       "count": 3,
       "status": "ok",
-      "durationMs": 171
+      "durationMs": 314
     },
     {
       "key": "collections.world:folder-ZFQ2TA63:4",
@@ -1797,7 +2717,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 4,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 10
     },
     {
       "key": "collections.world:folder-ZFQ2TA63:5",
@@ -1807,7 +2727,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=3",
       "count": 3,
       "status": "ok",
-      "durationMs": 323
+      "durationMs": 325
     },
     {
       "key": "collections.world:folder-ZFQ2TA63:6",
@@ -1817,7 +2737,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 1,
       "status": "ok",
-      "durationMs": 9
+      "durationMs": 8
     },
     {
       "key": "collections.world:folder-ZP0ZUNHA:0",
@@ -1827,7 +2747,7 @@
       "scope": "GLOBAL",
       "count": 46,
       "status": "ok",
-      "durationMs": 56
+      "durationMs": 31
     },
     {
       "key": "collections.world:folder-ZP0ZUNHA:1",
@@ -1837,7 +2757,7 @@
       "scope": "GLOBAL",
       "count": 90,
       "status": "ok",
-      "durationMs": 87
+      "durationMs": 356
     },
     {
       "key": "collections.world:folder-ZP0ZUNHA:2",
@@ -1845,9 +2765,9 @@
       "title": "Δημοφιλείς ταινίες",
       "media": "MOVIE",
       "scope": "GLOBAL:VOTE_QUORUM=25",
-      "count": 26,
+      "count": 25,
       "status": "ok",
-      "durationMs": 19
+      "durationMs": 180
     },
     {
       "key": "collections.world:folder-ZP0ZUNHA:3",
@@ -1857,7 +2777,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 9,
       "status": "ok",
-      "durationMs": 9
+      "durationMs": 8
     },
     {
       "key": "collections.world:folder-ZP0ZUNHA:4",
@@ -1867,7 +2787,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "count": 2,
       "status": "ok",
-      "durationMs": 9
+      "durationMs": 27
     },
     {
       "key": "collections.world:folder-ZP0ZUNHA:5",
@@ -1877,7 +2797,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 9,
       "status": "ok",
-      "durationMs": 174
+      "durationMs": 168
     },
     {
       "key": "collections.world:folder-ZP0ZUNHA:6",
@@ -1887,7 +2807,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 2,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 8
     },
     {
       "key": "collections.world:folder-ZP0ZUNHA:7",
@@ -1897,7 +2817,7 @@
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "count": 1,
       "status": "ok",
-      "durationMs": 7
+      "durationMs": 158
     }
   ]
 }

@@ -30,7 +30,7 @@ jobs:
       TMDB_ACCOUNT_OBJECT_ID: ${{ secrets.TMDB_ACCOUNT_OBJECT_ID }}
       TMDB_LANGUAGE: "el"
       CONFIRM_TMDB_LIST_WRITES: NUVIO-TMDB-LISTS
-      ALLOW_TMDB_LIST_BOOTSTRAP: "2279"
+      ALLOW_TMDB_LIST_BOOTSTRAP: "2675"
       TMDB_HTTP_CONCURRENCY: "16"
       NUVIO_SYNC_CONCURRENCY: "12"
       TMDB_WORLDWIDE_REGION_CONCURRENCY: "12"
@@ -52,6 +52,9 @@ jobs:
       - name: Execute sync
         if: github.event_name == 'schedule' || !inputs.dry_run
         run: npm run sync
+      - name: Exact remote audit and deleted-ID reconciliation
+        if: github.event_name == 'schedule' || !inputs.dry_run
+        run: npm run audit:remote:repair
       - name: Compile and production audit
         if: github.event_name == 'schedule' || !inputs.dry_run
         run: npm run compile && npm run audit -- --production
