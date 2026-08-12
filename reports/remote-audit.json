@@ -1,7 +1,7 @@
 {
   "version": 1,
   "date": "2026-08-12",
-  "mode": "dry-run",
+  "mode": "execute",
   "totals": {
     "considered": 2675,
     "valid": 2675,
