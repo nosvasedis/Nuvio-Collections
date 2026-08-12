@@ -234,6 +234,20 @@ and dynamic curated merge/order tests.
 - Streaming evaluates GR first with only `flatrate|free|ads`. A successful empty
   GR result may fall back to a Worldwide union for that rail only. Results never
   mix, and an API error never triggers fallback.
+- Streaming and Genre popularity require recognition floors instead of trusting
+  raw TMDB popularity. Premium streaming uses 50 movie / 35 TV votes, niche
+  services 25 / 15; premium Top uses 1,000 / 500 and niche Top 250 / 150.
+  Generic Genre Popular uses 75 / 40 and all-time Top 1,000 / 500. New,
+  Trending and provider-specific thematic rails retain their established
+  semantics and do not inherit a generic provider quorum.
+- Romance, romantic-comedy and Anime candidates exclude the reviewed explicit
+  TMDB keyword set even when TMDB reports `adult=false`: softcore, erotic,
+  erotica, adult video, porn, hentai, animated porn, ecchi, uncensored and
+  unsimulated sex variants. Narrative themes such as rape, prostitution and
+  generic sexual content are deliberately not classification exclusions; this
+  keeps legitimate works such as `Perfect Blue` eligible.
+- Rails explicitly labelled live-action exclude Animation and Documentary.
+  Generic Popular, Top and Mood rails do not silently become live-action-only.
 - Provider Trending prefers the official TMDB day window. If that provider has
   no day result in either GR or Worldwide, it widens to the official week window;
   it never relabels generic popularity as trending.
@@ -258,6 +272,10 @@ and dynamic curated merge/order tests.
   reconcile only that list and require exact v3 ordered read-back. Missing
   `media_type` in that read-back is now a hard failure, preventing Nuvio from
   silently interpreting a TV item as a movie.
+- Ordered typed IDs are authoritative over a stale hash or descriptive scope.
+  If the IDs are identical, sync refreshes only the local checkpoint and never
+  clears/re-adds the remote list. This applies to schema migrations and ordinary
+  fingerprint drift alike.
 - A write-schema migration whose verified ordered IDs are unchanged upgrades the
   checkpoint without clearing/re-adding the same remote list.
 - TMDB v4 item-level `Media is invalid` and `Media is required` rejections are

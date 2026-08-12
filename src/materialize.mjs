@@ -1,6 +1,65 @@
 import { ALLOWED_MONETIZATION, MATERIALIZED_LIMIT } from "./constants.mjs";
 import { dateFor, normalizeText, uniqueItems, dedupeLikelyDuplicateWorks, canonicalWorkTitle, fingerprint, shiftYears, mapLimit } from "./utils.mjs";
 
+// TMDB's adult flag is incomplete: many erotic/softcore works are catalogued
+// with adult=false. Keep the narrow explicit-content taxonomy separate from
+// narrative themes (rape, prostitution, sexual content), which can describe
+// legitimate mainstream works such as Perfect Blue.
+export const EXPLICIT_CONTENT_KEYWORD_IDS = Object.freeze([
+  155477, // softcore
+  256466, // erotic
+  190370, // erotic movie
+  298666, // erotic romance
+  325693, // erotica
+  360629, // adult
+  284535, // adult video
+  356759, // porn
+  198385, // hentai
+  378816, // animated porn
+  195669, // ecchi
+  337946, // uncensored
+  282903, // unsimulated sex
+]);
+
+function mergePipeValues(current, additions) {
+  return [...new Set([...(String(current ?? "").split("|").filter(Boolean)), ...additions.map(String)])].join("|");
+}
+
+function mergeCommaValues(current, additions) {
+  return [...new Set([...(String(current ?? "").split(",").filter(Boolean)), ...additions.map(String)])].join(",");
+}
+
+export function applyContentSafetyPredicates(params, label, media) {
+  const text = normalizeText(label ?? "");
+  if (/ρομαντ|romance|romantic/.test(text) || /ανιμε|anime/.test(text)) {
+    params.without_keywords = mergePipeValues(params.without_keywords, EXPLICIT_CONTENT_KEYWORD_IDS);
+  }
+  if (media === "movie" && /ζωντανης δρασης|live action/.test(text)) {
+    params.without_genres = mergeCommaValues(params.without_genres, [16, 99]);
+  }
+  return params;
+}
+
+function applyRecognitionFloor(params, floor) {
+  if (floor != null) params["vote_count.gte"] = Math.max(Number(params["vote_count.gte"] ?? 0), floor);
+  return params;
+}
+
+function genreRecognitionFloor(title, media) {
+  if (title.includes("δημοφιλ")) return media === "movie" ? 75 : 40;
+  if (title.includes("κορυφ") && title.includes("ολων των εποχων")) return media === "movie" ? 1000 : 500;
+  return null;
+}
+
+export function streamingRecognitionFloor(folderTitle, railTitle, media) {
+  const folder = normalizeText(folderTitle ?? ""), title = normalizeText(railTitle ?? "");
+  const premium = /netflix|disney|prime video|apple tv|hbo max|paramount|hulu|peacock/.test(folder);
+  const popular = premium ? (media === "movie" ? 50 : 35) : (media === "movie" ? 25 : 15);
+  if (title.includes("κορυφ") || title.includes("top rated")) return premium ? (media === "movie" ? 1000 : 500) : (media === "movie" ? 250 : 150);
+  if (title.includes("δημοφιλ") || title.includes("popular")) return popular;
+  return null;
+}
+
 export function runtimeBucket(minutes) { if (minutes < 90) return "short"; if (minutes < 150) return "standard"; if (minutes < 180) return "long"; return "epic"; }
 
 function genreIds(item) {
@@ -99,6 +158,7 @@ export function discoverParams(rail, media, today) {
     p.sort_by = `${datePrefix}.desc`; p[`${datePrefix}.gte`] = `${today.slice(0, 4)}-01-01`;
   }
   else if (title.includes("δημοφιλ")) { delete p["vote_count.gte"]; delete p["vote_average.gte"]; p.sort_by = "popularity.desc"; }
+  if (rail.collectionId === "collections.genres") applyRecognitionFloor(p, genreRecognitionFloor(title, media));
   if (!p[`${datePrefix}.lte`]) p[`${datePrefix}.lte`] = today;
   return p;
 }
@@ -212,7 +272,13 @@ async function streaming(client, rail, context) {
   const providerMatches = await resolveProvider(client, media, context.folderTitle, context.providerAliases);
   const ids = providerMatches.map((provider) => provider.provider_id);
   if (!ids.length) return { scope: "UNAVAILABLE", items: [] };
-  const base = await applySemanticPredicates(client, rail, media, discoverParams(rail, media, context.today), context.folderTitle), providerIds = ids.join("|");
+  const base = applyContentSafetyPredicates(
+    await applySemanticPredicates(client, rail, media, discoverParams(rail, media, context.today), context.folderTitle),
+    `${context.folderTitle} ${rail.title ?? ""}`,
+    media,
+  );
+  applyRecognitionFloor(base, streamingRecognitionFloor(context.folderTitle, rail.title, media));
+  const providerIds = ids.join("|");
   if (isTrendingRail(normalizeText(rail.title ?? ""))) {
     const qualifies = (offer) => ALLOWED_MONETIZATION.some((type) => (offer?.[type] ?? []).some((p) => ids.includes(p.provider_id)));
     // Provider titles do not necessarily enter TMDB's global daily top 20.
@@ -271,6 +337,7 @@ export async function materializeRail(client, rail, context) {
   }
   const params = discoverParams(rail, media, context.today);
   if (rail.collectionId === "collections.genres" && !rail.params.explicitSemantic) await applySemanticPredicates(client, rail, media, params, context.folderTitle);
+  applyContentSafetyPredicates(params, `${context.folderTitle} ${rail.title ?? ""}`, media);
   const legacyType = rail.params.legacy?.tmdbSourceType, id = rail.params.legacy?.tmdbId;
   if (rail.materializer === "company") {
     params.with_companies = id ?? await client.companyId(context.folderTitle);

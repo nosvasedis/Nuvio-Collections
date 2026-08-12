@@ -119,6 +119,11 @@ audit, ώστε μελλοντικό build να μην επιστρέψει κα
 9. Μετά από write διαβάζεται ξανά ολόκληρη η TMDB list μέσω του ίδιου v3
    pagination path που χρησιμοποιεί το Nuvio και απαιτείται exact typed-order
    match.
+10. Romance/RomCom/Anime rails αποκλείουν reviewed explicit-content keywords
+    ακόμη και όταν το TMDB έχει λανθασμένα `adult=false`, χωρίς να αποκλείουν
+    θεματικά αναγνωρισμένα έργα όπως το `Perfect Blue`.
+11. Genre και Streaming Popular/Top χρησιμοποιούν media/provider-aware vote
+    floors ώστε η προσωρινή TMDB popularity να μην προωθεί άγνωστες εγγραφές.
 
 Η εγγύηση αφορά την πιστή εφαρμογή των predicates στα επίσημα upstream
 δεδομένα. Αν το TMDB ή το JustWatch έχει λανθασμένο ή καθυστερημένο metadata, το
@@ -256,9 +261,11 @@ refresh τουλάχιστον κάθε επτά ημέρες ή με `--force`.
 
 ## Nightly ενημέρωση
 
-Το workflow εκκινεί καθημερινά στις **04:07 ώρα Ελλάδας**. Δύο UTC cron entries
-και εσωτερικό `Europe/Athens` guard εξασφαλίζουν μία εκτέλεση ανεξάρτητα από
-θερινή ή χειμερινή ώρα.
+Το workflow εκκινεί καθημερινά στις **04:07 ώρα Ελλάδας** με ένα native
+timezone-aware GitHub Actions schedule (`timezone: Europe/Athens`). Υπάρχει
+ακριβώς ένα scheduled run ανά ημέρα και το GitHub χειρίζεται αυτόματα τη θερινή
+και χειμερινή ώρα. Τυχόν καθυστέρηση runner μεταθέτει μόνο την πραγματική ώρα
+έναρξης· δεν ακυρώνει το sync.
 
 ```mermaid
 flowchart LR
@@ -290,8 +297,10 @@ flowchart LR
 | Duplicate-safe resume | 131,1 s | ownership recovery 2.279/2.279, 0 duplicate keys, 24 verified changes, 0 failures |
 | Τελικό idempotency dry-run | 53,5 s | 0 changes, 2.279 skips, 0 failures, 0 creates |
 | v5.0.1 additions audit | 4,5 s | 189/189 active additions, 0 empty, 0 failures |
-| Poster validation | ίδιο run | 3.537 exclusions, κανένα κενό candidate |
-| Tests + strict audit | < 3 s τοπικά | 41/41, 2.677 sources |
+| Poster validation | ίδιο run | 3.443 exclusions, κανένα κενό candidate |
+| Semantic hardening production sync (12 Αυγούστου 2026) | 21 min 28 s | 1.327 exact-read-back updates, 952 skips, 0 failures, 0 creates |
+| Post-production live dry-run | 61,1 s | 2.251 skips, 28 νέες upstream order μετακινήσεις, 0 failures |
+| Tests + strict audit | < 3 s τοπικά | 45/45, 2.677 sources |
 
 Ο nightly χρόνος εξαρτάται από changed fingerprints και TMDB rate limits. Το
 εβδομαδιαίο πλήρες awards refresh είναι σκόπιμα βαρύτερο. Η σχεδόν ωριαία

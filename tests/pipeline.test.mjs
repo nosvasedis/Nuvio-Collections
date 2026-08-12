@@ -1,11 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { bootstrap } from "../src/bootstrap.mjs";
 import { auditRepository } from "../src/validate.mjs";
 import { compile } from "../src/compiler.mjs";
-import { runtimeBucket, dailyRuntimeSelection, chooseAvailability, materializeRail, applySemanticPredicates, discoverParams, isSubstantiveCastCredit, isFeatureFilm, requireUsablePosters } from "../src/materialize.mjs";
+import { runtimeBucket, dailyRuntimeSelection, chooseAvailability, materializeRail, applySemanticPredicates, applyContentSafetyPredicates, discoverParams, streamingRecognitionFloor, EXPLICIT_CONTENT_KEYWORD_IDS, isSubstantiveCastCredit, isFeatureFilm, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
-import { confirmationCompatible, normalizeCandidateItems, semanticRefreshDue } from "../src/sync.mjs";
+import { confirmationCompatible, normalizeCandidateItems, orderedIdsEqual, semanticRefreshDue } from "../src/sync.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS, COUNTRY_BY_FOLDER } from "../src/constants.mjs";
 import { readJson, fingerprint, dedupeLikelyDuplicateWorks } from "../src/utils.mjs";
 import { assertNuvioMediaTypeContract, emulateNuvio083MediaType } from "../src/media-contract.mjs";
@@ -160,6 +161,12 @@ test("candidate normalization assigns media type and preserves first ordered ide
   assert.deepEqual(items.map((item) => `${item.media_type}:${item.id}`), ["tv:7", "movie:7", "tv:8"]);
 });
 
+test("identical ordered IDs suppress writes despite checkpoint fingerprint drift", () => {
+  assert.equal(orderedIdsEqual(["movie:1", "movie:2"], ["movie:1", "movie:2"]), true);
+  assert.equal(orderedIdsEqual(["movie:1", "movie:2"], ["movie:2", "movie:1"]), false);
+  assert.equal(orderedIdsEqual(undefined, ["movie:1"]), false);
+});
+
 test("large-change confirmation tolerates tiny live churn but rejects semantic drift", () => {
   assert.equal(confirmationCompatible(["tv:1", "tv:2", "tv:3", "tv:4"], ["tv:1", "tv:2", "tv:3"]), true);
   assert.equal(confirmationCompatible(Array.from({ length: 100 }, (_, i) => `tv:${i}`), Array.from({ length: 95 }, (_, i) => `tv:${i}`)), true);
@@ -178,7 +185,40 @@ test("streaming requests only allowed monetization and prefers successful GR", a
   const client = { providers: async () => [{ provider_id: 8, provider_name: "Netflix", display_priorities: { GR: 1, US: 1 } }], watchRegions: async () => [{ iso_3166_1: "GR" }, { iso_3166_1: "US" }], discover: async (_media, params) => { calls.push(params); return params.watch_region === "GR" ? [{ id: 1, popularity: 2, release_date: "2026-01-01" }] : [{ id: 2 }]; } };
   const rail = { key: "x", collectionId: "collections.streaming", title: "Δημοφιλείς ταινίες", mediaType: "MOVIE", materializer: "streaming", params: { legacy: { filters: {}, sortBy: "popularity.desc" } } };
   const result = await materializeRail(client, rail, { folderTitle: "Netflix", providerAliases: ["Netflix"], today: "2026-08-09" });
-  assert.equal(result.scope, "GR"); assert.deepEqual(result.items.map((x) => x.id), [1]); assert.equal(calls.length, 1); assert.equal(calls[0].with_watch_monetization_types, "flatrate|free|ads");
+  assert.equal(result.scope, "GR"); assert.deepEqual(result.items.map((x) => x.id), [1]); assert.equal(calls.length, 1); assert.equal(calls[0].with_watch_monetization_types, "flatrate|free|ads"); assert.equal(calls[0]["vote_count.gte"], 50);
+});
+
+test("content safety blocks explicit Romance and Anime metadata without deleting narrative themes", () => {
+  const romance = applyContentSafetyPredicates({}, "Ρομαντικές σειρές", "tv");
+  const blocked = romance.without_keywords.split("|").map(Number);
+  assert.deepEqual(blocked, [...EXPLICIT_CONTENT_KEYWORD_IDS]);
+  assert.ok(blocked.includes(198385) && blocked.includes(195669)); // hentai / ecchi
+  assert.ok(!blocked.includes(570) && !blocked.includes(13059) && !blocked.includes(329280)); // rape / prostitution / sexual content
+  const anime = applyContentSafetyPredicates({ without_keywords: "999" }, "Δημοφιλείς σειρές άνιμε", "tv");
+  assert.equal(anime.without_keywords.split("|")[0], "999");
+  assert.ok(anime.without_keywords.includes("198385"));
+  const liveAction = applyContentSafetyPredicates({ without_genres: "53" }, "Ρομαντικές κομεντί ζωντανής δράσης", "movie");
+  assert.equal(liveAction.without_genres, "53,16,99");
+});
+
+test("Genre and Streaming recognition floors are semantic and provider-aware", () => {
+  const popularMovie = discoverParams({ collectionId: "collections.genres", title: "Δημοφιλείς ταινίες", params: { legacy: { filters: {}, sortBy: "popularity.desc" } } }, "movie", "2026-08-12");
+  const popularTv = discoverParams({ collectionId: "collections.genres", title: "Δημοφιλείς σειρές", params: { legacy: { filters: {}, sortBy: "popularity.desc" } } }, "tv", "2026-08-12");
+  const topMovie = discoverParams({ collectionId: "collections.genres", title: "Κορυφαίες ταινίες όλων των εποχών", params: { legacy: { filters: { voteCountGte: 500 }, sortBy: "vote_average.desc" } } }, "movie", "2026-08-12");
+  assert.equal(popularMovie["vote_count.gte"], 75); assert.equal(popularTv["vote_count.gte"], 40); assert.equal(topMovie["vote_count.gte"], 1000);
+  assert.equal(streamingRecognitionFloor("Netflix", "Δημοφιλείς ταινίες", "movie"), 50);
+  assert.equal(streamingRecognitionFloor("Netflix", "Κορυφαίες σειρές", "tv"), 500);
+  assert.equal(streamingRecognitionFloor("Shudder", "Ταινίες τρόμου", "movie"), null);
+  assert.equal(streamingRecognitionFloor("Shudder", "Κορυφαίες ταινίες", "movie"), 250);
+  assert.equal(streamingRecognitionFloor("Netflix", "Νέες ταινίες", "movie"), null);
+});
+
+test("workflow has one native Europe/Athens schedule", async () => {
+  const workflow = await readFile(new URL("../.github/workflows/sync.yml", import.meta.url), "utf8");
+  assert.equal((workflow.match(/\n\s*- cron:/g) ?? []).length, 1);
+  assert.match(workflow, /cron:\s*["']7 4 \* \* \*["']/);
+  assert.match(workflow, /timezone:\s*["']Europe\/Athens["']/);
+  assert.doesNotMatch(workflow, /schedule-guard|7 1 \* \* \*|7 2 \* \* \*/);
 });
 
 test("provider trending widens from official day to week only when day is empty everywhere", async () => {

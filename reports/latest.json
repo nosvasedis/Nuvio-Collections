@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "date": "2026-08-11",
+  "date": "2026-08-12",
   "mode": "dry-run",
   "totals": {
     "considered": 2279,
-    "changed": 0,
-    "skipped": 2279,
+    "changed": 28,
+    "skipped": 2251,
     "failed": 0,
     "created": 0,
-    "posterlessExcluded": 3537
+    "posterlessExcluded": 3443
   },
   "rails": [
     {
@@ -1358,7 +1358,7 @@
     {
       "key": "collections.actors:folder-A58P48N5:0",
       "status": "unchanged",
-      "count": 79,
+      "count": 78,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "posterlessExcluded": 1
     },
@@ -1372,7 +1372,7 @@
     {
       "key": "collections.actors:folder-A58P48N5:2",
       "status": "unchanged",
-      "count": 79,
+      "count": 78,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "posterlessExcluded": 1
     },
@@ -1386,7 +1386,7 @@
     {
       "key": "collections.actors:folder-A58P48N5:4",
       "status": "unchanged",
-      "count": 79,
+      "count": 78,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "posterlessExcluded": 1
     },
@@ -2977,7 +2977,7 @@
       "status": "unchanged",
       "count": 70,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
-      "posterlessExcluded": 4
+      "posterlessExcluded": 3
     },
     {
       "key": "collections.actors:folder-MHGNAS02:1",
@@ -2991,7 +2991,7 @@
       "status": "unchanged",
       "count": 70,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
-      "posterlessExcluded": 4
+      "posterlessExcluded": 3
     },
     {
       "key": "collections.actors:folder-MHGNAS02:3",
@@ -3005,7 +3005,7 @@
       "status": "unchanged",
       "count": 70,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
-      "posterlessExcluded": 4
+      "posterlessExcluded": 3
     },
     {
       "key": "collections.actors:folder-MHGNAS02:5",
@@ -3353,7 +3353,7 @@
     {
       "key": "collections.actors:folder-NOGR7OHV:0",
       "status": "unchanged",
-      "count": 51,
+      "count": 52,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "posterlessExcluded": 0
     },
@@ -3367,7 +3367,7 @@
     {
       "key": "collections.actors:folder-NOGR7OHV:2",
       "status": "unchanged",
-      "count": 51,
+      "count": 52,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "posterlessExcluded": 0
     },
@@ -3381,7 +3381,7 @@
     {
       "key": "collections.actors:folder-NOGR7OHV:4",
       "status": "unchanged",
-      "count": 51,
+      "count": 52,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "posterlessExcluded": 0
     },
@@ -4781,7 +4781,7 @@
     {
       "key": "collections.actors:folder-XER5AQ3T:0",
       "status": "unchanged",
-      "count": 35,
+      "count": 34,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "posterlessExcluded": 0
     },
@@ -4795,7 +4795,7 @@
     {
       "key": "collections.actors:folder-XER5AQ3T:2",
       "status": "unchanged",
-      "count": 35,
+      "count": 34,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "posterlessExcluded": 0
     },
@@ -4809,7 +4809,7 @@
     {
       "key": "collections.actors:folder-XER5AQ3T:4",
       "status": "unchanged",
-      "count": 35,
+      "count": 34,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "posterlessExcluded": 0
     },
@@ -4867,7 +4867,7 @@
       "status": "unchanged",
       "count": 12,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 1
     },
     {
       "key": "collections.actors:folder-YOR5PVAB:1",
@@ -4881,7 +4881,7 @@
       "status": "unchanged",
       "count": 12,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 1
     },
     {
       "key": "collections.actors:folder-YOR5PVAB:3",
@@ -4895,7 +4895,7 @@
       "status": "unchanged",
       "count": 12,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 1
     },
     {
       "key": "collections.actors:folder-YOR5PVAB:5",
@@ -7041,31 +7041,35 @@
     },
     {
       "key": "collections.discover:collections.discover.trending-2:0",
-      "status": "unchanged",
-      "count": 150,
+      "status": "would-update",
+      "listId": 8681821,
+      "count": 156,
       "scope": "GLOBAL",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0.10256410256410256
     },
     {
       "key": "collections.discover:collections.discover.trending-2:1",
-      "status": "unchanged",
-      "count": 184,
+      "status": "would-update",
+      "listId": 8681822,
+      "count": 187,
       "scope": "GLOBAL",
-      "posterlessExcluded": 1
+      "posterlessExcluded": 1,
+      "changeRatio": 0.0427807486631016
     },
     {
       "key": "collections.discover:collections.discover.trending-2:2",
       "status": "unchanged",
-      "count": 173,
+      "count": 161,
       "scope": "GLOBAL",
-      "posterlessExcluded": 27
+      "posterlessExcluded": 37
     },
     {
       "key": "collections.discover:collections.discover.trending-2:3",
       "status": "unchanged",
-      "count": 172,
+      "count": 173,
       "scope": "GLOBAL",
-      "posterlessExcluded": 28
+      "posterlessExcluded": 27
     },
     {
       "key": "collections.genres:folder-5CTPRQ44:0",
@@ -7084,29 +7088,29 @@
     {
       "key": "collections.genres:folder-5CTPRQ44:2",
       "status": "unchanged",
-      "count": 198,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 2
+      "count": 200,
+      "scope": "GLOBAL:VOTE_QUORUM=75",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-5CTPRQ44:3",
       "status": "unchanged",
-      "count": 198,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 2
+      "count": 90,
+      "scope": "GLOBAL:VOTE_QUORUM=40",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-5CTPRQ44:4",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 106,
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-5CTPRQ44:5",
       "status": "unchanged",
-      "count": 39,
-      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 11,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -7126,8 +7130,8 @@
     {
       "key": "collections.genres:folder-5CTPRQ44:8",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL",
+      "count": 198,
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
@@ -7140,7 +7144,7 @@
     {
       "key": "collections.genres:folder-6DUG1MQF:0",
       "status": "unchanged",
-      "count": 16,
+      "count": 17,
       "scope": "GLOBAL:VOTE_QUORUM=50",
       "posterlessExcluded": 0
     },
@@ -7154,29 +7158,29 @@
     {
       "key": "collections.genres:folder-6DUG1MQF:2",
       "status": "unchanged",
-      "count": 179,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 21
+      "count": 200,
+      "scope": "GLOBAL:VOTE_QUORUM=75",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-6DUG1MQF:3",
       "status": "unchanged",
-      "count": 189,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 11
+      "count": 200,
+      "scope": "GLOBAL:VOTE_QUORUM=40",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-6DUG1MQF:4",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 26,
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-6DUG1MQF:5",
       "status": "unchanged",
-      "count": 159,
-      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 17,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -7203,29 +7207,29 @@
     {
       "key": "collections.genres:folder-8B3PEI1Y:2",
       "status": "unchanged",
-      "count": 197,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 3
+      "count": 98,
+      "scope": "GLOBAL:VOTE_QUORUM=75",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-8B3PEI1Y:3",
       "status": "unchanged",
-      "count": 139,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 17
+      "count": 6,
+      "scope": "GLOBAL:VOTE_QUORUM=40",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-8B3PEI1Y:4",
       "status": "unchanged",
-      "count": 26,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 65,
+      "scope": "GLOBAL:VOTE_QUORUM=100",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-8B3PEI1Y:5",
       "status": "unchanged",
       "count": 1,
-      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -7238,7 +7242,7 @@
     {
       "key": "collections.genres:folder-8Z2DZVUO:0",
       "status": "unchanged",
-      "count": 79,
+      "count": 80,
       "scope": "GLOBAL:VOTE_QUORUM=50",
       "posterlessExcluded": 0
     },
@@ -7253,34 +7257,34 @@
       "key": "collections.genres:folder-8Z2DZVUO:2",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-8Z2DZVUO:3",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=40",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-8Z2DZVUO:4",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-8Z2DZVUO:5",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-8Z2DZVUO:6",
       "status": "unchanged",
-      "count": 79,
+      "count": 80,
       "scope": "GLOBAL:VOTE_QUORUM=50",
       "posterlessExcluded": 0
     },
@@ -7301,7 +7305,7 @@
     {
       "key": "collections.genres:folder-AP4ISXTE:1",
       "status": "unchanged",
-      "count": 33,
+      "count": 32,
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "posterlessExcluded": 0
     },
@@ -7309,28 +7313,28 @@
       "key": "collections.genres:folder-AP4ISXTE:2",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-AP4ISXTE:3",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=40",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-AP4ISXTE:4",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 74,
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-AP4ISXTE:5",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 136,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -7343,7 +7347,7 @@
     {
       "key": "collections.genres:folder-AP4ISXTE:7",
       "status": "unchanged",
-      "count": 82,
+      "count": 78,
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "posterlessExcluded": 0
     },
@@ -7358,14 +7362,14 @@
       "key": "collections.genres:folder-CSJVDVSC:1",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-CSJVDVSC:2",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
@@ -7385,7 +7389,7 @@
     {
       "key": "collections.genres:folder-d1d8a13d:1",
       "status": "unchanged",
-      "count": 21,
+      "count": 19,
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "posterlessExcluded": 0
     },
@@ -7399,7 +7403,7 @@
     {
       "key": "collections.genres:folder-d1d8a13d:3",
       "status": "unchanged",
-      "count": 55,
+      "count": 48,
       "scope": "GLOBAL:VOTE_QUORUM=200",
       "posterlessExcluded": 0
     },
@@ -7407,14 +7411,14 @@
       "key": "collections.genres:folder-d1d8a13d:4",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-d1d8a13d:5",
       "status": "unchanged",
-      "count": 55,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 18,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -7427,7 +7431,7 @@
     {
       "key": "collections.genres:folder-d1d8a13d:7",
       "status": "unchanged",
-      "count": 21,
+      "count": 19,
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "posterlessExcluded": 0
     },
@@ -7449,28 +7453,28 @@
       "key": "collections.genres:folder-DTEQHREL:2",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-DTEQHREL:3",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=40",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-DTEQHREL:4",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-DTEQHREL:5",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -7504,29 +7508,29 @@
     {
       "key": "collections.genres:folder-edbb0941:2",
       "status": "unchanged",
-      "count": 194,
-      "scope": "GLOBAL",
+      "count": 200,
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-edbb0941:3",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=40",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-edbb0941:4",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-edbb0941:5",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 132,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -7561,28 +7565,28 @@
       "key": "collections.genres:folder-FWKG65UR:2",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-FWKG65UR:3",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=40",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-FWKG65UR:4",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-FWKG65UR:5",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 108,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -7609,36 +7613,36 @@
     {
       "key": "collections.genres:folder-GXG1NG9E:1",
       "status": "unchanged",
-      "count": 94,
+      "count": 91,
       "scope": "GLOBAL:VOTE_QUORUM=5",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-GXG1NG9E:2",
       "status": "unchanged",
-      "count": 199,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 1
+      "count": 200,
+      "scope": "GLOBAL:VOTE_QUORUM=75",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-GXG1NG9E:3",
       "status": "unchanged",
-      "count": 199,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 1
+      "count": 200,
+      "scope": "GLOBAL:VOTE_QUORUM=40",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-GXG1NG9E:4",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-GXG1NG9E:5",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 112,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -7651,14 +7655,14 @@
     {
       "key": "collections.genres:folder-GXG1NG9E:7",
       "status": "unchanged",
-      "count": 63,
+      "count": 61,
       "scope": "GLOBAL:VOTE_QUORUM=10",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-IWC8T1WM:0",
       "status": "unchanged",
-      "count": 83,
+      "count": 85,
       "scope": "GLOBAL:VOTE_QUORUM=50",
       "posterlessExcluded": 0
     },
@@ -7672,35 +7676,35 @@
     {
       "key": "collections.genres:folder-IWC8T1WM:2",
       "status": "unchanged",
-      "count": 196,
-      "scope": "GLOBAL",
+      "count": 200,
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-IWC8T1WM:3",
       "status": "unchanged",
-      "count": 198,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 2
+      "count": 200,
+      "scope": "GLOBAL:VOTE_QUORUM=40",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-IWC8T1WM:4",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-IWC8T1WM:5",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-IWC8T1WM:6",
       "status": "unchanged",
-      "count": 83,
+      "count": 85,
       "scope": "GLOBAL:VOTE_QUORUM=50",
       "posterlessExcluded": 0
     },
@@ -7714,7 +7718,7 @@
     {
       "key": "collections.genres:folder-JRWZVYWG:0",
       "status": "unchanged",
-      "count": 53,
+      "count": 54,
       "scope": "GLOBAL:VOTE_QUORUM=50",
       "posterlessExcluded": 0
     },
@@ -7729,34 +7733,34 @@
       "key": "collections.genres:folder-JRWZVYWG:2",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-JRWZVYWG:3",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=40",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-JRWZVYWG:4",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-JRWZVYWG:5",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-JRWZVYWG:6",
       "status": "unchanged",
-      "count": 53,
+      "count": 54,
       "scope": "GLOBAL:VOTE_QUORUM=50",
       "posterlessExcluded": 0
     },
@@ -7785,28 +7789,28 @@
       "key": "collections.genres:folder-K8CIZ3LO:2",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-K8CIZ3LO:3",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=40",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-K8CIZ3LO:4",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-K8CIZ3LO:5",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -7854,15 +7858,15 @@
     {
       "key": "collections.genres:folder-KDRAMA01:4",
       "status": "unchanged",
-      "count": 96,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 17,
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-KDRAMA01:5",
       "status": "unchanged",
-      "count": 114,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 51,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -7897,28 +7901,28 @@
       "key": "collections.genres:folder-KVW3FYE5:2",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-KVW3FYE5:3",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=40",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-KVW3FYE5:4",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-KVW3FYE5:5",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -7945,15 +7949,15 @@
     {
       "key": "collections.genres:folder-LCRKWAHO:1",
       "status": "unchanged",
-      "count": 199,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 1
+      "count": 200,
+      "scope": "GLOBAL:VOTE_QUORUM=75",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-LCRKWAHO:2",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
@@ -7981,28 +7985,28 @@
       "key": "collections.genres:folder-P3VIAWP0:2",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-P3VIAWP0:3",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL",
+      "count": 185,
+      "scope": "GLOBAL:VOTE_QUORUM=40",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-P3VIAWP0:4",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 132,
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-P3VIAWP0:5",
       "status": "unchanged",
-      "count": 126,
-      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 61,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -8036,29 +8040,29 @@
     {
       "key": "collections.genres:folder-SY0BJAAJ:2",
       "status": "unchanged",
-      "count": 199,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 1
+      "count": 200,
+      "scope": "GLOBAL:VOTE_QUORUM=75",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-SY0BJAAJ:3",
       "status": "unchanged",
-      "count": 145,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 4
+      "count": 33,
+      "scope": "GLOBAL:VOTE_QUORUM=40",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-SY0BJAAJ:4",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 147,
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-SY0BJAAJ:5",
       "status": "unchanged",
-      "count": 22,
-      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 8,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -8092,29 +8096,29 @@
     {
       "key": "collections.genres:folder-VHE2JOX2:2",
       "status": "unchanged",
-      "count": 199,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 1
+      "count": 200,
+      "scope": "GLOBAL:VOTE_QUORUM=75",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-VHE2JOX2:3",
       "status": "unchanged",
-      "count": 193,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 7
+      "count": 60,
+      "scope": "GLOBAL:VOTE_QUORUM=40",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-VHE2JOX2:4",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 72,
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-VHE2JOX2:5",
       "status": "unchanged",
-      "count": 32,
-      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 13,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -8148,29 +8152,29 @@
     {
       "key": "collections.genres:folder-VLDG4GZP:2",
       "status": "unchanged",
-      "count": 182,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 18
+      "count": 14,
+      "scope": "GLOBAL:VOTE_QUORUM=75",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-VLDG4GZP:3",
       "status": "unchanged",
-      "count": 108,
-      "scope": "GLOBAL",
-      "posterlessExcluded": 8
+      "count": 11,
+      "scope": "GLOBAL:VOTE_QUORUM=40",
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-VLDG4GZP:4",
       "status": "unchanged",
-      "count": 9,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 1,
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-VLDG4GZP:5",
       "status": "unchanged",
-      "count": 6,
-      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 1,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -8204,29 +8208,29 @@
     {
       "key": "collections.genres:folder-W7VQ4ZGQ:2",
       "status": "unchanged",
-      "count": 199,
-      "scope": "GLOBAL",
+      "count": 200,
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-W7VQ4ZGQ:3",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL",
+      "count": 183,
+      "scope": "GLOBAL:VOTE_QUORUM=40",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-W7VQ4ZGQ:4",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-W7VQ4ZGQ:5",
       "status": "unchanged",
-      "count": 141,
-      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 62,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -8261,28 +8265,28 @@
       "key": "collections.genres:folder-X9YZCXBH:2",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-X9YZCXBH:3",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=40",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-X9YZCXBH:4",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-X9YZCXBH:5",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 73,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -8317,28 +8321,28 @@
       "key": "collections.genres:folder-Y0JJD3MR:2",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-Y0JJD3MR:3",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=40",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-Y0JJD3MR:4",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 191,
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-Y0JJD3MR:5",
       "status": "unchanged",
-      "count": 145,
-      "scope": "GLOBAL:VOTE_QUORUM=100",
+      "count": 74,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -8373,28 +8377,28 @@
       "key": "collections.genres:folder-ZYDJZBEV:2",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-ZYDJZBEV:3",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL",
+      "scope": "GLOBAL:VOTE_QUORUM=40",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-ZYDJZBEV:4",
       "status": "unchanged",
       "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=500",
+      "scope": "GLOBAL:VOTE_QUORUM=1000",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.genres:folder-ZYDJZBEV:5",
       "status": "unchanged",
-      "count": 200,
-      "scope": "GLOBAL:VOTE_QUORUM=200",
+      "count": 132,
+      "scope": "GLOBAL:VOTE_QUORUM=500",
       "posterlessExcluded": 0
     },
     {
@@ -8470,7 +8474,7 @@
     {
       "key": "collections.moods:folder-79A8YOOM:2",
       "status": "unchanged",
-      "count": 51,
+      "count": 52,
       "scope": "GLOBAL:VOTE_QUORUM=100",
       "posterlessExcluded": 0
     },
@@ -8904,7 +8908,7 @@
     {
       "key": "collections.networks:folder-AJRDRO1N:1",
       "status": "unchanged",
-      "count": 81,
+      "count": 82,
       "scope": "GLOBAL",
       "posterlessExcluded": 7
     },
@@ -8932,7 +8936,7 @@
     {
       "key": "collections.networks:folder-GACR3OCN:1",
       "status": "unchanged",
-      "count": 136,
+      "count": 137,
       "scope": "GLOBAL",
       "posterlessExcluded": 2
     },
@@ -8946,7 +8950,7 @@
     {
       "key": "collections.networks:folder-I7A4OFK0:1",
       "status": "unchanged",
-      "count": 19,
+      "count": 17,
       "scope": "GLOBAL",
       "posterlessExcluded": 1
     },
@@ -8981,7 +8985,7 @@
     {
       "key": "collections.networks:folder-Q69F5OGB:1",
       "status": "unchanged",
-      "count": 25,
+      "count": 26,
       "scope": "GLOBAL",
       "posterlessExcluded": 0
     },
@@ -9036,10 +9040,12 @@
     },
     {
       "key": "collections.runtime:collections.runtime.epic:0",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682039,
       "count": 100,
       "scope": "GLOBAL:RUNTIME_VERIFIED=epic:DAILY_ROTATION:VOTES>=100",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0.02
     },
     {
       "key": "collections.runtime:collections.runtime.long:0",
@@ -9057,10 +9063,12 @@
     },
     {
       "key": "collections.runtime:collections.runtime.standard:0",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682042,
       "count": 100,
       "scope": "GLOBAL:RUNTIME_VERIFIED=standard:DAILY_ROTATION:VOTES>=100",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0.06
     },
     {
       "key": "collections.streaming:collections.streaming.apple-tv:0",
@@ -9071,10 +9079,12 @@
     },
     {
       "key": "collections.streaming:collections.streaming.apple-tv:1",
-      "status": "unchanged",
-      "count": 11,
+      "status": "would-update",
+      "listId": 8682044,
+      "count": 10,
       "scope": "GR",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0.09090909090909091
     },
     {
       "key": "collections.streaming:collections.streaming.apple-tv:10",
@@ -9268,28 +9278,28 @@
     {
       "key": "collections.streaming:collections.streaming.apple-tv:4",
       "status": "unchanged",
-      "count": 105,
+      "count": 77,
       "scope": "GR",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.streaming:collections.streaming.apple-tv:5",
       "status": "unchanged",
-      "count": 200,
+      "count": 126,
       "scope": "GR",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.streaming:collections.streaming.apple-tv:6",
       "status": "unchanged",
-      "count": 35,
+      "count": 19,
       "scope": "GR",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.streaming:collections.streaming.apple-tv:7",
       "status": "unchanged",
-      "count": 48,
+      "count": 21,
       "scope": "GR",
       "posterlessExcluded": 0
     },
@@ -9401,7 +9411,7 @@
     {
       "key": "collections.streaming:collections.streaming.crunchyroll:9",
       "status": "unchanged",
-      "count": 78,
+      "count": 75,
       "scope": "GR",
       "posterlessExcluded": 0
     },
@@ -9422,16 +9432,16 @@
     {
       "key": "collections.streaming:collections.streaming.discovery-plus:10",
       "status": "unchanged",
-      "count": 198,
+      "count": 199,
       "scope": "WORLDWIDE",
-      "posterlessExcluded": 2
+      "posterlessExcluded": 1
     },
     {
       "key": "collections.streaming:collections.streaming.discovery-plus:2",
       "status": "unchanged",
-      "count": 199,
+      "count": 200,
       "scope": "WORLDWIDE",
-      "posterlessExcluded": 1
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.streaming:collections.streaming.discovery-plus:3",
@@ -9443,16 +9453,16 @@
     {
       "key": "collections.streaming:collections.streaming.discovery-plus:4",
       "status": "unchanged",
-      "count": 198,
+      "count": 199,
       "scope": "WORLDWIDE",
-      "posterlessExcluded": 2
+      "posterlessExcluded": 1
     },
     {
       "key": "collections.streaming:collections.streaming.discovery-plus:5",
       "status": "unchanged",
-      "count": 200,
+      "count": 199,
       "scope": "WORLDWIDE",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 1
     },
     {
       "key": "collections.streaming:collections.streaming.discovery-plus:6",
@@ -9484,17 +9494,21 @@
     },
     {
       "key": "collections.streaming:collections.streaming.disney-plus:0",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682104,
       "count": 11,
       "scope": "GR",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0.2727272727272727
     },
     {
       "key": "collections.streaming:collections.streaming.disney-plus:1",
-      "status": "unchanged",
-      "count": 16,
+      "status": "would-update",
+      "listId": 8682105,
+      "count": 23,
       "scope": "GR",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0.041666666666666664
     },
     {
       "key": "collections.streaming:collections.streaming.disney-plus:10",
@@ -9520,7 +9534,7 @@
     {
       "key": "collections.streaming:collections.streaming.disney-plus:13",
       "status": "unchanged",
-      "count": 25,
+      "count": 24,
       "scope": "GR",
       "posterlessExcluded": 0
     },
@@ -9765,7 +9779,7 @@
     {
       "key": "collections.streaming:collections.streaming.disney-plus:7",
       "status": "unchanged",
-      "count": 200,
+      "count": 151,
       "scope": "GR",
       "posterlessExcluded": 0
     },
@@ -9785,17 +9799,21 @@
     },
     {
       "key": "collections.streaming:collections.streaming.hbo-max:0",
-      "status": "unchanged",
-      "count": 7,
+      "status": "would-update",
+      "listId": 8682147,
+      "count": 4,
       "scope": "GR",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.streaming:collections.streaming.hbo-max:1",
-      "status": "unchanged",
-      "count": 11,
+      "status": "would-update",
+      "listId": 8682148,
+      "count": 13,
       "scope": "GR",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.streaming:collections.streaming.hbo-max:10",
@@ -10024,7 +10042,7 @@
     {
       "key": "collections.streaming:collections.streaming.hbo-max:4",
       "status": "unchanged",
-      "count": 200,
+      "count": 189,
       "scope": "GR",
       "posterlessExcluded": 0
     },
@@ -10080,14 +10098,14 @@
     {
       "key": "collections.streaming:collections.streaming.hbo-max:6",
       "status": "unchanged",
-      "count": 95,
+      "count": 80,
       "scope": "GR",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.streaming:collections.streaming.hbo-max:7",
       "status": "unchanged",
-      "count": 110,
+      "count": 61,
       "scope": "GR",
       "posterlessExcluded": 0
     },
@@ -10108,16 +10126,18 @@
     {
       "key": "collections.streaming:collections.streaming.hulu:0",
       "status": "unchanged",
-      "count": 11,
+      "count": 9,
       "scope": "WORLDWIDE",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.streaming:collections.streaming.hulu:1",
-      "status": "unchanged",
-      "count": 49,
+      "status": "would-update",
+      "listId": 8682195,
+      "count": 59,
       "scope": "WORLDWIDE",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0.03389830508474576
     },
     {
       "key": "collections.streaming:collections.streaming.hulu:10",
@@ -10422,17 +10442,21 @@
     },
     {
       "key": "collections.streaming:collections.streaming.netflix:0",
-      "status": "unchanged",
-      "count": 17,
+      "status": "would-update",
+      "listId": 8682239,
+      "count": 23,
       "scope": "GR",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0.041666666666666664
     },
     {
       "key": "collections.streaming:collections.streaming.netflix:1",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682240,
       "count": 33,
       "scope": "GR",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0.06060606060606061
     },
     {
       "key": "collections.streaming:collections.streaming.netflix:10",
@@ -10465,7 +10489,7 @@
     {
       "key": "collections.streaming:collections.streaming.netflix:14",
       "status": "unchanged",
-      "count": 130,
+      "count": 126,
       "scope": "GR",
       "posterlessExcluded": 0
     },
@@ -10584,7 +10608,7 @@
     {
       "key": "collections.streaming:collections.streaming.netflix:3",
       "status": "unchanged",
-      "count": 149,
+      "count": 150,
       "scope": "GR",
       "posterlessExcluded": 0
     },
@@ -10780,9 +10804,9 @@
     {
       "key": "collections.streaming:collections.streaming.paramount-plus:13",
       "status": "unchanged",
-      "count": 200,
+      "count": 199,
       "scope": "WORLDWIDE",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 1
     },
     {
       "key": "collections.streaming:collections.streaming.paramount-plus:14",
@@ -10962,9 +10986,9 @@
     {
       "key": "collections.streaming:collections.streaming.paramount-plus:38",
       "status": "unchanged",
-      "count": 200,
+      "count": 199,
       "scope": "WORLDWIDE",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 1
     },
     {
       "key": "collections.streaming:collections.streaming.paramount-plus:39",
@@ -11018,7 +11042,7 @@
     {
       "key": "collections.streaming:collections.streaming.paramount-plus:5",
       "status": "unchanged",
-      "count": 183,
+      "count": 106,
       "scope": "WORLDWIDE",
       "posterlessExcluded": 0
     },
@@ -11053,14 +11077,14 @@
     {
       "key": "collections.streaming:collections.streaming.peacock:0",
       "status": "unchanged",
-      "count": 4,
+      "count": 5,
       "scope": "WORLDWIDE",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.streaming:collections.streaming.peacock:1",
       "status": "unchanged",
-      "count": 5,
+      "count": 4,
       "scope": "WORLDWIDE",
       "posterlessExcluded": 0
     },
@@ -11326,14 +11350,14 @@
     {
       "key": "collections.streaming:collections.streaming.peacock:6",
       "status": "unchanged",
-      "count": 200,
+      "count": 172,
       "scope": "WORLDWIDE",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.streaming:collections.streaming.peacock:7",
       "status": "unchanged",
-      "count": 151,
+      "count": 76,
       "scope": "WORLDWIDE",
       "posterlessExcluded": 0
     },
@@ -11354,16 +11378,18 @@
     {
       "key": "collections.streaming:collections.streaming.prime-video:0",
       "status": "unchanged",
-      "count": 5,
+      "count": 4,
       "scope": "GR",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.streaming:collections.streaming.prime-video:1",
-      "status": "unchanged",
-      "count": 17,
+      "status": "would-update",
+      "listId": 8682375,
+      "count": 13,
       "scope": "GR",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0.07142857142857142
     },
     {
       "key": "collections.streaming:collections.streaming.prime-video:10",
@@ -11641,14 +11667,14 @@
     {
       "key": "collections.streaming:collections.streaming.prime-video:6",
       "status": "unchanged",
-      "count": 82,
+      "count": 41,
       "scope": "GR",
       "posterlessExcluded": 0
     },
     {
       "key": "collections.streaming:collections.streaming.prime-video:7",
       "status": "unchanged",
-      "count": 108,
+      "count": 58,
       "scope": "GR",
       "posterlessExcluded": 0
     },
@@ -11830,7 +11856,7 @@
     {
       "key": "collections.streaming:folder-6S0KR2JH:3",
       "status": "unchanged",
-      "count": 53,
+      "count": 28,
       "scope": "WORLDWIDE",
       "posterlessExcluded": 0
     },
@@ -11913,10 +11939,12 @@
     },
     {
       "key": "collections.streaming:folder-9B3VK7AU:0",
-      "status": "unchanged",
-      "count": 4,
+      "status": "would-update",
+      "listId": 8682490,
+      "count": 5,
       "scope": "WORLDWIDE",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0.4
     },
     {
       "key": "collections.streaming:folder-9B3VK7AU:1",
@@ -12131,9 +12159,9 @@
     {
       "key": "collections.streaming:folder-9B3VK7AU:5",
       "status": "unchanged",
-      "count": 49,
+      "count": 36,
       "scope": "WORLDWIDE",
-      "posterlessExcluded": 1
+      "posterlessExcluded": 0
     },
     {
       "key": "collections.streaming:folder-9B3VK7AU:6",
@@ -12201,7 +12229,7 @@
     {
       "key": "collections.streaming:folder-OKRSGYYC:3",
       "status": "unchanged",
-      "count": 61,
+      "count": 30,
       "scope": "WORLDWIDE",
       "posterlessExcluded": 0
     },
@@ -12515,10 +12543,12 @@
     },
     {
       "key": "collections.studios:folder-5VIHLY7Y:2",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682558,
       "count": 200,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-5VIHLY7Y:3",
@@ -12592,10 +12622,12 @@
     },
     {
       "key": "collections.studios:folder-9ZZK6A6C:2",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682571,
       "count": 122,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 2
+      "posterlessExcluded": 2,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-9ZZK6A6C:3",
@@ -12606,10 +12638,12 @@
     },
     {
       "key": "collections.studios:folder-9ZZK6A6C:4",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682573,
       "count": 107,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-9ZZK6A6C:5",
@@ -12627,10 +12661,12 @@
     },
     {
       "key": "collections.studios:folder-A59XSVAT:2",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682577,
       "count": 196,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-A59XSVAT:3",
@@ -12641,10 +12677,12 @@
     },
     {
       "key": "collections.studios:folder-A59XSVAT:4",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682579,
       "count": 197,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-A59XSVAT:5",
@@ -12662,10 +12700,12 @@
     },
     {
       "key": "collections.studios:folder-BNC84SJ4:2",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682583,
       "count": 133,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-BNC84SJ4:3",
@@ -12704,10 +12744,12 @@
     },
     {
       "key": "collections.studios:folder-CYHIQOKR:2",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682589,
       "count": 52,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-CYHIQOKR:3",
@@ -12746,10 +12788,12 @@
     },
     {
       "key": "collections.studios:folder-HIU1YFQA:2",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682595,
       "count": 199,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-HIU1YFQA:3",
@@ -12760,10 +12804,12 @@
     },
     {
       "key": "collections.studios:folder-HIU1YFQA:4",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682597,
       "count": 170,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-HIU1YFQA:5",
@@ -12781,10 +12827,12 @@
     },
     {
       "key": "collections.studios:folder-IAL16XW3:2",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682601,
       "count": 200,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-IAL16XW3:3",
@@ -12865,10 +12913,12 @@
     },
     {
       "key": "collections.studios:folder-KIRXHA4A:3",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682614,
       "count": 24,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-KIRXHA4A:4",
@@ -12879,17 +12929,21 @@
     },
     {
       "key": "collections.studios:folder-KIRXHA4A:5",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682616,
       "count": 23,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-V0MRWXHJ:2",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682620,
       "count": 198,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-V0MRWXHJ:3",
@@ -12928,10 +12982,12 @@
     },
     {
       "key": "collections.studios:folder-ZDYYVMWR:2",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682626,
       "count": 40,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-ZDYYVMWR:3",
@@ -12999,9 +13055,9 @@
     {
       "key": "collections.world:collections.world.chinese:0",
       "status": "unchanged",
-      "count": 177,
+      "count": 175,
       "scope": "GLOBAL",
-      "posterlessExcluded": 23
+      "posterlessExcluded": 25
     },
     {
       "key": "collections.world:collections.world.chinese:1",
@@ -13055,9 +13111,9 @@
     {
       "key": "collections.world:collections.world.french:0",
       "status": "unchanged",
-      "count": 171,
+      "count": 170,
       "scope": "GLOBAL",
-      "posterlessExcluded": 29
+      "posterlessExcluded": 30
     },
     {
       "key": "collections.world:collections.world.french:1",
@@ -13111,9 +13167,9 @@
     {
       "key": "collections.world:collections.world.german:0",
       "status": "unchanged",
-      "count": 158,
+      "count": 160,
       "scope": "GLOBAL",
-      "posterlessExcluded": 42
+      "posterlessExcluded": 40
     },
     {
       "key": "collections.world:collections.world.german:1",
@@ -13279,9 +13335,9 @@
     {
       "key": "collections.world:collections.world.italian:0",
       "status": "unchanged",
-      "count": 178,
+      "count": 179,
       "scope": "GLOBAL",
-      "posterlessExcluded": 22
+      "posterlessExcluded": 21
     },
     {
       "key": "collections.world:collections.world.italian:1",
@@ -13391,9 +13447,9 @@
     {
       "key": "collections.world:collections.world.korean:0",
       "status": "unchanged",
-      "count": 153,
+      "count": 156,
       "scope": "GLOBAL",
-      "posterlessExcluded": 47
+      "posterlessExcluded": 44
     },
     {
       "key": "collections.world:collections.world.korean:1",
@@ -13447,9 +13503,9 @@
     {
       "key": "collections.world:collections.world.latin-american:0",
       "status": "unchanged",
-      "count": 187,
+      "count": 185,
       "scope": "GLOBAL",
-      "posterlessExcluded": 13
+      "posterlessExcluded": 15
     },
     {
       "key": "collections.world:collections.world.latin-american:1",
@@ -13622,9 +13678,9 @@
     {
       "key": "collections.world:collections.world.spanish:2",
       "status": "unchanged",
-      "count": 183,
+      "count": 184,
       "scope": "GLOBAL",
-      "posterlessExcluded": 17
+      "posterlessExcluded": 16
     },
     {
       "key": "collections.world:collections.world.spanish:3",
@@ -13650,7 +13706,7 @@
     {
       "key": "collections.world:collections.world.spanish:6",
       "status": "unchanged",
-      "count": 14,
+      "count": 15,
       "scope": "GLOBAL:VOTE_QUORUM=25",
       "posterlessExcluded": 0
     },
@@ -13762,7 +13818,7 @@
     {
       "key": "collections.world:folder-0ZI700NE:0",
       "status": "unchanged",
-      "count": 78,
+      "count": 79,
       "scope": "GLOBAL",
       "posterlessExcluded": 8
     },
@@ -14105,7 +14161,7 @@
     {
       "key": "collections.world:folder-5069W7D9:0",
       "status": "unchanged",
-      "count": 100,
+      "count": 101,
       "scope": "GLOBAL",
       "posterlessExcluded": 10
     },
@@ -14280,7 +14336,7 @@
     {
       "key": "collections.world:folder-8XVOQGAJ:1",
       "status": "unchanged",
-      "count": 22,
+      "count": 23,
       "scope": "GLOBAL",
       "posterlessExcluded": 3
     },
@@ -14329,7 +14385,7 @@
     {
       "key": "collections.world:folder-9EYEPU66:0",
       "status": "unchanged",
-      "count": 151,
+      "count": 152,
       "scope": "GLOBAL",
       "posterlessExcluded": 24
     },
@@ -14413,9 +14469,9 @@
     {
       "key": "collections.world:folder-BICUTNJY:0",
       "status": "unchanged",
-      "count": 179,
+      "count": 178,
       "scope": "GLOBAL",
-      "posterlessExcluded": 21
+      "posterlessExcluded": 22
     },
     {
       "key": "collections.world:folder-BICUTNJY:1",
@@ -14511,9 +14567,9 @@
     {
       "key": "collections.world:folder-CHLCSAJ1:0",
       "status": "unchanged",
-      "count": 165,
+      "count": 162,
       "scope": "GLOBAL",
-      "posterlessExcluded": 35
+      "posterlessExcluded": 36
     },
     {
       "key": "collections.world:folder-CHLCSAJ1:1",
@@ -14567,9 +14623,9 @@
     {
       "key": "collections.world:folder-CNVEC5EE:0",
       "status": "unchanged",
-      "count": 163,
+      "count": 162,
       "scope": "GLOBAL",
-      "posterlessExcluded": 37
+      "posterlessExcluded": 38
     },
     {
       "key": "collections.world:folder-CNVEC5EE:1",
@@ -14819,7 +14875,7 @@
     {
       "key": "collections.world:folder-FI6BJN1Z:0",
       "status": "unchanged",
-      "count": 78,
+      "count": 79,
       "scope": "GLOBAL",
       "posterlessExcluded": 14
     },
@@ -14875,9 +14931,9 @@
     {
       "key": "collections.world:folder-FVCF354Y:0",
       "status": "unchanged",
-      "count": 191,
+      "count": 190,
       "scope": "GLOBAL",
-      "posterlessExcluded": 9
+      "posterlessExcluded": 10
     },
     {
       "key": "collections.world:folder-FVCF354Y:1",
@@ -14938,7 +14994,7 @@
     {
       "key": "collections.world:folder-KFJI7SS7:1",
       "status": "unchanged",
-      "count": 21,
+      "count": 23,
       "scope": "GLOBAL",
       "posterlessExcluded": 0
     },
@@ -15066,7 +15122,7 @@
       "status": "unchanged",
       "count": 66,
       "scope": "GLOBAL",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 1
     },
     {
       "key": "collections.world:folder-OBIM1CC7:2",
@@ -15099,9 +15155,9 @@
     {
       "key": "collections.world:folder-RESMLEJZ:0",
       "status": "unchanged",
-      "count": 154,
+      "count": 155,
       "scope": "GLOBAL",
-      "posterlessExcluded": 46
+      "posterlessExcluded": 45
     },
     {
       "key": "collections.world:folder-RESMLEJZ:1",
@@ -15155,9 +15211,9 @@
     {
       "key": "collections.world:folder-TRWE0E34:0",
       "status": "unchanged",
-      "count": 177,
+      "count": 179,
       "scope": "GLOBAL",
-      "posterlessExcluded": 23
+      "posterlessExcluded": 21
     },
     {
       "key": "collections.world:folder-TRWE0E34:1",
@@ -15190,7 +15246,7 @@
     {
       "key": "collections.world:folder-TRWE0E34:5",
       "status": "unchanged",
-      "count": 38,
+      "count": 39,
       "scope": "GLOBAL:VOTE_QUORUM=75",
       "posterlessExcluded": 0
     },
@@ -15211,9 +15267,9 @@
     {
       "key": "collections.world:folder-TT3MZNJE:0",
       "status": "unchanged",
-      "count": 121,
+      "count": 122,
       "scope": "GLOBAL",
-      "posterlessExcluded": 24
+      "posterlessExcluded": 23
     },
     {
       "key": "collections.world:folder-TT3MZNJE:1",
@@ -15407,9 +15463,9 @@
     {
       "key": "collections.world:folder-V9HNQAV1:0",
       "status": "unchanged",
-      "count": 181,
+      "count": 182,
       "scope": "GLOBAL",
-      "posterlessExcluded": 19
+      "posterlessExcluded": 18
     },
     {
       "key": "collections.world:folder-V9HNQAV1:1",
@@ -15519,9 +15575,9 @@
     {
       "key": "collections.world:folder-VLTMKACY:0",
       "status": "unchanged",
-      "count": 184,
+      "count": 183,
       "scope": "GLOBAL",
-      "posterlessExcluded": 16
+      "posterlessExcluded": 17
     },
     {
       "key": "collections.world:folder-VLTMKACY:1",
@@ -15596,14 +15652,14 @@
     {
       "key": "collections.world:folder-WCOQJ028:0",
       "status": "unchanged",
-      "count": 182,
+      "count": 183,
       "scope": "GLOBAL",
-      "posterlessExcluded": 18
+      "posterlessExcluded": 17
     },
     {
       "key": "collections.world:folder-WCOQJ028:1",
       "status": "unchanged",
-      "count": 126,
+      "count": 127,
       "scope": "GLOBAL",
       "posterlessExcluded": 8
     },
@@ -15652,7 +15708,7 @@
     {
       "key": "collections.world:folder-XJ6HNL6G:0",
       "status": "unchanged",
-      "count": 140,
+      "count": 141,
       "scope": "GLOBAL",
       "posterlessExcluded": 18
     },
@@ -15708,14 +15764,14 @@
     {
       "key": "collections.world:folder-Y0KO0JXK:0",
       "status": "unchanged",
-      "count": 138,
+      "count": 139,
       "scope": "GLOBAL",
       "posterlessExcluded": 5
     },
     {
       "key": "collections.world:folder-Y0KO0JXK:1",
       "status": "unchanged",
-      "count": 160,
+      "count": 162,
       "scope": "GLOBAL",
       "posterlessExcluded": 12
     },
@@ -15764,7 +15820,7 @@
     {
       "key": "collections.world:folder-Z4R165P4:0",
       "status": "unchanged",
-      "count": 87,
+      "count": 88,
       "scope": "GLOBAL",
       "posterlessExcluded": 11
     },
@@ -15813,7 +15869,7 @@
     {
       "key": "collections.world:folder-Z55EA73B:0",
       "status": "unchanged",
-      "count": 138,
+      "count": 139,
       "scope": "GLOBAL",
       "posterlessExcluded": 2
     },
@@ -15862,7 +15918,7 @@
     {
       "key": "collections.world:folder-ZFQ2TA63:0",
       "status": "unchanged",
-      "count": 16,
+      "count": 17,
       "scope": "GLOBAL",
       "posterlessExcluded": 2
     },
@@ -15966,87 +16022,87 @@
     }
   ],
   "performance": {
-    "totalMs": 52564,
+    "totalMs": 59208,
     "slowestRails": [
       {
         "key": "collections.runtime:collections.runtime.short:0",
-        "durationMs": 5565
+        "durationMs": 7200
       },
       {
         "key": "collections.runtime:collections.runtime.standard:0",
-        "durationMs": 5422
+        "durationMs": 6584
       },
       {
         "key": "collections.runtime:collections.runtime.long:0",
-        "durationMs": 4197
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:40",
-        "durationMs": 3285
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:37",
-        "durationMs": 3242
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:2",
-        "durationMs": 3012
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:3",
-        "durationMs": 2880
-      },
-      {
-        "key": "collections.streaming:collections.streaming.discovery-plus:2",
-        "durationMs": 2842
+        "durationMs": 6210
       },
       {
         "key": "collections.runtime:collections.runtime.epic:0",
-        "durationMs": 2784
+        "durationMs": 3401
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:4",
-        "durationMs": 2784
+        "key": "collections.streaming:collections.streaming.discovery-plus:2",
+        "durationMs": 3253
+      },
+      {
+        "key": "collections.streaming:collections.streaming.paramount-plus:2",
+        "durationMs": 3220
       },
       {
         "key": "collections.streaming:collections.streaming.discovery-plus:5",
-        "durationMs": 2649
+        "durationMs": 3073
+      },
+      {
+        "key": "collections.streaming:collections.streaming.paramount-plus:3",
+        "durationMs": 3022
+      },
+      {
+        "key": "collections.streaming:collections.streaming.paramount-plus:4",
+        "durationMs": 2952
+      },
+      {
+        "key": "collections.streaming:collections.streaming.apple-tv:1",
+        "durationMs": 2906
       },
       {
         "key": "collections.streaming:collections.streaming.discovery-plus:4",
-        "durationMs": 2615
+        "durationMs": 2835
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:39",
-        "durationMs": 2502
+        "key": "collections.streaming:collections.streaming.apple-tv:0",
+        "durationMs": 2633
       },
       {
         "key": "collections.streaming:collections.streaming.paramount-plus:35",
-        "durationMs": 2276
-      },
-      {
-        "key": "collections.streaming:collections.streaming.discovery-plus:3",
-        "durationMs": 2252
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:5",
-        "durationMs": 2212
+        "durationMs": 2579
       },
       {
         "key": "collections.streaming:collections.streaming.discovery-plus:1",
-        "durationMs": 2016
+        "durationMs": 2152
       },
       {
-        "key": "collections.streaming:collections.streaming.discovery-plus:10",
-        "durationMs": 1901
+        "key": "collections.streaming:collections.streaming.paramount-plus:37",
+        "durationMs": 2068
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:42",
-        "durationMs": 1844
+        "key": "collections.streaming:collections.streaming.paramount-plus:12",
+        "durationMs": 2008
       },
       {
         "key": "collections.streaming:collections.streaming.paramount-plus:6",
-        "durationMs": 1681
+        "durationMs": 1994
+      },
+      {
+        "key": "collections.streaming:collections.streaming.paramount-plus:13",
+        "durationMs": 1901
+      },
+      {
+        "key": "collections.streaming:collections.streaming.paramount-plus:40",
+        "durationMs": 1896
+      },
+      {
+        "key": "collections.discover:collections.discover.trending-2:1",
+        "durationMs": 1806
       }
     ]
   }

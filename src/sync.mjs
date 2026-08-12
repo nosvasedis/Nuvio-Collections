@@ -13,6 +13,9 @@ export function normalizeCandidateItems(items, media) {
     seen.add(identity); return true;
   });
 }
+export function orderedIdsEqual(before, after) {
+  return Array.isArray(before) && before.length === after.length && before.every((identity, index) => identity === after[index]);
+}
 function changeRatio(before, after) { const a = new Set(before), b = new Set(after); if (!a.size) return b.size ? 1 : 0; let changed = 0; for (const x of a) if (!b.has(x)) changed++; for (const x of b) if (!a.has(x)) changed++; return changed / Math.max(a.size, b.size, 1); }
 export function confirmationCompatible(before, after) {
   const a = new Set(before), b = new Set(after);
@@ -167,11 +170,17 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
         state.rails[rail.key] = { ...prior, lastSemanticRefresh: semanticRefreshedAt };
         await checkpointState();
       }
-      const sameOrderedIds = Array.isArray(prior.orderedIds) && prior.orderedIds.length === ids.length && prior.orderedIds.every((identity, index) => identity === ids[index]);
-      if (execute && prior.syncStatus === "verified" && prior.writeSchema !== WRITE_SCHEMA_VERSION && sameOrderedIds) {
-        state.rails[rail.key] = { ...prior, fingerprint: hash, count: ids.length, scope: candidate.scope, writeSchema: WRITE_SCHEMA_VERSION, posterlessExcluded, lastVerified: new Date().toISOString(), ...(semanticRefreshedAt ? { lastSemanticRefresh: semanticRefreshedAt } : {}) };
-        await checkpointState();
-        return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, posterlessExcluded, schemaUpgraded: true, _durationMs };
+      const sameOrderedIds = orderedIdsEqual(prior.orderedIds, ids);
+      // Ordered typed IDs are the write contract. A stale fingerprint, scope
+      // description, or schema checkpoint must never clear/re-add an identical
+      // remote list. Refresh the checkpoint locally and skip every TMDB write.
+      if (prior.syncStatus === "verified" && sameOrderedIds) {
+        const checkpointDrift = prior.fingerprint !== hash || prior.writeSchema !== WRITE_SCHEMA_VERSION || prior.scope !== candidate.scope || prior.posterlessExcluded !== posterlessExcluded;
+        if (execute && checkpointDrift) {
+          state.rails[rail.key] = { ...prior, fingerprint: hash, count: ids.length, scope: candidate.scope, writeSchema: WRITE_SCHEMA_VERSION, posterlessExcluded, lastVerified: new Date().toISOString(), ...(semanticRefreshedAt ? { lastSemanticRefresh: semanticRefreshedAt } : {}) };
+          await checkpointState();
+        }
+        return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, posterlessExcluded, ...(checkpointDrift ? { checkpointRefresh: true } : {}), _durationMs };
       }
       if (!force && prior.syncStatus === "verified" && prior.fingerprint === hash) return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, posterlessExcluded, _durationMs };
       return { key: rail.key, status: "would-update", listId: prior.listId, count: ids.length, scope: candidate.scope, posterlessExcluded, changeRatio: ratio, _durationMs, _rail: rail, _folderTitle: folderTitle, _candidate: candidate, _media: media, _ids: ids, _hash: hash, _invalidItems: invalidItems, _semanticRefreshedAt: semanticRefreshedAt };

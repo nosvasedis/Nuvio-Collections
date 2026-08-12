@@ -1,4 +1,5 @@
 name: Sync Nuvio TMDB lists
+run-name: Sync Nuvio TMDB lists — ${{ github.event_name == 'schedule' && '04:07 Europe/Athens' || 'manual' }}
 
 on:
   workflow_dispatch:
@@ -8,8 +9,8 @@ on:
         type: boolean
         default: true
   schedule:
-    - cron: "7 1 * * *"
-    - cron: "7 2 * * *"
+    - cron: "7 4 * * *"
+      timezone: "Europe/Athens"
 
 permissions:
   contents: write
@@ -43,29 +44,19 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 24
-      - name: Enforce 04:07 Europe/Athens schedule
-        id: guard
-        shell: bash
-        run: |
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" || "$(TZ=Europe/Athens date +%H:%M)" == "04:07" ]]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          fi
       - name: Test and audit
-        if: steps.guard.outputs.run == 'true'
         run: npm test && npm run audit
       - name: Dry run
-        if: steps.guard.outputs.run == 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run)
+        if: github.event_name != 'workflow_dispatch' || inputs.dry_run
         run: npm run sync:dry
       - name: Execute sync
-        if: steps.guard.outputs.run == 'true' && (github.event_name == 'schedule' || !inputs.dry_run)
+        if: github.event_name == 'schedule' || !inputs.dry_run
         run: npm run sync
       - name: Compile and production audit
-        if: steps.guard.outputs.run == 'true' && (github.event_name == 'schedule' || !inputs.dry_run)
+        if: github.event_name == 'schedule' || !inputs.dry_run
         run: npm run compile && npm run audit -- --production
       - name: Commit generated state
-        if: steps.guard.outputs.run == 'true' && (github.event_name == 'schedule' || !inputs.dry_run)
+        if: github.event_name == 'schedule' || !inputs.dry_run
         shell: bash
         run: |
           git config user.name "nuvio-collections-bot"
@@ -74,7 +65,7 @@ jobs:
           git diff --cached --quiet || git commit -m "chore: sync Nuvio TMDB lists"
           git push
       - name: Upload sync report
-        if: always() && steps.guard.outputs.run == 'true'
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: nuvio-sync-report-${{ github.run_id }}
