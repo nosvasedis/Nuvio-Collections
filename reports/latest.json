@@ -4,8 +4,8 @@
   "mode": "dry-run",
   "totals": {
     "considered": 2279,
-    "changed": 28,
-    "skipped": 2251,
+    "changed": 35,
+    "skipped": 2244,
     "failed": 0,
     "created": 0,
     "posterlessExcluded": 3443
@@ -6019,10 +6019,12 @@
     },
     {
       "key": "collections.directors:folder-6KCYV7TD:0",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8681671,
       "count": 15,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.directors:folder-6KCYV7TD:1",
@@ -9049,17 +9051,21 @@
     },
     {
       "key": "collections.runtime:collections.runtime.long:0",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682040,
       "count": 100,
       "scope": "GLOBAL:RUNTIME_VERIFIED=long:DAILY_ROTATION:VOTES>=100",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0.02
     },
     {
       "key": "collections.runtime:collections.runtime.short:0",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682041,
       "count": 100,
       "scope": "GLOBAL:RUNTIME_VERIFIED=short:DAILY_ROTATION:VOTES>=100",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0.02
     },
     {
       "key": "collections.runtime:collections.runtime.standard:0",
@@ -9068,7 +9074,7 @@
       "count": 100,
       "scope": "GLOBAL:RUNTIME_VERIFIED=standard:DAILY_ROTATION:VOTES>=100",
       "posterlessExcluded": 0,
-      "changeRatio": 0.06
+      "changeRatio": 0.1
     },
     {
       "key": "collections.streaming:collections.streaming.apple-tv:0",
@@ -12389,10 +12395,12 @@
     },
     {
       "key": "collections.studios:folder-2XGVUWET:3",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682533,
       "count": 31,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-2XGVUWET:4",
@@ -12559,10 +12567,12 @@
     },
     {
       "key": "collections.studios:folder-5VIHLY7Y:4",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682560,
       "count": 193,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-5VIHLY7Y:5",
@@ -12843,10 +12853,12 @@
     },
     {
       "key": "collections.studios:folder-IAL16XW3:4",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682603,
       "count": 199,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-IAL16XW3:5",
@@ -12871,10 +12883,12 @@
     },
     {
       "key": "collections.studios:folder-J66S9Y7E:2",
-      "status": "unchanged",
+      "status": "would-update",
+      "listId": 8682607,
       "count": 80,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
-      "posterlessExcluded": 0
+      "posterlessExcluded": 0,
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-J66S9Y7E:3",
@@ -16022,87 +16036,87 @@
     }
   ],
   "performance": {
-    "totalMs": 59208,
+    "totalMs": 48737,
     "slowestRails": [
       {
         "key": "collections.runtime:collections.runtime.short:0",
-        "durationMs": 7200
+        "durationMs": 4017
       },
       {
         "key": "collections.runtime:collections.runtime.standard:0",
-        "durationMs": 6584
+        "durationMs": 3982
       },
       {
         "key": "collections.runtime:collections.runtime.long:0",
-        "durationMs": 6210
-      },
-      {
-        "key": "collections.runtime:collections.runtime.epic:0",
-        "durationMs": 3401
+        "durationMs": 3717
       },
       {
         "key": "collections.streaming:collections.streaming.discovery-plus:2",
-        "durationMs": 3253
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:2",
-        "durationMs": 3220
+        "durationMs": 3538
       },
       {
         "key": "collections.streaming:collections.streaming.discovery-plus:5",
-        "durationMs": 3073
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:3",
-        "durationMs": 3022
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:4",
-        "durationMs": 2952
-      },
-      {
-        "key": "collections.streaming:collections.streaming.apple-tv:1",
-        "durationMs": 2906
+        "durationMs": 3382
       },
       {
         "key": "collections.streaming:collections.streaming.discovery-plus:4",
-        "durationMs": 2835
-      },
-      {
-        "key": "collections.streaming:collections.streaming.apple-tv:0",
-        "durationMs": 2633
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:35",
-        "durationMs": 2579
-      },
-      {
-        "key": "collections.streaming:collections.streaming.discovery-plus:1",
-        "durationMs": 2152
+        "durationMs": 3362
       },
       {
         "key": "collections.streaming:collections.streaming.paramount-plus:37",
-        "durationMs": 2068
+        "durationMs": 2470
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:12",
-        "durationMs": 2008
+        "key": "collections.streaming:collections.streaming.paramount-plus:2",
+        "durationMs": 2310
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:6",
-        "durationMs": 1994
+        "key": "collections.streaming:collections.streaming.paramount-plus:39",
+        "durationMs": 2275
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:13",
-        "durationMs": 1901
+        "key": "collections.streaming:collections.streaming.paramount-plus:3",
+        "durationMs": 2204
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:40",
-        "durationMs": 1896
+        "key": "collections.runtime:collections.runtime.epic:0",
+        "durationMs": 2176
       },
       {
-        "key": "collections.discover:collections.discover.trending-2:1",
-        "durationMs": 1806
+        "key": "collections.streaming:collections.streaming.paramount-plus:4",
+        "durationMs": 2114
+      },
+      {
+        "key": "collections.streaming:collections.streaming.apple-tv:1",
+        "durationMs": 2101
+      },
+      {
+        "key": "collections.streaming:collections.streaming.paramount-plus:35",
+        "durationMs": 2006
+      },
+      {
+        "key": "collections.streaming:collections.streaming.discovery-plus:1",
+        "durationMs": 1918
+      },
+      {
+        "key": "collections.streaming:collections.streaming.discovery-plus:6",
+        "durationMs": 1913
+      },
+      {
+        "key": "collections.streaming:collections.streaming.discovery-plus:0",
+        "durationMs": 1879
+      },
+      {
+        "key": "collections.streaming:collections.streaming.discovery-plus:3",
+        "durationMs": 1765
+      },
+      {
+        "key": "collections.discover:collections.discover.trending-2:0",
+        "durationMs": 1698
+      },
+      {
+        "key": "collections.streaming:collections.streaming.apple-tv:0",
+        "durationMs": 1674
       }
     ]
   }

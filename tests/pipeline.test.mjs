@@ -233,6 +233,13 @@ test("provider trending widens from official day to week only when day is empty 
   assert.deepEqual(windows, ["day", "week"]); assert.equal(result.scope, "GR"); assert.deepEqual(result.items.map((item) => item.id), [2]);
 });
 
+test("deleted trending candidates are unavailable while watch-provider outages fail closed", async () => {
+  const missing = new TmdbClient({ readToken: "test", fetchImpl: async () => new Response(JSON.stringify({ success: false, status_code: 34, status_message: "The resource you requested could not be found." }), { status: 404 }) });
+  assert.deepEqual(await missing.watchProviders("movie", 1747842), {});
+  const denied = new TmdbClient({ readToken: "test", fetchImpl: async () => new Response("denied", { status: 403 }) });
+  await assert.rejects(denied.watchProviders("movie", 1), /403/);
+});
+
 test("TV-only semantic genres use keywords without invalid movie genre IDs", async () => {
   const client = { keywordIds: async (names) => names.map((_, index) => index + 1) };
   for (const title of ["Σειρές τρόμου", "Ρομαντικές σειρές", "Σειρές θρίλερ", "Μουσικές σειρές", "Ιστορικές σειρές"]) {

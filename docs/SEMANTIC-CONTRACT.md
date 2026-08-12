@@ -251,6 +251,10 @@ and dynamic curated merge/order tests.
 - Provider Trending prefers the official TMDB day window. If that provider has
   no day result in either GR or Worldwide, it widens to the official week window;
   it never relabels generic popularity as trending.
+- A Trending ID that receives TMDB's definitive resource-not-found
+  (`404/status_code 34`) during watch-provider verification is discarded as a
+  deleted candidate. Network, rate-limit and 5xx failures still fail closed and
+  never masquerade as empty regional availability.
 - World rails use origin-country semantics. Awards contain winner works, not
   people. Released-only rails cap dates at the current Athens date.
 - Spain is exactly `ES`. Latin America is the reviewed origin union

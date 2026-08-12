@@ -92,7 +92,19 @@ export class TmdbClient {
   }
   async watchRegions() { return this.cached("watch-regions", async () => (await this.v3("/watch/providers/regions")).results ?? []); }
   async providers(media) { return this.cached(`providers:${media}`, async () => (await this.v3(`/watch/providers/${media}`)).results ?? []); }
-  async watchProviders(media, id) { return this.cached(`watch:${media}:${id}`, async () => (await this.v3(`/${media}/${id}/watch/providers`)).results ?? {}); }
+  async watchProviders(media, id) {
+    return this.cached(`watch:${media}:${id}`, async () => {
+      try { return (await this.v3(`/${media}/${id}/watch/providers`)).results ?? {}; }
+      catch (error) {
+        // Trending can briefly advertise an ID that TMDB deletes before its
+        // watch-provider lookup. A definitive resource-not-found response means
+        // this candidate is unavailable everywhere; every other error remains
+        // fail-closed so outages never masquerade as an empty GR result.
+        if (/\b404\b/.test(error.message) && /status_code["']?\s*:\s*34|resource you requested could not be found/i.test(error.message)) return {};
+        throw error;
+      }
+    });
+  }
   async details(media, id) { return this.cached(`details:${media}:${id}:${this.language}`, () => this.v3(`/${media}/${id}`, { language: this.language })); }
   async credits(personId, media) { return this.cached(`credits:${personId}:${media}:${this.language}`, () => this.v3(`/person/${personId}/${media}_credits`, { language: this.language })); }
   async changedIds(media, startDate, endDate) { const values = await this.pages(`/${media}/changes`, { start_date: startDate, end_date: endDate }, 10000); return values.map((x) => x.id); }

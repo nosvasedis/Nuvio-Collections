@@ -300,7 +300,7 @@ flowchart LR
 | Poster validation | ίδιο run | 3.443 exclusions, κανένα κενό candidate |
 | Semantic hardening production sync (12 Αυγούστου 2026) | 21 min 28 s | 1.327 exact-read-back updates, 952 skips, 0 failures, 0 creates |
 | Post-production live dry-run | 61,1 s | 2.251 skips, 28 νέες upstream order μετακινήσεις, 0 failures |
-| Tests + strict audit | < 3 s τοπικά | 45/45, 2.677 sources |
+| Tests + strict audit | < 3 s τοπικά | 46/46, 2.677 sources |
 
 Ο nightly χρόνος εξαρτάται από changed fingerprints και TMDB rate limits. Το
 εβδομαδιαίο πλήρες awards refresh είναι σκόπιμα βαρύτερο. Η σχεδόν ωριαία
