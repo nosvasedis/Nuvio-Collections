@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/folders-548-111827?style=flat-square" alt="548 folders">
   <img src="https://img.shields.io/badge/active_rails-2%2C677-111827?style=flat-square" alt="2,677 active rails">
   <img src="https://img.shields.io/badge/empty_rails-0-16a34a?style=flat-square" alt="0 empty rails">
-  <img src="https://img.shields.io/badge/tests-41%2F41-16a34a?style=flat-square" alt="41/41 tests">
+  <img src="https://img.shields.io/badge/tests-47%2F47-16a34a?style=flat-square" alt="47/47 tests">
 </p>
 
 <p align="center">
@@ -45,10 +45,11 @@ resumable synchronizer και το GitHub Actions workflow που κρατά τ�
 | Κενά folders | **0** |
 | Unresolved list IDs | **0** |
 | Trakt / runtime-addon sources | **0 / 0** |
-| Automated tests | **41 / 41** |
+| Automated tests | **47 / 47** |
 
 Τα sources που επέστρεφαν αποδεδειγμένα μηδενικό αποτέλεσμα με τον ακριβή
-predicate τους έχουν αποσυρθεί. Δεν διαγράφηκε ούτε συγχωνεύτηκε κανένα folder.
+predicate τους έχουν αποσυρθεί. Οι μόνες αλλαγές folder identity είναι οι δύο
+ρητά εγκεκριμένες migrations που καταγράφονται παρακάτω.
 Επιπλέον, αποσύρθηκαν μετά από ρητή έγκριση τα 6 TV rails των Jason Statham και
 Tom Cruise: τα επίσημα TMDB credits τους δεν περιέχουν κανέναν ουσιαστικό
 τηλεοπτικό ρόλο, μόνο self/guest/archive/uncredited εμφανίσεις. Τα παλιά list IDs
@@ -60,6 +61,13 @@ tombstones, αλλά δεν εμφανίζονται στο Nuvio και δεν 
 νέα collection `✨ Διάθεση & Ατμόσφαιρα` με 10 folders/60 rails και 18 νέες
 χώρες. Από τα αρχικά 517 folders παραμένουν 516· μαζί με τις παλιότερες 2 και
 τις 30 νέες προσθήκες το release έχει 548 fingerprint-locked folders.
+
+Στις 12 Αυγούστου 2026 έγινε η εγκεκριμένη streaming migration: `Hulu`,
+`Discovery+` και `Starz` αντικαταστάθηκαν από `MUBI`, `Criterion` και `AMC+`.
+Και τα 94 παλιά list IDs διατηρούνται ως tombstones και έχουν διαγραφεί από το
+TMDB μετά από ownership + 404 verification. Προστέθηκαν 92 ενεργά rails, επειδή
+δύο Starz predicates ήταν ήδη αποδεδειγμένα κενά/retired. Έτσι διατηρούνται
+ακριβώς 13 streaming folders, 455 streaming rails και όλα τα global counts.
 
 Ο folder `Προτεινόμενα` είναι σκόπιμα χειροκίνητος και εξαιρείται από τον TMDB
 materializer. Η canonical έκδοση v5.0.1 ανακατευθύνει τις ταινίες στο
@@ -130,7 +138,7 @@ audit, ώστε μελλοντικό build να μην επιστρέψει κα
 project δεν μπορεί να εφεύρει την πραγματική πληροφορία· αποτρέπει όμως τη
 δημοσίευση τεχνικά λανθασμένων, mixed, incomplete ή ανεπιβεβαίωτων lists.
 
-Στο τελευταίο πλήρες scan αποκλείστηκαν 3.602 posterless rail-occurrences. Το
+Στο τελευταίο πλήρες scan αποκλείστηκαν 3.486 posterless rail-occurrences. Το
 `Somebody Knows Something` (TMDB TV 330654) επαληθεύτηκε με
 `poster_path: null` και δεν δημοσιεύεται. Θα επιστρέψει αυτόματα αν προστεθεί
 poster στο TMDB. Ο κανόνας επιβάλλεται στα 2.279 materialized rails. Τα 396
@@ -172,6 +180,23 @@ native sources εκτελούνται απευθείας από το Nuvio 0.8.3
 API error δεν θεωρείται «κενή Ελλάδα» και δεν ενεργοποιεί fallback. Provider
 aliases επιτρέπονται μόνο ως regional ονομασίες της ίδιας υπηρεσίας· τρίτα
 channel subscriptions δεν προστίθενται σε folder άλλης υπηρεσίας.
+
+Η τελική οπτική σειρά είναι: **Netflix, Disney+, Apple TV+, HBO Max, Prime
+Video, Crunchyroll, MUBI, Criterion, Paramount+, AMC+, Peacock, MGM+, Shudder**.
+Όλα τα 13 folders χρησιμοποιούν το pinned cover, focus GIF, title logo και hero
+backdrop του Kaptain v0.90 beta export, ενώ τα predicates και οι public lists
+παραμένουν δικά μας, materialized και επαληθεύσιμα.
+
+- **Disney+ Ελλάδα:** χρησιμοποιεί τον επίσημο TMDB provider `Disney Plus`
+  (ID 337). Live checks σε Hulu-origin σειρές (`Only Murders in the Building`,
+  `The Bear`, `Dopesick`, `A Murder at the End of the World`) τις επέστρεψαν ως
+  `flatrate` μέσω Disney Plus στο `GR`. Ο αυτόνομος US Hulu provider δεν
+  αναμειγνύεται στο folder.
+- **AMC+:** είναι bundle union των direct providers `AMC+`, `Sundance Now` και
+  `Acorn TV`. Amazon/Apple/Roku channel add-ons αποκλείονται.
+- **MUBI/Criterion:** είναι movie-only όπου αυτό αντανακλά τον πραγματικό TMDB
+  catalog. Δεν υπάρχουν ψευδή TV ή ανεπίσημα “Top 10” rails. Το κενό MUBI
+  trending predicate αντικαταστάθηκε από επαληθεύσιμες `Κλασικές ταινίες`.
 
 ### Genres, Film Series, Studios και Networks
 
@@ -231,8 +256,8 @@ refresh τουλάχιστον κάθε επτά ημέρες ή με `--force`.
 
 - World: inclusion με `with_origin_country`, χωρίς να αποκλείονται πραγματικές
   πολύγλωσσες ή διεθνείς συμπαραγωγές λόγω original language.
-- Οι φάκελοι World ταξινομούνται με ελληνικό locale (`el`) στον εμφανιζόμενο
-  τίτλο· η Λατινική Αμερική και η Πορτογαλία κάθονται στα γράμματα Λ και Π.
+- Οι φάκελοι World ταξινομούνται με το canonical αγγλικό όνομα (`en`), ενώ ο
+  εμφανιζόμενος τίτλος και το emoji παραμένουν ελληνικά.
 - Decades: ακριβή date bounds. Η τρέχουσα χρονιά και τα 2020s σταματούν σήμερα,
   χωρίς future releases.
 - Runtime: movie-only, ακριβή και μη επικαλυπτόμενα όρια. Κάθε βράδυ επιλέγεται
@@ -300,7 +325,9 @@ flowchart LR
 | Poster validation | ίδιο run | 3.443 exclusions, κανένα κενό candidate |
 | Semantic hardening production sync (12 Αυγούστου 2026) | 21 min 28 s | 1.327 exact-read-back updates, 952 skips, 0 failures, 0 creates |
 | Post-production live dry-run | 61,1 s | 2.251 skips, 28 νέες upstream order μετακινήσεις, 0 failures |
-| Tests + strict audit | < 3 s τοπικά | 46/46, 2.677 sources |
+| Streaming migration production retry (12 Αυγούστου 2026) | 7 min 59 s | ownership recovery 2.279/2.279, 92/92 νέα rails verified, 0 duplicates, 0 failures |
+| Retired streaming cleanup | 56,4 s | 94/94 owned Hulu/Discovery+/Starz lists διαγράφηκαν και επέστρεψαν 404 |
+| Tests + strict audit | < 3 s τοπικά | 47/47, 2.677 sources |
 
 Ο nightly χρόνος εξαρτάται από changed fingerprints και TMDB rate limits. Το
 εβδομαδιαίο πλήρες awards refresh είναι σκόπιμα βαρύτερο. Η σχεδόν ωριαία
@@ -337,6 +364,8 @@ writes: όλα τα 2.279 ordered fingerprints ήταν ήδη ίδια.
 | `docs/SEMANTIC-CONTRACT.md` | Durable κανόνες, regressions και hand-off evidence |
 | `AGENTS.md` | Υποχρεωτική διαδικασία για επόμενους agents/contributors |
 | `reports/latest.json` | Αναλυτικό αποτέλεσμα τελευταίου sync |
+| `reports/streaming-migration-2026-08-12.json` | Provider/artwork/list evidence της streaming migration |
+| `reports/streaming-retirement-2026-08-12.json` | 94/94 ownership-verified remote deletions |
 | `dist/nuvio-collections-v5.0.1.json` | Τελικό Nuvio import artifact |
 | `reports/profile-audit-2026-08-10.json` | Evidence του reviewed Nuvio export και των 987 media-type mismatches |
 | `src/nuvio-list-compat.mjs` | Source-level LIST/editor/DataStore compatibility emulation |
@@ -347,7 +376,7 @@ writes: όλα τα 2.279 ordered fingerprints ήταν ήδη ίδια.
 Απαιτείται Node.js 22+· το hosted workflow χρησιμοποιεί Node.js 24.
 
 ```powershell
-npm test                    # 41 automated contract tests
+npm test                    # 47 automated contract tests
 npm run audit               # structure, counts, locks και compatibility
 npm run sync:dry            # live candidates, χωρίς remote writes
 npm run sync                # production reconciliation

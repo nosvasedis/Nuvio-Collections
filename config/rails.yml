@@ -62830,6 +62830,2088 @@
       }
     },
     {
+      "key": "collections.streaming:collections.streaming.amc-plus:0",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 0,
+      "title": "Τάσεις ταινιών",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "original"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Τάσεις ταινιών",
+        "title": "Τάσεις ταινιών",
+        "name": "Τάσεις ταινιών",
+        "sortBy": "original",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:1",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 1,
+      "title": "Τάσεις σειρών",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "original"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Τάσεις σειρών",
+        "title": "Τάσεις σειρών",
+        "name": "Τάσεις σειρών",
+        "sortBy": "original",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:2",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 2,
+      "title": "Νέες ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "voteCountGte": 10
+          },
+          "sortBy": "primary_release_date.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Νέες ταινίες",
+        "title": "Νέες ταινίες",
+        "name": "Νέες ταινίες",
+        "sortBy": "primary_release_date.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "voteCountGte": 10
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:3",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 3,
+      "title": "Νέες σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "voteCountGte": 10
+          },
+          "sortBy": "first_air_date.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Νέες σειρές",
+        "title": "Νέες σειρές",
+        "name": "Νέες σειρές",
+        "sortBy": "first_air_date.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "voteCountGte": 10
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:4",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 4,
+      "title": "Δημοφιλείς ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "popular"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Δημοφιλείς ταινίες",
+        "title": "Δημοφιλείς ταινίες",
+        "name": "Δημοφιλείς ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "popular"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:5",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 5,
+      "title": "Δημοφιλείς σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "popular"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Δημοφιλείς σειρές",
+        "title": "Δημοφιλείς σειρές",
+        "name": "Δημοφιλείς σειρές",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "popular"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:6",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 6,
+      "title": "Κορυφαίες ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "vote_average.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "top_all_time",
+          "voteCountGte": 250
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Κορυφαίες ταινίες",
+        "title": "Κορυφαίες ταινίες",
+        "name": "Κορυφαίες ταινίες",
+        "sortBy": "vote_average.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "top_all_time",
+          "voteCountGte": 250
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:7",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 7,
+      "title": "Κορυφαίες σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "vote_average.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "top_all_time",
+          "voteCountGte": 150
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Κορυφαίες σειρές",
+        "title": "Κορυφαίες σειρές",
+        "name": "Κορυφαίες σειρές",
+        "sortBy": "vote_average.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "top_all_time",
+          "voteCountGte": 150
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:8",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 8,
+      "title": "Ταινίες δράσης",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες δράσης",
+        "title": "Ταινίες δράσης",
+        "name": "Ταινίες δράσης",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:9",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 9,
+      "title": "Σειρές δράσης",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Σειρές δράσης",
+        "title": "Σειρές δράσης",
+        "name": "Σειρές δράσης",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:10",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 10,
+      "title": "Ταινίες περιπέτειας",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες περιπέτειας",
+        "title": "Ταινίες περιπέτειας",
+        "name": "Ταινίες περιπέτειας",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:11",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 11,
+      "title": "Σειρές περιπέτειας",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Σειρές περιπέτειας",
+        "title": "Σειρές περιπέτειας",
+        "name": "Σειρές περιπέτειας",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:12",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 12,
+      "title": "Ταινίες κινουμένων σχεδίων",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες κινουμένων σχεδίων",
+        "title": "Ταινίες κινουμένων σχεδίων",
+        "name": "Ταινίες κινουμένων σχεδίων",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:13",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 13,
+      "title": "Σειρές κινουμένων σχεδίων",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Σειρές κινουμένων σχεδίων",
+        "title": "Σειρές κινουμένων σχεδίων",
+        "name": "Σειρές κινουμένων σχεδίων",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:14",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 14,
+      "title": "Κωμικές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Κωμικές ταινίες",
+        "title": "Κωμικές ταινίες",
+        "name": "Κωμικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:15",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 15,
+      "title": "Κωμικές σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Κωμικές σειρές",
+        "title": "Κωμικές σειρές",
+        "name": "Κωμικές σειρές",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:16",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 16,
+      "title": "Αστυνομικές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Αστυνομικές ταινίες",
+        "title": "Αστυνομικές ταινίες",
+        "name": "Αστυνομικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:17",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 17,
+      "title": "Αστυνομικές σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Αστυνομικές σειρές",
+        "title": "Αστυνομικές σειρές",
+        "name": "Αστυνομικές σειρές",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:18",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 18,
+      "title": "Ταινίες ντοκιμαντέρ",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες ντοκιμαντέρ",
+        "title": "Ταινίες ντοκιμαντέρ",
+        "name": "Ταινίες ντοκιμαντέρ",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:19",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 19,
+      "title": "Σειρές ντοκιμαντέρ",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Σειρές ντοκιμαντέρ",
+        "title": "Σειρές ντοκιμαντέρ",
+        "name": "Σειρές ντοκιμαντέρ",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:20",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 20,
+      "title": "Δραματικές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Δραματικές ταινίες",
+        "title": "Δραματικές ταινίες",
+        "name": "Δραματικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:21",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 21,
+      "title": "Δραματικές σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Δραματικές σειρές",
+        "title": "Δραματικές σειρές",
+        "name": "Δραματικές σειρές",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:22",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 22,
+      "title": "Οικογενειακές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Οικογενειακές ταινίες",
+        "title": "Οικογενειακές ταινίες",
+        "name": "Οικογενειακές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:23",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 23,
+      "title": "Οικογενειακές σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Οικογενειακές σειρές",
+        "title": "Οικογενειακές σειρές",
+        "name": "Οικογενειακές σειρές",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:24",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 24,
+      "title": "Ταινίες φαντασίας",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες φαντασίας",
+        "title": "Ταινίες φαντασίας",
+        "name": "Ταινίες φαντασίας",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:25",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 25,
+      "title": "Σειρές φαντασίας",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Σειρές φαντασίας",
+        "title": "Σειρές φαντασίας",
+        "name": "Σειρές φαντασίας",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:26",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 26,
+      "title": "Ιστορικές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ιστορικές ταινίες",
+        "title": "Ιστορικές ταινίες",
+        "name": "Ιστορικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:27",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 27,
+      "title": "Ιστορικές σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Ιστορικές σειρές",
+        "title": "Ιστορικές σειρές",
+        "name": "Ιστορικές σειρές",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:28",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 28,
+      "title": "Ταινίες τρόμου",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες τρόμου",
+        "title": "Ταινίες τρόμου",
+        "name": "Ταινίες τρόμου",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:29",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 29,
+      "title": "Σειρές τρόμου",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Σειρές τρόμου",
+        "title": "Σειρές τρόμου",
+        "name": "Σειρές τρόμου",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:30",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 30,
+      "title": "Ταινίες μυστηρίου",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες μυστηρίου",
+        "title": "Ταινίες μυστηρίου",
+        "name": "Ταινίες μυστηρίου",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:31",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 31,
+      "title": "Σειρές μυστηρίου",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Σειρές μυστηρίου",
+        "title": "Σειρές μυστηρίου",
+        "name": "Σειρές μυστηρίου",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:32",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 32,
+      "title": "Ντοκιμαντέρ φύσης",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ντοκιμαντέρ φύσης",
+        "title": "Ντοκιμαντέρ φύσης",
+        "name": "Ντοκιμαντέρ φύσης",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:33",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 33,
+      "title": "Σειρές ντοκιμαντέρ φύσης",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Σειρές ντοκιμαντέρ φύσης",
+        "title": "Σειρές ντοκιμαντέρ φύσης",
+        "name": "Σειρές ντοκιμαντέρ φύσης",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:34",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 34,
+      "title": "Ρομαντικές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ρομαντικές ταινίες",
+        "title": "Ρομαντικές ταινίες",
+        "name": "Ρομαντικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:35",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 35,
+      "title": "Ρομαντικές σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Ρομαντικές σειρές",
+        "title": "Ρομαντικές σειρές",
+        "name": "Ρομαντικές σειρές",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:36",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 36,
+      "title": "Ρομαντικές κομεντί",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ρομαντικές κομεντί",
+        "title": "Ρομαντικές κομεντί",
+        "name": "Ρομαντικές κομεντί",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:37",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 37,
+      "title": "Ρομαντικές κωμικές σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Ρομαντικές κωμικές σειρές",
+        "title": "Ρομαντικές κωμικές σειρές",
+        "name": "Ρομαντικές κωμικές σειρές",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:38",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 38,
+      "title": "Ταινίες επιστημονικής φαντασίας",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες επιστημονικής φαντασίας",
+        "title": "Ταινίες επιστημονικής φαντασίας",
+        "name": "Ταινίες επιστημονικής φαντασίας",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:39",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 39,
+      "title": "Σειρές επιστημονικής φαντασίας",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Σειρές επιστημονικής φαντασίας",
+        "title": "Σειρές επιστημονικής φαντασίας",
+        "name": "Σειρές επιστημονικής φαντασίας",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:40",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 40,
+      "title": "Ταινίες θρίλερ",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες θρίλερ",
+        "title": "Ταινίες θρίλερ",
+        "name": "Ταινίες θρίλερ",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:41",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 41,
+      "title": "Σειρές θρίλερ",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Σειρές θρίλερ",
+        "title": "Σειρές θρίλερ",
+        "name": "Σειρές θρίλερ",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:42",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 42,
+      "title": "Πολεμικές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Πολεμικές ταινίες",
+        "title": "Πολεμικές ταινίες",
+        "name": "Πολεμικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:43",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 43,
+      "title": "Πολεμικές σειρές",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Πολεμικές σειρές",
+        "title": "Πολεμικές σειρές",
+        "name": "Πολεμικές σειρές",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:44",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 44,
+      "title": "Ταινίες γουέστερν",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες γουέστερν",
+        "title": "Ταινίες γουέστερν",
+        "name": "Ταινίες γουέστερν",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.amc-plus:45",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.amc-plus",
+      "position": 45,
+      "title": "Σειρές γουέστερν",
+      "mediaType": "TV",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.amc-plus",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "series",
+        "genre": "Σειρές γουέστερν",
+        "title": "Σειρές γουέστερν",
+        "name": "Σειρές γουέστερν",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "TV",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
       "key": "collections.streaming:collections.streaming.apple-tv:0",
       "collectionId": "collections.streaming",
       "folderId": "collections.streaming.apple-tv",
@@ -63791,6 +65873,1047 @@
       }
     },
     {
+      "key": "collections.streaming:collections.streaming.criterion:0",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 0,
+      "title": "Νέες ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "voteCountGte": 10
+          },
+          "sortBy": "primary_release_date.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Νέες ταινίες",
+        "title": "Νέες ταινίες",
+        "name": "Νέες ταινίες",
+        "sortBy": "primary_release_date.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "voteCountGte": 10
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:1",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 1,
+      "title": "Δημοφιλείς ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "popular"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Δημοφιλείς ταινίες",
+        "title": "Δημοφιλείς ταινίες",
+        "name": "Δημοφιλείς ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "popular"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:2",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 2,
+      "title": "Κορυφαίες ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "vote_average.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "top_all_time",
+          "voteCountGte": 250
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Κορυφαίες ταινίες",
+        "title": "Κορυφαίες ταινίες",
+        "name": "Κορυφαίες ταινίες",
+        "sortBy": "vote_average.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "top_all_time",
+          "voteCountGte": 250
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:3",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 3,
+      "title": "Ταινίες δράσης",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες δράσης",
+        "title": "Ταινίες δράσης",
+        "name": "Ταινίες δράσης",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:4",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 4,
+      "title": "Ταινίες περιπέτειας",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες περιπέτειας",
+        "title": "Ταινίες περιπέτειας",
+        "name": "Ταινίες περιπέτειας",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:5",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 5,
+      "title": "Ταινίες κινουμένων σχεδίων",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες κινουμένων σχεδίων",
+        "title": "Ταινίες κινουμένων σχεδίων",
+        "name": "Ταινίες κινουμένων σχεδίων",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:6",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 6,
+      "title": "Ταινίες άνιμε",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες άνιμε",
+        "title": "Ταινίες άνιμε",
+        "name": "Ταινίες άνιμε",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:7",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 7,
+      "title": "Κωμικές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Κωμικές ταινίες",
+        "title": "Κωμικές ταινίες",
+        "name": "Κωμικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:8",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 8,
+      "title": "Αστυνομικές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Αστυνομικές ταινίες",
+        "title": "Αστυνομικές ταινίες",
+        "name": "Αστυνομικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:9",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 9,
+      "title": "Ταινίες ντοκιμαντέρ",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες ντοκιμαντέρ",
+        "title": "Ταινίες ντοκιμαντέρ",
+        "name": "Ταινίες ντοκιμαντέρ",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:10",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 10,
+      "title": "Δραματικές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Δραματικές ταινίες",
+        "title": "Δραματικές ταινίες",
+        "name": "Δραματικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:11",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 11,
+      "title": "Οικογενειακές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Οικογενειακές ταινίες",
+        "title": "Οικογενειακές ταινίες",
+        "name": "Οικογενειακές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:12",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 12,
+      "title": "Ταινίες φαντασίας",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες φαντασίας",
+        "title": "Ταινίες φαντασίας",
+        "name": "Ταινίες φαντασίας",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:13",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 13,
+      "title": "Ιστορικές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ιστορικές ταινίες",
+        "title": "Ιστορικές ταινίες",
+        "name": "Ιστορικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:14",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 14,
+      "title": "Ταινίες τρόμου",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες τρόμου",
+        "title": "Ταινίες τρόμου",
+        "name": "Ταινίες τρόμου",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:15",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 15,
+      "title": "Ταινίες μυστηρίου",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες μυστηρίου",
+        "title": "Ταινίες μυστηρίου",
+        "name": "Ταινίες μυστηρίου",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:16",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 16,
+      "title": "Ντοκιμαντέρ φύσης",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ντοκιμαντέρ φύσης",
+        "title": "Ντοκιμαντέρ φύσης",
+        "name": "Ντοκιμαντέρ φύσης",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:17",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 17,
+      "title": "Ρομαντικές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ρομαντικές ταινίες",
+        "title": "Ρομαντικές ταινίες",
+        "name": "Ρομαντικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:18",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 18,
+      "title": "Ρομαντικές κομεντί",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ρομαντικές κομεντί",
+        "title": "Ρομαντικές κομεντί",
+        "name": "Ρομαντικές κομεντί",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:19",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 19,
+      "title": "Ταινίες επιστημονικής φαντασίας",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες επιστημονικής φαντασίας",
+        "title": "Ταινίες επιστημονικής φαντασίας",
+        "name": "Ταινίες επιστημονικής φαντασίας",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:20",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 20,
+      "title": "Ταινίες θρίλερ",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες θρίλερ",
+        "title": "Ταινίες θρίλερ",
+        "name": "Ταινίες θρίλερ",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:21",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 21,
+      "title": "Πολεμικές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Πολεμικές ταινίες",
+        "title": "Πολεμικές ταινίες",
+        "name": "Πολεμικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.criterion:22",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.criterion",
+      "position": 22,
+      "title": "Ταινίες γουέστερν",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.criterion",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες γουέστερν",
+        "title": "Ταινίες γουέστερν",
+        "name": "Ταινίες γουέστερν",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
       "key": "collections.streaming:collections.streaming.crunchyroll:0",
       "collectionId": "collections.streaming",
       "folderId": "collections.streaming.crunchyroll",
@@ -64170,304 +67293,6 @@
         "provider": "trakt",
         "mediaType": "TV",
         "traktListId": 34809261
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.discovery-plus:0",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.discovery-plus",
-      "position": 0,
-      "title": "Νέες ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658935,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658935,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.discovery-plus"
-      },
-      "originalSource": {
-        "title": "Νέες ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658935,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.discovery-plus:1",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.discovery-plus",
-      "position": 1,
-      "title": "Νέες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809226,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.discovery-plus"
-      },
-      "originalSource": {
-        "title": "Νέες σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809226
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.discovery-plus:2",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.discovery-plus",
-      "position": 2,
-      "title": "Δημοφιλείς σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809228,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.discovery-plus"
-      },
-      "originalSource": {
-        "title": "Δημοφιλείς σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809228
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.discovery-plus:3",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.discovery-plus",
-      "position": 3,
-      "title": "Κορυφαίες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809230,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.discovery-plus"
-      },
-      "originalSource": {
-        "title": "Κορυφαίες σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809230
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.discovery-plus:4",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.discovery-plus",
-      "position": 4,
-      "title": "Ταινίες ντοκιμαντέρ",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658937,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658937,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.discovery-plus"
-      },
-      "originalSource": {
-        "title": "Ταινίες ντοκιμαντέρ",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658937,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.discovery-plus:5",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.discovery-plus",
-      "position": 5,
-      "title": "Σειρές ντοκιμαντέρ",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809234,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.discovery-plus"
-      },
-      "originalSource": {
-        "title": "Σειρές ντοκιμαντέρ",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809234
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.discovery-plus:6",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.discovery-plus",
-      "position": 6,
-      "title": "Οικογενειακές ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658939,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658939,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.discovery-plus"
-      },
-      "originalSource": {
-        "title": "Οικογενειακές ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658939,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.discovery-plus:7",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.discovery-plus",
-      "position": 7,
-      "title": "Οικογενειακές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809235,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.discovery-plus"
-      },
-      "originalSource": {
-        "title": "Οικογενειακές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809235
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.discovery-plus:8",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.discovery-plus",
-      "position": 8,
-      "title": "Ντοκιμαντέρ φύσης",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658938,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658938,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.discovery-plus"
-      },
-      "originalSource": {
-        "title": "Ντοκιμαντέρ φύσης",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658938,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.discovery-plus:9",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.discovery-plus",
-      "position": 9,
-      "title": "Σειρές ντοκιμαντέρ φύσης",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809955,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.discovery-plus"
-      },
-      "originalSource": {
-        "title": "Σειρές ντοκιμαντέρ φύσης",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809955
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.discovery-plus:10",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.discovery-plus",
-      "position": 10,
-      "title": "Σειρές ριάλιτι",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809237,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.discovery-plus"
-      },
-      "originalSource": {
-        "title": "Σειρές ριάλιτι",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809237
       }
     },
     {
@@ -66905,1239 +69730,1048 @@
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:0",
+      "key": "collections.streaming:collections.streaming.mubi:0",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
+      "folderId": "collections.streaming.mubi",
       "position": 0,
-      "title": "Τάσεις ταινιών",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 35015572,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Τάσεις ταινιών",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "MOVIE",
-        "traktListId": 35015572
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:1",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 1,
-      "title": "Τάσεις σειρών",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 35015572,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Τάσεις σειρών",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 35015572
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:2",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 2,
       "title": "Νέες ταινίες",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658804,
+      "listId": null,
       "params": {
         "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658804,
-          "filters": {},
-          "sortBy": "original"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "voteCountGte": 10
+          },
+          "sortBy": "primary_release_date.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
+        "type": "movie",
+        "genre": "Νέες ταινίες",
         "title": "Νέες ταινίες",
-        "sortBy": "original",
+        "name": "Νέες ταινίες",
+        "sortBy": "primary_release_date.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "voteCountGte": 10
+        },
+        "sortHow": null,
         "provider": "tmdb",
+        "catalogId": null,
         "mediaType": "MOVIE",
-        "tmdbId": 8658804,
-        "tmdbSourceType": "LIST",
-        "filters": {}
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:3",
+      "key": "collections.streaming:collections.streaming.mubi:1",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 3,
-      "title": "Νέες σειρές",
-      "mediaType": "TV",
+      "folderId": "collections.streaming.mubi",
+      "position": 1,
+      "title": "Πρόσφατες ταινίες",
+      "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808934,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "primary_release_date.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "recent"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Νέες σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808934
+        "type": "movie",
+        "genre": "Πρόσφατες ταινίες",
+        "title": "Πρόσφατες ταινίες",
+        "name": "Πρόσφατες ταινίες",
+        "sortBy": "primary_release_date.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "recent"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:4",
+      "key": "collections.streaming:collections.streaming.mubi:2",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 4,
+      "folderId": "collections.streaming.mubi",
+      "position": 2,
+      "title": "Κλασικές ταινίες",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {
+            "releaseDateLte": "1999-12-31"
+          },
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Κλασικές ταινίες",
+        "title": "Κλασικές ταινίες",
+        "name": "Κλασικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {
+          "releaseDateLte": "1999-12-31"
+        },
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:3",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.mubi",
+      "position": 3,
       "title": "Δημοφιλείς ταινίες",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658806,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658806,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Δημοφιλείς ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658806,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:5",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 5,
-      "title": "Δημοφιλείς σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808936,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "popular"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Δημοφιλείς σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808936
+        "type": "movie",
+        "genre": "Δημοφιλείς ταινίες",
+        "title": "Δημοφιλείς ταινίες",
+        "name": "Δημοφιλείς ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "popular"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:6",
+      "key": "collections.streaming:collections.streaming.mubi:4",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 6,
+      "folderId": "collections.streaming.mubi",
+      "position": 4,
       "title": "Κορυφαίες ταινίες",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658807,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658807,
-          "filters": {},
-          "sortBy": "vote_average.desc"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Κορυφαίες ταινίες",
-        "sortBy": "vote_average.desc",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658807,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:7",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 7,
-      "title": "Κορυφαίες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808938,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "vote_average.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "top_all_time",
+          "voteCountGte": 250
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Κορυφαίες σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808938
+        "type": "movie",
+        "genre": "Κορυφαίες ταινίες",
+        "title": "Κορυφαίες ταινίες",
+        "name": "Κορυφαίες ταινίες",
+        "sortBy": "vote_average.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "top_all_time",
+          "voteCountGte": 250
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:8",
+      "key": "collections.streaming:collections.streaming.mubi:5",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 8,
+      "folderId": "collections.streaming.mubi",
+      "position": 5,
       "title": "Ταινίες δράσης",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658809,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658809,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Ταινίες δράσης",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658809,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:9",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 9,
-      "title": "Σειρές δράσης",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808965,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Σειρές δράσης",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808965
+        "type": "movie",
+        "genre": "Ταινίες δράσης",
+        "title": "Ταινίες δράσης",
+        "name": "Ταινίες δράσης",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:10",
+      "key": "collections.streaming:collections.streaming.mubi:6",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 10,
+      "folderId": "collections.streaming.mubi",
+      "position": 6,
       "title": "Ταινίες περιπέτειας",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658808,
+      "listId": null,
       "params": {
         "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658808,
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
           "filters": {},
-          "sortBy": "original"
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες περιπέτειας",
         "title": "Ταινίες περιπέτειας",
-        "sortBy": "original",
+        "name": "Ταινίες περιπέτειας",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
         "provider": "tmdb",
+        "catalogId": null,
         "mediaType": "MOVIE",
-        "tmdbId": 8658808,
-        "tmdbSourceType": "LIST",
-        "filters": {}
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:11",
+      "key": "collections.streaming:collections.streaming.mubi:7",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 11,
+      "folderId": "collections.streaming.mubi",
+      "position": 7,
       "title": "Ταινίες κινουμένων σχεδίων",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658811,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658811,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Ταινίες κινουμένων σχεδίων",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658811,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:12",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 12,
-      "title": "Σειρές κινουμένων σχεδίων",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808969,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Σειρές κινουμένων σχεδίων",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808969
+        "type": "movie",
+        "genre": "Ταινίες κινουμένων σχεδίων",
+        "title": "Ταινίες κινουμένων σχεδίων",
+        "name": "Ταινίες κινουμένων σχεδίων",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:13",
+      "key": "collections.streaming:collections.streaming.mubi:8",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 13,
+      "folderId": "collections.streaming.mubi",
+      "position": 8,
       "title": "Ταινίες άνιμε",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658810,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658810,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Ταινίες άνιμε",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658810,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:14",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 14,
-      "title": "Σειρές άνιμε",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808970,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Σειρές άνιμε",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808970
+        "type": "movie",
+        "genre": "Ταινίες άνιμε",
+        "title": "Ταινίες άνιμε",
+        "name": "Ταινίες άνιμε",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:15",
+      "key": "collections.streaming:collections.streaming.mubi:9",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 15,
+      "folderId": "collections.streaming.mubi",
+      "position": 9,
       "title": "Κωμικές ταινίες",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658813,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658813,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Κωμικές ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658813,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:16",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 16,
-      "title": "Κωμικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808973,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Κωμικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808973
+        "type": "movie",
+        "genre": "Κωμικές ταινίες",
+        "title": "Κωμικές ταινίες",
+        "name": "Κωμικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:17",
+      "key": "collections.streaming:collections.streaming.mubi:10",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 17,
+      "folderId": "collections.streaming.mubi",
+      "position": 10,
       "title": "Αστυνομικές ταινίες",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658814,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658814,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Αστυνομικές ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658814,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:18",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 18,
-      "title": "Αστυνομικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808976,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Αστυνομικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808976
+        "type": "movie",
+        "genre": "Αστυνομικές ταινίες",
+        "title": "Αστυνομικές ταινίες",
+        "name": "Αστυνομικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:19",
+      "key": "collections.streaming:collections.streaming.mubi:11",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 19,
+      "folderId": "collections.streaming.mubi",
+      "position": 11,
       "title": "Ταινίες ντοκιμαντέρ",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658815,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658815,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Ταινίες ντοκιμαντέρ",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658815,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:20",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 20,
-      "title": "Σειρές ντοκιμαντέρ",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808977,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Σειρές ντοκιμαντέρ",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808977
+        "type": "movie",
+        "genre": "Ταινίες ντοκιμαντέρ",
+        "title": "Ταινίες ντοκιμαντέρ",
+        "name": "Ταινίες ντοκιμαντέρ",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:21",
+      "key": "collections.streaming:collections.streaming.mubi:12",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 21,
+      "folderId": "collections.streaming.mubi",
+      "position": 12,
       "title": "Δραματικές ταινίες",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658816,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658816,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Δραματικές ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658816,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:22",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 22,
-      "title": "Δραματικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808978,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Δραματικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808978
+        "type": "movie",
+        "genre": "Δραματικές ταινίες",
+        "title": "Δραματικές ταινίες",
+        "name": "Δραματικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:23",
+      "key": "collections.streaming:collections.streaming.mubi:13",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 23,
+      "folderId": "collections.streaming.mubi",
+      "position": 13,
       "title": "Οικογενειακές ταινίες",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658819,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658819,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Οικογενειακές ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658819,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:24",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 24,
-      "title": "Οικογενειακές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808979,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Οικογενειακές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808979
+        "type": "movie",
+        "genre": "Οικογενειακές ταινίες",
+        "title": "Οικογενειακές ταινίες",
+        "name": "Οικογενειακές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:25",
+      "key": "collections.streaming:collections.streaming.mubi:14",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 25,
+      "folderId": "collections.streaming.mubi",
+      "position": 14,
       "title": "Ταινίες φαντασίας",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658817,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658817,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Ταινίες φαντασίας",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658817,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:26",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 26,
-      "title": "Σειρές φαντασίας",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808980,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Σειρές φαντασίας",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808980
+        "type": "movie",
+        "genre": "Ταινίες φαντασίας",
+        "title": "Ταινίες φαντασίας",
+        "name": "Ταινίες φαντασίας",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:27",
+      "key": "collections.streaming:collections.streaming.mubi:15",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 27,
+      "folderId": "collections.streaming.mubi",
+      "position": 15,
       "title": "Ιστορικές ταινίες",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658818,
+      "listId": null,
       "params": {
         "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658818,
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
           "filters": {},
-          "sortBy": "original"
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
+        "type": "movie",
+        "genre": "Ιστορικές ταινίες",
         "title": "Ιστορικές ταινίες",
-        "sortBy": "original",
+        "name": "Ιστορικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
         "provider": "tmdb",
+        "catalogId": null,
         "mediaType": "MOVIE",
-        "tmdbId": 8658818,
-        "tmdbSourceType": "LIST",
-        "filters": {}
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:28",
+      "key": "collections.streaming:collections.streaming.mubi:16",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 28,
+      "folderId": "collections.streaming.mubi",
+      "position": 16,
       "title": "Ταινίες τρόμου",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658823,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658823,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Ταινίες τρόμου",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658823,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:29",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 29,
-      "title": "Σειρές τρόμου",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808982,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Σειρές τρόμου",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808982
+        "type": "movie",
+        "genre": "Ταινίες τρόμου",
+        "title": "Ταινίες τρόμου",
+        "name": "Ταινίες τρόμου",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:30",
+      "key": "collections.streaming:collections.streaming.mubi:17",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 30,
+      "folderId": "collections.streaming.mubi",
+      "position": 17,
       "title": "Ταινίες μυστηρίου",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658822,
+      "listId": null,
       "params": {
         "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658822,
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
           "filters": {},
-          "sortBy": "original"
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες μυστηρίου",
         "title": "Ταινίες μυστηρίου",
-        "sortBy": "original",
+        "name": "Ταινίες μυστηρίου",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
         "provider": "tmdb",
+        "catalogId": null,
         "mediaType": "MOVIE",
-        "tmdbId": 8658822,
-        "tmdbSourceType": "LIST",
-        "filters": {}
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:31",
+      "key": "collections.streaming:collections.streaming.mubi:18",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 31,
-      "title": "Σειρές μυστηρίου",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34808983,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Σειρές μυστηρίου",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808983
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:32",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 32,
-      "title": "Ντοκιμαντέρ φύσης",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658812,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658812,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Ντοκιμαντέρ φύσης",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658812,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:33",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 33,
-      "title": "Σειρές ντοκιμαντέρ φύσης",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809945,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Σειρές ντοκιμαντέρ φύσης",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809945
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:34",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 34,
-      "title": "Σειρές ριάλιτι",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34808984,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Σειρές ριάλιτι",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808984
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:35",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 35,
+      "folderId": "collections.streaming.mubi",
+      "position": 18,
       "title": "Ρομαντικές ταινίες",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658821,
+      "listId": null,
       "params": {
         "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658821,
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
           "filters": {},
-          "sortBy": "original"
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
+        "type": "movie",
+        "genre": "Ρομαντικές ταινίες",
         "title": "Ρομαντικές ταινίες",
-        "sortBy": "original",
+        "name": "Ρομαντικές ταινίες",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
         "provider": "tmdb",
+        "catalogId": null,
         "mediaType": "MOVIE",
-        "tmdbId": 8658821,
-        "tmdbSourceType": "LIST",
-        "filters": {}
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:36",
+      "key": "collections.streaming:collections.streaming.mubi:19",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 36,
-      "title": "Ρομαντικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34808985,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Ρομαντικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808985
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:37",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 37,
-      "title": "Σειρές επιστημονικής φαντασίας",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34808987,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Σειρές επιστημονικής φαντασίας",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808987
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:38",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 38,
-      "title": "Κωμικές παραστάσεις",
+      "folderId": "collections.streaming.mubi",
+      "position": 19,
+      "title": "Ρομαντικές κομεντί",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658826,
+      "listId": null,
       "params": {
         "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658826,
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
           "filters": {},
-          "sortBy": "original"
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Κωμικές παραστάσεις",
-        "sortBy": "original",
+        "type": "movie",
+        "genre": "Ρομαντικές κομεντί",
+        "title": "Ρομαντικές κομεντί",
+        "name": "Ρομαντικές κομεντί",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
         "provider": "tmdb",
+        "catalogId": null,
         "mediaType": "MOVIE",
-        "tmdbId": 8658826,
-        "tmdbSourceType": "LIST",
-        "filters": {}
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:39",
+      "key": "collections.streaming:collections.streaming.mubi:20",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 39,
+      "folderId": "collections.streaming.mubi",
+      "position": 20,
+      "title": "Ταινίες επιστημονικής φαντασίας",
+      "mediaType": "MOVIE",
+      "strategy": "materialized",
+      "materializer": "streaming",
+      "listId": null,
+      "params": {
+        "legacy": {
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
+        },
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
+      },
+      "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες επιστημονικής φαντασίας",
+        "title": "Ταινίες επιστημονικής φαντασίας",
+        "name": "Ταινίες επιστημονικής φαντασίας",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
+      }
+    },
+    {
+      "key": "collections.streaming:collections.streaming.mubi:21",
+      "collectionId": "collections.streaming",
+      "folderId": "collections.streaming.mubi",
+      "position": 21,
       "title": "Ταινίες θρίλερ",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658824,
+      "listId": null,
       "params": {
         "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658824,
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
           "filters": {},
-          "sortBy": "original"
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
+        "type": "movie",
+        "genre": "Ταινίες θρίλερ",
         "title": "Ταινίες θρίλερ",
-        "sortBy": "original",
+        "name": "Ταινίες θρίλερ",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
         "provider": "tmdb",
+        "catalogId": null,
         "mediaType": "MOVIE",
-        "tmdbId": 8658824,
-        "tmdbSourceType": "LIST",
-        "filters": {}
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
-      "key": "collections.streaming:collections.streaming.hulu:40",
+      "key": "collections.streaming:collections.streaming.mubi:22",
       "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 40,
-      "title": "Σειρές θρίλερ",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34808989,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Σειρές θρίλερ",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808989
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:41",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 41,
-      "title": "Πολεμικές ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658827,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658827,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Πολεμικές ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658827,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:42",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 42,
-      "title": "Πολεμικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34808990,
-          "sortBy": "rank"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Πολεμικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808990
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:43",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 43,
+      "folderId": "collections.streaming.mubi",
+      "position": 22,
       "title": "Ταινίες γουέστερν",
       "mediaType": "MOVIE",
       "strategy": "materialized",
       "materializer": "streaming",
-      "listId": 8658830,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658830,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "collections.streaming.hulu"
-      },
-      "originalSource": {
-        "title": "Ταινίες γουέστερν",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658830,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:collections.streaming.hulu:44",
-      "collectionId": "collections.streaming",
-      "folderId": "collections.streaming.hulu",
-      "position": 44,
-      "title": "Σειρές γουέστερν",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
       "listId": null,
       "params": {
         "legacy": {
-          "traktListId": 34808991,
-          "sortBy": "rank"
+          "tmdbSourceType": "DISCOVER",
+          "tmdbId": null,
+          "traktListId": null,
+          "filters": {},
+          "sortBy": "popularity.desc"
         },
-        "providerFolder": "collections.streaming.hulu"
+        "providerFolder": "collections.streaming.mubi",
+        "discoverPolicy": {
+          "kind": "thematic"
+        },
+        "explicitSemantic": true
       },
       "originalSource": {
-        "title": "Σειρές γουέστερν",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34808991
+        "type": "movie",
+        "genre": "Ταινίες γουέστερν",
+        "title": "Ταινίες γουέστερν",
+        "name": "Ταινίες γουέστερν",
+        "sortBy": "popularity.desc",
+        "tmdbId": null,
+        "addonId": null,
+        "filters": {},
+        "sortHow": null,
+        "provider": "tmdb",
+        "catalogId": null,
+        "mediaType": "MOVIE",
+        "traktListId": null,
+        "tmdbSourceType": "DISCOVER",
+        "explicitSemantic": true,
+        "discoverPolicy": {
+          "kind": "thematic"
+        }
       }
     },
     {
@@ -73985,999 +76619,6 @@
         "provider": "trakt",
         "mediaType": "TV",
         "traktListId": 34809171
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:0",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 0,
-      "title": "Τάσεις ταινιών",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 35015621,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Τάσεις ταινιών",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "MOVIE",
-        "traktListId": 35015621
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:1",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 1,
-      "title": "Τάσεις σειρών",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 35015621,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Τάσεις σειρών",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 35015621
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:2",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 2,
-      "title": "Νέες ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658910,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658910,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Νέες ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658910,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:3",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 3,
-      "title": "Νέες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809173,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Νέες σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809173
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:4",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 4,
-      "title": "Δημοφιλείς ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658911,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658911,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Δημοφιλείς ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658911,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:5",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 5,
-      "title": "Δημοφιλείς σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809175,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Δημοφιλείς σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809175
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:6",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 6,
-      "title": "Κορυφαίες ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658912,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658912,
-          "filters": {},
-          "sortBy": "vote_average.desc"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Κορυφαίες ταινίες",
-        "sortBy": "vote_average.desc",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658912,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:7",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 7,
-      "title": "Κορυφαίες σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809177,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Κορυφαίες σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809177
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:8",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 8,
-      "title": "Ταινίες δράσης",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658913,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658913,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Ταινίες δράσης",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658913,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:9",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 9,
-      "title": "Σειρές δράσης",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809204,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Σειρές δράσης",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809204
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:10",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 10,
-      "title": "Ταινίες περιπέτειας",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658915,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658915,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Ταινίες περιπέτειας",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658915,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:11",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 11,
-      "title": "Ταινίες κινουμένων σχεδίων",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658914,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658914,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Ταινίες κινουμένων σχεδίων",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658914,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:13",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 13,
-      "title": "Κωμικές ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658918,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658918,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Κωμικές ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658918,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:14",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 14,
-      "title": "Κωμικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809208,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Κωμικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809208
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:15",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 15,
-      "title": "Αστυνομικές ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658919,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658919,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Αστυνομικές ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658919,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:16",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 16,
-      "title": "Αστυνομικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809209,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Αστυνομικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809209
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:17",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 17,
-      "title": "Ταινίες ντοκιμαντέρ",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658917,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658917,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Ταινίες ντοκιμαντέρ",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658917,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:18",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 18,
-      "title": "Σειρές ντοκιμαντέρ",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809210,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Σειρές ντοκιμαντέρ",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809210
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:19",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 19,
-      "title": "Δραματικές ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658920,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658920,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Δραματικές ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658920,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:20",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 20,
-      "title": "Δραματικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809211,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Δραματικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809211
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:21",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 21,
-      "title": "Οικογενειακές ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658921,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658921,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Οικογενειακές ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658921,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:22",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 22,
-      "title": "Οικογενειακές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809212,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Οικογενειακές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809212
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:23",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 23,
-      "title": "Ταινίες φαντασίας",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658923,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658923,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Ταινίες φαντασίας",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658923,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:24",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 24,
-      "title": "Σειρές φαντασίας",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809213,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Σειρές φαντασίας",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809213
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:25",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 25,
-      "title": "Ιστορικές ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658924,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658924,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Ιστορικές ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658924,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:26",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 26,
-      "title": "Ταινίες τρόμου",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658925,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658925,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Ταινίες τρόμου",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658925,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:27",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 27,
-      "title": "Σειρές τρόμου",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809215,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Σειρές τρόμου",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809215
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:28",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 28,
-      "title": "Ταινίες μυστηρίου",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658927,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658927,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Ταινίες μυστηρίου",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658927,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:29",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 29,
-      "title": "Σειρές μυστηρίου",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809216,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Σειρές μυστηρίου",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809216
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:30",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 30,
-      "title": "Σειρές ριάλιτι",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809217,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Σειρές ριάλιτι",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809217
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:31",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 31,
-      "title": "Ρομαντικές ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658926,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658926,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Ρομαντικές ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658926,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:32",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 32,
-      "title": "Ρομαντικές σειρές",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809218,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Ρομαντικές σειρές",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809218
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:33",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 33,
-      "title": "Ταινίες θρίλερ",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658930,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658930,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Ταινίες θρίλερ",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658930,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:34",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 34,
-      "title": "Πολεμικές ταινίες",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658932,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658932,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Πολεμικές ταινίες",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658932,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:36",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 36,
-      "title": "Ταινίες γουέστερν",
-      "mediaType": "MOVIE",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": 8658934,
-      "params": {
-        "legacy": {
-          "tmdbSourceType": "LIST",
-          "tmdbId": 8658934,
-          "filters": {},
-          "sortBy": "original"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Ταινίες γουέστερν",
-        "sortBy": "original",
-        "provider": "tmdb",
-        "mediaType": "MOVIE",
-        "tmdbId": 8658934,
-        "tmdbSourceType": "LIST",
-        "filters": {}
-      }
-    },
-    {
-      "key": "collections.streaming:folder-9B3VK7AU:37",
-      "collectionId": "collections.streaming",
-      "folderId": "folder-9B3VK7AU",
-      "position": 37,
-      "title": "Σειρές γουέστερν",
-      "mediaType": "TV",
-      "strategy": "materialized",
-      "materializer": "streaming",
-      "listId": null,
-      "params": {
-        "legacy": {
-          "traktListId": 34809224,
-          "sortBy": "rank"
-        },
-        "providerFolder": "folder-9B3VK7AU"
-      },
-      "originalSource": {
-        "title": "Σειρές γουέστερν",
-        "sortBy": "rank",
-        "sortHow": "asc",
-        "provider": "trakt",
-        "mediaType": "TV",
-        "traktListId": 34809224
       }
     },
     {

@@ -5,11 +5,13 @@ counts, or the generated JSON.
 
 Non-negotiable rules:
 
-- Never delete, merge, or rename any of the 548 active folders. The sole
-  approved historical deletion is Genres/Reality (`folder-KQEZGAMF`), removed
-  for v5.0.1 with four list tombstones. The remaining original 516, the earlier
-  Portuguese/Latin-American additions, and the 30 v5.0.1 additions are
-  fingerprint-locked.
+- Never delete, merge, or rename any of the 548 active folders except the two
+  explicitly approved migrations: Genres/Reality (`folder-KQEZGAMF`) was
+  removed for v5.0.1; and the 2026-08-12 streaming migration replaced Hulu,
+  Discovery+ and Starz with MUBI, Criterion and AMC+ (94 old source tombstones,
+  92 active replacements because two Starz rails were already retired), while
+  preserving the 13-folder streaming and 548-folder global totals. All retired list IDs remain
+  tombstoned and remote deletion requires exact ownership verification.
 - Never edit the two sources in `collections.discover.recommended`; they are
   user-curated and protected by a fingerprint test.
 - Do not retire a source without an evidence report and explicit user approval.

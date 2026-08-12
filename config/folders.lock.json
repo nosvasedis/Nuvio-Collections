@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "inputFingerprint": "5f53792dcf258ede847621fd89da4c30840fec2778cbff6aacc0191a06d139be",
+  "inputFingerprint": "c601809d567cb3094f776ac7f9f549d6daf09a78530c68b8515854a171cc005f",
   "recommendedFingerprint": "d1b5999c70679e79f9f574ad26d8e998725954d20ff63296f8e7a67dcd14f96a",
   "folders": [
     {
@@ -31,79 +31,79 @@
       "collectionId": "collections.streaming",
       "id": "collections.streaming.netflix",
       "title": "Netflix",
-      "metadataFingerprint": "ce2d3dec3a440143641bf6b15ac28a6dedb02b8fcc4dcb986e2ef0eeca060881"
+      "metadataFingerprint": "b35dd813e5cef6fed56bd67b4c4eba4abcd569f284251844b66342f601c72b76"
     },
     {
       "collectionId": "collections.streaming",
       "id": "collections.streaming.disney-plus",
       "title": "Disney+",
-      "metadataFingerprint": "c3d9a72703d55e9d02d220f67d836dd0bdbe083f3878dd44c66399d667875e81"
-    },
-    {
-      "collectionId": "collections.streaming",
-      "id": "collections.streaming.prime-video",
-      "title": "Prime Video",
-      "metadataFingerprint": "33edd9f385ce4df75827b5f4b0078b4bc603b3023a1e22889b9d06d089b48a29"
+      "metadataFingerprint": "b72cd4c50ac786707ad797706791172ea2de528f1abe587bb835d4a02d574f02"
     },
     {
       "collectionId": "collections.streaming",
       "id": "collections.streaming.apple-tv",
-      "title": "Apple TV",
-      "metadataFingerprint": "89a328d625ca31c6fda5366ef8382ebb671ebe1b63fa2b5a842db5844d0a0855"
+      "title": "Apple TV+",
+      "metadataFingerprint": "4c866ec4e01e49bf987d64becdc2d002e2dc50ebcb4f76c29996df8ba1e9b606"
     },
     {
       "collectionId": "collections.streaming",
       "id": "collections.streaming.hbo-max",
       "title": "HBO Max",
-      "metadataFingerprint": "fd544377bee2a090676cf312cb79347b429f25cca2662debf230a8b5f4ecac8f"
+      "metadataFingerprint": "7e9f02c757094c2f2256882f574176df3c1898b2b457503dabd768f97e437aec"
     },
     {
       "collectionId": "collections.streaming",
-      "id": "collections.streaming.hulu",
-      "title": "Hulu",
-      "metadataFingerprint": "2f04ace03b3b515f78f7c924cc523b6f88f941f2efe35fa37793ccb31cd68a40"
-    },
-    {
-      "collectionId": "collections.streaming",
-      "id": "collections.streaming.paramount-plus",
-      "title": "Paramount+",
-      "metadataFingerprint": "a28d30495b10b5082fc2624f25b2606ec97b46843e8bdc37a815685f5c08761a"
-    },
-    {
-      "collectionId": "collections.streaming",
-      "id": "collections.streaming.peacock",
-      "title": "Peacock",
-      "metadataFingerprint": "7c435d04bdd00ccee9790cb44e5cb7c16a2236e66ba11bf137bda43fd7d3a1cc"
+      "id": "collections.streaming.prime-video",
+      "title": "Prime Video",
+      "metadataFingerprint": "dc9220c0affd33271aa77716f254102730bd1a8972160e473c247fb5be733ca4"
     },
     {
       "collectionId": "collections.streaming",
       "id": "collections.streaming.crunchyroll",
       "title": "Crunchyroll",
-      "metadataFingerprint": "41a0f97cf54d1c9369105881b212b884b1645b7d9eca3f26b45145ff9366ba15"
+      "metadataFingerprint": "88cace5410276dff7b5d7622820c7e461545016022bb33ecd61c86224bc2ce14"
     },
     {
       "collectionId": "collections.streaming",
-      "id": "collections.streaming.discovery-plus",
-      "title": "Discovery+",
-      "metadataFingerprint": "ffa8d0a18677ea746d82dbd4cd6507a35f012e69dbafb8100c65a7859963bd68"
+      "id": "collections.streaming.mubi",
+      "title": "MUBI",
+      "metadataFingerprint": "7354c6f83a826d8cf3a34dfae9ae4ada8ad5144c2e7780cfea1a29c4ba305d64"
+    },
+    {
+      "collectionId": "collections.streaming",
+      "id": "collections.streaming.criterion",
+      "title": "Criterion",
+      "metadataFingerprint": "ffad5d3d8c730918c9a87785a753a185c40ed5e608cddf86b47101c922796e63"
+    },
+    {
+      "collectionId": "collections.streaming",
+      "id": "collections.streaming.paramount-plus",
+      "title": "Paramount+",
+      "metadataFingerprint": "f9e6b3639da71f9e9ddf69f4e6449c43595cd93c770b269a3936722f72271e4b"
+    },
+    {
+      "collectionId": "collections.streaming",
+      "id": "collections.streaming.amc-plus",
+      "title": "AMC+",
+      "metadataFingerprint": "0860d407688e94b9ea20a5a7c24767a96f15e0cc4992e377b2bff2a2de1dfc2d"
+    },
+    {
+      "collectionId": "collections.streaming",
+      "id": "collections.streaming.peacock",
+      "title": "Peacock",
+      "metadataFingerprint": "a4e6fd90b31bc315f0078add596165448dbae2852cc8a0c070d694eea40e7616"
     },
     {
       "collectionId": "collections.streaming",
       "id": "folder-6S0KR2JH",
       "title": "MGM+",
-      "metadataFingerprint": "6083417aebb6c1fb997b9b56dc077f9bf3e0c63eff321ed3660e0bdcd1dd1c3c"
+      "metadataFingerprint": "89a322eeb0187cedeee72b3f247f8d65b18ae64ff97b5ef4860325356d39097a"
     },
     {
       "collectionId": "collections.streaming",
       "id": "folder-OKRSGYYC",
       "title": "Shudder",
-      "metadataFingerprint": "4a0813dda5748763f8e6b65ad5f6f9f6b9bdc3246b1fb5a9fe6ca4095c18b060"
-    },
-    {
-      "collectionId": "collections.streaming",
-      "id": "folder-9B3VK7AU",
-      "title": "Starz",
-      "metadataFingerprint": "4fa5f6d95f0b2119d122f37ba12baa403a7a55aff5fb550f40a18e15acfc17d9"
+      "metadataFingerprint": "890e36017f310bedebaa0abf5ef5b7e7c0eb665ab4fc7303fc7e19e9e0f1ad24"
     },
     {
       "collectionId": "collections.genres",

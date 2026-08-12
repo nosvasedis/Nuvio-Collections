@@ -735,8 +735,8 @@
         "coverEmoji": "",
         "focusGifUrl": "https://64.media.tumblr.com/9f93a9fc2e02fb466eb02a7d2247cb6e/a5b604d3737fc559-49/s500x750/403804744183922f6091d48139021fc3da22f786.gifv",
         "heroVideoUrl": "",
-        "titleLogoUrl": "https://cdn.xperience-app.com/covers/logomark/streaming_services.netflix.logo.webp?v=9",
-        "coverImageUrl": "https://cdn.xperience-app.com/covers/top_beam/streaming_services.netflix.webp?v=9",
+        "titleLogoUrl": "https://github.com/bramst0ne/prism-wallpapers/blob/main/collections/networks/213-netflix/logos/color/213_color_1.png?raw=true",
+        "coverImageUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/49571953.webp",
         "catalogSources": [],
         "focusGifEnabled": true,
         "heroBackdropUrl": "https://github.com/bramst0ne/prism-wallpapers/blob/main/collections/networks/213-netflix/backdrops/t2_flat_1080p.jpg?raw=true"
@@ -1114,411 +1114,15 @@
         "coverEmoji": "",
         "focusGifUrl": "https://64.media.tumblr.com/ca6dc6d4e8a260c0c5f40c47c7334e57/eb71329b4dc482d5-50/s500x750/e9e82c5bca839be289f3d87863141ebf6d7fca28.gifv",
         "heroVideoUrl": "",
-        "titleLogoUrl": "https://cdn.xperience-app.com/covers/logomark/streaming_services.disney_plus.logo.webp?v=9",
-        "coverImageUrl": "https://cdn.xperience-app.com/covers/top_beam/streaming_services.disney_plus.webp?v=9",
+        "titleLogoUrl": "https://github.com/bramst0ne/prism-wallpapers/blob/main/collections/networks/2739-disney/logos/color/2739_color_4.png?raw=true",
+        "coverImageUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/b8c0d25b.webp",
         "catalogSources": [],
         "focusGifEnabled": true,
         "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/337-disney-plus/backdrops/t2_flat_1080p.jpg"
       },
       {
-        "id": "collections.streaming.prime-video",
-        "title": "Prime Video",
-        "sources": [
-          {
-            "title": "Τάσεις ταινιών",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "MOVIE",
-            "traktListId": 35015161
-          },
-          {
-            "title": "Τάσεις σειρών",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 35015161
-          },
-          {
-            "title": "Νέες ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658782,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Νέες σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808724
-          },
-          {
-            "title": "Δημοφιλείς ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658783,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Δημοφιλείς σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808726
-          },
-          {
-            "title": "Κορυφαίες ταινίες",
-            "sortBy": "vote_average.desc",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658786,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Κορυφαίες σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808728
-          },
-          {
-            "title": "Ταινίες δράσης",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658787,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές δράσης",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808751
-          },
-          {
-            "title": "Ταινίες περιπέτειας",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658785,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Ταινίες κινουμένων σχεδίων",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658784,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές κινουμένων σχεδίων",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808753
-          },
-          {
-            "title": "Ταινίες άνιμε",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658789,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές άνιμε",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808754
-          },
-          {
-            "title": "Κωμικές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658791,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Κωμικές σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808755
-          },
-          {
-            "title": "Αστυνομικές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658788,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Αστυνομικές σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808756
-          },
-          {
-            "title": "Ταινίες ντοκιμαντέρ",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658790,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές ντοκιμαντέρ",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808757
-          },
-          {
-            "title": "Δραματικές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658792,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Δραματικές σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808758
-          },
-          {
-            "title": "Οικογενειακές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658793,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Οικογενειακές σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808759
-          },
-          {
-            "title": "Ταινίες φαντασίας",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658683,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές φαντασίας",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808760
-          },
-          {
-            "title": "Ιστορικές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658684,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Ταινίες τρόμου",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658685,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές τρόμου",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808762
-          },
-          {
-            "title": "Ταινίες μυστηρίου",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658686,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές μυστηρίου",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808763
-          },
-          {
-            "title": "Ντοκιμαντέρ φύσης",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "MOVIE",
-            "traktListId": 34809626
-          },
-          {
-            "title": "Σειρές ντοκιμαντέρ φύσης",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809650
-          },
-          {
-            "title": "Σειρές ριάλιτι",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808764
-          },
-          {
-            "title": "Ρομαντικές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658688,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Ρομαντικές σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808765
-          },
-          {
-            "title": "Σειρές επιστημονικής φαντασίας",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808767
-          },
-          {
-            "title": "Κωμικές παραστάσεις",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658691,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές κωμικών παραστάσεων",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808768
-          },
-          {
-            "title": "Ταινίες θρίλερ",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658692,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές θρίλερ",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808769
-          },
-          {
-            "title": "Πολεμικές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658693,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Πολεμικές σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808770
-          },
-          {
-            "title": "Σειρές γουέστερν",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34808771
-          }
-        ],
-        "hideTitle": true,
-        "tileShape": "LANDSCAPE",
-        "coverEmoji": "",
-        "focusGifUrl": "https://64.media.tumblr.com/5c5ed8bf948c5b3ca63a11544b94c720/55dbe5d6db4b66a5-bf/s500x750/d6686beaab57aa152f1b92a4562f757a1c522a2f.gifv",
-        "heroVideoUrl": "",
-        "titleLogoUrl": "https://cdn.xperience-app.com/covers/logomark/streaming_services.prime_video.logo.webp?v=9",
-        "coverImageUrl": "https://cdn.xperience-app.com/covers/top_beam/streaming_services.prime_video.webp?v=9",
-        "catalogSources": [],
-        "focusGifEnabled": true,
-        "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/9-amazon-prime-video/backdrops/t2_flat_1080p.jpg"
-      },
-      {
         "id": "collections.streaming.apple-tv",
-        "title": "Apple TV",
+        "title": "Apple TV+",
         "sources": [
           {
             "title": "Τάσεις ταινιών",
@@ -1840,8 +1444,8 @@
         "coverEmoji": "",
         "focusGifUrl": "https://64.media.tumblr.com/d717319220a7d26bdaa88e72f6f76889/d9a7a808f588d8f4-63/s500x750/959b0ca57f53153b2ca9adaf414859e45e3734e6.gifv",
         "heroVideoUrl": "",
-        "titleLogoUrl": "https://cdn.xperience-app.com/covers/logomark/streaming_services.apple_tv_plus.logo.webp?v=9",
-        "coverImageUrl": "https://cdn.xperience-app.com/covers/top_beam/streaming_services.apple_tv_plus.webp?v=9",
+        "titleLogoUrl": "https://github.com/bramst0ne/prism-wallpapers/blob/main/collections/networks/2552-apple-tv/logos/color/2552_color_1.png?raw=true",
+        "coverImageUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/4d8f0a8f.webp",
         "catalogSources": [],
         "focusGifEnabled": true,
         "heroBackdropUrl": "https://github.com/bramst0ne/prism-wallpapers/blob/main/collections/networks/2552-apple-tv/backdrops/t2_flat_1080p.jpg?raw=true"
@@ -2245,15 +1849,15 @@
         "coverEmoji": "",
         "focusGifUrl": "https://64.media.tumblr.com/cca7a86d443a0bc88536a2ad6ce72aec/b495f88d5c1df470-a2/s640x960/4cb9b614191d17d02c946b4ca59548cd333c06fd.gifv",
         "heroVideoUrl": "",
-        "titleLogoUrl": "https://cdn.xperience-app.com/covers/logomark/streaming_services.hbo_max.logo.webp?v=9",
-        "coverImageUrl": "https://cdn.xperience-app.com/covers/top_beam/streaming_services.hbo_max.webp?v=9",
+        "titleLogoUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/6e4c10d3.webp",
+        "coverImageUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/b59babf1.webp",
         "catalogSources": [],
         "focusGifEnabled": true,
         "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/1899-hbo-max/backdrops/t2_flat_1080p.jpg"
       },
       {
-        "id": "collections.streaming.hulu",
-        "title": "Hulu",
+        "id": "collections.streaming.prime-video",
+        "title": "Prime Video",
         "sources": [
           {
             "title": "Τάσεις ταινιών",
@@ -2261,7 +1865,7 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "MOVIE",
-            "traktListId": 35015572
+            "traktListId": 35015161
           },
           {
             "title": "Τάσεις σειρών",
@@ -2269,14 +1873,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 35015572
+            "traktListId": 35015161
           },
           {
             "title": "Νέες ταινίες",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658804,
+            "tmdbId": 8658782,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2286,14 +1890,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808934
+            "traktListId": 34808724
           },
           {
             "title": "Δημοφιλείς ταινίες",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658806,
+            "tmdbId": 8658783,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2303,14 +1907,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808936
+            "traktListId": 34808726
           },
           {
             "title": "Κορυφαίες ταινίες",
             "sortBy": "vote_average.desc",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658807,
+            "tmdbId": 8658786,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2320,14 +1924,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808938
+            "traktListId": 34808728
           },
           {
             "title": "Ταινίες δράσης",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658809,
+            "tmdbId": 8658787,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2337,14 +1941,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808965
+            "traktListId": 34808751
           },
           {
             "title": "Ταινίες περιπέτειας",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658808,
+            "tmdbId": 8658785,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2353,7 +1957,7 @@
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658811,
+            "tmdbId": 8658784,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2363,14 +1967,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808969
+            "traktListId": 34808753
           },
           {
             "title": "Ταινίες άνιμε",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658810,
+            "tmdbId": 8658789,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2380,14 +1984,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808970
+            "traktListId": 34808754
           },
           {
             "title": "Κωμικές ταινίες",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658813,
+            "tmdbId": 8658791,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2397,14 +2001,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808973
+            "traktListId": 34808755
           },
           {
             "title": "Αστυνομικές ταινίες",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658814,
+            "tmdbId": 8658788,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2414,14 +2018,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808976
+            "traktListId": 34808756
           },
           {
             "title": "Ταινίες ντοκιμαντέρ",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658815,
+            "tmdbId": 8658790,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2431,14 +2035,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808977
+            "traktListId": 34808757
           },
           {
             "title": "Δραματικές ταινίες",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658816,
+            "tmdbId": 8658792,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2448,14 +2052,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808978
+            "traktListId": 34808758
           },
           {
             "title": "Οικογενειακές ταινίες",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658819,
+            "tmdbId": 8658793,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2465,14 +2069,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808979
+            "traktListId": 34808759
           },
           {
             "title": "Ταινίες φαντασίας",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658817,
+            "tmdbId": 8658683,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2482,14 +2086,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808980
+            "traktListId": 34808760
           },
           {
             "title": "Ιστορικές ταινίες",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658818,
+            "tmdbId": 8658684,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2498,7 +2102,7 @@
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658823,
+            "tmdbId": 8658685,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2508,14 +2112,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808982
+            "traktListId": 34808762
           },
           {
             "title": "Ταινίες μυστηρίου",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658822,
+            "tmdbId": 8658686,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2525,16 +2129,15 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808983
+            "traktListId": 34808763
           },
           {
             "title": "Ντοκιμαντέρ φύσης",
-            "sortBy": "original",
-            "provider": "tmdb",
+            "sortBy": "rank",
+            "sortHow": "asc",
+            "provider": "trakt",
             "mediaType": "MOVIE",
-            "tmdbId": 8658812,
-            "tmdbSourceType": "LIST",
-            "filters": {}
+            "traktListId": 34809626
           },
           {
             "title": "Σειρές ντοκιμαντέρ φύσης",
@@ -2542,7 +2145,7 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34809945
+            "traktListId": 34809650
           },
           {
             "title": "Σειρές ριάλιτι",
@@ -2550,14 +2153,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808984
+            "traktListId": 34808764
           },
           {
             "title": "Ρομαντικές ταινίες",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658821,
+            "tmdbId": 8658688,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2567,7 +2170,7 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808985
+            "traktListId": 34808765
           },
           {
             "title": "Σειρές επιστημονικής φαντασίας",
@@ -2575,23 +2178,31 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808987
+            "traktListId": 34808767
           },
           {
             "title": "Κωμικές παραστάσεις",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658826,
+            "tmdbId": 8658691,
             "tmdbSourceType": "LIST",
             "filters": {}
+          },
+          {
+            "title": "Σειρές κωμικών παραστάσεων",
+            "sortBy": "rank",
+            "sortHow": "asc",
+            "provider": "trakt",
+            "mediaType": "TV",
+            "traktListId": 34808768
           },
           {
             "title": "Ταινίες θρίλερ",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658824,
+            "tmdbId": 8658692,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2601,14 +2212,14 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808989
+            "traktListId": 34808769
           },
           {
             "title": "Πολεμικές ταινίες",
             "sortBy": "original",
             "provider": "tmdb",
             "mediaType": "MOVIE",
-            "tmdbId": 8658827,
+            "tmdbId": 8658693,
             "tmdbSourceType": "LIST",
             "filters": {}
           },
@@ -2618,16 +2229,7 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808990
-          },
-          {
-            "title": "Ταινίες γουέστερν",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658830,
-            "tmdbSourceType": "LIST",
-            "filters": {}
+            "traktListId": 34808770
           },
           {
             "title": "Σειρές γουέστερν",
@@ -2635,19 +2237,1113 @@
             "sortHow": "asc",
             "provider": "trakt",
             "mediaType": "TV",
-            "traktListId": 34808991
+            "traktListId": 34808771
           }
         ],
         "hideTitle": true,
         "tileShape": "LANDSCAPE",
         "coverEmoji": "",
-        "focusGifUrl": "https://64.media.tumblr.com/3a7015de27b570e421a0182a66d0a69b/0ec3a7379449b39d-2d/s1280x1920/962f0dcfa0a2458bd6bf923ff47776f2404bf43a.gifv",
+        "focusGifUrl": "https://64.media.tumblr.com/5c5ed8bf948c5b3ca63a11544b94c720/55dbe5d6db4b66a5-bf/s500x750/d6686beaab57aa152f1b92a4562f757a1c522a2f.gifv",
         "heroVideoUrl": "",
-        "titleLogoUrl": "https://cdn.xperience-app.com/covers/logomark/streaming_services.hulu.logo.webp?v=9",
-        "coverImageUrl": "https://cdn.xperience-app.com/covers/top_beam/streaming_services.hulu.webp?v=9",
+        "titleLogoUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/f9b1d40a.webp",
+        "coverImageUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/5c86c888.webp",
         "catalogSources": [],
         "focusGifEnabled": true,
-        "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/15-hulu/backdrops/t2_flat_1080p.jpg"
+        "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/9-amazon-prime-video/backdrops/t2_flat_1080p.jpg"
+      },
+      {
+        "id": "collections.streaming.crunchyroll",
+        "title": "Crunchyroll",
+        "sources": [
+          {
+            "title": "Νέες ταινίες",
+            "sortBy": "original",
+            "provider": "tmdb",
+            "mediaType": "MOVIE",
+            "tmdbId": 8658941,
+            "tmdbSourceType": "LIST",
+            "filters": {}
+          },
+          {
+            "title": "Νέες σειρές",
+            "sortBy": "rank",
+            "sortHow": "asc",
+            "provider": "trakt",
+            "mediaType": "TV",
+            "traktListId": 34809239
+          },
+          {
+            "title": "Δημοφιλείς σειρές",
+            "sortBy": "rank",
+            "sortHow": "asc",
+            "provider": "trakt",
+            "mediaType": "TV",
+            "traktListId": 34809241
+          },
+          {
+            "title": "Κορυφαίες σειρές",
+            "sortBy": "rank",
+            "sortHow": "asc",
+            "provider": "trakt",
+            "mediaType": "TV",
+            "traktListId": 34809245
+          },
+          {
+            "title": "Ταινίες δράσης",
+            "sortBy": "original",
+            "provider": "tmdb",
+            "mediaType": "MOVIE",
+            "tmdbId": 8658942,
+            "tmdbSourceType": "LIST",
+            "filters": {}
+          },
+          {
+            "title": "Σειρές δράσης",
+            "sortBy": "rank",
+            "sortHow": "asc",
+            "provider": "trakt",
+            "mediaType": "TV",
+            "traktListId": 34809254
+          },
+          {
+            "title": "Ταινίες περιπέτειας",
+            "sortBy": "original",
+            "provider": "tmdb",
+            "mediaType": "MOVIE",
+            "tmdbId": 8658947,
+            "tmdbSourceType": "LIST",
+            "filters": {}
+          },
+          {
+            "title": "Ταινίες κινουμένων σχεδίων",
+            "sortBy": "original",
+            "provider": "tmdb",
+            "mediaType": "MOVIE",
+            "tmdbId": 8658946,
+            "tmdbSourceType": "LIST",
+            "filters": {}
+          },
+          {
+            "title": "Σειρές κινουμένων σχεδίων",
+            "sortBy": "rank",
+            "sortHow": "asc",
+            "provider": "trakt",
+            "mediaType": "TV",
+            "traktListId": 34809258
+          },
+          {
+            "title": "Ταινίες άνιμε",
+            "sortBy": "original",
+            "provider": "tmdb",
+            "mediaType": "MOVIE",
+            "tmdbId": 8658948,
+            "tmdbSourceType": "LIST",
+            "filters": {}
+          },
+          {
+            "title": "Σειρές άνιμε",
+            "sortBy": "rank",
+            "sortHow": "asc",
+            "provider": "trakt",
+            "mediaType": "TV",
+            "traktListId": 34809259
+          },
+          {
+            "title": "Ταινίες φαντασίας",
+            "sortBy": "original",
+            "provider": "tmdb",
+            "mediaType": "MOVIE",
+            "tmdbId": 8658945,
+            "tmdbSourceType": "LIST",
+            "filters": {}
+          },
+          {
+            "title": "Σειρές φαντασίας",
+            "sortBy": "rank",
+            "sortHow": "asc",
+            "provider": "trakt",
+            "mediaType": "TV",
+            "traktListId": 34809260
+          },
+          {
+            "title": "Σειρές επιστημονικής φαντασίας",
+            "sortBy": "rank",
+            "sortHow": "asc",
+            "provider": "trakt",
+            "mediaType": "TV",
+            "traktListId": 34809261
+          }
+        ],
+        "hideTitle": true,
+        "tileShape": "LANDSCAPE",
+        "coverEmoji": "",
+        "focusGifUrl": "https://cdn.dribbble.com/userupload/42119533/file/original-3c24d9649543096949cc4262451501b7.gif",
+        "heroVideoUrl": "",
+        "titleLogoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Crunchyroll_logo_2024.png/960px-Crunchyroll_logo_2024.png?_=20240720022613",
+        "coverImageUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/129a4038.webp",
+        "catalogSources": [],
+        "focusGifEnabled": true,
+        "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/283-crunchyroll/backdrops/t2_flat_1080p.jpg"
+      },
+      {
+        "id": "collections.streaming.mubi",
+        "title": "MUBI",
+        "sources": [
+          {
+            "type": "movie",
+            "genre": "Νέες ταινίες",
+            "title": "Νέες ταινίες",
+            "name": "Νέες ταινίες",
+            "sortBy": "primary_release_date.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "voteCountGte": 10
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Πρόσφατες ταινίες",
+            "title": "Πρόσφατες ταινίες",
+            "name": "Πρόσφατες ταινίες",
+            "sortBy": "primary_release_date.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "recent"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Κλασικές ταινίες",
+            "title": "Κλασικές ταινίες",
+            "name": "Κλασικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "releaseDateLte": "1999-12-31"
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Δημοφιλείς ταινίες",
+            "title": "Δημοφιλείς ταινίες",
+            "name": "Δημοφιλείς ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "popular"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Κορυφαίες ταινίες",
+            "title": "Κορυφαίες ταινίες",
+            "name": "Κορυφαίες ταινίες",
+            "sortBy": "vote_average.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "top_all_time",
+              "voteCountGte": 250
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες δράσης",
+            "title": "Ταινίες δράσης",
+            "name": "Ταινίες δράσης",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες περιπέτειας",
+            "title": "Ταινίες περιπέτειας",
+            "name": "Ταινίες περιπέτειας",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες κινουμένων σχεδίων",
+            "title": "Ταινίες κινουμένων σχεδίων",
+            "name": "Ταινίες κινουμένων σχεδίων",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες άνιμε",
+            "title": "Ταινίες άνιμε",
+            "name": "Ταινίες άνιμε",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Κωμικές ταινίες",
+            "title": "Κωμικές ταινίες",
+            "name": "Κωμικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Αστυνομικές ταινίες",
+            "title": "Αστυνομικές ταινίες",
+            "name": "Αστυνομικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες ντοκιμαντέρ",
+            "title": "Ταινίες ντοκιμαντέρ",
+            "name": "Ταινίες ντοκιμαντέρ",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Δραματικές ταινίες",
+            "title": "Δραματικές ταινίες",
+            "name": "Δραματικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Οικογενειακές ταινίες",
+            "title": "Οικογενειακές ταινίες",
+            "name": "Οικογενειακές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες φαντασίας",
+            "title": "Ταινίες φαντασίας",
+            "name": "Ταινίες φαντασίας",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ιστορικές ταινίες",
+            "title": "Ιστορικές ταινίες",
+            "name": "Ιστορικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες τρόμου",
+            "title": "Ταινίες τρόμου",
+            "name": "Ταινίες τρόμου",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες μυστηρίου",
+            "title": "Ταινίες μυστηρίου",
+            "name": "Ταινίες μυστηρίου",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ρομαντικές ταινίες",
+            "title": "Ρομαντικές ταινίες",
+            "name": "Ρομαντικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ρομαντικές κομεντί",
+            "title": "Ρομαντικές κομεντί",
+            "name": "Ρομαντικές κομεντί",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες επιστημονικής φαντασίας",
+            "title": "Ταινίες επιστημονικής φαντασίας",
+            "name": "Ταινίες επιστημονικής φαντασίας",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες θρίλερ",
+            "title": "Ταινίες θρίλερ",
+            "name": "Ταινίες θρίλερ",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες γουέστερν",
+            "title": "Ταινίες γουέστερν",
+            "name": "Ταινίες γουέστερν",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          }
+        ],
+        "catalogSources": [],
+        "hideTitle": true,
+        "tileShape": "LANDSCAPE",
+        "coverEmoji": "",
+        "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/streaming-services/mubi/mubi-hover.gif",
+        "heroVideoUrl": "",
+        "titleLogoUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/refs/heads/main/collections/companies/204957-mubi/logos/white/204957_white_2.png",
+        "coverImageUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/7c4bd708.webp",
+        "focusGifEnabled": true,
+        "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/refs/heads/main/collections/companies/204957-mubi/backdrops/t2_flat_1080p.jpg"
+      },
+      {
+        "id": "collections.streaming.criterion",
+        "title": "Criterion",
+        "sources": [
+          {
+            "type": "movie",
+            "genre": "Νέες ταινίες",
+            "title": "Νέες ταινίες",
+            "name": "Νέες ταινίες",
+            "sortBy": "primary_release_date.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "voteCountGte": 10
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Δημοφιλείς ταινίες",
+            "title": "Δημοφιλείς ταινίες",
+            "name": "Δημοφιλείς ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "popular"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Κορυφαίες ταινίες",
+            "title": "Κορυφαίες ταινίες",
+            "name": "Κορυφαίες ταινίες",
+            "sortBy": "vote_average.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "top_all_time",
+              "voteCountGte": 250
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες δράσης",
+            "title": "Ταινίες δράσης",
+            "name": "Ταινίες δράσης",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες περιπέτειας",
+            "title": "Ταινίες περιπέτειας",
+            "name": "Ταινίες περιπέτειας",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες κινουμένων σχεδίων",
+            "title": "Ταινίες κινουμένων σχεδίων",
+            "name": "Ταινίες κινουμένων σχεδίων",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες άνιμε",
+            "title": "Ταινίες άνιμε",
+            "name": "Ταινίες άνιμε",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Κωμικές ταινίες",
+            "title": "Κωμικές ταινίες",
+            "name": "Κωμικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Αστυνομικές ταινίες",
+            "title": "Αστυνομικές ταινίες",
+            "name": "Αστυνομικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες ντοκιμαντέρ",
+            "title": "Ταινίες ντοκιμαντέρ",
+            "name": "Ταινίες ντοκιμαντέρ",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Δραματικές ταινίες",
+            "title": "Δραματικές ταινίες",
+            "name": "Δραματικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Οικογενειακές ταινίες",
+            "title": "Οικογενειακές ταινίες",
+            "name": "Οικογενειακές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες φαντασίας",
+            "title": "Ταινίες φαντασίας",
+            "name": "Ταινίες φαντασίας",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ιστορικές ταινίες",
+            "title": "Ιστορικές ταινίες",
+            "name": "Ιστορικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες τρόμου",
+            "title": "Ταινίες τρόμου",
+            "name": "Ταινίες τρόμου",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες μυστηρίου",
+            "title": "Ταινίες μυστηρίου",
+            "name": "Ταινίες μυστηρίου",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ντοκιμαντέρ φύσης",
+            "title": "Ντοκιμαντέρ φύσης",
+            "name": "Ντοκιμαντέρ φύσης",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ρομαντικές ταινίες",
+            "title": "Ρομαντικές ταινίες",
+            "name": "Ρομαντικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ρομαντικές κομεντί",
+            "title": "Ρομαντικές κομεντί",
+            "name": "Ρομαντικές κομεντί",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες επιστημονικής φαντασίας",
+            "title": "Ταινίες επιστημονικής φαντασίας",
+            "name": "Ταινίες επιστημονικής φαντασίας",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες θρίλερ",
+            "title": "Ταινίες θρίλερ",
+            "name": "Ταινίες θρίλερ",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Πολεμικές ταινίες",
+            "title": "Πολεμικές ταινίες",
+            "name": "Πολεμικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες γουέστερν",
+            "title": "Ταινίες γουέστερν",
+            "name": "Ταινίες γουέστερν",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          }
+        ],
+        "catalogSources": [],
+        "hideTitle": true,
+        "tileShape": "LANDSCAPE",
+        "coverEmoji": "",
+        "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/streaming-services/criterion-channel/criterion-channel-hover.gif",
+        "heroVideoUrl": "",
+        "titleLogoUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/258-criterion-channel/logos/white/258_white_1.png",
+        "coverImageUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/streaming-services/criterion-channel/criterion-channel-cover.png",
+        "focusGifEnabled": true,
+        "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/258-criterion-channel/backdrops/t2_flat_1080p.jpg"
       },
       {
         "id": "collections.streaming.paramount-plus",
@@ -3041,11 +3737,953 @@
         "coverEmoji": "",
         "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/refs/heads/main/art/streaming-services/paramount-plus/paramount-plus-hover.gif",
         "heroVideoUrl": "",
-        "titleLogoUrl": "https://cdn.xperience-app.com/covers/logomark/streaming_services.paramount_plus.logo.webp?v=9",
-        "coverImageUrl": "https://cdn.xperience-app.com/covers/top_beam/streaming_services.paramount_plus.webp?v=9",
+        "titleLogoUrl": "https://github.com/bramst0ne/prism-wallpapers/blob/main/collections/networks/4330-paramount/logos/color/4330_color_2.png?raw=true",
+        "coverImageUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/refs/heads/main/art/streaming-services/paramount-plus/paramount-plus-cover.png",
         "catalogSources": [],
         "focusGifEnabled": true,
         "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/2303-paramount-plus-premium/backdrops/t2_flat_1080p.jpg"
+      },
+      {
+        "id": "collections.streaming.amc-plus",
+        "title": "AMC+",
+        "sources": [
+          {
+            "type": "movie",
+            "genre": "Τάσεις ταινιών",
+            "title": "Τάσεις ταινιών",
+            "name": "Τάσεις ταινιών",
+            "sortBy": "original",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Τάσεις σειρών",
+            "title": "Τάσεις σειρών",
+            "name": "Τάσεις σειρών",
+            "sortBy": "original",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Νέες ταινίες",
+            "title": "Νέες ταινίες",
+            "name": "Νέες ταινίες",
+            "sortBy": "primary_release_date.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "voteCountGte": 10
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Νέες σειρές",
+            "title": "Νέες σειρές",
+            "name": "Νέες σειρές",
+            "sortBy": "first_air_date.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {
+              "voteCountGte": 10
+            },
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Δημοφιλείς ταινίες",
+            "title": "Δημοφιλείς ταινίες",
+            "name": "Δημοφιλείς ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "popular"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Δημοφιλείς σειρές",
+            "title": "Δημοφιλείς σειρές",
+            "name": "Δημοφιλείς σειρές",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "popular"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Κορυφαίες ταινίες",
+            "title": "Κορυφαίες ταινίες",
+            "name": "Κορυφαίες ταινίες",
+            "sortBy": "vote_average.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "top_all_time",
+              "voteCountGte": 250
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Κορυφαίες σειρές",
+            "title": "Κορυφαίες σειρές",
+            "name": "Κορυφαίες σειρές",
+            "sortBy": "vote_average.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "top_all_time",
+              "voteCountGte": 150
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες δράσης",
+            "title": "Ταινίες δράσης",
+            "name": "Ταινίες δράσης",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Σειρές δράσης",
+            "title": "Σειρές δράσης",
+            "name": "Σειρές δράσης",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες περιπέτειας",
+            "title": "Ταινίες περιπέτειας",
+            "name": "Ταινίες περιπέτειας",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Σειρές περιπέτειας",
+            "title": "Σειρές περιπέτειας",
+            "name": "Σειρές περιπέτειας",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες κινουμένων σχεδίων",
+            "title": "Ταινίες κινουμένων σχεδίων",
+            "name": "Ταινίες κινουμένων σχεδίων",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Σειρές κινουμένων σχεδίων",
+            "title": "Σειρές κινουμένων σχεδίων",
+            "name": "Σειρές κινουμένων σχεδίων",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Κωμικές ταινίες",
+            "title": "Κωμικές ταινίες",
+            "name": "Κωμικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Κωμικές σειρές",
+            "title": "Κωμικές σειρές",
+            "name": "Κωμικές σειρές",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Αστυνομικές ταινίες",
+            "title": "Αστυνομικές ταινίες",
+            "name": "Αστυνομικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Αστυνομικές σειρές",
+            "title": "Αστυνομικές σειρές",
+            "name": "Αστυνομικές σειρές",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες ντοκιμαντέρ",
+            "title": "Ταινίες ντοκιμαντέρ",
+            "name": "Ταινίες ντοκιμαντέρ",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Σειρές ντοκιμαντέρ",
+            "title": "Σειρές ντοκιμαντέρ",
+            "name": "Σειρές ντοκιμαντέρ",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Δραματικές ταινίες",
+            "title": "Δραματικές ταινίες",
+            "name": "Δραματικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Δραματικές σειρές",
+            "title": "Δραματικές σειρές",
+            "name": "Δραματικές σειρές",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Οικογενειακές ταινίες",
+            "title": "Οικογενειακές ταινίες",
+            "name": "Οικογενειακές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Οικογενειακές σειρές",
+            "title": "Οικογενειακές σειρές",
+            "name": "Οικογενειακές σειρές",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες φαντασίας",
+            "title": "Ταινίες φαντασίας",
+            "name": "Ταινίες φαντασίας",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Σειρές φαντασίας",
+            "title": "Σειρές φαντασίας",
+            "name": "Σειρές φαντασίας",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ιστορικές ταινίες",
+            "title": "Ιστορικές ταινίες",
+            "name": "Ιστορικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Ιστορικές σειρές",
+            "title": "Ιστορικές σειρές",
+            "name": "Ιστορικές σειρές",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες τρόμου",
+            "title": "Ταινίες τρόμου",
+            "name": "Ταινίες τρόμου",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Σειρές τρόμου",
+            "title": "Σειρές τρόμου",
+            "name": "Σειρές τρόμου",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες μυστηρίου",
+            "title": "Ταινίες μυστηρίου",
+            "name": "Ταινίες μυστηρίου",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Σειρές μυστηρίου",
+            "title": "Σειρές μυστηρίου",
+            "name": "Σειρές μυστηρίου",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ντοκιμαντέρ φύσης",
+            "title": "Ντοκιμαντέρ φύσης",
+            "name": "Ντοκιμαντέρ φύσης",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Σειρές ντοκιμαντέρ φύσης",
+            "title": "Σειρές ντοκιμαντέρ φύσης",
+            "name": "Σειρές ντοκιμαντέρ φύσης",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ρομαντικές ταινίες",
+            "title": "Ρομαντικές ταινίες",
+            "name": "Ρομαντικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Ρομαντικές σειρές",
+            "title": "Ρομαντικές σειρές",
+            "name": "Ρομαντικές σειρές",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ρομαντικές κομεντί",
+            "title": "Ρομαντικές κομεντί",
+            "name": "Ρομαντικές κομεντί",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Ρομαντικές κωμικές σειρές",
+            "title": "Ρομαντικές κωμικές σειρές",
+            "name": "Ρομαντικές κωμικές σειρές",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες επιστημονικής φαντασίας",
+            "title": "Ταινίες επιστημονικής φαντασίας",
+            "name": "Ταινίες επιστημονικής φαντασίας",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Σειρές επιστημονικής φαντασίας",
+            "title": "Σειρές επιστημονικής φαντασίας",
+            "name": "Σειρές επιστημονικής φαντασίας",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες θρίλερ",
+            "title": "Ταινίες θρίλερ",
+            "name": "Ταινίες θρίλερ",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Σειρές θρίλερ",
+            "title": "Σειρές θρίλερ",
+            "name": "Σειρές θρίλερ",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Πολεμικές ταινίες",
+            "title": "Πολεμικές ταινίες",
+            "name": "Πολεμικές ταινίες",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Πολεμικές σειρές",
+            "title": "Πολεμικές σειρές",
+            "name": "Πολεμικές σειρές",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "movie",
+            "genre": "Ταινίες γουέστερν",
+            "title": "Ταινίες γουέστερν",
+            "name": "Ταινίες γουέστερν",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "MOVIE",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          },
+          {
+            "type": "series",
+            "genre": "Σειρές γουέστερν",
+            "title": "Σειρές γουέστερν",
+            "name": "Σειρές γουέστερν",
+            "sortBy": "popularity.desc",
+            "tmdbId": null,
+            "addonId": null,
+            "filters": {},
+            "sortHow": null,
+            "provider": "tmdb",
+            "catalogId": null,
+            "mediaType": "TV",
+            "traktListId": null,
+            "tmdbSourceType": "DISCOVER",
+            "explicitSemantic": true,
+            "discoverPolicy": {
+              "kind": "thematic"
+            }
+          }
+        ],
+        "catalogSources": [],
+        "hideTitle": true,
+        "tileShape": "LANDSCAPE",
+        "coverEmoji": "",
+        "focusGifUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/streaming-services/amcplus/amcplus-hover.gif",
+        "heroVideoUrl": "",
+        "titleLogoUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-assets/main/collections/providers/526-amc/logos/color/4661_amc_1.png",
+        "coverImageUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/streaming-services/amcplus/amcplus-cover.png",
+        "focusGifEnabled": true,
+        "heroBackdropUrl": "https://raw.githubusercontent.com/ImKaptain/nuvio-assets/main/collections/providers/526-amc/backdrops/t2_flat_1080p.jpg"
       },
       {
         "id": "collections.streaming.peacock",
@@ -3428,253 +5066,11 @@
         "coverEmoji": "",
         "focusGifUrl": "https://64.media.tumblr.com/a378bf124ed7d00c8d7430cb8a9ae0cc/9e0da9dbc32641f6-b2/s1280x1920/e8c0ba2f6aadae5b6f532a177926528e94b04d68.gifv",
         "heroVideoUrl": "",
-        "titleLogoUrl": "https://cdn.xperience-app.com/covers/logomark/streaming_services.peacock.logo.webp?v=9",
-        "coverImageUrl": "https://cdn.xperience-app.com/covers/top_beam/streaming_services.peacock.webp?v=9",
+        "titleLogoUrl": "https://github.com/bramst0ne/prism-wallpapers/blob/main/collections/networks/3353-peacock/logos/color/3353_color_1.png?raw=true",
+        "coverImageUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/970b675f.webp",
         "catalogSources": [],
         "focusGifEnabled": true,
         "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/386-peacock-premium/backdrops/t2_flat_1080p.jpg"
-      },
-      {
-        "id": "collections.streaming.crunchyroll",
-        "title": "Crunchyroll",
-        "sources": [
-          {
-            "title": "Νέες ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658941,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Νέες σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809239
-          },
-          {
-            "title": "Δημοφιλείς σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809241
-          },
-          {
-            "title": "Κορυφαίες σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809245
-          },
-          {
-            "title": "Ταινίες δράσης",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658942,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές δράσης",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809254
-          },
-          {
-            "title": "Ταινίες περιπέτειας",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658947,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Ταινίες κινουμένων σχεδίων",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658946,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές κινουμένων σχεδίων",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809258
-          },
-          {
-            "title": "Ταινίες άνιμε",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658948,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές άνιμε",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809259
-          },
-          {
-            "title": "Ταινίες φαντασίας",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658945,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές φαντασίας",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809260
-          },
-          {
-            "title": "Σειρές επιστημονικής φαντασίας",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809261
-          }
-        ],
-        "hideTitle": true,
-        "tileShape": "LANDSCAPE",
-        "coverEmoji": "",
-        "focusGifUrl": "https://cdn.dribbble.com/userupload/42119533/file/original-3c24d9649543096949cc4262451501b7.gif",
-        "heroVideoUrl": "",
-        "titleLogoUrl": "https://cdn.xperience-app.com/covers/logomark/streaming_services.crunchyroll.logo.webp?v=9",
-        "coverImageUrl": "https://cdn.xperience-app.com/covers/top_beam/streaming_services.crunchyroll.webp?v=9",
-        "catalogSources": [],
-        "focusGifEnabled": true,
-        "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/283-crunchyroll/backdrops/t2_flat_1080p.jpg"
-      },
-      {
-        "id": "collections.streaming.discovery-plus",
-        "title": "Discovery+",
-        "sources": [
-          {
-            "title": "Νέες ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658935,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Νέες σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809226
-          },
-          {
-            "title": "Δημοφιλείς σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809228
-          },
-          {
-            "title": "Κορυφαίες σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809230
-          },
-          {
-            "title": "Ταινίες ντοκιμαντέρ",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658937,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές ντοκιμαντέρ",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809234
-          },
-          {
-            "title": "Οικογενειακές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658939,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Οικογενειακές σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809235
-          },
-          {
-            "title": "Ντοκιμαντέρ φύσης",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658938,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές ντοκιμαντέρ φύσης",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809955
-          },
-          {
-            "title": "Σειρές ριάλιτι",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809237
-          }
-        ],
-        "hideTitle": true,
-        "tileShape": "LANDSCAPE",
-        "coverEmoji": "",
-        "focusGifUrl": "https://max-streams.gleeze.com/images/Discovery.gif",
-        "heroVideoUrl": "",
-        "titleLogoUrl": "https://cdn.xperience-app.com/covers/logomark/streaming_services.discovery_plus.logo.webp?v=9",
-        "coverImageUrl": "https://cdn.xperience-app.com/covers/top_beam/streaming_services.discovery_plus.webp?v=9",
-        "catalogSources": [],
-        "focusGifEnabled": true,
-        "heroBackdropUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/8815e841.webp"
       },
       {
         "id": "folder-6S0KR2JH",
@@ -4003,8 +5399,8 @@
         "coverEmoji": "",
         "focusGifUrl": "https://64.media.tumblr.com/9f43b185411e18d71444c9a5a5a79632/5d68ae94e9917470-70/s500x750/0871e87c17045759735ef64c26703c71b585bfb0.gifv",
         "heroVideoUrl": "",
-        "titleLogoUrl": "https://cdn.xperience-app.com/covers/logomark/streaming_services.mgm_plus.logo.webp?v=9",
-        "coverImageUrl": "https://cdn.xperience-app.com/covers/top_beam/streaming_services.mgm_plus.webp?v=9",
+        "titleLogoUrl": "https://github.com/bramst0ne/prism-wallpapers/blob/main/collections/networks/6219-mgm/logos/color/6219_color_1.png?raw=true",
+        "coverImageUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/d490e713.webp",
         "catalogSources": [],
         "focusGifEnabled": true,
         "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/34-mgm-plus/backdrops/t2_flat_1080p.jpg"
@@ -4138,351 +5534,11 @@
         "coverEmoji": "",
         "focusGifUrl": "https://raw.githubusercontent.com/luckynumb3rs/stremio-perfect-setup/refs/heads/main/collections/streaming/focused/shudder.gif",
         "heroVideoUrl": "",
-        "titleLogoUrl": "https://cdn.xperience-app.com/covers/logomark/streaming_services.shudder.logo.webp?v=9",
-        "coverImageUrl": "https://cdn.xperience-app.com/covers/top_beam/streaming_services.shudder.webp?v=9",
+        "titleLogoUrl": "https://github.com/bramst0ne/prism-wallpapers/blob/main/collections/companies/142877-shudder/logos/color/142877_color_1.png?raw=true",
+        "coverImageUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/99e24ce1.webp",
         "catalogSources": [],
         "focusGifEnabled": true,
         "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/99-shudder/backdrops/t2_flat_1080p.jpg"
-      },
-      {
-        "id": "folder-9B3VK7AU",
-        "title": "Starz",
-        "sources": [
-          {
-            "title": "Τάσεις ταινιών",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "MOVIE",
-            "traktListId": 35015621
-          },
-          {
-            "title": "Τάσεις σειρών",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 35015621
-          },
-          {
-            "title": "Νέες ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658910,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Νέες σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809173
-          },
-          {
-            "title": "Δημοφιλείς ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658911,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Δημοφιλείς σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809175
-          },
-          {
-            "title": "Κορυφαίες ταινίες",
-            "sortBy": "vote_average.desc",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658912,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Κορυφαίες σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809177
-          },
-          {
-            "title": "Ταινίες δράσης",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658913,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές δράσης",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809204
-          },
-          {
-            "title": "Ταινίες περιπέτειας",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658915,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Ταινίες κινουμένων σχεδίων",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658914,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Ταινίες άνιμε",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658916,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Κωμικές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658918,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Κωμικές σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809208
-          },
-          {
-            "title": "Αστυνομικές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658919,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Αστυνομικές σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809209
-          },
-          {
-            "title": "Ταινίες ντοκιμαντέρ",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658917,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές ντοκιμαντέρ",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809210
-          },
-          {
-            "title": "Δραματικές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658920,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Δραματικές σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809211
-          },
-          {
-            "title": "Οικογενειακές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658921,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Οικογενειακές σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809212
-          },
-          {
-            "title": "Ταινίες φαντασίας",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658923,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές φαντασίας",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809213
-          },
-          {
-            "title": "Ιστορικές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658924,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Ταινίες τρόμου",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658925,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές τρόμου",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809215
-          },
-          {
-            "title": "Ταινίες μυστηρίου",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658927,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές μυστηρίου",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809216
-          },
-          {
-            "title": "Σειρές ριάλιτι",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809217
-          },
-          {
-            "title": "Ρομαντικές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658926,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Ρομαντικές σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809218
-          },
-          {
-            "title": "Ταινίες θρίλερ",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658930,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Πολεμικές ταινίες",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658932,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Πολεμικές σειρές",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809223
-          },
-          {
-            "title": "Ταινίες γουέστερν",
-            "sortBy": "original",
-            "provider": "tmdb",
-            "mediaType": "MOVIE",
-            "tmdbId": 8658934,
-            "tmdbSourceType": "LIST",
-            "filters": {}
-          },
-          {
-            "title": "Σειρές γουέστερν",
-            "sortBy": "rank",
-            "sortHow": "asc",
-            "provider": "trakt",
-            "mediaType": "TV",
-            "traktListId": 34809224
-          }
-        ],
-        "hideTitle": true,
-        "tileShape": "LANDSCAPE",
-        "coverEmoji": "",
-        "focusGifUrl": "https://64.media.tumblr.com/81fe52878aad139bc7b4ff5db7efc766/1e7a62d9e4b13b7a-a2/s500x750/740d23b1e14a96d02282d62190ee61e2a30aed4d.gifv",
-        "heroVideoUrl": "",
-        "titleLogoUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/262762fd.webp",
-        "coverImageUrl": "https://imkaptain.github.io/nuvio-assets/assets/images/9e92f9b6.webp",
-        "catalogSources": [],
-        "focusGifEnabled": true,
-        "heroBackdropUrl": "https://raw.githubusercontent.com/bramst0ne/prism-wallpapers/main/collections/providers/43-starz/backdrops/t2_flat_1080p.jpg"
       }
     ],
     "pinToTop": false,

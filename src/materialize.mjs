@@ -229,6 +229,7 @@ function rank(items, rail, media, today, full = false, person = false) {
 
 export async function applySemanticPredicates(client, rail, media, params, folderTitle = "") {
   const text = normalizeText(`${folderTitle} ${rail.title ?? ""}`), isTv = media === "tv";
+  const isRomanticComedy = /ρομαντικ(?:η|ες) (?:κομεντι|κωμικ)/.test(text);
   const genreRules = [
     [/πολεμικες τεχνες/, isTv ? 10759 : 28],
     [/δρασ|περιπετ/, isTv ? 10759 : /περιπετ/.test(text) ? 12 : 28], [/κινουμεν|ανιμε/, 16], [/κωμ/, 35],
@@ -240,6 +241,7 @@ export async function applySemanticPredicates(client, rail, media, params, folde
   const matched = genreRules.find(([pattern]) => pattern.test(text));
   if (matched?.[1] != null) params.with_genres = String(matched[1]);
   else if (matched) delete params.with_genres;
+  if (isRomanticComedy && !isTv) params.with_genres = "10749,35";
   const keywordNames = [];
   if (/ανιμε/.test(text)) keywordNames.push("anime");
   if (/πολεμικες τεχνες/.test(text)) keywordNames.push("martial arts");
@@ -254,6 +256,7 @@ export async function applySemanticPredicates(client, rail, media, params, folde
   if (isTv && /θριλερ/.test(text)) keywordNames.push("thriller", "suspense", "psychological thriller", "crime thriller");
   if (isTv && /τρομ/.test(text)) keywordNames.push("horror", "supernatural horror", "psychological horror");
   if (isTv && /ρομαντ/.test(text)) keywordNames.push("romance", "love", "romantic relationship");
+  if (isTv && isRomanticComedy) keywordNames.push("romantic comedy");
   if (isTv && /μουσικ|μιουζικαλ/.test(text)) keywordNames.push("music", "musical");
   if (isTv && /ιστορ/.test(text)) keywordNames.push("history", "historical");
   if (isTv && /φαντασι/.test(text)) keywordNames.push("fantasy", "magic", "supernatural");

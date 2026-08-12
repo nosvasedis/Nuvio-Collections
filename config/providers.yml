@@ -27,17 +27,8 @@
       "tvProviderIds": []
     },
     {
-      "slug": "prime-video",
-      "name": "Prime Video",
-      "aliases": [
-        "Amazon Prime Video"
-      ],
-      "movieProviderIds": [],
-      "tvProviderIds": []
-    },
-    {
       "slug": "apple-tv",
-      "name": "Apple TV",
+      "name": "Apple TV+",
       "aliases": [
         "Apple TV Plus"
       ],
@@ -55,29 +46,10 @@
       "tvProviderIds": []
     },
     {
-      "slug": "hulu",
-      "name": "Hulu",
+      "slug": "prime-video",
+      "name": "Prime Video",
       "aliases": [
-        "Hulu"
-      ],
-      "movieProviderIds": [],
-      "tvProviderIds": []
-    },
-    {
-      "slug": "paramount-plus",
-      "name": "Paramount+",
-      "aliases": [
-        "Paramount Plus"
-      ],
-      "movieProviderIds": [],
-      "tvProviderIds": []
-    },
-    {
-      "slug": "peacock",
-      "name": "Peacock",
-      "aliases": [
-        "Peacock Premium",
-        "Peacock Premium Plus"
+        "Amazon Prime Video"
       ],
       "movieProviderIds": [],
       "tvProviderIds": []
@@ -92,10 +64,49 @@
       "tvProviderIds": []
     },
     {
-      "slug": "discovery-plus",
-      "name": "Discovery+",
+      "slug": "mubi",
+      "name": "MUBI",
       "aliases": [
-        "Discovery+"
+        "MUBI"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "criterion",
+      "name": "Criterion",
+      "aliases": [
+        "Criterion Channel"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "paramount-plus",
+      "name": "Paramount+",
+      "aliases": [
+        "Paramount Plus"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "amc-plus",
+      "name": "AMC+",
+      "aliases": [
+        "AMC+",
+        "Sundance Now",
+        "Acorn TV"
+      ],
+      "movieProviderIds": [],
+      "tvProviderIds": []
+    },
+    {
+      "slug": "peacock",
+      "name": "Peacock",
+      "aliases": [
+        "Peacock Premium",
+        "Peacock Premium Plus"
       ],
       "movieProviderIds": [],
       "tvProviderIds": []
@@ -114,15 +125,6 @@
       "name": "Shudder",
       "aliases": [
         "Shudder"
-      ],
-      "movieProviderIds": [],
-      "tvProviderIds": []
-    },
-    {
-      "slug": "starz",
-      "name": "Starz",
-      "aliases": [
-        "Starz"
       ],
       "movieProviderIds": [],
       "tvProviderIds": []

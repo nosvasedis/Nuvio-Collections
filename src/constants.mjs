@@ -53,7 +53,6 @@ const EMPTY_EXACT_TMDB_PREDICATE_RAIL_KEYS = [
   "collections.streaming:collections.streaming.apple-tv:29", "collections.streaming:collections.streaming.apple-tv:36",
   "collections.streaming:collections.streaming.paramount-plus:31", "collections.streaming:collections.streaming.peacock:41",
   "collections.streaming:folder-6S0KR2JH:30", "collections.streaming:folder-6S0KR2JH:34",
-  "collections.streaming:folder-9B3VK7AU:12", "collections.streaming:folder-9B3VK7AU:35",
   "collections.streaming:folder-OKRSGYYC:1", "collections.streaming:folder-OKRSGYYC:13",
   "collections.studios:folder-10146STUDIO:1", "collections.studios:folder-127929STUDIO:1",
   "collections.studios:folder-127929STUDIO:3", "collections.studios:folder-127929STUDIO:5",
@@ -77,16 +76,22 @@ export const RETIRED_RAIL_REASONS = Object.freeze(new Map([
   ...EMPTY_EXACT_TMDB_PREDICATE_RAIL_KEYS.map((key) => [key, "EMPTY_EXACT_TMDB_PREDICATE"]),
   ...NO_SUBSTANTIVE_TV_CAST_CREDIT_RAIL_KEYS.map((key) => [key, "NO_SUBSTANTIVE_TV_CAST_CREDITS"]),
 ]));
+const APPROVED_STREAMING_REMOVED_RAIL_KEYS = Object.freeze([
+  ...Array.from({ length: 45 }, (_, index) => `collections.streaming:collections.streaming.hulu:${index}`),
+  ...Array.from({ length: 11 }, (_, index) => `collections.streaming:collections.streaming.discovery-plus:${index}`),
+  ...Array.from({ length: 38 }, (_, index) => `collections.streaming:folder-9B3VK7AU:${index}`),
+]);
 export const CATALOG_REMOVED_RAIL_REASONS = Object.freeze(new Map([
   ["collections.genres:folder-KQEZGAMF:0", "USER_APPROVED_REALITY_REMOVAL"],
   ["collections.genres:folder-KQEZGAMF:1", "USER_APPROVED_REALITY_REMOVAL"],
   ["collections.genres:folder-KQEZGAMF:2", "USER_APPROVED_REALITY_REMOVAL"],
   ["collections.genres:folder-KQEZGAMF:3", "USER_APPROVED_REALITY_REMOVAL"],
+  ...APPROVED_STREAMING_REMOVED_RAIL_KEYS.map((key) => [key, "USER_APPROVED_STREAMING_REPLACEMENT_2026_08_12"]),
 ]));
 export const EXPECTED = Object.freeze({
-  collections: 13, folders: 548, inputSources: 2747, managedInputSources: 2745,
+  collections: 13, folders: 548, inputSources: 2745, managedInputSources: 2743,
   finalSources: 2677, managedFinalSources: 2675, recommendedSources: 2,
-  native: 396, materialized: 2279, retiredRails: 79, catalogRemovedRails: 4,
+  native: 396, materialized: 2279, retiredRails: 77, catalogRemovedRails: 98,
 });
 export const EXPECTED_MAPPING = Object.freeze({
   "collections.discover": [0, 12], "collections.streaming": [0, 455],
@@ -127,13 +132,14 @@ export const COUNTRY_BY_FOLDER = Object.freeze({
 
 export const PROVIDER_SEEDS = Object.freeze([
   ["netflix", "Netflix", ["Netflix"]], ["disney-plus", "Disney+", ["Disney Plus"]],
+  ["apple-tv", "Apple TV+", ["Apple TV Plus"]], ["hbo-max", "HBO Max", ["Max", "HBO Max"]],
   ["prime-video", "Prime Video", ["Amazon Prime Video"]],
-  ["apple-tv", "Apple TV", ["Apple TV Plus"]], ["hbo-max", "HBO Max", ["Max", "HBO Max"]],
-  ["hulu", "Hulu", ["Hulu"]], ["paramount-plus", "Paramount+", ["Paramount Plus"]],
-  ["peacock", "Peacock", ["Peacock Premium", "Peacock Premium Plus"]],
   ["crunchyroll", "Crunchyroll", ["Crunchyroll"]],
-  ["discovery-plus", "Discovery+", ["Discovery+"]], ["mgm-plus", "MGM+", ["MGM Plus"]],
-  ["shudder", "Shudder", ["Shudder"]], ["starz", "Starz", ["Starz"]],
+  ["mubi", "MUBI", ["MUBI"]], ["criterion", "Criterion", ["Criterion Channel"]],
+  ["paramount-plus", "Paramount+", ["Paramount Plus"]],
+  ["amc-plus", "AMC+", ["AMC+", "Sundance Now", "Acorn TV"]],
+  ["peacock", "Peacock", ["Peacock Premium", "Peacock Premium Plus"]],
+  ["mgm-plus", "MGM+", ["MGM Plus"]], ["shudder", "Shudder", ["Shudder"]],
 ]);
 
 export const AWARD_SEEDS = Object.freeze({

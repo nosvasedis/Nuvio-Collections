@@ -6,11 +6,13 @@ a test so bootstrap cannot silently reintroduce it.
 
 ## Protected structure
 
-- 13 collections and all 548 active folders are immutable in count and identity.
-  The sole approved historical deletion is Genres/Reality
-  (`folder-KQEZGAMF`) with four preserved list tombstones. The remaining 516
-  original folders, Portuguese/Latin-American additions and 30 v5.0.1
-  additions are fingerprint-locked.
+- 13 collections and 548 active folders are immutable except for reviewed,
+  user-approved migrations with complete tombstones. Approved exceptions are
+  Genres/Reality (`folder-KQEZGAMF`) and the 2026-08-12 streaming replacement:
+  Hulu, Discovery+ and Starz were replaced by MUBI, Criterion and AMC+. All 94
+  old sources are tombstoned; 92 truthful active rails replace them because two
+  Starz rails were already empty/retired. The migration preserves 13 streaming
+  folders and all global active-source counts.
 - `collections.discover.recommended` is manually curated and fingerprint-locked.
 - Rails may be retired only after evidence and explicit approval. Retired list
   IDs remain in `state.retiredRails`; nightly sync never deletes remote lists.
@@ -251,6 +253,17 @@ and dynamic curated merge/order tests.
 - Provider Trending prefers the official TMDB day window. If that provider has
   no day result in either GR or Worldwide, it widens to the official week window;
   it never relabels generic popularity as trending.
+- Streaming folder order is exactly Netflix, Disney+, Apple TV+, HBO Max,
+  Prime Video, Crunchyroll, MUBI, Criterion, Paramount+, AMC+, Peacock, MGM+,
+  Shudder. All artwork fields come from the pinned Kaptain v0.90 beta export
+  checksum; predicates and list ownership remain local and authoritative.
+- Disney+ GR resolves official provider 337, which TMDB reports as the
+  flatrate home of reviewed Hulu-origin titles in Greece. Standalone Hulu is not
+  unioned. AMC+ unions only direct AMC+, Sundance Now and Acorn TV providers;
+  Amazon/Apple/Roku channel add-ons are excluded.
+- MUBI and Criterion are movie-only. Unsupported Kaptain Top 10 lists are not
+  copied. MUBI's empty official trending predicate is replaced by an exact
+  pre-2000 Classics rail; no rail is filled with mislabeled popularity data.
 - A Trending ID that receives TMDB's definitive resource-not-found
   (`404/status_code 34`) during watch-provider verification is discarded as a
   deleted candidate. Network, rate-limit and 5xx failures still fail closed and

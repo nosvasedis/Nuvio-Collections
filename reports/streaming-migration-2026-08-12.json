@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "date": "2026-08-12",
+  "status": "production-verified",
+  "folderOrder": [
+    "Netflix",
+    "Disney+",
+    "Apple TV+",
+    "HBO Max",
+    "Prime Video",
+    "Crunchyroll",
+    "MUBI",
+    "Criterion",
+    "Paramount+",
+    "AMC+",
+    "Peacock",
+    "MGM+",
+    "Shudder"
+  ],
+  "activeRailCounts": [46, 43, 35, 46, 45, 14, 23, 23, 44, 46, 43, 35, 12],
+  "removedFolders": ["Hulu", "Discovery+", "Starz"],
+  "addedFolders": ["MUBI", "Criterion", "AMC+"],
+  "oldSourcesTombstoned": 94,
+  "newActiveRails": 92,
+  "newListsVerified": {
+    "MUBI": 23,
+    "Criterion": 23,
+    "AMC+": 46
+  },
+  "remoteOldListsVerifiedDeleted": 94,
+  "artwork": {
+    "source": "nuvio_custom_collection_2026-08-12 (2).json",
+    "sha256": "08bc5403bfcb2129d004ae32ff39504818bb1ea9c4266a83e5213290dc256e94",
+    "folders": 13,
+    "fields": ["coverImageUrl", "focusGifUrl", "titleLogoUrl", "heroBackdropUrl"]
+  },
+  "disneyPlusGreece": {
+    "providerId": 337,
+    "providerName": "Disney Plus",
+    "standaloneHuluUnion": false,
+    "reviewedHuluOriginFlatrateSamples": [
+      { "mediaType": "tv", "tmdbId": 107113, "title": "Only Murders in the Building" },
+      { "mediaType": "tv", "tmdbId": 136315, "title": "The Bear" },
+      { "mediaType": "tv", "tmdbId": 110695, "title": "Dopesick" },
+      { "mediaType": "tv", "tmdbId": 134095, "title": "A Murder at the End of the World" }
+    ]
+  },
+  "amcPlusBundle": {
+    "directProviderAliases": ["AMC+", "Sundance Now", "Acorn TV"],
+    "channelAddonsIncluded": false
+  },
+  "finalDryRun": {
+    "considered": 2279,
+    "changed": 0,
+    "skipped": 2279,
+    "failed": 0,
+    "created": 0,
+    "posterlessExcluded": 3486
+  },
+  "deletionEvidence": "reports/streaming-retirement-2026-08-12.json"
+}

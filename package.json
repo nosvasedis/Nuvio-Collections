@@ -19,6 +19,7 @@
     "profile:audit": "node src/cli.mjs profile-audit",
     "audit:v501-additions": "node --env-file-if-exists=.env scripts/audit-v5.0.1-additions.mjs",
     "delete:reality-lists": "node --env-file-if-exists=.env scripts/delete-reality-lists.mjs",
+    "delete:retired-streaming-lists": "node --env-file-if-exists=.env scripts/delete-retired-streaming-lists.mjs",
     "sync:dry": "node --env-file-if-exists=.env src/cli.mjs sync --dry-run",
     "sync": "node --env-file-if-exists=.env src/cli.mjs sync --execute",
     "test": "node --test",

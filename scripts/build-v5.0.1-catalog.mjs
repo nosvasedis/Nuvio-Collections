@@ -6,6 +6,7 @@ const root = path.resolve(import.meta.dirname, "..");
 const basePath = path.join(root, "nuvio collections v4.5.13 - static-studio-lists-released.json");
 const outputPath = path.join(root, "data", "nuvio-collections-v5.0.1-source.json");
 const sortKeysPath = path.join(root, "data", "folder-sort-keys.json");
+const streamingSnapshotPath = path.join(root, "data", "kaptain-streaming-v0.90-beta.json");
 const kaptainUrl = "https://imkaptain.github.io/Kaptain-Collection/collections/database.js?v=47";
 const kaptainSha256 = "d9368757d26b8febfb973ca75746ce5cf35a35e62f897fa9b60e78a343014765";
 
@@ -16,6 +17,8 @@ const actualSha256 = crypto.createHash("sha256").update(script).digest("hex");
 if (actualSha256 !== kaptainSha256) throw new Error(`Kaptain v47 snapshot drifted: expected ${kaptainSha256}, got ${actualSha256}`);
 const live = JSON.parse(script.replace(/^window\.NUVIO_DATABASE\s*=\s*/, "").replace(/;\s*$/, ""));
 const base = JSON.parse(await fs.readFile(basePath, "utf8"));
+const streamingSnapshot = JSON.parse(await fs.readFile(streamingSnapshotPath, "utf8"));
+if (streamingSnapshot.sourceSha256 !== "08bc5403bfcb2129d004ae32ff39504818bb1ea9c4266a83e5213290dc256e94") throw new Error("Pinned Kaptain streaming snapshot drifted");
 const byTitle = new Map(live.map((collection) => [collection.title, collection]));
 for (const title of ["Genres", "Moods & Vibes", "International Cinema"]) if (!byTitle.has(title)) throw new Error(`Kaptain collection missing: ${title}`);
 
@@ -27,6 +30,57 @@ function source(title, mediaType, sortBy, filters = {}, discoverPolicy = null) {
     explicitSemantic: true, ...(discoverPolicy ? { discoverPolicy } : {}),
   };
 }
+
+function streamingSource(title, mediaType, { voteCountGte = null, filters: extraFilters = {} } = {}) {
+  const media = mediaType === "TV" ? "series" : "movie";
+  const normalized = title.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("el");
+  const isNew = normalized.startsWith("νεες ");
+  const isRecent = normalized.startsWith("προσφατες ");
+  const isTop = normalized.startsWith("κορυφαιες ");
+  const isTrending = normalized.startsWith("τασεις ");
+  const sortBy = isNew || isRecent ? (mediaType === "TV" ? "first_air_date.desc" : "primary_release_date.desc") : isTop ? "vote_average.desc" : isTrending ? "original" : "popularity.desc";
+  const filters = { ...(voteCountGte == null ? {} : { voteCountGte }), ...extraFilters };
+  const discoverPolicy = isRecent ? { kind: "recent" } : isTop ? { kind: "top_all_time", voteCountGte: mediaType === "TV" ? 150 : 250 } : normalized.startsWith("δημοφιλεις ") ? { kind: "popular" } : { kind: "thematic" };
+  return { type: media, genre: title, title, name: title, sortBy, tmdbId: null, addonId: null, filters, sortHow: null, provider: "tmdb", catalogId: null, mediaType, traktListId: null, tmdbSourceType: "DISCOVER", explicitSemantic: true, discoverPolicy };
+}
+
+const movieGenreTitles = ["Ταινίες δράσης", "Ταινίες περιπέτειας", "Ταινίες κινουμένων σχεδίων", "Ταινίες άνιμε", "Κωμικές ταινίες", "Αστυνομικές ταινίες", "Ταινίες ντοκιμαντέρ", "Δραματικές ταινίες", "Οικογενειακές ταινίες", "Ταινίες φαντασίας", "Ιστορικές ταινίες", "Ταινίες τρόμου", "Ταινίες μυστηρίου", "Ντοκιμαντέρ φύσης", "Ρομαντικές ταινίες", "Ρομαντικές κομεντί", "Ταινίες επιστημονικής φαντασίας", "Ταινίες θρίλερ", "Πολεμικές ταινίες", "Ταινίες γουέστερν"];
+const pairedStreamingCategories = [["Ταινίες δράσης", "Σειρές δράσης"], ["Ταινίες περιπέτειας", "Σειρές περιπέτειας"], ["Ταινίες κινουμένων σχεδίων", "Σειρές κινουμένων σχεδίων"], ["Κωμικές ταινίες", "Κωμικές σειρές"], ["Αστυνομικές ταινίες", "Αστυνομικές σειρές"], ["Ταινίες ντοκιμαντέρ", "Σειρές ντοκιμαντέρ"], ["Δραματικές ταινίες", "Δραματικές σειρές"], ["Οικογενειακές ταινίες", "Οικογενειακές σειρές"], ["Ταινίες φαντασίας", "Σειρές φαντασίας"], ["Ιστορικές ταινίες", "Ιστορικές σειρές"], ["Ταινίες τρόμου", "Σειρές τρόμου"], ["Ταινίες μυστηρίου", "Σειρές μυστηρίου"], ["Ντοκιμαντέρ φύσης", "Σειρές ντοκιμαντέρ φύσης"], ["Ρομαντικές ταινίες", "Ρομαντικές σειρές"], ["Ρομαντικές κομεντί", "Ρομαντικές κωμικές σειρές"], ["Ταινίες επιστημονικής φαντασίας", "Σειρές επιστημονικής φαντασίας"], ["Ταινίες θρίλερ", "Σειρές θρίλερ"], ["Πολεμικές ταινίες", "Πολεμικές σειρές"], ["Ταινίες γουέστερν", "Σειρές γουέστερν"]];
+
+function movieOnlyStreamingRails({ trending = true, recent = false, classics = false, nature = true, war = true }) {
+  const headings = [...(trending ? [streamingSource("Τάσεις ταινιών", "MOVIE")] : []), streamingSource("Νέες ταινίες", "MOVIE", { voteCountGte: 10 }), ...(recent ? [streamingSource("Πρόσφατες ταινίες", "MOVIE")] : []), ...(classics ? [streamingSource("Κλασικές ταινίες", "MOVIE", { filters: { releaseDateLte: "1999-12-31" } })] : []), streamingSource("Δημοφιλείς ταινίες", "MOVIE"), streamingSource("Κορυφαίες ταινίες", "MOVIE")];
+  let genres = [...movieGenreTitles];
+  if (!nature) genres = genres.filter((title) => title !== "Ντοκιμαντέρ φύσης");
+  if (!war) genres = genres.filter((title) => title !== "Πολεμικές ταινίες");
+  return [...headings, ...genres.map((title) => streamingSource(title, "MOVIE"))];
+}
+
+function amcBundleRails() {
+  const rails = [streamingSource("Τάσεις ταινιών", "MOVIE"), streamingSource("Τάσεις σειρών", "TV"), streamingSource("Νέες ταινίες", "MOVIE", { voteCountGte: 10 }), streamingSource("Νέες σειρές", "TV", { voteCountGte: 10 }), streamingSource("Δημοφιλείς ταινίες", "MOVIE"), streamingSource("Δημοφιλείς σειρές", "TV"), streamingSource("Κορυφαίες ταινίες", "MOVIE"), streamingSource("Κορυφαίες σειρές", "TV")];
+  for (const [movieTitle, tvTitle] of pairedStreamingCategories) rails.push(streamingSource(movieTitle, "MOVIE"), streamingSource(tvTitle, "TV"));
+  if (rails.length !== 46) throw new Error(`AMC+ blueprint count drifted: ${rails.length}`);
+  return rails;
+}
+
+const streaming = base.find((collection) => collection.id === "collections.streaming");
+if (!streaming || streaming.folders.length !== 13) throw new Error("Canonical Streaming collection drifted");
+const currentStreaming = new Map(streaming.folders.map((folder) => [folder.title, folder]));
+for (const title of ["Hulu", "Discovery+", "Starz"]) if (!currentStreaming.has(title)) throw new Error(`Approved streaming removal missing: ${title}`);
+const artworkTitle = (title) => title === "MUBI" ? "Mubi" : title;
+const withArtwork = (folder, title) => {
+  const artwork = streamingSnapshot.folders[artworkTitle(title)];
+  if (!artwork) throw new Error(`Pinned Kaptain artwork missing: ${title}`);
+  const { sourceFolderId: _sourceFolderId, ...metadata } = artwork;
+  return { ...folder, ...structuredClone(metadata), title };
+};
+const existingStreaming = (title, currentTitle = title) => {
+  const folder = currentStreaming.get(currentTitle);
+  if (!folder) throw new Error(`Canonical streaming folder missing: ${currentTitle}`);
+  return withArtwork(structuredClone(folder), title);
+};
+const newStreaming = (title, id, sources) => withArtwork({ id, title, sources, catalogSources: [] }, title);
+streaming.folders = [existingStreaming("Netflix"), existingStreaming("Disney+"), existingStreaming("Apple TV+", "Apple TV"), existingStreaming("HBO Max"), existingStreaming("Prime Video"), existingStreaming("Crunchyroll"), newStreaming("MUBI", "collections.streaming.mubi", movieOnlyStreamingRails({ trending: false, recent: true, classics: true, nature: false, war: false })), newStreaming("Criterion", "collections.streaming.criterion", movieOnlyStreamingRails({ trending: false })), existingStreaming("Paramount+"), newStreaming("AMC+", "collections.streaming.amc-plus", amcBundleRails()), existingStreaming("Peacock"), existingStreaming("MGM+"), existingStreaming("Shudder")];
+if (streaming.folders.flatMap((folder) => folder.sources).length !== 463) throw new Error("Streaming replacement must retire 94 sources and add 92 active sources");
 
 function standardEight({ originCountry = null, withGenres = null, withKeywords = null, moviePopularVotes = 200, tvPopularVotes = 100, allowQuorumFallback = false }) {
   const filters = (extra = {}) => ({ ...(originCountry ? { withOriginCountry: originCountry } : {}), ...(withGenres ? { withGenres } : {}), ...(withKeywords ? { withKeywords } : {}), ...extra });

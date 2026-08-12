@@ -7,14 +7,14 @@ import { compile } from "../src/compiler.mjs";
 import { runtimeBucket, dailyRuntimeSelection, chooseAvailability, materializeRail, applySemanticPredicates, applyContentSafetyPredicates, discoverParams, streamingRecognitionFloor, EXPLICIT_CONTENT_KEYWORD_IDS, isSubstantiveCastCredit, isFeatureFilm, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
 import { confirmationCompatible, normalizeCandidateItems, orderedIdsEqual, semanticRefreshDue } from "../src/sync.mjs";
-import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS, COUNTRY_BY_FOLDER } from "../src/constants.mjs";
+import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS, CATALOG_REMOVED_RAIL_REASONS, COUNTRY_BY_FOLDER } from "../src/constants.mjs";
 import { readJson, fingerprint, dedupeLikelyDuplicateWorks } from "../src/utils.mjs";
 import { assertNuvioMediaTypeContract, emulateNuvio083MediaType } from "../src/media-contract.mjs";
 import { compareProfile } from "../src/profile-audit.mjs";
 
 test("bootstrap creates the final immutable mapping", async () => {
   const result = await bootstrap();
-  assert.deepEqual(result, { collections: 13, folders: 548, inputSources: 2747, managedRails: 2675, native: 396, materialized: 2279 });
+  assert.deepEqual(result, { collections: 13, folders: 548, inputSources: 2745, managedRails: 2675, native: 396, materialized: 2279 });
   const audit = await auditRepository(); assert.equal(audit.finalSources, EXPECTED.finalSources);
   const manifest = await readJson(new URL("../config/rails.yml", import.meta.url));
   const companions = manifest.rails.filter((rail) => rail.key.endsWith(":movie-companion"));
@@ -45,6 +45,25 @@ test("bootstrap creates the final immutable mapping", async () => {
   assert.ok(genres.folders.some((folder) => folder.title === "Ρομαντική κομεντί"));
   const removedReality = ["collections.genres:folder-KQEZGAMF:0", "collections.genres:folder-KQEZGAMF:1", "collections.genres:folder-KQEZGAMF:2", "collections.genres:folder-KQEZGAMF:3"];
   assert.ok(removedReality.every((key) => retired.retiredRails[key]?.reason === "USER_APPROVED_REALITY_REMOVAL" && !retired.rails[key]));
+  const streaming = input.find((collection) => collection.id === "collections.streaming");
+  assert.deepEqual(streaming.folders.map((folder) => folder.title), ["Netflix", "Disney+", "Apple TV+", "HBO Max", "Prime Video", "Crunchyroll", "MUBI", "Criterion", "Paramount+", "AMC+", "Peacock", "MGM+", "Shudder"]);
+  assert.deepEqual(streaming.folders.map((folder) => folder.sources.length), [46, 43, 37, 46, 45, 14, 23, 23, 45, 46, 44, 37, 14]);
+  assert.ok(!streaming.folders.some((folder) => ["Hulu", "Discovery+", "Starz"].includes(folder.title)));
+  assert.ok(streaming.folders.every((folder) => folder.coverImageUrl && folder.titleLogoUrl && folder.heroBackdropUrl && folder.focusGifUrl && folder.focusGifEnabled === true));
+  const artwork = await readJson(new URL("../data/kaptain-streaming-v0.90-beta.json", import.meta.url));
+  const artworkFields = ["coverImageUrl", "focusGifUrl", "titleLogoUrl", "heroBackdropUrl", "tileShape", "hideTitle", "focusGifEnabled"];
+  for (const folder of streaming.folders) {
+    const pinned = artwork.folders[folder.title === "MUBI" ? "Mubi" : folder.title];
+    assert.ok(pinned, `Missing pinned artwork for ${folder.title}`);
+    for (const field of artworkFields) assert.equal(folder[field], pinned[field], `${folder.title}/${field}`);
+  }
+  const removedStreaming = [...CATALOG_REMOVED_RAIL_REASONS].filter(([, reason]) => reason === "USER_APPROVED_STREAMING_REPLACEMENT_2026_08_12");
+  assert.equal(removedStreaming.length, 94);
+  assert.ok(removedStreaming.every(([key, reason]) => retired.retiredRails[key]?.reason === reason && retired.retiredRails[key]?.listId && retired.retiredRails[key]?.remoteDeleteVerified === true && !retired.rails[key]));
+  const providers = await readJson(new URL("../config/providers.yml", import.meta.url));
+  assert.deepEqual(providers.providers.map((provider) => provider.name), streaming.folders.map((folder) => folder.title));
+  assert.deepEqual(providers.providers.find((provider) => provider.name === "Disney+").aliases, ["Disney Plus"]);
+  assert.deepEqual(providers.providers.find((provider) => provider.name === "AMC+").aliases, ["AMC+", "Sundance Now", "Acorn TV"]);
   const discoverTop = manifest.rails.filter((rail) => rail.folderId === "collections.discover.top-rated-2");
   assert.deepEqual(discoverTop.map((rail) => rail.title), ["Κορυφαίες πρόσφατες ταινίες", "Κορυφαίες πρόσφατες σειρές", "Κορυφαίες ταινίες όλων των εποχών", "Κορυφαίες σειρές όλων των εποχών"]);
   assert.ok(discoverTop.every((rail) => rail.strategy === "materialized"));
@@ -262,6 +281,17 @@ test("nature documentaries tolerate TMDB keyword sparsity while remaining docume
   assert.equal(params.with_keywords, "1|2|3|4|5");
 });
 
+test("streaming romantic comedy requires both movie genres and a TV romantic-comedy keyword", async () => {
+  const client = { keywordIds: async (names) => names.map((name, index) => name === "romantic comedy" ? 9799 : index + 1) };
+  const movie = {};
+  await applySemanticPredicates(client, { title: "Ρομαντικές κομεντί" }, "movie", movie, "MUBI");
+  assert.equal(movie.with_genres, "10749,35");
+  const tv = {};
+  await applySemanticPredicates(client, { title: "Ρομαντικές κωμικές σειρές" }, "tv", tv, "AMC+");
+  assert.equal(tv.with_genres, "35");
+  assert.ok(tv.with_keywords.split("|").includes("9799"));
+});
+
 test("Greek semantic labels do not confuse family with new or martial arts with war", async () => {
   const family = discoverParams({ title: "Οικογενειακές ταινίες", params: { legacy: { filters: {}, sortBy: "popularity.desc" } } }, "movie", "2026-08-10");
   assert.equal(family["primary_release_date.gte"], undefined); assert.equal(family.sort_by, "popularity.desc");
@@ -352,14 +382,14 @@ test("Nuvio 0.8.3 LIST editor hardcodes MOVIE while DataStore preserves TV", asy
   const sources = artifact.flatMap((c) => c.folders ?? []).flatMap((f) => f.sources ?? []);
   const listTv = sources.filter((s) => s.provider === "tmdb" && s.tmdbSourceType === "LIST" && s.mediaType === "TV");
   const nativeTv = sources.filter((s) => s.provider === "tmdb" && s.tmdbSourceType !== "LIST" && s.mediaType === "TV");
-  assert.equal(listTv.length, 1055);
+  assert.equal(listTv.length, 1033);
   assert.equal(nativeTv.length, 120);
   assert.ok(listTv.every((s) => s.type === "series" && s.sortBy === "original"));
   assert.ok(listTv.every((s) => emulateNuvio083DataStoreRoundTrip(s).mediaType === "TV"));
   const corrupted = listTv.map(emulateMobileListTvCorruption);
   const analysis = analyzeListTvCompat(sources, [...corrupted, ...nativeTv]);
-  assert.equal(analysis.canonicalListTv, 1055);
-  assert.equal(analysis.profileSeriesMovieList, 1055);
+  assert.equal(analysis.canonicalListTv, 1033);
+  assert.equal(analysis.profileSeriesMovieList, 1033);
   assert.equal(analysis.profileSeriesTvList, 0);
   assert.equal(analysis.profileNativeSeriesTv, 120);
   assert.equal(analysis.editorWouldForceMovie, true);
