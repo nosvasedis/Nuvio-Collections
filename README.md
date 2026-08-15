@@ -227,6 +227,9 @@ backdrop του Kaptain v0.90 beta export, ενώ τα predicates και οι pu
 - Και τα 59 Network rails είναι materialized. Popular και Recent διατηρούν το
   δικό τους predicate, αλλά περνούν το ίδιο type/release/poster/exact-order
   contract με κάθε άλλη managed list.
+- Το Warner Bros. folder χρησιμοποιεί το επίσημο company 17 για ταινίες και το
+  επίσημο Warner Bros. Television company 1957 για σειρές. Έτσι τα TV rails δεν
+  εξαρτώνται από λανθασμένες ή παροδικές company-17 συσχετίσεις του TMDB.
 
 ### Actors και Directors
 

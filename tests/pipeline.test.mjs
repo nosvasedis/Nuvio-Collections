@@ -70,6 +70,11 @@ test("bootstrap creates the final immutable mapping", async () => {
   const filmSeries = manifest.rails.filter((rail) => rail.collectionId === "collections.film-series");
   assert.equal(filmSeries.length, 186);
   assert.ok(filmSeries.every((rail) => rail.strategy === "materialized" && rail.materializer === "collection" && rail.params.legacy.tmdbSourceType === "COLLECTION"));
+  const warner = input.find((collection) => collection.id === "collections.studios").folders.find((folder) => folder.id === "folder-2KA1KP6V");
+  assert.ok(warner.sources.filter((source) => source.mediaType === "MOVIE").every((source) => source.tmdbId === 17));
+  assert.ok(warner.sources.filter((source) => source.mediaType === "TV").every((source) => source.tmdbId === 1957));
+  const activeWarnerTv = manifest.rails.filter((rail) => rail.folderId === warner.id && rail.mediaType === "TV");
+  assert.deepEqual(activeWarnerTv.map((rail) => [rail.position, rail.params.legacy.tmdbId]), [[1, 1957], [3, 1957]]);
 });
 
 test("studio feature policy rejects shorts, documentaries, TV movies, and future releases", () => {

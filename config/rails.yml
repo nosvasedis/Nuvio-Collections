@@ -77282,7 +77282,7 @@
       "params": {
         "legacy": {
           "tmdbSourceType": "COMPANY",
-          "tmdbId": 17,
+          "tmdbId": 1957,
           "traktListId": null,
           "filters": {},
           "sortBy": "first_air_date.desc"
@@ -77293,7 +77293,7 @@
         "genre": null,
         "title": "Πρόσφατες σειρές",
         "sortBy": "first_air_date.desc",
-        "tmdbId": 17,
+        "tmdbId": 1957,
         "addonId": null,
         "filters": {},
         "sortHow": null,
@@ -77352,7 +77352,7 @@
       "params": {
         "legacy": {
           "tmdbSourceType": "COMPANY",
-          "tmdbId": 17,
+          "tmdbId": 1957,
           "traktListId": null,
           "filters": {},
           "sortBy": "first_air_date.desc"
@@ -77363,7 +77363,7 @@
         "genre": null,
         "title": "Δημοφιλείς σειρές",
         "sortBy": "first_air_date.desc",
-        "tmdbId": 17,
+        "tmdbId": 1957,
         "addonId": null,
         "filters": {},
         "sortHow": null,

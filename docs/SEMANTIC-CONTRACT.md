@@ -227,9 +227,15 @@ Regression: same-day stability, next-day rotation, vote floor and exact bounds.
   bootstrap and audit both fail if their count, uniqueness or Trakt provenance
   drifts. A pinned film failing semantic validation fails the rail closed instead
   of silently deleting it from the canon.
+- Warner Bros. uses media-specific official TMDB companies: movie rails remain
+  `Warner Bros. Entertainment` (company 17), while TV rails use `Warner Bros.
+  Television` (company 1957). TMDB removed the last erroneous company-17 TV
+  association on 2026-08-15, which correctly made the old Recent TV predicate
+  empty and caused scheduled run 31858771232 to fail closed. Never point Warner
+  TV rails back to company 17 or use the unrelated result as filler.
 
 Regressions: exact four-rail bootstrap mapping, feature rejection boundaries,
-and dynamic curated merge/order tests.
+dynamic curated merge/order tests, and the Warner media-specific company split.
 
 ## Streaming and other semantics
 
