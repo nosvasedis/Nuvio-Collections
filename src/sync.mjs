@@ -36,6 +36,18 @@ function managedKey(value) { return String(value ?? "").match(/(?:^| • )key ([
 function publicListName(rail, folderTitle) { return `${folderTitle} — ${rail.title}`.slice(0, 100); }
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+export async function verifyReadback(client, listId, expected, { attempts = 8, waitImpl = wait } = {}) {
+  for (let attempt = 0; attempt < attempts; attempt++) {
+    const readback = await client.listV3All(listId);
+    const readbackItems = readback.items ?? [];
+    if (readbackItems.some((item) => !["movie", "tv"].includes(item.media_type))) throw new Error(`Typed v3 read-back missing media_type for list ${listId}`);
+    const actual = readbackItems.map((item) => `${item.media_type}:${item.id}`);
+    if (orderedIdsEqual(expected, actual)) return;
+    if (attempt < attempts - 1) await waitImpl(Math.min(30000, 1000 * 2 ** attempt));
+  }
+  throw new Error(`Read-back mismatch after eventual-consistency polling for list ${listId}`);
+}
+
 async function reconcile(client, listId, items, oldItems, { knownEmpty = false } = {}) {
   const clearAndConfirm = async () => {
     await client.clearList(listId);
@@ -52,16 +64,7 @@ async function reconcile(client, listId, items, oldItems, { knownEmpty = false }
   };
   try { if (!knownEmpty) await clearAndConfirm(); await client.addItems(listId, items); }
   catch (error) { try { await clearAndConfirm(); await client.addItems(listId, oldItems); } catch (rollback) { error.message += `; ROLLBACK FAILED: ${rollback.message}`; } throw error; }
-  const expected = itemIds(items);
-  for (let attempt = 0; attempt < 8; attempt++) {
-    const readback = await client.listV3All(listId);
-    const readbackItems = readback.items ?? [];
-    if (readbackItems.some((item) => !["movie", "tv"].includes(item.media_type))) throw new Error(`Typed v3 read-back missing media_type for list ${listId}`);
-    const actual = readbackItems.map((item) => `${item.media_type}:${item.id}`);
-    if (expected.length === actual.length && expected.every((identity, i) => identity === actual[i])) return;
-    if (attempt < 7) await wait(Math.min(30000, 1000 * 2 ** attempt));
-  }
-  throw new Error(`Read-back mismatch after eventual-consistency polling for list ${listId}`);
+  await verifyReadback(client, listId, itemIds(items));
 }
 
 export async function sync({ execute = false, force = false, client = new TmdbClient() } = {}) {
@@ -244,6 +247,15 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
         if (!entry.createdList) {
           try { const old = await client.listV4All(entry.listId); oldItems = (old.results ?? []).map((x) => ({ id: x.id, media_type: x.media_type ?? entry._media })); }
           catch { const old = await client.listV3All(entry.listId); oldItems = (old.items ?? []).map((x) => ({ id: x.id, media_type: x.media_type ?? entry._media })); }
+        }
+        // A previous runner may have completed and exact-read-backed the TMDB
+        // write but exited before its local checkpoint was pushed. Recover that
+        // already-correct remote list instead of clearing and rewriting it.
+        if (!entry.createdList && orderedIdsEqual(itemIds(oldItems, entry._media), entry._ids)) {
+          await verifyReadback(client, entry.listId, entry._ids);
+          state.rails[entry.key] = { listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, writeSchema: WRITE_SCHEMA_VERSION, ineligibleExcluded: entry.ineligibleExcluded, posterlessExcluded: entry.posterlessExcluded, syncStatus: "verified", lastVerified: new Date().toISOString(), invalidItems: entry._invalidItems ?? [], ...(entry._semanticRefreshedAt ? { lastSemanticRefresh: entry._semanticRefreshedAt } : {}) };
+          await checkpointState();
+          return { ...entry, status: "unchanged", checkpointRefresh: true, remoteResume: true };
         }
         try { await reconcile(client, entry.listId, entry._candidate.items, oldItems, { knownEmpty: Boolean(entry.createdList) }); }
         catch (error) {

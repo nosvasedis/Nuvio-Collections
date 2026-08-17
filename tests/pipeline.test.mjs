@@ -6,7 +6,7 @@ import { auditRepository } from "../src/validate.mjs";
 import { compile } from "../src/compiler.mjs";
 import { runtimeBucket, dailyRuntimeSelection, chooseAvailability, materializeRail, applySemanticPredicates, applyContentSafetyPredicates, discoverParams, streamingRecognitionFloor, EXPLICIT_CONTENT_KEYWORD_IDS, isSubstantiveCastCredit, isFeatureFilm, requireEligibleReleasedItems, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
-import { confirmationCompatible, normalizeCandidateItems, orderedIdsEqual, semanticRefreshDue } from "../src/sync.mjs";
+import { confirmationCompatible, normalizeCandidateItems, orderedIdsEqual, semanticRefreshDue, verifyReadback } from "../src/sync.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS, CATALOG_REMOVED_RAIL_REASONS, COUNTRY_BY_FOLDER } from "../src/constants.mjs";
 import { readJson, fingerprint, dedupeLikelyDuplicateWorks } from "../src/utils.mjs";
 import { assertNuvioMediaTypeContract, emulateNuvio083MediaType } from "../src/media-contract.mjs";
@@ -252,6 +252,14 @@ test("identical ordered IDs suppress writes despite checkpoint fingerprint drift
   assert.equal(orderedIdsEqual(undefined, ["movie:1"]), false);
 });
 
+test("exact read-back retries transient order drift and still rejects missing media type", async () => {
+  let reads = 0;
+  const client = { listV3All: async () => ({ items: ++reads === 1 ? [{ id: 2, media_type: "movie" }, { id: 1, media_type: "movie" }] : [{ id: 1, media_type: "movie" }, { id: 2, media_type: "movie" }] }) };
+  await verifyReadback(client, 7, ["movie:1", "movie:2"], { attempts: 2, waitImpl: async () => {} });
+  assert.equal(reads, 2);
+  await assert.rejects(verifyReadback({ listV3All: async () => ({ items: [{ id: 1 }] }) }, 8, ["movie:1"], { attempts: 1 }), /missing media_type/);
+});
+
 test("large-change confirmation tolerates tiny live churn but rejects semantic drift", () => {
   assert.equal(confirmationCompatible(["tv:1", "tv:2", "tv:3", "tv:4"], ["tv:1", "tv:2", "tv:3"]), true);
   assert.equal(confirmationCompatible(Array.from({ length: 100 }, (_, i) => `tv:${i}`), Array.from({ length: 95 }, (_, i) => `tv:${i}`)), true);
@@ -304,6 +312,9 @@ test("workflow has one native Europe/Athens schedule", async () => {
   assert.match(workflow, /cron:\s*["']7 4 \* \* \*["']/);
   assert.match(workflow, /timezone:\s*["']Europe\/Athens["']/);
   assert.doesNotMatch(workflow, /schedule-guard|7 1 \* \* \*|7 2 \* \* \*/);
+  assert.match(workflow, /name: Dry run\s+if: github\.event_name == 'workflow_dispatch' && inputs\.dry_run/);
+  assert.ok(workflow.indexOf("name: Checkpoint successful sync state") > workflow.indexOf("name: Execute sync"));
+  assert.ok(workflow.indexOf("name: Checkpoint successful sync state") < workflow.indexOf("name: Exact remote audit"));
 });
 
 test("provider trending widens from official day to week only when day is empty everywhere", async () => {

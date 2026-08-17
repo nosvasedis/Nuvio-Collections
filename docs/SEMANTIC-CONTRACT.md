@@ -299,6 +299,15 @@ dynamic curated merge/order tests, and the Warner media-specific company split.
   If the IDs are identical, sync refreshes only the local checkpoint and never
   clears/re-adds the remote list. This applies to schema migrations and ordinary
   fingerprint drift alike.
+- Interrupted-run recovery also compares the generated ordered IDs with the
+  existing remote list before any clear/add. If TMDB already contains the exact
+  candidate, exact v3 read-back restores the checkpoint without another write.
+- The hosted workflow pushes the successfully exact-read-backed sync checkpoint
+  before the independent remote audit. A later audit failure therefore cannot
+  leave the repository one day behind already-committed TMDB writes.
+- Remote audit retries only its failed subset with a fresh client and bounded
+  settling. A repeated mismatch still fails closed; valid rails are never read
+  again during retry passes.
 - A write-schema migration whose verified ordered IDs are unchanged upgrades the
   checkpoint without clearing/re-adding the same remote list.
 - TMDB v4 item-level `Media is invalid` and `Media is required` rejections are
