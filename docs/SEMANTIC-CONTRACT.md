@@ -308,6 +308,13 @@ dynamic curated merge/order tests, and the Warner media-specific company split.
 - Remote audit retries only its failed subset with a fresh client and bounded
   settling. A repeated mismatch still fails closed; valid rails are never read
   again during retry passes.
+- TMDB may asynchronously swap adjacent `original_order` entries after an exact
+  write/read-back, and its v4 item-update endpoint does not support positions.
+  Only actor/director Top rails may normalize a twice-confirmed, same-membership
+  drift where every item moved at most one adjacent position. Any addition,
+  removal, larger displacement, other rail type or non-Top ordering still fails
+  closed. The settled remote order becomes the checkpoint so nightly sync does
+  not rewrite an equivalent ranking forever.
 - A write-schema migration whose verified ordered IDs are unchanged upgrades the
   checkpoint without clearing/re-adding the same remote list.
 - TMDB v4 item-level `Media is invalid` and `Media is required` rejections are

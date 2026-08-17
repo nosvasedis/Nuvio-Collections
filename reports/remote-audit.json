@@ -1,13 +1,43 @@
 {
   "version": 1,
-  "date": "2026-08-16",
+  "date": "2026-08-17",
   "mode": "execute",
   "totals": {
     "considered": 2675,
-    "valid": 2675,
+    "valid": 2671,
+    "initialFailed": 2675,
+    "recoveredAfterRetry": 2671,
+    "retryPasses": 2,
     "repairedDeleted": 0,
     "repairableDeleted": 0,
+    "repairedOrderNormalizations": 4,
+    "repairableOrderNormalizations": 4,
     "failed": 0
   },
-  "results": []
+  "results": [
+    {
+      "key": "collections.actors:folder-59J071DM:2",
+      "listId": 8680833,
+      "status": "repairable-order-normalization",
+      "count": 42
+    },
+    {
+      "key": "collections.actors:folder-K4SHYOWV:2",
+      "listId": 8681126,
+      "status": "repairable-order-normalization",
+      "count": 61
+    },
+    {
+      "key": "collections.directors:folder-KGVNOYUN:2",
+      "listId": 8681731,
+      "status": "repairable-order-normalization",
+      "count": 14
+    },
+    {
+      "key": "collections.directors:folder-VUV0NGE4:2",
+      "listId": 8681797,
+      "status": "repairable-order-normalization",
+      "count": 20
+    }
+  ]
 }

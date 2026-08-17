@@ -5724,8 +5724,8 @@
       "orderedIds": [
         "movie:1402",
         "movie:11321",
-        "movie:614917",
         "movie:715931",
+        "movie:614917",
         "movie:431693",
         "movie:573435",
         "movie:607",
@@ -5771,8 +5771,9 @@
       "ineligibleExcluded": 3,
       "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-16T02:40:22.125Z",
-      "invalidItems": []
+      "lastVerified": "2026-08-17T07:59:11.608Z",
+      "invalidItems": [],
+      "tmdbOrderNormalizedAt": "2026-08-17T07:59:11.608Z"
     },
     "collections.actors:folder-59J071DM:3": {
       "listId": 8680834,
@@ -18894,8 +18895,8 @@
       "orderedIds": [
         "movie:50014",
         "movie:146233",
-        "movie:724495",
         "movie:436969",
+        "movie:724495",
         "movie:22803",
         "movie:645886",
         "movie:964980",
@@ -18960,8 +18961,9 @@
       "ineligibleExcluded": 4,
       "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-16T02:41:39.717Z",
-      "invalidItems": []
+      "lastVerified": "2026-08-17T07:59:11.608Z",
+      "invalidItems": [],
+      "tmdbOrderNormalizedAt": "2026-08-17T07:59:11.608Z"
     },
     "collections.actors:folder-K4SHYOWV:3": {
       "listId": 8681127,
@@ -45626,8 +45628,8 @@
       "fingerprint": "34a2168ff6704b0ffe1778bf664ee3c3d633a0309aa1b38fd368d901c6c665c0",
       "orderedIds": [
         "movie:680",
-        "movie:16869",
         "movie:68718",
+        "movie:16869",
         "movie:500",
         "movie:24",
         "movie:393",
@@ -45646,8 +45648,9 @@
       "ineligibleExcluded": 1,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-12T12:27:13.366Z",
-      "invalidItems": []
+      "lastVerified": "2026-08-17T07:59:11.608Z",
+      "invalidItems": [],
+      "tmdbOrderNormalizedAt": "2026-08-17T07:59:11.608Z"
     },
     "collections.directors:folder-KGVNOYUN:3": {
       "listId": 8681732,
@@ -47287,8 +47290,8 @@
       "fingerprint": "85e1ea2ebf3da095fd2f64c0e0849b20fe6bea01e874b5cada96f8050f85f490",
       "orderedIds": [
         "movie:122",
-        "movie:120",
         "movie:121",
+        "movie:120",
         "movie:57158",
         "movie:49051",
         "movie:122917",
@@ -47313,8 +47316,9 @@
       "ineligibleExcluded": 2,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-17T07:14:57.497Z",
-      "invalidItems": []
+      "lastVerified": "2026-08-17T07:59:11.608Z",
+      "invalidItems": [],
+      "tmdbOrderNormalizedAt": "2026-08-17T07:59:11.608Z"
     },
     "collections.directors:folder-VUV0NGE4:3": {
       "listId": 8681798,

@@ -6,7 +6,7 @@ import { auditRepository } from "../src/validate.mjs";
 import { compile } from "../src/compiler.mjs";
 import { runtimeBucket, dailyRuntimeSelection, chooseAvailability, materializeRail, applySemanticPredicates, applyContentSafetyPredicates, discoverParams, streamingRecognitionFloor, EXPLICIT_CONTENT_KEYWORD_IDS, isSubstantiveCastCredit, isFeatureFilm, requireEligibleReleasedItems, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
-import { confirmationCompatible, normalizeCandidateItems, orderedIdsEqual, semanticRefreshDue, verifyReadback } from "../src/sync.mjs";
+import { adjacentOrderEquivalent, confirmationCompatible, normalizeCandidateItems, orderedIdsEqual, permitsTmdbAdjacentOrderNormalization, semanticRefreshDue, verifyReadback } from "../src/sync.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS, CATALOG_REMOVED_RAIL_REASONS, COUNTRY_BY_FOLDER } from "../src/constants.mjs";
 import { readJson, fingerprint, dedupeLikelyDuplicateWorks } from "../src/utils.mjs";
 import { assertNuvioMediaTypeContract, emulateNuvio083MediaType } from "../src/media-contract.mjs";
@@ -258,6 +258,15 @@ test("exact read-back retries transient order drift and still rejects missing me
   await verifyReadback(client, 7, ["movie:1", "movie:2"], { attempts: 2, waitImpl: async () => {} });
   assert.equal(reads, 2);
   await assert.rejects(verifyReadback({ listV3All: async () => ({ items: [{ id: 1 }] }) }, 8, ["movie:1"], { attempts: 1 }), /missing media_type/);
+});
+
+test("TMDB adjacent order normalization is bounded to person Top rails", () => {
+  assert.equal(adjacentOrderEquivalent(["movie:1", "movie:2", "movie:3"], ["movie:2", "movie:1", "movie:3"]), true);
+  assert.equal(adjacentOrderEquivalent(["movie:1", "movie:2", "movie:3"], ["movie:3", "movie:2", "movie:1"]), false);
+  assert.equal(adjacentOrderEquivalent(["movie:1", "movie:2"], ["movie:1", "movie:4"]), false);
+  assert.equal(permitsTmdbAdjacentOrderNormalization({ materializer: "person_cast", params: { legacy: { sortBy: "vote_average.desc" } } }), true);
+  assert.equal(permitsTmdbAdjacentOrderNormalization({ materializer: "discover", params: { legacy: { sortBy: "vote_average.desc" } } }), false);
+  assert.equal(permitsTmdbAdjacentOrderNormalization({ materializer: "person_director", params: { legacy: { sortBy: "release_date.desc" } } }), false);
 });
 
 test("large-change confirmation tolerates tiny live churn but rejects semantic drift", () => {
