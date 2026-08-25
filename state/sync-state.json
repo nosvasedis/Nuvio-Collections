@@ -7037,8 +7037,9 @@
       "ineligibleExcluded": 2,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-24T02:40:20.906Z",
-      "invalidItems": []
+      "lastVerified": "2026-08-25T09:49:58.415Z",
+      "invalidItems": [],
+      "tmdbOrderRewrittenAt": "2026-08-25T09:49:58.415Z"
     },
     "collections.actors:folder-63GJUMC0:3": {
       "listId": 8680862,
@@ -17454,9 +17455,10 @@
       "writeSchema": 5,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-12T11:48:30.848Z",
+      "lastVerified": "2026-08-25T09:49:58.415Z",
       "invalidItems": [],
-      "ineligibleExcluded": 0
+      "ineligibleExcluded": 0,
+      "tmdbOrderRewrittenAt": "2026-08-25T09:49:58.415Z"
     },
     "collections.actors:folder-ICAWUP7G:2": {
       "listId": 8681107,
@@ -17752,9 +17754,10 @@
       "writeSchema": 5,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-12T11:48:30.861Z",
+      "lastVerified": "2026-08-25T09:49:58.415Z",
       "invalidItems": [],
-      "ineligibleExcluded": 0
+      "ineligibleExcluded": 0,
+      "tmdbOrderRewrittenAt": "2026-08-25T09:49:58.415Z"
     },
     "collections.actors:folder-J1WUV8FO:0": {
       "listId": 8681112,
@@ -18958,8 +18961,9 @@
       "ineligibleExcluded": 4,
       "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T08:10:12.889Z",
-      "invalidItems": []
+      "lastVerified": "2026-08-25T09:49:58.415Z",
+      "invalidItems": [],
+      "tmdbOrderRewrittenAt": "2026-08-25T09:49:58.415Z"
     },
     "collections.actors:folder-K4SHYOWV:3": {
       "listId": 8681127,
@@ -46967,7 +46971,7 @@
     },
     "collections.directors:folder-SV2DU8QN:2": {
       "listId": 8681783,
-      "fingerprint": "dadae4d218255ba39a9f1a2443ab13f2b8305998fd45ad99d06d6e48c5b74faa",
+      "fingerprint": "726436c17b79036e41472e8d9b42781fb231cca4158e798b818bc4a6153358d8",
       "orderedIds": [
         "movie:765",
         "movie:557",
@@ -46995,7 +46999,7 @@
       "ineligibleExcluded": 1,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T08:11:14.356Z",
+      "lastVerified": "2026-08-25T09:49:58.415Z",
       "invalidItems": [
         {
           "media_type": "movie",
@@ -47003,7 +47007,8 @@
           "reason": "TMDB_LIST_MEDIA_REQUIRED",
           "excludedAt": "2026-08-10T13:32:01.780Z"
         }
-      ]
+      ],
+      "tmdbOrderRewrittenAt": "2026-08-25T09:49:58.415Z"
     },
     "collections.directors:folder-SV2DU8QN:3": {
       "listId": 8681784,
@@ -112597,8 +112602,9 @@
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-23T02:55:14.895Z",
-      "invalidItems": []
+      "lastVerified": "2026-08-25T09:49:58.415Z",
+      "invalidItems": [],
+      "tmdbOrderRewrittenAt": "2026-08-25T09:49:58.415Z"
     },
     "collections.studios:folder-ZDYYVMWR:5": {
       "listId": 8682629,
@@ -139266,7 +139272,7 @@
     },
     "collections.world:folder-UJU5PHHC:0": {
       "listId": 8682890,
-      "fingerprint": "add009488f0ec7a85d8cb7562176a0f54d021fb24a6e63bff0cf04ff2c79a8fa",
+      "fingerprint": "73050874e817a9aa052bd7ba5359c2a8f4c38f5915d45e7dcf61d195ed3c5649",
       "orderedIds": [
         "movie:1676489",
         "movie:1474861",
@@ -139280,7 +139286,6 @@
         "movie:1578152",
         "movie:1722115",
         "movie:1745921",
-        "movie:1702511",
         "movie:1733609",
         "movie:1746013",
         "movie:1746400",
@@ -139460,14 +139465,22 @@
         "movie:1684378",
         "movie:1723539"
       ],
-      "count": 191,
+      "count": 190,
       "scope": "GLOBAL",
       "writeSchema": 5,
       "ineligibleExcluded": 0,
       "posterlessExcluded": 8,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T09:39:58.543Z",
-      "invalidItems": []
+      "lastVerified": "2026-08-25T09:49:58.415Z",
+      "invalidItems": [
+        {
+          "media_type": "movie",
+          "id": 1702511,
+          "reason": "TMDB_V3_FUTURE_DATE",
+          "excludedAt": "2026-08-25T09:49:58.415Z"
+        }
+      ],
+      "tmdbV3EligibilityRepairedAt": "2026-08-25T09:49:58.415Z"
     },
     "collections.world:folder-UJU5PHHC:1": {
       "listId": 8682891,

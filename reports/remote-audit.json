@@ -1,15 +1,19 @@
 {
   "version": 1,
-  "date": "2026-08-24",
+  "date": "2026-08-25",
   "mode": "execute",
   "totals": {
     "considered": 2675,
     "valid": 2675,
     "initialFailed": 2675,
     "recoveredAfterRetry": 2675,
-    "retryPasses": 1,
+    "retryPasses": 2,
     "repairedDeleted": 0,
     "repairableDeleted": 0,
+    "repairedIneligible": 1,
+    "repairableIneligible": 1,
+    "repairedOrderRewrites": 6,
+    "repairableOrderRewrites": 6,
     "repairedOrderNormalizations": 0,
     "repairableOrderNormalizations": 0,
     "failed": 0
