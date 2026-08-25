@@ -498,4 +498,10 @@ export class TmdbClient {
       throw error;
     }
   }
+  async removeItems(id, items) {
+    if (!items.length) return;
+    const result = await this.v4(`/list/${id}/items`, { method: "DELETE", body: { items: items.map((x) => ({ media_type: x.media_type, media_id: x.id })) } });
+    const errors = [...(result.error_results ?? []), ...(result.results ?? []).filter((item) => item.success !== true)];
+    if ((result.results ?? []).length !== items.length || errors.length) throw new Error(`TMDB list ${id} removed ${(result.results ?? []).filter((item) => item.success === true).length}/${items.length} items: ${JSON.stringify(errors.slice(0, 3))}`);
+  }
 }

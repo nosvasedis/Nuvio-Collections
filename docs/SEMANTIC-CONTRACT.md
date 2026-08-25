@@ -315,6 +315,14 @@ dynamic curated merge/order tests, and the Warner media-specific company split.
 - Remote audit retries only its failed subset with a fresh client and bounded
   settling. A repeated mismatch still fails closed; valid rails are never read
   again during retry passes.
+- A twice-confirmed same-membership order drift is not silently accepted. The
+  guarded repair audit clears only that list after a long quiescence window,
+  inserts its typed IDs sequentially, and requires two exact v3 read-backs. A
+  failed rewrite remains a hard failure and keeps the previous checkpoint.
+- The v3 list payload consumed by Nuvio is authoritative for final poster,
+  adult/video and release-date eligibility. If it contradicts TMDB details,
+  the guarded audit removes and quarantines only the offending typed identity,
+  exact-read-backs the remaining order, and checkpoints the filtered list.
 - TMDB may asynchronously swap adjacent `original_order` entries after an exact
   write/read-back, and its v4 item-update endpoint does not support positions.
   Only actor/director Top rails may normalize a twice-confirmed, same-membership

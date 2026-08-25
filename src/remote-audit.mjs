@@ -1,6 +1,6 @@
 import { RAILS_FILE, REMOTE_AUDIT_REPORT_FILE, STATE_FILE, EXPECTED } from "./constants.mjs";
 import { TmdbClient } from "./tmdb.mjs";
-import { WRITE_SCHEMA_VERSION, adjacentOrderEquivalent, permitsTmdbAdjacentOrderNormalization } from "./sync.mjs";
+import { WRITE_SCHEMA_VERSION, adjacentOrderEquivalent, permitsTmdbAdjacentOrderNormalization, verifyReadback } from "./sync.mjs";
 import { athensDate, fingerprint, mapLimit, readJson, writeJson } from "./utils.mjs";
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -10,12 +10,47 @@ function definitiveNotFound(error) {
 }
 function identities(items) { return items.map((item) => `${item.media_type}:${item.id}`); }
 function equal(a, b) { return a.length === b.length && a.every((value, index) => value === b[index]); }
+function typedItems(values) { return values.map((identity) => { const [media_type, rawId] = identity.split(":"); return { media_type, id: Number(rawId) }; }); }
+
+export function v3EligibilityViolations(items, today) {
+  const invalidItems = [];
+  for (const item of items) {
+    const reasons = [];
+    const date = item.media_type === "tv" ? item.first_air_date : item.release_date;
+    if (!item.poster_path) reasons.push("TMDB_V3_POSTERLESS");
+    if (item.adult === true) reasons.push("TMDB_V3_ADULT");
+    if (item.video === true) reasons.push("TMDB_V3_VIDEO");
+    if (!date) reasons.push("TMDB_V3_UNDATED");
+    else if (date > today) reasons.push("TMDB_V3_FUTURE_DATE");
+    if (reasons.length && ["movie", "tv"].includes(item.media_type)) invalidItems.push({ media_type: item.media_type, id: item.id, reason: reasons.join("+") });
+  }
+  return invalidItems;
+}
+
+export async function rewriteExactOrder(client, listId, expected, { waitImpl = wait } = {}) {
+  await client.clearList(listId);
+  for (let attempt = 0; attempt < 8; attempt++) {
+    if ((await client.listV4All(listId)).results.length === 0) break;
+    if (attempt === 7) throw new Error(`Order-repair clear did not converge for list ${listId}`);
+    await waitImpl(Math.min(30000, 1000 * 2 ** attempt));
+  }
+  await waitImpl(Math.max(1000, Number(process.env.TMDB_ORDER_REPAIR_CLEAR_SETTLE_MS ?? 60000)));
+  for (const item of typedItems(expected)) {
+    await client.addItems(listId, [item]);
+    await waitImpl(Math.max(0, Number(process.env.TMDB_ORDER_REPAIR_ITEM_INTERVAL_MS ?? 100)));
+  }
+  await verifyReadback(client, listId, expected, { attempts: 8, waitImpl });
+  // A second delayed exact read guards against the same post-write reordering
+  // that motivated this repair path.
+  await waitImpl(Math.max(1000, Number(process.env.TMDB_ORDER_REPAIR_STABILITY_MS ?? 15000)));
+  await verifyReadback(client, listId, expected, { attempts: 2, waitImpl });
+}
 
 export async function auditRemoteLists({ execute = false, client = new TmdbClient() } = {}) {
   const [manifest, state] = await Promise.all([readJson(RAILS_FILE), readJson(STATE_FILE)]);
   const rails = manifest.rails.filter((rail) => rail.strategy === "materialized");
   const today = athensDate();
-  const auditRail = async (rail, auditClient = client, { allowOrderNormalization = false } = {}) => {
+  const auditRail = async (rail, auditClient = client, { allowRepairs = false } = {}) => {
     const prior = state.rails[rail.key];
     try {
       if (!prior?.listId) throw new Error("missing managed list ID");
@@ -32,16 +67,25 @@ export async function auditRemoteLists({ execute = false, client = new TmdbClien
         future: items.filter((item) => (item.media_type === "tv" ? item.first_air_date : item.release_date) > today).length,
         undated: items.filter((item) => !(item.media_type === "tv" ? item.first_air_date : item.release_date)).length,
       };
-      if (Object.values(violations).some(Boolean)) return { key: rail.key, listId: prior.listId, status: "failed", violations };
+      const hardViolation = violations.empty || violations.missingMediaType || violations.mixedMedia || violations.duplicates;
+      if (hardViolation) return { key: rail.key, listId: prior.listId, status: "failed", violations };
+      const ineligible = v3EligibilityViolations(items, today);
+      if (ineligible.length) {
+        if (!allowRepairs) return { key: rail.key, listId: prior.listId, status: "failed", error: "v3 eligibility violation requires independent confirmation", violations };
+        if (!equal(expected, actual)) return { key: rail.key, listId: prior.listId, status: "failed", error: "v3 eligibility violation coincided with remote identity/order drift", violations };
+        const rejected = new Set(ineligible.map((item) => `${item.media_type}:${item.id}`));
+        return { key: rail.key, listId: prior.listId, status: "repairable-ineligible", violations, _actual: actual.filter((identity) => !rejected.has(identity)), _invalid: ineligible };
+      }
       if (equal(expected, actual)) return { key: rail.key, listId: prior.listId, status: "valid", count: actual.length };
       const added = actual.filter((identity) => !expected.includes(identity));
       const removed = expected.filter((identity) => !actual.includes(identity));
       const confirmation = identities((await auditClient.listV3All(prior.listId)).items ?? []);
       if (!equal(actual, confirmation)) return { key: rail.key, listId: prior.listId, status: "failed", error: "remote drift did not survive independent confirmation", added, removed };
       if (!added.length && !removed.length) {
-        if (allowOrderNormalization && permitsTmdbAdjacentOrderNormalization(rail) && adjacentOrderEquivalent(expected, actual)) {
+        if (allowRepairs && permitsTmdbAdjacentOrderNormalization(rail) && adjacentOrderEquivalent(expected, actual)) {
           return { key: rail.key, listId: prior.listId, status: "repairable-order-normalization", count: actual.length, _actual: actual };
         }
+        if (allowRepairs) return { key: rail.key, listId: prior.listId, status: "repairable-order-rewrite", count: actual.length };
         return { key: rail.key, listId: prior.listId, status: "failed", error: "unexpected remote order drift", added, removed };
       }
       if (added.length) return { key: rail.key, listId: prior.listId, status: "failed", error: "unexpected remote addition", added, removed };
@@ -64,15 +108,48 @@ export async function auditRemoteLists({ execute = false, client = new TmdbClien
     retryPasses++;
     await wait(Math.max(1000, Number(process.env.NUVIO_REMOTE_AUDIT_RETRY_DELAY_MS ?? 5000)));
     const retryClient = new TmdbClient({ readToken: client.readToken, userToken: client.userToken, language: client.language, fetchImpl: client.fetchImpl });
-    const retried = await mapLimit(failedIndexes, Math.min(8, failedIndexes.length), (index) => auditRail(rails[index], retryClient, { allowOrderNormalization: attempt === maxRetries - 1 }));
+    const retried = await mapLimit(failedIndexes, Math.min(8, failedIndexes.length), (index) => auditRail(rails[index], retryClient, { allowRepairs: attempt === maxRetries - 1 }));
     for (let i = 0; i < failedIndexes.length; i++) results[failedIndexes[i]] = retried[i];
   }
-  const failed = results.filter((item) => item.status === "failed");
+  let failed = results.filter((item) => item.status === "failed");
   const repairableDeleted = results.filter((item) => item.status === "repairable-deleted");
   const repairableOrder = results.filter((item) => item.status === "repairable-order-normalization");
+  const repairableIneligible = results.filter((item) => item.status === "repairable-ineligible");
+  const repairableOrderRewrite = results.filter((item) => item.status === "repairable-order-rewrite");
+  const orderRewriteAttempts = repairableOrderRewrite.length;
+  if (execute && !failed.length && repairableIneligible.length) {
+    const repaired = await mapLimit(repairableIneligible, 4, async (item) => {
+      try {
+        await client.removeItems(item.listId, item._invalid);
+        await verifyReadback(client, item.listId, item._actual);
+        return { key: item.key, listId: item.listId, status: "valid", count: item._actual.length, _repairedIneligible: item };
+      } catch (error) { return { key: item.key, listId: item.listId, status: "failed", error: `v3 eligibility repair failed: ${error.message}` }; }
+    });
+    for (const repairedItem of repaired) results[results.findIndex((item) => item.key === repairedItem.key)] = repairedItem;
+    failed = results.filter((item) => item.status === "failed");
+  }
+  if (execute && !failed.length && repairableOrderRewrite.length) {
+    const rewritten = await mapLimit(repairableOrderRewrite, 3, async (item) => {
+      try {
+        await rewriteExactOrder(client, item.listId, state.rails[item.key].orderedIds);
+        return { key: item.key, listId: item.listId, status: "valid", count: state.rails[item.key].orderedIds.length, _orderRewritten: true };
+      } catch (error) { return { key: item.key, listId: item.listId, status: "failed", error: `exact order rewrite failed: ${error.message}` }; }
+    });
+    for (const rewrittenItem of rewritten) results[results.findIndex((item) => item.key === rewrittenItem.key)] = rewrittenItem;
+    failed = results.filter((item) => item.status === "failed");
+  }
   const repairable = [...repairableDeleted, ...repairableOrder];
   if (execute && !failed.length) {
     const excludedAt = new Date().toISOString();
+    for (const item of results.filter((value) => value._repairedIneligible)) {
+      const repair = item._repairedIneligible, prior = state.rails[item.key];
+      const quarantined = repair._invalid.map((invalid) => ({ ...invalid, excludedAt }));
+      const invalidItems = [...(prior.invalidItems ?? []), ...quarantined].filter((value, index, all) => all.findIndex((candidate) => candidate.media_type === value.media_type && candidate.id === value.id) === index);
+      state.rails[item.key] = { ...prior, orderedIds: repair._actual, count: repair._actual.length, fingerprint: fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids: repair._actual }), invalidItems, syncStatus: "verified", lastVerified: excludedAt, tmdbV3EligibilityRepairedAt: excludedAt };
+    }
+    for (const item of results.filter((value) => value._orderRewritten)) {
+      state.rails[item.key] = { ...state.rails[item.key], syncStatus: "verified", lastVerified: excludedAt, tmdbOrderRewrittenAt: excludedAt };
+    }
     for (const item of repairable) {
       const prior = state.rails[item.key];
       if (item.status === "repairable-order-normalization") {
@@ -83,10 +160,10 @@ export async function auditRemoteLists({ execute = false, client = new TmdbClien
       const invalidItems = [...(prior.invalidItems ?? []), ...quarantined].filter((value, index, all) => all.findIndex((candidate) => candidate.media_type === value.media_type && candidate.id === value.id) === index);
       state.rails[item.key] = { ...prior, orderedIds: item._actual, count: item._actual.length, fingerprint: fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids: item._actual }), writeSchema: WRITE_SCHEMA_VERSION, invalidItems, syncStatus: "verified", lastVerified: excludedAt };
     }
-    if (repairable.length) await writeJson(STATE_FILE, state);
+    if (repairable.length || repairableIneligible.length || orderRewriteAttempts) await writeJson(STATE_FILE, state);
   }
   const reportResults = results.filter((item) => item.status !== "valid").map((item) => Object.fromEntries(Object.entries(item).filter(([key]) => !key.startsWith("_"))));
-  const report = { version: 1, date: today, mode: execute ? "execute" : "dry-run", totals: { considered: results.length, valid: results.filter((item) => item.status === "valid").length, initialFailed, recoveredAfterRetry: initialFailed - failed.length - repairable.length, retryPasses, repairedDeleted: execute && !failed.length ? repairableDeleted.length : 0, repairableDeleted: repairableDeleted.length, repairedOrderNormalizations: execute && !failed.length ? repairableOrder.length : 0, repairableOrderNormalizations: repairableOrder.length, failed: failed.length }, results: reportResults };
+  const report = { version: 1, date: today, mode: execute ? "execute" : "dry-run", totals: { considered: results.length, valid: results.filter((item) => item.status === "valid").length, initialFailed, recoveredAfterRetry: initialFailed - failed.length - repairable.length - (execute ? 0 : repairableIneligible.length + repairableOrderRewrite.length), retryPasses, repairedDeleted: execute && !failed.length ? repairableDeleted.length : 0, repairableDeleted: repairableDeleted.length, repairedIneligible: execute && !failed.length ? repairableIneligible.length : 0, repairableIneligible: repairableIneligible.length, repairedOrderRewrites: execute && !failed.length ? orderRewriteAttempts : 0, repairableOrderRewrites: orderRewriteAttempts, repairedOrderNormalizations: execute && !failed.length ? repairableOrder.length : 0, repairableOrderNormalizations: repairableOrder.length, failed: failed.length }, results: reportResults };
   await writeJson(REMOTE_AUDIT_REPORT_FILE, report);
   if (results.length !== EXPECTED.materialized || failed.length) throw new Error(`Remote audit failed closed: considered=${results.length}, failed=${failed.length}; see ${REMOTE_AUDIT_REPORT_FILE}`);
   return report;

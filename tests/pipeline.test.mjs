@@ -7,6 +7,7 @@ import { compile } from "../src/compiler.mjs";
 import { runtimeBucket, dailyRuntimeSelection, chooseAvailability, materializeRail, applySemanticPredicates, applyContentSafetyPredicates, discoverParams, streamingRecognitionFloor, EXPLICIT_CONTENT_KEYWORD_IDS, isSubstantiveCastCredit, isFeatureFilm, requireEligibleReleasedItems, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
 import { adjacentOrderEquivalent, confirmationCompatible, normalizeCandidateItems, orderedIdsEqual, permitsTmdbAdjacentOrderNormalization, reconcileWithReadbackRecovery, semanticRefreshDue, verifyReadback } from "../src/sync.mjs";
+import { rewriteExactOrder, v3EligibilityViolations } from "../src/remote-audit.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS, CATALOG_REMOVED_RAIL_REASONS, COUNTRY_BY_FOLDER } from "../src/constants.mjs";
 import { readJson, fingerprint, dedupeLikelyDuplicateWorks } from "../src/utils.mjs";
 import { assertNuvioMediaTypeContract, emulateNuvio083MediaType } from "../src/media-contract.mjs";
@@ -289,6 +290,29 @@ test("read-back recovery remains fail-closed after its single bounded rebuild", 
   );
 });
 
+test("remote order repair inserts every typed identity sequentially and verifies twice", async () => {
+  const events = [];
+  const expected = ["movie:1", "movie:2", "movie:3"];
+  const client = {
+    clearList: async () => { events.push("clear"); },
+    listV4All: async () => ({ results: [] }),
+    addItems: async (_listId, items) => { events.push(`${items[0].media_type}:${items[0].id}`); },
+    listV3All: async () => ({ items: expected.map((identity) => { const [media_type, id] = identity.split(":"); return { media_type, id: Number(id) }; }) }),
+  };
+  await rewriteExactOrder(client, 11, expected, { waitImpl: async () => {} });
+  assert.deepEqual(events, ["clear", ...expected]);
+});
+
+test("Nuvio-facing v3 eligibility rejects postponed, posterless and explicit items", () => {
+  const invalid = v3EligibilityViolations([
+    { id: 1, media_type: "movie", release_date: "2026-09-17", poster_path: "/p.jpg", adult: false, video: false },
+    { id: 2, media_type: "tv", first_air_date: "2026-08-01", poster_path: null, adult: false },
+    { id: 3, media_type: "movie", release_date: "2026-08-01", poster_path: "/p.jpg", adult: true, video: false },
+    { id: 4, media_type: "movie", release_date: "2026-08-01", poster_path: "/p.jpg", adult: false, video: false },
+  ], "2026-08-25");
+  assert.deepEqual(invalid.map((item) => `${item.media_type}:${item.id}:${item.reason}`), ["movie:1:TMDB_V3_FUTURE_DATE", "tv:2:TMDB_V3_POSTERLESS", "movie:3:TMDB_V3_ADULT"]);
+});
+
 test("TMDB adjacent order normalization is bounded to person Top rails", () => {
   assert.equal(adjacentOrderEquivalent(["movie:1", "movie:2", "movie:3"], ["movie:2", "movie:1", "movie:3"]), true);
   assert.equal(adjacentOrderEquivalent(["movie:1", "movie:2", "movie:3"], ["movie:3", "movie:2", "movie:1"]), false);
@@ -355,6 +379,8 @@ test("workflow has one native Europe/Athens schedule", async () => {
   assert.ok(workflow.indexOf("name: Checkpoint sync progress") < workflow.indexOf("name: Exact remote audit"));
   assert.match(workflow, /name: Execute sync\s+id: execute_sync/);
   assert.match(workflow, /name: Checkpoint sync progress\s+if: always\(\) && steps\.execute_sync\.outcome != 'skipped' && \(github\.event_name == 'schedule' \|\| !inputs\.dry_run\)/);
+  assert.match(workflow, /name: Exact remote audit and deleted-ID reconciliation\s+id: remote_audit/);
+  assert.match(workflow, /name: Upload remote audit report\s+if: always\(\) && steps\.remote_audit\.outcome != 'skipped'/);
 });
 
 test("provider trending widens from official day to week only when day is empty everywhere", async () => {
@@ -610,6 +636,18 @@ test("TMDB list invalid-media responses expose typed quarantine identities", asy
   await assert.rejects(client.addItems(99, [{ id: 1, media_type: "movie" }, { id: 2, media_type: "movie" }, { id: 3, media_type: "movie" }]), (error) => {
     assert.deepEqual(error.invalidItems, [{ id: 2, media_type: "movie", reason: "TMDB_LIST_MEDIA_INVALID" }, { id: 3, media_type: "movie", reason: "TMDB_LIST_MEDIA_REQUIRED" }]); return true;
   });
+});
+
+test("TMDB list removal requires a success result for every typed identity", async () => {
+  let request;
+  const client = new TmdbClient({ readToken: "test", userToken: "user", fetchImpl: async (url, options) => {
+    request = { url: String(url), method: options.method, body: JSON.parse(options.body) };
+    return new Response(JSON.stringify({ results: [{ media_id: 7, media_type: "movie", success: true }] }), { status: 200 });
+  } });
+  await client.removeItems(99, [{ id: 7, media_type: "movie" }]);
+  assert.equal(request.method, "DELETE");
+  assert.match(request.url, /\/4\/list\/99\/items$/);
+  assert.deepEqual(request.body, { items: [{ media_type: "movie", media_id: 7 }] });
 });
 
 test("person credits are coalesced across sibling rails", async () => {

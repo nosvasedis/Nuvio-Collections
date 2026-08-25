@@ -44,6 +44,9 @@ jobs:
       TMDB_CLEAR_RECOVERY_SETTLE_MS: "45000"
       NUVIO_INITIAL_READBACK_ATTEMPTS: "4"
       NUVIO_RECOVERY_READBACK_ATTEMPTS: "8"
+      TMDB_ORDER_REPAIR_CLEAR_SETTLE_MS: "60000"
+      TMDB_ORDER_REPAIR_ITEM_INTERVAL_MS: "100"
+      TMDB_ORDER_REPAIR_STABILITY_MS: "15000"
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -68,6 +71,7 @@ jobs:
           git diff --cached --quiet || git commit -m "chore: checkpoint Nuvio TMDB sync"
           git push
       - name: Exact remote audit and deleted-ID reconciliation
+        id: remote_audit
         if: github.event_name == 'schedule' || !inputs.dry_run
         run: npm run audit:remote:repair
       - name: Compile and production audit
@@ -88,4 +92,11 @@ jobs:
         with:
           name: nuvio-sync-report-${{ github.run_id }}
           path: reports/latest.json
+          if-no-files-found: warn
+      - name: Upload remote audit report
+        if: always() && steps.remote_audit.outcome != 'skipped'
+        uses: actions/upload-artifact@v7
+        with:
+          name: nuvio-remote-audit-${{ github.run_id }}
+          path: reports/remote-audit.json
           if-no-files-found: warn
