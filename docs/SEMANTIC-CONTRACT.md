@@ -302,9 +302,16 @@ dynamic curated merge/order tests, and the Warner media-specific company split.
 - Interrupted-run recovery also compares the generated ordered IDs with the
   existing remote list before any clear/add. If TMDB already contains the exact
   candidate, exact v3 read-back restores the checkpoint without another write.
-- The hosted workflow pushes the successfully exact-read-backed sync checkpoint
-  before the independent remote audit. A later audit failure therefore cannot
-  leave the repository one day behind already-committed TMDB writes.
+- TMDB list clearing is asynchronous even after its read edge reports zero
+  items. If that background clear removes part of a newly accepted write, sync
+  performs one bounded rebuild of that list after a longer quiescence window
+  and again requires exact v3 ordered read-back. A second mismatch still fails
+  closed; partial membership or broad order drift is never accepted.
+- The hosted workflow checkpoints per-rail sync progress even when another rail
+  fails later in the run. A retry therefore resumes verified writes in place
+  and touches only failed/pending rails. The checkpoint is pushed before the
+  independent remote audit, so a later audit failure cannot leave the
+  repository one day behind already-committed TMDB writes.
 - Remote audit retries only its failed subset with a fresh client and bounded
   settling. A repeated mismatch still fails closed; valid rails are never read
   again during retry passes.

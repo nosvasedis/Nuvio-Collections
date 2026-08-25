@@ -41,6 +41,9 @@ jobs:
       TMDB_CREATE_INTERVAL_MS: "2500"
       TMDB_SPAM_COOLDOWN_MS: "60000"
       TMDB_CLEAR_SETTLE_MS: "10000"
+      TMDB_CLEAR_RECOVERY_SETTLE_MS: "45000"
+      NUVIO_INITIAL_READBACK_ATTEMPTS: "4"
+      NUVIO_RECOVERY_READBACK_ATTEMPTS: "8"
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -52,10 +55,11 @@ jobs:
         if: github.event_name == 'workflow_dispatch' && inputs.dry_run
         run: npm run sync:dry
       - name: Execute sync
+        id: execute_sync
         if: github.event_name == 'schedule' || !inputs.dry_run
         run: npm run sync
-      - name: Checkpoint successful sync state
-        if: github.event_name == 'schedule' || !inputs.dry_run
+      - name: Checkpoint sync progress
+        if: always() && steps.execute_sync.outcome != 'skipped' && (github.event_name == 'schedule' || !inputs.dry_run)
         shell: bash
         run: |
           git config user.name "nuvio-collections-bot"

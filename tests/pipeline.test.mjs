@@ -6,7 +6,7 @@ import { auditRepository } from "../src/validate.mjs";
 import { compile } from "../src/compiler.mjs";
 import { runtimeBucket, dailyRuntimeSelection, chooseAvailability, materializeRail, applySemanticPredicates, applyContentSafetyPredicates, discoverParams, streamingRecognitionFloor, EXPLICIT_CONTENT_KEYWORD_IDS, isSubstantiveCastCredit, isFeatureFilm, requireEligibleReleasedItems, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
-import { adjacentOrderEquivalent, confirmationCompatible, normalizeCandidateItems, orderedIdsEqual, permitsTmdbAdjacentOrderNormalization, semanticRefreshDue, verifyReadback } from "../src/sync.mjs";
+import { adjacentOrderEquivalent, confirmationCompatible, normalizeCandidateItems, orderedIdsEqual, permitsTmdbAdjacentOrderNormalization, reconcileWithReadbackRecovery, semanticRefreshDue, verifyReadback } from "../src/sync.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS, CATALOG_REMOVED_RAIL_REASONS, COUNTRY_BY_FOLDER } from "../src/constants.mjs";
 import { readJson, fingerprint, dedupeLikelyDuplicateWorks } from "../src/utils.mjs";
 import { assertNuvioMediaTypeContract, emulateNuvio083MediaType } from "../src/media-contract.mjs";
@@ -260,6 +260,35 @@ test("exact read-back retries transient order drift and still rejects missing me
   await assert.rejects(verifyReadback({ listV3All: async () => ({ items: [{ id: 1 }] }) }, 8, ["movie:1"], { attempts: 1 }), /missing media_type/);
 });
 
+test("partial read-back caused by asynchronous clear receives one exact rebuilding pass", async () => {
+  const writes = [];
+  let clears = 0;
+  let reads = 0;
+  const client = {
+    clearList: async () => { clears++; },
+    listV4All: async () => ({ results: [] }),
+    addItems: async (_listId, items) => { writes.push(items.map((item) => `${item.media_type}:${item.id}`)); },
+    listV3All: async () => ({ items: reads++ < 4 ? [] : [{ id: 1, media_type: "movie" }, { id: 2, media_type: "movie" }] }),
+  };
+  await reconcileWithReadbackRecovery(client, 9, [{ id: 1, media_type: "movie" }, { id: 2, media_type: "movie" }], [], { waitImpl: async () => {} });
+  assert.equal(clears, 2);
+  assert.deepEqual(writes, [["movie:1", "movie:2"], ["movie:1", "movie:2"]]);
+  assert.equal(reads, 5);
+});
+
+test("read-back recovery remains fail-closed after its single bounded rebuild", async () => {
+  const client = {
+    clearList: async () => {},
+    listV4All: async () => ({ results: [] }),
+    addItems: async () => {},
+    listV3All: async () => ({ items: [] }),
+  };
+  await assert.rejects(
+    reconcileWithReadbackRecovery(client, 10, [{ id: 1, media_type: "movie" }], [], { waitImpl: async () => {} }),
+    (error) => error.code === "TMDB_READBACK_MISMATCH" && error.expectedCount === 1 && error.actualCount === 0,
+  );
+});
+
 test("TMDB adjacent order normalization is bounded to person Top rails", () => {
   assert.equal(adjacentOrderEquivalent(["movie:1", "movie:2", "movie:3"], ["movie:2", "movie:1", "movie:3"]), true);
   assert.equal(adjacentOrderEquivalent(["movie:1", "movie:2", "movie:3"], ["movie:3", "movie:2", "movie:1"]), false);
@@ -322,8 +351,10 @@ test("workflow has one native Europe/Athens schedule", async () => {
   assert.match(workflow, /timezone:\s*["']Europe\/Athens["']/);
   assert.doesNotMatch(workflow, /schedule-guard|7 1 \* \* \*|7 2 \* \* \*/);
   assert.match(workflow, /name: Dry run\s+if: github\.event_name == 'workflow_dispatch' && inputs\.dry_run/);
-  assert.ok(workflow.indexOf("name: Checkpoint successful sync state") > workflow.indexOf("name: Execute sync"));
-  assert.ok(workflow.indexOf("name: Checkpoint successful sync state") < workflow.indexOf("name: Exact remote audit"));
+  assert.ok(workflow.indexOf("name: Checkpoint sync progress") > workflow.indexOf("name: Execute sync"));
+  assert.ok(workflow.indexOf("name: Checkpoint sync progress") < workflow.indexOf("name: Exact remote audit"));
+  assert.match(workflow, /name: Execute sync\s+id: execute_sync/);
+  assert.match(workflow, /name: Checkpoint sync progress\s+if: always\(\) && steps\.execute_sync\.outcome != 'skipped' && \(github\.event_name == 'schedule' \|\| !inputs\.dry_run\)/);
 });
 
 test("provider trending widens from official day to week only when day is empty everywhere", async () => {

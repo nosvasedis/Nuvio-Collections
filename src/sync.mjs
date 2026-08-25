@@ -45,35 +45,75 @@ function managedKey(value) { return String(value ?? "").match(/(?:^| • )key ([
 function publicListName(rail, folderTitle) { return `${folderTitle} — ${rail.title}`.slice(0, 100); }
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+export class ReadbackMismatchError extends Error {
+  constructor(listId, expected, actual) {
+    let firstDifference = 0;
+    while (firstDifference < expected.length && firstDifference < actual.length && expected[firstDifference] === actual[firstDifference]) firstDifference++;
+    super(`Read-back mismatch after eventual-consistency polling for list ${listId}: expected ${expected.length}, received ${actual.length}, first difference ${firstDifference}`);
+    this.name = "ReadbackMismatchError";
+    this.code = "TMDB_READBACK_MISMATCH";
+    this.listId = listId;
+    this.expectedCount = expected.length;
+    this.actualCount = actual.length;
+    this.firstDifference = firstDifference;
+  }
+}
+
 export async function verifyReadback(client, listId, expected, { attempts = 8, waitImpl = wait } = {}) {
+  let actual = [];
   for (let attempt = 0; attempt < attempts; attempt++) {
     const readback = await client.listV3All(listId);
     const readbackItems = readback.items ?? [];
     if (readbackItems.some((item) => !["movie", "tv"].includes(item.media_type))) throw new Error(`Typed v3 read-back missing media_type for list ${listId}`);
-    const actual = readbackItems.map((item) => `${item.media_type}:${item.id}`);
+    actual = readbackItems.map((item) => `${item.media_type}:${item.id}`);
     if (orderedIdsEqual(expected, actual)) return;
     if (attempt < attempts - 1) await waitImpl(Math.min(30000, 1000 * 2 ** attempt));
   }
-  throw new Error(`Read-back mismatch after eventual-consistency polling for list ${listId}`);
+  throw new ReadbackMismatchError(listId, expected, actual);
 }
 
-async function reconcile(client, listId, items, oldItems, { knownEmpty = false } = {}) {
+async function reconcile(client, listId, items, oldItems, { knownEmpty = false, clearSettleMs = Number(process.env.TMDB_CLEAR_SETTLE_MS ?? 10000), readbackAttempts = 8, waitImpl = wait } = {}) {
   const clearAndConfirm = async () => {
     await client.clearList(listId);
     for (let attempt = 0; attempt < 8; attempt++) {
       if ((await client.listV4All(listId)).results.length === 0) {
         // The read edge can report empty before the list-write backend releases
         // old item identities/order slots. Allow the clear to settle before add.
-        await wait(Math.max(1000, Number(process.env.TMDB_CLEAR_SETTLE_MS ?? 10000)));
+        await waitImpl(Math.max(1000, clearSettleMs));
         return;
       }
-      if (attempt < 7) await wait(Math.min(30000, 1000 * 2 ** attempt));
+      if (attempt < 7) await waitImpl(Math.min(30000, 1000 * 2 ** attempt));
     }
     throw new Error(`Clear did not converge for list ${listId}`);
   };
   try { if (!knownEmpty) await clearAndConfirm(); await client.addItems(listId, items); }
   catch (error) { try { await clearAndConfirm(); await client.addItems(listId, oldItems); } catch (rollback) { error.message += `; ROLLBACK FAILED: ${rollback.message}`; } throw error; }
-  await verifyReadback(client, listId, itemIds(items));
+  await verifyReadback(client, listId, itemIds(items), { attempts: readbackAttempts, waitImpl });
+}
+
+export async function reconcileWithReadbackRecovery(client, listId, items, oldItems, { knownEmpty = false, waitImpl = wait } = {}) {
+  try {
+    // Most writes settle promptly. Keep the fast path short so a background
+    // clear cannot consume 90 seconds of identical partial read-backs.
+    await reconcile(client, listId, items, oldItems, {
+      knownEmpty,
+      readbackAttempts: Math.max(1, Number(process.env.NUVIO_INITIAL_READBACK_ATTEMPTS ?? 4)),
+      waitImpl,
+    });
+  } catch (error) {
+    if (error.code !== "TMDB_READBACK_MISMATCH") throw error;
+    // TMDB's clear endpoint can report an empty list before its asynchronous
+    // deletion has finished. In that race, the still-running clear removes
+    // some or all of the newly accepted items. Rebuild only the affected list
+    // after a longer quiescence window, then require the same exact v3 order.
+    console.error(`[sync] list ${listId} remained partial after its first write (${error.actualCount}/${error.expectedCount}); rebuilding after clear quiescence`);
+    await reconcile(client, listId, items, oldItems, {
+      knownEmpty: false,
+      clearSettleMs: Math.max(1000, Number(process.env.TMDB_CLEAR_RECOVERY_SETTLE_MS ?? 45000)),
+      readbackAttempts: Math.max(1, Number(process.env.NUVIO_RECOVERY_READBACK_ATTEMPTS ?? 8)),
+      waitImpl,
+    });
+  }
 }
 
 export async function sync({ execute = false, force = false, client = new TmdbClient() } = {}) {
@@ -267,7 +307,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
           await checkpointState();
           return { ...entry, status: "unchanged", checkpointRefresh: true, remoteResume: true };
         }
-        try { await reconcile(client, entry.listId, entry._candidate.items, oldItems, { knownEmpty: Boolean(entry.createdList) }); }
+        try { await reconcileWithReadbackRecovery(client, entry.listId, entry._candidate.items, oldItems, { knownEmpty: Boolean(entry.createdList) }); }
         catch (error) {
           if (!error.invalidItems?.length) throw error;
           const invalidAt = new Date().toISOString();
@@ -277,7 +317,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
           entry._candidate.items = entry._candidate.items.filter((item) => !rejected.has(`${item.media_type}:${item.id}`));
           entry._ids = itemIds(entry._candidate.items, entry._media); entry.count = entry._ids.length;
           entry._hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids: entry._ids });
-          await reconcile(client, entry.listId, entry._candidate.items, oldItems);
+          await reconcileWithReadbackRecovery(client, entry.listId, entry._candidate.items, oldItems);
         }
         state.rails[entry.key] = { listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, writeSchema: WRITE_SCHEMA_VERSION, ineligibleExcluded: entry.ineligibleExcluded, posterlessExcluded: entry.posterlessExcluded, syncStatus: "verified", lastVerified: new Date().toISOString(), invalidItems: entry._invalidItems ?? [], ...(entry._semanticRefreshedAt ? { lastSemanticRefresh: entry._semanticRefreshedAt } : {}) };
         await checkpointState();
@@ -288,7 +328,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
         state.rails[entry.key] = { ...(state.rails[entry.key] ?? {}), listId: entry.listId, syncStatus: "failed", lastError: error.message, lastAttempt: new Date().toISOString() };
         await checkpointState();
         console.error(`[sync] FAILED ${entry.key}: ${error.message}`);
-        return { key: entry.key, listId: entry.listId, status: "failed", error: error.message };
+        return { key: entry.key, listId: entry.listId, status: "failed", error: error.message, ...(error.code === "TMDB_READBACK_MISMATCH" ? { expectedCount: error.expectedCount, actualCount: error.actualCount, firstDifference: error.firstDifference } : {}) };
       }
     });
   }
