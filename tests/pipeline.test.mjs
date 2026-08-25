@@ -7,7 +7,7 @@ import { compile } from "../src/compiler.mjs";
 import { runtimeBucket, dailyRuntimeSelection, chooseAvailability, materializeRail, applySemanticPredicates, applyContentSafetyPredicates, discoverParams, streamingRecognitionFloor, EXPLICIT_CONTENT_KEYWORD_IDS, isSubstantiveCastCredit, isFeatureFilm, requireEligibleReleasedItems, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
 import { adjacentOrderEquivalent, confirmationCompatible, normalizeCandidateItems, orderedIdsEqual, permitsTmdbAdjacentOrderNormalization, reconcileWithReadbackRecovery, semanticRefreshDue, verifyReadback } from "../src/sync.mjs";
-import { rewriteExactOrder, v3EligibilityViolations } from "../src/remote-audit.mjs";
+import { boundedOrderEquivalent, rewriteExactOrder, v3EligibilityViolations } from "../src/remote-audit.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS, CATALOG_REMOVED_RAIL_REASONS, COUNTRY_BY_FOLDER } from "../src/constants.mjs";
 import { readJson, fingerprint, dedupeLikelyDuplicateWorks } from "../src/utils.mjs";
 import { assertNuvioMediaTypeContract, emulateNuvio083MediaType } from "../src/media-contract.mjs";
@@ -290,17 +290,21 @@ test("read-back recovery remains fail-closed after its single bounded rebuild", 
   );
 });
 
-test("remote order repair inserts every typed identity sequentially and verifies twice", async () => {
+test("remote order repair uses one ordered batch and returns a bounded settled order", async () => {
   const events = [];
   const expected = ["movie:1", "movie:2", "movie:3"];
+  let reads = 0;
   const client = {
     clearList: async () => { events.push("clear"); },
     listV4All: async () => ({ results: [] }),
-    addItems: async (_listId, items) => { events.push(`${items[0].media_type}:${items[0].id}`); },
-    listV3All: async () => ({ items: expected.map((identity) => { const [media_type, id] = identity.split(":"); return { media_type, id: Number(id) }; }) }),
+    addItems: async (_listId, items) => { events.push(items.map((item) => `${item.media_type}:${item.id}`)); },
+    listV3All: async () => ({ items: (reads++ ? ["movie:2", "movie:1", "movie:3"] : expected).map((identity) => { const [media_type, id] = identity.split(":"); return { media_type, id: Number(id) }; }) }),
   };
-  await rewriteExactOrder(client, 11, expected, { waitImpl: async () => {} });
-  assert.deepEqual(events, ["clear", ...expected]);
+  assert.deepEqual(await rewriteExactOrder(client, 11, expected, { waitImpl: async () => {} }), ["movie:2", "movie:1", "movie:3"]);
+  assert.deepEqual(events, ["clear", expected]);
+  assert.equal(boundedOrderEquivalent(expected, ["movie:3", "movie:2", "movie:1"]), false);
+  assert.equal(boundedOrderEquivalent(["movie:1", "movie:2", "movie:3", "movie:4"], ["movie:2", "movie:1", "movie:3", "movie:4"]), true);
+  assert.equal(boundedOrderEquivalent(expected, ["movie:1", "movie:4", "movie:3"]), false);
 });
 
 test("Nuvio-facing v3 eligibility rejects postponed, posterless and explicit items", () => {
@@ -381,6 +385,7 @@ test("workflow has one native Europe/Athens schedule", async () => {
   assert.match(workflow, /name: Checkpoint sync progress\s+if: always\(\) && steps\.execute_sync\.outcome != 'skipped' && \(github\.event_name == 'schedule' \|\| !inputs\.dry_run\)/);
   assert.match(workflow, /name: Exact remote audit and deleted-ID reconciliation\s+id: remote_audit/);
   assert.match(workflow, /name: Upload remote audit report\s+if: always\(\) && steps\.remote_audit\.outcome != 'skipped'/);
+  assert.match(workflow, /name: Checkpoint remote audit progress\s+if: always\(\) && steps\.remote_audit\.outcome != 'skipped'/);
 });
 
 test("provider trending widens from official day to week only when day is empty everywhere", async () => {

@@ -11,6 +11,12 @@ function definitiveNotFound(error) {
 function identities(items) { return items.map((item) => `${item.media_type}:${item.id}`); }
 function equal(a, b) { return a.length === b.length && a.every((value, index) => value === b[index]); }
 function typedItems(values) { return values.map((identity) => { const [media_type, rawId] = identity.split(":"); return { media_type, id: Number(rawId) }; }); }
+export function boundedOrderEquivalent(expected, actual, maximumDisplacement = 3) {
+  if (expected.length !== actual.length || new Set(expected).size !== expected.length || new Set(actual).size !== actual.length) return false;
+  const allowedDisplacement = Math.min(maximumDisplacement, Math.max(1, Math.ceil(expected.length * 0.1)));
+  const positions = new Map(actual.map((identity, index) => [identity, index]));
+  return expected.every((identity, index) => positions.has(identity) && Math.abs(positions.get(identity) - index) <= allowedDisplacement);
+}
 
 export function v3EligibilityViolations(items, today) {
   const invalidItems = [];
@@ -35,15 +41,20 @@ export async function rewriteExactOrder(client, listId, expected, { waitImpl = w
     await waitImpl(Math.min(30000, 1000 * 2 ** attempt));
   }
   await waitImpl(Math.max(1000, Number(process.env.TMDB_ORDER_REPAIR_CLEAR_SETTLE_MS ?? 60000)));
-  for (const item of typedItems(expected)) {
-    await client.addItems(listId, [item]);
-    await waitImpl(Math.max(0, Number(process.env.TMDB_ORDER_REPAIR_ITEM_INTERVAL_MS ?? 100)));
-  }
+  // One ordered bulk insertion is the closest operation TMDB exposes to
+  // custom positioning. Per-item insertion is also asynchronously reordered
+  // by the backend and produced substantially worse drift in production.
+  await client.addItems(listId, typedItems(expected));
   await verifyReadback(client, listId, expected, { attempts: 8, waitImpl });
-  // A second delayed exact read guards against the same post-write reordering
-  // that motivated this repair path.
-  await waitImpl(Math.max(1000, Number(process.env.TMDB_ORDER_REPAIR_STABILITY_MS ?? 15000)));
-  await verifyReadback(client, listId, expected, { attempts: 2, waitImpl });
+  // TMDB may settle into a slightly different original_order after an exact
+  // immediate read-back. Preserve membership strictly and accept only the
+  // documented bounded displacement after a long delayed confirmation.
+  await waitImpl(Math.max(1000, Number(process.env.TMDB_ORDER_REPAIR_STABILITY_MS ?? 60000)));
+  const settledItems = (await client.listV3All(listId)).items ?? [];
+  if (settledItems.some((item) => !["movie", "tv"].includes(item.media_type))) throw new Error(`Typed v3 order-repair read-back missing media_type for list ${listId}`);
+  const settled = identities(settledItems);
+  if (!equal(expected, settled) && !boundedOrderEquivalent(expected, settled)) throw new Error(`Order repair did not settle within bounded displacement for list ${listId}`);
+  return settled;
 }
 
 export async function auditRemoteLists({ execute = false, client = new TmdbClient() } = {}) {
@@ -131,15 +142,15 @@ export async function auditRemoteLists({ execute = false, client = new TmdbClien
   if (execute && !failed.length && repairableOrderRewrite.length) {
     const rewritten = await mapLimit(repairableOrderRewrite, 3, async (item) => {
       try {
-        await rewriteExactOrder(client, item.listId, state.rails[item.key].orderedIds);
-        return { key: item.key, listId: item.listId, status: "valid", count: state.rails[item.key].orderedIds.length, _orderRewritten: true };
+        const settled = await rewriteExactOrder(client, item.listId, state.rails[item.key].orderedIds);
+        return { key: item.key, listId: item.listId, status: "valid", count: settled.length, _actual: settled, _orderRewritten: true };
       } catch (error) { return { key: item.key, listId: item.listId, status: "failed", error: `exact order rewrite failed: ${error.message}` }; }
     });
     for (const rewrittenItem of rewritten) results[results.findIndex((item) => item.key === rewrittenItem.key)] = rewrittenItem;
     failed = results.filter((item) => item.status === "failed");
   }
   const repairable = [...repairableDeleted, ...repairableOrder];
-  if (execute && !failed.length) {
+  if (execute) {
     const excludedAt = new Date().toISOString();
     for (const item of results.filter((value) => value._repairedIneligible)) {
       const repair = item._repairedIneligible, prior = state.rails[item.key];
@@ -148,7 +159,8 @@ export async function auditRemoteLists({ execute = false, client = new TmdbClien
       state.rails[item.key] = { ...prior, orderedIds: repair._actual, count: repair._actual.length, fingerprint: fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids: repair._actual }), invalidItems, syncStatus: "verified", lastVerified: excludedAt, tmdbV3EligibilityRepairedAt: excludedAt };
     }
     for (const item of results.filter((value) => value._orderRewritten)) {
-      state.rails[item.key] = { ...state.rails[item.key], syncStatus: "verified", lastVerified: excludedAt, tmdbOrderRewrittenAt: excludedAt };
+      const prior = state.rails[item.key], normalized = !equal(prior.orderedIds, item._actual);
+      state.rails[item.key] = { ...prior, orderedIds: item._actual, count: item._actual.length, fingerprint: fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids: item._actual }), syncStatus: "verified", lastVerified: excludedAt, tmdbOrderRewrittenAt: excludedAt, ...(normalized ? { tmdbOrderNormalizedAt: excludedAt } : {}) };
     }
     for (const item of repairable) {
       const prior = state.rails[item.key];
@@ -163,7 +175,7 @@ export async function auditRemoteLists({ execute = false, client = new TmdbClien
     if (repairable.length || repairableIneligible.length || orderRewriteAttempts) await writeJson(STATE_FILE, state);
   }
   const reportResults = results.filter((item) => item.status !== "valid").map((item) => Object.fromEntries(Object.entries(item).filter(([key]) => !key.startsWith("_"))));
-  const report = { version: 1, date: today, mode: execute ? "execute" : "dry-run", totals: { considered: results.length, valid: results.filter((item) => item.status === "valid").length, initialFailed, recoveredAfterRetry: initialFailed - failed.length - repairable.length - (execute ? 0 : repairableIneligible.length + repairableOrderRewrite.length), retryPasses, repairedDeleted: execute && !failed.length ? repairableDeleted.length : 0, repairableDeleted: repairableDeleted.length, repairedIneligible: execute && !failed.length ? repairableIneligible.length : 0, repairableIneligible: repairableIneligible.length, repairedOrderRewrites: execute && !failed.length ? orderRewriteAttempts : 0, repairableOrderRewrites: orderRewriteAttempts, repairedOrderNormalizations: execute && !failed.length ? repairableOrder.length : 0, repairableOrderNormalizations: repairableOrder.length, failed: failed.length }, results: reportResults };
+  const report = { version: 1, date: today, mode: execute ? "execute" : "dry-run", totals: { considered: results.length, valid: results.filter((item) => item.status === "valid").length, initialFailed, recoveredAfterRetry: initialFailed - failed.length - repairable.length - (execute ? 0 : repairableIneligible.length + repairableOrderRewrite.length), retryPasses, repairedDeleted: execute ? repairableDeleted.length : 0, repairableDeleted: repairableDeleted.length, repairedIneligible: execute ? results.filter((item) => item._repairedIneligible).length : 0, repairableIneligible: repairableIneligible.length, repairedOrderRewrites: execute ? results.filter((item) => item._orderRewritten).length : 0, repairableOrderRewrites: orderRewriteAttempts, repairedOrderNormalizations: execute ? repairableOrder.length : 0, repairableOrderNormalizations: repairableOrder.length, failed: failed.length }, results: reportResults };
   await writeJson(REMOTE_AUDIT_REPORT_FILE, report);
   if (results.length !== EXPECTED.materialized || failed.length) throw new Error(`Remote audit failed closed: considered=${results.length}, failed=${failed.length}; see ${REMOTE_AUDIT_REPORT_FILE}`);
   return report;

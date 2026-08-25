@@ -45,8 +45,7 @@ jobs:
       NUVIO_INITIAL_READBACK_ATTEMPTS: "4"
       NUVIO_RECOVERY_READBACK_ATTEMPTS: "8"
       TMDB_ORDER_REPAIR_CLEAR_SETTLE_MS: "60000"
-      TMDB_ORDER_REPAIR_ITEM_INTERVAL_MS: "100"
-      TMDB_ORDER_REPAIR_STABILITY_MS: "15000"
+      TMDB_ORDER_REPAIR_STABILITY_MS: "60000"
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -74,6 +73,15 @@ jobs:
         id: remote_audit
         if: github.event_name == 'schedule' || !inputs.dry_run
         run: npm run audit:remote:repair
+      - name: Checkpoint remote audit progress
+        if: always() && steps.remote_audit.outcome != 'skipped'
+        shell: bash
+        run: |
+          git config user.name "nuvio-collections-bot"
+          git config user.email "nuvio-collections-bot@users.noreply.github.com"
+          git add state reports/remote-audit.json
+          git diff --cached --quiet || git commit -m "chore: checkpoint Nuvio remote audit"
+          git push
       - name: Compile and production audit
         if: github.event_name == 'schedule' || !inputs.dry_run
         run: npm run compile && npm run audit -- --production

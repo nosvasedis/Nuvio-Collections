@@ -140941,7 +140941,7 @@
     },
     "collections.world:folder-VLTMKACY:0": {
       "listId": 8682910,
-      "fingerprint": "cbad4d9da4848f697fcd74159d77af7a05ca05f00e70d31f5f46bd2b3db461b1",
+      "fingerprint": "754fb427b18c53181843e915a78b22644a1cd2dd465bf12af6a54f785456ffed",
       "orderedIds": [
         "movie:1550019",
         "movie:1666831",
@@ -140986,7 +140986,6 @@
         "movie:1509968",
         "movie:1751600",
         "movie:1752437",
-        "movie:1622180",
         "movie:1747664",
         "movie:1751926",
         "movie:1691064",
@@ -141127,14 +141126,22 @@
         "movie:1735098",
         "movie:1744987"
       ],
-      "count": 183,
+      "count": 182,
       "scope": "GLOBAL",
       "writeSchema": 5,
       "ineligibleExcluded": 0,
       "posterlessExcluded": 16,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T09:00:56.720Z",
-      "invalidItems": []
+      "lastVerified": "2026-08-25T09:12:07Z",
+      "invalidItems": [
+        {
+          "media_type": "movie",
+          "id": 1622180,
+          "reason": "TMDB_V3_FUTURE_DATE",
+          "excludedAt": "2026-08-25T09:12:07Z"
+        }
+      ],
+      "tmdbV3EligibilityRepairedAt": "2026-08-25T09:12:07Z"
     },
     "collections.world:folder-VLTMKACY:1": {
       "listId": 8682911,

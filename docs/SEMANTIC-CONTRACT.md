@@ -317,12 +317,17 @@ dynamic curated merge/order tests, and the Warner media-specific company split.
   again during retry passes.
 - A twice-confirmed same-membership order drift is not silently accepted. The
   guarded repair audit clears only that list after a long quiescence window,
-  inserts its typed IDs sequentially, and requires two exact v3 read-backs. A
-  failed rewrite remains a hard failure and keeps the previous checkpoint.
+  performs one ordered bulk insertion, and checks both immediate and delayed
+  v3 read-back. Because TMDB exposes no position API and reorders even strictly
+  sequential inserts, only a settled same-membership displacement of at most
+  three places may become the checkpoint; larger drift remains a hard failure.
 - The v3 list payload consumed by Nuvio is authoritative for final poster,
   adult/video and release-date eligibility. If it contradicts TMDB details,
   the guarded audit removes and quarantines only the offending typed identity,
   exact-read-backs the remaining order, and checkpoints the filtered list.
+- Successful per-list audit repairs are checkpointed even if a different list
+  fails later, so a retry never loses an already verified quarantine or order
+  repair.
 - TMDB may asynchronously swap adjacent `original_order` entries after an exact
   write/read-back, and its v4 item-update endpoint does not support positions.
   Only actor/director Top rails may normalize a twice-confirmed, same-membership
