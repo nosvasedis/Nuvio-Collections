@@ -115225,7 +115225,7 @@
     },
     "collections.world:collections.world.german:0": {
       "listId": 8682654,
-      "fingerprint": "ce40091820d769d5836fea1ed37ec7f777a48c2fabc3e8877833b619e54dad4c",
+      "fingerprint": "ab8b97c8e14843c31d9e3762ebcf5f8c8d295125b3da0d23834dff2b3a3640ec",
       "orderedIds": [
         "movie:1711131",
         "movie:1587661",
@@ -115277,7 +115277,6 @@
         "movie:1742508",
         "movie:1747989",
         "movie:1649946",
-        "movie:1713448",
         "movie:1425552",
         "movie:1740027",
         "movie:1741239",
@@ -115307,7 +115306,6 @@
         "movie:1736601",
         "movie:1744322",
         "movie:1720029",
-        "movie:1709810",
         "movie:1734649",
         "movie:1299061",
         "movie:1536429",
@@ -115363,7 +115361,6 @@
         "movie:1729942",
         "movie:1729953",
         "movie:1743974",
-        "movie:1699206",
         "movie:1724146",
         "movie:808224",
         "movie:1291375",
@@ -115388,14 +115385,34 @@
         "movie:1741518",
         "movie:1739031"
       ],
-      "count": 160,
+      "count": 157,
       "scope": "GLOBAL",
       "writeSchema": 5,
       "ineligibleExcluded": 0,
       "posterlessExcluded": 40,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T03:04:38.678Z",
-      "invalidItems": []
+      "lastVerified": "2026-08-26T03:12:54.207Z",
+      "invalidItems": [
+        {
+          "media_type": "movie",
+          "id": 1713448,
+          "reason": "TMDB_V3_VIDEO",
+          "excludedAt": "2026-08-26T03:12:54.207Z"
+        },
+        {
+          "media_type": "movie",
+          "id": 1709810,
+          "reason": "TMDB_V3_VIDEO",
+          "excludedAt": "2026-08-26T03:12:54.207Z"
+        },
+        {
+          "media_type": "movie",
+          "id": 1699206,
+          "reason": "TMDB_V3_VIDEO",
+          "excludedAt": "2026-08-26T03:12:54.207Z"
+        }
+      ],
+      "tmdbV3EligibilityRepairedAt": "2026-08-26T03:12:54.207Z"
     },
     "collections.world:collections.world.german:1": {
       "listId": 8682655,

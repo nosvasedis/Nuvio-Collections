@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "date": "2026-08-25",
+  "date": "2026-08-26",
   "mode": "execute",
   "totals": {
     "considered": 2675,
@@ -12,8 +12,8 @@
     "repairableDeleted": 0,
     "repairedIneligible": 1,
     "repairableIneligible": 1,
-    "repairedOrderRewrites": 6,
-    "repairableOrderRewrites": 6,
+    "repairedOrderRewrites": 0,
+    "repairableOrderRewrites": 0,
     "repairedOrderNormalizations": 0,
     "repairableOrderNormalizations": 0,
     "failed": 0
