@@ -7,7 +7,7 @@ import { compile } from "../src/compiler.mjs";
 import { runtimeBucket, dailyRuntimeSelection, chooseAvailability, materializeRail, applySemanticPredicates, applyContentSafetyPredicates, discoverParams, streamingRecognitionFloor, EXPLICIT_CONTENT_KEYWORD_IDS, isSubstantiveCastCredit, isFeatureFilm, requireEligibleReleasedItems, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
 import { adjacentOrderEquivalent, awardRefreshDecision, awardSourceFingerprint, confirmationCompatible, hasVerifiedLastKnownGood, normalizeCandidateItems, orderedIdsEqual, permitsTmdbAdjacentOrderNormalization, preserveVerifiedLastKnownGood, railDefinitionFingerprint, reconcileWithReadbackRecovery, semanticRefreshDue, verifyReadback } from "../src/sync.mjs";
-import { boundedOrderEquivalent, remoteAuditRetryDelay, rewriteExactOrder, v3EligibilityViolations } from "../src/remote-audit.mjs";
+import { boundedOrderEquivalent, remoteAuditRetryDelay, rewriteExactOrder, runAuditPass, v3EligibilityViolations } from "../src/remote-audit.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS, CATALOG_REMOVED_RAIL_REASONS, COUNTRY_BY_FOLDER } from "../src/constants.mjs";
 import { readJson, fingerprint, dedupeLikelyDuplicateWorks } from "../src/utils.mjs";
 import { assertNuvioMediaTypeContract, emulateNuvio083MediaType } from "../src/media-contract.mjs";
@@ -335,6 +335,15 @@ test("remote audit retries use bounded exponential settling", () => {
   assert.equal(remoteAuditRetryDelay(0, 5000), 5000);
   assert.equal(remoteAuditRetryDelay(1, 5000), 10000);
   assert.equal(remoteAuditRetryDelay(8, 5000), 60000);
+});
+
+test("remote audit passes the TMDB client instead of mapLimit's numeric index", async () => {
+  const client = { listV3All: async () => ({ items: [] }) };
+  const calls = await runAuditPass([{ key: "a" }, { key: "b" }], 2, async (rail, receivedClient, options) => ({ key: rail.key, sameClient: receivedClient === client, allowRepairs: options.allowRepairs }), client, { allowRepairs: true });
+  assert.deepEqual(calls, [
+    { key: "a", sameClient: true, allowRepairs: true },
+    { key: "b", sameClient: true, allowRepairs: true },
+  ]);
 });
 
 test("Nuvio-facing v3 eligibility rejects postponed, posterless and explicit items", () => {

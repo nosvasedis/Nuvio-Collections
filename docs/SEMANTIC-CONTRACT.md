@@ -390,7 +390,7 @@ dynamic curated merge/order tests, and the Warner media-specific company split.
 Record current evidence in `reports/latest.json` and README, never only in chat:
 
 - bootstrap counts match constants and every non-recommended folder is non-empty;
-- all 64 tests pass, including exact rollback, definition-matched
+- all 65 tests pass, including exact rollback, definition-matched
   last-known-good preservation and versioned award refresh behavior;
 - audit passes folder/recommended locks, source counts and compatibility rules;
 - full live dry-run considers all 2,675 materialized rails with zero failures

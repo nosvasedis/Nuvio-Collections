@@ -46,7 +46,7 @@ resumable synchronizer και το GitHub Actions workflow που κρατά τ�
 | Κενά folders | **0** |
 | Unresolved list IDs | **0** |
 | Trakt / runtime-addon sources | **0 / 0** |
-| Automated tests | **64 / 64** |
+| Automated tests | **65 / 65** |
 | Exact remote audit | **2.675 / 2.675 valid** |
 
 Τα sources που επέστρεφαν αποδεδειγμένα μηδενικό αποτέλεσμα με τον ακριβή
@@ -403,7 +403,7 @@ lists και ολοκληρώθηκε σε περίπου 11 λεπτά.
 Απαιτείται Node.js 22+· το hosted workflow χρησιμοποιεί Node.js 24.
 
 ```powershell
-npm test                    # 64 automated contract tests
+npm test                    # 65 automated contract tests
 npm run audit               # structure, counts, locks και compatibility
 npm run sync:dry            # live candidates, χωρίς remote writes
 npm run sync                # production reconciliation

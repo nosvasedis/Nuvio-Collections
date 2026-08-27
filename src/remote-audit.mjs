@@ -7,6 +7,12 @@ const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export function remoteAuditRetryDelay(attempt, baseMs = Number(process.env.NUVIO_REMOTE_AUDIT_RETRY_DELAY_MS ?? 5000)) {
   return Math.min(60000, Math.max(1000, Number(baseMs)) * 2 ** Math.max(0, attempt));
 }
+export function runAuditPass(rails, limit, auditor, auditClient, { allowRepairs = false } = {}) {
+  // mapLimit supplies (value, numericIndex). Never pass an auditor that expects
+  // a client as its second argument directly, or every first-pass rail receives
+  // the numeric index in place of the TMDB client.
+  return mapLimit(rails, limit, (rail) => auditor(rail, auditClient, { allowRepairs }));
+}
 
 function definitiveNotFound(error) {
   return /\b404\b|status_code["':\s]+34\b|resource you requested could not be found/i.test(String(error?.message ?? error));
@@ -112,7 +118,7 @@ export async function auditRemoteLists({ execute = false, client = new TmdbClien
       return { key: rail.key, listId: prior.listId, status: "repairable-deleted", count: actual.length, _actual: actual, deleted };
     } catch (error) { return { key: rail.key, listId: prior?.listId, status: "failed", error: String(error?.message ?? error) }; }
   };
-  let results = await mapLimit(rails, 16, auditRail);
+  let results = await runAuditPass(rails, 16, auditRail, client);
   const initialFailed = results.filter((item) => item.status === "failed").length;
   const initialFailureSamples = results.filter((item) => item.status === "failed").slice(0, 12)
     .map((item) => Object.fromEntries(Object.entries(item).filter(([key]) => !key.startsWith("_"))));
@@ -125,7 +131,7 @@ export async function auditRemoteLists({ execute = false, client = new TmdbClien
     console.error(`[remote-audit] retry ${retryPasses}/${maxRetries}: rechecking only ${failedIndexes.length} failed rails with a fresh client`);
     await wait(remoteAuditRetryDelay(attempt));
     const retryClient = new TmdbClient({ readToken: client.readToken, userToken: client.userToken, language: client.language, fetchImpl: client.fetchImpl });
-    const retried = await mapLimit(failedIndexes, Math.min(8, failedIndexes.length), (index) => auditRail(rails[index], retryClient, { allowRepairs: attempt === maxRetries - 1 }));
+    const retried = await runAuditPass(failedIndexes.map((index) => rails[index]), Math.min(8, failedIndexes.length), auditRail, retryClient, { allowRepairs: attempt === maxRetries - 1 });
     for (let i = 0; i < failedIndexes.length; i++) results[failedIndexes[i]] = retried[i];
   }
   let failed = results.filter((item) => item.status === "failed");
