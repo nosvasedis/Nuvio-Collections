@@ -120,7 +120,7 @@
     },
     "collections.actors:folder-07R890RD:2": {
       "listId": 8680663,
-      "fingerprint": "22c998e73dbb1afb66826a0e303b617af2e58a4b6cb4d71048f7c40f0ced07af",
+      "fingerprint": "0336f1f054a9eb0408501fe17ac4a6420070584a4a5249cca91525a06447ef5b",
       "orderedIds": [
         "movie:277834",
         "movie:1084242",
@@ -192,7 +192,7 @@
       "ineligibleExcluded": 153,
       "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:50:21.475Z",
+      "lastVerified": "2026-08-27T11:08:27.950Z",
       "invalidItems": []
     },
     "collections.actors:folder-07R890RD:3": {
@@ -989,7 +989,7 @@
     },
     "collections.actors:folder-1GMOXRXX:2": {
       "listId": 8680688,
-      "fingerprint": "8f3f7bcd12ba47b93fd264fc6b85bad0f7010cb71717046d8563b323d6bee15d",
+      "fingerprint": "6940eeba08724be45bce4666aaec83c7736ba0f0c7d38ded81b461ba68877450",
       "orderedIds": [
         "movie:38408",
         "movie:599281",
@@ -1037,7 +1037,7 @@
       "ineligibleExcluded": 2,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:36:49.321Z",
+      "lastVerified": "2026-08-27T11:08:24.717Z",
       "invalidItems": []
     },
     "collections.actors:folder-1GMOXRXX:3": {
@@ -1452,7 +1452,7 @@
     },
     "collections.actors:folder-1RF88RWO:2": {
       "listId": 8680711,
-      "fingerprint": "dc74170e23364b7d50a83632032ea05a54f451ad1e338008061c15cce873f69b",
+      "fingerprint": "b2d8a91a063016cb8f6946508989819d46dd33497f3f11691543d0341f841820",
       "orderedIds": [
         "movie:79",
         "movie:7549",
@@ -1510,7 +1510,7 @@
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T08:13:30.523Z",
+      "lastVerified": "2026-08-27T11:08:27.477Z",
       "invalidItems": []
     },
     "collections.actors:folder-1RF88RWO:3": {
@@ -2260,7 +2260,7 @@
     },
     "collections.actors:folder-2AFAKOUX:2": {
       "listId": 8680736,
-      "fingerprint": "a88fffa593cf72efae88b4614b20411a67b90a867974dcee39ad724c371f36f0",
+      "fingerprint": "22b83fe68731fd4acf660ec641b8dda19a7edf8dabfed8f38eecddb7fa319364",
       "orderedIds": [
         "movie:9837",
         "movie:2609",
@@ -2321,7 +2321,7 @@
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T09:24:28.157Z",
+      "lastVerified": "2026-08-27T11:08:27.731Z",
       "invalidItems": []
     },
     "collections.actors:folder-2AFAKOUX:3": {
@@ -2522,7 +2522,7 @@
     },
     "collections.actors:folder-2IAN1H6H:2": {
       "listId": 8680745,
-      "fingerprint": "480935cd82e1ab8d150f803d5b84085f6caf5f995533861fd22dfb6198ba33a5",
+      "fingerprint": "b3bb526549aafb91f3735b3c1134ce104d117c9e45d96ecd8c078611e6ed731b",
       "orderedIds": [
         "movie:406997",
         "movie:161",
@@ -2586,7 +2586,7 @@
       "ineligibleExcluded": 5,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:36:53.923Z",
+      "lastVerified": "2026-08-27T11:08:28.719Z",
       "invalidItems": []
     },
     "collections.actors:folder-2IAN1H6H:3": {
@@ -4140,7 +4140,7 @@
     },
     "collections.actors:folder-4FJLTWYG:2": {
       "listId": 8680790,
-      "fingerprint": "e47fdb9d5e7eb49b180805a057c71c1417ff641f72cb193484e0d13bfe5a3ce3",
+      "fingerprint": "2b9e3d6f704c2bbba0dde92d769a8b71154a52d3c55c9a6c64b0bd648433383d",
       "orderedIds": [
         "movie:146233",
         "movie:142",
@@ -4201,7 +4201,7 @@
       "ineligibleExcluded": 1,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:36:55.213Z",
+      "lastVerified": "2026-08-27T11:08:31.683Z",
       "invalidItems": []
     },
     "collections.actors:folder-4FJLTWYG:3": {
@@ -4440,7 +4440,7 @@
     },
     "collections.actors:folder-4K51G24E:2": {
       "listId": 8680800,
-      "fingerprint": "d145e45cf6c1ffccedbef931793fefd4e8e90bb59f0a0f739f3a61538c1405e0",
+      "fingerprint": "a4694828480aa633a05a1ad02622e57694807a256b83e403e78657b9d78f25ec",
       "orderedIds": [
         "movie:497",
         "movie:13",
@@ -4531,10 +4531,10 @@
       "count": 85,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
-      "ineligibleExcluded": 5,
+      "ineligibleExcluded": 6,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:36:56.879Z",
+      "lastVerified": "2026-08-27T11:08:30.892Z",
       "invalidItems": []
     },
     "collections.actors:folder-4K51G24E:3": {
@@ -4564,9 +4564,9 @@
       "count": 19,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
-      "posterlessExcluded": 0,
+      "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-22T02:19:32.357Z",
+      "lastVerified": "2026-08-27T11:08:29.550Z",
       "invalidItems": [],
       "ineligibleExcluded": 0
     },
@@ -5031,7 +5031,7 @@
     },
     "collections.actors:folder-4WZSK2HQ:2": {
       "listId": 8680816,
-      "fingerprint": "dd111981ba5ed07ef22bbc239c945b23e065efc4e7ba2126b187f5b39857ae53",
+      "fingerprint": "e292d54f6010a96a6d41a9bde7b6d86d45c9bdd8ce7d73650b0fa6497dfbafc6",
       "orderedIds": [
         "movie:792",
         "movie:329865",
@@ -5142,7 +5142,7 @@
       "ineligibleExcluded": 1,
       "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:50:46.026Z",
+      "lastVerified": "2026-08-27T11:08:31.165Z",
       "invalidItems": []
     },
     "collections.actors:folder-4WZSK2HQ:3": {
@@ -5710,9 +5710,9 @@
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
       "ineligibleExcluded": 0,
-      "posterlessExcluded": 0,
+      "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T08:13:25.304Z",
+      "lastVerified": "2026-08-27T11:08:31.347Z",
       "invalidItems": []
     },
     "collections.actors:folder-59J071DM:2": {
@@ -5784,9 +5784,9 @@
       "count": 4,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
-      "posterlessExcluded": 0,
+      "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-12T11:48:23.777Z",
+      "lastVerified": "2026-08-27T11:08:31.347Z",
       "invalidItems": [],
       "ineligibleExcluded": 0
     },
@@ -5859,9 +5859,9 @@
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
       "ineligibleExcluded": 0,
-      "posterlessExcluded": 0,
+      "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T08:13:25.441Z",
+      "lastVerified": "2026-08-27T11:08:31.347Z",
       "invalidItems": []
     },
     "collections.actors:folder-5DNUVAKW:0": {
@@ -7218,7 +7218,7 @@
     },
     "collections.actors:folder-6BKY6W3C:2": {
       "listId": 8680868,
-      "fingerprint": "3bdd6367416ae87a6fef235c0589933ed517ee4b4faf95eebc7c6f3a5182417f",
+      "fingerprint": "c979184e5773f67d5d90c27581da2ca62eca8df653c72ee76abd5025367224f6",
       "orderedIds": [
         "movie:101",
         "movie:299534",
@@ -7281,7 +7281,7 @@
       "ineligibleExcluded": 7,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:36:59.787Z",
+      "lastVerified": "2026-08-27T11:08:34.457Z",
       "invalidItems": []
     },
     "collections.actors:folder-6BKY6W3C:3": {
@@ -8448,7 +8448,7 @@
     },
     "collections.actors:folder-8TAZ6A0Q:2": {
       "listId": 8680894,
-      "fingerprint": "e59b8c343e4ec880f8ba85743eb50f6ca5a6272093c78ddcac33912d003e1ebb",
+      "fingerprint": "fdbecf9536c12923b67000a1e58f0981c38317018f5736fc9e1cde6c94cf1d95",
       "orderedIds": [
         "movie:155",
         "movie:1124",
@@ -8508,7 +8508,7 @@
       "ineligibleExcluded": 1,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:36:59.892Z",
+      "lastVerified": "2026-08-27T11:08:35.637Z",
       "invalidItems": []
     },
     "collections.actors:folder-76H6KRA1:4": {
@@ -8796,7 +8796,7 @@
     },
     "collections.actors:folder-9QHTMQDZ:2": {
       "listId": 8680902,
-      "fingerprint": "1e060654f3c4520e734d882b7feebc67e24ba2b4476fafbe17def17953ff4d55",
+      "fingerprint": "299af3e24fb6492860313664976f29b1771aff688d11e4cdf050ae4342a71541",
       "orderedIds": [
         "movie:773",
         "movie:451915",
@@ -8853,7 +8853,7 @@
       "ineligibleExcluded": 3,
       "posterlessExcluded": 2,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T08:10:07.537Z",
+      "lastVerified": "2026-08-27T11:08:36.533Z",
       "invalidItems": []
     },
     "collections.actors:folder-9QHTMQDZ:1": {
@@ -10042,7 +10042,7 @@
     },
     "collections.actors:folder-ASZD5A4V:2": {
       "listId": 8680924,
-      "fingerprint": "eb9ff489c28c7226862d9c61ffcc562dbf24e045acd988ad47b0f510f33c2b1a",
+      "fingerprint": "9328f91de0ffb49975ed3a4d0016705d697c651efd217f161b6133dd29640fe5",
       "orderedIds": [
         "movie:299536",
         "movie:299534",
@@ -10097,7 +10097,7 @@
       "ineligibleExcluded": 3,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T08:13:34.975Z",
+      "lastVerified": "2026-08-27T11:08:37.427Z",
       "invalidItems": []
     },
     "collections.actors:folder-ASZD5A4V:1": {
@@ -10405,7 +10405,7 @@
     },
     "collections.actors:folder-BU4IT2EK:2": {
       "listId": 8680932,
-      "fingerprint": "00ffae71ea2a25db35f2aa9be9b920067afc588ee48ecb55e614caac6d86a9b3",
+      "fingerprint": "feddf653fd1ef4b42c79a335a46ba97c6c5d17a10a313c6f1ae38312bb006bda",
       "orderedIds": [
         "movie:50014",
         "movie:381284",
@@ -10500,7 +10500,7 @@
       "ineligibleExcluded": 4,
       "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:37:01.358Z",
+      "lastVerified": "2026-08-27T11:08:38.722Z",
       "invalidItems": []
     },
     "collections.actors:folder-BU4IT2EK:3": {
@@ -11696,7 +11696,7 @@
     },
     "collections.actors:folder-CX0JHAUK:2": {
       "listId": 8680971,
-      "fingerprint": "30d8a2f3c0aac90ea886310bd99d2a5c25351cf3e57e13677d32a84b6b81136c",
+      "fingerprint": "bb2fd8dd797c7c30365b734ff282acd400329b2e67077c7bb974e1f6e9d16ee8",
       "orderedIds": [
         "movie:155",
         "movie:101",
@@ -11787,7 +11787,7 @@
       "ineligibleExcluded": 1,
       "posterlessExcluded": 2,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:51:23.122Z",
+      "lastVerified": "2026-08-27T11:08:38.680Z",
       "invalidItems": []
     },
     "collections.actors:folder-CX0JHAUK:3": {
@@ -12443,7 +12443,7 @@
     },
     "collections.actors:folder-D37JKRU8:2": {
       "listId": 8680991,
-      "fingerprint": "2aac30d0aafbcc00bc053484ef1eb6d83372a42843f86f8b6eea342d66bd6c5d",
+      "fingerprint": "73fb052de58dfeb801905d7b65bdd047f3d3a2de4b1c8e63b6ab3e3351c9150b",
       "orderedIds": [
         "movie:603",
         "movie:1084244",
@@ -12543,7 +12543,7 @@
       "ineligibleExcluded": 10,
       "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:37:06.890Z",
+      "lastVerified": "2026-08-27T11:08:40.911Z",
       "invalidItems": []
     },
     "collections.actors:folder-D37JKRU8:3": {
@@ -14956,7 +14956,7 @@
     },
     "collections.actors:folder-FJZ84GA3:2": {
       "listId": 8681045,
-      "fingerprint": "4127156e209e039e9cbdf314797c68f164116374a4597415ff4ef0010bf5f9eb",
+      "fingerprint": "99a9cb217db2d5b48857c4b76b87d1140e29f060543900a0068abe486ae9adc8",
       "orderedIds": [
         "movie:207",
         "movie:489",
@@ -15043,7 +15043,7 @@
       "ineligibleExcluded": 1,
       "posterlessExcluded": 2,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T08:10:10.215Z",
+      "lastVerified": "2026-08-27T11:08:43.265Z",
       "invalidItems": []
     },
     "collections.actors:folder-FJZ84GA3:3": {
@@ -16090,7 +16090,7 @@
     },
     "collections.actors:folder-H1P5FUH1:2": {
       "listId": 8681069,
-      "fingerprint": "b5db150a89bea94085f22091f10f03259d70efe0aba24393d46196da17d29b29",
+      "fingerprint": "bad34a12c401f0a7d62695e719eec603614503c9fce9039331d3697d429ce1f8",
       "orderedIds": [
         "movie:22881",
         "movie:718930",
@@ -16152,7 +16152,7 @@
       "ineligibleExcluded": 0,
       "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:37:07.559Z",
+      "lastVerified": "2026-08-27T11:08:44.904Z",
       "invalidItems": []
     },
     "collections.actors:folder-H1P5FUH1:3": {
@@ -16633,7 +16633,7 @@
     },
     "collections.actors:folder-HTT7QLSK:2": {
       "listId": 8681083,
-      "fingerprint": "310cce70213a942f5f750777bbe0a102601f29d42c0d383b90298b9a886ec494",
+      "fingerprint": "139e797dfbbe244ee6a86e125ff2a8304d9509163ed656a6762189a72764c490",
       "orderedIds": [
         "movie:99",
         "movie:219",
@@ -16713,7 +16713,7 @@
       "ineligibleExcluded": 2,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:51:48.048Z",
+      "lastVerified": "2026-08-27T11:08:45.611Z",
       "invalidItems": []
     },
     "collections.actors:folder-HTT7QLSK:3": {
@@ -16901,7 +16901,7 @@
     },
     "collections.actors:folder-I2BO9LZU:2": {
       "listId": 8681089,
-      "fingerprint": "c7388e3f4ec46768062e59d5da49de78bc80a442b597d1921983d1380673411a",
+      "fingerprint": "a1186e39eecb23a474163dceb8a14501eb5d1f141ede22558b4a2977d70245d6",
       "orderedIds": [
         "movie:157336",
         "movie:693134",
@@ -16939,7 +16939,7 @@
       "ineligibleExcluded": 3,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T08:10:11.841Z",
+      "lastVerified": "2026-08-27T11:08:47.258Z",
       "invalidItems": []
     },
     "collections.actors:folder-I2BO9LZU:3": {
@@ -17918,7 +17918,7 @@
     },
     "collections.actors:folder-J1WUV8FO:2": {
       "listId": 8681114,
-      "fingerprint": "e3e9659007bd87e655b76f77c9a190e9d35f35cc2882b243ac907df77d7e0134",
+      "fingerprint": "78884826367aa87332662ddfecaba420f9fb964ef6d42799a5c8567d83bf2df3",
       "orderedIds": [
         "movie:1226863",
         "movie:502356",
@@ -18013,12 +18013,12 @@
       "ineligibleExcluded": 7,
       "posterlessExcluded": 3,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:37:09.401Z",
+      "lastVerified": "2026-08-27T11:08:46.334Z",
       "invalidItems": []
     },
     "collections.actors:folder-J1WUV8FO:3": {
       "listId": 8681115,
-      "fingerprint": "3866e8f8fb30ac4822c43d7b254586bceae2422a9466774698db8245370412ad",
+      "fingerprint": "bb9dcabdc0c966615f3c4a2301c50f5f141083c76ecf6d3410c245ba5a3540b0",
       "orderedIds": [
         "tv:60625",
         "tv:2316",
@@ -18070,7 +18070,7 @@
       "ineligibleExcluded": 0,
       "posterlessExcluded": 2,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:37:09.367Z",
+      "lastVerified": "2026-08-27T11:08:46.158Z",
       "invalidItems": []
     },
     "collections.actors:folder-J1WUV8FO:4": {
@@ -19400,7 +19400,7 @@
     },
     "collections.actors:folder-L7XT7A7L:2": {
       "listId": 8681138,
-      "fingerprint": "742aa3a58b52eca8cc975950e78686c428b1fdc5495a997d26ea80a6fb2fee02",
+      "fingerprint": "7b4ce275ed7ea67bbc5ae47967de314ef800facef83c01394f9c119115e5550d",
       "orderedIds": [
         "movie:50014",
         "movie:337404",
@@ -19442,7 +19442,7 @@
       "ineligibleExcluded": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-24T02:26:18.815Z",
+      "lastVerified": "2026-08-27T11:08:48.116Z",
       "invalidItems": []
     },
     "collections.actors:folder-L7XT7A7L:3": {
@@ -22467,7 +22467,7 @@
     },
     "collections.actors:folder-MULF8GWG:2": {
       "listId": 8681199,
-      "fingerprint": "5e756a9ce464f0e005baf53a0ffa6023a8e37f5b2dce3d72fd6b5917bd081e49",
+      "fingerprint": "1030552317bc8487b8abd7215575326f905febb05f01ee99b8fab57cea7241f0",
       "orderedIds": [
         "movie:274",
         "movie:600354",
@@ -22596,7 +22596,7 @@
       "ineligibleExcluded": 8,
       "posterlessExcluded": 2,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:52:23.280Z",
+      "lastVerified": "2026-08-27T11:08:53.170Z",
       "invalidItems": []
     },
     "collections.actors:folder-MULF8GWG:3": {
@@ -23293,9 +23293,9 @@
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
       "ineligibleExcluded": 0,
-      "posterlessExcluded": 0,
+      "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-21T02:43:00.112Z",
+      "lastVerified": "2026-08-27T11:08:52.378Z",
       "invalidItems": []
     },
     "collections.actors:folder-NCVWCX3E:2": {
@@ -23347,9 +23347,9 @@
       "count": 7,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
-      "posterlessExcluded": 0,
+      "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-12T11:48:33.180Z",
+      "lastVerified": "2026-08-27T11:08:52.378Z",
       "invalidItems": [],
       "ineligibleExcluded": 0
     },
@@ -23403,9 +23403,9 @@
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
       "ineligibleExcluded": 0,
-      "posterlessExcluded": 0,
+      "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-21T02:43:01.496Z",
+      "lastVerified": "2026-08-27T11:08:52.378Z",
       "invalidItems": []
     },
     "collections.actors:folder-NNBJWT7P:0": {
@@ -25597,7 +25597,7 @@
     },
     "collections.actors:folder-PXIZD054:2": {
       "listId": 8681265,
-      "fingerprint": "3739a60da3cab31c3d5cf5925d8fca0703b534812938783a429b7fbcd32d83e2",
+      "fingerprint": "a866f2ff04f4321fcf2444407303804c0afa369cfdbfe8dde2e1a476efb79484",
       "orderedIds": [
         "movie:550",
         "movie:807",
@@ -25675,7 +25675,7 @@
       "ineligibleExcluded": 1,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:37:17.541Z",
+      "lastVerified": "2026-08-27T11:08:55.802Z",
       "invalidItems": []
     },
     "collections.actors:folder-PXIZD054:3": {
@@ -25893,9 +25893,9 @@
       "count": 6,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
-      "posterlessExcluded": 0,
+      "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-12T11:48:34.425Z",
+      "lastVerified": "2026-08-27T11:08:55.524Z",
       "invalidItems": [],
       "ineligibleExcluded": 0
     },
@@ -25975,9 +25975,9 @@
       "count": 6,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
-      "posterlessExcluded": 0,
+      "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-12T11:48:34.425Z",
+      "lastVerified": "2026-08-27T11:08:55.559Z",
       "invalidItems": [],
       "ineligibleExcluded": 0
     },
@@ -26057,9 +26057,9 @@
       "count": 6,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
-      "posterlessExcluded": 0,
+      "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-12T11:48:34.430Z",
+      "lastVerified": "2026-08-27T11:08:55.560Z",
       "invalidItems": [],
       "ineligibleExcluded": 0
     },
@@ -26631,7 +26631,7 @@
     },
     "collections.actors:folder-QQ7P8T6J:2": {
       "listId": 8681289,
-      "fingerprint": "b5c200b88440d4ae8057abfe0809b9644c5475d4a91c0ecd886d8c5d832d54e0",
+      "fingerprint": "5e22d9d1dc32a9a1372bc3ff4edbba52e9f13ddf9d1bb2fa360047f0c80b3816",
       "orderedIds": [
         "movie:466272",
         "movie:1368166",
@@ -26679,7 +26679,7 @@
       "ineligibleExcluded": 5,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:37:18.601Z",
+      "lastVerified": "2026-08-27T11:08:56.127Z",
       "invalidItems": []
     },
     "collections.actors:folder-QQ7P8T6J:3": {
@@ -27670,7 +27670,7 @@
     },
     "collections.actors:folder-RQXU2K5A:2": {
       "listId": 8681315,
-      "fingerprint": "1647217f27048b1dc803508ab1fe8325e977ac48dac25bd8e7c09f3813524a6e",
+      "fingerprint": "835be01b75466a2b18fa7e5bf908f5ca81fb1f9842d6571b0f7b767ae9a7872a",
       "orderedIds": [
         "movie:137106",
         "movie:1262",
@@ -27752,10 +27752,10 @@
       "count": 76,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
-      "ineligibleExcluded": 3,
+      "ineligibleExcluded": 4,
       "posterlessExcluded": 2,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:37:19.937Z",
+      "lastVerified": "2026-08-27T11:08:58.192Z",
       "invalidItems": []
     },
     "collections.actors:folder-RQXU2K5A:3": {
@@ -28512,7 +28512,7 @@
     },
     "collections.actors:folder-T43JW6XT:2": {
       "listId": 8681333,
-      "fingerprint": "b2ab1e5ef54213d79916106e6d5f953f083cec5aab9dc790058dc4d6e090f580",
+      "fingerprint": "0a7c4bac36b5e9b2ce3a2a5acb0ae9404c34372b48bac05b26395536af1b691a",
       "orderedIds": [
         "movie:155",
         "movie:27205",
@@ -28578,7 +28578,7 @@
       "ineligibleExcluded": 1,
       "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:37:20.241Z",
+      "lastVerified": "2026-08-27T11:08:58.894Z",
       "invalidItems": []
     },
     "collections.actors:folder-T43JW6XT:3": {
@@ -28777,7 +28777,7 @@
     },
     "collections.actors:folder-TDL8CIHS:2": {
       "listId": 8681339,
-      "fingerprint": "d37e800b69b91a349801b533c305ed75bdb00c4e7d38d7b3763621465dd6dae0",
+      "fingerprint": "92c655667e0a4852da6bf44fb7fe531e33b16db972a580d4628b68e3dcfb30fa",
       "orderedIds": [
         "movie:438695",
         "movie:69",
@@ -28833,7 +28833,7 @@
       "ineligibleExcluded": 2,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T08:14:18.437Z",
+      "lastVerified": "2026-08-27T11:08:58.793Z",
       "invalidItems": []
     },
     "collections.actors:folder-TDL8CIHS:3": {
@@ -29302,7 +29302,7 @@
     },
     "collections.actors:folder-TR8NRI88:2": {
       "listId": 8681351,
-      "fingerprint": "c1b592246af8af42c433b4e2da9b4ea6682e30af19c708253e61028fee8a6fc1",
+      "fingerprint": "57e78699d5ff618319d5c99efe0a4930ae2c9c408b266f3d6ed7699d224b152b",
       "orderedIds": [
         "movie:157336",
         "movie:106646",
@@ -29373,7 +29373,7 @@
       "ineligibleExcluded": 6,
       "posterlessExcluded": 2,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:37:21.647Z",
+      "lastVerified": "2026-08-27T11:08:58.827Z",
       "invalidItems": []
     },
     "collections.actors:folder-TR8NRI88:3": {
@@ -29604,7 +29604,7 @@
     },
     "collections.actors:folder-TWR66N19:2": {
       "listId": 8681357,
-      "fingerprint": "7c4ece338dbf7cf12a33b0a45420bb8c2929cfd27e6c76ac8698672008013435",
+      "fingerprint": "211cf951417ed7bbb37072d4d5772fe3f12df67a1f90e7435683f32a748dce3f",
       "orderedIds": [
         "movie:299536",
         "movie:299534",
@@ -29690,7 +29690,7 @@
       "ineligibleExcluded": 1,
       "posterlessExcluded": 2,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T08:14:21.316Z",
+      "lastVerified": "2026-08-27T11:08:59.682Z",
       "invalidItems": []
     },
     "collections.actors:folder-TWR66N19:3": {
@@ -31788,7 +31788,7 @@
     },
     "collections.actors:folder-WBL5AUA4:2": {
       "listId": 8681411,
-      "fingerprint": "a2ff34bfb250d0ef6035eee8407e58a73a76e8161dceead238bcce30f946593c",
+      "fingerprint": "912bd6f93e9b9eb85cd512d2a66784f6f49451c835db76ba44d0373cd20d2d69",
       "orderedIds": [
         "movie:705861",
         "movie:473033",
@@ -31863,7 +31863,7 @@
       "ineligibleExcluded": 4,
       "posterlessExcluded": 2,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:37:24.291Z",
+      "lastVerified": "2026-08-27T11:09:02.492Z",
       "invalidItems": []
     },
     "collections.actors:folder-WBL5AUA4:3": {
@@ -32754,7 +32754,7 @@
     },
     "collections.actors:folder-X6DZXD29:2": {
       "listId": 8681435,
-      "fingerprint": "912cc97ea512823011cf53dd5ecf6ba0d61370d5bcc242a076ec4e297f22230b",
+      "fingerprint": "560e255d2d0a5fdc703e41851707d8f7fee83e5856a3617ecac1e086bba37d58",
       "orderedIds": [
         "movie:603",
         "movie:28",
@@ -32864,7 +32864,7 @@
       "ineligibleExcluded": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:53:17.457Z",
+      "lastVerified": "2026-08-27T11:09:05.048Z",
       "invalidItems": []
     },
     "collections.actors:folder-X6DZXD29:3": {
@@ -33130,7 +33130,7 @@
     },
     "collections.actors:folder-XER5AQ3T:2": {
       "listId": 8681443,
-      "fingerprint": "338fed867221461be569cbceea8f70c5e7e4976e94788edd761ffad6ed1ef626",
+      "fingerprint": "04598f93373094d634b6e16fa611e1d292e3770d9c3fe13b68f88f4f23e083f1",
       "orderedIds": [
         "movie:414906",
         "movie:374720",
@@ -33172,7 +33172,7 @@
       "writeSchema": 5,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-12T11:48:38.444Z",
+      "lastVerified": "2026-08-27T11:09:03.568Z",
       "invalidItems": [],
       "ineligibleExcluded": 0
     },
@@ -34553,7 +34553,7 @@
     },
     "collections.actors:folder-Z5XYMZS1:2": {
       "listId": 8681485,
-      "fingerprint": "797b2f7a9f82cd6d6a66720f6349116ddc18eb3d145590593978f22bb87bdd21",
+      "fingerprint": "f1d7b2a1f6fd33dc0a314de92c748a31236cce9170e9c2d461549e76a073bccc",
       "orderedIds": [
         "movie:10386",
         "movie:1542",
@@ -34604,7 +34604,7 @@
       "ineligibleExcluded": 4,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-25T09:24:53.480Z",
+      "lastVerified": "2026-08-27T11:09:04.605Z",
       "invalidItems": []
     },
     "collections.actors:folder-Z5XYMZS1:3": {
@@ -35088,7 +35088,7 @@
     },
     "collections.actors:folder-Z7DBVRV0:2": {
       "listId": 8681501,
-      "fingerprint": "ce75391586ac65f659347153ccf1320b897cc39029a63adbec372249e64251a1",
+      "fingerprint": "9a7aad758a49d52ab066e8a7251d28664d24a09d711539db7de8275368156f2b",
       "orderedIds": [
         "movie:120467",
         "movie:399174",
@@ -35176,7 +35176,7 @@
       "ineligibleExcluded": 6,
       "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:37:26.725Z",
+      "lastVerified": "2026-08-27T11:09:05.381Z",
       "invalidItems": []
     },
     "collections.actors:folder-Z7DBVRV0:3": {
@@ -35736,7 +35736,7 @@
     },
     "collections.actors:folder-ZISLC5VJ:2": {
       "listId": 8681517,
-      "fingerprint": "161868348cd53f67fac7f172cb3e960cfb5d73801929f0244e1aa50351eb915a",
+      "fingerprint": "ca526c50f28bac9b090bc170694d4658ca762460db949f8c14e6e800619e5557",
       "orderedIds": [
         "movie:361743",
         "movie:380",
@@ -35793,7 +35793,7 @@
       "ineligibleExcluded": 3,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:37:29.101Z",
+      "lastVerified": "2026-08-27T11:09:07.256Z",
       "invalidItems": []
     },
     "collections.actors:folder-ZISLC5VJ:4": {
@@ -36255,7 +36255,7 @@
       "lastVerified": "2026-08-12T11:48:40.787Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:04.267Z",
+      "lastSemanticRefresh": "2026-08-27T11:09:48.872Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:1": {
@@ -36351,7 +36351,7 @@
       "lastVerified": "2026-08-12T11:48:40.554Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:00.023Z",
+      "lastSemanticRefresh": "2026-08-27T11:09:43.840Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:2": {
@@ -36390,7 +36390,7 @@
       "lastVerified": "2026-08-12T11:48:40.096Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:21:38.127Z",
+      "lastSemanticRefresh": "2026-08-27T11:09:19.401Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:3": {
@@ -36498,7 +36498,7 @@
       "lastVerified": "2026-08-12T11:48:40.738Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:16.399Z",
+      "lastSemanticRefresh": "2026-08-27T11:10:04.362Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:4": {
@@ -36637,7 +36637,7 @@
       "lastVerified": "2026-08-12T11:48:40.946Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:08.236Z",
+      "lastSemanticRefresh": "2026-08-27T11:09:51.539Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:5": {
@@ -36735,7 +36735,7 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-12T11:54:57.574Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:22:09.125Z"
+      "lastSemanticRefresh": "2026-08-27T11:09:56.773Z"
     },
     "collections.awards:folder-13a3da42:6": {
       "listId": 8681539,
@@ -36831,7 +36831,7 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-20T02:22:14.353Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:22:14.298Z",
+      "lastSemanticRefresh": "2026-08-27T11:09:58.365Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:7": {
@@ -36937,7 +36937,7 @@
       "lastVerified": "2026-08-12T11:48:41.040Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:04.166Z",
+      "lastSemanticRefresh": "2026-08-27T11:09:48.210Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:8": {
@@ -37029,7 +37029,7 @@
       "lastVerified": "2026-08-12T11:48:41.613Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:06.466Z",
+      "lastSemanticRefresh": "2026-08-27T11:09:53.010Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:9": {
@@ -37167,7 +37167,7 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-20T02:22:30.319Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:22:30.285Z",
+      "lastSemanticRefresh": "2026-08-27T11:10:18.838Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:10": {
@@ -37280,7 +37280,7 @@
       "lastVerified": "2026-08-12T11:48:41.507Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:05.071Z",
+      "lastSemanticRefresh": "2026-08-27T11:09:49.081Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:11": {
@@ -37375,7 +37375,7 @@
       "lastVerified": "2026-08-12T11:48:41.815Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:03.679Z",
+      "lastSemanticRefresh": "2026-08-27T11:09:46.676Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:12": {
@@ -37488,7 +37488,7 @@
       "lastVerified": "2026-08-12T11:48:41.860Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:15.592Z",
+      "lastSemanticRefresh": "2026-08-27T11:10:02.457Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:13": {
@@ -37602,7 +37602,7 @@
       "lastVerified": "2026-08-12T11:48:41.860Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:28.199Z",
+      "lastSemanticRefresh": "2026-08-27T11:10:16.141Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:14": {
@@ -37706,7 +37706,7 @@
       "lastVerified": "2026-08-12T11:48:42.152Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:27.117Z",
+      "lastSemanticRefresh": "2026-08-27T11:10:16.002Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:15": {
@@ -37821,7 +37821,7 @@
       "lastVerified": "2026-08-12T11:48:42.474Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:30.465Z",
+      "lastSemanticRefresh": "2026-08-27T11:10:17.607Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:16": {
@@ -37925,7 +37925,7 @@
       "lastVerified": "2026-08-12T11:48:42.443Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:28.955Z",
+      "lastSemanticRefresh": "2026-08-27T11:10:16.875Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:17": {
@@ -38038,7 +38038,7 @@
       "lastVerified": "2026-08-12T11:48:42.235Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:23.920Z",
+      "lastSemanticRefresh": "2026-08-27T11:10:07.793Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:18": {
@@ -38099,7 +38099,7 @@
       "lastVerified": "2026-08-12T11:48:42.289Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:22.269Z",
+      "lastSemanticRefresh": "2026-08-27T11:10:08.376Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:19": {
@@ -38207,7 +38207,7 @@
       "lastVerified": "2026-08-12T11:48:42.625Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:24.865Z",
+      "lastSemanticRefresh": "2026-08-27T11:10:11.387Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:20": {
@@ -38245,7 +38245,7 @@
       "lastVerified": "2026-08-12T11:48:42.535Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:20.122Z",
+      "lastSemanticRefresh": "2026-08-27T11:10:10.811Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-13a3da42:21": {
@@ -38321,7 +38321,7 @@
       "lastVerified": "2026-08-12T11:48:42.585Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:22:27.153Z",
+      "lastSemanticRefresh": "2026-08-27T11:10:12.479Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:0": {
@@ -38418,7 +38418,7 @@
       "lastVerified": "2026-08-12T11:48:42.478Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:27:06.247Z",
+      "lastSemanticRefresh": "2026-08-27T11:15:05.347Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:1": {
@@ -38484,7 +38484,7 @@
       "lastVerified": "2026-08-12T11:48:43.267Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:24:52.449Z",
+      "lastSemanticRefresh": "2026-08-27T11:12:33.476Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:2": {
@@ -38553,7 +38553,7 @@
       "lastVerified": "2026-08-12T11:48:43.312Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:24:52.956Z",
+      "lastSemanticRefresh": "2026-08-27T11:12:32.115Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:3": {
@@ -38623,7 +38623,7 @@
       "lastVerified": "2026-08-12T11:48:43.173Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:24:50.832Z",
+      "lastSemanticRefresh": "2026-08-27T11:12:33.531Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:4": {
@@ -38901,7 +38901,7 @@
       "lastVerified": "2026-08-12T11:48:43.173Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:27:02.008Z",
+      "lastSemanticRefresh": "2026-08-27T11:14:57.366Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:7": {
@@ -38959,7 +38959,7 @@
       "lastVerified": "2026-08-12T11:48:43.674Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:24:36.062Z",
+      "lastSemanticRefresh": "2026-08-27T11:12:13.394Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:8": {
@@ -39012,7 +39012,7 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-20T02:24:36.390Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:24:36.355Z",
+      "lastSemanticRefresh": "2026-08-27T11:12:14.527Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:9": {
@@ -39068,7 +39068,7 @@
       "lastVerified": "2026-08-12T11:48:43.741Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:24:29.379Z",
+      "lastSemanticRefresh": "2026-08-27T11:12:12.456Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:10": {
@@ -39145,7 +39145,7 @@
       "lastVerified": "2026-08-12T11:48:43.700Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:27:01.495Z",
+      "lastSemanticRefresh": "2026-08-27T11:14:53.317Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:11": {
@@ -39520,7 +39520,7 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-20T02:50:02.700Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:29:47.052Z"
+      "lastSemanticRefresh": "2026-08-27T11:18:02.684Z"
     },
     "collections.awards:folder-47ec917f:15": {
       "listId": 8681580,
@@ -39623,7 +39623,7 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-20T02:50:03.231Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:29:58.030Z"
+      "lastSemanticRefresh": "2026-08-27T11:18:09.859Z"
     },
     "collections.awards:folder-47ec917f:16": {
       "listId": 8681582,
@@ -39924,7 +39924,7 @@
       "lastVerified": "2026-08-12T11:48:44.356Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:29:59.371Z",
+      "lastSemanticRefresh": "2026-08-27T11:18:12.813Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:19": {
@@ -39958,7 +39958,7 @@
       "lastVerified": "2026-08-12T11:48:44.126Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:28:04.248Z",
+      "lastSemanticRefresh": "2026-08-27T11:16:08.188Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:20": {
@@ -39996,7 +39996,7 @@
       "lastVerified": "2026-08-12T11:48:44.427Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:29:21.182Z",
+      "lastSemanticRefresh": "2026-08-27T11:17:29.767Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:21": {
@@ -40033,7 +40033,7 @@
       "lastVerified": "2026-08-12T11:48:44.563Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:32:01.172Z",
+      "lastSemanticRefresh": "2026-08-27T11:20:26.845Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:22": {
@@ -40072,7 +40072,7 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-20T02:50:04.400Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:32:16.079Z"
+      "lastSemanticRefresh": "2026-08-27T11:20:43.577Z"
     },
     "collections.awards:folder-47ec917f:23": {
       "listId": 8681589,
@@ -40102,7 +40102,7 @@
       "lastVerified": "2026-08-12T11:48:44.563Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:31:08.809Z",
+      "lastSemanticRefresh": "2026-08-27T11:19:21.483Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:24": {
@@ -40138,7 +40138,7 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-20T02:50:04.894Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:31:12.254Z"
+      "lastSemanticRefresh": "2026-08-27T11:19:32.252Z"
     },
     "collections.awards:folder-47ec917f:20:movie-companion": {
       "listId": 8681592,
@@ -40171,7 +40171,7 @@
       "lastVerified": "2026-08-12T11:48:44.654Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:29:20.159Z",
+      "lastSemanticRefresh": "2026-08-27T11:17:28.343Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:21:movie-companion": {
@@ -40254,7 +40254,7 @@
       "lastVerified": "2026-08-12T11:48:44.857Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:32:03.791Z",
+      "lastSemanticRefresh": "2026-08-27T11:20:29.271Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:22:movie-companion": {
@@ -40394,7 +40394,7 @@
       "lastVerified": "2026-08-12T11:48:44.760Z",
       "writeSchema": 5,
       "posterlessExcluded": 0,
-      "lastSemanticRefresh": "2026-08-20T02:31:11.548Z",
+      "lastSemanticRefresh": "2026-08-27T11:19:26.128Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-47ec917f:24:movie-companion": {
@@ -40563,7 +40563,7 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-20T02:50:09.238Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:34:18.670Z"
+      "lastSemanticRefresh": "2026-08-27T11:22:47.196Z"
     },
     "collections.awards:folder-4ee02f67:1": {
       "listId": 8681599,
@@ -40648,7 +40648,7 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-20T02:33:05.097Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:33:05.052Z",
+      "lastSemanticRefresh": "2026-08-27T11:21:28.323Z",
       "ineligibleExcluded": 0
     },
     "collections.awards:folder-4ee02f67:2": {
@@ -40839,7 +40839,7 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-20T02:50:10.897Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:34:26.459Z"
+      "lastSemanticRefresh": "2026-08-27T11:23:01.627Z"
     },
     "collections.awards:folder-4ee02f67:4": {
       "listId": 8681602,
@@ -41010,12 +41010,12 @@
       "count": 76,
       "scope": "AUTHORITATIVE_CANNES",
       "writeSchema": 5,
-      "ineligibleExcluded": 2,
-      "posterlessExcluded": 0,
+      "ineligibleExcluded": 1,
+      "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-20T02:50:09.202Z",
+      "lastVerified": "2026-08-27T11:23:35.814Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:35:02.513Z"
+      "lastSemanticRefresh": "2026-08-27T11:23:35.779Z"
     },
     "collections.awards:folder-4ee02f67:6": {
       "listId": 8681604,
@@ -41113,7 +41113,7 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-20T02:50:08.499Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:35:22.017Z"
+      "lastSemanticRefresh": "2026-08-27T11:23:59.120Z"
     },
     "collections.awards:folder-4ee02f67:7": {
       "listId": 8681606,
@@ -41178,7 +41178,7 @@
       "syncStatus": "verified",
       "lastVerified": "2026-08-20T02:50:10.273Z",
       "invalidItems": [],
-      "lastSemanticRefresh": "2026-08-20T02:33:52.652Z"
+      "lastSemanticRefresh": "2026-08-27T11:22:15.880Z"
     },
     "collections.decades:collections.decades.2020s:0:summary": {
       "listId": 8681607,
@@ -42515,7 +42515,7 @@
     },
     "collections.directors:folder-0JLCJIWA:1": {
       "listId": 8681614,
-      "fingerprint": "4ffd72f77a9f81a25d27923079edf6f99fbc2c53af3c41389344ed45d88d6bfd",
+      "fingerprint": "87ad47b8e81ab9c6c383a90752eced3450a1391435178b1f0f5c6451db1d6a77",
       "orderedIds": [
         "movie:111",
         "movie:6075",
@@ -42560,7 +42560,7 @@
       "ineligibleExcluded": 4,
       "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:40:40.344Z",
+      "lastVerified": "2026-08-27T11:26:16.442Z",
       "invalidItems": []
     },
     "collections.directors:folder-0NDCDY31:0": {
@@ -43251,7 +43251,7 @@
     },
     "collections.directors:folder-2FUNKZ46:2": {
       "listId": 8681646,
-      "fingerprint": "144a70a9c5603b42a75da1461cf7b214ab8b12eec68ba3240728cffb80eef384",
+      "fingerprint": "01f9ed716bb691a7026baf7c93bb6497bdf2f719e41d5624fb4c9827fe4e192a",
       "orderedIds": [
         "movie:539",
         "movie:567",
@@ -43323,7 +43323,7 @@
       "ineligibleExcluded": 1,
       "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:40:49.291Z",
+      "lastVerified": "2026-08-27T11:26:25.224Z",
       "invalidItems": []
     },
     "collections.directors:folder-2FUNKZ46:3": {
@@ -44408,7 +44408,7 @@
     },
     "collections.directors:folder-B3ZDSG01:1": {
       "listId": 8681686,
-      "fingerprint": "07f306e5045ccd351ae6467528ce7b5322f14e3438b50f7f68a38e19968d28de",
+      "fingerprint": "d78d6c097a5d4a59700780d0a691385c9e55054b7d05efa5b58ce806c85811ad",
       "orderedIds": [
         "movie:129",
         "movie:4935",
@@ -44446,7 +44446,7 @@
       "ineligibleExcluded": 6,
       "posterlessExcluded": 2,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:40:53.907Z",
+      "lastVerified": "2026-08-27T11:26:27.950Z",
       "invalidItems": []
     },
     "collections.directors:folder-BA7JJ48I:0": {
@@ -46423,7 +46423,7 @@
     },
     "collections.directors:folder-P3TT53P3:1": {
       "listId": 8681762,
-      "fingerprint": "f31d226dd051db8f6fd96049b9b1e7a2dcc0c725f104fe74c915c453671ea6b7",
+      "fingerprint": "2ccc52a958b3de793313129f6319a77d2ffd9772d15b8f3b09a4f0573809e106",
       "orderedIds": [
         "movie:11",
         "movie:1895",
@@ -46448,7 +46448,7 @@
       "ineligibleExcluded": 2,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-12T12:27:25.268Z",
+      "lastVerified": "2026-08-27T11:26:30.571Z",
       "invalidItems": []
     },
     "collections.directors:folder-R0TG3ZPQ:0": {
@@ -46973,7 +46973,7 @@
     },
     "collections.directors:folder-SV2DU8QN:2": {
       "listId": 8681783,
-      "fingerprint": "dadae4d218255ba39a9f1a2443ab13f2b8305998fd45ad99d06d6e48c5b74faa",
+      "fingerprint": "7fc716f378169276e1bc3764a1ab9202ee86cf57188c606099336efa3c2d585d",
       "orderedIds": [
         "movie:765",
         "movie:557",
@@ -47001,7 +47001,7 @@
       "ineligibleExcluded": 1,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:40:55.370Z",
+      "lastVerified": "2026-08-27T11:26:31.240Z",
       "invalidItems": [
         {
           "media_type": "movie",
@@ -47056,7 +47056,7 @@
     },
     "collections.directors:folder-TQLTEJ41:1": {
       "listId": 8681786,
-      "fingerprint": "16f463872bd44c073b8cca67bf5479b2f2e1a52568d31a1be231bd6681c8f520",
+      "fingerprint": "928c386b1aefa4f82cf1a9c3b478e11630c720faf30596d888e1c353f5fca52c",
       "orderedIds": [
         "movie:641",
         "movie:44214",
@@ -47077,7 +47077,7 @@
       "ineligibleExcluded": 4,
       "posterlessExcluded": 1,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:40:55.409Z",
+      "lastVerified": "2026-08-27T11:26:31.404Z",
       "invalidItems": []
     },
     "collections.directors:folder-U5WAYZNG:0": {
@@ -47419,7 +47419,7 @@
     },
     "collections.directors:folder-VZAELEDR:2": {
       "listId": 8681801,
-      "fingerprint": "7f3611be0f1fdb28c711b3b1dcb9af96cc6604894228047eed5ba15c3fcce0d1",
+      "fingerprint": "cdd866900d19136ca72ba7705488a9643d2925e7e15e716eb6ac8029665afaf7",
       "orderedIds": [
         "movie:100",
         "movie:107",
@@ -47447,7 +47447,7 @@
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T02:40:55.786Z",
+      "lastVerified": "2026-08-27T11:26:32.139Z",
       "invalidItems": []
     },
     "collections.directors:folder-VZAELEDR:3": {
@@ -114412,9 +114412,9 @@
       "scope": "GLOBAL",
       "writeSchema": 5,
       "ineligibleExcluded": 0,
-      "posterlessExcluded": 14,
+      "posterlessExcluded": 15,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-26T03:04:28.403Z",
+      "lastVerified": "2026-08-27T11:33:36.491Z",
       "invalidItems": []
     },
     "collections.world:collections.world.french:2": {
