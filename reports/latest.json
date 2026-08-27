@@ -1,16 +1,16 @@
 {
   "version": 1,
   "date": "2026-08-27",
-  "mode": "dry-run",
+  "mode": "execute",
   "totals": {
     "considered": 2675,
-    "changed": 12,
-    "skipped": 2663,
+    "changed": 22,
+    "skipped": 2653,
     "failed": 0,
     "created": 0,
     "preservedLastKnownGood": 0,
-    "ineligibleExcluded": 1924,
-    "posterlessExcluded": 6529
+    "ineligibleExcluded": 1928,
+    "posterlessExcluded": 6531
   },
   "rails": [
     {
@@ -1188,7 +1188,7 @@
     },
     {
       "key": "collections.actors:folder-5R6SLQIA:2",
-      "status": "would-update",
+      "status": "updated",
       "listId": 8680850,
       "count": 150,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
@@ -1463,7 +1463,7 @@
     },
     {
       "key": "collections.actors:folder-6WUONCAR:2",
-      "status": "would-update",
+      "status": "updated",
       "listId": 8680881,
       "count": 97,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
@@ -2490,7 +2490,7 @@
     },
     {
       "key": "collections.actors:folder-D8PPUHIE:2",
-      "status": "would-update",
+      "status": "updated",
       "listId": 8681009,
       "count": 52,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
@@ -4221,12 +4221,13 @@
     },
     {
       "key": "collections.actors:folder-NBIFUAKW:2",
-      "status": "unchanged",
+      "status": "updated",
+      "listId": 8681205,
       "count": 111,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "ineligibleExcluded": 4,
       "posterlessExcluded": 0,
-      "checkpointRefresh": true
+      "changeRatio": 0
     },
     {
       "key": "collections.actors:folder-NBIFUAKW:3",
@@ -6770,7 +6771,8 @@
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "ineligibleExcluded": 6,
       "posterlessExcluded": 1,
-      "checkpointRefresh": true
+      "checkpointRefresh": true,
+      "serverOrderEquivalent": true
     },
     {
       "key": "collections.actors:folder-ZJ8TOJOV:3",
@@ -7230,13 +7232,12 @@
     },
     {
       "key": "collections.decades:collections.decades.1950s:1",
-      "status": "would-update",
-      "listId": 8684420,
-      "count": 168,
+      "status": "unchanged",
+      "count": 171,
       "scope": "GLOBAL",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 29,
-      "changeRatio": 0.017543859649122806
+      "checkpointRefresh": true
     },
     {
       "key": "collections.decades:collections.decades.1950s:10",
@@ -7330,13 +7331,12 @@
     },
     {
       "key": "collections.decades:collections.decades.1950s:2",
-      "status": "would-update",
-      "listId": 8684421,
+      "status": "unchanged",
       "count": 21,
       "scope": "GLOBAL:VOTE_QUORUM=2000",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "changeRatio": 0
+      "checkpointRefresh": true
     },
     {
       "key": "collections.decades:collections.decades.1950s:20",
@@ -7394,13 +7394,12 @@
     },
     {
       "key": "collections.decades:collections.decades.1950s:5",
-      "status": "would-update",
-      "listId": 8684424,
+      "status": "unchanged",
       "count": 29,
       "scope": "GLOBAL",
       "ineligibleExcluded": 0,
-      "posterlessExcluded": 50,
-      "changeRatio": 0
+      "posterlessExcluded": 52,
+      "checkpointRefresh": true
     },
     {
       "key": "collections.decades:collections.decades.1950s:6",
@@ -10336,7 +10335,7 @@
       "status": "unchanged",
       "count": 19,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
-      "ineligibleExcluded": 4,
+      "ineligibleExcluded": 6,
       "posterlessExcluded": 0,
       "checkpointRefresh": true
     },
@@ -10345,7 +10344,7 @@
       "status": "unchanged",
       "count": 19,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
-      "ineligibleExcluded": 4,
+      "ineligibleExcluded": 6,
       "posterlessExcluded": 0,
       "checkpointRefresh": true
     },
@@ -10662,22 +10661,23 @@
     },
     {
       "key": "collections.discover:collections.discover.trending-2:0",
-      "status": "unchanged",
-      "count": 168,
+      "status": "updated",
+      "listId": 8681821,
+      "count": 155,
       "scope": "GLOBAL",
       "ineligibleExcluded": 2,
       "posterlessExcluded": 0,
-      "checkpointRefresh": true
+      "changeRatio": 0.20833333333333334
     },
     {
       "key": "collections.discover:collections.discover.trending-2:1",
-      "status": "would-update",
+      "status": "updated",
       "listId": 8681822,
-      "count": 193,
+      "count": 187,
       "scope": "GLOBAL",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "changeRatio": 0.010362694300518135
+      "changeRatio": 0.27979274611398963
     },
     {
       "key": "collections.discover:collections.discover.trending-2:2",
@@ -15622,21 +15622,23 @@
     },
     {
       "key": "collections.streaming:collections.streaming.apple-tv:0",
-      "status": "unchanged",
-      "count": 1,
+      "status": "updated",
+      "listId": 8682043,
+      "count": 2,
       "scope": "GR",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "checkpointRefresh": true
+      "changeRatio": 0.5
     },
     {
       "key": "collections.streaming:collections.streaming.apple-tv:1",
-      "status": "unchanged",
+      "status": "updated",
+      "listId": 8682044,
       "count": 11,
       "scope": "GR",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "checkpointRefresh": true
+      "changeRatio": 0.18181818181818182
     },
     {
       "key": "collections.streaming:collections.streaming.apple-tv:10",
@@ -16270,21 +16272,23 @@
     },
     {
       "key": "collections.streaming:collections.streaming.disney-plus:0",
-      "status": "unchanged",
+      "status": "updated",
+      "listId": 8682104,
       "count": 9,
       "scope": "GR",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "checkpointRefresh": true
+      "changeRatio": 0.4444444444444444
     },
     {
       "key": "collections.streaming:collections.streaming.disney-plus:1",
-      "status": "unchanged",
-      "count": 27,
+      "status": "updated",
+      "listId": 8682105,
+      "count": 24,
       "scope": "GR",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "checkpointRefresh": true
+      "changeRatio": 0.18518518518518517
     },
     {
       "key": "collections.streaming:collections.streaming.disney-plus:10",
@@ -16657,21 +16661,23 @@
     },
     {
       "key": "collections.streaming:collections.streaming.hbo-max:0",
-      "status": "unchanged",
+      "status": "updated",
+      "listId": 8682147,
       "count": 5,
       "scope": "GR",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "checkpointRefresh": true
+      "changeRatio": 0
     },
     {
       "key": "collections.streaming:collections.streaming.hbo-max:1",
-      "status": "unchanged",
-      "count": 13,
+      "status": "updated",
+      "listId": 8682148,
+      "count": 14,
       "scope": "GR",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "checkpointRefresh": true
+      "changeRatio": 0.35714285714285715
     },
     {
       "key": "collections.streaming:collections.streaming.hbo-max:10",
@@ -17278,22 +17284,23 @@
     },
     {
       "key": "collections.streaming:collections.streaming.netflix:0",
-      "status": "unchanged",
-      "count": 11,
+      "status": "updated",
+      "listId": 8682239,
+      "count": 12,
       "scope": "GR",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "checkpointRefresh": true
+      "changeRatio": 0.4166666666666667
     },
     {
       "key": "collections.streaming:collections.streaming.netflix:1",
-      "status": "would-update",
+      "status": "updated",
       "listId": 8682240,
-      "count": 37,
+      "count": 34,
       "scope": "GR",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "changeRatio": 0.02702702702702703
+      "changeRatio": 0.3333333333333333
     },
     {
       "key": "collections.streaming:collections.streaming.netflix:10",
@@ -18098,12 +18105,13 @@
     },
     {
       "key": "collections.streaming:collections.streaming.peacock:1",
-      "status": "unchanged",
-      "count": 5,
+      "status": "updated",
+      "listId": 8682331,
+      "count": 6,
       "scope": "WORLDWIDE",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "checkpointRefresh": true
+      "changeRatio": 0.8333333333333334
     },
     {
       "key": "collections.streaming:collections.streaming.peacock:10",
@@ -18476,21 +18484,23 @@
     },
     {
       "key": "collections.streaming:collections.streaming.prime-video:0",
-      "status": "unchanged",
-      "count": 6,
+      "status": "updated",
+      "listId": 8682374,
+      "count": 5,
       "scope": "GR",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "checkpointRefresh": true
+      "changeRatio": 0.16666666666666666
     },
     {
       "key": "collections.streaming:collections.streaming.prime-video:1",
-      "status": "unchanged",
-      "count": 12,
+      "status": "updated",
+      "listId": 8682375,
+      "count": 15,
       "scope": "GR",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "checkpointRefresh": true
+      "changeRatio": 0.3333333333333333
     },
     {
       "key": "collections.streaming:collections.streaming.prime-video:10",
@@ -19619,7 +19629,7 @@
     },
     {
       "key": "collections.studios:folder-4ZV8HZGY:4",
-      "status": "would-update",
+      "status": "updated",
       "listId": 8682554,
       "count": 42,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
@@ -19809,12 +19819,13 @@
     },
     {
       "key": "collections.studios:folder-A59XSVAT:4",
-      "status": "unchanged",
+      "status": "updated",
+      "listId": 8682579,
       "count": 197,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
-      "checkpointRefresh": true
+      "changeRatio": 0
     },
     {
       "key": "collections.studios:folder-A59XSVAT:5",
@@ -19962,7 +19973,7 @@
     },
     {
       "key": "collections.studios:folder-HIU1YFQA:4",
-      "status": "would-update",
+      "status": "updated",
       "listId": 8682597,
       "count": 172,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
@@ -20008,7 +20019,7 @@
     },
     {
       "key": "collections.studios:folder-IAL16XW3:4",
-      "status": "would-update",
+      "status": "updated",
       "listId": 8682603,
       "count": 199,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
@@ -20144,7 +20155,7 @@
     },
     {
       "key": "collections.studios:folder-V0MRWXHJ:4",
-      "status": "would-update",
+      "status": "updated",
       "listId": 8682622,
       "count": 162,
       "scope": "GLOBAL:FEATURE_FILMS_VERIFIED",
@@ -24087,87 +24098,87 @@
     }
   ],
   "performance": {
-    "totalMs": 962299,
+    "totalMs": 177648,
     "slowestRails": [
       {
         "key": "collections.runtime:collections.runtime.short:0",
-        "durationMs": 84881
-      },
-      {
-        "key": "collections.runtime:collections.runtime.long:0",
-        "durationMs": 74454
+        "durationMs": 18420
       },
       {
         "key": "collections.runtime:collections.runtime.standard:0",
-        "durationMs": 71352
+        "durationMs": 17074
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:2",
-        "durationMs": 57080
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:3",
-        "durationMs": 52163
-      },
-      {
-        "key": "collections.streaming:collections.streaming.paramount-plus:4",
-        "durationMs": 50702
-      },
-      {
-        "key": "collections.streaming:collections.streaming.amc-plus:0",
-        "durationMs": 43562
-      },
-      {
-        "key": "collections.runtime:collections.runtime.epic:0",
-        "durationMs": 43476
+        "key": "collections.runtime:collections.runtime.long:0",
+        "durationMs": 16695
       },
       {
         "key": "collections.streaming:collections.streaming.amc-plus:1",
-        "durationMs": 39261
+        "durationMs": 10036
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:6",
-        "durationMs": 34902
+        "key": "collections.streaming:collections.streaming.amc-plus:0",
+        "durationMs": 8914
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:19",
-        "durationMs": 33811
+        "key": "collections.runtime:collections.runtime.epic:0",
+        "durationMs": 8741
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:12",
-        "durationMs": 33532
+        "key": "collections.streaming:collections.streaming.amc-plus:14",
+        "durationMs": 6925
       },
       {
-        "key": "collections.streaming:collections.streaming.amc-plus:2",
-        "durationMs": 32904
+        "key": "collections.streaming:collections.streaming.amc-plus:18",
+        "durationMs": 5743
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:18",
-        "durationMs": 32204
+        "key": "collections.streaming:collections.streaming.amc-plus:17",
+        "durationMs": 5341
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:13",
-        "durationMs": 31944
+        "key": "collections.streaming:collections.streaming.amc-plus:30",
+        "durationMs": 5128
       },
       {
-        "key": "collections.streaming:collections.streaming.amc-plus:3",
-        "durationMs": 31044
+        "key": "collections.streaming:collections.streaming.amc-plus:15",
+        "durationMs": 5114
       },
       {
-        "key": "collections.decades:collections.decades.1950s:6",
-        "durationMs": 30313
+        "key": "collections.streaming:collections.streaming.amc-plus:32",
+        "durationMs": 5016
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:8",
-        "durationMs": 27585
+        "key": "collections.streaming:collections.streaming.amc-plus:20",
+        "durationMs": 4870
       },
       {
-        "key": "collections.streaming:collections.streaming.amc-plus:4",
-        "durationMs": 26897
+        "key": "collections.streaming:collections.streaming.amc-plus:16",
+        "durationMs": 4753
       },
       {
-        "key": "collections.streaming:collections.streaming.paramount-plus:5",
-        "durationMs": 25437
+        "key": "collections.streaming:collections.streaming.amc-plus:21",
+        "durationMs": 4742
+      },
+      {
+        "key": "collections.streaming:collections.streaming.amc-plus:28",
+        "durationMs": 4438
+      },
+      {
+        "key": "collections.streaming:collections.streaming.amc-plus:31",
+        "durationMs": 4350
+      },
+      {
+        "key": "collections.streaming:collections.streaming.paramount-plus:2",
+        "durationMs": 4206
+      },
+      {
+        "key": "collections.streaming:collections.streaming.amc-plus:34",
+        "durationMs": 4127
+      },
+      {
+        "key": "collections.streaming:collections.streaming.amc-plus:38",
+        "durationMs": 3991
       }
     ]
   }
