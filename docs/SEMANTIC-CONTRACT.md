@@ -276,6 +276,11 @@ dynamic curated merge/order tests, and the Warner media-specific company split.
   never masquerade as empty regional availability.
 - World rails use origin-country semantics. Awards contain winner works, not
   people. Released-only rails cap dates at the current Athens date.
+- Ambiguous official award titles fail closed unless a reviewed TMDB identity
+  is recorded in `config/awards.yml` and revalidated through the details
+  endpoint. Cannes 1967 Grand Prix winner `ACCIDENT` is pinned to Joseph
+  Losey's released feature `movie:74544`; this prevents generic title search
+  drift from failing the weekly authoritative refresh or selecting a namesake.
 - Spain is exactly `ES`. Latin America is the reviewed origin union
   `MX|GT|HN|SV|NI|CR|PA|CU|DO|PR|CO|VE|EC|PE|BO|PY|UY|AR|CL|BR` and excludes
   Spain. Portugal is exactly `PT`. None uses an original-language restriction.

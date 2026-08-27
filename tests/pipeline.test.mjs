@@ -629,6 +629,24 @@ test("reviewed award overrides bypass fuzzy year matching but verify the TMDB en
   assert.equal(item.id, 675171); assert.equal(item._override_key, "1956:globes:9:dangerous curves uk");
 });
 
+test("ambiguous 1967 Cannes Accident winner uses its reviewed Joseph Losey TMDB identity", async () => {
+  const awards = await readJson(new URL("../config/awards.yml", import.meta.url));
+  assert.equal(awards.authorityOverrides["1967:grand_prix:accident"], 74544);
+  const client = new TmdbClient({ readToken: "test", fetchImpl: async (url) => {
+    assert.match(String(url), /\/movie\/74544/);
+    return new Response(JSON.stringify({ id: 74544, title: "Accident", original_title: "Accident", release_date: "1967-02-09", vote_count: 42, poster_path: "/verified.jpg", adult: false, video: false }), { status: 200 });
+  } });
+  const item = await client.resolveCannesWork(
+    { year: 1967, workTitle: "ACCIDENT", contributor: "Joseph LOSEY", authorityUrl: "https://www.festival-cannes.com/en/retrospective/1967/awards/" },
+    "grand_prix",
+    awards.authorityOverrides,
+    "movie",
+  );
+  assert.equal(item.id, 74544);
+  assert.equal(item._release_year, 1967);
+  assert.equal(item._override_key, "1967:grand_prix:accident");
+});
+
 test("concurrent TMDB cache coalesces identical reads", async () => {
   let calls = 0; const client = new TmdbClient({ readToken: "test", fetchImpl: async () => { calls++; return new Response(JSON.stringify({ results: [{ id: 8, provider_name: "Netflix" }] }), { status: 200 }); } });
   const [a, b, c] = await Promise.all([client.providers("movie"), client.providers("movie"), client.providers("movie")]);
