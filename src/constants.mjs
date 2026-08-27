@@ -1,7 +1,6 @@
 import path from "node:path";
 
 export const ROOT = path.resolve(import.meta.dirname, "..");
-export const BASE_INPUT_FILE = path.join(ROOT, "nuvio collections v4.5.13 - static-studio-lists-released.json");
 export const INPUT_FILE = path.join(ROOT, "data", "nuvio-collections-v5.0.1-source.json");
 export const RAILS_FILE = path.join(ROOT, "config", "rails.yml");
 export const PROVIDERS_FILE = path.join(ROOT, "config", "providers.yml");

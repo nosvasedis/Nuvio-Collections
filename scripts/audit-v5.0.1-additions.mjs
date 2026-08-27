@@ -1,15 +1,18 @@
 import path from "node:path";
-import { BASE_INPUT_FILE, INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, ROOT } from "../src/constants.mjs";
+import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, ROOT } from "../src/constants.mjs";
 import { readJson, writeJson, athensDate, mapLimit, normalizeText } from "../src/utils.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
 import { materializeRail, requireEligibleReleasedItems, requireUsablePosters } from "../src/materialize.mjs";
 
-const [base, input, manifest, providers] = await Promise.all([readJson(BASE_INPUT_FILE), readJson(INPUT_FILE), readJson(RAILS_FILE), readJson(PROVIDERS_FILE)]);
-const oldFolderIds = new Set(base.flatMap((collection) => collection.folders).map((folder) => folder.id));
-const newFolders = input.flatMap((collection) => collection.folders).filter((folder) => !oldFolderIds.has(folder.id));
-const newFolderIds = new Set(newFolders.map((folder) => folder.id));
+const reportPath = path.join(ROOT, "reports", "v5.0.1-additions.json");
+const [baselineReport, input, manifest, providers] = await Promise.all([readJson(reportPath), readJson(INPUT_FILE), readJson(RAILS_FILE), readJson(PROVIDERS_FILE)]);
+const additionKeys = new Set(baselineReport.results.map((item) => item.key));
+const rails = manifest.rails.filter((rail) => additionKeys.has(rail.key));
+const allFolders = new Map(input.flatMap((collection) => collection.folders).map((folder) => [folder.id, folder]));
+const newFolderIds = new Set(rails.map((rail) => rail.folderId));
+const newFolders = [...newFolderIds].map((folderId) => allFolders.get(folderId));
 const folderById = new Map(newFolders.map((folder) => [folder.id, folder]));
-const rails = manifest.rails.filter((rail) => newFolderIds.has(rail.folderId));
+if (rails.length !== additionKeys.size || newFolders.some((folder) => !folder)) throw new Error("The locked v5.0.1 additions inventory no longer maps exactly to the active catalog");
 const client = new TmdbClient();
 const today = athensDate();
 
@@ -33,7 +36,6 @@ const report = {
   totals: { ok: results.filter((item) => item.status === "ok").length, empty: results.filter((item) => item.status === "empty").length, failed: results.filter((item) => item.status === "failed").length },
   problems: results.filter((item) => item.status !== "ok"), results,
 };
-const reportPath = path.join(ROOT, "reports", "v5.0.1-additions.json");
 await writeJson(reportPath, report);
 console.log(JSON.stringify({ report: reportPath, date: report.date, folders: report.folders, rails: report.rails, totals: report.totals, problems: report.problems }, null, 2));
 if (report.totals.empty || report.totals.failed) process.exitCode = 1;

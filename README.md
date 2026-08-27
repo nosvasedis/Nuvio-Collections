@@ -46,7 +46,7 @@ resumable synchronizer και το GitHub Actions workflow που κρατά τ�
 | Κενά folders | **0** |
 | Unresolved list IDs | **0** |
 | Trakt / runtime-addon sources | **0 / 0** |
-| Automated tests | **53 / 53** |
+| Automated tests | **64 / 64** |
 | Exact remote audit | **2.675 / 2.675 valid** |
 
 Τα sources που επέστρεφαν αποδεδειγμένα μηδενικό αποτέλεσμα με τον ακριβή
@@ -354,6 +354,21 @@ lists και ολοκληρώθηκε σε περίπου 11 λεπτά.
 - Worldwide failure: διατήρηση previous last-known-good list.
 - Μεγάλη μεταβολή: δεύτερο ανεξάρτητο fetch.
 - Candidate failure: κανένα clear ή partial production write.
+- Κάθε rail εκτελείται ως ανεξάρτητη mini-transaction. Ένα προβληματικό rail
+  δεν ακυρώνει τις ασφαλείς ενημερώσεις των υπολοίπων.
+- Αν η προετοιμασία αποτύχει, το προηγούμενο rail διατηρείται μόνο όταν το
+  definition fingerprint είναι ίδιο και νέο exact v3 read-back επιβεβαιώσει
+  τα ίδια non-empty ordered typed IDs. Καταγράφεται ως
+  `held-last-known-good`, όχι ως φρέσκια ενημέρωση.
+- Αν αποτύχει write/rebuild, επιτρέπεται ανάκτηση μόνο μετά από exact
+  επαναφορά και read-back της προηγούμενης σειράς. Ανεπιβεβαίωτο rollback
+  παραμένει hard failure.
+- Τα versioned Oscar/Cannes snapshots δεν ξαναπερνούν κάθε επτά ημέρες από
+  εύθραυστο fuzzy title resolution. Ανανεώνονται όταν αλλάξει το snapshot,
+  mapping ή reviewed override· οι live Golden Globes συνεχίζουν περιοδικά.
+- Το remote audit επανελέγχει μόνο το αποτυχημένο subset, με fresh clients και
+  bounded exponential settling. Εκτελείται ακόμη και μετά από hard sync
+  failure ώστε να αποτυπώνεται η πραγματική remote κατάσταση.
 - Duplicate rail key: fail closed πριν από create.
 - Ambiguous create response: κανένα blind retry/duplicate.
 - Typed TMDB `Media is invalid`: quarantine μόνο του item, retry σε 30 ημέρες.
@@ -388,7 +403,7 @@ lists και ολοκληρώθηκε σε περίπου 11 λεπτά.
 Απαιτείται Node.js 22+· το hosted workflow χρησιμοποιεί Node.js 24.
 
 ```powershell
-npm test                    # 53 automated contract tests
+npm test                    # 64 automated contract tests
 npm run audit               # structure, counts, locks και compatibility
 npm run sync:dry            # live candidates, χωρίς remote writes
 npm run sync                # production reconciliation

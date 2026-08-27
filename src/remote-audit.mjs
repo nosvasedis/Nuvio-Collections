@@ -4,6 +4,9 @@ import { WRITE_SCHEMA_VERSION, adjacentOrderEquivalent, permitsTmdbAdjacentOrder
 import { athensDate, fingerprint, mapLimit, readJson, writeJson } from "./utils.mjs";
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+export function remoteAuditRetryDelay(attempt, baseMs = Number(process.env.NUVIO_REMOTE_AUDIT_RETRY_DELAY_MS ?? 5000)) {
+  return Math.min(60000, Math.max(1000, Number(baseMs)) * 2 ** Math.max(0, attempt));
+}
 
 function definitiveNotFound(error) {
   return /\b404\b|status_code["':\s]+34\b|resource you requested could not be found/i.test(String(error?.message ?? error));
@@ -111,13 +114,16 @@ export async function auditRemoteLists({ execute = false, client = new TmdbClien
   };
   let results = await mapLimit(rails, 16, auditRail);
   const initialFailed = results.filter((item) => item.status === "failed").length;
-  const maxRetries = Math.max(0, Math.min(Number(process.env.NUVIO_REMOTE_AUDIT_RETRIES ?? 2), 3));
+  const initialFailureSamples = results.filter((item) => item.status === "failed").slice(0, 12)
+    .map((item) => Object.fromEntries(Object.entries(item).filter(([key]) => !key.startsWith("_"))));
+  const maxRetries = Math.max(0, Math.min(Number(process.env.NUVIO_REMOTE_AUDIT_RETRIES ?? 3), 4));
   let retryPasses = 0;
   for (let attempt = 0; attempt < maxRetries; attempt++) {
     const failedIndexes = results.map((item, index) => item.status === "failed" ? index : -1).filter((index) => index >= 0);
     if (!failedIndexes.length) break;
     retryPasses++;
-    await wait(Math.max(1000, Number(process.env.NUVIO_REMOTE_AUDIT_RETRY_DELAY_MS ?? 5000)));
+    console.error(`[remote-audit] retry ${retryPasses}/${maxRetries}: rechecking only ${failedIndexes.length} failed rails with a fresh client`);
+    await wait(remoteAuditRetryDelay(attempt));
     const retryClient = new TmdbClient({ readToken: client.readToken, userToken: client.userToken, language: client.language, fetchImpl: client.fetchImpl });
     const retried = await mapLimit(failedIndexes, Math.min(8, failedIndexes.length), (index) => auditRail(rails[index], retryClient, { allowRepairs: attempt === maxRetries - 1 }));
     for (let i = 0; i < failedIndexes.length; i++) results[failedIndexes[i]] = retried[i];
@@ -175,7 +181,7 @@ export async function auditRemoteLists({ execute = false, client = new TmdbClien
     if (repairable.length || repairableIneligible.length || orderRewriteAttempts) await writeJson(STATE_FILE, state);
   }
   const reportResults = results.filter((item) => item.status !== "valid").map((item) => Object.fromEntries(Object.entries(item).filter(([key]) => !key.startsWith("_"))));
-  const report = { version: 1, date: today, mode: execute ? "execute" : "dry-run", totals: { considered: results.length, valid: results.filter((item) => item.status === "valid").length, initialFailed, recoveredAfterRetry: initialFailed - failed.length - repairable.length - (execute ? 0 : repairableIneligible.length + repairableOrderRewrite.length), retryPasses, repairedDeleted: execute ? repairableDeleted.length : 0, repairableDeleted: repairableDeleted.length, repairedIneligible: execute ? results.filter((item) => item._repairedIneligible).length : 0, repairableIneligible: repairableIneligible.length, repairedOrderRewrites: execute ? results.filter((item) => item._orderRewritten).length : 0, repairableOrderRewrites: orderRewriteAttempts, repairedOrderNormalizations: execute ? repairableOrder.length : 0, repairableOrderNormalizations: repairableOrder.length, failed: failed.length }, results: reportResults };
+  const report = { version: 1, date: today, mode: execute ? "execute" : "dry-run", totals: { considered: results.length, valid: results.filter((item) => item.status === "valid").length, initialFailed, recoveredAfterRetry: initialFailed - failed.length - repairable.length - (execute ? 0 : repairableIneligible.length + repairableOrderRewrite.length), retryPasses, repairedDeleted: execute ? repairableDeleted.length : 0, repairableDeleted: repairableDeleted.length, repairedIneligible: execute ? results.filter((item) => item._repairedIneligible).length : 0, repairableIneligible: repairableIneligible.length, repairedOrderRewrites: execute ? results.filter((item) => item._orderRewritten).length : 0, repairableOrderRewrites: orderRewriteAttempts, repairedOrderNormalizations: execute ? repairableOrder.length : 0, repairableOrderNormalizations: repairableOrder.length, failed: failed.length }, initialFailureSamples, results: reportResults };
   await writeJson(REMOTE_AUDIT_REPORT_FILE, report);
   if (results.length !== EXPECTED.materialized || failed.length) throw new Error(`Remote audit failed closed: considered=${results.length}, failed=${failed.length}; see ${REMOTE_AUDIT_REPORT_FILE}`);
   return report;

@@ -6,8 +6,8 @@ import { auditRepository } from "../src/validate.mjs";
 import { compile } from "../src/compiler.mjs";
 import { runtimeBucket, dailyRuntimeSelection, chooseAvailability, materializeRail, applySemanticPredicates, applyContentSafetyPredicates, discoverParams, streamingRecognitionFloor, EXPLICIT_CONTENT_KEYWORD_IDS, isSubstantiveCastCredit, isFeatureFilm, requireEligibleReleasedItems, requireUsablePosters } from "../src/materialize.mjs";
 import { TmdbClient } from "../src/tmdb.mjs";
-import { adjacentOrderEquivalent, confirmationCompatible, normalizeCandidateItems, orderedIdsEqual, permitsTmdbAdjacentOrderNormalization, reconcileWithReadbackRecovery, semanticRefreshDue, verifyReadback } from "../src/sync.mjs";
-import { boundedOrderEquivalent, rewriteExactOrder, v3EligibilityViolations } from "../src/remote-audit.mjs";
+import { adjacentOrderEquivalent, awardRefreshDecision, awardSourceFingerprint, confirmationCompatible, hasVerifiedLastKnownGood, normalizeCandidateItems, orderedIdsEqual, permitsTmdbAdjacentOrderNormalization, preserveVerifiedLastKnownGood, railDefinitionFingerprint, reconcileWithReadbackRecovery, semanticRefreshDue, verifyReadback } from "../src/sync.mjs";
+import { boundedOrderEquivalent, remoteAuditRetryDelay, rewriteExactOrder, v3EligibilityViolations } from "../src/remote-audit.mjs";
 import { INPUT_FILE, OUTPUT_FILE, RECOMMENDED_FOLDER_ID, RECOMMENDED_CATALOGS, EXPECTED, RETIRED_RAIL_REASONS, CATALOG_REMOVED_RAIL_REASONS, COUNTRY_BY_FOLDER } from "../src/constants.mjs";
 import { readJson, fingerprint, dedupeLikelyDuplicateWorks } from "../src/utils.mjs";
 import { assertNuvioMediaTypeContract, emulateNuvio083MediaType } from "../src/media-contract.mjs";
@@ -290,6 +290,29 @@ test("read-back recovery remains fail-closed after its single bounded rebuild", 
   );
 });
 
+test("a failed rebuild restores and exact-verifies the previous typed order", async () => {
+  const oldItems = [{ id: 90, media_type: "movie" }, { id: 91, media_type: "movie" }];
+  const newItems = [{ id: 1, media_type: "movie" }];
+  let mode = "empty";
+  const writes = [];
+  const client = {
+    clearList: async () => { mode = "empty"; },
+    listV4All: async () => ({ results: [] }),
+    addItems: async (_listId, items) => {
+      writes.push(items.map((item) => `${item.media_type}:${item.id}`));
+      mode = items[0]?.id === 90 ? "old" : "bad-new";
+    },
+    listV3All: async () => ({ items: mode === "old" ? oldItems : [] }),
+  };
+  await assert.rejects(
+    reconcileWithReadbackRecovery(client, 12, newItems, oldItems, { waitImpl: async () => {} }),
+    (error) => error.code === "TMDB_READBACK_MISMATCH"
+      && error.rollbackVerified === true
+      && orderedIdsEqual(error.rollbackIds, ["movie:90", "movie:91"]),
+  );
+  assert.deepEqual(writes, [["movie:1"], ["movie:1"], ["movie:90", "movie:91"]]);
+});
+
 test("remote order repair uses one ordered batch and returns a bounded settled order", async () => {
   const events = [];
   const expected = ["movie:1", "movie:2", "movie:3"];
@@ -305,6 +328,13 @@ test("remote order repair uses one ordered batch and returns a bounded settled o
   assert.equal(boundedOrderEquivalent(expected, ["movie:3", "movie:2", "movie:1"]), false);
   assert.equal(boundedOrderEquivalent(["movie:1", "movie:2", "movie:3", "movie:4"], ["movie:2", "movie:1", "movie:3", "movie:4"]), true);
   assert.equal(boundedOrderEquivalent(expected, ["movie:1", "movie:4", "movie:3"]), false);
+});
+
+test("remote audit retries use bounded exponential settling", () => {
+  assert.equal(remoteAuditRetryDelay(0, 500), 1000);
+  assert.equal(remoteAuditRetryDelay(0, 5000), 5000);
+  assert.equal(remoteAuditRetryDelay(1, 5000), 10000);
+  assert.equal(remoteAuditRetryDelay(8, 5000), 60000);
 });
 
 test("Nuvio-facing v3 eligibility rejects postponed, posterless and explicit items", () => {
@@ -332,11 +362,31 @@ test("large-change confirmation tolerates tiny live churn but rejects semantic d
   assert.equal(confirmationCompatible(["tv:1", "tv:2", "tv:3", "tv:4"], ["tv:7"]), false);
 });
 
-test("verified award snapshots refresh weekly, while force remains available", () => {
+test("award refresh is input-versioned for static snapshots and time-based for live authorities", () => {
   const now = new Date("2026-08-10T04:07:00Z");
   assert.equal(semanticRefreshDue({ lastVerified: "2026-08-09T04:07:00Z" }, now, 7), false);
   assert.equal(semanticRefreshDue({ lastSemanticRefresh: "2026-08-03T04:06:59Z" }, now, 7), true);
   assert.equal(semanticRefreshDue({}, now, 7), true);
+  const verified = { listId: 7, syncStatus: "verified", count: 2, orderedIds: ["movie:1", "movie:2"], lastSemanticRefresh: "2026-07-01T00:00:00Z", awardSourceFingerprint: "same" };
+  assert.deepEqual(awardRefreshDecision(verified, { cannesCategory: "palme-dor" }, "same", now, 7), { refresh: false, reason: "versioned-static-snapshot" });
+  assert.deepEqual(awardRefreshDecision(verified, { cannesCategory: "palme-dor" }, "changed", now, 7), { refresh: true, reason: "source-changed" });
+  assert.deepEqual(awardRefreshDecision(verified, { categoryId: 1 }, "same", now, 7), { refresh: true, reason: "live-authority-refresh-due" });
+  assert.deepEqual(awardRefreshDecision({ ...verified, lastFailedAwardSourceFingerprint: "same", nextSemanticRetryAt: "2026-08-17T04:07:00Z" }, { cannesCategory: "palme-dor" }, "same", now, 7), { refresh: false, reason: "failure-backoff" });
+  assert.equal(awardSourceFingerprint({ cannesCategory: "x" }, { authorityOverrides: {}, nonWorkWinners: [] }, { academyRevision: "a", cannesRevision: "c" }), awardSourceFingerprint({ cannesCategory: "x" }, { authorityOverrides: {}, nonWorkWinners: [] }, { academyRevision: "different", cannesRevision: "c" }));
+  assert.notEqual(awardSourceFingerprint({ cannesCategory: "x" }, { authorityOverrides: {}, nonWorkWinners: [] }, { academyRevision: "a", cannesRevision: "c" }), awardSourceFingerprint({ cannesCategory: "x" }, { authorityOverrides: {}, nonWorkWinners: [] }, { academyRevision: "a", cannesRevision: "changed" }));
+});
+
+test("last-known-good preservation requires a non-empty verified typed checkpoint and exact fresh v3 read-back", async () => {
+  const definitionFingerprint = railDefinitionFingerprint({ key: "rail", mediaType: "TV", params: {} });
+  const prior = { listId: 77, syncStatus: "verified", count: 2, scope: "GLOBAL", orderedIds: ["tv:4", "tv:5"], writeSchema: 5, railDefinitionFingerprint: definitionFingerprint };
+  assert.equal(hasVerifiedLastKnownGood(prior), true);
+  assert.equal(hasVerifiedLastKnownGood({ ...prior, count: 1 }), false);
+  assert.equal(hasVerifiedLastKnownGood({ ...prior, orderedIds: ["tv:4", "tv:4"] }), false);
+  assert.equal(hasVerifiedLastKnownGood({ ...prior, orderedIds: ["4", "tv:5"] }), false);
+  const held = await preserveVerifiedLastKnownGood({ listV3All: async () => ({ items: [{ id: 4, media_type: "tv" }, { id: 5, media_type: "tv" }] }) }, { key: "rail" }, prior, new Error("transient upstream failure"), { attempts: 1, definitionFingerprint });
+  assert.deepEqual(held, { key: "rail", listId: 77, status: "held-last-known-good", count: 2, scope: "GLOBAL", phase: "preparation", warning: "transient upstream failure" });
+  assert.equal(await preserveVerifiedLastKnownGood({ listV3All: async () => ({ items: [{ id: 5, media_type: "tv" }, { id: 4, media_type: "tv" }] }) }, { key: "rail" }, prior, new Error("drift"), { attempts: 1 }), null);
+  assert.equal(await preserveVerifiedLastKnownGood({ listV3All: async () => ({ items: [{ id: 4, media_type: "tv" }, { id: 5, media_type: "tv" }] }) }, { key: "rail" }, prior, new Error("changed predicate"), { attempts: 1, definitionFingerprint: "different" }), null);
 });
 
 test("streaming requests only allowed monetization and prefers successful GR", async () => {
@@ -384,6 +434,8 @@ test("workflow has one native Europe/Athens schedule", async () => {
   assert.match(workflow, /name: Execute sync\s+id: execute_sync/);
   assert.match(workflow, /name: Checkpoint sync progress\s+if: always\(\) && steps\.execute_sync\.outcome != 'skipped' && \(github\.event_name == 'schedule' \|\| !inputs\.dry_run\)/);
   assert.match(workflow, /name: Exact remote audit and deleted-ID reconciliation\s+id: remote_audit/);
+  assert.match(workflow, /id: remote_audit\s+if: always\(\) && steps\.execute_sync\.outcome != 'skipped'/);
+  assert.match(workflow, /NUVIO_REMOTE_AUDIT_RETRIES: "3"/);
   assert.match(workflow, /name: Upload remote audit report\s+if: always\(\) && steps\.remote_audit\.outcome != 'skipped'/);
   assert.match(workflow, /name: Checkpoint remote audit progress\s+if: always\(\) && steps\.remote_audit\.outcome != 'skipped'/);
 });

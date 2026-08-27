@@ -1,10 +1,11 @@
-import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, CURATED_STUDIO_FEATURES_FILE, STATE_FILE, REPORT_FILE, EXPECTED } from "./constants.mjs";
+import { INPUT_FILE, RAILS_FILE, PROVIDERS_FILE, AWARDS_FILE, ACADEMY_AWARDS_SNAPSHOT_FILE, CANNES_AWARDS_SNAPSHOT_FILE, CURATED_STUDIO_FEATURES_FILE, STATE_FILE, REPORT_FILE, EXPECTED } from "./constants.mjs";
 import { readJson, writeJson, fingerprint, athensDate, invariant, normalizeText, mapLimit } from "./utils.mjs";
 import { TmdbClient } from "./tmdb.mjs";
 import { materializeRail, requireEligibleReleasedItems, requireUsablePosters } from "./materialize.mjs";
 
 function itemIds(items, media) { return items.map((x) => `${x.media_type ?? media}:${x.id}`); }
 export const WRITE_SCHEMA_VERSION = 5;
+export const MATERIALIZATION_CONTRACT_VERSION = 1;
 export function normalizeCandidateItems(items, media) {
   const seen = new Set();
   return items.map((item) => ({ ...item, media_type: item.media_type ?? media })).filter((item) => {
@@ -35,6 +36,48 @@ export function semanticRefreshDue(prior, now = new Date(), days = Number(proces
   const refreshedAt = prior.lastSemanticRefresh ?? prior.lastVerified;
   const timestamp = Date.parse(refreshedAt);
   return !refreshedAt || !Number.isFinite(timestamp) || now.getTime() - timestamp >= Math.max(1, days) * 86400000;
+}
+export function hasVerifiedLastKnownGood(prior) {
+  const ids = prior?.orderedIds;
+  return Boolean(prior?.listId && prior?.syncStatus === "verified" && Array.isArray(ids) && ids.length > 0
+    && prior.count === ids.length && new Set(ids).size === ids.length
+    && ids.every((identity) => /^(movie|tv):\d+$/.test(identity)));
+}
+export function awardRefreshDecision(prior, route, sourceFingerprint, now = new Date(), days = Number(process.env.NUVIO_AWARD_REFRESH_DAYS ?? 7)) {
+  if (!hasVerifiedLastKnownGood(prior)) return { refresh: true, reason: "no-verified-baseline" };
+  const retryAt = Date.parse(prior.nextSemanticRetryAt);
+  if (prior.lastFailedAwardSourceFingerprint === sourceFingerprint && Number.isFinite(retryAt) && now.getTime() < retryAt) {
+    return { refresh: false, reason: "failure-backoff" };
+  }
+  if (prior.awardSourceFingerprint && prior.awardSourceFingerprint !== sourceFingerprint) return { refresh: true, reason: "source-changed" };
+  if (!prior.awardSourceFingerprint) {
+    return semanticRefreshDue(prior, now, days)
+      ? { refresh: true, reason: "legacy-refresh-due" }
+      : { refresh: false, reason: "legacy-recently-verified" };
+  }
+  if (route?.cannesCategory || route?.oscarCategory) return { refresh: false, reason: "versioned-static-snapshot" };
+  return semanticRefreshDue(prior, now, days)
+    ? { refresh: true, reason: "live-authority-refresh-due" }
+    : { refresh: false, reason: "live-authority-recently-verified" };
+}
+export function awardSourceFingerprint(route, awards, { academyRevision, cannesRevision }) {
+  const authorityRevision = route?.cannesCategory ? cannesRevision : route?.oscarCategory ? academyRevision : "live-tmdb-award";
+  return fingerprint({ route, authorityRevision, authorityOverrides: awards.authorityOverrides ?? {}, nonWorkWinners: awards.nonWorkWinners ?? [] });
+}
+export function railDefinitionFingerprint(rail, { provider = null, awardRoute = null, curatedStudio = null } = {}) {
+  return fingerprint({ materializationContract: MATERIALIZATION_CONTRACT_VERSION, rail, provider, awardRoute, curatedStudio });
+}
+function definitionCompatible(prior, currentDefinitionFingerprint) {
+  if (!currentDefinitionFingerprint) return true;
+  if (prior?.railDefinitionFingerprint) return prior.railDefinitionFingerprint === currentDefinitionFingerprint;
+  // One-time migration path for the currently verified v5 checkpoints. Every
+  // successful/unchanged rail receives the explicit definition fingerprint in
+  // this run; subsequent predicate changes can no longer reuse stale content.
+  return prior?.writeSchema === WRITE_SCHEMA_VERSION;
+}
+function withoutRecoveryFailure(prior) {
+  const { lastPreparationError, lastPreparationAttempt, consecutivePreparationFailures, nextSemanticRetryAt, lastFailedAwardSourceFingerprint, ...clean } = prior ?? {};
+  return clean;
 }
 function description(rail, folderTitle, scope, date) {
   const suffix = ` • key ${rail.key}`;
@@ -72,22 +115,50 @@ export async function verifyReadback(client, listId, expected, { attempts = 8, w
   throw new ReadbackMismatchError(listId, expected, actual);
 }
 
-async function reconcile(client, listId, items, oldItems, { knownEmpty = false, clearSettleMs = Number(process.env.TMDB_CLEAR_SETTLE_MS ?? 10000), readbackAttempts = 8, waitImpl = wait } = {}) {
-  const clearAndConfirm = async () => {
-    await client.clearList(listId);
-    for (let attempt = 0; attempt < 8; attempt++) {
-      if ((await client.listV4All(listId)).results.length === 0) {
-        // The read edge can report empty before the list-write backend releases
-        // old item identities/order slots. Allow the clear to settle before add.
-        await waitImpl(Math.max(1000, clearSettleMs));
-        return;
-      }
-      if (attempt < 7) await waitImpl(Math.min(30000, 1000 * 2 ** attempt));
-    }
-    throw new Error(`Clear did not converge for list ${listId}`);
+export async function preserveVerifiedLastKnownGood(client, rail, prior, error, { attempts = 4, waitImpl = wait, definitionFingerprint = null } = {}) {
+  if (!hasVerifiedLastKnownGood(prior) || !definitionCompatible(prior, definitionFingerprint)) return null;
+  try { await verifyReadback(client, prior.listId, prior.orderedIds, { attempts, waitImpl }); }
+  catch { return null; }
+  return {
+    key: rail.key,
+    listId: prior.listId,
+    status: "held-last-known-good",
+    count: prior.count,
+    scope: prior.scope,
+    phase: "preparation",
+    warning: String(error?.message ?? error),
   };
-  try { if (!knownEmpty) await clearAndConfirm(); await client.addItems(listId, items); }
-  catch (error) { try { await clearAndConfirm(); await client.addItems(listId, oldItems); } catch (rollback) { error.message += `; ROLLBACK FAILED: ${rollback.message}`; } throw error; }
+}
+
+async function clearAndConfirmList(client, listId, clearSettleMs, waitImpl) {
+  await client.clearList(listId);
+  for (let attempt = 0; attempt < 8; attempt++) {
+    if ((await client.listV4All(listId)).results.length === 0) {
+      await waitImpl(Math.max(1000, clearSettleMs));
+      return;
+    }
+    if (attempt < 7) await waitImpl(Math.min(30000, 1000 * 2 ** attempt));
+  }
+  throw new Error(`Clear did not converge for list ${listId}`);
+}
+
+async function restoreAndVerify(client, listId, oldItems, { clearSettleMs, readbackAttempts, waitImpl }) {
+  await clearAndConfirmList(client, listId, clearSettleMs, waitImpl);
+  if (oldItems.length) await client.addItems(listId, oldItems);
+  const rollbackIds = itemIds(oldItems);
+  await verifyReadback(client, listId, rollbackIds, { attempts: readbackAttempts, waitImpl });
+  return rollbackIds;
+}
+
+async function reconcile(client, listId, items, oldItems, { knownEmpty = false, clearSettleMs = Number(process.env.TMDB_CLEAR_SETTLE_MS ?? 10000), readbackAttempts = 8, waitImpl = wait } = {}) {
+  try { if (!knownEmpty) await clearAndConfirmList(client, listId, clearSettleMs, waitImpl); await client.addItems(listId, items); }
+  catch (error) {
+    try {
+      error.rollbackIds = await restoreAndVerify(client, listId, oldItems, { clearSettleMs, readbackAttempts, waitImpl });
+      error.rollbackVerified = true;
+    } catch (rollback) { error.message += `; ROLLBACK FAILED: ${rollback.message}`; }
+    throw error;
+  }
   await verifyReadback(client, listId, itemIds(items), { attempts: readbackAttempts, waitImpl });
 }
 
@@ -107,21 +178,32 @@ export async function reconcileWithReadbackRecovery(client, listId, items, oldIt
     // some or all of the newly accepted items. Rebuild only the affected list
     // after a longer quiescence window, then require the same exact v3 order.
     console.error(`[sync] list ${listId} remained partial after its first write (${error.actualCount}/${error.expectedCount}); rebuilding after clear quiescence`);
-    await reconcile(client, listId, items, oldItems, {
-      knownEmpty: false,
-      clearSettleMs: Math.max(1000, Number(process.env.TMDB_CLEAR_RECOVERY_SETTLE_MS ?? 45000)),
-      readbackAttempts: Math.max(1, Number(process.env.NUVIO_RECOVERY_READBACK_ATTEMPTS ?? 8)),
-      waitImpl,
-    });
+    const recoverySettleMs = Math.max(1000, Number(process.env.TMDB_CLEAR_RECOVERY_SETTLE_MS ?? 45000));
+    const recoveryAttempts = Math.max(1, Number(process.env.NUVIO_RECOVERY_READBACK_ATTEMPTS ?? 8));
+    try {
+      await reconcile(client, listId, items, oldItems, { knownEmpty: false, clearSettleMs: recoverySettleMs, readbackAttempts: recoveryAttempts, waitImpl });
+    } catch (recoveryError) {
+      if (!recoveryError.rollbackVerified) {
+        try {
+          recoveryError.rollbackIds = await restoreAndVerify(client, listId, oldItems, { clearSettleMs: recoverySettleMs, readbackAttempts: recoveryAttempts, waitImpl });
+          recoveryError.rollbackVerified = true;
+        } catch (rollback) { recoveryError.message += `; FINAL ROLLBACK FAILED: ${rollback.message}`; }
+      }
+      throw recoveryError;
+    }
   }
 }
 
 export async function sync({ execute = false, force = false, client = new TmdbClient() } = {}) {
   const syncStartedAt = performance.now();
   if (execute) invariant(process.env.CONFIRM_TMDB_LIST_WRITES === "NUVIO-TMDB-LISTS", "Explicit TMDB write confirmation missing");
-  const [input, manifest, providers, awards, curatedStudios, state] = await Promise.all([readJson(INPUT_FILE), readJson(RAILS_FILE), readJson(PROVIDERS_FILE), readJson(AWARDS_FILE), readJson(CURATED_STUDIO_FEATURES_FILE), readJson(STATE_FILE)]);
+  const [input, manifest, providers, awards, curatedStudios, state, academySnapshot, cannesSnapshot] = await Promise.all([
+    readJson(INPUT_FILE), readJson(RAILS_FILE), readJson(PROVIDERS_FILE), readJson(AWARDS_FILE), readJson(CURATED_STUDIO_FEATURES_FILE), readJson(STATE_FILE),
+    readJson(ACADEMY_AWARDS_SNAPSHOT_FILE), readJson(CANNES_AWARDS_SNAPSHOT_FILE),
+  ]);
   const today = athensDate(), folderMap = new Map(input.flatMap((c) => c.folders).map((f) => [f.id, f]));
   const awardMap = new Map(awards.rails.map((x) => [x.key, x]));
+  const awardRevisions = { academyRevision: fingerprint(academySnapshot), cannesRevision: fingerprint(cannesSnapshot) };
   state.rails ??= {};
   let checkpointChain = Promise.resolve();
   const checkpointState = () => (checkpointChain = checkpointChain.then(() => writeJson(STATE_FILE, state)));
@@ -182,14 +264,24 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
   let prepared = await mapLimit(managedRails, concurrency, async (rail) => {
     const startedAt = performance.now();
     const prior = state.rails[rail.key] ?? {};
+    const awardRoute = rail.materializer === "award" ? awardMap.get(rail.key) : null;
+    const awardFingerprint = awardRoute ? awardSourceFingerprint(awardRoute, awards, awardRevisions) : null;
+    const awardDecision = awardRoute ? awardRefreshDecision(prior, awardRoute, awardFingerprint) : null;
+    const folderTitle = folderMap.get(rail.folderId)?.title ?? "";
+    const provider = providers.providers.find((p) => { const target = normalizeText(folderTitle); return [p.name, p.slug, ...p.aliases].some((name) => target.includes(normalizeText(name)) || normalizeText(name).includes(target)); });
+    const curatedStudio = curatedStudios.entries[rail.params?.curatedStudioFolderId];
+    const definitionFingerprint = railDefinitionFingerprint(rail, { provider, awardRoute, curatedStudio });
     try {
-      const deferredAward = !force && rail.materializer === "award" && prior.syncStatus === "verified" && !semanticRefreshDue(prior);
+      const deferredAward = !force && awardRoute && !awardDecision.refresh && definitionCompatible(prior, definitionFingerprint);
       if (deferredAward && prior.writeSchema === WRITE_SCHEMA_VERSION) {
-        return { key: rail.key, status: "unchanged", count: prior.count, scope: prior.scope, refreshDeferred: "verified-award-snapshot", _durationMs: Math.round(performance.now() - startedAt) };
+        if (execute && (prior.awardSourceFingerprint !== awardFingerprint || prior.railDefinitionFingerprint !== definitionFingerprint)) {
+          state.rails[rail.key] = { ...prior, awardSourceFingerprint: awardFingerprint, railDefinitionFingerprint: definitionFingerprint };
+          await checkpointState();
+        }
+        const heldForBackoff = awardDecision.reason === "failure-backoff";
+        return { key: rail.key, status: heldForBackoff ? "held-last-known-good" : "unchanged", count: prior.count, scope: prior.scope, refreshDeferred: awardDecision.reason, ...(heldForBackoff ? { phase: "preparation", warning: prior.lastPreparationError } : {}), _durationMs: Math.round(performance.now() - startedAt) };
       }
-      const folderTitle = folderMap.get(rail.folderId)?.title ?? "";
-      const provider = providers.providers.find((p) => { const target = normalizeText(folderTitle); return [p.name, p.slug, ...p.aliases].some((name) => target.includes(normalizeText(name)) || normalizeText(name).includes(target)); });
-      const context = { today, folderTitle, providerAliases: provider ? [provider.name, ...provider.aliases] : [], award: awardMap.get(rail.key), curatedStudio: curatedStudios.entries[rail.params.curatedStudioFolderId], authorityOverrides: awards.authorityOverrides ?? {}, nonWorkWinners: awards.nonWorkWinners ?? [] };
+      const context = { today, folderTitle, providerAliases: provider ? [provider.name, ...provider.aliases] : [], award: awardRoute, curatedStudio, authorityOverrides: awards.authorityOverrides ?? {}, nonWorkWinners: awards.nonWorkWinners ?? [] };
       const media = rail.mediaType === "MOVIE" ? "movie" : "tv";
       // A write-schema migration must not force a fresh fuzzy title resolution
       // of immutable award history. Reuse the already verified typed IDs, run
@@ -228,9 +320,9 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
         candidate = confirm; ids = confirmIds; hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids }); ratio = changeRatio(prior.orderedIds ?? [], ids);
       }
       const _durationMs = Math.round(performance.now() - startedAt);
-      const semanticRefreshedAt = rail.materializer === "award" ? new Date().toISOString() : prior.lastSemanticRefresh;
+      const semanticRefreshedAt = awardRoute && !deferredAward ? new Date().toISOString() : prior.lastSemanticRefresh;
       if (execute && rail.materializer === "award" && prior.fingerprint === hash) {
-        state.rails[rail.key] = { ...prior, lastSemanticRefresh: semanticRefreshedAt };
+        state.rails[rail.key] = { ...withoutRecoveryFailure(prior), lastSemanticRefresh: semanticRefreshedAt, awardSourceFingerprint: awardFingerprint, railDefinitionFingerprint: definitionFingerprint };
         await checkpointState();
       }
       const sameOrderedIds = orderedIdsEqual(prior.orderedIds, ids);
@@ -239,20 +331,40 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
       // description, or schema checkpoint must never clear/re-add an identical
       // remote list. Refresh the checkpoint locally and skip every TMDB write.
       if (prior.syncStatus === "verified" && (sameOrderedIds || serverOrderEquivalent)) {
-        const checkpointDrift = prior.fingerprint !== hash || prior.writeSchema !== WRITE_SCHEMA_VERSION || prior.scope !== candidate.scope || prior.ineligibleExcluded !== ineligibleExcluded || prior.posterlessExcluded !== posterlessExcluded;
+        const checkpointDrift = prior.fingerprint !== hash || prior.writeSchema !== WRITE_SCHEMA_VERSION || prior.scope !== candidate.scope || prior.ineligibleExcluded !== ineligibleExcluded || prior.posterlessExcluded !== posterlessExcluded || prior.railDefinitionFingerprint !== definitionFingerprint || Boolean(prior.lastPreparationError || prior.nextSemanticRetryAt);
         if (execute && checkpointDrift) {
-          state.rails[rail.key] = { ...prior, fingerprint: hash, count: ids.length, scope: candidate.scope, writeSchema: WRITE_SCHEMA_VERSION, ineligibleExcluded, posterlessExcluded, lastVerified: new Date().toISOString(), ...(semanticRefreshedAt ? { lastSemanticRefresh: semanticRefreshedAt } : {}) };
+          state.rails[rail.key] = { ...withoutRecoveryFailure(prior), fingerprint: hash, count: ids.length, scope: candidate.scope, writeSchema: WRITE_SCHEMA_VERSION, ineligibleExcluded, posterlessExcluded, railDefinitionFingerprint: definitionFingerprint, lastVerified: new Date().toISOString(), ...(semanticRefreshedAt ? { lastSemanticRefresh: semanticRefreshedAt } : {}), ...(awardFingerprint ? { awardSourceFingerprint: awardFingerprint } : {}) };
           await checkpointState();
         }
         return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, ineligibleExcluded, posterlessExcluded, ...(checkpointDrift ? { checkpointRefresh: true } : {}), ...(serverOrderEquivalent && !sameOrderedIds ? { serverOrderEquivalent: true } : {}), _durationMs };
       }
-      if (!force && prior.syncStatus === "verified" && prior.fingerprint === hash) return { key: rail.key, status: "unchanged", count: ids.length, scope: candidate.scope, ineligibleExcluded, posterlessExcluded, _durationMs };
-      return { key: rail.key, status: "would-update", listId: prior.listId, count: ids.length, scope: candidate.scope, ineligibleExcluded, posterlessExcluded, changeRatio: ratio, _durationMs, _rail: rail, _folderTitle: folderTitle, _candidate: candidate, _media: media, _ids: ids, _hash: hash, _invalidItems: invalidItems, _semanticRefreshedAt: semanticRefreshedAt };
-    } catch (error) { return { key: rail.key, status: "failed", error: error.message, _durationMs: Math.round(performance.now() - startedAt) }; }
+      return { key: rail.key, status: "would-update", listId: prior.listId, count: ids.length, scope: candidate.scope, ineligibleExcluded, posterlessExcluded, changeRatio: ratio, _durationMs, _rail: rail, _folderTitle: folderTitle, _candidate: candidate, _media: media, _ids: ids, _hash: hash, _invalidItems: invalidItems, _semanticRefreshedAt: semanticRefreshedAt, _awardSourceFingerprint: awardFingerprint, _definitionFingerprint: definitionFingerprint, _prior: prior };
+    } catch (error) {
+      const fallback = await preserveVerifiedLastKnownGood(confirmationClient, rail, prior, error, { definitionFingerprint });
+      if (!fallback) return { key: rail.key, status: "failed", error: error.message, _durationMs: Math.round(performance.now() - startedAt) };
+      const attemptedAt = new Date(), failureCount = Number(prior.consecutivePreparationFailures ?? 0) + 1;
+      if (execute) {
+        const awardRetryDays = Math.max(1, Number(process.env.NUVIO_AWARD_FAILURE_RETRY_DAYS ?? 7));
+        state.rails[rail.key] = {
+          ...prior,
+          syncStatus: "verified",
+          lastPreparationAttempt: attemptedAt.toISOString(),
+          lastPreparationError: error.message,
+          consecutivePreparationFailures: failureCount,
+          ...(awardFingerprint ? {
+            lastFailedAwardSourceFingerprint: awardFingerprint,
+            nextSemanticRetryAt: new Date(attemptedAt.getTime() + awardRetryDays * 86400000).toISOString(),
+          } : {}),
+        };
+        await checkpointState();
+      }
+      console.error(`[sync] PRESERVED LAST-KNOWN-GOOD ${rail.key}: ${error.message}`);
+      return { ...fallback, consecutivePreparationFailures: failureCount, _durationMs: Math.round(performance.now() - startedAt) };
+    }
   });
   const preparationFailures = prepared.filter((x) => x.status === "failed");
   for (const failure of preparationFailures) console.error(`[sync] PREPARATION FAILED ${failure.key}: ${failure.error}`);
-  if (execute && !preparationFailures.length) {
+  if (execute) {
     // Each rail is a durable mini-transaction: recover/create, checkpoint,
     // populate, exact read-back, checkpoint. Interrupted runs resume in place.
     // Workers often wait for TMDB edge visibility; HTTP concurrency remains
@@ -263,6 +375,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
     let verifiedProgress = 0;
     prepared = await mapLimit(prepared, writeConcurrency, async (entry) => {
       if (entry.status !== "would-update") return entry;
+      let mutationStarted = false;
       try {
         if (!entry.listId) {
           try {
@@ -303,10 +416,11 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
         // already-correct remote list instead of clearing and rewriting it.
         if (!entry.createdList && orderedIdsEqual(itemIds(oldItems, entry._media), entry._ids)) {
           await verifyReadback(client, entry.listId, entry._ids);
-          state.rails[entry.key] = { listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, writeSchema: WRITE_SCHEMA_VERSION, ineligibleExcluded: entry.ineligibleExcluded, posterlessExcluded: entry.posterlessExcluded, syncStatus: "verified", lastVerified: new Date().toISOString(), invalidItems: entry._invalidItems ?? [], ...(entry._semanticRefreshedAt ? { lastSemanticRefresh: entry._semanticRefreshedAt } : {}) };
+          state.rails[entry.key] = { ...withoutRecoveryFailure(entry._prior), listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, writeSchema: WRITE_SCHEMA_VERSION, ineligibleExcluded: entry.ineligibleExcluded, posterlessExcluded: entry.posterlessExcluded, railDefinitionFingerprint: entry._definitionFingerprint, syncStatus: "verified", lastVerified: new Date().toISOString(), invalidItems: entry._invalidItems ?? [], ...(entry._semanticRefreshedAt ? { lastSemanticRefresh: entry._semanticRefreshedAt } : {}), ...(entry._awardSourceFingerprint ? { awardSourceFingerprint: entry._awardSourceFingerprint } : {}) };
           await checkpointState();
           return { ...entry, status: "unchanged", checkpointRefresh: true, remoteResume: true };
         }
+        mutationStarted = true;
         try { await reconcileWithReadbackRecovery(client, entry.listId, entry._candidate.items, oldItems, { knownEmpty: Boolean(entry.createdList) }); }
         catch (error) {
           if (!error.invalidItems?.length) throw error;
@@ -319,12 +433,23 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
           entry._hash = fingerprint({ writeSchema: WRITE_SCHEMA_VERSION, ids: entry._ids });
           await reconcileWithReadbackRecovery(client, entry.listId, entry._candidate.items, oldItems);
         }
-        state.rails[entry.key] = { listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, writeSchema: WRITE_SCHEMA_VERSION, ineligibleExcluded: entry.ineligibleExcluded, posterlessExcluded: entry.posterlessExcluded, syncStatus: "verified", lastVerified: new Date().toISOString(), invalidItems: entry._invalidItems ?? [], ...(entry._semanticRefreshedAt ? { lastSemanticRefresh: entry._semanticRefreshedAt } : {}) };
+        state.rails[entry.key] = { ...withoutRecoveryFailure(entry._prior), listId: entry.listId, fingerprint: entry._hash, orderedIds: entry._ids, count: entry.count, scope: entry.scope, writeSchema: WRITE_SCHEMA_VERSION, ineligibleExcluded: entry.ineligibleExcluded, posterlessExcluded: entry.posterlessExcluded, railDefinitionFingerprint: entry._definitionFingerprint, syncStatus: "verified", lastVerified: new Date().toISOString(), invalidItems: entry._invalidItems ?? [], ...(entry._semanticRefreshedAt ? { lastSemanticRefresh: entry._semanticRefreshedAt } : {}), ...(entry._awardSourceFingerprint ? { awardSourceFingerprint: entry._awardSourceFingerprint } : {}) };
         await checkpointState();
         verifiedProgress++;
         if (verifiedProgress === 1 || verifiedProgress % 25 === 0 || verifiedProgress === updateTotal) console.error(`[sync] verified ${verifiedProgress}/${updateTotal} rails; latest=${entry.key}; items=${entry.count}`);
         return { ...entry, status: "updated" };
       } catch (error) {
+        const rollbackMatchesCheckpoint = error.rollbackVerified && orderedIdsEqual(error.rollbackIds, entry._prior?.orderedIds);
+        if ((!mutationStarted || rollbackMatchesCheckpoint) && hasVerifiedLastKnownGood(entry._prior)) {
+          const fallback = await preserveVerifiedLastKnownGood(confirmationClient, entry._rail, entry._prior, error, { definitionFingerprint: entry._definitionFingerprint });
+          if (fallback) {
+            const attemptedAt = new Date(), failureCount = Number(entry._prior.consecutivePreparationFailures ?? 0) + 1;
+            state.rails[entry.key] = { ...entry._prior, syncStatus: "verified", lastPreparationAttempt: attemptedAt.toISOString(), lastPreparationError: error.message, consecutivePreparationFailures: failureCount };
+            await checkpointState();
+            console.error(`[sync] WRITE ROLLED BACK; PRESERVED LAST-KNOWN-GOOD ${entry.key}: ${error.message}`);
+            return { ...fallback, phase: "write", rollbackVerified: rollbackMatchesCheckpoint, consecutivePreparationFailures: failureCount };
+          }
+        }
         state.rails[entry.key] = { ...(state.rails[entry.key] ?? {}), listId: entry.listId, syncStatus: "failed", lastError: error.message, lastAttempt: new Date().toISOString() };
         await checkpointState();
         console.error(`[sync] FAILED ${entry.key}: ${error.message}`);
@@ -332,7 +457,6 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
       }
     });
   }
-  if (execute && preparationFailures.length) prepared = prepared.map((entry) => entry.status === "would-update" ? { ...entry, status: "validated-no-write" } : entry);
   report.performance = {
     totalMs: Math.round(performance.now() - syncStartedAt),
     slowestRails: [...prepared].sort((a, b) => b._durationMs - a._durationMs).slice(0, 20).map((entry) => ({ key: entry.key, durationMs: entry._durationMs })),
@@ -341,6 +465,7 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
   report.rails.sort((a, b) => a.key.localeCompare(b.key));
   report.totals.considered = report.rails.length;
   report.totals.failed = report.rails.filter((x) => x.status === "failed").length;
+  report.totals.preservedLastKnownGood = report.rails.filter((x) => x.status === "held-last-known-good").length;
   report.totals.skipped = report.rails.filter((x) => x.status === "unchanged").length;
   report.totals.changed = report.rails.filter((x) => execute ? x.status === "updated" : x.status === "would-update").length;
   report.totals.created = report.rails.filter((x) => x.createdList).length;
@@ -354,9 +479,17 @@ export async function sync({ execute = false, force = false, client = new TmdbCl
     state.providerIndex.availability = {};
     state.providerIndex.observedWatchEntries = [...client.memo.keys()].filter((key) => key.startsWith("watch:")).length;
     if (fullDue) state.providerIndex.lastFullReconciliation = new Date().toISOString();
-    state.lastSuccessfulSync = report.totals.failed ? state.lastSuccessfulSync : new Date().toISOString(); await writeJson(STATE_FILE, state);
+    const completedAt = new Date().toISOString();
+    state.lastCompletedSync = completedAt;
+    state.lastSuccessfulSync = report.totals.failed ? state.lastSuccessfulSync : completedAt;
+    if (!report.totals.failed && !report.totals.preservedLastKnownGood) state.lastFullyFreshSync = completedAt;
+    await writeJson(STATE_FILE, state);
   }
   await writeJson(REPORT_FILE, report);
+  if (report.totals.preservedLastKnownGood) {
+    console.error(`[sync] DEGRADED BUT SAFE: ${report.totals.preservedLastKnownGood} rails retained an exact-verified last-known-good list; see ${REPORT_FILE}`);
+    if (process.env.GITHUB_ACTIONS === "true") console.error(`::warning title=Nuvio sync retained verified content::${report.totals.preservedLastKnownGood} rails are safe but not fully fresh; inspect reports/latest.json`);
+  }
   if (report.totals.failed) throw new Error(`Sync failed closed: ${report.totals.failed} rails failed; see ${REPORT_FILE}`);
   return report;
 }

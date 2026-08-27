@@ -349,12 +349,49 @@ dynamic curated merge/order tests, and the Warner media-specific company split.
   shared across sibling rails to avoid redundant requests without weakening the
   independent-fetch check.
 
+## Nightly resilience and completion states
+
+- Every rail is an independent mini-transaction. Preparation or reconciliation
+  failure in one rail never prevents already-safe candidates for other rails
+  from being processed and exactly verified.
+- `held-last-known-good` is a safe degraded state, not a successful refresh. It
+  is allowed only for a non-empty checkpoint with `syncStatus=verified`, unique
+  typed ordered IDs, an unchanged rail-definition fingerprint, and a new exact
+  v3 read-back matching that checkpoint. A legacy write-schema-5 checkpoint may
+  use this once during the definition-fingerprint migration; the same run
+  checkpoints the explicit fingerprint for every successfully evaluated rail.
+- A definition fingerprint covers the complete rail registration, relevant
+  provider/curated-studio data, award route and the materialization contract
+  version. A changed predicate must materialize successfully; it may not
+  silently retain content generated under the old predicate. Versioned award
+  source revisions are tracked separately, so a newly published snapshot that
+  cannot yet resolve may safely retain the previously verified history while
+  surfacing a degraded refresh.
+- A failed clear/add/rebuild may become `held-last-known-good` only after an
+  exact typed rollback to the previous ordered IDs and an independent fresh v3
+  confirmation. Missing, empty, reordered, mixed or untyped rollback data is a
+  hard failure.
+- Hard failures remain hard failures and keep the workflow red. The independent
+  remote audit still runs, records bounded initial-failure samples, retries only
+  the failed subset with fresh clients and checkpoints any verified repairs.
+- Reports distinguish `failed` from `preservedLastKnownGood`. State records
+  `lastCompletedSync`, `lastSuccessfulSync`, and `lastFullyFreshSync`; only a
+  run with neither hard failures nor preserved rails advances the last value.
+- Versioned Academy/Cannes inputs refresh their rails only when their snapshot,
+  route or reviewed overrides change. Live TMDB award authorities retain the
+  periodic refresh window. A failed static refresh is backed off for the same
+  source fingerprint, while a changed source bypasses the backoff immediately.
+- Nightly execution never retries an ambiguous list creation, never invents
+  filler, never treats an API failure as empty, and never reports a remote write
+  as verified before exact v3 typed read-back.
+
 ## Release evidence checklist
 
 Record current evidence in `reports/latest.json` and README, never only in chat:
 
 - bootstrap counts match constants and every non-recommended folder is non-empty;
-- all tests pass;
+- all 64 tests pass, including exact rollback, definition-matched
+  last-known-good preservation and versioned award refresh behavior;
 - audit passes folder/recommended locks, source counts and compatibility rules;
 - full live dry-run considers all 2,675 materialized rails with zero failures
   and zero empty candidates;
