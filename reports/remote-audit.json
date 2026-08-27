@@ -5,13 +5,13 @@
   "totals": {
     "considered": 2675,
     "valid": 2675,
-    "initialFailed": 2675,
-    "recoveredAfterRetry": 2675,
-    "retryPasses": 1,
+    "initialFailed": 1,
+    "recoveredAfterRetry": 1,
+    "retryPasses": 3,
     "repairedDeleted": 0,
     "repairableDeleted": 0,
-    "repairedIneligible": 0,
-    "repairableIneligible": 0,
+    "repairedIneligible": 1,
+    "repairableIneligible": 1,
     "repairedOrderRewrites": 0,
     "repairableOrderRewrites": 0,
     "repairedOrderNormalizations": 0,
@@ -20,76 +20,21 @@
   },
   "initialFailureSamples": [
     {
-      "key": "collections.actors:folder-07R890RD:0",
-      "listId": 8680662,
+      "key": "collections.world:folder-XJ6HNL6G:0",
+      "listId": 8682918,
       "status": "failed",
-      "error": "auditClient.listV3All is not a function"
-    },
-    {
-      "key": "collections.actors:folder-07R890RD:1",
-      "listId": 8680660,
-      "status": "failed",
-      "error": "auditClient.listV3All is not a function"
-    },
-    {
-      "key": "collections.actors:folder-07R890RD:2",
-      "listId": 8680663,
-      "status": "failed",
-      "error": "auditClient.listV3All is not a function"
-    },
-    {
-      "key": "collections.actors:folder-07R890RD:3",
-      "listId": 8680664,
-      "status": "failed",
-      "error": "auditClient.listV3All is not a function"
-    },
-    {
-      "key": "collections.actors:folder-07R890RD:4",
-      "listId": 8680665,
-      "status": "failed",
-      "error": "auditClient.listV3All is not a function"
-    },
-    {
-      "key": "collections.actors:folder-07R890RD:5",
-      "listId": 8680668,
-      "status": "failed",
-      "error": "auditClient.listV3All is not a function"
-    },
-    {
-      "key": "collections.actors:folder-121Y6Z25:0",
-      "listId": 8680667,
-      "status": "failed",
-      "error": "auditClient.listV3All is not a function"
-    },
-    {
-      "key": "collections.actors:folder-121Y6Z25:1",
-      "listId": 8680669,
-      "status": "failed",
-      "error": "auditClient.listV3All is not a function"
-    },
-    {
-      "key": "collections.actors:folder-121Y6Z25:2",
-      "listId": 8680672,
-      "status": "failed",
-      "error": "auditClient.listV3All is not a function"
-    },
-    {
-      "key": "collections.actors:folder-121Y6Z25:3",
-      "listId": 8680671,
-      "status": "failed",
-      "error": "auditClient.listV3All is not a function"
-    },
-    {
-      "key": "collections.actors:folder-121Y6Z25:4",
-      "listId": 8680675,
-      "status": "failed",
-      "error": "auditClient.listV3All is not a function"
-    },
-    {
-      "key": "collections.actors:folder-121Y6Z25:5",
-      "listId": 8680674,
-      "status": "failed",
-      "error": "auditClient.listV3All is not a function"
+      "error": "v3 eligibility violation requires independent confirmation",
+      "violations": {
+        "empty": false,
+        "missingMediaType": 0,
+        "mixedMedia": 0,
+        "duplicates": 0,
+        "posterless": 0,
+        "adult": 0,
+        "video": 0,
+        "future": 1,
+        "undated": 0
+      }
     }
   ],
   "results": []
