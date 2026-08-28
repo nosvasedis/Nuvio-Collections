@@ -1,41 +1,23 @@
 {
   "version": 1,
-  "date": "2026-08-27",
+  "date": "2026-08-28",
   "mode": "execute",
   "totals": {
     "considered": 2675,
     "valid": 2675,
-    "initialFailed": 1,
-    "recoveredAfterRetry": 1,
-    "retryPasses": 3,
+    "initialFailed": 0,
+    "recoveredAfterRetry": 0,
+    "retryPasses": 0,
     "repairedDeleted": 0,
     "repairableDeleted": 0,
-    "repairedIneligible": 1,
-    "repairableIneligible": 1,
+    "repairedIneligible": 0,
+    "repairableIneligible": 0,
     "repairedOrderRewrites": 0,
     "repairableOrderRewrites": 0,
     "repairedOrderNormalizations": 0,
     "repairableOrderNormalizations": 0,
     "failed": 0
   },
-  "initialFailureSamples": [
-    {
-      "key": "collections.world:folder-XJ6HNL6G:0",
-      "listId": 8682918,
-      "status": "failed",
-      "error": "v3 eligibility violation requires independent confirmation",
-      "violations": {
-        "empty": false,
-        "missingMediaType": 0,
-        "mixedMedia": 0,
-        "duplicates": 0,
-        "posterless": 0,
-        "adult": 0,
-        "video": 0,
-        "future": 1,
-        "undated": 0
-      }
-    }
-  ],
+  "initialFailureSamples": [],
   "results": []
 }
