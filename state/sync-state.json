@@ -119899,7 +119899,7 @@
     },
     "collections.world:collections.world.indian:0": {
       "listId": 8682670,
-      "fingerprint": "12d80eedd80eca18ef0faafc7ac6bb72745377da94e54f555d183b4a0fd4a139",
+      "fingerprint": "a3b519a394e926e393883b9257f22f551ebfe38fdb9e01f03450fc6e0455eaae",
       "orderedIds": [
         "movie:1376856",
         "movie:1764113",
@@ -119916,7 +119916,6 @@
         "movie:1576223",
         "movie:1588472",
         "movie:1603779",
-        "movie:1606527",
         "movie:1618200",
         "movie:1627761",
         "movie:1654566",
@@ -120089,15 +120088,23 @@
         "movie:1747463",
         "movie:1753514"
       ],
-      "count": 187,
+      "count": 186,
       "scope": "GLOBAL",
       "writeSchema": 5,
       "ineligibleExcluded": 0,
       "posterlessExcluded": 13,
       "syncStatus": "verified",
-      "lastVerified": "2026-09-23T06:20:25.647Z",
-      "invalidItems": [],
-      "railDefinitionFingerprint": "b1aebdcf29463d42565b9b9e15676c23299d5cb20ce4edd0c1e4c7ba33d61f96"
+      "lastVerified": "2026-09-23T06:28:19.453Z",
+      "invalidItems": [
+        {
+          "media_type": "movie",
+          "id": 1606527,
+          "reason": "TMDB_V3_UNDATED",
+          "excludedAt": "2026-09-23T06:28:19.453Z"
+        }
+      ],
+      "railDefinitionFingerprint": "b1aebdcf29463d42565b9b9e15676c23299d5cb20ce4edd0c1e4c7ba33d61f96",
+      "tmdbV3EligibilityRepairedAt": "2026-09-23T06:28:19.453Z"
     },
     "collections.world:collections.world.indian:1": {
       "listId": 8682671,
