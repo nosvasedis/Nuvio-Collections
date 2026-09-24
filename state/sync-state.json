@@ -50304,7 +50304,7 @@
     },
     "collections.discover:collections.discover.trending-2:2": {
       "listId": 8681823,
-      "fingerprint": "7bb30f092cf66c9ebc09716ffb047f1b4950a4c78f8e1c562ca7741f4bbf3966",
+      "fingerprint": "ddaa508cb5e01c9529dd22cee510e81dc01794e50cf20e3dab905d1c133df103",
       "orderedIds": [
         "movie:1096579",
         "movie:1126097",
@@ -50458,7 +50458,6 @@
         "movie:1773454",
         "movie:1774533",
         "movie:1775101",
-        "movie:1775833",
         "movie:1777144",
         "movie:1777673",
         "movie:1777747",
@@ -50472,15 +50471,23 @@
         "movie:1778314",
         "movie:1778339"
       ],
-      "count": 165,
+      "count": 164,
       "scope": "GLOBAL",
       "writeSchema": 5,
       "ineligibleExcluded": 0,
       "posterlessExcluded": 35,
       "syncStatus": "verified",
-      "lastVerified": "2026-09-24T06:25:27.230Z",
-      "invalidItems": [],
-      "railDefinitionFingerprint": "2db982ba1296e5b38f7a9f764b19bb83aaed46756336a2754e8c02428a415d40"
+      "lastVerified": "2026-09-24T06:41:49.688Z",
+      "invalidItems": [
+        {
+          "media_type": "movie",
+          "id": 1775833,
+          "reason": "TMDB_V3_FUTURE_DATE",
+          "excludedAt": "2026-09-24T06:41:49.688Z"
+        }
+      ],
+      "railDefinitionFingerprint": "2db982ba1296e5b38f7a9f764b19bb83aaed46756336a2754e8c02428a415d40",
+      "tmdbV3EligibilityRepairedAt": "2026-09-24T06:41:49.688Z"
     },
     "collections.discover:collections.discover.trending-2:3": {
       "listId": 8681824,
