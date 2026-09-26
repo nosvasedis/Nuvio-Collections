@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "date": "2026-09-25",
+  "date": "2026-09-26",
   "mode": "execute",
   "totals": {
     "considered": 2675,
-    "valid": 2675,
+    "valid": 2674,
     "initialFailed": 0,
-    "recoveredAfterRetry": 0,
+    "recoveredAfterRetry": -1,
     "retryPasses": 0,
-    "repairedDeleted": 0,
-    "repairableDeleted": 0,
+    "repairedDeleted": 1,
+    "repairableDeleted": 1,
     "repairedIneligible": 0,
     "repairableIneligible": 0,
     "repairedOrderRewrites": 0,
@@ -19,5 +19,15 @@
     "failed": 0
   },
   "initialFailureSamples": [],
-  "results": []
+  "results": [
+    {
+      "key": "collections.awards:folder-4ee02f67:1",
+      "listId": 8681599,
+      "status": "repairable-deleted",
+      "count": 70,
+      "deleted": [
+        "movie:494855"
+      ]
+    }
+  ]
 }

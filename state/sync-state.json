@@ -41518,7 +41518,7 @@
     },
     "collections.awards:folder-4ee02f67:1": {
       "listId": 8681599,
-      "fingerprint": "dcf4225db00b1155433048bfb8d507248a06c58fe549890cbaa683baed5d94b1",
+      "fingerprint": "d88f5724c531550b5cafbcd2e43cff776038af303eff747ef8811553654ba282",
       "orderedIds": [
         "movie:1455661",
         "movie:1471255",
@@ -41563,7 +41563,6 @@
         "movie:553323",
         "movie:553324",
         "movie:270986",
-        "movie:494855",
         "movie:163060",
         "movie:128440",
         "movie:116363",
@@ -41592,13 +41591,20 @@
         "movie:15382",
         "movie:361873"
       ],
-      "count": 71,
+      "count": 70,
       "scope": "AUTHORITATIVE_CANNES",
       "writeSchema": 5,
       "posterlessExcluded": 3,
       "syncStatus": "verified",
-      "lastVerified": "2026-08-20T02:33:05.097Z",
-      "invalidItems": [],
+      "lastVerified": "2026-09-26T06:44:46.493Z",
+      "invalidItems": [
+        {
+          "media_type": "movie",
+          "id": 494855,
+          "reason": "TMDB_DELETED_RESOURCE",
+          "excludedAt": "2026-09-26T06:44:46.493Z"
+        }
+      ],
       "lastSemanticRefresh": "2026-08-27T11:21:28.323Z",
       "ineligibleExcluded": 0,
       "awardSourceFingerprint": "9a2eddf1be0d7fa779e31a23ab57e27ea4a8c8becf82b504485b65b40456762e",
