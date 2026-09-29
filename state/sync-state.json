@@ -215382,9 +215382,8 @@
     },
     "collections.film-series:folder-753F7B69:0": {
       "listId": 8684655,
-      "fingerprint": "f8fa241f42b73e1a0e414250fbcb4489dbf923627faa604fd5414486e9c254d6",
+      "fingerprint": "40a65299f3114e5810f0d2f72e89d01bd506f459573f0202ec481843ddb074f9",
       "orderedIds": [
-        "movie:1777750",
         "movie:1545621",
         "movie:1396965",
         "movie:1209217",
@@ -215415,15 +215414,23 @@
         "movie:21452",
         "movie:21422"
       ],
-      "count": 30,
+      "count": 29,
       "scope": "OFFICIAL_TMDB_COLLECTION:39199:RELEASE_DATE_DESC",
       "writeSchema": 5,
       "ineligibleExcluded": 0,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-09-28T07:02:43.434Z",
-      "invalidItems": [],
-      "railDefinitionFingerprint": "3a8215e1038ea667b19e9bdfe222b2dc45d0389d79666711ae9fab1465c09b8f"
+      "lastVerified": "2026-09-29T07:26:21.695Z",
+      "invalidItems": [
+        {
+          "media_type": "movie",
+          "id": 1777750,
+          "reason": "TMDB_V3_FUTURE_DATE",
+          "excludedAt": "2026-09-29T07:26:21.695Z"
+        }
+      ],
+      "railDefinitionFingerprint": "3a8215e1038ea667b19e9bdfe222b2dc45d0389d79666711ae9fab1465c09b8f",
+      "tmdbV3EligibilityRepairedAt": "2026-09-29T07:26:21.695Z"
     },
     "collections.film-series:folder-76513F64:0": {
       "listId": 8684656,
