@@ -23957,11 +23957,10 @@
     },
     "collections.actors:folder-NNBJWT7P:0": {
       "listId": 8681215,
-      "fingerprint": "4a10202cf7038354e15d5851ed6a168df73037385dc007dc98fac6554c2fa191",
+      "fingerprint": "a6b1fa718eb8d5db6062535eb831d233fc1d32b0076c3f838aa893d1ad81a994",
       "orderedIds": [
         "movie:157336",
         "movie:286217",
-        "movie:1400837",
         "movie:474350",
         "movie:320288",
         "movie:50014",
@@ -24006,15 +24005,23 @@
         "movie:881050",
         "movie:761443"
       ],
-      "count": 46,
+      "count": 45,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
       "ineligibleExcluded": 8,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-10-03T06:42:06.173Z",
-      "invalidItems": [],
-      "railDefinitionFingerprint": "5252aaa3665b898e71631b2ed9bdbf53991cc28de42d4a4b07e094237529a42c"
+      "lastVerified": "2026-10-03T07:03:27.116Z",
+      "invalidItems": [
+        {
+          "media_type": "movie",
+          "id": 1400837,
+          "reason": "TMDB_V3_FUTURE_DATE",
+          "excludedAt": "2026-10-03T07:03:27.116Z"
+        }
+      ],
+      "railDefinitionFingerprint": "5252aaa3665b898e71631b2ed9bdbf53991cc28de42d4a4b07e094237529a42c",
+      "tmdbV3EligibilityRepairedAt": "2026-10-03T07:03:27.116Z"
     },
     "collections.actors:folder-NNBJWT7P:1": {
       "listId": 8681216,
@@ -24045,7 +24052,7 @@
     },
     "collections.actors:folder-NNBJWT7P:2": {
       "listId": 8681217,
-      "fingerprint": "0743ff46cce1470dfd836b0a49d61375c97a83b6a26a77f7902268b06bd8cd7c",
+      "fingerprint": "c3ca0c302ae58300f4c55a1d9993337afb85556619cc505ab90897eef5b02fa4",
       "orderedIds": [
         "movie:157336",
         "movie:50014",
@@ -24081,7 +24088,6 @@
         "movie:217919",
         "movie:522016",
         "movie:761443",
-        "movie:1400837",
         "movie:246956",
         "movie:1398451",
         "movie:38850",
@@ -24094,15 +24100,23 @@
         "movie:539885",
         "movie:199647"
       ],
-      "count": 46,
+      "count": 45,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
       "ineligibleExcluded": 8,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-10-03T06:42:07.033Z",
-      "invalidItems": [],
-      "railDefinitionFingerprint": "929fb11080943a3f994582e9d0bc9e92cd024e5bbf1d83590688a685aea1b4fe"
+      "lastVerified": "2026-10-03T07:03:27.116Z",
+      "invalidItems": [
+        {
+          "media_type": "movie",
+          "id": 1400837,
+          "reason": "TMDB_V3_FUTURE_DATE",
+          "excludedAt": "2026-10-03T07:03:27.116Z"
+        }
+      ],
+      "railDefinitionFingerprint": "929fb11080943a3f994582e9d0bc9e92cd024e5bbf1d83590688a685aea1b4fe",
+      "tmdbV3EligibilityRepairedAt": "2026-10-03T07:03:27.116Z"
     },
     "collections.actors:folder-NNBJWT7P:3": {
       "listId": 8681218,
@@ -24133,11 +24147,10 @@
     },
     "collections.actors:folder-NNBJWT7P:4": {
       "listId": 8681219,
-      "fingerprint": "4a10202cf7038354e15d5851ed6a168df73037385dc007dc98fac6554c2fa191",
+      "fingerprint": "a6b1fa718eb8d5db6062535eb831d233fc1d32b0076c3f838aa893d1ad81a994",
       "orderedIds": [
         "movie:157336",
         "movie:286217",
-        "movie:1400837",
         "movie:474350",
         "movie:320288",
         "movie:50014",
@@ -24182,15 +24195,23 @@
         "movie:881050",
         "movie:761443"
       ],
-      "count": 46,
+      "count": 45,
       "scope": "GLOBAL:SUBSTANTIVE_CREDITS",
       "writeSchema": 5,
       "ineligibleExcluded": 8,
       "posterlessExcluded": 0,
       "syncStatus": "verified",
-      "lastVerified": "2026-10-03T06:42:07.372Z",
-      "invalidItems": [],
-      "railDefinitionFingerprint": "40dc642dfa58c8f5eef5c3e99457a2b3c5d700447120cf0b0095afbb36f2f9fe"
+      "lastVerified": "2026-10-03T07:03:27.116Z",
+      "invalidItems": [
+        {
+          "media_type": "movie",
+          "id": 1400837,
+          "reason": "TMDB_V3_FUTURE_DATE",
+          "excludedAt": "2026-10-03T07:03:27.116Z"
+        }
+      ],
+      "railDefinitionFingerprint": "40dc642dfa58c8f5eef5c3e99457a2b3c5d700447120cf0b0095afbb36f2f9fe",
+      "tmdbV3EligibilityRepairedAt": "2026-10-03T07:03:27.116Z"
     },
     "collections.actors:folder-NNBJWT7P:5": {
       "listId": 8681220,
